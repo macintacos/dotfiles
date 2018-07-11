@@ -69,12 +69,14 @@ export FZF_DEFAULT_OPTS="
     --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'
     --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
     --color info:108,prompt:109,spinner:108,pointer:168,marker:168
+    --bind tab:down --cycle
 "
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
+
 # }}}
 
 ## THINGS NOT LOADING FAST ENOUGH?
