@@ -100,5 +100,5 @@ fi
 alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
-alias zshconfig="vim ~/.zshrc"
-alias zshrc='vim ~/.zshrc' # Quick access to the ~/.zshrc file
+alias zshconfig="code-insiders ~/.zshrc"
+alias zshrc='code-insiders ~/.zshrc' # Quick access to the ~/.zshrc file
