@@ -6,9 +6,9 @@ alias ack='ack -i'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias editalias='cd ~/.oh-my-zsh/plugins/common-aliases && micro common-aliases.plugin.zsh'
-alias numFiles='echo $(gls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
+alias numFiles='echo $(gls -1 | wc -l)'     # numFiles:     Count of non-hidden files in current dir
 alias lr='gls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-alias c='clear && l'                             # c:            Clear terminal display
+alias c='clear && l'                        # c:            Clear terminal display
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
