@@ -48,16 +48,21 @@ done
 compinit -C
 # }}}
 
-# SOURCER-ING {{{
+# SOURCE-ING {{{
 ## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
 source $ZSH/oh-my-zsh.sh
 
 ## sourcing external files
-source /Users/juliant/perl5/perlbrew/etc/bashrc # perl's REPL
+source /Users/juliant/perl5/perlbrew/etc/bashrc             # perl's REPL
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.zsh/secrets.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
 # }}}
+
+## Color needs to be set AFTER source-ing
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
+bindkey '^ ' autosuggest-accept         # Binding `CTRL+SPACE` to auto-accept suggestions
 
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
