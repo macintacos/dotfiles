@@ -5,7 +5,6 @@ alias code-stable='code'
 alias ack='ack -i'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
-alias editalias='cd ~/.oh-my-zsh/plugins/common-aliases && micro common-aliases.plugin.zsh'
 alias numFiles='echo $(gls -1 | wc -l)'     # numFiles:     Count of non-hidden files in current dir
 alias lr='gls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 alias c='clear && l'                        # c:            Clear terminal display
@@ -102,3 +101,5 @@ alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
 alias zshconfig="code-insiders ~/.zshrc"
 alias zshrc='code-insiders ~/.zshrc' # Quick access to the ~/.zshrc file
+alias aliasconfig='code-insiders ~/.zsh/aliases.zsh'
+alias cls='clear'
