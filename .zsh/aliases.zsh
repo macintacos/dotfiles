@@ -1,5 +1,7 @@
 # ALIASES
 
+export CONFIG_DIR=~/Dropbox/Developer/_config
+
 alias code='code-insiders'
 alias code-stable='code'
 alias ack='ack -i'
@@ -99,7 +101,7 @@ fi
 alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
-alias zshconfig="code-insiders ~/.zshrc"
-alias zshrc='code-insiders ~/.zshrc' # Quick access to the ~/.zshrc file
-alias aliasconfig='code-insiders ~/.zsh/aliases.zsh'
+alias zshconfig="code-insiders ${CONFIG_DIR}/.zshrc"
+alias aliasconfig="code-insiders ${CONFIG_DIR}/.zsh/aliases.zsh"
+alias functionconfig="code-insiders ${CONFIG_DIR}/.zsh/functions.zsh"
 alias cls='clear'
