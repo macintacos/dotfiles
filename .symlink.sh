@@ -13,8 +13,10 @@ cd ~
 echo "Linking local config to ~/Dropbox/_config dotfiles..."
 
 # Base ZSH
+rm -rf .zshenv
 rm -rf .zshrc
 ln -s ${CONFIG_DIR}/.zshrc .zshrc
+ln -s ${CONFIG_DIR}/.zshenv .zshenv
 
 # Aliases and Functions
 rm -rf .zsh/aliases.zsh

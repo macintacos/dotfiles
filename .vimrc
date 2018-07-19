@@ -20,7 +20,7 @@ call plug#end()
 syntax on
 colorscheme onedark
 set number relativenumber
-let g:mapleader = "\<Space>"
+let g:mapleader = "<Space>"
 
 set hlsearch 	    " Highlight all search terms
 set guioptions=   " Remove the macvim scrollbars

@@ -4,13 +4,7 @@
 
 # EXPORTS {{{
 export TERM="xterm-256color"
-export EDITOR="code"
-export ZSH=/Users/juliant/.oh-my-zsh
-export SSH_KEY_PATH=~/.ssh/rsa_id
-export SCALA_HOME=/usr/local/share/scala
-export GOPATH=/Users/juliant/Dropbox/Developer/go-workspace
-export PATH=$HOME/bin:/usr/local/bin:$HOME/perl5/perlbrew/bin:/usr/local/lib/node_modules:$GOPATH/bin:$SCALA_HOME/bin:/usr/local/mysql-8.0.11-macos10.13-x86_64/bin/:$PATH
-export NVM_DIR=$HOME/.nvm
+export EDITOR='code'
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  --no-use # This loads nvm
 # }}}

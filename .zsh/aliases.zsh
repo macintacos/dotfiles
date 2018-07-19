@@ -1,12 +1,11 @@
 # ALIASES
 
-export CONFIG_DIR=~/Dropbox/Developer/_config
-
 alias code='code-insiders'
 alias code-stable='code'
 alias ack='ack -i'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias editalias='cd ~/.oh-my-zsh/plugins/common-aliases && micro common-aliases.plugin.zsh'
 alias numFiles='echo $(gls -1 | wc -l)'     # numFiles:     Count of non-hidden files in current dir
 alias lr='gls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 alias c='clear && l'                        # c:            Clear terminal display
@@ -101,7 +100,5 @@ fi
 alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
-alias zshconfig="code-insiders ${CONFIG_DIR}/.zshrc"
-alias aliasconfig="code-insiders ${CONFIG_DIR}/.zsh/aliases.zsh"
-alias functionconfig="code-insiders ${CONFIG_DIR}/.zsh/functions.zsh"
-alias cls='clear'
+alias zshconfig="code ~/.zshrc"
+alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
