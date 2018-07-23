@@ -1,7 +1,6 @@
 # ALIASES
 
-alias code='code-insiders'
-alias code-stable='code'
+alias code='code --ignore-gpu-blacklist'
 alias ack='ack -i'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
