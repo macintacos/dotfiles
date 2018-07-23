@@ -4,6 +4,7 @@
 mcd () { mkdir -p "$1" && cd "$1"; }  # mcd: Makes new Dir and jumps inside
 myip() { echo "My WAN/Public IP address: $(dig +short myip.opendns.com @resolver1.opendns.com)" } # myip: prints out your current IP
 pretty_csv() { column -t -s "$@" | less -F -S -X -K } # pretty_csv: prettify CSV files
+co() { code "$@" --disable-gpu --ignore-gpu-blacklist } # run vs code without the dumb ass flickering
 
 cd() { # Always list directory contents upon 'cd
     builtin cd "$@"; 

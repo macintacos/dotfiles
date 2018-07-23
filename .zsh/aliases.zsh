@@ -1,6 +1,6 @@
 # ALIASES
 
-alias code='code --ignore-gpu-blacklist'
+# alias code='code --ignore-gpu-blacklist'
 alias ack='ack -i'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
