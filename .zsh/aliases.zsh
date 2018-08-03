@@ -1,7 +1,6 @@
 # ALIASES
 
-# alias code='code --ignore-gpu-blacklist'
-alias ack='ack -i'
+alias z='zrun'
 
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias editalias='cd ~/.oh-my-zsh/plugins/common-aliases && micro common-aliases.plugin.zsh'

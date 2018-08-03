@@ -16,6 +16,15 @@ grepip() {      # grep unique IPs from within a log file
     \grep -E -o "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" "$@" | sort | uniq
 }
 
+psgrep() {      # grep for running processes
+  local pids
+  pids=$(pgrep -f $@)
+  if ! [[ $pids ]]; then
+    echo "No processes found." >&2; return 1
+  fi
+  ps up $(pgrep -f $@)
+}
+
 my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command ; } # my_ps: List processes owned by my user:
 
 ii() { #   ii:  display useful host related informaton
