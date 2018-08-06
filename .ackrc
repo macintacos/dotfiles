@@ -1,6 +1,10 @@
 # ACKRC File
 
-# Always:
---color         # show color
---sort-files    # sort files
--i              # search case-insensitively
+## Use Color
+--color     
+
+## Sort Files
+--sort-files
+
+## Case-insenstively Search
+-i          

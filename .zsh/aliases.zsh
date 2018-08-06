@@ -33,7 +33,7 @@ alias topForever='top -l 9999999 -s 10 -o cpu'
 alias ttop="top -R -F -s 10 -o rsize"
     
 # ls, the common ones I use a lot shortened for rapid fire usage
-alias ls='gls --color=auto'
+alias ls='ls -G'
 alias l='ls -lFh'       # size,show type,human readable
 alias la='ls -lAFh'     # long list,show almost all,show type,human readable
 alias lt='ls -ltFh'     # long list,sorted by date,show type,human readable
