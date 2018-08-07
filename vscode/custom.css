@@ -1,0 +1,11 @@
+/* See https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css*/
+
+/**
+ * STATUS-BAR | hide a few items
+ */
+
+.monaco-workbench .editor-status-indentation,
+.monaco-workbench .editor-status-encoding,
+.monaco-workbench .editor-status-eol {
+    display: none !important;
+}
