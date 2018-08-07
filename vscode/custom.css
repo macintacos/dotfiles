@@ -6,6 +6,7 @@
 
 .monaco-workbench .editor-status-indentation,
 .monaco-workbench .editor-status-encoding,
-.monaco-workbench .editor-status-eol {
-    display: none !important;
+.monaco-workbench .editor-status-eol,
+.octicon-paintcan:before {
+  display: none !important;
 }
