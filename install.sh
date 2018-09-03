@@ -3,6 +3,9 @@
 # include my library helpers for colorized echo and require_brew, etc
 source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
+source "./.zshenv"
+
+GITHUB_PROJECT_INSTALL_DIR="$HOME/Developer/Github"
 
 bot "None of this is actually tested yet, so use at your own risk!"
 
@@ -53,21 +56,24 @@ ok
 ## zsh plugins
 running "installing zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ~/.oh-my-zsh/custom/plugins/mongodb
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb
 git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh
-git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips
+git clone git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair
+git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd
+git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd
 ok
 
 # Installing perlbrew
 running "installing perlbrew..."
-\curl -L https://install.perlbrew.pl | bash
+\curl -L https://install.perlbrew.pl | bashrm
 ok
 
 # mongodb-specific tools
 running "installing m..."
-git clone git://github.com/aheckmann/m.git && cd m && make install
+mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install
 
 # vim settings
 bot "Installing vim plugins"
@@ -137,6 +143,9 @@ require_brew nvm
 require_nvm stable
 # always pin versions (no surprises, consistent dev/build machines)
 npm config set save-exact true
+
+running "installing settings-sync for vscode..."
+code --install-extension Shan.code-settings-sync
 
 ###############################################################################
 bot "Installing NPM global modules..."
@@ -255,3 +264,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
   Privileges -bool true;ok
+
+###############################################################################
+bot "You're all set! Some reminders:"
+bot "\t- You'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
+###############################################################################
