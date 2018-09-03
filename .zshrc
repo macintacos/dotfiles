@@ -29,7 +29,7 @@ autoload colors; colors
 # }}}
 
 # PLUGINS & CACHE LOADING {{{
-plugins=(git zsh-completions zsh_completions_mongodb httpie npm node python calc alias-tips thefuck zsh-syntax-highlighting)
+plugins=(git zsh-completions zsh_completions_mongodb mongodb httpie npm node python calc alias-tips zsh-syntax-highlighting)
 autoload -Uz compinit
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'

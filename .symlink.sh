@@ -6,13 +6,16 @@
 # A shell script to setup symlinks for your local config files.
 ###############################################################################
 
-CONFIG_DIR=~/Dropbox/Developer/_config
+source ./lib_sh/echos.sh
+
+CONFIG_DIR=$PWD
 
 cd ~
 
-echo "Linking local config to ~/Dropbox/_config dotfiles..."
+bot "Linking local config to remote dotfiles..."
 
 # Base ZSH {{{
+running "linking ZSH"
 rm -rf .zshenv
 rm -rf .zshrc
 ln -s ${CONFIG_DIR}/.zshrc .zshrc
@@ -23,17 +26,20 @@ rm -rf .zsh/aliases.zsh
 rm -rf .zsh/functions.zsh
 ln -s ${CONFIG_DIR}/.zsh/aliases.zsh .zsh/aliases.zsh
 ln -s ${CONFIG_DIR}/.zsh/functions.zsh .zsh/functions.zsh
-echo "ZSH linked."
+bot "ZSH linked."
 # }}}
 
 # VIM
+running "linking Vim"
 rm -rf .vimrc
 ln -s ${CONFIG_DIR}/.vimrc .vimrc
-echo "VIM linked."
+bot "VIM linked."
 
 # ACK
+running "linking ACK"
 rm -rf .ackrc
 ln -s ${CONFIG_DIR}/.ackrc .ackrc
-echo "ACK linked."
+bot "ACK linked."
 
-echo "All dotfiles linked."
+bot "All dotfiles linked."
+ok
