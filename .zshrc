@@ -19,7 +19,7 @@ setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded 
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
-setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
@@ -29,7 +29,7 @@ autoload colors; colors
 # }}}
 
 # PLUGINS & CACHE LOADING {{{
-plugins=(git zsh-completions zsh_completions_mongodb httpie npm node python calc alias-tips thefuck)
+plugins=(git zsh-completions zsh_completions_mongodb httpie npm node python calc alias-tips thefuck zsh-syntax-highlighting)
 autoload -Uz compinit
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
