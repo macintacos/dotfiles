@@ -148,7 +148,11 @@ require_brew git
 require_brew zsh
 # installing special 
 require_brew fzf
-$(brew --prefix)/opt/fzf/install
+if [[ "$TESTING_INSTALL" = 1 ]]; then
+  bot "Because this is Travis, we're going to skip a proper fzf install."
+else
+  $(brew --prefix)/opt/fzf/install
+fi
 # vim settings
 bot "Installing vim plugins..."
 # cmake is required to compile vim bundle YouCompleteMe
