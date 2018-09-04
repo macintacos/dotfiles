@@ -19,9 +19,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
   # Ask for the administrator password upfront
   bot "Next, I need you to enter your sudo password so I can install some things:"
   if [[ "$TESTING_INSTALL" = 1 ]]; then
-    # we're in travis, maybe?
-    bot "oh shit whaddup"
-    sudo -v
+    bot "Because this is Travis, we'll skip prompting for the password."
   else
     sudo -v
   fi
@@ -30,8 +28,14 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
   bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
-
-  read -r -p "Make sudo passwordless? [y|N] " response
+  
+  if [[ "$TESTING_INSTALL" = 1 ]]; then
+    bot "Because this is Travis, we'll assume we want to make it passwordless."
+    response="y"
+  else
+    read -r -p "Make sudo passwordless? [y|N] " response
+  fi
+  
 
   if [[ $response =~ (yes|y|Y) ]];then
       sudo cp /etc/sudoers /etc/sudoers.back
