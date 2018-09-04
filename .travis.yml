@@ -9,3 +9,6 @@ sudo: required
 
 env:
   - TESTING_INSTALL=1
+
+before_install:
+  - brew update

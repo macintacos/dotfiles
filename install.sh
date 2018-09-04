@@ -10,8 +10,10 @@ GITHUB_PROJECT_INSTALL_DIR="$HOME/Developer/Github"
 bot "None of this is actually tested yet, so use at your own risk!"
 
 bot "Let's get this machine set up!"
-bot "First, we link."
+bot "First, we symlink."
 bash "./.symlink.sh"
+
+cat ~/.vimrc
 
 # Ask for the administrator password upfront
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
@@ -141,14 +143,13 @@ ok
 running "installing homebrew stuff"
 # skip those GUI clients, git command-line all the way
 require_brew git
-# need fontconfig to install/build fonts
-require_brew fontconfig
 # update zsh to latest
 require_brew zsh
-# installing special fzf
+# installing special 
+require_brew fzf
 $(brew --prefix)/opt/fzf/install
 # vim settings
-bot "Installing vim plugins"
+bot "Installing vim plugins..."
 # cmake is required to compile vim bundle YouCompleteMe
 require_brew cmake
 vim +PluginInstall +qall > /dev/null 2>&1
