@@ -157,13 +157,13 @@ else
 fi
 
 # vim settings
-# if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
-# fi
+if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
   # cmake is required to compile vim bundle YouCompleteMe
-require_brew cmake
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-bot "Installing vim plugins...press 'enter' to accept."
-vim +PlugInstall +qall > /dev/null 2>&1
+  require_brew cmake
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  bot "Installing vim plugins...press 'enter' to accept."
+  vim +PlugInstall +qall > /dev/null 2>&1; ok
+fi
 
 # install packages in brewfile
 brew bundle --file=./.brewfile; ok
