@@ -20,7 +20,7 @@ bash "./.symlink.sh"
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
 
   # Ask for the administrator password upfront
-  if [[ "$TESTING_INSTALL" = 1 ]]; then
+  if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
     bot "Because this is Travis, we'll skip prompting for the password."
   else
     bot "Next, I need you to enter your sudo password so I can install some things:"
@@ -31,7 +31,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
   
-  if [[ "$TESTING_INSTALL" = 1 ]]; then
+  if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
     bot "Because this is Travis, we'll assume we want to make it passwordless."
     response="y"
   else
@@ -112,9 +112,9 @@ else
   ok
   bot "before installing brew packages, we can upgrade any outdated packages."
   
-  if [[ "$TESTING_INSTALL" = 1 ]]; then
+  if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
     bot "Because this is Travis, we'll see what we can get away with."
-    response="y"
+    response="N"
   else
     read -r -p "run brew upgrade? [y|N] " response
   fi
@@ -148,7 +148,7 @@ require_brew git
 require_brew zsh
 # installing special 
 require_brew fzf
-if [[ "$TESTING_INSTALL" = 1 ]]; then
+if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
   bot "Because this is Travis, we're going to skip a proper fzf install."
 else
   $(brew --prefix)/opt/fzf/install

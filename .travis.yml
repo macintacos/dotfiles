@@ -11,4 +11,9 @@ env:
   - TESTING_INSTALL=1
 
 before_install:
-  - brew update
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update        ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache; fi
+
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
