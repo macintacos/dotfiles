@@ -85,11 +85,6 @@ ok
 running "installing m..."
 mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install
 
-# vim settings
-bot "Installing vim plugins"
-# cmake is required to compile vim bundle YouCompleteMe
-# require_brew cmake
-vim +PluginInstall +qall > /dev/null 2>&1
 
 # instlaling travis cli
 ruby -v
@@ -147,6 +142,11 @@ require_brew fontconfig
 require_brew zsh
 # installing special fzf
 $(brew --prefix)/opt/fzf/install
+# vim settings
+bot "Installing vim plugins"
+# cmake is required to compile vim bundle YouCompleteMe
+require_brew cmake
+vim +PluginInstall +qall > /dev/null 2>&1
 # install packages in brewfile
 brew bundle --file=./.brewfile
 ok
