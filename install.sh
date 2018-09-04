@@ -14,6 +14,7 @@ bot "First, we symlink."
 bash "./.symlink.sh"
 
 cat ~/.vimrc
+vim --version
 
 # Ask for the administrator password upfront
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
