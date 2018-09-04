@@ -153,6 +153,7 @@ $(brew --prefix)/opt/fzf/install
 bot "Installing vim plugins..."
 # cmake is required to compile vim bundle YouCompleteMe
 require_brew cmake
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PluginInstall +qall > /dev/null 2>&1
 # install packages in brewfile
 brew bundle --file=./.brewfile
