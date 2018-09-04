@@ -6,3 +6,6 @@ script:
   - bash install.sh
 
 sudo: required
+
+env:
+  - TESTING_INSTALL=1
