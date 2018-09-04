@@ -18,7 +18,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
 
   # Ask for the administrator password upfront
   bot "Next, I need you to enter your sudo password so I can install some things:"
-  if [[ $TESTING_INSTALL = 1]]; then
+  if [[ "$TESTING_INSTALL" = 1]]; then
     # we're in travis, maybe?
     bot "oh shit whaddup"
     sudo -v
