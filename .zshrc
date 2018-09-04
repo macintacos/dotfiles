@@ -85,3 +85,5 @@ bindkey '^I' $fzf_default_completion
 ## comment out the following line (and the first ling at the top of this file)
 ## start a new shell, analyze the results.
 # zprof
+# added by travis gem
+[ -f /Users/juliant/.travis/travis.sh ] && source /Users/juliant/.travis/travis.sh

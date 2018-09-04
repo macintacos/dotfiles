@@ -5,4 +5,4 @@ os: osx
 script:
   - bash install.sh
 
-sudo: enabled
+sudo: required

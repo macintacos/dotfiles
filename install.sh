@@ -81,6 +81,9 @@ bot "Installing vim plugins"
 # require_brew cmake
 vim +PluginInstall +qall > /dev/null 2>&1
 
+# instlaling travis cli
+ruby -v
+gem install travis -v 1.8.9 --no-rdoc --no-ri
 
 ###############################################################################
 bot "Homebrew installation begin..."
