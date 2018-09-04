@@ -144,24 +144,29 @@ ok
 running "installing homebrew stuff"
 # skip those GUI clients, git command-line all the way
 require_brew git
+
 # update zsh to latest
 require_brew zsh
-# installing special 
+
+# installing fzf
 require_brew fzf
 if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
   bot "Because this is Travis, we're going to skip a proper fzf install."
 else
   $(brew --prefix)/opt/fzf/install
 fi
+
 # vim settings
-bot "Installing vim plugins..."
-# cmake is required to compile vim bundle YouCompleteMe
-require_brew cmake
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PluginInstall +qall > /dev/null 2>&1
+if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
+  # cmake is required to compile vim bundle YouCompleteMe
+  require_brew cmake
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  bot "Installing vim plugins...press 'enter' to accept."
+  vim +PluginInstall +qall > /dev/null 2>&1
+fi
+
 # install packages in brewfile
-brew bundle --file=./.brewfile
-ok
+brew bundle --file=./.brewfile; ok
 
 # node version manager
 require_brew nvm
