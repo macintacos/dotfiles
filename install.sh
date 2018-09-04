@@ -158,10 +158,13 @@ fi
 
 # vim settings
 if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
+  bot "Because this is Travis, skipping Vim plugin install step."
+else
   # cmake is required to compile vim bundle YouCompleteMe
   require_brew cmake
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   bot "Installing vim plugins...press 'enter' to accept."
+  # TODO: Figure out why this gets hung
   vim +PlugInstall +qall > /dev/null 2>&1; ok
 fi
 
