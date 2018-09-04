@@ -15,5 +15,6 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache; fi
 
 cache:
+  ccache: true
   directories:
     - $HOME/Library/Caches/Homebrew
