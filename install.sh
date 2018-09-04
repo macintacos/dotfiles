@@ -60,35 +60,33 @@ fi
 
 # Installing oh-my-zsh
 running "getting oh-my-zsh installed..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ok
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok
 
 ## zsh plugins
 running "installing zsh plugins..."
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb
-git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh
-git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips
-git clone git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
-git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair
-git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd
-git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd
-ok
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions; ok
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions; ok
+git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb; ok
+git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh; ok
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips; ok
+git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting; ok
+git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair; ok
+git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd; ok
+git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd; ok
 
 # Installing perlbrew
 running "installing perlbrew..."
-\curl -L https://install.perlbrew.pl | bashrm
-ok
+\curl -L https://install.perlbrew.pl | bash; ok
 
 # mongodb-specific tools
 running "installing m..."
-mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install
+mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install; ok
 
 
 # instlaling travis cli
+running "installing travis cli..."
 ruby -v
-gem install travis -v 1.8.9 --no-rdoc --no-ri
+gem install travis -v 1.8.9 --no-rdoc --no-ri; ok
 
 ###############################################################################
 bot "Homebrew installation begin..."
@@ -110,7 +108,14 @@ else
   brew update
   ok
   bot "before installing brew packages, we can upgrade any outdated packages."
-  read -r -p "run brew upgrade? [y|N] " response
+  
+  if [[ "$TESTING_INSTALL" = 1 ]]; then
+    bot "Because this is Travis, we'll assume we want to upgrade."
+    response="y"
+  else
+    read -r -p "run brew upgrade? [y|N] " response
+  fi
+
   if [[ $response =~ ^(y|yes|Y) ]];then
       # Upgrade any already-installed formulae
       action "upgrade brew packages..."
@@ -164,18 +169,16 @@ code --install-extension Shan.code-settings-sync
 bot "Installing NPM global modules..."
 ###############################################################################
 
-npm install -g vtop
-npm install -g jira2md
-npm install -g mgeneratejs
-npm install -g mongo-hacker
-npm install -g prettier
-npm install -g slap
-npm install -g yo
-ok
+npm install -g vtop; ok
+npm install -g jira2md; ok
+npm install -g mgeneratejs; ok
+npm install -g mongo-hacker; ok
+npm install -g prettier; ok
+npm install -g slap; ok
+npm install -g yo; ok
 
 running "cleanup homebrew"
-brew cleanup > /dev/null 2>&1
-ok
+brew cleanup > /dev/null 2>&1; ok
 
 ###############################################################################
 bot "Configuring iTerm2..."
@@ -207,7 +210,7 @@ bot "Finder Configs..."
 ###############################################################################
 
 running "Keep folders on top when sorting by name (Sierra only)"
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder _FXSortFoldersFirst -bool true;ok
 
 running "Allow quitting via ⌘ + Q; doing so will also hide desktop icons"
 defaults write com.apple.finder QuitMenuItem -bool true;ok
@@ -280,5 +283,5 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 ###############################################################################
 bot "You're all set! Some reminders:"
-bot "\t- You'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
+bot "\tYou'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
 ###############################################################################
