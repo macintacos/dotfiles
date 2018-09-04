@@ -13,29 +13,29 @@ bot "Let's get this machine set up!"
 bot "First, we symlink."
 bash "./.symlink.sh"
 
-cat ~/.vimrc
-vim --version
+# cat ~/.vimrc
+# vim --version
 
 # Ask for the administrator password upfront
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
 
   # Ask for the administrator password upfront
-  bot "Next, I need you to enter your sudo password so I can install some things:"
   if [[ "$TESTING_INSTALL" = 1 ]]; then
     bot "Because this is Travis, we'll skip prompting for the password."
   else
+    bot "Next, I need you to enter your sudo password so I can install some things:"
     sudo -v
   fi
 
   # Keep-alive: update existing sudo time stamp until the script has finished
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-  bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
   
   if [[ "$TESTING_INSTALL" = 1 ]]; then
     bot "Because this is Travis, we'll assume we want to make it passwordless."
     response="y"
   else
+    bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
     read -r -p "Make sudo passwordless? [y|N] " response
   fi
   
@@ -113,7 +113,7 @@ else
   bot "before installing brew packages, we can upgrade any outdated packages."
   
   if [[ "$TESTING_INSTALL" = 1 ]]; then
-    bot "Because this is Travis, we'll assume we want to upgrade."
+    bot "Because this is Travis, we'll see what we can get away with."
     response="y"
   else
     read -r -p "run brew upgrade? [y|N] " response
