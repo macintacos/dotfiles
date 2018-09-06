@@ -211,6 +211,7 @@ brew cleanup > /dev/null 2>&1; ok "Done"
 bot "Configuring iTerm2..."
 ###############################################################################
 
+# TODO: Need to make a script that parses the current iTerm config and substitutes the current $HOME
 # Specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "./iterm2"
 # Tell iTerm2 to use the custom preferences in the directory

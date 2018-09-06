@@ -10,7 +10,7 @@ export EDITOR='code'
 # }}}
 
 # ZSH SETTINGS {{{
-DEFAULT_USER="juliant"
+DEFAULT_USER="$(whoami)"
 ZSH_THEME="arrow"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -47,7 +47,7 @@ compinit -C
 source $ZSH/oh-my-zsh.sh
 
 ## sourcing external files
-source /Users/juliant/perl5/perlbrew/etc/bashrc             # perl's REPL
+source $HOME/perl5/perlbrew/etc/bashrc             # perl's REPL
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.zsh/secrets.zsh
 source ~/.zsh/aliases.zsh
@@ -86,4 +86,4 @@ bindkey '^I' $fzf_default_completion
 ## start a new shell, analyze the results.
 # zprof
 # added by travis gem
-[ -f /Users/juliant/.travis/travis.sh ] && source /Users/juliant/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
