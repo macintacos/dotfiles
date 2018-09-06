@@ -1,5 +1,14 @@
 #!/bin/bash
 
+## Force an exit if script tries to use an unset variable:
+set -o nounset
+## Force an exit if any commands exit with non-zero status:
+set -o errexit
+## Catch mid-pipe non-zero exit statuses: 
+set -o pipefail
+## Print the command trace before executing the command:
+set -o xtrace
+
 # include my library helpers for colorized echo and require_brew, etc
 source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
@@ -110,12 +119,12 @@ else
   running "updating homebrew"
   brew update
   ok
-  bot "before installing brew packages, we can upgrade any outdated packages."
   
   if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
     bot "Because this is Travis, we'll see what we can get away with."
     response="N"
   else
+    bot "Before installing brew packages, we can upgrade any outdated packages."
     read -r -p "run brew upgrade? [y|N] " response
   fi
 
@@ -132,6 +141,7 @@ fi
 ###############################################################################
 bot "Configuring brew & cask-installing things..."
 ###############################################################################
+
 running "checking brew-cask install"
 output=$(brew tap | grep cask)
 if [[ $? != 0 ]]; then
@@ -157,19 +167,21 @@ else
 fi
 
 # vim settings
-if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
-  bot "Because this is Travis, skipping Vim plugin install step."
-else
-  # cmake is required to compile vim bundle YouCompleteMe
-  require_brew cmake
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  bot "Installing vim plugins...press 'enter' to accept."
-  # TODO: Figure out why this gets hung
-  vim +PlugInstall +qall > /dev/null 2>&1; ok
-fi
+# if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
+#   bot "Because this is Travis, skipping Vim plugin install step."
+# else
+# cmake is required to compile vim bundle YouCompleteMe
+require_brew cmake
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+bot "Installing vim plugins...press 'enter' to accept."
+# TODO: Figure out why this gets hung
+vim +PlugInstall +qall > /dev/null 2>&1; ok
+# fi
 
 # install packages in brewfile
-brew bundle --file=./.brewfile; ok
+running "installing casks and apps..."
+brew bundle check; ok
+brew bundle; ok
 
 # node version manager
 require_brew nvm
@@ -184,12 +196,12 @@ code --install-extension Shan.code-settings-sync
 bot "Installing NPM global modules..."
 ###############################################################################
 
+running "installing NPM modules..."
 npm install -g vtop; ok
 npm install -g jira2md; ok
 npm install -g mgeneratejs; ok
 npm install -g mongo-hacker; ok
 npm install -g prettier; ok
-npm install -g slap; ok
 npm install -g yo; ok
 
 running "cleanup homebrew"
