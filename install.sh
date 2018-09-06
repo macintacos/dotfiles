@@ -72,7 +72,7 @@ fi
 
 # Installing oh-my-zsh
 running "getting oh-my-zsh installed..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok "Done"
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok "Done"
 
 ## zsh plugins
 running "installing zsh plugins..."
