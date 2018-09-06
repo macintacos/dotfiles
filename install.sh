@@ -67,38 +67,38 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   # sudo bash -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
   # chsh -s /usr/local/bin/zsh
   sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
-  ok
+  ok "Done"
 fi
 
 # Installing oh-my-zsh
 running "getting oh-my-zsh installed..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok "Done"
 
 ## zsh plugins
 running "installing zsh plugins..."
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions; ok
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions; ok
-git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb; ok
-git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh; ok
-git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips; ok
-git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting; ok
-git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair; ok
-git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd; ok
-git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd; ok
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions; ok "Done"
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions; ok "Done"
+git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb; ok "Done"
+git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh; ok "Done"
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips; ok "Done"
+git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting; ok "Done"
+git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair; ok "Done"
+git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd; ok "Done"
+git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd; ok "Done"
 
 # Installing perlbrew
 running "installing perlbrew..."
-\curl -L https://install.perlbrew.pl | bash; ok
+\curl -L https://install.perlbrew.pl | bash; ok "Done"
 
 # mongodb-specific tools
 running "installing m..."
-mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install; ok
+mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install; ok "Done"
 
 
 # instlaling travis cli
 running "installing travis cli..."
 ruby -v
-gem install travis -v 1.8.9 --no-rdoc --no-ri; ok
+gem install travis -v 1.8.9 --no-rdoc --no-ri; ok "Done"
 
 ###############################################################################
 bot "Homebrew installation begin..."
@@ -114,11 +114,11 @@ if [[ $? != 0 ]]; then
       exit 2
   fi
 else
-  ok
+  ok "Done"
   # Make sure we’re using the latest Homebrew
   running "updating homebrew"
   brew update
-  ok
+  ok "Done"
   
   if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
     bot "Because this is Travis, we'll see what we can get away with."
@@ -149,7 +149,7 @@ if [[ $? != 0 ]]; then
   require_brew caskroom/cask/brew-cask
 fi
 brew tap caskroom/versions > /dev/null 2>&1
-ok
+ok "Done"
 
 running "installing homebrew stuff"
 # skip those GUI clients, git command-line all the way
@@ -175,13 +175,13 @@ require_brew cmake
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 bot "Installing vim plugins...press 'enter' to accept."
 # TODO: Figure out why this gets hung
-vim +PlugInstall +qall > /dev/null 2>&1; ok
+vim +PlugInstall +qall > /dev/null 2>&1; ok "Done"
 # fi
 
 # install packages in brewfile
 running "installing casks and apps..."
-brew bundle check; ok
-brew bundle; ok
+brew bundle check; ok "Done"
+brew bundle; ok "Done"
 
 # node version manager
 require_brew nvm
@@ -197,15 +197,15 @@ bot "Installing NPM global modules..."
 ###############################################################################
 
 running "installing NPM modules..."
-npm install -g vtop; ok
-npm install -g jira2md; ok
-npm install -g mgeneratejs; ok
-npm install -g mongo-hacker; ok
-npm install -g prettier; ok
-npm install -g yo; ok
+npm install -g vtop; ok "Done"
+npm install -g jira2md; ok "Done"
+npm install -g mgeneratejs; ok "Done"
+npm install -g mongo-hacker; ok "Done"
+npm install -g prettier; ok "Done"
+npm install -g yo; ok "Done"
 
 running "cleanup homebrew"
-brew cleanup > /dev/null 2>&1; ok
+brew cleanup > /dev/null 2>&1; ok "Done"
 
 ###############################################################################
 bot "Configuring iTerm2..."
@@ -223,90 +223,90 @@ bot "Configuring General System UI/UX..."
 # settings we’re about to change
 running "closing any system preferences to prevent issues with automated changes"
 osascript -e 'tell application "System Preferences" to quit'
-ok
+ok "Done"
 
 ################################################
 bot "Standard System Changes..."
 ################################################
 
 running "Check for software updates daily, not just once per week"
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1;ok
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1;ok "Done"
 
 ###############################################################################
 bot "Finder Configs..."
 ###############################################################################
 
 running "Keep folders on top when sorting by name (Sierra only)"
-defaults write com.apple.finder _FXSortFoldersFirst -bool true;ok
+defaults write com.apple.finder _FXSortFoldersFirst -bool true;ok "Done"
 
 running "Allow quitting via ⌘ + Q; doing so will also hide desktop icons"
-defaults write com.apple.finder QuitMenuItem -bool true;ok
+defaults write com.apple.finder QuitMenuItem -bool true;ok "Done"
 
 running "Disable window animations and Get Info animations"
-defaults write com.apple.finder DisableAllAnimations -bool true;ok
+defaults write com.apple.finder DisableAllAnimations -bool true;ok "Done"
 
 running "Set Desktop as the default location for new Finder windows"
 # For other paths, use 'PfLo' and 'file:///full/path/here/'
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/";ok
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/";ok "Done"
 
 running "Show hidden files by default"
-defaults write com.apple.finder AppleShowAllFiles -bool true;ok
+defaults write com.apple.finder AppleShowAllFiles -bool true;ok "Done"
 
 running "Show all filename extensions"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok "Done"
 
 running "Show status bar"
-defaults write com.apple.finder ShowStatusBar -bool true;ok
+defaults write com.apple.finder ShowStatusBar -bool true;ok "Done"
 
 running "Show path bar"
-defaults write com.apple.finder ShowPathbar -bool true;ok
+defaults write com.apple.finder ShowPathbar -bool true;ok "Done"
 
 running "Allow text selection in Quick Look"
-defaults write com.apple.finder QLEnableTextSelection -bool true;ok
+defaults write com.apple.finder QLEnableTextSelection -bool true;ok "Done"
 
 running "Display full POSIX path as Finder window title"
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;ok
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;ok "Done"
 
 running "When performing a search, search the current folder by default"
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf";ok
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf";ok "Done"
 
 running "Disable the warning when changing a file extension"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false;ok
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false;ok "Done"
 
 running "Enable spring loading for directories"
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true;ok
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true;ok "Done"
 
 running "Remove the spring loading delay for directories"
-defaults write NSGlobalDomain com.apple.springing.delay -float 0;ok
+defaults write NSGlobalDomain com.apple.springing.delay -float 0;ok "Done"
 
 running "Avoid creating .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;ok
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;ok "Done"
 
 running "Disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true;ok
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true;ok "Done"
 
 running "Automatically open a new Finder window when a volume is mounted"
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true;ok
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true;ok "Done"
 
 running "Disable the warning before emptying the Trash"
-defaults write com.apple.finder WarnOnEmptyTrash -bool false;ok
+defaults write com.apple.finder WarnOnEmptyTrash -bool false;ok "Done"
 
 running "Empty Trash securely by default"
-defaults write com.apple.finder EmptyTrashSecurely -bool true;ok
+defaults write com.apple.finder EmptyTrashSecurely -bool true;ok "Done"
 
 running "Show the ~/Library folder"
-chflags nohidden ~/Library;ok
+chflags nohidden ~/Library;ok "Done"
 
 running "Expand the following File Info panes: “General”, “Open with”, and “Sharing & Permissions”"
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
-  Privileges -bool true;ok
+  Privileges -bool true;ok "Done"
 
 ###############################################################################
 bot "You're all set! Some reminders:"
