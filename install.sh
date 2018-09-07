@@ -72,7 +72,11 @@ fi
 
 # Installing oh-my-zsh
 running "getting oh-my-zsh installed..."
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; ok "Done"
+# TODO: consider using `expect` and spawning another background process to install the shell; not sure how to do that, but I'm sure there's a way!e    
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | grep -v 'env zsh -l')"; ok "Done"
+
+running "re-linking so that plugins are installed theway we expect..."
+bash "./.symlink.sh"
 
 ## zsh plugins
 running "installing zsh plugins..."
@@ -310,6 +314,5 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   Privileges -bool true;ok "Done"
 
 ###############################################################################
-bot "You're all set! Some reminders:"
-bot "\tYou'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
+bot "You're all set! Some reminders:\n\t* You'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
 ###############################################################################
