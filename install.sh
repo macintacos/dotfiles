@@ -157,13 +157,13 @@ ok "Done"
 
 running "installing homebrew stuff"
 # skip those GUI clients, git command-line all the way
-require_brew git
+require_brew git -v
 
 # update zsh to latest
-require_brew zsh
+require_brew zsh -v
 
 # installing fzf
-require_brew fzf
+require_brew fzf -v
 if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
   bot "Because this is Travis, we're going to skip a proper fzf install."
 else
@@ -175,7 +175,7 @@ fi
 #   bot "Because this is Travis, skipping Vim plugin install step."
 # else
 # cmake is required to compile vim bundle YouCompleteMe
-require_brew cmake
+require_brew cmake -v
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 bot "Installing vim plugins...press 'enter' to accept."
 # TODO: Figure out why this gets hung
