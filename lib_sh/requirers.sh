@@ -19,9 +19,9 @@ function require_cask() {
 }
 
 function require_brew() {
-    running "brew $1 $2"
-    brew list $1 > /dev/null 2>&1 | true
-    if [[ ${PIPESTATUS[0]} != 0 ]]; then
+    running "checking if $1 is installed..."
+    check=$(brew ls --versions $1 > tmp_brew_check | wc -l | sed -e 's/^[ \t]*//')
+    if [[ check = 0 ]]; then
         # action "brew install $1 $2"
         action "doesn't appear to be installed already, installing"
         brew install $1 $2

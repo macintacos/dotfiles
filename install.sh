@@ -5,7 +5,7 @@ set -o nounset
 ## Force an exit if any commands exit with non-zero status:
 set -o errexit
 ## Catch mid-pipe non-zero exit statuses: 
-set -o pipefail
+set -euo pipefail; IFS=$'\n\t'
 ## Print the command trace before executing the command:
 set -o xtrace
 
