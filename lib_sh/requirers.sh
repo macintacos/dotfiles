@@ -15,7 +15,7 @@ function require_cask() {
             # exit -1
         fi
     fi
-    ok
+    ok "Done";
 }
 
 function require_brew() {
@@ -29,7 +29,7 @@ function require_brew() {
             # exit -1
         fi
     fi
-    ok
+    ok "Done";
 }
 
 function require_node(){
@@ -39,7 +39,7 @@ function require_node(){
         action "node not found, installing via homebrew"
         brew install node
     fi
-    ok
+    ok "Done";
 }
 
 function require_gem() {
@@ -49,7 +49,7 @@ function require_gem() {
             action "gem install $1"
             gem install $1
     fi
-    ok
+    ok "Done";
 }
 
 function require_npm() {
@@ -61,7 +61,7 @@ function require_npm() {
         action "npm install -g $*"
         npm install -g $@
     fi
-    ok
+    ok "Done";
 }
 
 function require_apm() {
@@ -71,7 +71,7 @@ function require_apm() {
         action "apm install $1"
         apm install $1
     fi
-    ok
+    ok "Done";
 }
 
 function sourceNVM(){
@@ -91,5 +91,5 @@ function require_nvm() {
         . ~/.bashrc
         nvm install $1
     fi
-    ok
+    ok "Done";
 }
