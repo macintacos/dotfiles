@@ -72,7 +72,6 @@ fi
 
 # Installing oh-my-zsh
 running "getting oh-my-zsh installed..."
-# TODO: consider using `expect` and spawning another background process to install the shell; not sure how to do that, but I'm sure there's a way!e    
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | grep -v 'env zsh -l')"; ok "Done"
 
 running "re-linking so that plugins are installed theway we expect..."
@@ -158,9 +157,6 @@ ok "Done"
 running "installing homebrew stuff"
 # skip those GUI clients, git command-line all the way
 require_brew git -v
-
-# update zsh to latest
-require_brew zsh -v
 
 # installing fzf
 require_brew fzf -v
