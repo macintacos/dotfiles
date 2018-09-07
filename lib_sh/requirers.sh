@@ -22,7 +22,8 @@ function require_brew() {
     running "brew $1 $2"
     brew list $1 > /dev/null 2>&1 | true
     if [[ ${PIPESTATUS[0]} != 0 ]]; then
-        action "brew install $1 $2"
+        # action "brew install $1 $2"
+        action "doesn't appear to be installed already, installing"
         brew install $1 $2
         if [[ $? != 0 ]]; then
             error "failed to install $1! aborting..."
