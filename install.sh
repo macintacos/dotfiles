@@ -97,7 +97,6 @@ running "installing perlbrew..."
 running "installing m..."
 mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install; ok "Done"
 
-
 # instlaling travis cli
 running "installing travis cli..."
 ruby -v
@@ -203,6 +202,7 @@ npm install -g mgeneratejs; ok "Done"
 npm install -g mongo-hacker; ok "Done"
 npm install -g prettier; ok "Done"
 npm install -g yo; ok "Done"
+npm install -g bash-language-server; ok "Done"
 
 running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1; ok "Done"

@@ -1,3 +1,5 @@
+;; Still a terrible WIP, haven't even really begun this yet.
+
 ;; Remap paste key to be able to paste copied text multiple times
 ;; Add this to your `user-config`
 (defun evil-paste-after-from-0 ()

@@ -31,7 +31,7 @@ alias topForever='top -l 9999999 -s 10 -o cpu'
 #       http://www.macosxhints.com/article.php?story=20060816123853639
 #   ------------------------------------------------------------
 alias ttop="top -R -F -s 10 -o rsize"
-    
+
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias ls='ls -G'
 alias l='ls -lFh'       # size,show type,human readable
@@ -69,25 +69,25 @@ if is-at-least 4.2.0; then
         _browser_fts=(htm html de org net com at cx nl se dk)
         for ft in $_browexitser_fts; do alias -s $ft=$BROWSER; done
     fi
-
+    
     _editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex md js css json scpt)
     for ft in $_editor_fts; do alias -s $ft=$EDITOR; done
-
+    
     if [[ -n "$XIVIEWER" ]]; then
         _image_fts=(jpg jpeg png gif mng tiff tif xpm)
         for ft in $_image_fts; do alias -s $ft=$XIVIEWER; done
     fi
-
+    
     _media_fts=(ape avi flv m4a mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
     for ft in $_media_fts; do alias -s $ft=mplayer; done
-
+    
     # read documents
     alias -s pdf=acroread
     alias -s ps=gv
     alias -s dvi=xdvi
     alias -s chm=xchm
     alias -s djvu=djview
-
+    
     # list whats inside packed file
     alias -s zip="unzip -l"
     alias -s rar="unrar l"
@@ -96,8 +96,8 @@ if is-at-least 4.2.0; then
     alias -s ace="unace l"
 fi
 
-alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+# alias node='unalias node ; unalias npm ; nvm use default ; node $@'
+# alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 alias vtop='vtop --theme wizard'
 
 alias zshconfig="code ~/.zshrc"

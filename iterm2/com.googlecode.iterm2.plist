@@ -2477,7 +2477,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox/Developer/_config/iterm2</string>
+	<string>~/Google Drive/Developer/_config/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -2530,11 +2530,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 769 620 392 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>456 432 796 486 0 0 2560 1418 </string>
+	<string>394 261 796 486 0 0 1920 1178 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 594 592 584 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>960 0 960 1178 0 0 1920 1178 </string>
+	<string>-1680 -103 1680 1050 -1680 -103 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3836,6 +3836,10 @@
 	<string>D541635B-C6D2-405E-9602-F0F0CC61F938</string>
 	<key>NoSyncLastTipTime</key>
 	<real>529951181.208372</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -3883,7 +3887,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/juliant/Dropbox/Developer/_config/iterm2</string>
+	<string>/Users/juliant/Google Drive/Developer/_config/iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -3893,9 +3897,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-03T02:58:43Z</date>
+	<date>2018-09-07T19:06:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>Secure Input</key>
+	<true/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -3906,6 +3912,8 @@
 	<real>0.3579001402243589</real>
 	<key>StretchTabsToFillBar</key>
 	<false/>
+	<key>SuppressRestartAnnouncement</key>
+	<true/>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabViewType</key>

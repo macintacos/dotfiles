@@ -6,7 +6,11 @@
 export TERM="xterm-256color"
 export EDITOR='code'
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  --no-use # This loads nvm
+# Experimenting with lnav mouse support.
+export LNAV_EXP="mouse"
+set LNAV_EXP="mouse"
+
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  --no-use # This loads nvm
 # }}}
 
 # ZSH SETTINGS {{{
@@ -36,7 +40,7 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 
 ## for only occasional re-compilation
 for dump in ~/.zcompdump(N.mh+24); do
-  compinit
+    compinit
 done
 
 compinit -C
@@ -67,11 +71,11 @@ bindkey '^ ' autosuggest-accept         # Binding `CTRL+SPACE` to auto-accept su
 export FZF_DEFAULT_COMMAND='ag -U -f -g ""'
 export FZF_COMPLETION_TRIGGER=''
 export FZF_DEFAULT_OPTS="
-    --height 40% --layout=reverse --border
-    --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'
-    --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
-    --color info:108,prompt:109,spinner:108,pointer:168,marker:168
-    --bind tab:down --cycle
+--height 40% --layout=reverse --border
+--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'
+--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+--color info:108,prompt:109,spinner:108,pointer:168,marker:168
+--bind tab:down --cycle
 "
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
