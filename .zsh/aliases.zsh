@@ -10,7 +10,7 @@ alias c='clear && l'                        # c:   Clear terminal display, show 
 alias cls='clear'                           # cls: Clear Display, just like `mongo` shell
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+alias f='open -a Forklift .'                 # f:            Opens current directory in MacOS Finder
 
 #   memHogsTop, memHogsPs:  find memory hogs
 #   -----------------------------------------------------
