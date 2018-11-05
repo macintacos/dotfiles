@@ -203,6 +203,8 @@ npm install -g mongo-hacker; ok "Done"
 npm install -g prettier; ok "Done"
 npm install -g yo; ok "Done"
 npm install -g bash-language-server; ok "Done"
+npm install -g @vue/cli; ok "Done"
+npm install -f eslint; ok "Done"
 
 running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1; ok "Done"

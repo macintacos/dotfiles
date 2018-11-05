@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## sourcing external files
 source $HOME/perl5/perlbrew/etc/bashrc             # perl's REPL
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.zsh/secrets.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh

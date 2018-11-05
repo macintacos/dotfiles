@@ -8,37 +8,55 @@
 
 source ./lib_sh/echos.sh
 
-CONFIG_DIR=$PWD
+DOTFILES_DIR=$PWD
 
 cd ~
 
 bot "Linking local config to remote dotfiles..."
+bot "First need to create directories if they don't exist..."
+
+# Configuring Directories
+# if [ ! -d "$HOME/.zsh" ]; then 
+#     action "Creating ~/.zsh"
+#     mkdir -p -- ".zsh/"
+#     ok "Done." 
+# fi
+
+
+
+# Touching some files so that they exist when linking
 
 # Base ZSH {{{
 running "linking ZSH"
-rm -rf .zshenv
 rm -rf .zshrc
-ln -s ${CONFIG_DIR}/.zshrc .zshrc
-ln -s ${CONFIG_DIR}/.zshenv .zshenv
+rm -rf .zshenv
+sudo ln -sF ${DOTFILES_DIR}/.zshrc ~/.zshrc
+sudo ln -sF ${DOTFILES_DIR}/.zshenv ~/.zshenv
 
 ## Aliases and Functions
 rm -rf .zsh/
-ln -s ${CONFIG_DIR}/.zsh/aliases.zsh .zsh/aliases.zsh
-ln -s ${CONFIG_DIR}/.zsh/functions.zsh .zsh/functions.zsh
+sudo ln -sF ${DOTFILES_DIR}/.zsh/aliases.zsh ~/.zsh/aliases.zsh
+sudo ln -sF ${DOTFILES_DIR}/.zsh/functions.zsh ~/.zsh/functions.zsh
 ok "ZSH linked."
 # }}}
 
 # VIM
 running "linking Vim"
 rm -rf .vimrc
-ln -s ${CONFIG_DIR}/.vimrc .vimrc
+sudo ln -sF ${DOTFILES_DIR}/.vimrc ~/.vimrc
 ok "VIM linked."
 
 # ACK
 running "linking ACK"
 rm -rf .ackrc
-ln -s ${CONFIG_DIR}/.ackrc .ackrc
+sudo ln -sF ${DOTFILES_DIR}/.ackrc ~/.ackrc
 ok "ACK linked."
+
+# ESLINT
+running "linking eslint"
+rm -rf .eslintrc.js
+sudo ln -sF ${DOTFILES_DIR}/.eslintrc.js ~/.eslintrc.js
+ok "ESLINT linked."
 
 bot "All dotfiles linked."
 ok
