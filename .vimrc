@@ -2,7 +2,6 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
@@ -18,7 +17,6 @@ call plug#end()
 
 " OPTIONS
 syntax on
-colorscheme onedark
 set number relativenumber
 let g:mapleader = "<Space>"
 

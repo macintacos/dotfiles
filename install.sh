@@ -15,7 +15,7 @@ source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
 source "./.zshenv"
 
-GITHUB_PROJECT_INSTALL_DIR="$HOME/Developer/Github"
+GITHUB_PROJECT_INSTALL_DIR="$HOME/Developer/Github - Personal"
 
 bot "None of this is actually tested yet, so use at your own risk!"
 
@@ -83,23 +83,23 @@ bash "./.symlink.sh"
 
 ## zsh plugins
 running "installing zsh plugins..."
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ok "Done"
-sudo git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+sudo git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/zsh-completions
 ok "Done"
-sudo git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/mongodb
+sudo git clone https://github.com/JamesKovacs/zsh_completions_mongodb.git ${ZSH_CUSTOM:-~/.dotfiles/.h-my-zsh/custom}/plugins/mongodb
 ok "Done"
-sudo git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.oh-my-zsh/plugins/calc/calc.plugin.zsh
+sudo git clone https://github.com/arzzen/calc.plugin.zsh.git ~/.dotfiles/.oh-my-zsh/plugins/calc/calc.plugin.zsh
 ok "Done"
-sudo git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/custom/plugins/alias-tips
+sudo git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/custom/plugins/alias-tips
 ok "Done"
-sudo git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+sudo git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 ok "Done"
-sudo git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair
+sudo git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/zsh-autopair
 ok "Done"
-sudo git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bd
+sudo git clone https://github.com/Tarrasch/zsh-bd.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/zsh-bd
 ok "Done"
-sudo git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd
+sudo git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/enhancd
 ok "Done"
 
 # Installing perlbrew
@@ -191,6 +191,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 bot "Installing vim plugins...press 'enter' to accept."
 # TODO: Figure out why this gets hung
 vim +PlugInstall +qall >/dev/null 2>&1
+brew tap AlexanderWillnet/tap
+brew install things.sh
 ok "Done"
 # fi
 

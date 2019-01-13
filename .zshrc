@@ -48,17 +48,17 @@ compinit -C
 
 # SOURCE-ING {{{
 ## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
-source $ZSH/oh-my-zsh.sh
+source ~/.dotfiles/oh-my-zsh/oh-my-zsh.sh
 
 ## sourcing external files
 source $HOME/perl5/perlbrew/etc/bashrc             # perl's REPL
-source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.zsh/secrets.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
-source ~/.oh-my-zsh/custom/plugins/enhancd/init.sh
+source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
+source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
+source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
 # }}}
 
 ## Color needs to be set AFTER source-ing
