@@ -99,7 +99,7 @@ fi
 
 # alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 # alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
-alias vtop='vtop --theme wizard'
+# alias vtop='vtop --theme wizard'
 
 alias zshconfig="code ~/.zshrc"
 alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
