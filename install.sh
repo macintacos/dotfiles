@@ -221,8 +221,6 @@ bot "Installing NPM global modules..."
 ###############################################################################
 
 running "installing NPM modules..."
-npm install -g vtop
-ok "Done"
 npm install -g jira2md
 ok "Done"
 npm install -g mgeneratejs
@@ -250,7 +248,7 @@ bot "Configuring iTerm2..."
 
 # TODO: Need to make a script that parses the current iTerm config and substitutes the current $HOME
 # Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "./iterm2"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${GITHUB_PROJECT_INSTALL_DIR}/iterm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 

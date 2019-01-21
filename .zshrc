@@ -78,8 +78,6 @@ source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 bindkey '^ ' autosuggest-accept         # Binding `CTRL+SPACE` to auto-accept suggestions
-# Set CLICOLOR if you want Ansi Colors in iTerm2 
-export CLICOLOR=1
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 # }}}
