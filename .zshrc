@@ -31,7 +31,7 @@ done
 
 # ZSH SETTINGS {{{
 DEFAULT_USER="$(whoami)"
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 
@@ -98,6 +98,11 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
+# }}}
+
+# POWERLINE SETTINGS {{{
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 # }}}
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{

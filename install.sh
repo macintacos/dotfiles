@@ -102,6 +102,10 @@ ok "Done"
 sudo git clone https://github.com/b4b4r07/enhancd ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/enhancd
 ok "Done"
 
+running "installing zsh themes..."
+sudo git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/themes/powerlevel9k
+ok "Done"
+
 # Installing perlbrew
 running "installing perlbrew..."
 \curl -L https://install.perlbrew.pl | bash
