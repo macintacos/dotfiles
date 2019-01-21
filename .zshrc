@@ -104,7 +104,7 @@ bindkey '^I' $fzf_default_completion
 
 # POWERLINE SETTINGS {{{
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 # }}}
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
