@@ -1,6 +1,7 @@
-# PROFILING INFORMATION.
+# PROFILING INFORMATION {{{
 ## Uncomment the following line (and last line) to get loading times for zshell
 # zmodload zsh/zprof
+# }}}
 
 # EXPORTS {{{
 export TERM="xterm-256color"
@@ -10,12 +11,27 @@ export EDITOR='code'
 export LNAV_EXP="mouse"
 set LNAV_EXP="mouse"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion# }}}
+# NVM LAZY LOADING {{{
+# Add every binary that requires nvm, npm or node to run to an array of node globals
+NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+
+# Lazy-loading nvm + npm on node globals call
+load_nvm () {
+  export NVM_DIR=~/.nvm
+  [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+}
+
+# Making node global trigger the lazy loading
+for cmd in "${NODE_GLOBALS[@]}"; do
+  eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
+# }}}
 
 # ZSH SETTINGS {{{
 DEFAULT_USER="$(whoami)"
-ZSH_THEME="arrow"
+ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 
@@ -34,15 +50,14 @@ autoload colors; colors
 
 # PLUGINS & CACHE LOADING {{{
 plugins=(git zsh-completions zsh_completions_mongodb mongodb httpie npm node python calc alias-tips fast-syntax-highlighting zsh-autosuggestions)
-autoload -Uz compinit
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 ## for only occasional re-compilation
+autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
     compinit
 done
-
 compinit -C
 # }}}
 
@@ -59,11 +74,12 @@ source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://gith
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
-# }}}
 
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 bindkey '^ ' autosuggest-accept         # Binding `CTRL+SPACE` to auto-accept suggestions
+# }}}
+
 
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -82,13 +98,13 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
-
 # }}}
 
-## THINGS NOT LOADING FAST ENOUGH?
-## comment out the following line (and the first ling at the top of this file)
-## start a new shell, analyze the results.
+## THINGS NOT LOADING FAST ENOUGH? {{{
+## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
+# }}}
+
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
