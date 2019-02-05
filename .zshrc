@@ -1,6 +1,6 @@
 # PROFILING INFORMATION {{{
 ## Uncomment the following line (and last line) to get loading times for zshell
-zmodload zsh/zprof
+# zmodload zsh/zprof
 # }}}
 
 # EXPORTS {{{
@@ -115,5 +115,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
-zprof
+# zprof
 # }}}
