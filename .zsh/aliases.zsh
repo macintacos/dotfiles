@@ -16,6 +16,7 @@ alias t='tail -f'            # shorten tail, and always continue to tail unless 
 alias dud='du -d 1 -h'       # get size of all directories in current directory, including self
 alias duf='du -sh *'         # get size of all files in currect directory, exclusing self, including directories
 alias ydl='youtube-dl'       # because it's annoying as hell to type this out everytime
+alias cat='bat'
 
 #   ls improvements/variations
 #   -----------------------------------------------------
