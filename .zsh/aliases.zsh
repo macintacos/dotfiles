@@ -15,14 +15,21 @@ alias ff='fzf'               # shortening fzf
 alias t='tail -f'            # shorten tail, and always continue to tail unless cancelled
 alias dud='du -d 1 -h'       # get size of all directories in current directory, including self
 alias duf='du -sh *'         # get size of all files in currect directory, exclusing self, including directories
+alias ydl='youtube-dl'       # because it's annoying as hell to type this out everytime
 
 #   ls improvements/variations
 #   -----------------------------------------------------
-alias l='ls -lFGh'    # size,show type,human readable
-alias ls='ls -G'      # Colorized output
-alias la='ls -lAFGh'  # long list,show almost all,show type,human readable
-alias lt='ls -ltFGh'  # long list,sorted by date,show type,human readable
-alias ll='ls -FGlAhp' # preferred 'ls' implementation
+# alias l='ls -lFGh'    # size,show type,human readable
+# alias ls='ls -G'      # colorized output
+# alias la='ls -lAFGh'  # long list,show almost all,show type,human readable
+# alias lt='ls -ltFGh'  # long list,sorted by date,show type,human readable
+# alias ll='ls -FGlAhp' # preferred 'ls' implementation
+
+#   ls-exa improvements/variations (using exa as the backing for ls)
+#   -----------------------------------------------------
+alias ls='exa'             # substituting regular ls with exa
+alias ll='exa -laG --git'  # preferred use of ll/exa
+alias lr='exa -laRG --git' # recursive preferred use
 # }}}
 
 # CD ALIASES {{{

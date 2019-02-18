@@ -6,17 +6,11 @@
 # EXPORTS {{{
 export TERM="xterm-256color"
 export EDITOR='code'
-
+export BAT_THEME="TwoDark"
 
 # Experimenting with lnav mouse support.
 export LNAV_EXP="mouse"
 set LNAV_EXP="mouse"
-
-# NVM LAZY LOADING {{{
-# Add every binary that requires nvm, npm or node to run to an array of node globals
-# Needs the zsh-nvm plugin: https://github.com/lukechilds/zsh-nvm#lazy-loading
-export NVM_LAZY_LOAD=true
-# }}}
 
 # JAVA MMS REQ {{{
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
@@ -42,7 +36,7 @@ autoload colors; colors
 # }}}
 
 # PLUGINS & CACHE LOADING {{{
-plugins=(git zsh-completions zsh_completions_mongodb mongodb httpie npm node python calc alias-tips fast-syntax-highlighting zsh-autosuggestions zsh-nvm)
+plugins=(git zsh-completions zsh_completions_mongodb mongodb httpie npm node python calc alias-tips fast-syntax-highlighting zsh-autosuggestions)
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
@@ -108,7 +102,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
-# TODO: Lazy load this in the future
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
 # export ANT_OPTS="-Xms64m -Xmx1500m"
 # }}}
