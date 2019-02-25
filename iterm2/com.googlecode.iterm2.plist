@@ -5029,12 +5029,26 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf702-0x220000</key>
+		<dict>
+			<key>Action</key>
+			<integer>47</integer>
+			<key>Text</key>
+			<string>0</string>
+		</dict>
 		<key>0xf702-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>10</integer>
 			<key>Text</key>
 			<string>b</string>
+		</dict>
+		<key>0xf702-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>47</integer>
+			<key>Text</key>
+			<string>1</string>
 		</dict>
 		<key>0xf702-0x300000</key>
 		<dict>
@@ -5046,9 +5060,16 @@
 		<key>0xf702-0x320000</key>
 		<dict>
 			<key>Action</key>
-			<integer>33</integer>
+			<integer>47</integer>
 			<key>Text</key>
-			<string></string>
+			<string>2</string>
+		</dict>
+		<key>0xf703-0x220000</key>
+		<dict>
+			<key>Action</key>
+			<integer>48</integer>
+			<key>Text</key>
+			<string>0</string>
 		</dict>
 		<key>0xf703-0x280000</key>
 		<dict>
@@ -5056,6 +5077,13 @@
 			<integer>10</integer>
 			<key>Text</key>
 			<string>f</string>
+		</dict>
+		<key>0xf703-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>46</integer>
+			<key>Text</key>
+			<string>1</string>
 		</dict>
 		<key>0xf703-0x300000</key>
 		<dict>
@@ -5067,9 +5095,9 @@
 		<key>0xf703-0x320000</key>
 		<dict>
 			<key>Action</key>
-			<integer>34</integer>
+			<integer>46</integer>
 			<key>Text</key>
-			<string></string>
+			<string>2</string>
 		</dict>
 		<key>0xf729-0x100000</key>
 		<dict>
@@ -5177,9 +5205,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>2965 681 618 521 2560 -353 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2708 258 918 512 2560 -353 1440 2537 </string>
+	<string>-1342 542 958 470 -1680 152 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 -353 1440 1692 2560 -353 1440 2537 </string>
+	<string>0 23 1920 1154 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6652,7 +6680,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-01-25T14:49:46Z</date>
+	<date>2019-02-21T23:01:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
