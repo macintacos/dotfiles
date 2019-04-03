@@ -3,14 +3,10 @@
 # zmodload zsh/zprof
 # }}}
 
-# EXPORTS {{{
-export TERM="xterm-256color"
-export EDITOR='code'
-export BAT_THEME="TwoDark"
-
-# Experimenting with lnav mouse support.
+# LNAV {{{
 export LNAV_EXP="mouse"
 set LNAV_EXP="mouse"
+# }}}
 
 # JAVA MMS REQ {{{
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
