@@ -16,13 +16,11 @@ bot "Linking local config to remote dotfiles..."
 bot "First need to create directories if they don't exist..."
 
 # Configuring Directories
-# if [ ! -d "$HOME/.zsh" ]; then 
+# if [ ! -d "$HOME/.zsh" ]; then
 #     action "Creating ~/.zsh"
 #     mkdir -p -- ".zsh/"
-#     ok "Done." 
+#     ok "Done."
 # fi
-
-
 
 # Touching some files so that they exist when linking
 
@@ -57,6 +55,12 @@ running "linking eslint"
 rm -rf .eslintrc.js
 sudo ln -sF ${DOTFILES_DIR}/.eslintrc.js ~/.eslintrc.js
 ok "ESLINT linked."
+
+# Karabiner
+running "linking Karabiner"
+rm -rf karabiner
+sudo ln -sF ${DOTFILES_DIR}/karabiner ~/.config/karabiner
+ok "Karabiner linked."
 
 bot "All dotfiles linked."
 ok
