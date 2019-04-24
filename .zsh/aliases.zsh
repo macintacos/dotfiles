@@ -11,6 +11,7 @@ alias rm='rm -i'             # makes sure 'rm' always requires confirmation
 alias f='open -a Forklift .' # opens current directory in Forklift
 alias edit='vim'             # default editor if i don't want to leave the terminal
 alias grep='grep --color'    # always colorize output
+alias rg='rg -N'             # always don't show lines (isn't necessary most of the time)
 alias ff='fzf'               # shortening fzf
 alias t='tail -f'            # shorten tail, and always continue to tail unless cancelled
 alias dud='du -d 1 -h'       # get size of all directories in current directory, including self
