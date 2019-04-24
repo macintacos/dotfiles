@@ -16,4 +16,5 @@ export EDITOR='code'
 export BAT_THEME="TwoDark"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-export PATH="$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"
+export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
+export PATH="$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"

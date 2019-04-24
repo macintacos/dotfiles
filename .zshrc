@@ -4,8 +4,8 @@
 # }}}
 
 # LNAV {{{
-export LNAV_EXP="mouse"
-set LNAV_EXP="mouse"
+# export LNAV_EXP="mouse"
+# set LNAV_EXP="mouse"
 # }}}
 
 # JAVA MMS REQ {{{
@@ -49,14 +49,15 @@ compinit -C
 source ~/.dotfiles/oh-my-zsh/oh-my-zsh.sh
 
 ## sourcing external files
-source $HOME/perl5/perlbrew/etc/bashrc             # perl's REPL
-source ~/.zsh/secrets.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/functions.zsh
+source $HOME/perl5/perlbrew/etc/bashrc  # perl's REPL
+source ~/.zshsecrets/secrets.zsh        # My secrets
+source ~/.zsh/aliases.zsh               # aliases
+source ~/.zsh/functions.zsh             # functions
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
+export PATH="/usr/local/sbin:$PATH"     # Because brew doctor complains
 
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
