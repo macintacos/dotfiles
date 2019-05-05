@@ -3,7 +3,7 @@
 # UTILITIES; SHORTENED {{{
 alias z='zrun'               # making zrun a bit more easy to run
 alias things='things.sh'     # shortening things script
-alias c='clear && l'         # clear terminal display, show directory
+alias c='clear && ll'        # clear terminal display, show directory
 alias cls='clear'            # clear sisplay, just like `mongo` shell
 alias cp='cp -iv'            # preferred 'cp' implementation
 alias mv='mv -iv'            # preferred 'mv' implementation
@@ -31,7 +31,7 @@ alias cat='bat'              # because bat is just insanely better than cat
 #   -----------------------------------------------------
 alias ls='exa'             # substituting regular ls with exa
 alias l='exa -laG --git'   # preferred use of ll/exa
-alias ll='exa -laG --git'  # preferred use of ll/exa
+alias ll='exa -lahG --git' # preferred use of ll/exa
 alias lr='exa -laRG --git' # recursive preferred use
 # }}}
 
