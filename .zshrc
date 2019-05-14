@@ -13,6 +13,7 @@
 # }}}
 
 # ZSH SETTINGS {{{
+POWERLEVEL9K_MODE='awesome-patched'
 DEFAULT_USER="$(whoami)"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 HYPHEN_INSENSITIVE="true"
