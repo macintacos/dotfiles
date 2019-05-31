@@ -56,34 +56,58 @@ ii() { #   ii:  display useful host related informaton
   echo
 }
 
-git-clean-local() { # Cleans any local branches that are no longer on remote. Pass in "-D" to delete them (by default, running this will just print out existing branches).
-  gone_local=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
+git-clean-local() {
+  # This function doesn't work, use at your own risk because it's dumb right now.
+  usage() {
+    cat <<EOF >&2
+This function doesn't work, use at your own risk because it's dumb right now.
+Usage: git-clean-local [-s] [-D] [-h]
 
-  if ! [[ $gone_local ]]; then
-    echo "No local branch has been deleted on remote." >&2
+-s : View (but don't delete) local branches that are not on remote
+-D : Deletes all local branches that are not on remote
+-h : Display this help text
+
+EOF
+  }
+
+  if ((OPTIND == 1)); then
+    usage
     return 1
   fi
 
-  if [[ -z "$1" ]]; then
-    echo "Fetching remotes..."
-    git fetch --all
-    echo "___________________________________________________________________________"
-    echo "The following local branches have been deleted on the remote repositories:"
-    echo $gone_local
-    echo "To delete them all, run the following command:"
-    echo "git-clean-local -D"
-    echo "---------------------------------------------------------------------------"
-  fi
+  while getopts sDh o; do
+    case $o in
+    s)
+      gone_local=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
 
-  # if there
-  for arg in "$@"; do
-    if [ "$arg" == "-D" ]; then
+      if ! [ $gone_local ]; then
+        echo "No local branch has been deleted on remote." >&2
+        return 1
+      fi
+
+      if [ -z "$1" ]; then
+        echo "Fetching remotes..."
+        git fetch --all
+        echo "___________________________________________________________________________"
+        echo "The following local branches have been deleted on the remote repositories:"
+        echo $gone_local
+        echo "To delete them all, run the following command:"
+        echo "git-clean-local -D"
+        echo "---------------------------------------------------------------------------"
+      fi
+      ;;
+    D)
       echo "Fetching remotes before deleting..."
-      git fetch --all >/dev/null 2>&1
+      git fetch --all
       git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
-    fi
+      ;;
+    h) usage ;;
+    *) usage ;;
+    esac
   done
 }
+
+# }
 # }}}
 
 # FZF {{{
