@@ -58,12 +58,15 @@ ii() { #   ii:  display useful host related informaton
 
 git-clean-local() { # Cleans any local branches that are no longer on remote
   # should probably add some logic that allows you to pass in an option (-d?) to delete; by default it'll only print.
+  # It would nice to be able to fetch all remotes before running this, but that'd involve skipping the step if someone passed in the correct option.
   gone_local=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
   if ! [[ $gone_local ]]; then
     echo "No local branch have been deleted on remote." >&2
     return 1
   fi
   echo $gone_local
+  echo "The above branches are deleted on remote. To delete them all, run the following command:"
+  echo "git-clean-local | xargs git branch -D"
 }
 # }}}
 
