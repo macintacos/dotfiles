@@ -70,11 +70,6 @@ Usage: git-clean-local [-s] [-D] [-h]
 EOF
   }
 
-  if ((OPTIND == 1)); then
-    usage
-    return 1
-  fi
-
   while getopts sDh o; do
     case $o in
     s)
