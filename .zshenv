@@ -2,6 +2,7 @@
 export GDRIVE="$HOME/Google Drive"
 export LOCAL_BIN=/usr/local/bin
 export ZSH=$HOME/.dotfiles/oh-my-zsh
+export MY_ZSH_SCRIPTS=$HOME/.zsh/scripts
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export SSH_KEY_PATH=~/.ssh/rsa_id
 export SCALA_HOME=/usr/local/share/scala
@@ -17,4 +18,4 @@ export BAT_THEME="TwoDark"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
-export PATH="$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"
+export PATH="$MY_ZSH_SCRIPTS:$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"

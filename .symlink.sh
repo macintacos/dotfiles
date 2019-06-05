@@ -25,11 +25,13 @@ ln -sF "${DOTFILES_DIR}/.zshenv" ~/.zshenv
 
 ## Aliases and Functions
 rm -rf .zsh/
-mkdir -p .zsh
+mkdir -p .zsh/scripts
 touch .zsh/aliases.zsh
 touch .zsh/functions.zsh
+touch .zsh/scripts/git-clean-local.zsh
 ln -sF "${DOTFILES_DIR}/.zsh/aliases.zsh" ~/.zsh/aliases.zsh
 ln -sF "${DOTFILES_DIR}/.zsh/functions.zsh" ~/.zsh/functions.zsh
+ln -sF "${DOTFILES_DIR}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
 ok "ZSH linked."
 # }}}
 
