@@ -35,7 +35,7 @@ while [ $# -gt 0 ]; do
         echo "Fetching remotes..."
         git fetch --all
 
-        git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'
+        gone_local=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
 
         if ! [ ${gone_local} ]; then
             echo "No local branch has been deleted on remote." >&2
