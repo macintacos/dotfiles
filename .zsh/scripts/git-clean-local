@@ -33,30 +33,27 @@ while [ $# -gt 0 ]; do
     -s | -search | --search)
         git checkout master
         echo "Fetching remotes..."
-        git fetch --all
+        git fetch --all --prune
 
         gone_local=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
 
-        if ! [ ${gone_local} ]; then
-            echo "No local branch has been deleted on remote." >&2
-            return 1
-        fi
-
-        if [ -z "$1" ]; then
-            git remote prune origin
+        if [ ${gone_local} ]; then
             echo "___________________________________________________________________________"
             echo "The following local branches have been deleted on the remote repositories:"
             echo $gone_local
             echo "To delete them all, run the following command:"
             echo "git-clean-local -D"
             echo "---------------------------------------------------------------------------"
+            return 0
         fi
+
+        echo "No local branch has been deleted on remote."
+        return 1
         ;;
     -D | -del | --delete)
         git checkout master
         echo "Fetching remotes before deleting..."
-        git fetch --all
-        git remote prune origin
+        git fetch --all --prune
         git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
         ;;
     *)

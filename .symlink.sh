@@ -9,6 +9,7 @@
 source ./lib_sh/echos.sh
 
 DOTFILES_DIR=$PWD
+SUBLIME_MERGE_USER_DIR="/Applications/Sublime Merge.app/Contents/MacOS/Packages/User/"
 
 cd ~
 
@@ -62,6 +63,14 @@ rm -rf .config/karabiner
 mkdir -p .config/karabiner
 ln -sF "${DOTFILES_DIR}/karabiner" ~/.config/karabiner
 ok "Karabiner linked."
+
+# Sublime Merge
+running "linking Sublime Merge keymap"
+rm -rf "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
+mkdir -p "${SUBLIME_MERGE_USER_DIR}"
+touch "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
+ln -sF "${DOTFILES_DIR}/sublime/merge/Default.sublime-keymap" "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
+ok "Sublime Merge keymap linked."
 
 bot "All dotfiles linked. Remember to add your ~/.zshsecrets/secrets.zsh file!"
 ok

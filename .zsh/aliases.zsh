@@ -40,9 +40,9 @@ alias lr='exa -laRG --git' # recursive preferred use
 
 # CD ALIASES {{{
 alias cdlogs="cd $HOME/Downloads/logs"
-alias cddev="cd $HOME/Google\ Drive/Developer"
-alias cdtyp="cd $HOME/Google\ Drive/Developer/MongoDB/_Typinator"
-alias cdatlas="cd $HOME/Google\ Drive/Developer/MongoDB/_AtlasPlayground"
+alias cddev="cd $HOME/Drive\ -\ Personal/Developer"
+alias cdtyp="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_Typinator"
+alias cdatlas="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_AtlasPlayground"
 # }}}
 
 # VS CODE ALIASES {{{
