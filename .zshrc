@@ -18,6 +18,7 @@ DEFAULT_USER="$(whoami)"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
+BAT_THEME="base16"
 
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
