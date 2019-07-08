@@ -366,6 +366,13 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	Privileges -bool true
 ok "Done"
 
+running "Setting some default values for QLColorCode"
+defaults write org.n8gray.QLColorCode font "IBM Plex Mono"
+defaults write org.n8gray.QLColorCode fontSizePoints 11
+defaults write org.n8gray.QLColorCode hlTheme Zellner
+defaults write org.n8gray.QLColorCode extraHLFlags '-l'
+ok "Done"
+
 ###############################################################################
 bot "You're all set! Some reminders:\n\t* You'll need to manually tun Settings Sync in VSCode. Follow the steps here: https://github.com/shanalikhan/code-settings-sync/wiki/Setup-Guide"
 ###############################################################################

@@ -1,99 +1,160 @@
+tap "alexanderwillner/tap"
+tap "d12frosted/emacs-plus"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "nshipster/formulae"
+tap "osx-cross/avr"
+tap "px4/px4"
+cask "xquartz"
 brew "ack"
-brew "ant"
+brew "aom"
+brew "archey"
 brew "autojump"
-brew "azure-cli"
-brew "bash"
-brew "bfg"
+brew "avrdude"
+brew "bash-completion"
+brew "bat"
+brew "blueutil"
+brew "fontconfig"
+brew "gettext"
+brew "gdbm"
+brew "libffi"
+brew "openssl"
+brew "pcre"
+brew "python"
 brew "coreutils"
-brew "ctags"
-brew "duti"
+brew "dep"
+brew "dfu-programmer"
+brew "dfu-util"
+brew "dos2unix"
+brew "exa"
 brew "fd"
+brew "flac"
+brew "frei0r"
+brew "giflib"
+brew "gmp"
+brew "openjpeg"
+brew "webp"
+brew "leptonica"
+brew "libass"
+brew "libbluray"
+brew "libsndfile"
+brew "libsamplerate"
+brew "libsoxr"
+brew "opencore-amr"
+brew "rtmpdump"
+brew "rubberband"
+brew "speex"
+brew "tesseract"
 brew "ffmpeg"
-brew "findutils", args: ["with-default-names"]
+brew "findutils"
+brew "python@2"
+brew "fpp"
 brew "fzf"
-brew "glide"
+brew "isl"
+brew "mpfr"
+brew "libmpc"
+brew "gcc"
+brew "gifsicle"
+brew "glances"
+brew "libgpg-error"
+brew "libassuan"
+brew "pinentry"
+brew "gnupg"
 brew "grep", args: ["with-default-names"]
-brew "heroku/brew/heroku"
 brew "highlight"
 brew "htop"
-brew "httpie"
 brew "httrack"
-brew "hugo"
-brew "jansson"
-brew "libconfig"
-brew "libevent"
-brew "libgcrypt"
-brew "libvpx"
+brew "imagesnap"
+brew "jq"
+brew "libarchive"
+brew "libp11"
 brew "lnav"
-brew "lua"
-brew "macvim", args: ["with-override-system-vim"]
+brew "luarocks"
 brew "mas"
-brew "micro"
-brew "mmark"
-brew "mongo-c-driver"
-brew "mongodb", link: false
+brew "midnight-commander"
+brew "mint"
 brew "moreutils"
-brew "mpv", args: ["with-bundle"]
+brew "uchardet"
+brew "vapoursynth"
+brew "youtube-dl"
+brew "mpv"
+brew "n"
 brew "neovim"
-brew "node", link: false
-brew "python"
-brew "readline"
+brew "nmap"
+brew "nvm"
+brew "psutils"
+brew "ranger"
+brew "reattach-to-user-namespace"
 brew "ripgrep"
-brew "sbt"
-brew "scons"
+brew "ruby"
+brew "s-search"
 brew "shellcheck"
-brew "sqlite"
-brew "telnet"
-brew "tesseract"
+brew "shfmt"
+brew "swiftformat"
+brew "swiftlint"
+brew "terraform"
 brew "the_silver_searcher"
-brew "thefuck"
 brew "tig"
 brew "tmux"
-brew "trash"
+brew "todo-txt"
 brew "tree"
 brew "wget"
-brew "yarn"
-brew "youtube-dl"
-brew "zsh-syntax-highlighting"
+brew "yank"
 brew "zsh"
-cask "hyper"
+brew "zsh-completions"
+brew "alexanderwillner/tap/things.sh"
+brew "d12frosted/emacs-plus/emacs-plus"
+brew "osx-cross/avr/avr-gcc@7", link: true
+brew "px4/px4/gcc-arm-none-eabi"
+cask "alacritty"
+cask "docker"
+cask "flux"
+cask "font-awesome-terminal-fonts"
+cask "font-fontawesome"
+cask "font-inconsolata-dz-for-powerline"
+cask "font-inconsolata-for-powerline"
+cask "font-inconsolata-g-for-powerline"
+cask "font-roboto-mono"
+cask "font-roboto-mono-for-powerline"
+cask "font-source-code-pro"
+cask "gpg-suite"
 cask "keycastr"
-cask "powershell"
-cask "railwaycat/emacsmacport/emacs-mac"
+cask "little-snitch"
+cask "macbreakz"
+cask "micro-snitch"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlstephen"
+cask "qlvideo"
+cask "signal"
+cask "sizeup"
+mas "1Keyboard", id: 766939888
+mas "2Do", id: 477670270
+mas "Agenda", id: 1287445660
 mas "Amphetamine", id: 937984704
-mas "Calcbot", id: 931657367
-mas "CARROT Weather", id: 993487541
+mas "Bear", id: 1091189122
 mas "ChatMate for WhatsApp", id: 1228059008
 mas "Day One", id: 1055511498
 mas "Deliveries", id: 924726344
-mas "Evernote", id: 406056744
-mas "ImageSize", id: 1197449714
-mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "Kiwi for Gmail", id: 986304488
+mas "Downlink", id: 1454269192
+mas "Drafts", id: 1435957248
+mas "Due", id: 524373870
+mas "iA Writer", id: 775737590
+mas "Keep It", id: 1272768911
+mas "Keka", id: 470158793
 mas "Magnet", id: 441258766
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Pastebot", id: 1179623856
-mas "PCalc", id: 403504866
+mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator", id: 407963104
-mas "PopClip", id: 445189367
-mas "Reeder", id: 880001334
-mas "Soulver", id: 413965349
-mas "The Unarchiver", id: 425424353
-mas "Things3", id: 904280696
+mas "Things", id: 904280696
+mas "ToothFairy", id: 1191449274
 mas "Trello", id: 1278508951
 mas "Tweetbot", id: 1384080005
+mas "Ulysses", id: 1225570693
 mas "Wunderlist", id: 410628904
+mas "XCFormat", id: 1165321484
 mas "Xcode", id: 497799835
-tap "d12frosted/emacs-plus"
-tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/php"
-tap "railwaycat/emacsmacport"
-tap "theeternalsw0rd/telnet"
