@@ -47,7 +47,7 @@ alias cdatlas="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_AtlasPlayground"
 
 # VS CODE ALIASES {{{
 alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
-alias dotfiles='code "$HOME/Google Drive/Developer/GitHub - Personal/dotfiles"'
+alias dotfiles='code "$HOME/Drive\ -\ Personal/Developer/GitHub - Personal/dotfiles"'
 # }}}
 
 # MONITORING {{{
