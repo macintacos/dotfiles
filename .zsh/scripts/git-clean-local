@@ -13,6 +13,7 @@ usage() {
 Command used to clean local git branches that have been removed on remote.
 
 Usage: git-clean-local [-sDh]
+Alias: gclean [-sDh]
 
 -s, -search, --search : View (but don't delete) local branches that are not on remote
    -D, -del, --delete : Deletes all local branches that are not on remote
