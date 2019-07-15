@@ -1,6 +1,7 @@
 # Setting PATHs
 export GDRIVE="$HOME/Google Drive"
 export LOCAL_BIN=/usr/local/bin
+export KEKA=/Applications/Keka.app/Contents/MacOS
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 export MY_ZSH_SCRIPTS=$HOME/.zsh/scripts
 export MY_ZSH_SECRETS=$HOME/.zshsecrets
@@ -19,4 +20,4 @@ export BAT_THEME="TwoDark"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
-export PATH="$MY_ZSH_SECRETS:$MY_ZSH_SCRIPTS:$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"
+export PATH="$KEKA:$MY_ZSH_SECRETS:$MY_ZSH_SCRIPTS:$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"

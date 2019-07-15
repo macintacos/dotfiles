@@ -20,6 +20,7 @@ alias ydl='youtube-dl'         # because it's annoying as hell to type this out 
 alias cat='bat'                # because bat is just insanely better than cat
 alias vs='code'                # shortening vscode's code
 alias gclean='git-clean-local' # cleans out any branches from local that have been deleted on remote
+alias keka='Keka'              # unzip utility on mac
 alias v='nvim'                 # shortening usage of nvim
 alias nv='nvim'
 
