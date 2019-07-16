@@ -70,14 +70,6 @@ alias cpuhogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 #   -----------------------------------------------------
 alias topForever='top -l 9999999 -s 10 -o cpu'
 
-#   ttop:  Recommended 'top' invocation to minimize resources
-#   ------------------------------------------------------------
-#       Taken from this macosxhints article
-#       http://www.macosxhints.com/article.php?story=20060816123853639
-#   ------------------------------------------------------------
-alias ttop="top -R -F -s 10 -o rsize"
-# }}}
-
 # ZSH-SPECIFIC {{{
 if is-at-least 4.2.0; then
     # open browser on urls
