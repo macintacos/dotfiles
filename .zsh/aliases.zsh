@@ -22,7 +22,9 @@ alias vs='code'                # shortening vscode's code
 alias gclean='git-clean-local' # cleans out any branches from local that have been deleted on remote
 alias keka='Keka'              # unzip utility on mac
 alias v='nvim'                 # shortening usage of nvim
+alias touch='ad'               # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias nv='nvim'
+eval "$(hub alias -s)"
 
 #   ls improvements/variations
 #   -----------------------------------------------------
@@ -34,10 +36,10 @@ alias nv='nvim'
 
 #   ls-exa improvements/variations (using exa as the backing for ls)
 #   -----------------------------------------------------
-alias ls='exa'             # substituting regular ls with exa
-alias l='exa -laG --git'   # preferred use of ll/exa
-alias ll='exa -lahG --git' # preferred use of ll/exa
-alias lr='exa -laRG --git' # recursive preferred use
+alias ls='exa --icons'             # substituting regular ls with exa
+alias l='exa -laG --git --icons'   # preferred use of ll/exa
+alias ll='exa -lahG --git --icons' # preferred use of ll/exa
+alias lr='exa -laRG --git --icons' # recursive preferred use
 # }}}
 
 # CD ALIASES {{{
