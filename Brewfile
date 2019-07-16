@@ -85,6 +85,7 @@ brew "n"
 brew "neovim"
 brew "nmap"
 brew "nvm"
+brew "pkg-config"
 brew "psutils"
 brew "ranger"
 brew "reattach-to-user-namespace"
@@ -95,20 +96,24 @@ brew "shellcheck"
 brew "shfmt"
 brew "swiftformat"
 brew "swiftlint"
+brew "telnet"
 brew "terraform"
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
 brew "todo-txt"
 brew "tree"
+brew "up"
 brew "wget"
 brew "yank"
+brew "zeromq"
 brew "zsh"
 brew "zsh-completions"
 brew "alexanderwillner/tap/things.sh"
 brew "d12frosted/emacs-plus/emacs-plus"
 brew "osx-cross/avr/avr-gcc@7", link: true
 brew "px4/px4/gcc-arm-none-eabi"
+cask "1password-cli"
 cask "alacritty"
 cask "docker"
 cask "flux"
@@ -125,6 +130,7 @@ cask "keycastr"
 cask "little-snitch"
 cask "macbreakz"
 cask "micro-snitch"
+cask "minikube"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlstephen"
@@ -147,6 +153,7 @@ mas "Keep It", id: 1272768911
 mas "Keka", id: 470158793
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator", id: 407963104

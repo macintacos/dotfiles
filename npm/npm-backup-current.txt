@@ -1,4 +1,5 @@
 fkill-cli
 mongo-hacker
 npm
+speed-test
 tldr
