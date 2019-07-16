@@ -56,6 +56,70 @@ ii() { #   ii:  display useful host related informaton
   echo
 }
 
+npm-backup() {
+  usage() {
+    cat <<EOF >&2
+Command used export the current machine's npm global packages.
+
+Usage: npm-backup [-eih]
+
+-e, --export : Exports current global npm global packages to 'npm-backup-current.txt'. If file exists, it is backed up.
+-i, --import : Imports packages read from the current directory's 'npm-backup-current.txt'
+  -h, --help : Display this help text
+
+EOF
+  }
+
+  npm_list=$(npm list --global --parseable --depth=0 | sed '1d' | awk '{gsub(/\/.*\//,"",$1); print}')
+  logfile="npm-backup-current.txt"
+
+  POSITIONAL=()
+
+  while [[ $# > 0 ]]; do
+    case "$1" in
+    -e | --export)
+      echo "Exporting these packages to ${logfile}"
+      echo "${npm_list}"
+
+      if [ -f "$logfile" ]; then
+        backup_logfile="$logfile.$(date +%H%M%S)"
+        echo "Existing ${logfile} found, backing up..."
+        mv "$logfile" "$backup_logfile"
+        echo "Backed up to ${backup_logfile}"
+      else
+        touch $logfile
+      fi
+
+      echo $npm_list >$logfile
+      echo "Latest global npm packages have been exported to: ${logfile}"
+      echo "To import, using the command \`npm-backup --import\`"
+      shift # shift once since flags have no values
+      ;;
+    -i | --import)
+      if [ -f "$logfile" ]; then
+        echo "Importing the following packages found in $logfile:"
+        cat $logfile
+        xargs npm install --global <$logfile
+      else
+        echo "${logfile} not found in the current directory."
+      fi
+      shift
+      ;;
+    -h | --help)
+      usage
+      shift
+      ;;
+    *) # unknown flag/switch
+      usage
+      POSITIONAL+=("$1")
+      shift
+      ;;
+    esac
+  done
+
+  set -- "${POSITIONAL[@]}" # restore positional params
+}
+
 # }
 # }}}
 
