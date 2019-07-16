@@ -77,6 +77,7 @@ alias topForever='top -l 9999999 -s 10 -o cpu'
 #   ------------------------------------------------------------
 alias ttop="top -R -F -s 10 -o rsize"
 # }}}
+# }}}
 
 # ZSH-SPECIFIC {{{
 if is-at-least 4.2.0; then
