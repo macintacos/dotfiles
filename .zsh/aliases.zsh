@@ -23,6 +23,7 @@ alias gclean='git-clean-local' # cleans out any branches from local that have be
 alias keka='Keka'              # unzip utility on mac
 alias v='nvim'                 # shortening usage of nvim
 alias touch='ad'               # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
+alias top='glances'            # better resource visualizer
 alias nv='nvim'
 eval "$(hub alias -s)"
 
