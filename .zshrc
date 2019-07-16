@@ -9,7 +9,7 @@
 # }}}
 
 # JAVA MMS REQ {{{
-[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
 # }}}
 
 # ZSH SETTINGS {{{
@@ -101,8 +101,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
-[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
-export ANT_OPTS="-Xms64m -Xmx1500m"
+# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+# export ANT_OPTS="-Xms64m -Xmx1500m"
 # }}}
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
