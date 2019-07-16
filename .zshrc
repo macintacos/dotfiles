@@ -77,7 +77,7 @@ export FZF_COMPLETION_TRIGGER=''
 export FZF_DEFAULT_OPTS="
 --height 40% --layout=reverse --border
 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'
---color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
+--color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
 --bind tab:down --cycle
 "

@@ -49,6 +49,7 @@ alias cdlogs="cd $HOME/Downloads/logs"
 alias cddev="cd $HOME/Drive\ -\ Personal/Developer"
 alias cdtyp="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_Typinator"
 alias cdatlas="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_AtlasPlayground"
+alias cddot="cd $HOME/Drive\ -\ Personal/Developer/GitHub\ -\ Personal/dotfiles"
 # }}}
 
 # VS CODE ALIASES {{{
