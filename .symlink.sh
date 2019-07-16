@@ -24,7 +24,7 @@ touch .zshenv
 ln -sF "${DOTFILES_DIR}/.zshrc" ~/.zshrc
 ln -sF "${DOTFILES_DIR}/.zshenv" ~/.zshenv
 
-## Aliases and Functions
+## Aliases and Functions {{{
 rm -rf .zsh/
 mkdir -p .zsh/scripts
 touch .zsh/aliases.zsh
@@ -72,5 +72,16 @@ touch "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 ln -sF "${DOTFILES_DIR}/sublime/merge/Default.sublime-keymap" "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 ok "Sublime Merge keymap linked."
 
-bot "All dotfiles linked. Remember to add your ~/.zshsecrets/secrets.zsh file!"
+## SECRETS {{{
+running "linking secrets"
+rm -rf .zshsecrets/
+mkdir .zshsecrets
+touch atlas-ssh
+touch secrets.zsh
+ln -sF "${DOTFILES_DIR}/.zsh/secrets/atlas-ssh" ~/.zshsecrets/atlas-ssh
+ln -sF "${DOTFILES_DIR}/.zsh/secrets/secrets.zsh" ~/.zshsecrets/secrets.zsh
+ok "Secrets linked."
+# }}}
+
+bot "All dotfiles linked."
 ok
