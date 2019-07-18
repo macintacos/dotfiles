@@ -51,7 +51,7 @@ compinit -C
 source ~/.dotfiles/oh-my-zsh/oh-my-zsh.sh
 
 ## sourcing external files
-source $HOME/perl5/perlbrew/etc/bashrc  # perl's REPL
+# source $HOME/perl5/perlbrew/etc/bashrc  # perl's REPL
 source ~/.zshsecrets/secrets.zsh        # My secrets
 source ~/.zsh/aliases.zsh               # aliases
 source ~/.zsh/functions.zsh             # functions
@@ -103,15 +103,17 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
 # export ANT_OPTS="-Xms64m -Xmx1500m"
+# export ANT_HOME=/usr/local/apache-ant-1.10.5
 # }}}
+
+
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
+
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
-# }}}export ANT_HOME=/usr/local/apache-ant-1.10.5
-
-export N_PREFIX=$HOME/.n
-export PATH=$N_PREFIX/bin:$PATH
-
-export N_PREFIX=$HOME/.n
-export PATH=$N_PREFIX/bin:$PATH
+# }}}

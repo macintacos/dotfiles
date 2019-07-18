@@ -19,7 +19,6 @@ alias duf='du -sh *'                # get size of all files in currect directory
 alias ydl='youtube-dl'              # because it's annoying as hell to type this out everytime
 alias cat='bat --theme="ansi-dark"' # because bat is just insanely better than cat
 alias vs='code'                     # shortening vscode's code
-alias gclean='git-clean-local'      # cleans out any branches from local that have been deleted on remote
 alias keka='Keka'                   # unzip utility on mac
 alias touch='ad'                    # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias top='glances'                 # better resource visualizer
@@ -27,21 +26,18 @@ alias rm='trash -v'                 # a better rm
 eval "$(hub alias -s)"              # hub = git; hub is a superset of git, so everything should work
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
+# }}}
 
-#   ls improvements/variations
-#   -----------------------------------------------------
-# alias l='ls -lFGh'    # size,show type,human readable
-# alias ls='ls -G'      # colorized output
-# alias la='ls -lAFGh'  # long list,show almost all,show type,human readable
-# alias lt='ls -ltFGh'  # long list,sorted by date,show type,human readable
-# alias ll='ls -FGlAhp' # preferred 'ls' implementation
+# GIT ALIASES {{{
+alias gst='tig status'            # better way to view git status
+alias gclean='git-clean-local'    # cleans out any branches from local that have been deleted on remote
+# }}}
 
-#   ls-exa improvements/variations (using exa as the backing for ls)
-#   -----------------------------------------------------
-alias ls='exa --icons'             # substituting regular ls with exa
-alias l='exa -laG --git --icons'   # preferred use of ll/exa
-alias ll='exa -lahG --git --icons' # preferred use of ll/exa
-alias lr='exa -laRG --git --icons' # recursive preferred use
+# LS IMPROVEMENTS (aka -> exa) {{{
+alias ls='exa --icons'            # substituting regular ls with exa
+alias l='exa -la --git --icons'   # preferred use of ll/exa
+alias ll='exa -lah --git --icons' # preferred use of ll/exa
+alias lr='exa -laR --git --icons' # recursive preferred use
 # }}}
 
 # CD ALIASES {{{
