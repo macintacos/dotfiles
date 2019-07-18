@@ -23,12 +23,13 @@ alias keka='Keka'                   # unzip utility on mac
 alias touch='ad'                    # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias top='glances'                 # better resource visualizer
 alias rm='trash -v'                 # a better rm
-eval "$(hub alias -s)"              # hub = git; hub is a superset of git, so everything should work
+alias kill='fkill'                  # a better process killer
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
 # }}}
 
 # GIT ALIASES {{{
+eval "$(hub alias -s)"            # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'            # better way to view git status
 alias gclean='git-clean-local'    # cleans out any branches from local that have been deleted on remote
 # }}}

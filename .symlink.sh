@@ -19,10 +19,13 @@ bot "Linking local config to remote dotfiles..."
 running "linking ZSH"
 rm -rf .zshrc
 rm -rf .zshenv
+rm -rf .zlogin
 touch .zshrc
 touch .zshenv
+touch .zlogin
 ln -sF "${DOTFILES_DIR}/.zshrc" ~/.zshrc
 ln -sF "${DOTFILES_DIR}/.zshenv" ~/.zshenv
+ln -sF "${DOTFILES_DIR}/.zlogin" ~/.zlogin
 
 ## Aliases and Functions {{{
 rm -rf .zsh/
