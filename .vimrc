@@ -5,7 +5,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'itchyny/lightline.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
