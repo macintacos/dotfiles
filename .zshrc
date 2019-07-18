@@ -20,17 +20,18 @@ HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 BAT_THEME="base16"
 
-setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
-setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt prompt_subst              # enable parameter expansion, command substitution, and arithmetic expansion in the prompt
-setopt transient_rprompt         # only show the rprompt on the current prompt
-autoload colors; colors
+setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file.
+setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
+setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY          # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
+setopt prompt_subst           # enable parameter expansion, command substitution, and arithmetic expansion in the prompt
+setopt transient_rprompt      # only show the rprompt on the current prompt
+autoload colors
+colors
 # }}}
 
 # PLUGINS & CACHE LOADING {{{
@@ -40,10 +41,11 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 
 ## for only occasional re-compilation
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
     compinit
-done
-compinit -C
+else
+    compinit -C
+fi
 # }}}
 
 # SOURCE-ING {{{
@@ -51,23 +53,21 @@ compinit -C
 source ~/.dotfiles/oh-my-zsh/oh-my-zsh.sh
 
 ## sourcing external files
-# source $HOME/perl5/perlbrew/etc/bashrc  # perl's REPL
-source ~/.zshsecrets/secrets.zsh        # My secrets
-source ~/.zsh/aliases.zsh               # aliases
-source ~/.zsh/functions.zsh             # functions
-source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions   # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+source ~/.zshsecrets/secrets.zsh                                # My secrets
+source ~/.zsh/aliases.zsh                                       # aliases
+source ~/.zsh/functions.zsh                                     # functions
+source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
 source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
-export PATH="/usr/local/sbin:$PATH"     # Because brew doctor complains
+export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
-bindkey '^ ' autosuggest-accept         # Binding `CTRL+SPACE` to auto-accept suggestions
+bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 # }}}
-
 
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -93,19 +93,16 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 # }}}
 
-
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
 # export ANT_OPTS="-Xms64m -Xmx1500m"
 # export ANT_HOME=/usr/local/apache-ant-1.10.5
 # }}}
-
 
 export N_PREFIX=$HOME/.n
 export PATH=$N_PREFIX/bin:$PATH
