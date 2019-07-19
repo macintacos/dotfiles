@@ -77,6 +77,11 @@ EOF
 
   while [[ $# > 0 ]]; do
     case "$1" in
+    -l | --list | --dry-run)
+      echo "These are the packages that will be backed up if you run \`npm-backup --export\`:"
+      echo "${npm_list}"
+      shift
+      ;;
     -e | --export)
       echo "Exporting these packages to ${logfile}"
       echo "${npm_list}"
