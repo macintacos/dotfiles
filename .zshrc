@@ -72,7 +72,7 @@ export TERM=xterm-256color
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='ag -U -f -g ""'
+export FZF_DEFAULT_COMMAND='rg --max-depth 1 ""'
 export FZF_COMPLETION_TRIGGER=''
 export FZF_DEFAULT_OPTS="
 --height 40% --layout=reverse --border
