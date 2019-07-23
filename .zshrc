@@ -13,12 +13,14 @@
 # }}}
 
 # ZSH SETTINGS {{{
+
 POWERLEVEL9K_MODE='nerdfont-complete'
 DEFAULT_USER="$(whoami)"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 BAT_THEME="base16"
+ENHANCD_FILTER=fzf
 
 setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
@@ -35,7 +37,6 @@ colors
 # }}}
 
 # PLUGINS & CACHE LOADING {{{
-plugins=(git zsh-completions mongodb httpie npm node python alias-tips fast-syntax-highlighting zsh-autosuggestions)
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
@@ -50,16 +51,12 @@ fi
 
 # SOURCE-ING {{{
 ## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
-source ~/.dotfiles/oh-my-zsh/oh-my-zsh.sh
+source $ZPLUG_HOME/init.zsh
 
 ## sourcing external files
-source ~/.zshsecrets/secrets.zsh                                # My secrets
-source ~/.zsh/aliases.zsh                                       # aliases
-source ~/.zsh/functions.zsh                                     # functions
-source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
-source ~/.dotfiles/oh-my-zsh/custom/plugins/zsh-bd/bd.zsh
-source ~/.dotfiles/oh-my-zsh/custom/plugins/enhancd/init.sh
+source ~/.zshsecrets/secrets.zsh    # My secrets
+source ~/.zsh/aliases.zsh           # aliases
+source ~/.zsh/functions.zsh         # functions
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 ## Color needs to be set AFTER source-ing
@@ -89,6 +86,36 @@ bindkey '^I' $fzf_default_completion
 # POWERLINE SETTINGS {{{
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
+# }}}
+
+# ZPLUG {{{
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "djui/alias-tips"
+zplug "hlissner/zsh-autopair", defer:2
+zplug "JamesKovacs/zsh_completions_mongodb"
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/httpie", from:oh-my-zsh
+zplug "plugins/node", from:oh-my-zsh
+zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/python", from:oh-my-zsh
+zplug "Tarrasch/zsh-bd", use:bd.zsh
+zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zsh
+zplug "zplug/zplug", hook-build:'zplug --self-manage'
+zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
+zplug "zsh-users/zsh-completions", use:src
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo
+        zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
 # }}}
 
 # added by travis gem
