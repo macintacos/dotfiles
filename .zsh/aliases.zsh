@@ -1,7 +1,8 @@
 # ALIASES
 
 # UTILITIES; SHORTENED {{{
-alias z='zrun'                      # making zrun a bit more easy to run
+alias zz='_z -c 2>&1'
+alias zr='zrun'                     # making zrun a bit more easy to run
 alias things='things.sh'            # shortening things script
 alias c='clear && ll'               # clear terminal display, show directory
 alias cls='clear'                   # clear sisplay, just like `mongo` shell
