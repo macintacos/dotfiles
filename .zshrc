@@ -9,7 +9,7 @@
 # }}}
 
 # JAVA MMS REQ {{{
-# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
 # }}}
 
 # ZSH SETTINGS {{{
@@ -134,9 +134,9 @@ bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestion
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
-# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
-# export ANT_OPTS="-Xms64m -Xmx1500m"
-# export ANT_HOME=/usr/local/apache-ant-1.10.5
+[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+export ANT_OPTS="-Xms64m -Xmx1500m"
+export ANT_HOME=/usr/local/apache-ant-1.10.5
 # }}}
 
 export N_PREFIX=$HOME/.n
