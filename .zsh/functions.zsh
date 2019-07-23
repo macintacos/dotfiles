@@ -30,6 +30,14 @@ psgrep() { # grep for running processes
   ps up $(pgrep -f $@)
 }
 
+conditional_fd() {
+  if [[ $PWD == $HOME ]]; then
+    fd -paiHL -t d -d 2
+  else
+    fd -paiHL -t d
+  fi
+}
+
 my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command; } # my_ps: List processes owned by my user:
 
 ii() { #   ii:  display useful host related informaton

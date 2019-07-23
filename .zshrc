@@ -20,8 +20,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 BAT_THEME="base16"
-ENHANCD_FILTER=fzf
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
 setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space.
@@ -36,9 +39,10 @@ autoload colors
 colors
 # }}}
 
-# PLUGINS & CACHE LOADING {{{
+# CACHE LOADING {{{
 ## make zsh know about hosts already accessed
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 ## for only occasional re-compilation
 autoload -Uz compinit
@@ -59,11 +63,10 @@ source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
-## Color needs to be set AFTER source-ing
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
-bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
+
+ENHANCD_FILTER="conditional_fd | proximity-sort $PWD | fzf --tiebreak=index"
 # }}}
 
 # INITIALIZING FZF {{{
@@ -71,7 +74,7 @@ export TERM=xterm-256color
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
---height 50% --reverse --border 
+--border
 --preview '(bat --style=numbers --color=always {} || tree -C {}) 2> /dev/null | head -500'
 --color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
@@ -99,6 +102,9 @@ zplug "plugins/httpie", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/ripgrep", from:oh-my-zsh
+zplug "plugins/tig", from:oh-my-zsh
 zplug "Tarrasch/zsh-bd", use:bd.zsh
 zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zsh
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
@@ -116,6 +122,10 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+## Color needs to be set AFTER source-ing
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
+bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 # }}}
 
 # added by travis gem
