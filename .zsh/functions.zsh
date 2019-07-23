@@ -16,12 +16,6 @@ co() { # run vs code without the dumb ass flickering
   code "$@" --disable-gpu --ignore-gpu-blacklist
 }
 
-cd() { # Always list directory contents upon 'cd
-  builtin cd "$@"
-  echo "Current directory: $PWD"
-  l
-}
-
 grepip() { # grep unique IPs from within a log file
   \grep -E -o "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" "$@" | sort | uniq
 }
@@ -140,7 +134,8 @@ _fzf_compgen_path() {
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
-}# }}}
+}
+# }}}
 
 # directory color rendering
 eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)

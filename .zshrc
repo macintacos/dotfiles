@@ -72,16 +72,14 @@ export TERM=xterm-256color
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='rg --max-depth 1 ""'
-export FZF_COMPLETION_TRIGGER=''
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
---height 40% --layout=reverse --border
---preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'
+--height 50% --reverse --border 
+--preview '(bat --style=numbers --color=always {} || tree -C {}) 2> /dev/null | head -500'
 --color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
 --bind tab:down --cycle
 "
-export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
 bindkey '^T' fzf-completion
