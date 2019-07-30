@@ -30,16 +30,16 @@ alias nv='nvim'
 # }}}
 
 # GIT ALIASES {{{
-eval "$(hub alias -s)"            # hub = git; hub is a superset of git, so everything should work
-alias gst='tig status'            # better way to view git status
-alias gclean='git-clean-local'    # cleans out any branches from local that have been deleted on remote
+eval "$(hub alias -s)"                                      # hub = git; hub is a superset of git, so everything should work
+alias gst='tig status'                                      # better way to view git status
+alias gclean='git-clean-local'                              # cleans out any branches from local that have been deleted on remote
 # }}}
 
 # LS IMPROVEMENTS (aka -> exa) {{{
-alias ls='exa --icons'            # substituting regular ls with exa
-alias l='exa -la --git --icons'   # preferred use of ll/exa
-alias ll='exa -lah --git --icons' # preferred use of ll/exa
-alias lr='exa -laR --git --icons' # recursive preferred use
+alias ls='exa --icons --group-directories-first'            # substituting regular ls with exa
+alias l='exa -la --git --icons --group-directories-first'   # preferred use of ll/exa
+alias ll='exa -lah --git --icons --group-directories-first' # preferred use of ll/exa
+alias lr='exa -laR --git --icons --group-directories-first' # recursive preferred use
 # }}}
 
 # CD ALIASES {{{
