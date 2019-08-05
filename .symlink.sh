@@ -27,53 +27,60 @@ ln -sF "${DOTFILES_DIR}/.zshrc" ~/.zshrc
 ln -sF "${DOTFILES_DIR}/.zshenv" ~/.zshenv
 ln -sF "${DOTFILES_DIR}/.zlogin" ~/.zlogin
 
-## Aliases and Functions {{{
+## Aliases and Functions
 rm -rf .zsh/
 mkdir -p .zsh/scripts
+touch .p10k.zsh # stays at the top level, despite being in the folder in dotfiles
 touch .zsh/aliases.zsh
 touch .zsh/functions.zsh
 touch .zsh/scripts/git-clean-local.zsh
+ln -sF "${DOTFILES_DIR}/.zsh/.p10k.zsh" ~/.p10k.zsh
 ln -sF "${DOTFILES_DIR}/.zsh/aliases.zsh" ~/.zsh/aliases.zsh
 ln -sF "${DOTFILES_DIR}/.zsh/functions.zsh" ~/.zsh/functions.zsh
 ln -sF "${DOTFILES_DIR}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
 ok "ZSH linked."
 # }}}
 
-# VIM
+# VIM {{{
 running "linking Vim"
 rm -rf .vimrc
 touch .vimrc
 ln -sF "${DOTFILES_DIR}/.vimrc" ~/.vimrc
 ok "VIM linked."
+# }}}
 
-# ACK
+# ACK {{{
 running "linking ACK"
 rm -rf .ackrc
 touch .ackrc
 ln -sF "${DOTFILES_DIR}/.ackrc" ~/.ackrc
 ok "ACK linked."
+# }}}
 
-# ESLINT
+# ESLINT {{{
 running "linking eslint"
 rm -rf .eslintrc.js
 touch .eslintrc.js
 ln -sF "${DOTFILES_DIR}/.eslintrc.js" ~/.eslintrc.js
 ok "ESLINT linked."
+# }}}
 
-# Karabiner
+# Karabiner {{{
 running "linking Karabiner"
 rm -rf .config/karabiner
 mkdir -p .config/karabiner
 ln -sF "${DOTFILES_DIR}/karabiner" ~/.config/karabiner
 ok "Karabiner linked."
+# }}}
 
-# Sublime Merge
+# Sublime Merge {{{
 running "linking Sublime Merge keymap"
 rm -rf "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 mkdir -p "${SUBLIME_MERGE_USER_DIR}"
 touch "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 ln -sF "${DOTFILES_DIR}/sublime/merge/Default.sublime-keymap" "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 ok "Sublime Merge keymap linked."
+# }}}
 
 ## SECRETS {{{
 running "linking secrets"

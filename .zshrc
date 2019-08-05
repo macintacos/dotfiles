@@ -119,12 +119,13 @@ source $ZPLUG_HOME/init.zsh
 source ~/.zshsecrets/secrets.zsh    # My secrets
 source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
+source $(dirname $(gem which colorls))/tab_complete.sh  # for tab-completion of colorls
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
-ENHANCD_FILTER="conditional_fd | proximity-sort $PWD | fzf --tiebreak=index"
+ENHANCD_FILTER="fd -piHL -t d -d 2 | fzf"
 ENHANCD_DISABLE_DOT=1
 # }}}
 
@@ -134,7 +135,7 @@ ENHANCD_DISABLE_DOT=1
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
 --border
---preview '(bat --style=numbers --color=always {} || tree -C {}) 2> /dev/null | head -500'
+--preview '(bat --style=numbers --color=always {} || exa --tree --git --icons {}) 2> /dev/null | head -500'
 --color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
 --bind tab:down --cycle
@@ -146,7 +147,6 @@ bindkey '^I' $fzf_default_completion
 # }}}
 
 # POWERLINE SETTINGS {{{
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 # }}}
 
@@ -165,6 +165,7 @@ zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/ripgrep", from:oh-my-zsh
 zplug "plugins/tig", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "Tarrasch/zsh-bd", use:bd.zsh
 zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zsh
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
@@ -206,3 +207,6 @@ export PATH=$N_PREFIX/bin:$PATH
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
