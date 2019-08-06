@@ -116,7 +116,6 @@ fi
 source $ZPLUG_HOME/init.zsh
 
 ## sourcing external files
-source ~/.zshsecrets/secrets.zsh    # My secrets
 source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
 source $(dirname $(gem which colorls))/tab_complete.sh  # for tab-completion of colorls

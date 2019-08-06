@@ -25,6 +25,7 @@ alias touch='ad'                    # advance_touch, a better newfile implementa
 alias top='glances'                 # better resource visualizer
 alias rm='trash -v'                 # a better rm
 alias kill='fkill'                  # a better process killer
+alias j='autojump'                  # autojump alias
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
 # }}}
