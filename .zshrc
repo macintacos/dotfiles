@@ -118,7 +118,6 @@ source $ZPLUG_HOME/init.zsh
 ## sourcing external files
 source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
-source $(dirname $(gem which colorls))/tab_complete.sh  # for tab-completion of colorls
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # Set colors to match iTerm2 Terminal Colors
@@ -143,10 +142,6 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
-# }}}
-
-# POWERLINE SETTINGS {{{
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 # }}}
 
 # ZPLUG {{{
@@ -191,7 +186,7 @@ bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestion
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
 # [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"

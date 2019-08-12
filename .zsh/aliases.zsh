@@ -41,7 +41,7 @@ alias ls='exa --icons --group-directories-first'            # substituting regul
 alias l='exa -la --git --icons --group-directories-first'   # preferred use of ll/exa
 alias ll='exa -lah --git --icons --group-directories-first' # preferred use of ll/exa
 alias lr='exa -laR --git --icons --group-directories-first' # recursive preferred use
-alias tree='exa --tree --git --icons'
+alias tree='exa -lah --tree --git --icons'
 # }}}
 
 # CD ALIASES {{{
