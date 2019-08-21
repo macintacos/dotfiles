@@ -1,5 +1,7 @@
 fkill-cli
-mongo-hacker
+j2m
+mongodb-stitch-cli
 npm
 speed-test
 tldr
+yo

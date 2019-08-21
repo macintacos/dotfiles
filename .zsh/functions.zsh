@@ -65,9 +65,10 @@ Command used export the current machine's npm global packages.
 
 Usage: npm-backup [-eih]
 
--e, --export : Exports current global npm global packages to 'npm-backup-current.txt'. If file exists, it is backed up.
--i, --import : Imports packages read from the current directory's 'npm-backup-current.txt'
-  -h, --help : Display this help text
+         -e, --export : Exports current global npm global packages to 'npm-backup-current.txt'. If file exists, it is backed up.
+         -i, --import : Imports packages read from the current directory's 'npm-backup-current.txt'
+-l, --list, --dry-run : Lists any npm packages that aare installed globally that will be backed up.
+           -h, --help : Display this help text
 
 EOF
   }
