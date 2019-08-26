@@ -10,8 +10,8 @@
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 250,
-                    "basic.to_if_held_down_threshold_milliseconds": 250,
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
@@ -83,6 +83,27 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                      "description": "Better Escape",
+                      "manipulators": [
+                          {
+                              "from": {
+                                  "key_code": "escape"
+                              },
+                              "to": [
+                                  {
+                                      "key_code": "left_control"
+                                  }
+                              ],
+                              "to_if_alone": [
+                                  {
+                                      "key_code": "escape"
+                                  }
+                              ],
+                              "type":"basic"
+                          }
+                      ]
                     }
                 ]
             },
@@ -330,14 +351,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "caps_lock"
-                            },
-                            "to": {
-                                "key_code": "escape"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "delete_or_backspace"
                             },
                             "to": {
@@ -345,19 +358,6 @@
                             }
                         }
                     ]
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 38924,
-                        "vendor_id": 65261
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -463,7 +463,16 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": {
+                        "key_code": "escape"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "mouse_key_xy_scale": 100
