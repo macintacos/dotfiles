@@ -35,6 +35,7 @@ setopt SHARE_HISTORY          # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt prompt_subst           # enable parameter expansion, command substitution, and arithmetic expansion in the prompt
 setopt transient_rprompt      # only show the rprompt on the current prompt
+unsetopt RM_STAR_SILENT       # always ask before 'rm'-ing globs
 autoload colors
 colors
 # }}}
@@ -118,6 +119,7 @@ source $ZPLUG_HOME/init.zsh
 ## sourcing external files
 source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
+source ~/.common_profile            # common profile with bash
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # Set colors to match iTerm2 Terminal Colors

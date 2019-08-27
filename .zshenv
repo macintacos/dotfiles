@@ -22,4 +22,5 @@ export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
 export PY_37="/Users/juliant/Library/Python/3.7/bin"
 export RUBY_BIN="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin"
+export BASH_ENV='~/.bashenv'
 export PATH="$RUBY_BIN:$ZPLUG_HOME:$PY_37:$KEKA:$MY_ZSH_SECRETS:$MY_ZSH_SCRIPTS:$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"
