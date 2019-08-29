@@ -80,6 +80,17 @@
             "description": "CapsLock to Almost Hyper/Escape",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      {
+                        "product_id": 632,
+                        "vendor_id": 1452
+                      }
+                    }
+                  }
+                ],
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -105,6 +116,17 @@
             "description": "Grave to CTRL+ALT",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      {
+                        "product_id": 632,
+                        "vendor_id": 1452
+                      }
+                    }
+                  }
+                ],
                 "from": {
                   "key_code": "grave_accent_and_tilde",
                   "modifiers": {
@@ -130,6 +152,17 @@
             "description": "Tab to Meh/Tab",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      {
+                        "product_id": 632,
+                        "vendor_id": 1452
+                      }
+                    }
+                  }
+                ],
                 "from": {
                   "key_code": "tab",
                   "modifiers": {
