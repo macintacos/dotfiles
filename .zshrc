@@ -16,7 +16,7 @@
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 DEFAULT_USER="$(whoami)"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 BAT_THEME="base16"
@@ -148,7 +148,6 @@ bindkey '^I' $fzf_default_completion
 
 # ZPLUG {{{
 zplug "b4b4r07/enhancd", use:init.sh
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "djui/alias-tips"
 zplug "hlissner/zsh-autopair", defer:2
 zplug "JamesKovacs/zsh_completions_mongodb"

@@ -60,7 +60,7 @@ fi
       # node_version          # node.js version
       # go_version            # golang version
       # rbenv                 # ruby version from rbenv (https://github.com/rbenv/rbenv)
-      kubecontext             # current kubernetes context (https://kubernetes.io/)
+      # kubecontext             # current kubernetes context (https://kubernetes.io/)
       # context                 # user@host
       # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
       # public_ip             # public IP address
