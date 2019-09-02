@@ -8,8 +8,10 @@
 # set LNAV_EXP="mouse"
 # }}}
 
-# JAVA MMS REQ {{{
-# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+# JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
+[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+export ANT_OPTS="-Xms64m -Xmx1500m"
+export ANT_HOME=/usr/local/apache-ant-1.10.5
 # }}}
 
 # ZSH SETTINGS {{{
@@ -178,6 +180,7 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+# }}}
 
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
@@ -188,12 +191,6 @@ bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestion
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
-# [ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
-# export ANT_OPTS="-Xms64m -Xmx1500m"
-# export ANT_HOME=/usr/local/apache-ant-1.10.5
-# }}}
 
 export N_PREFIX=$HOME/.n
 export PATH=$N_PREFIX/bin:$PATH
