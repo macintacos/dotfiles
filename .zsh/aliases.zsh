@@ -31,17 +31,23 @@ alias nv='nvim'
 # }}}
 
 # GIT ALIASES {{{
-eval "$(hub alias -s)"                                      # hub = git; hub is a superset of git, so everything should work
-alias gst='tig status'                                      # better way to view git status
-alias gclean='git-clean-local'                              # cleans out any branches from local that have been deleted on remote
+eval "$(hub alias -s)"            # hub = git; hub is a superset of git, so everything should work
+alias gst='tig status'            # better way to view git status
+alias gclean='git-clean-local'    # cleans out any branches from local that have been deleted on remote
 # }}}
 
-# LS/TREE IMPROVEMENTS (aka -> exa) {{{
-alias ls='exa --icons --group-directories-first'            # substituting regular ls with exa
-alias l='exa -la --git --icons --group-directories-first'   # preferred use of ll/exa
-alias ll='exa -lah --git --icons --group-directories-first' # preferred use of ll/exa
-alias lr='exa -laR --git --icons --group-directories-first' # recursive preferred use
-alias tree='exa -lah --tree --git --icons'
+# LS/TREE IMPROVEMENTS (aka -> lsd) {{{
+alias ls='lsd --group-dirs first' # substituting regular ls with exa
+alias l='ls -l'                   # preferred use of l
+alias ll='ls -la'                 # preferred use of ll
+alias lr='ls -laR'                # recursive preferred use
+alias tree='ls --tree'
+# for exa replacements; in case lsd doesn't work out
+# alias ls='exa --icons --group-directories-first'            # substituting regular ls with exa
+# alias l='exa -la --git --icons --group-directories-first'   # preferred use of l
+# alias ll='exa -lah --git --icons --group-directories-first' # preferred use of ll
+# alias lr='exa -laR --git --icons --group-directories-first' # recursive preferred use
+# alias tree='exa -lah --tree --git --icons'
 # }}}
 
 # CD ALIASES {{{
