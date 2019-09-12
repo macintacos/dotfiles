@@ -28,6 +28,7 @@ alias kill='fkill'                  # a better process killer
 alias j='autojump'                  # autojump alias
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
+alias tldr='tldr -t base16'
 # }}}
 
 # GIT ALIASES {{{
@@ -42,12 +43,6 @@ alias l='ls -l'                   # preferred use of l
 alias ll='ls -la'                 # preferred use of ll
 alias lr='ls -laR'                # recursive preferred use
 alias tree='ls --tree'
-# for exa replacements; in case lsd doesn't work out
-# alias ls='exa --icons --group-directories-first'            # substituting regular ls with exa
-# alias l='exa -la --git --icons --group-directories-first'   # preferred use of l
-# alias ll='exa -lah --git --icons --group-directories-first' # preferred use of ll
-# alias lr='exa -laR --git --icons --group-directories-first' # recursive preferred use
-# alias tree='exa -lah --tree --git --icons'
 # }}}
 
 # CD ALIASES {{{

@@ -114,6 +114,11 @@ else
 fi
 # }}}
 
+# CHEAT CONFIG {{{
+export CHEAT_COLORS=true
+export CHEAT_COLORSCHEME=dark
+# }}}
+
 # SOURCE-ING {{{
 ## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
 source $ZPLUG_HOME/init.zsh
