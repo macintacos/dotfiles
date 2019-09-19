@@ -1,6 +1,6 @@
 # dotfiles
 
-![](https://travis-ci.org/macintacos/dotfiles.svg?branch=master)
+![](https://travis-ci.org/macintacos/dotfiles.svg?branch=master) [![Actions Status](https://github.com/macintacos/dotfiles/workflows/CI/badge.svg)](https://github.com/macintacos/dotfiles/actions)
 
 A place for files with dots at the beginning of them.
 
