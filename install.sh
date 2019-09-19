@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: As a general rule, I need to parameterize this and load this in separately.
+
+## TODO: A lot of this is only important to run in CI; if it's not in CI, we should probably skip setting these variables.
 ## Force an exit if script tries to use an unset variable:
 set -o nounset
 ## Force an exit if any commands exit with non-zero status:
@@ -172,8 +175,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 bot "Installing vim plugins...press 'enter' to accept."
 # TODO: Figure out why this gets hung
 vim +PlugInstall +qall >/dev/null 2>&1
-brew tap AlexanderWillnet/tap
-brew install things.sh
 ok "Done"
 # fi
 
@@ -190,6 +191,7 @@ require_nvm stable
 # always pin versions (no surprises, consistent dev/build machines)
 npm config set save-exact true
 
+# TODO: Should figure out a way to manually back this up; consider making a `backup.sh` script?
 running "installing settings-sync for vscode..."
 code --install-extension Shan.code-settings-sync
 
@@ -197,6 +199,7 @@ code --install-extension Shan.code-settings-sync
 bot "Installing NPM global modules..."
 ###############################################################################
 
+# TODO: now that we have an NPM backup script, we should probably use that file to install these all at once instead of manually updating this list here.
 running "installing NPM modules..."
 npm install -g jira2md
 ok "Done"
