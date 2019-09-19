@@ -30,12 +30,9 @@ bash "./.symlink.sh"
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
 
 	# Ask for the administrator password upfront
-	if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-		bot "Because this is Travis, we'll skip prompting for the password."
-	else
-		bot "Next, I need you to enter your sudo password so I can install some things:"
-		sudo -v
-	fi
+	# TODO: Use `expect` for these prompts, to determine if we're in CI?  
+	bot "Next, I need you to enter your sudo password so I can install some things:"
+	sudo -v
 
 	# Keep-alive: update existing sudo time stamp until the script has finished
 	while true; do
@@ -43,14 +40,10 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
 		sleep 60
 		kill -0 "$$" || exit
 	done 2>/dev/null &
-
-	if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-		bot "Because this is Travis, we'll assume we want to make it passwordless."
-		response="y"
-	else
-		bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
-		read -r -p "Make sudo passwordless? [y|N] " response
-	fi
+	
+	# TODO: Use `expect` for these prompts, to determine if we're in CI?
+	bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
+	read -r -p "Make sudo passwordless? [y|N] " response
 
 	if [[ $response =~ (yes|y|Y) ]]; then
 		sudo cp /etc/sudoers /etc/sudoers.back
@@ -116,12 +109,6 @@ running "installing m..."
 mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install
 ok "Done"
 
-# instlaling travis cli
-running "installing travis cli..."
-ruby -v
-gem install travis -v 1.8.9 --no-rdoc --no-ri
-ok "Done"
-
 ###############################################################################
 bot "Homebrew installation begin..."
 ###############################################################################
@@ -142,15 +129,11 @@ else
 	brew update
 	ok "Done"
 
-	if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-		bot "Because this is Travis, we'll see what we can get away with."
-		response="N"
-	else
-		bot "Before installing brew packages, we can upgrade any outdated packages."
-		read -r -p "run brew upgrade? [y|N] " response
-	fi
+	# TODO: Use `expect` for these prompts, to determine if we're in CI?
+	bot "Before installing brew packages, we can upgrade any outdated packages."
+	read -r -p "run brew upgrade? [y|N] " response
 
-	if [[ $response =~ ^(y|yes|Y) ]]; then
+	if [[ $response =~ ^(y|yes|Y) ]]; then	
 		# Upgrade any already-installed formulae
 		action "upgrade brew packages..."
 		brew upgrade
@@ -179,16 +162,10 @@ require_brew git -v
 
 # installing fzf
 require_brew fzf -v
-# if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
-#   bot "Because this is Travis, we're going to skip a proper fzf install."
-# else
-#   $(brew --prefix)/opt/fzf/install
-# fi
+$(brew --prefix)/opt/fzf/install
 
 # vim settings
-# if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
-#   bot "Because this is Travis, skipping Vim plugin install step."
-# else
+
 # cmake is required to compile vim bundle YouCompleteMe
 require_brew cmake -v
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
