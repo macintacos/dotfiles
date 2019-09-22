@@ -18,13 +18,10 @@ bot "Linking local config to remote dotfiles..."
 # Base BASH {{{
 running "linking BASH"
 rm -rf .common_profile
-rm -rf .bashenv
 rm -rf .bashrc
 touch .common_profile
-touch .bashenv
 touch .bashrc
 ln -sF "${DOTFILES_DIR}/.common_profile" ~/.common_profile
-ln -sF "${DOTFILES_DIR}/.bashenv" ~/.bashenv
 ln -sF "${DOTFILES_DIR}/.bashrc" ~/.bashrc
 ok "BASH linked."
 # }}}

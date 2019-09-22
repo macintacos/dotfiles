@@ -24,7 +24,7 @@ bot "None of this is actually tested yet, so use at your own risk!"
 
 bot "Let's get this machine set up!"
 bot "First, we symlink."
-bash "./.symlink.sh"
+bash "./symlink.sh"
 
 # cat ~/.vimrc
 # vim --version
@@ -33,7 +33,7 @@ bash "./.symlink.sh"
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
 
 	# Ask for the administrator password upfront
-	# TODO: Use `expect` for these prompts, to determine if we're in CI?  
+	# TODO: Use `expect` for these prompts, to determine if we're in CI?
 	bot "Next, I need you to enter your sudo password so I can install some things:"
 	sudo -v
 
@@ -43,7 +43,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
 		sleep 60
 		kill -0 "$$" || exit
 	done 2>/dev/null &
-	
+
 	# TODO: Use `expect` for these prompts, to determine if we're in CI?
 	bot "Do you want me to setup this machine to allow you to run sudo without a password?\nPlease read here to see what I am doing:\nhttp://wiki.summercode.com/sudo_without_a_password_in_mac_os_x \n"
 	read -r -p "Make sudo passwordless? [y|N] " response
@@ -74,10 +74,8 @@ running "getting oh-my-zsh installed..."
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | grep -v 'env zsh -l')"
 ok "Done"
 
-running "re-linking so that plugins are installed theway we expect..."
-bash "./.symlink.sh"
-
 ## zsh plugins
+## TODO: Consider changing these to zplugs?
 running "installing zsh plugins..."
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ok "Done"
@@ -136,7 +134,7 @@ else
 	bot "Before installing brew packages, we can upgrade any outdated packages."
 	read -r -p "run brew upgrade? [y|N] " response
 
-	if [[ $response =~ ^(y|yes|Y) ]]; then	
+	if [[ $response =~ ^(y|yes|Y) ]]; then
 		# Upgrade any already-installed formulae
 		action "upgrade brew packages..."
 		brew upgrade
