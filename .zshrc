@@ -126,7 +126,6 @@ source $ZPLUG_HOME/init.zsh
 ## sourcing external files
 source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
-source ~/.common_profile            # common profile with bash
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # Set colors to match iTerm2 Terminal Colors
