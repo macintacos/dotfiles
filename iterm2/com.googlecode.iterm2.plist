@@ -6025,13 +6025,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>333 155 756 233 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>3550 748 580 419 2560 0 2560 1417 </string>
+	<string>4670 1018 580 419 4240 -570 1440 2537 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1035 255 606 469 -1440 -779 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4240 -570 1440 1692 4240 -570 1440 2537 </string>
+	<string>4677 -570 1003 1027 4240 -570 1440 2537 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6934,20 +6934,18 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<integer>0</integer>
-								<key>path</key>
-								<string>path</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.86142857142857154</real>
+									<real>0.86142855882644653</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.63</real>
+									<real>0.62999999523162842</real>
 									<key>Red Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.89999997615814209</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -8566,6 +8564,7 @@
 		<string>3.3.2</string>
 		<string>3.2.9</string>
 		<string>3.3.1</string>
+		<string>3.3.4</string>
 		<string>3.3.0</string>
 		<string>3.3.3</string>
 	</array>
@@ -8612,7 +8611,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>14</integer>
+	<integer>18</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9385,7 +9384,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-10T16:42:40Z</date>
+	<date>2019-09-23T12:39:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -9427,7 +9426,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
