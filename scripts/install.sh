@@ -24,13 +24,15 @@ bot "None of this is actually tested yet, so use at your own risk!"
 
 bot "Let's get this machine set up!"
 bot "First, we symlink."
+ls -r
+cat /etc/sudoers
 bash "./symlink.sh"
 
 # cat ~/.vimrc
 # vim --version
 
 # Ask for the administrator password upfront
-if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/sudoers"; then
+if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #macintacos/dotfiles" "/etc/sudoers"; then
 
 	# Ask for the administrator password upfront
 	# TODO: Use `expect` for these prompts, to determine if we're in CI?
@@ -50,7 +52,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
 
 	if [[ $response =~ (yes|y|Y) ]]; then
 		sudo cp /etc/sudoers /etc/sudoers.back
-		echo '%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles' | sudo tee -a /etc/sudoers >/dev/null
+		echo '%wheel		ALL=(ALL) NOPASSWD: ALL #macintacos/dotfiles' | sudo tee -a /etc/sudoers >/dev/null
 		sudo dscl . append /Groups/wheel GroupMembership $(whoami)
 		bot "You can now run sudo commands without password!"
 	fi
