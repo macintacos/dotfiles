@@ -24,8 +24,8 @@ bot "None of this is actually tested yet, so use at your own risk!"
 
 bot "Let's get this machine set up!"
 bot "First, we symlink."
-ls -r
-cat /etc/sudoers
+sudo ls -r
+sudo cat /etc/sudoers
 bash "./symlink.sh"
 
 # cat ~/.vimrc
