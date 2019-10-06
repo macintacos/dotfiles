@@ -6,9 +6,9 @@
 # A shell script to setup symlinks for your local config files.
 ###############################################################################
 
-source ./lib_sh/echos.sh
+source ../lib_sh/echos.sh
 
-DOTFILES_DIR=$PWD
+DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 SUBLIME_MERGE_USER_DIR="/Applications/Sublime Merge.app/Contents/MacOS/Packages/User/"
 
 cd ~
@@ -19,7 +19,7 @@ bot "Linking local config to remote dotfiles..."
 running "linking BASH"
 rm -rf .bashrc
 touch .bashrc
-ln -sF "${DOTFILES_DIR}/.bashrc" ~/.bashrc
+ln -sF "${DOTFILES_HOME}/.bashrc" ~/.bashrc
 ok "BASH linked."
 # }}}
 
@@ -32,9 +32,9 @@ rm -rf .zlogin
 touch .zshrc
 touch .zshenv
 touch .zlogin
-ln -sF "${DOTFILES_DIR}/.zshrc" ~/.zshrc
-ln -sF "${DOTFILES_DIR}/.zshenv" ~/.zshenv
-ln -sF "${DOTFILES_DIR}/.zlogin" ~/.zlogin
+ln -sF "${DOTFILES_HOME}/.zshrc" ~/.zshrc
+ln -sF "${DOTFILES_HOME}/.zshenv" ~/.zshenv
+ln -sF "${DOTFILES_HOME}/.zlogin" ~/.zlogin
 
 ## Aliases and Functions
 rm -rf .zsh/
@@ -43,10 +43,10 @@ touch .p10k.zsh # stays at the top level, despite being in the folder in dotfile
 touch .zsh/aliases.zsh
 touch .zsh/functions.zsh
 touch .zsh/scripts/git-clean-local.zsh
-ln -sF "${DOTFILES_DIR}/.zsh/.p10k.zsh" ~/.p10k.zsh
-ln -sF "${DOTFILES_DIR}/.zsh/aliases.zsh" ~/.zsh/aliases.zsh
-ln -sF "${DOTFILES_DIR}/.zsh/functions.zsh" ~/.zsh/functions.zsh
-ln -sF "${DOTFILES_DIR}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
+ln -sF "${DOTFILES_HOME}/.zsh/.p10k.zsh" ~/.p10k.zsh
+ln -sF "${DOTFILES_HOME}/.zsh/aliases.zsh" ~/.zsh/aliases.zsh
+ln -sF "${DOTFILES_HOME}/.zsh/functions.zsh" ~/.zsh/functions.zsh
+ln -sF "${DOTFILES_HOME}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
 ok "ZSH linked."
 # }}}
 
@@ -54,7 +54,7 @@ ok "ZSH linked."
 running "linking Vim"
 rm -rf .vimrc
 touch .vimrc
-ln -sF "${DOTFILES_DIR}/.vimrc" ~/.vimrc
+ln -sF "${DOTFILES_HOME}/.vimrc" ~/.vimrc
 ok "VIM linked."
 # }}}
 
@@ -62,7 +62,7 @@ ok "VIM linked."
 running "linking ACK"
 rm -rf .ackrc
 touch .ackrc
-ln -sF "${DOTFILES_DIR}/.ackrc" ~/.ackrc
+ln -sF "${DOTFILES_HOME}/.ackrc" ~/.ackrc
 ok "ACK linked."
 # }}}
 
@@ -70,15 +70,15 @@ ok "ACK linked."
 running "linking eslint"
 rm -rf .eslintrc.js
 touch .eslintrc.js
-ln -sF "${DOTFILES_DIR}/.eslintrc.js" ~/.eslintrc.js
+ln -sF "${DOTFILES_HOME}/.eslintrc.js" ~/.eslintrc.js
 ok "ESLINT linked."
 # }}}
 
 # Karabiner {{{
 running "linking Karabiner"
 rm -rf .config/karabiner
-mkdir -p .config/karabiner
-ln -sF "${DOTFILES_DIR}/karabiner" ~/.config/karabiner
+mkdir -p .config/
+ln -sF "${DOTFILES_HOME}/karabiner" ~/.config
 ok "Karabiner linked."
 # }}}
 
@@ -87,7 +87,7 @@ running "linking Sublime Merge keymap"
 rm -rf "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 mkdir -p "${SUBLIME_MERGE_USER_DIR}"
 touch "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
-ln -sF "${DOTFILES_DIR}/sublime/merge/Default.sublime-keymap" "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
+ln -sF "${DOTFILES_HOME}/sublime/merge/Default.sublime-keymap" "${SUBLIME_MERGE_USER_DIR}/Default.sublime-keymap"
 ok "Sublime Merge keymap linked."
 # }}}
 
@@ -97,8 +97,8 @@ rm -rf .zshsecrets/
 mkdir .zshsecrets
 touch atlas-ssh
 touch secrets.zsh
-ln -sF "${DOTFILES_DIR}/.zsh/secrets/atlas-ssh" ~/.zshsecrets/atlas-ssh
-ln -sF "${DOTFILES_DIR}/.zsh/secrets/secrets.zsh" ~/.zshsecrets/secrets.zsh
+ln -sF "${DOTFILES_HOME}/.zsh/secrets/atlas-ssh" ~/.zshsecrets/atlas-ssh
+ln -sF "${DOTFILES_HOME}/.zsh/secrets/secrets.zsh" ~/.zshsecrets/secrets.zsh
 ok "Secrets linked."
 # }}}
 
