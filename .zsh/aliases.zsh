@@ -32,16 +32,23 @@ alias tldr='tldr -t base16'
 # }}}
 
 # GIT ALIASES {{{
-eval "$(hub alias -s)"                               # hub = git; hub is a superset of git, so everything should work
-alias gst='tig status'                               # better way to view git status
-alias gclean='git-clean-local'                       # cleans out any branches from local that have been deleted on remote
+eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
+alias gst='tig status'         # better way to view git status
+alias gclean='git-clean-local' # cleans out any branches from local that have been deleted on remote
 # }}}
 
 # LS/TREE IMPROVEMENTS (aka -> lsd) {{{
-alias ls='lsd --group-dirs first'                    # substituting regular ls with exa
-alias l='ls -l'                                      # preferred use of l
-alias ll='ls -la --blocks permission,size,date,name' # preferred use of ll
-alias lr='ls -laR'                                   # recursive preferred use
+# alias ls='lsd --group-dirs first'                    # substituting regular ls with exa
+# alias l='ls -l'                                      # preferred use of l
+# alias ll='ls -la --blocks permission,size,date,name' # preferred use of ll
+# alias lr='ls -laR'                                   # recursive preferred use
+# alias tree='ls --tree'
+# }}}
+
+# EXA/TREE IMPROVEMENTS (aka -> exa) {{{
+alias ls='exa -F --group-directories-first'
+alias l='ls -l'
+alias ll='ls -la --git --color-scale'
 alias tree='ls --tree'
 # }}}
 

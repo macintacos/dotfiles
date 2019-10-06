@@ -141,7 +141,7 @@ ENHANCD_DISABLE_DOT=1
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
 --border
---preview '(bat --style=numbers --color=always {} || lsd --tree --color always --icon always --icon-theme fancy {}) 2> /dev/null | head -500'
+--preview '(bat --style=numbers --color=always {} || exa --tree --git --icons {}) 2> /dev/null | head -500'
 --color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
 --bind tab:down --cycle
