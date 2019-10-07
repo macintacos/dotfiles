@@ -54,15 +54,16 @@ alias tree='ls --tree'
 
 # CD ALIASES {{{
 alias cdlogs="cd $HOME/Downloads/logs"
-alias cddev="cd $HOME/Drive\ -\ Personal/Developer"
-alias cdtyp="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_Typinator"
-alias cdatlas="cd $HOME/Drive\ -\ Personal/Developer/MongoDB/_AtlasPlayground"
-alias cddot="cd $HOME/Drive\ -\ Personal/Developer/GitHub\ -\ Personal/dotfiles"
+alias cdtyp="$HOME/GitLocal/Work/Typinator"
+alias cdatlas="cd $HOME/MongoDB/_AtlasPlayground"
+alias cddot="cd $HOME/GitLocal/Play/dotfiles"
+alias cdwork="cd $HOME/GitLocal/Work"
+alias cdplay="cd $HOME/GitLocal/Play"
 # }}}
 
 # VS CODE ALIASES {{{
 alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
-alias dotfiles="code $HOME/Drive\ -\ Personal/Developer/GitHub\ -\ Personal/dotfiles"
+alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 # }}}
 
 # MONITORING {{{

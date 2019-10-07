@@ -5972,7 +5972,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Drive - Personal/Developer/GitHub - Personal/dotfiles/iterm2</string>
+	<string>~/GitLocal/Play/dotfiles/iterm2</string>
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
 	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -6031,7 +6031,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4677 -570 1003 1027 4240 -570 1440 2537 </string>
+	<string>1280 0 640 1177 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6714,7 +6714,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>HackNerdFontComplete-Regular 14</string>
+			<string>MesloLGSNerdFontComplete-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -8575,8 +8575,10 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Hack Nerd Font</string>
-		<string>Hack Nerd Font Mono</string>
+		<string>MesloLGS Nerd Font</string>
+		<string>MesloLGMDZ Nerd Font</string>
+		<string>MesloLGM Nerd Font Mono</string>
+		<string>MesloLGM Nerd Font</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -8598,9 +8600,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1366, 1024}}</string>
+		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{269, 595}</string>
+		<string>{280, 829}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -8611,11 +8613,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>18</integer>
+	<integer>22</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>586726996.89950395</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -9326,6 +9328,14 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>df -h</string>
+		<string>tail</string>
+		<string>wiredtiger.wt</string>
+		<string>wiredtige.wt</string>
+		<string>wiredtiget.wt</string>
+		<string>memory</string>
+		<string>psd </string>
+		<string>oom</string>
 		<string>sharp</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -9370,7 +9380,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/juliant/Drive - Personal/Developer/GitHub - Personal/dotfiles/iterm2</string>
+	<string>/Users/juliant/GitLocal/Play/dotfiles/iterm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
 	<key>Print In Black And White</key>
@@ -9384,7 +9394,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-23T12:39:24Z</date>
+	<date>2019-10-07T04:44:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
