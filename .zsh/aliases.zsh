@@ -54,7 +54,7 @@ alias tree='ls --tree'
 
 # CD ALIASES {{{
 alias cdlogs="cd $HOME/Downloads/logs"
-alias cdtyp="$HOME/GitLocal/Work/Typinator"
+alias cdtyp="cd $HOME/GitLocal/Work/Typinator"
 alias cdatlas="cd $HOME/MongoDB/_AtlasPlayground"
 alias cddot="cd $HOME/GitLocal/Play/dotfiles"
 alias cdwork="cd $HOME/GitLocal/Work"
