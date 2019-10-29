@@ -29,6 +29,7 @@ alias j='autojump'                  # autojump alias
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
 alias tldr='tldr -t base16'
+alias r='ranger'
 # }}}
 
 # GIT ALIASES {{{
@@ -59,6 +60,7 @@ alias cdatlas="cd $HOME/MongoDB/_AtlasPlayground"
 alias cddot="cd $HOME/GitLocal/Play/dotfiles"
 alias cdwork="cd $HOME/GitLocal/Work"
 alias cdplay="cd $HOME/GitLocal/Play"
+alias cdgit="cd $HOME/GitLocal && cd"
 # }}}
 
 # VS CODE ALIASES {{{
