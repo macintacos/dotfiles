@@ -1,6 +1,16 @@
 # FUNCTIONS
 
 # CUSTOM {{{
+ranger-cd() {
+  tempfile="$(mktemp -t tmp.XXXXXX)"
+  ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+  test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n $(pwd))" ]; then
+      cd -- "$(cat "$tempfile")"
+    fi
+  rm -f -- "$tempfile"
+}
+
 mcd() { # mcd: Makes new Dir and jumps inside
   mkdir -p "$1" && cd "$1"
 }
@@ -18,16 +28,6 @@ co() { # run vs code without the dumb ass flickering
 
 grepip() { # grep unique IPs from within a log file
   \grep -E -o "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" "$@" | sort | uniq
-}
-
-psgrep() { # grep for running processes
-  local pids
-  pids=$(pgrep -f $@)
-  if ! [[ $pids ]]; then
-    echo "No processes found." >&2
-    return 1
-  fi
-  ps up $(pgrep -f $@)
 }
 
 conditional_fd() {

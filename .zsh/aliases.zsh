@@ -29,7 +29,7 @@ alias j='autojump'                  # autojump alias
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
 alias tldr='tldr -t base16'
-alias r='ranger'
+alias r='ranger-cd'
 alias du='du -hs * | sort -hr | less'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
