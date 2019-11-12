@@ -6025,13 +6025,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>333 155 756 233 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>4670 1018 580 419 4240 -570 1440 2537 </string>
+	<string>1214 937 580 419 0 0 3008 1669 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1035 255 606 469 -1440 -779 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1280 0 640 1177 0 0 1920 1177 </string>
+	<string>1982 359 2114 1064 1680 61 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6242,11 +6242,11 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21568627655506134</real>
+				<real>0.418853759765625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14509804546833038</real>
+				<real>0.465545654296875</real>
 				<key>Red Component</key>
 				<real>0.17254902422428131</real>
 			</dict>
@@ -8561,24 +8561,24 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
-		<string>3.2.9</string>
-		<string>3.3.1</string>
-		<string>3.3.4</string>
+		<string>3.3.6</string>
 		<string>3.3.0</string>
+		<string>3.3.1</string>
 		<string>3.3.3</string>
+		<string>3.3.5</string>
+		<string>3.2.9</string>
+		<string>3.3.2</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
-		<string>MesloLGS NF</string>
-		<string>Hack Nerd Font</string>
+		<string>MesloLGS Nerd Font</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
 		<string>MesloLGS Nerd Font</string>
-		<string>MesloLGMDZ Nerd Font</string>
-		<string>MesloLGM Nerd Font Mono</string>
-		<string>MesloLGM Nerd Font</string>
+		<string>SFMono Nerd Font Mono</string>
+		<string>SFMono Nerd Font</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -8600,9 +8600,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1200}}</string>
+		<string>{{1680, 61}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{280, 829}</string>
+		<string>{2909, 1010}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -8613,11 +8613,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>32</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>586726996.89950395</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -9078,6 +9078,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.tty</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -9122,6 +9130,22 @@
 				<true/>
 				<key>name</key>
 				<string>currentSession.commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -9328,15 +9352,16 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>failed</string>
+		<string>arbitrary</string>
+		<string>arbir</string>
+		<string>maintenancewindowutils</string>
+		<string>timepicker</string>
+		<string>TimePickter</string>
+		<string>when an option is selected</string>
+		<string>and the time</string>
+		<string>and the timepicker is shown above the hosts carousel</string>
 		<string>df -h</string>
-		<string>tail</string>
-		<string>wiredtiger.wt</string>
-		<string>wiredtige.wt</string>
-		<string>wiredtiget.wt</string>
-		<string>memory</string>
-		<string>psd </string>
-		<string>oom</string>
-		<string>sharp</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567710420.60893703</real>
@@ -9394,7 +9419,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-07T04:44:13Z</date>
+	<date>2019-11-11T04:41:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -9436,7 +9461,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.4</string>
+	<string>3.3.6</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
