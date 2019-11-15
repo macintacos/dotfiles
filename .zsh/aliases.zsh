@@ -86,5 +86,5 @@ alias topForever='top -l 9999999 -s 10 -o cpu'
 # }}}
 
 # FIND ALIASES {{{
-alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} gmv --backup=numbered {} .'
+alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
