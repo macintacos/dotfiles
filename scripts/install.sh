@@ -18,7 +18,7 @@ source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
 source "./.zshenv"
 
-GITHUB_PROJECT_INSTALL_DIR="$HOME/Developer/Github - Personal"
+GITHUB_PROJECT_INSTALL_DIR="$HOME/GitLocal/Play"
 
 bot "None of this is actually tested yet, so use at your own risk!"
 
@@ -253,22 +253,8 @@ ok "Done"
 bot "Finder Configs..."
 ###############################################################################
 
-running "Keep folders on top when sorting by name (Sierra only)"
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
-ok "Done"
-
 running "Allow quitting via ⌘ + Q; doing so will also hide desktop icons"
 defaults write com.apple.finder QuitMenuItem -bool true
-ok "Done"
-
-running "Disable window animations and Get Info animations"
-defaults write com.apple.finder DisableAllAnimations -bool true
-ok "Done"
-
-running "Set Desktop as the default location for new Finder windows"
-# For other paths, use 'PfLo' and 'file:///full/path/here/'
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 ok "Done"
 
 running "Show hidden files by default"
