@@ -51,7 +51,8 @@ alias gclean='git-clean-local' # cleans out any branches from local that have be
 # EXA/TREE IMPROVEMENTS (aka -> exa) {{{
 alias ls='exa -F --group-directories-first'
 alias l='ls -l'
-alias ll='ls -la --git --color-scale'
+alias lg='ls -la --git --color-scale'
+alias ll='ls -la --color-scale'
 alias tree='ls --tree'
 # }}}
 
