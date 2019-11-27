@@ -31,6 +31,7 @@ alias nv='nvim'
 alias tldr='tldr -t base16'
 alias r='ranger-cd'
 alias du='du -hs * | sort -hr | less'
+alias scratch='nv ~/.scratch/run-x.md'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
 

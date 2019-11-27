@@ -77,8 +77,8 @@ zstyle ':completion:*' list-dirs-first true
 zstyle ':completion:*' accept-exact-dirs true
 
 # Always use menu selection for `cd -`
-# zstyle ':completion:*:*:cd:*:directory-stack' force-list always
-# zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
+zstyle ':completion:*:*:cd:*:directory-stack' force-list always
+zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
 
 # Pretty messages during pagination
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
@@ -112,7 +112,29 @@ if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompd
 else
     compinit -C
 fi
+zmodload -i zsh/complist
 # }}}
+
+# Edit line in vim with ctrl-e
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# Use lf to switch directories and bind it to ctrl-o ('q' will 'cd' to that directory)
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+
+bindkey -s '^o' 'lfcd\n'  # zsh
 
 # CHEAT CONFIG {{{
 export CHEAT_COLORS=true

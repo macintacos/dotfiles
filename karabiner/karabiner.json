@@ -88,7 +88,7 @@
             ]
           },
           {
-            "description": "Tab to Meh/Tab",
+            "description": "Tab to Ctrl/Tab",
             "manipulators": [
               {
                 "conditions": [
@@ -110,8 +110,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_shift",
-                    "modifiers": ["left_control", "right_option"]
+                    "key_code": "left_control",
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "to_if_alone": [
