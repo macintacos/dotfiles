@@ -51,6 +51,14 @@ ln -sF "${DOTFILES_HOME}/.zsh/scripts/magit" ~/.zsh/scripts/magit
 ok "ZSH linked."
 # }}}
 
+# SPACEMACS {{{
+running "linking Spacemacs"
+rm -rf .spacemacs
+touch .spacemacs
+ln -sF "${DOTFILES_HOME}/.spacemacs" ~/.spacemacs
+ok "SPACEMACS linked."
+# }}}
+
 # VIM {{{
 running "linking Vim"
 rm -rf .vimrc
