@@ -16,7 +16,7 @@
         },
         "rules": [
           {
-            "description": "CapsLock to Almost Hyper/Escape",
+            "description": "CapsLock to Control/Escape",
             "manipulators": [
               {
                 "conditions": [
@@ -38,8 +38,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "right_command",
-                    "modifiers": ["right_control", "right_option"]
+                    "key_code": "left_control",
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "to_if_alone": [
@@ -88,7 +88,7 @@
             ]
           },
           {
-            "description": "Tab to Ctrl/Tab",
+            "description": "Tab to Hyper/Tab",
             "manipulators": [
               {
                 "conditions": [
@@ -110,8 +110,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_control",
-                    "modifiers": ["left_control"]
+                    "key_code": "right_command",
+                    "modifiers": ["right_control", "right_option"]
                   }
                 ],
                 "to_if_alone": [
@@ -119,6 +119,7 @@
                     "key_code": "tab"
                   }
                 ],
+
                 "type": "basic"
               }
             ]
