@@ -382,6 +382,7 @@ you should place your code here."
     (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
     (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-TAB-action)
     (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
+    (define-key evil-normal-state-map (kbd "SPC p s") #'treemacs-switch-workspace)
   )
 
   ;; lsp-mode/lsp-ui stuff
