@@ -370,8 +370,13 @@ you should place your code here."
     (set-face-attribute 'treemacs-directory-face nil :family "Inter")
     (set-face-attribute 'treemacs-file-face nil :family "Inter")
     (set-face-attribute 'treemacs-root-face nil :family "Inter")
-    (set-face-attribute 'treemacs-root-face nil :family "Inter")
-    (set-face-attribute 'treemacs-root-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-unmodified-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-modified-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-renamed-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-ignored-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-untracked-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-added-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-conflict-face nil :family "Inter")
 
     ;; Remaps
     (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
