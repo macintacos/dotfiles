@@ -81,8 +81,10 @@ values."
                treemacs-git-mode 'deferred
                treemacs-resize-icons 15)
      (typescript :variables
+                 typescript-backend 'lsp
                  typescript-fmt-on-save t
-                 typescript-fmt-tool 'prettier)
+                 typescript-fmt-tool 'prettier
+                 typescript-lsp-linter nil)
      version-control
      vimscript
      yaml
@@ -394,10 +396,10 @@ you should place your code here."
   )
 
   ;; lsp-mode/lsp-ui stuff
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  (with-eval-after-load 'flycheck
-    (require 'flycheck-posframe)
-    (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode))
+  ;; (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  ;; (with-eval-after-load 'flycheck
+  ;;   (require 'flycheck-posframe)
+  ;;   (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode))
 
   ;; remaps
   (with-eval-after-load 'evil-maps
