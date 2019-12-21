@@ -1,11 +1,8 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "/Users/juliant/.config"
-	}
-],
+    {
+      "path": "."
+    }
+  ],
   "settings": {}
 }
