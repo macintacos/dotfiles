@@ -20,7 +20,6 @@ alias duf='du -sh *'                # get size of all files in currect directory
 alias ydl='youtube-dl'              # because it's annoying as hell to type this out everytime
 alias cat='bat --theme="ansi-dark"' # because bat is just insanely better than cat
 alias vs='code'                     # shortening vscode's code
-alias keka='Keka'                   # unzip utility on mac
 alias touch='ad'                    # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias top='glances'                 # better resource visualizer
 alias rm='trash -v'                 # a better rm
@@ -32,9 +31,10 @@ alias tldr='tldr -t base16'
 alias r='ranger-cd'
 alias du='du -hs * | sort -hr | less'
 alias scratch='nv ~/.scratch/run-x.md'
+alias diff='icdiff'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
-
+ 
 # GIT ALIASES {{{
 eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'         # better way to view git status
