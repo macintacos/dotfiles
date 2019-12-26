@@ -6243,7 +6243,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4352 -768 1440 1691 4352 -768 1440 2537 </string>
+	<string>245 294 1090 963 0 0 2048 1257 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6523,7 +6523,7 @@
 			<key>Guid</key>
 			<string>D8F12AB6-C126-42FD-A7FE-D14C537F8B61</string>
 			<key>Horizontal Spacing</key>
-			<real>1.1100000000000001</real>
+			<real>1.01</real>
 			<key>Icon</key>
 			<integer>1</integer>
 			<key>Idle Code</key>
@@ -7087,6 +7087,8 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Unicode Version</key>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -7102,7 +7104,7 @@
 			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.1000000000000001</real>
+			<real>1.1100000000000001</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -8682,14 +8684,14 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
-		<string>3.3.4</string>
+		<string>3.3.2</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
-		<string>3.3.0</string>
-		<string>3.3.2</string>
 		<string>3.2.9</string>
+		<string>3.3.0</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -8697,7 +8699,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Hack Nerd Font</string>
+		<string>MesloLGS Nerd Font</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -8721,7 +8723,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2048, 1280}}</string>
 		<key>topLeft</key>
-		<string>{861, 943}</string>
+		<string>{67, 1257}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -8732,7 +8734,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>43</integer>
+	<integer>46</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9471,6 +9473,7 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>ndsadmin</string>
 		<string>atlas</string>
 		<string>transition to</string>
 		<string>primary</string>
@@ -9480,7 +9483,6 @@
 		<string>arbir</string>
 		<string>maintenancewindowutils</string>
 		<string>timepicker</string>
-		<string>TimePickter</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567710420.60893703</real>
@@ -9538,7 +9540,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-13T01:46:59Z</date>
+	<date>2019-12-22T00:40:37Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
