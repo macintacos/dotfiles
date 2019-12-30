@@ -60,11 +60,11 @@
       "KC_RSFT",
       "TG(1)",
       "KC_NO",
-      "KC_LALT",
-      "KC_LGUI",
+      "OSM(MOD_LALT)",
+      "OSM(MOD_LGUI)",
       "KC_SPC",
-      "KC_RGUI",
-      "KC_RALT",
+      "OSM(MOD_RGUI)",
+      "OSM(MOD_RALT)",
       "KC_NO"
     ],
     [
