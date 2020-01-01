@@ -96,7 +96,7 @@
                         ]
                     },
                     {
-                        "description": "Tab to Hyper/Tab",
+                        "description": "Tab to Meh/Tab",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -120,10 +120,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_command",
+                                        "key_code": "right_option",
                                         "modifiers": [
                                             "right_control",
-                                            "right_option"
+                                            "right_shift"
                                         ]
                                     }
                                 ],
@@ -283,6 +283,14 @@
                             },
                             "to": {
                                 "key_code": "backslash"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_shift"
+                            },
+                            "to": {
+                                "key_code": "return_or_enter"
                             }
                         }
                     ]
