@@ -52,7 +52,7 @@
             ]
           },
           {
-            "description": "Slash to Right Shift/Slash",
+            "description": "CapsLock to Control/Escape",
             "manipulators": [
               {
                 "conditions": [
@@ -67,20 +67,20 @@
                   }
                 ],
                 "from": {
-                  "key_code": "slash",
+                  "key_code": "caps_lock",
                   "modifiers": {
                     "optional": ["any"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "right_shift",
-                    "modifiers": ["right_shift"]
+                    "key_code": "left_control",
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "slash"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"

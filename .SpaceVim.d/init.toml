@@ -64,7 +64,7 @@ name = "lang#python"
 enable_typeinfo = true
 
 [[layers]]
-name = "fzf"
+name = "denite"
 
 [[layers]]
 name = "lang#c"
