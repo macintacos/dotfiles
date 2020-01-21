@@ -6182,13 +6182,13 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/GitLocal/Play/dotfiles/iterm2</string>
+	<string>~/Documents</string>
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
 	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
+	<string>{841, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -6235,7 +6235,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>333 155 756 233 0 0 1440 877 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>624 606 799 448 0 0 2048 1257 </string>
+	<string>4651 782 841 470 0 0 1792 1097 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>606 508 580 419 0 0 1792 1097 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
@@ -6243,7 +6243,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>245 294 1090 963 0 0 2048 1257 </string>
+	<string>0 0 1440 1097 0 0 1792 1097 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -8689,8 +8689,8 @@
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
-		<string>3.2.9</string>
 		<string>3.3.0</string>
+		<string>3.2.9</string>
 		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
@@ -8714,9 +8714,9 @@
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1792, -32}, {2560, 1440}}</string>
+		<string>{{4352, -768}, {1440, 2560}}</string>
 		<key>topLeft</key>
-		<string>{2061, 563}</string>
+		<string>{4621, -173}</string>
 	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -8734,7 +8734,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>46</integer>
+	<integer>50</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9467,22 +9467,23 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncSearchHistory</key>
 	<array>
 		<string>MemberTagsDB.MemberAuditLo</string>
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>error</string>
+		<string>diag</string>
+		<string>npm run init</string>
+		<string>collection-20</string>
 		<string>ndsadmin</string>
 		<string>atlas</string>
 		<string>transition to</string>
 		<string>primary</string>
 		<string>wired</string>
-		<string>failed</string>
-		<string>arbitrary</string>
-		<string>arbir</string>
-		<string>maintenancewindowutils</string>
-		<string>timepicker</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567710420.60893703</real>
@@ -9540,7 +9541,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-22T00:40:37Z</date>
+	<date>2020-01-15T22:32:36Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -9548,7 +9549,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
