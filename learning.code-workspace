@@ -1,14 +1,11 @@
 {
   "folders": [
-	{
-		"path": "/Users/juliant/GitLocal/Learning/eloquent-javascript"
-	},
-	{
-		"path": "/Users/juliant/GitLocal/Learning/modern-javascript"
-	},
-	{
-		"path": "/Users/juliant/GitLocal/Learning/rust-lang-book"
-	}
-],
+    {
+      "path": "/Users/juliant/GitLocal/Learning/eloquent-javascript"
+    },
+    {
+      "path": "/Users/juliant/GitLocal/Learning/modern-javascript"
+    }
+  ],
   "settings": {}
 }

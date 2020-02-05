@@ -104,10 +104,10 @@ ok "Sublime Merge keymap linked."
 running "linking secrets"
 rm -rf .zshsecrets/
 mkdir .zshsecrets
-touch atlas-ssh
+touch sshnds
 touch secrets.zsh
-ln -sF "${DOTFILES_HOME}/.zsh/secrets/atlas-ssh" ~/.zshsecrets/atlas-ssh
-ln -sF "${DOTFILES_HOME}/.zsh/secrets/secrets.zsh" ~/.zshsecrets/secrets.zsh
+ln -sF "${DOTFILES_HOME}/.zsh/secrets/sshnds" ~/.zshsecrets/sshnds
+ln -sF "${DOTFILES_HOME}/.zsh/secrets/secrets.zsh" sshnds~/.zshsecrets/secrets.zsh
 ok "Secrets linked."
 # }}}
 

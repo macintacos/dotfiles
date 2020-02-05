@@ -52,7 +52,7 @@
             ]
           },
           {
-            "description": "Slash to Right Shift/Slash",
+            "description": "Right Shift to Right Shift/Enter",
             "manipulators": [
               {
                 "conditions": [
@@ -67,7 +67,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "slash",
+                  "key_code": "right_shift",
                   "modifiers": {
                     "optional": ["any"]
                   }
@@ -80,7 +80,7 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "slash"
+                    "key_code": "return_or_enter"
                   }
                 ],
                 "type": "basic"
@@ -310,7 +310,7 @@
             },
             {
               "from": {
-                "key_code": "right_shift"
+                "key_code": "return_or_enter"
               },
               "to": {
                 "key_code": "return_or_enter"
