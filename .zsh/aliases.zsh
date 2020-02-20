@@ -32,9 +32,10 @@ alias r='ranger-cd'
 alias du='du -hs * | sort -hr | less'
 alias scratch='nv ~/.scratch/run-x.md'
 alias diff='icdiff'
+alias count='tokei'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
- 
+
 # GIT ALIASES {{{
 eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'         # better way to view git status

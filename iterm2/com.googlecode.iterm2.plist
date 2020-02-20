@@ -12,6 +12,8 @@
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -6239,13 +6241,13 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>4651 782 841 470 0 0 1792 1097 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>606 508 580 419 0 0 1792 1097 </string>
+	<string>2782 716 580 419 1792 -32 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1035 255 606 469 -1440 -779 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1024 0 1024 1257 0 0 2048 1257 </string>
+	<string>0 0 1440 1257 0 0 2048 1257 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6846,7 +6848,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMonoNerdFontComplete-Regular 14</string>
+			<string>JetBrainsMono-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -8689,20 +8691,23 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.4</string>
+		<string>3.3.8</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.2.9</string>
-		<string>3.3.0</string>
 		<string>3.3.2</string>
+		<string>3.3.0</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
-		<string>Hack Nerd Font</string>
+		<string>JetBrainsMono Nerd Font</string>
+		<string>JetBrains Mono</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>JetBrains Mono</string>
 		<string>JetBrainsMono Nerd Font</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -8725,9 +8730,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3008, 1692}}</string>
+		<string>{{1792, -32}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{1950, 1194}</string>
+		<string>{3083, 856}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -8738,7 +8743,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>53</integer>
+	<integer>55</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9473,23 +9478,6 @@
 	</dict>
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>MemberTagsDB.MemberAuditLo</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>chef</string>
-		<string>atlasadmin</string>
-		<string>term</string>
-		<string>76252sud</string>
-		<string>error</string>
-		<string>diag</string>
-		<string>npm run init</string>
-		<string>collection-20</string>
-		<string>ndsadmin</string>
-		<string>transition to</string>
-	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567710420.60893703</real>
 	<key>Non Ascii Font</key>
@@ -9546,7 +9534,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-28T20:38:05Z</date>
+	<date>2020-02-18T01:03:17Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -17248,7 +17236,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
