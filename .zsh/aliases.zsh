@@ -33,6 +33,7 @@ alias du='du -hs * | sort -hr | less'
 alias scratch='nv ~/.scratch/run-x.md'
 alias diff='icdiff'
 alias count='tokei'
+alias topgrade='topgrade --disable vim'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
 
@@ -51,7 +52,7 @@ alias gclean='git-clean-local' # cleans out any branches from local that have be
 # }}}
 
 # EXA/TREE IMPROVEMENTS (aka -> exa) {{{
-alias ls='exa -F --group-directories-first'
+alias ls='exa -F --group-directories-first --icons'
 alias l='ls -l'
 alias lg='ls -la --git --color-scale'
 alias ll='ls -la --color-scale'

@@ -179,6 +179,9 @@ source ~/.zsh/aliases.zsh           # aliases
 source ~/.zsh/functions.zsh         # functions
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
+# sourcing iterm integration
+source ~/.iterm2_shell_integration.zsh
+
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
