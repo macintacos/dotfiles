@@ -41,6 +41,7 @@ alias topgrade='topgrade --disable vim'
 eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'         # better way to view git status
 alias gclean='git-clean-local' # cleans out any branches from local that have been deleted on remote
+alias sm="smerge"
 # }}}
 
 # LS/TREE IMPROVEMENTS (aka -> lsd) {{{
@@ -67,6 +68,7 @@ alias cddot="cd $HOME/GitLocal/Play/dotfiles"
 alias cdwork="cd $HOME/GitLocal/Work && cd"
 alias cdplay="cd $HOME/GitLocal/Play && cd"
 alias cdgit="cd $HOME/GitLocal && cd"
+alias cddown="cd $HOME/Downloads && cd"
 # }}}
 
 # VS CODE ALIASES {{{
