@@ -189,6 +189,10 @@ ENHANCD_FILTER="fd -piHL -t d -d 2 | fzf"
 ENHANCD_DISABLE_DOT=1
 # }}}
 
+# INITIALIZING AUTOJUMP {{{
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# }}}
+
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -245,18 +249,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 # }}}
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 export N_PREFIX=$HOME/.n
 export PATH=$N_PREFIX/bin:$PATH
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

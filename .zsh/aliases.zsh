@@ -24,7 +24,6 @@ alias touch='ad'                    # advance_touch, a better newfile implementa
 alias top='glances'                 # better resource visualizer
 alias rm='trash -v'                 # a better rm
 alias kill='fkill'                  # a better process killer
-alias j='autojump'                  # autojump alias
 alias v='nvim'                      # shortening usage of nvim
 alias nv='nvim'
 alias tldr='tldr -t base16'
@@ -69,6 +68,7 @@ alias cdwork="cd $HOME/GitLocal/Work && cd"
 alias cdplay="cd $HOME/GitLocal/Play && cd"
 alias cdgit="cd $HOME/GitLocal && cd"
 alias cddown="cd $HOME/Downloads && cd"
+alias cdmms="cd /mms"
 # }}}
 
 # VS CODE ALIASES {{{
