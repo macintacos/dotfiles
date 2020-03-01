@@ -79,6 +79,9 @@ name = "lang#html"
 name = "lang#javascript"
 
 [[layers]]
+name = "lang#java"
+
+[[layers]]
 name = "lang#json"
 
 [[layers]]
@@ -116,7 +119,9 @@ name = "dracula/vim"
 merged = 0
 
 [[custom_plugins]]
-name = "ryanoasis/vim-devicons"
-name = "tpope/vim-surround"
 name = "glacambre/firenvim"
 name = "reedes/vim-lexical"
+name = "ryanoasis/vim-devicons"
+name = "tpope/vim-commentary"
+name = "tpope/vim-surround"
+name = "machakann/vim-highlightedyank"

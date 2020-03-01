@@ -1,38 +1,38 @@
 # ALIASES
 
 # UTILITIES; SHORTENED {{{
-alias zz='_z -c 2>&1'
-alias zr='zrun'                     # making zrun a bit more easy to run
-alias things='things.sh'            # shortening things script
 alias c='clear && ll'               # clear terminal display, show directory
-alias cls='clear'                   # clear sisplay, just like `mongo` shell
-alias cp='cp -iv'                   # preferred 'cp' implementation
-alias mv='mv -iv'                   # preferred 'mv' implementation
-alias rm='rm -i'                    # makes sure 'rm' always requires confirmation
-alias f='open -a Forklift .'        # opens current directory in Forklift
-alias edit='vim'                    # default editor if i don't want to leave the terminal
-alias grep='grep --color'           # always colorize output
-alias rg='rg -ziN'                  # always ignore line numbers, search compressed files, case-insensitivity
-alias ff='fzf'                      # shortening fzf
-alias t='tail -f'                   # shorten tail, and always continue to tail unless cancelled
-alias dud='du -d 1 -h'              # get size of all directories in current directory, including self
-alias duf='du -sh *'                # get size of all files in currect directory, exclusing self, including directories
-alias ydl='youtube-dl'              # because it's annoying as hell to type this out everytime
 alias cat='bat --theme="ansi-dark"' # because bat is just insanely better than cat
-alias vs='code'                     # shortening vscode's code
-alias touch='ad'                    # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
-alias top='glances'                 # better resource visualizer
-alias rm='trash -v'                 # a better rm
-alias kill='fkill'                  # a better process killer
-alias v='nvim'                      # shortening usage of nvim
-alias nv='nvim'
-alias tldr='tldr -t base16'
-alias r='ranger-cd'
-alias du='du -hs * | sort -hr | less'
-alias scratch='nv ~/.scratch/run-x.md'
-alias diff='icdiff'
+alias cls='clear'                   # clear sisplay, just like `mongo` shell
 alias count='tokei'
+alias cp='cp -iv' # preferred 'cp' implementation
+alias diff='icdiff'
+alias du='du -hs * | sort -hr | less'
+alias dud='du -d 1 -h'       # get size of all directories in current directory, including self
+alias duf='du -sh *'         # get size of all files in currect directory, exclusing self, including directories
+alias edit='vim'             # default editor if i don't want to leave the terminal
+alias f='open -a Forklift .' # opens current directory in Forklift
+alias ff='fzf'               # shortening fzf
+alias grep='grep --color'    # always colorize output
+alias kill='fkill'           # a better process killer
+alias mv='mv -iv'            # preferred 'mv' implementation
+alias nv='nvim'
+alias r='ranger-cd'
+alias rg='rg -ziN'  # always ignore line numbers, search compressed files, case-insensitivity
+alias rm='rm -i'    # makes sure 'rm' always requires confirmation
+alias rm='trash -v' # a better rm
+alias scratch='nv ~/.scratch/run-x.md'
+alias t='tail -f'        # shorten tail, and always continue to tail unless cancelled
+alias things='things.sh' # shortening things script
+alias tldr='tldr -t base16'
+alias top='glances' # better resource visualizer
 alias topgrade='topgrade --disable vim'
+alias touch='ad'       # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
+alias v='nvim'         # shortening usage of nvim
+alias vs='code'        # shortening vscode's code
+alias ydl='youtube-dl' # because it's annoying as hell to type this out everytime
+alias zr='zrun'        # making zrun a bit more easy to run
+alias zz='_z -c 2>&1'
 # alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
 # }}}
 

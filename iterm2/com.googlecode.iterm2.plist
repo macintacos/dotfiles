@@ -6,6 +6,8 @@
 	<true/>
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
+	<key>Actions</key>
+	<array/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AnimateDimming</key>
@@ -6474,12 +6476,16 @@
 			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.81960784313725488</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.5725490196078431</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>1</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -8695,7 +8701,7 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.3.4</string>
+		<string>3.2.9</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
@@ -8703,7 +8709,7 @@
 		<string>3.3.9</string>
 		<string>3.3.0</string>
 		<string>3.3.2</string>
-		<string>3.2.9</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -8712,6 +8718,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>JetBrains Mono</string>
 		<string>GohuFont Nerd Font</string>
 		<string>Hack Nerd Font</string>
 		<string>JetBrainsMono Nerd Font</string>
@@ -8736,9 +8743,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3008, 1692}}</string>
+		<string>{{4352, -736}, {1440, 2560}}</string>
 		<key>topLeft</key>
-		<string>{1680, 1306}</string>
+		<string>{4775, 916}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -8749,7 +8756,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>59</integer>
+	<integer>60</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9486,6 +9493,24 @@
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567710420.60893703</real>
+	<key>NoSyncToolbeltProportions</key>
+	<dict>
+		<key>proportions</key>
+		<array>
+			<dict>
+				<key>heightAsFraction</key>
+				<real>0.7551789077212806</real>
+				<key>name</key>
+				<string>Notes</string>
+			</dict>
+			<dict>
+				<key>heightAsFraction</key>
+				<real>0.2448210922787194</real>
+				<key>name</key>
+				<string>Recent Directories</string>
+			</dict>
+		</array>
+	</dict>
 	<key>Non Ascii Font</key>
 	<string>RobotoMonoForPowerline-Regular 12</string>
 	<key>Normal Font</key>
@@ -9542,7 +9567,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-21T14:00:16Z</date>
+	<date>2020-02-29T21:09:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -9577,6 +9602,10 @@
 	<integer>0</integer>
 	<key>TimeBetweenTips</key>
 	<real>604800</real>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Recent Directories</string>
+	</array>
 	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
