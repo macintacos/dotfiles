@@ -1,3 +1,4 @@
+#!/usr/local/bin/bash
 # Setting PATHs
 export DROPBOX="$HOME/Dropbox"
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"

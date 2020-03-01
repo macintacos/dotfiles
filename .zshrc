@@ -1,18 +1,11 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#!/usr/local/bin/bash
+# shellcheck disable=SC1090
+# shellcheck disable=SC1091
+# shellcheck disable=SC2034
 
 # PROFILING INFORMATION {{{
 ## Uncomment the following line (and last line) to get loading times for zshell
 # zmodload zsh/zprof
-# }}}
-
-# LNAV {{{
-# export LNAV_EXP="mouse"
-# set LNAV_EXP="mouse"
 # }}}
 
 # JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
@@ -51,13 +44,14 @@ colors
 
 # CACHE LOADING/COMPLETION {{{
 ## make zsh know about hosts already accessed
+# shellcheck disable=SC2016
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE
+zstyle ':completion::complete:*' cache-path "$ZSH_CACHE"
 
 # Enable approximate completions
 zstyle ':completion:*' completer _complete _approximate
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3)) numeric)'
+zstyle -e ':completion:*:approximate:*' max-errors "reply=($((($#PREFIX+$#SUFFIX)/3)) numeric)"
 
 # Automatically update PATH entries
 zstyle ':completion:*' rehash true
@@ -107,14 +101,15 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,args -w 
 
 # Use ls-colors for path completions
 function _set-list-colors() {
-    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
     unfunction _set-list-colors
 }
 sched 0 _set-list-colors  # deferred since LC_COLORS might not be available yet
 
 ## for only occasional re-compilation
 autoload -Uz compinit
-if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+# shellcheck disable=2086
+if [ "$(date +'%j')" != "$(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump)" ]; then
     compinit
 else
     compinit -C
@@ -154,7 +149,6 @@ preexec() { echo -ne '\e[5 q' ;}
 
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
 
 # Use lf to switch directories and bind it to ctrl-o ('q' will 'cd' to that directory)
 lfcd () {
@@ -165,13 +159,12 @@ lfcd () {
         rm -f "$tmp"
         if [ -d "$dir" ]; then
             if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
+                cd "$dir" || return
             fi
         fi
     fi
 }
 
-bindkey -s '^o' 'lfcd\n'  # zsh
 # }}}
 
 # CHEAT CONFIG {{{
@@ -181,11 +174,13 @@ export CHEAT_COLORSCHEME=dark
 
 # SOURCE-ING {{{
 ## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
-source $ZPLUG_HOME/init.zsh
+# shellcheck source=/usr/local/opt/zplug
+source "$ZPLUG_HOME/init.zsh"
 
 ## sourcing external files
-source ~/.zsh/aliases.zsh           # aliases
-source ~/.zsh/functions.zsh         # functions
+source "$HOME/.zsh/aliases.zsh"           # aliases
+# shellcheck disable=SC1090
+source "$HOME/.zsh/functions.zsh"         # functions
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # sourcing iterm integration
@@ -214,9 +209,6 @@ export FZF_DEFAULT_OPTS="
 --bind tab:down --cycle
 "
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-
-bindkey '^T' fzf-completion
-bindkey '^I' $fzf_default_completion
 # }}}
 
 # ZPLUG {{{
@@ -240,12 +232,11 @@ zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zs
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
 zplug "zsh-users/zsh-completions", use:src
-zplug "b4b4r07/emoji-cli"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
-    if read -q; then
+  if read -rq; then
         echo
         zplug install
     fi
@@ -257,7 +248,6 @@ zplug load
 
 ## Color needs to be set AFTER source-ing
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
-bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 # }}}
 
 export N_PREFIX=$HOME/.n
@@ -265,6 +255,13 @@ export PATH=$N_PREFIX/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# KEYBINDINGS {{{
+bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
+bindkey '^e' edit-command-line # allows you to edit the current command line in vim
+bindkey -s '^o' 'lfcd\n'  # runs the 'lfcd' command with 'lf'
+bindkey '^T' fzf-completion
+# }}}
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
