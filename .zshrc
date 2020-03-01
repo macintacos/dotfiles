@@ -107,8 +107,8 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,args -w 
 
 # Use ls-colors for path completions
 function _set-list-colors() {
-	zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-	unfunction _set-list-colors
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+    unfunction _set-list-colors
 }
 sched 0 _set-list-colors  # deferred since LC_COLORS might not be available yet
 
@@ -122,6 +122,7 @@ fi
 zmodload -i zsh/complist
 # }}}
 
+# VIM STUFF {{{
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -171,6 +172,7 @@ lfcd () {
 }
 
 bindkey -s '^o' 'lfcd\n'  # zsh
+# }}}
 
 # CHEAT CONFIG {{{
 export CHEAT_COLORS=true
@@ -218,25 +220,27 @@ bindkey '^I' $fzf_default_completion
 # }}}
 
 # ZPLUG {{{
+zplug "JamesKovacs/zsh_completions_mongodb"
+zplug "Tarrasch/zsh-bd", use:bd.zsh
+zplug "Valiev/almostontop", use:almostontop.plugin.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "djui/alias-tips"
 zplug "hlissner/zsh-autopair", defer:2
-zplug "JamesKovacs/zsh_completions_mongodb"
+zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
-zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/ripgrep", from:oh-my-zsh
 zplug "plugins/tig", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
 zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
-zplug "Tarrasch/zsh-bd", use:bd.zsh
 zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zsh
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
 zplug "zsh-users/zsh-completions", use:src
+zplug "b4b4r07/emoji-cli"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
