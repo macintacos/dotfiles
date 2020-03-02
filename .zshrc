@@ -51,7 +51,7 @@ zstyle ':completion::complete:*' cache-path "$ZSH_CACHE"
 
 # Enable approximate completions
 zstyle ':completion:*' completer _complete _approximate
-zstyle -e ':completion:*:approximate:*' max-errors "reply=($((($#PREFIX+$#SUFFIX)/3)) numeric)"
+zstyle -e ':completion:*:approximate:*' max-errors "reply=($((($#PREFIX + $#SUFFIX) / 3)) numeric)"
 
 # Automatically update PATH entries
 zstyle ':completion:*' rehash true
@@ -99,13 +99,6 @@ zstyle ':completion:*:*:*:*:processes' menu yes select
 zstyle ':completion:*:*:*:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,args -w -w"
 
-# Use ls-colors for path completions
-function _set-list-colors() {
-    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-    unfunction _set-list-colors
-}
-sched 0 _set-list-colors  # deferred since LC_COLORS might not be available yet
-
 ## for only occasional re-compilation
 autoload -Uz compinit
 # shellcheck disable=2086
@@ -122,17 +115,17 @@ zmodload -i zsh/complist
 bindkey -v
 export KEYTIMEOUT=1
 
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
+function zle-keymap-select() {
+    if [[ ${KEYMAP} == vicmd ]] ||
+        [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
 
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
 }
 zle -N zle-keymap-select
 
@@ -145,13 +138,14 @@ zle -N zle-line-init
 # Use beam shape cursor on startup.
 echo -ne '\e[5 q'
 # Use beam shape cursor for each new prompt.
-preexec() { echo -ne '\e[5 q' ;}
+preexec() { echo -ne '\e[5 q'; }
 
 # Edit line in vim with ctrl-e
-autoload edit-command-line; zle -N edit-command-line
+autoload edit-command-line
+zle -N edit-command-line
 
 # Use lf to switch directories and bind it to ctrl-o ('q' will 'cd' to that directory)
-lfcd () {
+lfcd() {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
@@ -178,9 +172,9 @@ export CHEAT_COLORSCHEME=dark
 source "$ZPLUG_HOME/init.zsh"
 
 ## sourcing external files
-source "$HOME/.zsh/aliases.zsh"           # aliases
+source "$HOME/.zsh/aliases.zsh" # aliases
 # shellcheck disable=SC1090
-source "$HOME/.zsh/functions.zsh"         # functions
+source "$HOME/.zsh/functions.zsh"   # functions
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # sourcing iterm integration
@@ -193,25 +187,28 @@ ENHANCD_FILTER="fd -piHL -t d -d 2 | fzf"
 ENHANCD_DISABLE_DOT=1
 # }}}
 
-# INITIALIZING AUTOJUMP {{{
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-# }}}
-
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
+--height 40%
+--reverse
 --border
 --preview '(bat --style=numbers --color=always {} || exa --tree --git --icons {}) 2> /dev/null | head -500'
 --color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
---bind tab:down --cycle
+--bind tab:down
+--cycle
 "
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 # }}}
 
 # ZPLUG {{{
+# let zplug manage zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# actual plugins
 zplug "JamesKovacs/zsh_completions_mongodb"
 zplug "Tarrasch/zsh-bd", use:bd.zsh
 zplug "Valiev/almostontop", use:almostontop.plugin.zsh
@@ -232,11 +229,12 @@ zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zs
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
 zplug "zsh-users/zsh-completions", use:src
+zplug "andrewferrier/fzf-z", use:fzf-z.plugin.zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
-  if read -rq; then
+    if read -rq; then
         echo
         zplug install
     fi
@@ -258,8 +256,8 @@ export PATH=$N_PREFIX/bin:$PATH
 
 # KEYBINDINGS {{{
 bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
-bindkey '^e' edit-command-line # allows you to edit the current command line in vim
-bindkey -s '^o' 'lfcd\n'  # runs the 'lfcd' command with 'lf'
+bindkey '^e' edit-command-line  # allows you to edit the current command line in vim
+bindkey -s '^o' 'lfcd\n'        # runs the 'lfcd' command with 'lf'
 bindkey '^T' fzf-completion
 # }}}
 

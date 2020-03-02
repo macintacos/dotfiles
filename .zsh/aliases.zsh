@@ -29,6 +29,7 @@ alias v='nvim'                        # shortening usage of nvim
 alias vs='code'                       # shortening vscode's code
 alias zr='zrun'                       # making zrun a bit more easy to run
 alias zz='_z -c 2>&1'                 # idk what this does
+alias hdi='howdoi -c -n 3'            # howdoi plugin to search for code completion stuff
 # }}}
 
 # GIT ALIASES {{{
