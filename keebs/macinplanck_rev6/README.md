@@ -2,8 +2,8 @@
 
 add the following:
 
-```c
-#define IGNORE_MOD_TAP_INTERRUPT
+```cpp
+#define PERMISSIVE_HOLD
 #define TAPPING_TERM 150
 #define TAPPING_TOGGLE 1
 ```

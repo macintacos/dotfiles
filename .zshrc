@@ -14,11 +14,14 @@ export ANT_OPTS="-Xms64m -Xmx1500m"
 export ANT_HOME=/usr/local/apache-ant-1.10.5
 # }}}
 
+# POWERLEVEL9/10K {{{
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# }}}
+
 # ZSH SETTINGS {{{
 
-POWERLEVEL9K_MODE='nerdfont-complete'
 DEFAULT_USER="$(whoami)"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 BAT_THEME="base16"
@@ -143,22 +146,6 @@ preexec() { echo -ne '\e[5 q'; }
 # Edit line in vim with ctrl-e
 autoload edit-command-line
 zle -N edit-command-line
-
-# Use lf to switch directories and bind it to ctrl-o ('q' will 'cd' to that directory)
-lfcd() {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir" || return
-            fi
-        fi
-    fi
-}
-
 # }}}
 
 # CHEAT CONFIG {{{
@@ -202,6 +189,7 @@ export FZF_DEFAULT_OPTS="
 --cycle
 "
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+export FZFZ_RECENT_DIRS_TOOL='z'
 # }}}
 
 # ZPLUG {{{
@@ -257,11 +245,17 @@ export PATH=$N_PREFIX/bin:$PATH
 # KEYBINDINGS {{{
 bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
 bindkey '^e' edit-command-line  # allows you to edit the current command line in vim
-bindkey -s '^o' 'lfcd\n'        # runs the 'lfcd' command with 'lf'
+bindkey -s '^o' 'r\n'           # runs the 'r' command with 'ranger'
 bindkey '^T' fzf-completion
+
+# 'pet-select'
+zle -N pet-select
+stty -ixon
+bindkey '^s' pet-select
 # }}}
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
+export PATH="/usr/local/opt/helm@2/bin:$PATH"

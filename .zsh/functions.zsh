@@ -128,6 +128,16 @@ EOF
   set -- "${POSITIONAL[@]}" # restore positional params
 }
 
+function prev() {
+  PREV=$(fc -lrn | head -n 1)
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
 # }
 # }}}
 

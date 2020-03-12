@@ -32,6 +32,12 @@ alias zz='_z -c 2>&1'                 # idk what this does
 alias hdi='howdoi -c -n 3'            # howdoi plugin to search for code completion stuff
 # }}}
 
+# KUBECTL/KUBECTX/KUBENS ALIASES {{{
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+alias kx='kubectx'
+alias kns='kubens'
+# }}}
+
 # GIT ALIASES {{{
 eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'         # better way to view git status
@@ -65,6 +71,13 @@ alias cdplay="cd $HOME/GitLocal/Play && cd"
 alias cdgit="cd $HOME/GitLocal && cd"
 alias cddown="cd $HOME/Downloads && cd"
 alias cdmms="cd /mms"
+
+# cd up directories
+alias cdd='cd ..'             # cd back 1 directory
+alias cdd='cd ../..'          # cd back 2 directories
+alias cdd='cd ../../..'       # cd back 3 directories
+alias cdd='cd ../../../..'    # cd back 4 directories
+alias cdd='cd ../../../../..' # cd back 5 directories
 # }}}
 
 # VS CODE ALIASES {{{
