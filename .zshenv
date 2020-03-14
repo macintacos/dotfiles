@@ -29,5 +29,6 @@ export HELM_2="/usr/local/opt/helm@2/bin"
 export TILLER_NAMESPACE='cloud-ops'
 export KUBECONFIG=~/.kube/config.staging:~/.kube/config.prod
 export BOSUN_CONFIG_DIR=$HOME/GitLocal/Work/bosun
+export BOSUN_ENV=julian
 
 export PATH="$HELM_2:$SPACEVIMBIN:$GNUBIN:$DOTFILES_HOME:$DROPBOX:$RUBY_BIN:$ZPLUG_HOME:$PY_37:$KEKA:$MY_ZSH_SECRETS:$MY_ZSH_SCRIPTS:$PYTHON2_PKGS:$NODEMODULEPATH:$GOPATH/bin:$EMACSPATHVAR:$HOME/bin:$LOCAL_BIN:$PERLBREW:$GOPATH/bin:$SCALA_HOME/bin:$MYSQL:$RUST:$VSCODE:$PATH"
