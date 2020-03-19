@@ -73,16 +73,17 @@ alias cddown="cd $HOME/Downloads && cd"
 alias cdmms="cd /mms"
 
 # cd up directories
-alias cdd='cd ..'             # cd back 1 directory
-alias cdd='cd ../..'          # cd back 2 directories
-alias cdd='cd ../../..'       # cd back 3 directories
-alias cdd='cd ../../../..'    # cd back 4 directories
-alias cdd='cd ../../../../..' # cd back 5 directories
+alias cdd='cd ..'                 # cd back 1 directory
+alias cddd='cd ../..'             # cd back 2 directories
+alias cdddd='cd ../../..'         # cd back 3 directories
+alias cddddd='cd ../../../..'     # cd back 4 directories
+alias cdddddd='cd ../../../../..' # cd back 5 directories
 # }}}
 
 # VS CODE ALIASES {{{
 alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
 alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
+alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 # }}}
 
 # MONITORING {{{
