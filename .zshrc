@@ -167,6 +167,10 @@ export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 # sourcing iterm integration
 source ~/.iterm2_shell_integration.zsh
 
+# mongocli completion
+source <(mongocli completion zsh)
+compdef _mongocli mongocli
+
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
@@ -183,8 +187,9 @@ export FZF_DEFAULT_OPTS="
 --reverse
 --border
 --preview '(bat --style=numbers --color=always {} || exa --tree --git --icons {}) 2> /dev/null | head -500'
---color dark,hl:33,hl+:#ef6e9c,fg+:235,bg+:#04a7fc,fg+:254
---color info:254,prompt:37,spinner:108,pointer:235,marker:235
+--color=dark
+--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
 --bind tab:down
 --cycle
 "
