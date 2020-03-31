@@ -205,6 +205,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "JamesKovacs/zsh_completions_mongodb"
 zplug "Tarrasch/zsh-bd", use:bd.zsh
 zplug "Valiev/almostontop", use:almostontop.plugin.zsh
+zplug "andrewferrier/fzf-z", use:fzf-z.plugin.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "djui/alias-tips"
 zplug "hlissner/zsh-autopair", defer:2
@@ -222,7 +223,6 @@ zplug "zdharma/fast-syntax-highlighting", use:fast-syntax-highlighting.plugin.zs
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
 zplug "zsh-users/zsh-completions", use:src
-zplug "andrewferrier/fzf-z", use:fzf-z.plugin.zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -263,4 +263,3 @@ bindkey '^s' pet-select
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
-export PATH="/usr/local/opt/helm@2/bin:$PATH"
