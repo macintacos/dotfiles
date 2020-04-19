@@ -33,7 +33,7 @@ alias hdi='howdoi -c -n 3'            # howdoi plugin to search for code complet
 # }}}
 
 # KUBECTL/KUBECTX/KUBENS ALIASES {{{
-[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+# [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 alias kx='kubectx'
 alias kns='kubens'
 # }}}
