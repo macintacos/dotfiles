@@ -14,6 +14,7 @@ IFS=$'\n\t'
 set -o xtrace
 
 # include my library helpers for colorized echo and require_brew, etc
+
 source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
 source "./.zshenv"
@@ -53,7 +54,7 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #macintacos/dotfiles" "/etc/s
 	if [[ $response =~ (yes|y|Y) ]]; then
 		sudo cp /etc/sudoers /etc/sudoers.back
 		echo '%wheel		ALL=(ALL) NOPASSWD: ALL #macintacos/dotfiles' | sudo tee -a /etc/sudoers >/dev/null
-		sudo dscl . append /Groups/wheel GroupMembership $(whoami)
+		sudo dscl . append /Groups/wheel GroupMembership "$(whoami)"
 		bot "You can now run sudo commands without password!"
 	fi
 fi
