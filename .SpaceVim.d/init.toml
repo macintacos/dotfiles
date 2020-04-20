@@ -9,14 +9,14 @@
 # All SpaceVim option below [option] section
 [options]
   autocomplete_method = "coc"
-  boottrap_before = "myspacevim#before"
+  bootsrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
   buffer_index_type = 4
   enable_googlesuggest = 1
-  filemanager = "nerdtree"
+  filemanager = "defx"
   filetree_direction = "left"
 
-  # Theming {{{
+  # THEMING {{{
   colorscheme = "dracula"
   colorscheme_bg = "dark"
   enable_guicolors = true
@@ -38,7 +38,7 @@
     ['#282828', '#689d6a', 235, 72],
     ['#282828', '#8f3f71', 235, 132],
   ]
-    # }}}
+  # }}}
 
 # Layerz
 [[layers]]
@@ -54,14 +54,22 @@ default_height = 30
 [[layers]]
 name = "ctrlspace"
 enable-spacevim-styled-keys = true
+autoload-workspaces = true
+
+[[layers]]
+name = "format"
 
 [[layers]]
 name = "git"
 git-plugin = "fugitive"
 
 [[layers]]
+name = "lang#dockerfile"
+
+[[layers]]
 name = "lang#python"
 enable_typeinfo = true
+format_on_save = 1
 
 [[layers]]
 name = "denite"
@@ -89,6 +97,8 @@ name = "lang#markdown"
 
 [[layers]]
 name = "lang#rust"
+recommended-style = 1
+format-autosave = 1
 
 [[layers]]
 name = "lang#sh"

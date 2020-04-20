@@ -1,35 +1,43 @@
 function! myspacevim#after() abort
-  " COC.NVIM Settings
-  set hidden
-  set nobackup
-  set nowritebackup
-  set cmdheight=2
-  set updatetime=300
-  set shortmess+=c
-
-  " "Regular" Settings
-  set clipboard+=unnamedplus
-  set timeoutlen=300
-  set nocompatible
-  set ignorecase  " setting case-insensitive search
-  set smartcase   " setting it so that we don't use case-sensitivity until a capital letter is used
-  set wrap
-  set linebreak
-  set spelllang=en
+  " "REGULAR" SETTINGS {{{
   filetype plugin on
+  set clipboard+=unnamedplus
+  set confirm     " instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files
+  set cmdheight=2 " give more space for displaying messages
+  set hidden
+  set hlsearch    " highlight searces (use <C-L> to temporarily turn off highliting)
+  set ignorecase  " setting case-insensitive search
+  set laststatus  " always display the status line, even if only one window is displayed
+  set linebreak
+  set nobackup
+  set nocompatible
+  set nowritebackup
+  set ruler       " display the cursor position on the last line of the screen, or in the status line of a window
+  set shortmess+=c
+  set showcmd     " show partial commands in the last line of the screen
+  set signcolumn=yes " always show the signcolumn so that it doesn't become all shifty when you resolve errors and such
+  set smartcase   " setting it so that we don't use case-sensitivity until a capital letter is used
+  set spelllang=en
+  set timeoutlen=300
+  set updatetime=300
+  set wildmenu    " better command-line completion
+  set wrap
+  " "REGULAR" SETTINGS END }}}
 
-  " File-specific Settings
+  " FILE-SPECIFIC SETTINGS {{{
   augroup lexical
     autocmd!
     autocmd FileType markdown,mkd,md call lexical#init()
     autocmd FileType textile call lexical#init()
     autocmd FileType text,txt call lexical#init()
   augroup END
+  " FILE-SPECIFIC SETTINGS END }}}
 
-  " CTRLSPACE CONFIG
+  " CTRLSPACE CONFIG {{{
   let g:CtrlSpaceGlobCommand = 'ag -lu --nocolor -g --hidden ""'
+  " CTRLSPACE CONFIG END}}}
 
-  " COLORS/THEMING
+  " COLORS/THEMING {{{
   set gcr=a:block
 
   " mode aware cursors
@@ -47,13 +55,49 @@ function! myspacevim#after() abort
   hi VisualCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=125 guibg=#d33682
   hi ReplaceCursor ctermfg=15 guifg=#fdf6e3 ctermbg=65  guibg=#dc322f
   hi CommandCursor ctermfg=15 guifg=#fdf6e3 ctermbg=166 guibg=#cb4b16
+  " COLORS/THEMING END }}}
 
-  " REMAPS
+  " REMAPS {{{
+  " Various ways of getting out of insert mode
+  inoremap jj <ESC>
+  inoremap kj <ESC>
+  inoremap jk <ESC>
+  inoremap kk <ESC>
 
-  " COC.NVIM CONFIGURATION! {{{
+  map Y y$ " make 'Y' yank for current character to end of line
 
-  " COC.NVIM SETTINGS END }}}
+  "" this it to make sure that vim-highlightedyank is actually working
+  if !exists('##TextYankPost')
+    map y <Plug>(highlightedyank)
+  endif
 
+  let g:highlightedyank_highlight_duration = 250
+  " REMAPS END }}}
+
+  " LAYER-SPECIFIC {{{
+  let g:neoformat_python_black = {
+    \ 'exe': 'black',
+    \ 'stdin': 1
+    \ }
+  let g:neoformat_enabled_python = ['black']
+  " }}}
+  
+  " COC.NVIM CONFIGURATION {{{
+  " Use K to show documentation in preview window
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
+  
+  " Highlight the symbol and its references when holding the cursor.
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+
+  " COC.NVIM CONFIGURATION END }}}
 endfunction
 
 function! myspacevim#before() abort
