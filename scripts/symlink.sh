@@ -11,7 +11,7 @@ source ../lib_sh/echos.sh
 DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 SUBLIME_MERGE_USER_DIR="/Applications/Sublime Merge.app/Contents/MacOS/Packages/User/"
 
-cd ~
+cd "$HOME" || exit
 
 bot "Linking local config to remote dotfiles..."
 
