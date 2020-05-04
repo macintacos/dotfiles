@@ -263,3 +263,6 @@ bindkey '^s' pet-select
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

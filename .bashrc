@@ -3,3 +3,5 @@
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias rm='rm -i'
+
+complete -C /usr/local/bin/terraform terraform
