@@ -1,4 +1,12 @@
 #!/usr/lobal/bin/bash
+
+# FZF-related configuration options
+
+# fzf: https://github.com/junegunn/fzf
+# fzf-git: https://github.com/hschne/fzf-git
+# fzf-tab: https://github.com/Aloxaf/fzf-tab
+# fzf-z: https://github.com/andrewferrier/fzf-z
+
 # INITIALIZING FZF {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -16,4 +24,7 @@ export FZF_DEFAULT_OPTS="
 "
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZFZ_RECENT_DIRS_TOOL='z'
+# }}}
+
+# FZF-TAB {{{
 # }}}

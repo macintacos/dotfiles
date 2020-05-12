@@ -8,28 +8,12 @@
 # zmodload zsh/zprof
 # }}}
 
-# JABBA (for MMS) -> only turn on when you want to mess with MMS{{{
-[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
-# }}}
-
 # SOURCE-ING {{{
 
-## source everything in this directory that isn't tied down
+## source every .zsh file in this directory that isn't tied down
 for file in "$ZDOTDIR"/**/*.zsh; do
     source "$file"
 done
-
-[[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
-
-# sourcing iterm integration
-source ~/.iterm2_shell_integration.zsh
-
-# Set colors to match iTerm2 Terminal Colors
-export TERM=xterm-256color
-
-ENHANCD_FILTER="fd -piHL -t d -d 2 | fzf"
-ENHANCD_DISABLE_DOT=1
-# }}}
 
 # ZPLUG {{{
 # let zplug manage zplug
@@ -75,28 +59,14 @@ zplug load
 # }}}
 
 ## Color needs to be set AFTER source-ing
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 # }}}
 
-export N_PREFIX=$HOME/.n
-export PATH=$N_PREFIX/bin:$PATH
-
-# KEYBINDINGS {{{
-bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
-bindkey '^e' edit-command-line  # allows you to edit the current command line in vim
-bindkey -s '^o' 'r\n'           # runs the 'r' command with 'ranger'
-bindkey '^T' fzf-completion
-bindkey '^R' fzf-history-widget
-# }}}
+# source-ing files at the end of the startup process
+for file in "$ZDOTDIR"/**/*.end; do
+    source "$file"
+done
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
-enable-fzf-tab
-
-# FZF-tab stuff
-zstyle ':fzf-tab:complete:cd:*' extra-opts --preview=$extract'exa -1 --color=always $realpath'

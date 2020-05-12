@@ -1,4 +1,8 @@
 #!/usr/local/bin/bash
+
+# These are options that pertain to the overall functionality of the shell.
+# P10K should also be managed here (if anything can be set outside of the .p10k.zsh file)
+
 # POWERLEVEL9/10K {{{
 POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME="powerlevel10k/powerlevel10k"
