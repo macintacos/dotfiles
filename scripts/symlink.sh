@@ -25,20 +25,9 @@ ok "BASH linked."
 # Base ZSH {{{
 ## ZSH Basic Directories
 running "linking ZSH"
-rm -rf "$HOME/.zshrc"
 rm -rf .zshenv
-rm -rf .zlogin
-ln -sF "${DOTFILES_HOME}/.zsh/.zshrc" ~/.zshrc
-ln -sF "${DOTFILES_HOME}/.zsh/.zshenv" ~/.zshenv
-ln -sF "${DOTFILES_HOME}/.zsh/.zlogin" ~/.zlogin
-
-## Aliases and Functions
-rm -rf .zsh/
-mkdir -p .zsh/scripts
-ln -sF "${DOTFILES_HOME}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
-ln -sF "${DOTFILES_HOME}/.zsh/scripts/magit" ~/.zsh/scripts/magit
-ok "ZSH linked."
-# }}}
+ln -sF "${DOTFILES_HOME}/zsh/.zshenv" ~/.zshenv
+ok "ZSH linked"
 
 # SPACEMACS {{{
 running "linking Spacemacs"

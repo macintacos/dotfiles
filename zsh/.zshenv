@@ -1,8 +1,13 @@
 #!/usr/local/bin/bash
 # Setting PATHs
+export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
+export ANT_OPTS="-Xms64m -Xmx1500m"
+export ANT_HOME=/usr/local/apache-ant-1.10.5
 export BAT_THEME="ansi-dark"
 export BOSUN_CONFIG_DIR=$HOME/GitLocal/Work/bosun
 export BOSUN_ENV=julian
+export CHEAT_COLORS=true
+export CHEAT_COLORSCHEME=dark
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 export DROPBOX="$HOME/Dropbox"
 export EDITOR='nvim'
