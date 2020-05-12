@@ -5,6 +5,7 @@ function! myspacevim#after() abort
   set confirm     " instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files
   set cmdheight=2 " give more space for displaying messages
   set hidden
+  set encoding=UTF-8
   set hlsearch    " highlight searces (use <C-L> to temporarily turn off highliting)
   set ignorecase  " setting case-insensitive search
   set laststatus  " always display the status line, even if only one window is displayed
@@ -22,6 +23,7 @@ function! myspacevim#after() abort
   set updatetime=300
   set wildmenu    " better command-line completion
   set wrap
+  syntax on
   " "REGULAR" SETTINGS END }}}
 
   " FILE-SPECIFIC SETTINGS {{{
@@ -80,7 +82,7 @@ function! myspacevim#after() abort
     \ 'stdin': 1
     \ }
   let g:neoformat_enabled_python = ['black']
-  " }}}
+  " LAYER-SPECIFIC END }}}
   
   " COC.NVIM CONFIGURATION {{{
   " Use K to show documentation in preview window
@@ -98,6 +100,22 @@ function! myspacevim#after() abort
   autocmd CursorHold * silent call CocActionAsync('highlight')
 
   " COC.NVIM CONFIGURATION END }}}
+
+  " DEFX CONFIG {{{
+  let g:defx_icons_enable_syntax_highlight = 1
+  let g:defx_icons_column_length = 2
+  let g:defx_icons_directory_icon = ''
+  let g:defx_icons_mark_icon = '*'
+  let g:defx_icons_copy_icon = ''
+  let g:defx_icons_move_icon = ''
+  let g:defx_icons_parent_icon = ''
+  let g:defx_icons_default_icon = ''
+  let g:defx_icons_directory_symlink_icon = ''
+  " Options below are applicable only when using "tree" feature
+  let g:defx_icons_root_opened_tree_icon = ''
+  let g:defx_icons_nested_opened_tree_icon = ''
+  let g:defx_icons_nested_closed_tree_icon = ''
+  " DEFX CONFIG END }}}
 endfunction
 
 function! myspacevim#before() abort
