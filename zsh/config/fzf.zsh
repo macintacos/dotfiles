@@ -26,5 +26,12 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 export FZFZ_RECENT_DIRS_TOOL='z'
 # }}}
 
-# FZF-TAB {{{
+# FORGIT {{{
+FORGIT_FZF_DEFAULT_OPTS="
+--exact
+--border
+--cycle
+--reverse
+--height '80%'
+"
 # }}}

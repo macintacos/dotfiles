@@ -8,3 +8,4 @@ npm/npm-backup-current.txt.*
 /zsh/.zshenv.zwc*
 /zsh/.zshrc.zwc*
 /zsh/.zcompdump*
+/zsh/.zinit/
