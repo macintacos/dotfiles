@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export ZDOTDIR="$HOME/GitLocal/Play/dotfiles/.zsh"
+export ZDOTDIR="$HOME/GitLocal/Play/dotfiles/zsh"
