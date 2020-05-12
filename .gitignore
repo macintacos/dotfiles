@@ -5,8 +5,6 @@
 !.vscode/extensions.json
 npm/npm-backup-current.txt.*
 
-zsh/.zcompdump
-zsh/.zcompdump.zwc
-zsh/.zshenv.zwc
-zsh/.zshrc.zwc
-/zsh/.zcompdump
+/zsh/.zshenv.zwc*
+/zsh/.zshrc.zwc*
+/zsh/.zcompdump*

@@ -13,9 +13,6 @@
 # }}}
 
 # SOURCE-ING {{{
-## 'source'-ing oh-my-zsh.sh, so that things can work properly afterwards.
-# shellcheck source=/usr/local/opt/zplug
-source "$ZPLUG_HOME/init.zsh"
 
 ## source everything in this directory that isn't tied down
 for file in "$ZDOTDIR"/**/*.zsh; do
@@ -23,8 +20,6 @@ for file in "$ZDOTDIR"/**/*.zsh; do
 done
 
 [[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
-
-export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # sourcing iterm integration
 source ~/.iterm2_shell_integration.zsh
