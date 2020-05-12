@@ -75,3 +75,26 @@ Benchmark #1: zsh -i -c exit
 ```
 
 A savings of about 0.8 seconds at startup; that's pretty great! I've since added _more_ plugins to `zinit` and the startup time has barely gone up. I'm really happy with these results!
+
+## UPDATE - May 12, 2020 (12:48 EDT)
+
+I realized that I was still loading `zplug` when performing my test runs on `zinit` since I had extracted its instantiation to another file that I had forgotten about; once I removed that, I lopped off an addition 0.2 seconds on my shell start time:
+
+```bash
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     834.1 ms ±  24.9 ms    [User: 448.7 ms, System: 389.2 ms]
+  Range (min … max):   805.7 ms … 884.0 ms    10 runs
+
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     813.0 ms ±  12.5 ms    [User: 442.7 ms, System: 378.2 ms]
+  Range (min … max):   786.2 ms … 827.4 ms    10 runs
+
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     844.0 ms ±   7.7 ms    [User: 456.5 ms, System: 395.1 ms]
+  Range (min … max):   830.5 ms … 851.7 ms    10 runs
+```
+
+Total savings: roughly 1 second on startup. This benchmark was _after_ I had already installed additional plugins. Neat!
