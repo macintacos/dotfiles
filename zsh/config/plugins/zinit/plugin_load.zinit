@@ -1,0 +1,46 @@
+#!/usr/local/bin/bash
+
+# This is for plugin configuration for zinit
+
+# zinit configuration {{{
+## "basic" installations
+zinit for \
+  light-mode JamesKovacs/zsh_completions_mongodb \
+  djui/alias-tips \
+  jackwish/bazel \
+  zsh-users/zsh-completions \
+  Aloxaf/fzf-tab \
+  hschne/fzf-git \
+  andrewferrier/fzf-z \
+  laurenkt/zsh-vimto \
+  ael-code/zsh-colored-man-pages \
+  b4b4r07/enhancd \
+  agkozak/zsh-z \
+  zdharma/fast-syntax-highlighting \
+  zsh-users/zsh-autosuggestions
+
+## Slightly more complicated installations
+zinit ice wait lucid
+zinit light hlissner/zsh-autopair
+
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
+zinit ice pick"h.sh"
+zinit light paoloantinori/hhighlighter
+
+zinit ice wait lucid
+zinit load 'wfxr/forgit'
+
+## oh-my-zsh plugins
+zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh'
+zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh'
+zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh'
+
+## programs
+zinit ice as"program" pick"yank" make
+zinit light mptre/yank
+
+zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" nocompile
+zinit light tj/git-extras
+# }}}
