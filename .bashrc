@@ -1,7 +1,3 @@
-[ -s "/Users/juliant/.jabba/jabba.sh" ] && source "/Users/juliant/.jabba/jabba.sh"
+#!/bin/bash
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-alias rm='rm -i'
-
-complete -C /usr/local/bin/terraform terraform
+export ZDOTDIR="$HOME/GitLocal/Play/dotfiles/.zsh"

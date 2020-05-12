@@ -34,11 +34,7 @@ ln -sF "${DOTFILES_HOME}/.zsh/.zlogin" ~/.zlogin
 
 ## Aliases and Functions
 rm -rf .zsh/
-rm -f .p10k.zsh
 mkdir -p .zsh/scripts
-ln -sF "${DOTFILES_HOME}/.zsh/.p10k.zsh" ~/.p10k.zsh
-ln -sF "${DOTFILES_HOME}/.zsh/aliases.zsh" ~/.zsh/aliases.zsh
-ln -sF "${DOTFILES_HOME}/.zsh/functions.zsh" ~/.zsh/functions.zsh
 ln -sF "${DOTFILES_HOME}/.zsh/scripts/git-clean-local" ~/.zsh/scripts/git-clean-local
 ln -sF "${DOTFILES_HOME}/.zsh/scripts/magit" ~/.zsh/scripts/magit
 ok "ZSH linked."

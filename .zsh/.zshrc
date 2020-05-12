@@ -58,11 +58,14 @@ export CHEAT_COLORSCHEME=dark
 # shellcheck source=/usr/local/opt/zplug
 source "$ZPLUG_HOME/init.zsh"
 
-## sourcing external files
-source "$DOTFILES_HOME/.zsh/aliases.zsh"
-source "$DOTFILES_HOME/.zsh/functions.zsh"         # functions
-source "$DOTFILES_HOME/.zsh/scripts/functions.zsh" # sc
-export PATH="/usr/local/sbin:$PATH"                # Because brew doctor complains
+## source everything in this directory that isn't tied down
+for file in "$ZDOTDIR"/**/*.zsh; do
+    source "$file"
+done
+
+[[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
+
+export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 
 # sourcing iterm integration
 source ~/.iterm2_shell_integration.zsh
@@ -72,25 +75,6 @@ export TERM=xterm-256color
 
 ENHANCD_FILTER="fd -piHL -t d -d 2 | fzf"
 ENHANCD_DISABLE_DOT=1
-# }}}
-
-# INITIALIZING FZF {{{
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_DEFAULT_OPTS="
---height 40%
---reverse
---border
---preview '(bat --style=numbers --color=always {} || exa --tree --git --icons {}) 2> /dev/null | head -200'
---color=dark
---color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
---color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
---bind tab:down
---cycle
-"
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-export FZFZ_RECENT_DIRS_TOOL='z'
 # }}}
 
 # ZPLUG {{{
@@ -142,9 +126,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 
 export N_PREFIX=$HOME/.n
 export PATH=$N_PREFIX/bin:$PATH
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f "$DOTFILES_HOME/.zsh/.p10k.zsh" ]] && source "$DOTFILES_HOME/.zsh/.p10k.zsh"
 
 # KEYBINDINGS {{{
 bindkey '^ ' autosuggest-accept # Binding `CTRL+SPACE` to auto-accept suggestions
