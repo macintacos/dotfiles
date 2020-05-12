@@ -88,21 +88,6 @@ alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 # }}}
 
-# MONITORING {{{
-#   memHogsTop, memHogsPs:  find memory hogs
-#   -----------------------------------------------------
-alias memHogsTop='top -l 1 -o rsize | head -20'
-alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
-
-#   cpuHogs:  find CPU hogs
-#   -----------------------------------------------------
-alias cpuhogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
-
-#   topForever:  Continual 'top' listing (every 10 seconds)
-#   -----------------------------------------------------
-alias topForever='top -l 9999999 -s 10 -o cpu'
-# }}}
-
 # FIND ALIASES {{{
 alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
