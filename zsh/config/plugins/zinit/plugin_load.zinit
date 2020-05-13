@@ -4,18 +4,20 @@
 
 # zinit configuration {{{
 ## "basic" installations
-zinit for \
-  light-mode JamesKovacs/zsh_completions_mongodb \
+zinit wait light-mode for \
+  JamesKovacs/zsh_completions_mongodb \
   djui/alias-tips \
   jackwish/bazel \
+  ael-code/zsh-colored-man-pages \
+  b4b4r07/enhancd \
+  agkozak/zsh-z
+
+zinit light-mode for \
   zsh-users/zsh-completions \
   Aloxaf/fzf-tab \
   hschne/fzf-git \
   andrewferrier/fzf-z \
   laurenkt/zsh-vimto \
-  ael-code/zsh-colored-man-pages \
-  b4b4r07/enhancd \
-  agkozak/zsh-z \
   zdharma/fast-syntax-highlighting \
   zsh-users/zsh-autosuggestions
 
