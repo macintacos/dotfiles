@@ -33,9 +33,10 @@ zinit ice wait lucid
 zinit load 'wfxr/forgit'
 
 ## oh-my-zsh plugins
-zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh'
-zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh'
-zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh'
+zinit wait lucid is-snippet for \
+  'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh' \
+  'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh' \
+  'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh'
 
 ## programs
 zinit ice as"program" pick"yank" make
