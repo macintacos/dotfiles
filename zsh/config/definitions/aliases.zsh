@@ -92,6 +92,7 @@ alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
 
+# Making git a function to get around completion issues: https://github.com/tj/git-extras/issues/797
 git() {
   hub $*
 }
