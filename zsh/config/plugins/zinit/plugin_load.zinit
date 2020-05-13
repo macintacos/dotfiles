@@ -4,22 +4,38 @@
 
 # zinit configuration {{{
 ## "basic" installations
-zinit ice wait lucid light-mode for \
-  JamesKovacs/zsh_completions_mongodb \
-  djui/alias-tips \
-  jackwish/bazel \
-  ael-code/zsh-colored-man-pages \
-  b4b4r07/enhancd \
-  agkozak/zsh-z
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-autosuggestions
 
-zinit light-mode for \
-  zsh-users/zsh-completions \
-  zsh-users/zsh-autosuggestions \
-  Aloxaf/fzf-tab \
-  hschne/fzf-git \
-  andrewferrier/fzf-z \
-  zdharma/fast-syntax-highlighting \
-  laurenkt/zsh-vimto
+zinit ice wait lucid
+zinit light JamesKovacs/zsh_completions_mongodb
+
+zinit ice wait lucid
+zinit light djui/alias-tips
+
+zinit ice wait lucid
+zinit light jackwish/bazel
+
+zinit ice wait lucid
+zinit light ael-code/zsh-colored-man-pages
+
+zinit ice wait lucid
+zinit light b4b4r07/enhancd
+
+zinit ice wait lucid
+zinit light agkozak/zsh-z
+
+zinit ice wait lucid
+zinit light zsh-users/zsh-completions
+
+zinit ice wait lucid
+zinit light hschne/fzf-git
+
+zinit ice wait lucid
+zinit light andrewferrier/fzf-z
+
+zinit ice wait lucid
+zinit light zdharma/fast-syntax-highlighting
 
 ## Slightly more complicated installations
 zinit ice wait lucid
@@ -28,11 +44,11 @@ zinit light hlissner/zsh-autopair
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
-zinit ice pick"h.sh"
+zinit ice wait lucid pick"h.sh"
 zinit light paoloantinori/hhighlighter
 
 zinit ice wait lucid
-zinit load 'wfxr/forgit'
+zinit light wfxr/forgit
 
 ## oh-my-zsh plugins
 zinit wait lucid is-snippet for \
@@ -40,10 +56,11 @@ zinit wait lucid is-snippet for \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh' \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh'
 
+zinit ice wait lucid as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX"
+zinit light tj/git-extras
+
 ## programs
 zinit ice as"program" pick"yank" make
 zinit light mptre/yank
 
-zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" nocompile
-zinit light tj/git-extras
 # }}}

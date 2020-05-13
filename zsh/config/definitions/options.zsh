@@ -20,6 +20,9 @@ BAT_THEME="base16"
 HISTSIZE=100000
 SAVEHIST=100000
 setopt appendhistory
+setopt list_types             # show types in completion
+setopt no_beep                # i hate beeps
+setopt interactive_comments   # escape commands so i can use them later (allow comments after commands)
 setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space.

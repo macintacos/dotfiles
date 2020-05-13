@@ -6,9 +6,6 @@
 # zmodload zsh/zprof
 # }}}
 
-# Definitions
-for file in "$ZDOTDIR"/config/definitions/**/*.zsh; do source "$file"; done
-
 # Zinit Loading
 source "$ZDOTDIR"/config/plugins/zinit/init.zinit
 source "$ZDOTDIR"/config/plugins/zinit/plugin_load.zinit
@@ -19,6 +16,8 @@ for file in "$ZDOTDIR"/config/plugins/other/**/*.zsh; do source "$file"; done
 # Wrap-up
 for file in "$ZDOTDIR"/config/util/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
+for file in "$ZDOTDIR"/config/definitions/**/*.zsh; do source "$file"; done
+
 source "$ZDOTDIR"/config/load_at.end
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{

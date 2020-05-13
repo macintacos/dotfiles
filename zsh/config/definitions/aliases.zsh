@@ -39,7 +39,7 @@ alias kns='kubens'
 # }}}
 
 # GIT ALIASES {{{
-eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
+# eval "$(hub alias -s)"         # hub = git; hub is a superset of git, so everything should work
 alias gst='tig status'         # better way to view git status
 alias gclean='git-clean-local' # cleans out any branches from local that have been deleted on remote
 alias sm="smerge"
@@ -91,3 +91,15 @@ alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 # FIND ALIASES {{{
 alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
+
+git() {
+  hub $*
+}
+
+compdef git="hub"
+
+g() {
+  hub $*
+}
+
+compdef g="hub"
