@@ -6,4 +6,7 @@
 [[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
 
 ## JABBA
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+jabba() {
+  lazyload jabba -- $'[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"'
+  jabba "$@"
+}
