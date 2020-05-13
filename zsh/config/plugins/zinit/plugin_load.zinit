@@ -4,7 +4,7 @@
 
 # zinit configuration {{{
 ## "basic" installations
-zinit wait light-mode for \
+zinit ice wait lucid light-mode for \
   JamesKovacs/zsh_completions_mongodb \
   djui/alias-tips \
   jackwish/bazel \
