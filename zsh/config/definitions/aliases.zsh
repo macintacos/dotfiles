@@ -45,14 +45,6 @@ alias gclean='git-clean-local' # cleans out any branches from local that have be
 alias sm="smerge"
 # }}}
 
-# LS/TREE IMPROVEMENTS (aka -> lsd) {{{
-# alias ls='lsd --group-dirs first'                    # substituting regular ls with exa
-# alias l='ls -l'                                      # preferred use of l
-# alias ll='ls -la --blocks permission,size,date,name' # preferred use of ll
-# alias lr='ls -laR'                                   # recursive preferred use
-# alias tree='ls --tree'
-# }}}
-
 # EXA/TREE IMPROVEMENTS (aka -> exa) {{{
 alias ls='exa -F --group-directories-first --icons'
 alias l='ls -l'
@@ -83,7 +75,7 @@ alias cdddddd='cd ../../../../..' # cd back 5 directories
 # }}}
 
 # VS CODE ALIASES {{{
-alias zshrc='code ~/.zshrc' # Quick access to the ~/.zshrc file
+alias zshrc="code $ZDOTDIR/zshrc" # Quick access to the ~/.zshrc file
 alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 # }}}
