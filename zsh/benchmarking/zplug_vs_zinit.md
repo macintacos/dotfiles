@@ -1,4 +1,13 @@
-# `zplug` vs `zinit`
+# `zplug` vs `zinit` <!-- omit in toc -->
+
+- [`zplug` Benchmarks](#zplug-benchmarks)
+- [`zinit` Benchmarks](#zinit-benchmarks)
+- [UPDATE - May 12, 2020 (12:48 EDT)](#update---may-12-2020-1248-edt)
+- [UPDATE - May 13, 2020 (11:33 EDT)](#update---may-13-2020-1133-edt)
+
+----
+
+**DISCLAIMER:** It's quite possible that I was "doing things wrong" with my previous `zplug` configuration, which may have contributed to why `zinit`'s results below are so drastic. I didn't aim to optimize `zplug`, I aimed to replace it, which definitely could've skewed my results. Take everything shown below with a grain of salt, and do your own testing!
 
 - `zplug` (my current plugin manager): https://github.com/zplug/zplug
 - `zinit` (potential new guy): https://github.com/zdharma/zinit
@@ -98,3 +107,26 @@ Benchmark #1: zsh -i -c exit
 ```
 
 Total savings: roughly 1 second on startup. This benchmark was _after_ I had already installed additional plugins. Neat!
+
+## UPDATE - May 13, 2020 (11:33 EDT)
+
+After delaying loading of all plugins until _after_ the shell has loaded (essentially using "Turbo Mode" as it's called in `zinit`) I was able to get my shell startup time down to an absolutely  g  l  o  r  i  o  u  s startup time of roughly 150ms:
+
+```bash
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     147.7 ms ±   3.3 ms    [User: 94.2 ms, System: 47.7 ms]
+  Range (min … max):   141.7 ms … 155.2 ms    19 runs
+
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     152.2 ms ±   5.0 ms    [User: 96.1 ms, System: 50.2 ms]
+  Range (min … max):   147.1 ms … 166.8 ms    19 runs
+
+$ hyperfine --warmup 3 'zsh -i -c exit'
+Benchmark #1: zsh -i -c exit
+  Time (mean ± σ):     148.1 ms ±   2.0 ms    [User: 94.3 ms, System: 47.8 ms]
+  Range (min … max):   144.7 ms … 153.1 ms    19 runs
+```
+
+I'll still be looking for ways to improve this, but I'm really pleased with how this turned out. from an initial time of 1.8 seconds down to 150ms is quite impressive, and a testament to `zinit`s caching/loading mechanisms!
