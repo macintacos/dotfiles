@@ -14,12 +14,12 @@ zinit ice wait lucid light-mode for \
 
 zinit light-mode for \
   zsh-users/zsh-completions \
+  zsh-users/zsh-autosuggestions \
   Aloxaf/fzf-tab \
   hschne/fzf-git \
   andrewferrier/fzf-z \
-  laurenkt/zsh-vimto \
   zdharma/fast-syntax-highlighting \
-  zsh-users/zsh-autosuggestions
+  laurenkt/zsh-vimto
 
 ## Slightly more complicated installations
 zinit ice wait lucid
