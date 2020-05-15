@@ -23,13 +23,18 @@ export FZF_DEFAULT_OPTS="
 --cycle
 "
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+# }}}
+
+# FZF-Z {{{
 export FZFZ_RECENT_DIRS_TOOL='z'
+export FZFZ_PREVIEW_COMMAND='exa --tree --git --icons {}'
 # }}}
 
 # FORGIT {{{
 FORGIT_FZF_DEFAULT_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 # }}}
 
+# FZF-TAB {{{
 FZF_TAB_COMMAND=(
   fzf
   --ansi                         # Enable ANSI color support, necessary for showing groups<
@@ -42,3 +47,4 @@ FZF_TAB_COMMAND=(
   --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'
 )
 zstyle ':fzf-tab:*' command $FZF_TAB_COMMAND
+# }}}

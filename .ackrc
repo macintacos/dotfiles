@@ -1,13 +1,13 @@
 # ACKRC File
 
 ## Use Color
---color     
+--color
 
 ## Sort Files
 --sort-files
 
 ## Case-insenstively Search
--i          
+-i
 
 # Flush output immediately, even when piped
 --flush
