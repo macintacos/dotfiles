@@ -9,3 +9,4 @@ npm/npm-backup-current.txt.*
 /zsh/.zcompdump*
 /zsh/.zinit/
 /zsh/.zsh_history
+.DS_STORE
