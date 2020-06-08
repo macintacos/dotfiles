@@ -10,50 +10,26 @@ zinit light romkatv/powerlevel10k
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
 
-zinit ice wait lucid
-zinit light JamesKovacs/zsh_completions_mongodb
-
-zinit ice wait lucid
-zinit light djui/alias-tips
-
-zinit ice wait lucid
-zinit light jackwish/bazel
-
-zinit ice wait lucid
-zinit light ael-code/zsh-colored-man-pages
-
-zinit ice wait lucid
-zinit light b4b4r07/enhancd
-
-zinit ice wait lucid
-zinit light agkozak/zsh-z
-
-zinit ice wait lucid
-zinit light zsh-users/zsh-completions
-
-zinit ice wait lucid
-zinit light hschne/fzf-git
-
-zinit ice wait lucid
-zinit light andrewferrier/fzf-z
-
-zinit ice wait lucid
-zinit light zdharma/fast-syntax-highlighting
-
-zinit ice wait lucid
-zinit light hlissner/zsh-autopair
-
-zinit ice wait lucid pick"h.sh"
-zinit light paoloantinori/hhighlighter
-
-zinit ice wait lucid
-zinit light wfxr/forgit
-
-zinit ice wait lucid
-zinit light qoomon/zsh-lazyload
+zinit wait lucid light-mode for \
+  JamesKovacs/zsh_completions_mongodb \
+  ael-code/zsh-colored-man-pages \
+  agkozak/zsh-z \
+  andrewferrier/fzf-z \
+  b4b4r07/enhancd \
+  djui/alias-tips \
+  hlissner/zsh-autopair \
+  hschne/fzf-git \
+  jackwish/bazel \
+  micha/resty \
+  paoloantinori/hhighlighter \
+  qoomon/zsh-lazyload \
+  wfxr/forgit \
+  wfxr/forgit \
+  zdharma/fast-syntax-highlighting \
+  zsh-users/zsh-completions
 
 ## oh-my-zsh plugins
-zinit wait lucid is-snippet for \
+zinit is-snippet for \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh' \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh' \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh'

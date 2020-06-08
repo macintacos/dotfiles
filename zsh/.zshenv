@@ -1,6 +1,9 @@
 #!/usr/local/bin/bash
 # Setting PATHs
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
+export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
+export ZDOTDIR="$DOTFILES_HOME/zsh"
+
 export ANT_OPTS="-Xms64m -Xmx1500m"
 export ANT_HOME=/usr/local/apache-ant-1.10.5
 export BAT_THEME="ansi-dark"
@@ -8,7 +11,6 @@ export BOSUN_CONFIG_DIR=$HOME/GitLocal/Work/bosun
 export BOSUN_ENV=julian
 export CHEAT_COLORS=true
 export CHEAT_COLORSCHEME=dark
-export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 export DROPBOX="$HOME/Dropbox"
 export EDITOR='nvim'
 export GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
@@ -39,7 +41,5 @@ export SSH_KEY_PATH=~/.ssh/rsa_id
 export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export ZDOTDIR="$DOTFILES_HOME/zsh"
-export ZPLUG_HOME=/usr/local/opt/zplug
 
 export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$EMACSPATHVAR:$GNUBIN:$GNUBIN:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$SPACEVIMBIN:$VSCODE:$ZPLUG_HOME:$PATH"
