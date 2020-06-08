@@ -79,9 +79,9 @@ values."
      shell-scripts
      spacemacs-modeline
      (syntax-checking :variables syntax-checking-enable-by-default t)
-     (treemacs :variables
-               treemacs-git-mode 'deferred
-               treemacs-resize-icons 15)
+    ;;  (treemacs :variables
+    ;;            treemacs-git-mode 'deferred
+    ;;            treemacs-resize-icons 15)
      (typescript :variables
                  typescript-backend 'lsp
                  typescript-fmt-on-save t
@@ -110,9 +110,9 @@ values."
      doom-themes
      flycheck-posframe
      rust-playground
-     treemacs-evil
-     treemacs-icons-dired
-     treemacs-magit
+    ;;  treemacs-evil
+    ;;  treemacs-icons-dired
+    ;;  treemacs-magit
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -190,10 +190,10 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack Nerd Font"
-                               :size 15 
+   dotspacemacs-default-font '("JetBrainsMono Nerd Font"
+                               :size 14
                                :weight normal
-                               :width expanded 
+                               :width expanded
                                :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
@@ -377,25 +377,29 @@ you should place your code here."
   (add-hook 'web-mode-hook #'prettier-js-mode)
   
   ;; treemacs config
-  (with-eval-after-load 'treemacs
-    ;; Fonts
-    (set-face-attribute 'treemacs-directory-face nil :family "Inter")
-    (set-face-attribute 'treemacs-file-face nil :family "Inter")
-    (set-face-attribute 'treemacs-root-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-unmodified-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-modified-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-renamed-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-ignored-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-untracked-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-added-face nil :family "Inter")
-    (set-face-attribute 'treemacs-git-conflict-face nil :family "Inter")
+  ;; (with-eval-after-load 'treemacs
+  ;;   ;; Fonts
+  ;;   (set-face-attribute 'treemacs-directory-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-file-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-root-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-unmodified-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-modified-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-renamed-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-ignored-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-untracked-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-added-face nil :family "Inter")
+  ;;   (set-face-attribute 'treemacs-git-conflict-face nil :family "Inter")
 
-    ;; Remaps
-    (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
-    (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-TAB-action)
-    (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
-    (define-key evil-normal-state-map (kbd "SPC p s") #'treemacs-switch-workspace)
-  )
+  ;;   ;; Remaps
+  ;;   (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
+  ;;   (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-TAB-action)
+  ;;   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
+  ;;   (define-key evil-normal-state-map (kbd "SPC p s") #'treemacs-switch-workspace)
+  ;; )
+
+  ;; Titlebar Shenanigans
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
   ;; lsp-mode/lsp-ui stuff
   ;; (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -437,7 +441,7 @@ This function is called at the very end of Spacemacs initialization."
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(treemacs-icons-dired company-quickhelp ht pfuture multiple-cursors smeargle orgit mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy evil-magit magit transient git-commit with-editor diff-hl company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
+   '(company-quickhelp ht pfuture multiple-cursors smeargle orgit mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy evil-magit magit transient git-commit with-editor diff-hl company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -445,3 +449,16 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(yasnippet which-key undo-tree org-plus-contrib mmm-mode json-mode js2-mode hydra expand-region evil-unimpaired f s dash diff-hl company-statistics company coffee-mode async aggressive-indent adaptive-wrap ace-window avy doom-dracula-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

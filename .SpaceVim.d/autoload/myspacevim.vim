@@ -3,11 +3,11 @@ function! myspacevim#after() abort
   filetype plugin on
   set clipboard+=unnamedplus
   set confirm     " instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files
-  set cmdheight=2 " give more space for displaying messages
   set hidden
   set encoding=UTF-8
   set hlsearch    " highlight searces (use <C-L> to temporarily turn off highliting)
   set ignorecase  " setting case-insensitive search
+
   set laststatus  " always display the status line, even if only one window is displayed
   set linebreak
   set nobackup
@@ -83,23 +83,6 @@ function! myspacevim#after() abort
     \ }
   let g:neoformat_enabled_python = ['black']
   " LAYER-SPECIFIC END }}}
-  
-  " COC.NVIM CONFIGURATION {{{
-  " Use K to show documentation in preview window
-  nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    else
-      call CocAction('doHover')
-    endif
-  endfunction
-  
-  " Highlight the symbol and its references when holding the cursor.
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-
-  " COC.NVIM CONFIGURATION END }}}
 
   " DEFX CONFIG {{{
   let g:defx_icons_enable_syntax_highlight = 1

@@ -8,13 +8,11 @@
 
 # All SpaceVim option below [option] section
 [options]
-  autocomplete_method = "coc"
   bootsrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
   buffer_index_type = 4
   enable_googlesuggest = 1
   enable_tabline_ft_icon = true
-  filemanager = "defx"
   filetree_direction = "left"
 
   # THEMING {{{
@@ -51,11 +49,6 @@ auto-completion-tab-key-behavior = "cycle"
 name = "shell"
 default_position = "bottom"
 default_height = 30
-
-[[layers]]
-name = "ctrlspace"
-enable-spacevim-styled-keys = true
-autoload-workspaces = true
 
 [[layers]]
 name = "format"
@@ -139,12 +132,6 @@ merged = 0
 name = "reedes/vim-lexical"
 merged = 0
 [[custom_plugins]]
-name = "ryanoasis/vim-devicons"
-merged = 0
-[[custom_plugins]]
-name = "kristijanhusak/defx-icons"
-merged = 0
-[[custom_plugins]]
 name = "tpope/vim-commentary"
 merged = 0
 [[custom_plugins]]
@@ -152,4 +139,10 @@ name = "tpope/vim-surround"
 merged = 0
 [[custom_plugins]]
 name = "vimwiki/vimwiki"
+merged = 0
+[[custom_plugins]]
+name = "itchyny/vim-cursorword"
+merged = 0
+[[custom_plugins]]
+name = "ryanoasis/vim-devicons"
 merged = 0
