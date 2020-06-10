@@ -1,0 +1,3534 @@
+#compdef mongocli
+
+
+function _mongocli {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "config:Configure a profile. This let you store access settings to your cloud."
+      "atlas:Atlas operations."
+      "cloud-manager:Cloud Manager operations."
+      "ops-manager:Ops Manager operations."
+      "iam:Organization and projects operations."
+      "help:Help about any command"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  config)
+    _mongocli_config
+    ;;
+  atlas)
+    _mongocli_atlas
+    ;;
+  cloud-manager)
+    _mongocli_cloud-manager
+    ;;
+  ops-manager)
+    _mongocli_ops-manager
+    ;;
+  iam)
+    _mongocli_iam
+    ;;
+  help)
+    _mongocli_help
+    ;;
+  esac
+}
+
+
+function _mongocli_config {
+  local -a commands
+
+  _arguments -C \
+    '--service[Type of MongoDB service.
+Valid values: cloud|cloud-manager|ops-manager]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "set:Configure specific properties of the profile."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  set)
+    _mongocli_config_set
+    ;;
+  esac
+}
+
+function _mongocli_config_set {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("project_id" "org_id" "service" "public_api_key" "private_api_key" "ops_manager_url" "base_url")'
+}
+
+
+function _mongocli_atlas {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "clusters:Manage clusters for your project."
+      "dbusers:Manage database users for your project."
+      "whitelist:Manage the IP whitelist for a project."
+      "alerts:Manage alerts for your project."
+      "backups:Manage backups for your project."
+      "events:Manage events for your project."
+      "metrics:Get measurements on the state of the MongoDB process."
+      "logs:Download host logs for your project."
+      "processes:Manage MongoDB processes for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  clusters)
+    _mongocli_atlas_clusters
+    ;;
+  dbusers)
+    _mongocli_atlas_dbusers
+    ;;
+  whitelist)
+    _mongocli_atlas_whitelist
+    ;;
+  alerts)
+    _mongocli_atlas_alerts
+    ;;
+  backups)
+    _mongocli_atlas_backups
+    ;;
+  events)
+    _mongocli_atlas_events
+    ;;
+  metrics)
+    _mongocli_atlas_metrics
+    ;;
+  logs)
+    _mongocli_atlas_logs
+    ;;
+  processes)
+    _mongocli_atlas_processes
+    ;;
+  esac
+}
+
+
+function _mongocli_atlas_clusters {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List clusters for your project."
+      "describe:Describe a cluster."
+      "create:Create a MongoDB cluster."
+      "watch:Watch for a cluster to be available."
+      "update:Update a MongoDB cluster."
+      "pause:Pause a running MongoDB cluster in Atlas."
+      "start:Start a paused MongoDB cluster in Atlas."
+      "delete:Delete a cluster from your project."
+      "indexes:Manage cluster rolling indexes for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_clusters_list
+    ;;
+  describe)
+    _mongocli_atlas_clusters_describe
+    ;;
+  create)
+    _mongocli_atlas_clusters_create
+    ;;
+  watch)
+    _mongocli_atlas_clusters_watch
+    ;;
+  update)
+    _mongocli_atlas_clusters_update
+    ;;
+  pause)
+    _mongocli_atlas_clusters_pause
+    ;;
+  start)
+    _mongocli_atlas_clusters_start
+    ;;
+  delete)
+    _mongocli_atlas_clusters_delete
+    ;;
+  indexes)
+    _mongocli_atlas_clusters_indexes
+    ;;
+  esac
+}
+
+function _mongocli_atlas_clusters_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_create {
+  _arguments \
+    '--backup[If true, enables Continuous Cloud Backup for your cluster.]' \
+    '--diskSizeGB[Capacity, in gigabytes, of the host’s root volume.]:' \
+    '(-f --file)'{-f,--file}'[Filename to use, optional file with a json cluster configuration.]:' \
+    '--mdbVersion[MongoDB version of the cluster to deploy.]:' \
+    '(-m --members)'{-m,--members}'[Number of members in the replica set.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--provider[Name of your cloud service provider.
+Valid values: AWS|AZURE|GCP.]:' \
+    '(-r --region)'{-r,--region}'[Physical location of your MongoDB cluster.
+For a complete list of supported AWS regions, see: https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws
+For a complete list of supported Azure regions, see: https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure
+For a complete list of supported GCP regions, see: https://docs.atlas.mongodb.com/reference/google-gcp/#google-gcp]:' \
+    '--tier[Tier for each data-bearing server in the cluster.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_watch {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_update {
+  _arguments \
+    '--diskSizeGB[Capacity, in gigabytes, of the host’s root volume.]:' \
+    '(-f --file)'{-f,--file}'[Filename to use, optional file with a json cluster configuration.]:' \
+    '--mdbVersion[MongoDB version of the cluster to deploy.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--tier[Tier for each data-bearing server in the cluster.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_pause {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_start {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_clusters_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_clusters_indexes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create a rolling index for your MongoDB cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_atlas_clusters_indexes_create
+    ;;
+  esac
+}
+
+function _mongocli_atlas_clusters_indexes_create {
+  _arguments \
+    '--clusterName[Name of the cluster.]:' \
+    '--collection[Collection name.]:' \
+    '--db[Database name.]:' \
+    '*--key[Index keys. Should be formatted as field:type.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--sparse[Create a sparse index.]' \
+    '--unique[Create a unique key index.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_dbusers {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List Atlas database users for a project."
+      "create:Create a database user for a project."
+      "delete:Delete a database user for a project."
+      "update:Update a MongoDB dbuser in Atlas."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_dbusers_list
+    ;;
+  create)
+    _mongocli_atlas_dbusers_create
+    ;;
+  delete)
+    _mongocli_atlas_dbusers_delete
+    ;;
+  update)
+    _mongocli_atlas_dbusers_update
+    ;;
+  esac
+}
+
+function _mongocli_atlas_dbusers_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_dbusers_create {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '(-p --password)'{-p,--password}'[User’s password.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--role[User'\''s roles and the databases or collections on which the roles apply.]:' \
+    '(-u --username)'{-u,--username}'[Username for authenticating to MongoDB.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("atlasAdmin" "readWriteAnyDatabase" "readAnyDatabase" "clusterMonitor" "backup" "dbAdminAnyDatabase" "enableSharding")'
+}
+
+function _mongocli_atlas_dbusers_delete {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_dbusers_update {
+  _arguments \
+    '(-p --password)'{-p,--password}'[User’s password.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--role[User'\''s roles and the databases or collections on which the roles apply.]:' \
+    '(-u --username)'{-u,--username}'[Username for authenticating to MongoDB.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_whitelist {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "describe:Describe an Atlas whitelist."
+      "list:List Atlas whitelist for a project."
+      "create:Create an IP whitelist for a project."
+      "delete:Delete a database user for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  describe)
+    _mongocli_atlas_whitelist_describe
+    ;;
+  list)
+    _mongocli_atlas_whitelist_list
+    ;;
+  create)
+    _mongocli_atlas_whitelist_create
+    ;;
+  delete)
+    _mongocli_atlas_whitelist_delete
+    ;;
+  esac
+}
+
+function _mongocli_atlas_whitelist_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_whitelist_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_whitelist_create {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--type[Type of whitelist entry.
+Valid values: cidrBlock|ipAddress]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_whitelist_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_alerts {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "settings:Manage alerts configuration for your project."
+      "describe:Describe an alert for a project."
+      "list:List alerts for a project."
+      "acknowledge:Acknowledge an alert for your project."
+      "unacknowledge:Unacknowledge an alert for your project."
+      "global:Manage Ops Manager global properties."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  settings)
+    _mongocli_atlas_alerts_settings
+    ;;
+  describe)
+    _mongocli_atlas_alerts_describe
+    ;;
+  list)
+    _mongocli_atlas_alerts_list
+    ;;
+  acknowledge)
+    _mongocli_atlas_alerts_acknowledge
+    ;;
+  unacknowledge)
+    _mongocli_atlas_alerts_unacknowledge
+    ;;
+  global)
+    _mongocli_atlas_alerts_global
+    ;;
+  esac
+}
+
+
+function _mongocli_atlas_alerts_settings {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create an alert configuration for your project."
+      "list:List alert configurations for a project."
+      "delete:Delete an alert configuration from your project."
+      "fields:Manage alert configuration fields for your project."
+      "update:Update an alert configuration for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_atlas_alerts_settings_create
+    ;;
+  list)
+    _mongocli_atlas_alerts_settings_list
+    ;;
+  delete)
+    _mongocli_atlas_alerts_settings_delete
+    ;;
+  fields)
+    _mongocli_atlas_alerts_settings_fields
+    ;;
+  update)
+    _mongocli_atlas_alerts_settings_update
+    ;;
+  esac
+}
+
+function _mongocli_atlas_alerts_settings_create {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_settings_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_settings_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_alerts_settings_fields {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "type:List alert configurations available field types."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  type)
+    _mongocli_atlas_alerts_settings_fields_type
+    ;;
+  esac
+}
+
+function _mongocli_atlas_alerts_settings_fields_type {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_settings_update {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_acknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '(-F --forever)'{-F,--forever}'[Acknowledge an alert “forever”.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--until[Acknowledged until a date.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_alerts_unacknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_alerts_global {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List global alerts."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_alerts_global_list
+    ;;
+  esac
+}
+
+function _mongocli_atlas_alerts_global_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_backups {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "snapshots:Manage backup snapshots for your project."
+      "restores:Manage restore jobs for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  snapshots)
+    _mongocli_atlas_backups_snapshots
+    ;;
+  restores)
+    _mongocli_atlas_backups_restores
+    ;;
+  esac
+}
+
+
+function _mongocli_atlas_backups_snapshots {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List snapshots for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_backups_snapshots_list
+    ;;
+  esac
+}
+
+function _mongocli_atlas_backups_snapshots_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_backups_restores {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:Lists restore jobs for a project and cluster."
+      "start:Start a restore job for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_backups_restores_list
+    ;;
+  start)
+    _mongocli_atlas_backups_restores_start
+    ;;
+  esac
+}
+
+function _mongocli_atlas_backups_restores_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_backups_restores_start {
+  _arguments \
+    '--clusterName[Name of the cluster.]:' \
+    '--oplogInc[32-bit incrementing ordinal that represents operations within a given second. 
+When paired with oplogTs, they represent the point in time to which your data will be restored.]:' \
+    '--oplogTs[Oplog timestamp given as a timestamp in the number of seconds that have elapsed since the UNIX epoch. 
+When paired with oplogInc, they represent the point in time to which your data will be restored.]:' \
+    '--pointInTimeUTCMillis[Timestamp in the number of milliseconds that have elapsed since the UNIX epoch that represents the point in time to which your data will be restored.
+This timestamp must be within last 24 hours of the current time.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--snapshotId[Unique identifier of the snapshot to restore.]:' \
+    '--targetClusterName[Name of the target cluster.
+For use only with automated restore jobs.]:' \
+    '--targetProjectId[Unique identifier of the project that contains the destination cluster for the restore job.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("automated" "download" "pointInTime")'
+}
+
+
+function _mongocli_atlas_events {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List events for an organization or project"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_events_list
+    ;;
+  esac
+}
+
+function _mongocli_atlas_events_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--maxDate[Returns events whose created date is less than or equal to it.]:' \
+    '--minDate[Returns events whose created date is greater than or equal to it.]:' \
+    '--orgId[Organization ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--type[Type of event that will trigger an alert.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_metrics {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "processes:Get measurements for a given host."
+      "disks:List available disks or disks measurements for a given host."
+      "databases:List available databases or databases measurements for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  processes)
+    _mongocli_atlas_metrics_processes
+    ;;
+  disks)
+    _mongocli_atlas_metrics_disks
+    ;;
+  databases)
+    _mongocli_atlas_metrics_databases
+    ;;
+  esac
+}
+
+function _mongocli_atlas_metrics_processes {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_metrics_disks {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available disks for a given host."
+      "describe:Describe disks measurements for a given host partition."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_metrics_disks_list
+    ;;
+  describe)
+    _mongocli_atlas_metrics_disks_describe
+    ;;
+  esac
+}
+
+function _mongocli_atlas_metrics_disks_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_atlas_metrics_disks_describe {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_metrics_databases {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available databases for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_metrics_databases_list
+    ;;
+  esac
+}
+
+function _mongocli_atlas_metrics_databases_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_logs {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "download:Download a host mongodb logs."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  download)
+    _mongocli_atlas_logs_download
+    ;;
+  esac
+}
+
+function _mongocli_atlas_logs_download {
+  _arguments \
+    '--end[End of the period for which to retrieve logs.]:' \
+    '(-o --out)'{-o,--out}'[Optional output filename, if none given will use the log name.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve logs.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_atlas_processes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List MongoDB processes for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_atlas_processes_list
+    ;;
+  esac
+}
+
+function _mongocli_atlas_processes_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "clusters:Manage clusters for your project."
+      "alerts:Manage alerts for your project."
+      "backups:Manage backups for your project."
+      "servers:Manage Ops Manager servers."
+      "automation:Manage Ops Manager automation config."
+      "security:Manage clusters security configuration."
+      "dbusers:Manage database users for your project."
+      "events:Manage events for your project."
+      "processes:Manage MongoDB processes for your project."
+      "metrics:Get measurements on the state of the MongoDB process."
+      "logs:Manage log collection jobs."
+      "agents:Manage Ops Manager agents."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  clusters)
+    _mongocli_cloud-manager_clusters
+    ;;
+  alerts)
+    _mongocli_cloud-manager_alerts
+    ;;
+  backups)
+    _mongocli_cloud-manager_backups
+    ;;
+  servers)
+    _mongocli_cloud-manager_servers
+    ;;
+  automation)
+    _mongocli_cloud-manager_automation
+    ;;
+  security)
+    _mongocli_cloud-manager_security
+    ;;
+  dbusers)
+    _mongocli_cloud-manager_dbusers
+    ;;
+  events)
+    _mongocli_cloud-manager_events
+    ;;
+  processes)
+    _mongocli_cloud-manager_processes
+    ;;
+  metrics)
+    _mongocli_cloud-manager_metrics
+    ;;
+  logs)
+    _mongocli_cloud-manager_logs
+    ;;
+  agents)
+    _mongocli_cloud-manager_agents
+    ;;
+  esac
+}
+
+
+function _mongocli_cloud-manager_clusters {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List clusters for your project."
+      "describe:Describe a cluster."
+      "create:Create a MongoDB cluster."
+      "shutdown:Shutdown a cluster."
+      "startup:Start up a cluster."
+      "update:Update a MongoDB cluster."
+      "apply:Apply a new cluster configuration for your project."
+      "indexes:Manage cluster rolling indexes for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_clusters_list
+    ;;
+  describe)
+    _mongocli_cloud-manager_clusters_describe
+    ;;
+  create)
+    _mongocli_cloud-manager_clusters_create
+    ;;
+  shutdown)
+    _mongocli_cloud-manager_clusters_shutdown
+    ;;
+  startup)
+    _mongocli_cloud-manager_clusters_startup
+    ;;
+  update)
+    _mongocli_cloud-manager_clusters_update
+    ;;
+  apply)
+    _mongocli_cloud-manager_clusters_apply
+    ;;
+  indexes)
+    _mongocli_cloud-manager_clusters_indexes
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_clusters_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_create {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to create the cluster]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_shutdown {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_startup {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_update {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to update the cluster]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_clusters_apply {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to change the automation config]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_clusters_indexes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create a rolling index for your MongoDB cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_cloud-manager_clusters_indexes_create
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_clusters_indexes_create {
+  _arguments \
+    '--MaxVariable[Determines which characters are are considered ignorable. This field applies only if indexConfigs.collation.alternate is set to shifted.]:' \
+    '--alternate[Determines whether collation should consider whitespace and punctuation as base characters during comparisons.]:' \
+    '--backwards[If true, strings with diacritics sort from the back to the front of the string.]' \
+    '--caseFirst[Determines the sort order of case differences during tertiary level comparisons. ]:' \
+    '--caseLevel[If set to true, the index uses case comparison. This field applies only if the strength level is set to 1 or 2.]' \
+    '--collectionName[Collection name.]:' \
+    '--db[Database name.]:' \
+    '*--key[Index keys. Should be formatted as field:type.]:' \
+    '--locale[Locale that the ICU defines.]:' \
+    '--normalization[If true, collation checks if text requires normalization and performs normalization to compare text.]' \
+    '--numericOrdering[If set to true, collation compares numeric strings as numbers. If false, collation compares numeric strings as strings.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--rsName[The replica set that the index is built on.]:' \
+    '--sparse[Create a sparse index.]' \
+    '--strength[Level of comparison to perform.]:' \
+    '--unique[Create a unique key index.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_alerts {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "settings:Manage alerts configuration for your project."
+      "describe:Describe an alert for a project."
+      "list:List alerts for a project."
+      "acknowledge:Acknowledge an alert for your project."
+      "unacknowledge:Unacknowledge an alert for your project."
+      "global:Manage Ops Manager global properties."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  settings)
+    _mongocli_cloud-manager_alerts_settings
+    ;;
+  describe)
+    _mongocli_cloud-manager_alerts_describe
+    ;;
+  list)
+    _mongocli_cloud-manager_alerts_list
+    ;;
+  acknowledge)
+    _mongocli_cloud-manager_alerts_acknowledge
+    ;;
+  unacknowledge)
+    _mongocli_cloud-manager_alerts_unacknowledge
+    ;;
+  global)
+    _mongocli_cloud-manager_alerts_global
+    ;;
+  esac
+}
+
+
+function _mongocli_cloud-manager_alerts_settings {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create an alert configuration for your project."
+      "list:List alert configurations for a project."
+      "delete:Delete an alert configuration from your project."
+      "fields:Manage alert configuration fields for your project."
+      "update:Update an alert configuration for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_cloud-manager_alerts_settings_create
+    ;;
+  list)
+    _mongocli_cloud-manager_alerts_settings_list
+    ;;
+  delete)
+    _mongocli_cloud-manager_alerts_settings_delete
+    ;;
+  fields)
+    _mongocli_cloud-manager_alerts_settings_fields
+    ;;
+  update)
+    _mongocli_cloud-manager_alerts_settings_update
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_alerts_settings_create {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_settings_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_settings_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_alerts_settings_fields {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "type:List alert configurations available field types."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  type)
+    _mongocli_cloud-manager_alerts_settings_fields_type
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_alerts_settings_fields_type {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_settings_update {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_acknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '(-F --forever)'{-F,--forever}'[Acknowledge an alert “forever”.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--until[Acknowledged until a date.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_alerts_unacknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_alerts_global {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List global alerts."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_alerts_global_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_alerts_global_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_backups {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "snapshots:Manage backup snapshots for your project."
+      "restores:Manage restore jobs for your project."
+      "checkpoints:Manage backup checkpoints for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  snapshots)
+    _mongocli_cloud-manager_backups_snapshots
+    ;;
+  restores)
+    _mongocli_cloud-manager_backups_restores
+    ;;
+  checkpoints)
+    _mongocli_cloud-manager_backups_checkpoints
+    ;;
+  esac
+}
+
+
+function _mongocli_cloud-manager_backups_snapshots {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List snapshots for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_backups_snapshots_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_backups_snapshots_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_backups_restores {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:Lists restore jobs for a project and cluster."
+      "start:Start a restore job for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_backups_restores_list
+    ;;
+  start)
+    _mongocli_cloud-manager_backups_restores_start
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_backups_restores_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_backups_restores_start {
+  _arguments \
+    '--checkpointId[Unique identifier for the sharded cluster checkpoint that represents the point in time to which your data will be restored.
+If you set checkpointId, you cannot set oplogInc, oplogTs, snapshotId, or pointInTimeUTCMillis.]:' \
+    '--clusterId[Unique identifier of the cluster.]:' \
+    '--clusterName[Name of the cluster.]:' \
+    '--expirationHours[Number of hours the download URL is valid once the restore job is complete.
+For use only with download restore jobs.]:' \
+    '--expires[Timestamp in ISO 8601 date and time format after which the URL is no longer available.
+For use only with download restore jobs.]:' \
+    '--maxDownloads[Number of times the download URL can be used. This must be 1 or greater.
+For use only with download restore jobs.]:' \
+    '--oplogInc[32-bit incrementing ordinal that represents operations within a given second. 
+When paired with oplogTs, they represent the point in time to which your data will be restored.]:' \
+    '--oplogTs[Oplog timestamp given as a timestamp in the number of seconds that have elapsed since the UNIX epoch. 
+When paired with oplogInc, they represent the point in time to which your data will be restored.]:' \
+    '--pointInTimeUTCMillis[Timestamp in the number of milliseconds that have elapsed since the UNIX epoch that represents the point in time to which your data will be restored.
+This timestamp must be within last 24 hours of the current time.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--snapshotId[Unique identifier of the snapshot to restore.]:' \
+    '--targetClusterId[Unique identifier of the target cluster.
+For use only with automated restore jobs.]:' \
+    '--targetClusterName[Name of the target cluster.
+For use only with automated restore jobs.]:' \
+    '--targetProjectId[Unique identifier of the project that contains the destination cluster for the restore job.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("AUTOMATED_RESTORE" "HTTP")'
+}
+
+
+function _mongocli_cloud-manager_backups_checkpoints {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List continuous backup checkpoints for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_backups_checkpoints_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_backups_checkpoints_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_servers {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List all available servers running an automation agent for the given project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_servers_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_servers_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_automation {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "status:Show the current status of the automation config."
+      "watch:Watch for automation changes."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  status)
+    _mongocli_cloud-manager_automation_status
+    ;;
+  watch)
+    _mongocli_cloud-manager_automation_watch
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_automation_status {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_automation_watch {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_security {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "enable:Enable authentication mechanisms for the project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  enable)
+    _mongocli_cloud-manager_security_enable
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_security_enable {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("MONGODB-CR" "SCRAM-SHA-1" "SCRAM-SHA-256")'
+}
+
+
+function _mongocli_cloud-manager_dbusers {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create a database user for a project."
+      "list:List Atlas database users for a project."
+      "delete:Delete a database user for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_cloud-manager_dbusers_create
+    ;;
+  list)
+    _mongocli_cloud-manager_dbusers_list
+    ;;
+  delete)
+    _mongocli_cloud-manager_dbusers_delete
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_dbusers_create {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '*--mechanisms[Authentication mechanism. 
+Valid values: SCRAM-SHA-1|SCRAM-SHA-256]:' \
+    '(-p --password)'{-p,--password}'[User’s password.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--role[User'\''s roles and the databases or collections on which the roles apply.]:' \
+    '(-u --username)'{-u,--username}'[Username for authenticating to MongoDB.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_dbusers_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_dbusers_delete {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_events {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List events for an organization or project"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_events_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_events_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--maxDate[Returns events whose created date is less than or equal to it.]:' \
+    '--minDate[Returns events whose created date is greater than or equal to it.]:' \
+    '--orgId[Organization ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--type[Type of event that will trigger an alert.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_processes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List MongoDB processes for a project."
+      "describe:List MongoDB processes for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_processes_list
+    ;;
+  describe)
+    _mongocli_cloud-manager_processes_describe
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_processes_list {
+  _arguments \
+    '--clusterId[Unique identifier of the cluster.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_processes_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_metrics {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "process:Get measurements for a given host."
+      "disks:List available disks or disks measurements for a given host."
+      "databases:List available databases or databases measurements for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  process)
+    _mongocli_cloud-manager_metrics_process
+    ;;
+  disks)
+    _mongocli_cloud-manager_metrics_disks
+    ;;
+  databases)
+    _mongocli_cloud-manager_metrics_databases
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_metrics_process {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_metrics_disks {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available disks for a given host."
+      "describe:Describe disks measurements for a given host partition."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_metrics_disks_list
+    ;;
+  describe)
+    _mongocli_cloud-manager_metrics_disks_describe
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_metrics_disks_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_metrics_disks_describe {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_metrics_databases {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available databases for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_cloud-manager_metrics_databases_list
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_metrics_databases_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_logs {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "jobs:Manage log collection jobs."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  jobs)
+    _mongocli_cloud-manager_logs_jobs
+    ;;
+  esac
+}
+
+
+function _mongocli_cloud-manager_logs_jobs {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "collect:Start a job to collect logs."
+      "list:List log collection jobs."
+      "download:Download logs generated by a log collection job."
+      "delete:Delete a log collection job."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  collect)
+    _mongocli_cloud-manager_logs_jobs_collect
+    ;;
+  list)
+    _mongocli_cloud-manager_logs_jobs_list
+    ;;
+  download)
+    _mongocli_cloud-manager_logs_jobs_download
+    ;;
+  delete)
+    _mongocli_cloud-manager_logs_jobs_delete
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_logs_jobs_collect {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--redacted[If set to true, emails, hostnames, IP addresses, and namespaces in API responses involving this job are replaced with random string values.]' \
+    '--sizeRequestedPerFileBytes[Size for each log file in bytes.]:' \
+    '*--type[Array of strings specifying the types of logs to collect.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("cluster" "process" "replicaset")'
+}
+
+function _mongocli_cloud-manager_logs_jobs_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--verbose[If true, returns all child jobs in the response.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_logs_jobs_download {
+  _arguments \
+    '(-o --out)'{-o,--out}'[Optional output filename, if none given will use the log name.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_cloud-manager_logs_jobs_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_cloud-manager_agents {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "upgrade:"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  upgrade)
+    _mongocli_cloud-manager_agents_upgrade
+    ;;
+  esac
+}
+
+function _mongocli_cloud-manager_agents_upgrade {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "clusters:Manage clusters for your project."
+      "alerts:Manage alerts for your project."
+      "backups:Manage backups for your project."
+      "servers:Manage Ops Manager servers."
+      "automation:Manage Ops Manager automation config."
+      "security:Manage clusters security configuration."
+      "dbusers:Manage database users for your project."
+      "owner:Manage Ops Manager owners."
+      "events:Manage events for your project."
+      "processes:Manage MongoDB processes for your project."
+      "metrics:Get measurements on the state of the MongoDB process."
+      "logs:Manage log collection jobs."
+      "agents:Manage Ops Manager agents."
+      "diagnose-archive:Manage diagnose archives."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  clusters)
+    _mongocli_ops-manager_clusters
+    ;;
+  alerts)
+    _mongocli_ops-manager_alerts
+    ;;
+  backups)
+    _mongocli_ops-manager_backups
+    ;;
+  servers)
+    _mongocli_ops-manager_servers
+    ;;
+  automation)
+    _mongocli_ops-manager_automation
+    ;;
+  security)
+    _mongocli_ops-manager_security
+    ;;
+  dbusers)
+    _mongocli_ops-manager_dbusers
+    ;;
+  owner)
+    _mongocli_ops-manager_owner
+    ;;
+  events)
+    _mongocli_ops-manager_events
+    ;;
+  processes)
+    _mongocli_ops-manager_processes
+    ;;
+  metrics)
+    _mongocli_ops-manager_metrics
+    ;;
+  logs)
+    _mongocli_ops-manager_logs
+    ;;
+  agents)
+    _mongocli_ops-manager_agents
+    ;;
+  diagnose-archive)
+    _mongocli_ops-manager_diagnose-archive
+    ;;
+  esac
+}
+
+
+function _mongocli_ops-manager_clusters {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List clusters for your project."
+      "describe:Describe a cluster."
+      "create:Create a MongoDB cluster."
+      "shutdown:Shutdown a cluster."
+      "startup:Start up a cluster."
+      "update:Update a MongoDB cluster."
+      "apply:Apply a new cluster configuration for your project."
+      "indexes:Manage cluster rolling indexes for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_clusters_list
+    ;;
+  describe)
+    _mongocli_ops-manager_clusters_describe
+    ;;
+  create)
+    _mongocli_ops-manager_clusters_create
+    ;;
+  shutdown)
+    _mongocli_ops-manager_clusters_shutdown
+    ;;
+  startup)
+    _mongocli_ops-manager_clusters_startup
+    ;;
+  update)
+    _mongocli_ops-manager_clusters_update
+    ;;
+  apply)
+    _mongocli_ops-manager_clusters_apply
+    ;;
+  indexes)
+    _mongocli_ops-manager_clusters_indexes
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_clusters_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_create {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to create the cluster]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_shutdown {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_startup {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_update {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to update the cluster]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_clusters_apply {
+  _arguments \
+    '(-f --file)'{-f,--file}'[Filename to use to change the automation config]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_clusters_indexes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create a rolling index for your MongoDB cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_ops-manager_clusters_indexes_create
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_clusters_indexes_create {
+  _arguments \
+    '--MaxVariable[Determines which characters are are considered ignorable. This field applies only if indexConfigs.collation.alternate is set to shifted.]:' \
+    '--alternate[Determines whether collation should consider whitespace and punctuation as base characters during comparisons.]:' \
+    '--backwards[If true, strings with diacritics sort from the back to the front of the string.]' \
+    '--caseFirst[Determines the sort order of case differences during tertiary level comparisons. ]:' \
+    '--caseLevel[If set to true, the index uses case comparison. This field applies only if the strength level is set to 1 or 2.]' \
+    '--collectionName[Collection name.]:' \
+    '--db[Database name.]:' \
+    '*--key[Index keys. Should be formatted as field:type.]:' \
+    '--locale[Locale that the ICU defines.]:' \
+    '--normalization[If true, collation checks if text requires normalization and performs normalization to compare text.]' \
+    '--numericOrdering[If set to true, collation compares numeric strings as numbers. If false, collation compares numeric strings as strings.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--rsName[The replica set that the index is built on.]:' \
+    '--sparse[Create a sparse index.]' \
+    '--strength[Level of comparison to perform.]:' \
+    '--unique[Create a unique key index.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_alerts {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "settings:Manage alerts configuration for your project."
+      "describe:Describe an alert for a project."
+      "list:List alerts for a project."
+      "acknowledge:Acknowledge an alert for your project."
+      "unacknowledge:Unacknowledge an alert for your project."
+      "global:Manage Ops Manager global properties."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  settings)
+    _mongocli_ops-manager_alerts_settings
+    ;;
+  describe)
+    _mongocli_ops-manager_alerts_describe
+    ;;
+  list)
+    _mongocli_ops-manager_alerts_list
+    ;;
+  acknowledge)
+    _mongocli_ops-manager_alerts_acknowledge
+    ;;
+  unacknowledge)
+    _mongocli_ops-manager_alerts_unacknowledge
+    ;;
+  global)
+    _mongocli_ops-manager_alerts_global
+    ;;
+  esac
+}
+
+
+function _mongocli_ops-manager_alerts_settings {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create an alert configuration for your project."
+      "list:List alert configurations for a project."
+      "delete:Delete an alert configuration from your project."
+      "fields:Manage alert configuration fields for your project."
+      "update:Update an alert configuration for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_ops-manager_alerts_settings_create
+    ;;
+  list)
+    _mongocli_ops-manager_alerts_settings_list
+    ;;
+  delete)
+    _mongocli_ops-manager_alerts_settings_delete
+    ;;
+  fields)
+    _mongocli_ops-manager_alerts_settings_fields
+    ;;
+  update)
+    _mongocli_ops-manager_alerts_settings_update
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_alerts_settings_create {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_settings_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_settings_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_alerts_settings_fields {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "type:List alert configurations available field types."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  type)
+    _mongocli_ops-manager_alerts_settings_fields_type
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_alerts_settings_fields_type {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_settings_update {
+  _arguments \
+    '--apiKey[Datadog API Key, Opsgenie API Key, VictorOps API key.]:' \
+    '--enabled[If set to true, the alert configuration is enabled.]' \
+    '--event[Type of event that will trigger an alert.]:' \
+    '--matcherFieldName[Name of the field in the target object to match on.]:' \
+    '--matcherOperator[The operator to test the field’s value.]:' \
+    '--matcherValue[Value to test with the specified operator.]:' \
+    '--metricMode[Atlas computes the current metric value as an average.]:' \
+    '--metricName[Name of the metric against which Atlas checks the configured]:' \
+    '--metricOperator[Operator to apply when checking the current metric value against the threshold value.]:' \
+    '--metricThreshold[Threshold value outside of which an alert will be triggered.]:' \
+    '--metricUnits[The units for the threshold value.]:' \
+    '--notificationChannelName[Slack channel name. Required for the SLACK notifications type.]:' \
+    '--notificationDelayMin[Number of minutes to wait after an alert condition is detected before sending out the first notification.]:' \
+    '--notificationEmailAddress[Email address to which alert notifications are sent.]:' \
+    '--notificationEmailEnabled[Flag indicating if email notifications should be sent.]' \
+    '--notificationFlowName[Flowdock flow name in lower-case letters.]:' \
+    '--notificationIntervalMin[Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved.]:' \
+    '--notificationMobileNumber[Mobile number to which alert notifications are sent.]:' \
+    '--notificationOrgName[Flowdock organization name in lower-case letters.]:' \
+    '--notificationRegion[Region that indicates which API URL to use.]:' \
+    '--notificationServiceKey[PagerDuty service key.]:' \
+    '--notificationSmsEnabled[Flag indicating if text message notifications should be sent.]' \
+    '--notificationTeamId[Unique identifier of a team.]:' \
+    '--notificationToken[Slack API token or Bot token or Flowdock personal API token.]:' \
+    '--notificationType[Type of alert notification.]:' \
+    '--notificationUsername[Name of the Atlas user to which to send notifications.]:' \
+    '--notificationVictorOpsRoutingKey[VictorOps routing key.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_acknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '(-F --forever)'{-F,--forever}'[Acknowledge an alert “forever”.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--until[Acknowledged until a date.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_alerts_unacknowledge {
+  _arguments \
+    '--comment[Optional description or comment for the entry.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_alerts_global {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List global alerts."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_alerts_global_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_alerts_global_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--status[Alert'\''s status.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_backups {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "snapshots:Manage backup snapshots for your project."
+      "restores:Manage restore jobs for your project."
+      "checkpoints:Manage backup checkpoints for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  snapshots)
+    _mongocli_ops-manager_backups_snapshots
+    ;;
+  restores)
+    _mongocli_ops-manager_backups_restores
+    ;;
+  checkpoints)
+    _mongocli_ops-manager_backups_checkpoints
+    ;;
+  esac
+}
+
+
+function _mongocli_ops-manager_backups_snapshots {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List snapshots for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_backups_snapshots_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_backups_snapshots_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_backups_restores {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:Lists restore jobs for a project and cluster."
+      "start:Start a restore job for a project and cluster."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_backups_restores_list
+    ;;
+  start)
+    _mongocli_ops-manager_backups_restores_start
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_backups_restores_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_backups_restores_start {
+  _arguments \
+    '--checkpointId[Unique identifier for the sharded cluster checkpoint that represents the point in time to which your data will be restored.
+If you set checkpointId, you cannot set oplogInc, oplogTs, snapshotId, or pointInTimeUTCMillis.]:' \
+    '--clusterId[Unique identifier of the cluster.]:' \
+    '--clusterName[Name of the cluster.]:' \
+    '--expirationHours[Number of hours the download URL is valid once the restore job is complete.
+For use only with download restore jobs.]:' \
+    '--expires[Timestamp in ISO 8601 date and time format after which the URL is no longer available.
+For use only with download restore jobs.]:' \
+    '--maxDownloads[Number of times the download URL can be used. This must be 1 or greater.
+For use only with download restore jobs.]:' \
+    '--oplogInc[32-bit incrementing ordinal that represents operations within a given second. 
+When paired with oplogTs, they represent the point in time to which your data will be restored.]:' \
+    '--oplogTs[Oplog timestamp given as a timestamp in the number of seconds that have elapsed since the UNIX epoch. 
+When paired with oplogInc, they represent the point in time to which your data will be restored.]:' \
+    '--pointInTimeUTCMillis[Timestamp in the number of milliseconds that have elapsed since the UNIX epoch that represents the point in time to which your data will be restored.
+This timestamp must be within last 24 hours of the current time.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--snapshotId[Unique identifier of the snapshot to restore.]:' \
+    '--targetClusterId[Unique identifier of the target cluster.
+For use only with automated restore jobs.]:' \
+    '--targetClusterName[Name of the target cluster.
+For use only with automated restore jobs.]:' \
+    '--targetProjectId[Unique identifier of the project that contains the destination cluster for the restore job.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("AUTOMATED_RESTORE" "HTTP")'
+}
+
+
+function _mongocli_ops-manager_backups_checkpoints {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List continuous backup checkpoints for your project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_backups_checkpoints_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_backups_checkpoints_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_servers {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List all available servers running an automation agent for the given project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_servers_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_servers_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_automation {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "status:Show the current status of the automation config."
+      "watch:Watch for automation changes."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  status)
+    _mongocli_ops-manager_automation_status
+    ;;
+  watch)
+    _mongocli_ops-manager_automation_watch
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_automation_status {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_automation_watch {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_security {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "enable:Enable authentication mechanisms for the project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  enable)
+    _mongocli_ops-manager_security_enable
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_security_enable {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("MONGODB-CR" "SCRAM-SHA-1" "SCRAM-SHA-256")'
+}
+
+
+function _mongocli_ops-manager_dbusers {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create a database user for a project."
+      "list:List Atlas database users for a project."
+      "delete:Delete a database user for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_ops-manager_dbusers_create
+    ;;
+  list)
+    _mongocli_ops-manager_dbusers_list
+    ;;
+  delete)
+    _mongocli_ops-manager_dbusers_delete
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_dbusers_create {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '*--mechanisms[Authentication mechanism. 
+Valid values: SCRAM-SHA-1|SCRAM-SHA-256]:' \
+    '(-p --password)'{-p,--password}'[User’s password.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--role[User'\''s roles and the databases or collections on which the roles apply.]:' \
+    '(-u --username)'{-u,--username}'[Username for authenticating to MongoDB.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_dbusers_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_dbusers_delete {
+  _arguments \
+    '--authDB[Authentication database name.]:' \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_owner {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "create:Create the first user for Ops Manager."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  create)
+    _mongocli_ops-manager_owner_create
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_owner_create {
+  _arguments \
+    '--email[User’s email address.]:' \
+    '--firstName[User’s first name.]:' \
+    '--lastName[User’s last name.]:' \
+    '(-p --password)'{-p,--password}'[User’s password.]:' \
+    '*--whitelistIp[IP addresses to add to the new user’s whitelist.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_events {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List events for an organization or project"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_events_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_events_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--maxDate[Returns events whose created date is less than or equal to it.]:' \
+    '--minDate[Returns events whose created date is greater than or equal to it.]:' \
+    '--orgId[Organization ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '*--type[Type of event that will trigger an alert.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_processes {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List MongoDB processes for a project."
+      "describe:List MongoDB processes for a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_processes_list
+    ;;
+  describe)
+    _mongocli_ops-manager_processes_describe
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_processes_list {
+  _arguments \
+    '--clusterId[Unique identifier of the cluster.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_processes_describe {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_metrics {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "process:Get measurements for a given host."
+      "disks:List available disks or disks measurements for a given host."
+      "databases:List available databases or databases measurements for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  process)
+    _mongocli_ops-manager_metrics_process
+    ;;
+  disks)
+    _mongocli_ops-manager_metrics_disks
+    ;;
+  databases)
+    _mongocli_ops-manager_metrics_databases
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_metrics_process {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_metrics_disks {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available disks for a given host."
+      "describe:Describe disks measurements for a given host partition."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_metrics_disks_list
+    ;;
+  describe)
+    _mongocli_ops-manager_metrics_disks_describe
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_metrics_disks_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_metrics_disks_describe {
+  _arguments \
+    '--end[End of the period for which to retrieve measurements.]:' \
+    '--granularity[Duration in ISO 8601 notation that specifies the interval between measurement data points.]:' \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--period[Duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--start[Beginning of the period for which to retrieve measurements.]:' \
+    '*--type[Measurements to return. If it is not specified, all measurements are returned.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_metrics_databases {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List available databases for a given host."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_ops-manager_metrics_databases_list
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_metrics_databases_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--page[Page number.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_logs {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "jobs:Manage log collection jobs."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  jobs)
+    _mongocli_ops-manager_logs_jobs
+    ;;
+  esac
+}
+
+
+function _mongocli_ops-manager_logs_jobs {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "collect:Start a job to collect logs."
+      "list:List log collection jobs."
+      "download:Download logs generated by a log collection job."
+      "delete:Delete a log collection job."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  collect)
+    _mongocli_ops-manager_logs_jobs_collect
+    ;;
+  list)
+    _mongocli_ops-manager_logs_jobs_list
+    ;;
+  download)
+    _mongocli_ops-manager_logs_jobs_download
+    ;;
+  delete)
+    _mongocli_ops-manager_logs_jobs_delete
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_logs_jobs_collect {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--redacted[If set to true, emails, hostnames, IP addresses, and namespaces in API responses involving this job are replaced with random string values.]' \
+    '--sizeRequestedPerFileBytes[Size for each log file in bytes.]:' \
+    '*--type[Array of strings specifying the types of logs to collect.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    '1: :("cluster" "process" "replicaset")'
+}
+
+function _mongocli_ops-manager_logs_jobs_list {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--verbose[If true, returns all child jobs in the response.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_logs_jobs_download {
+  _arguments \
+    '(-o --out)'{-o,--out}'[Optional output filename, if none given will use the log name.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_ops-manager_logs_jobs_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_agents {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "upgrade:"
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  upgrade)
+    _mongocli_ops-manager_agents_upgrade
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_agents_upgrade {
+  _arguments \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_ops-manager_diagnose-archive {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "download:Download diagnose archives."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  download)
+    _mongocli_ops-manager_diagnose-archive_download
+    ;;
+  esac
+}
+
+function _mongocli_ops-manager_diagnose-archive_download {
+  _arguments \
+    '--limit[Max number of entries for the diagnose archive.]:' \
+    '--minutes[Beginning of the period for which to retrieve diagnose archive. Ops Manager takes out minutes from the current time. ]:' \
+    '(-o --out)'{-o,--out}'[Optional output filename, if none given will use diagnose-archive.tar.gz.]:' \
+    '--projectId[Project ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_iam {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "projects:Project operations."
+      "organizations:Organization operations."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  projects)
+    _mongocli_iam_projects
+    ;;
+  organizations)
+    _mongocli_iam_organizations
+    ;;
+  esac
+}
+
+
+function _mongocli_iam_projects {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List projects."
+      "create:Create a project."
+      "delete:Delete a project."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_iam_projects_list
+    ;;
+  create)
+    _mongocli_iam_projects_create
+    ;;
+  delete)
+    _mongocli_iam_projects_delete
+    ;;
+  esac
+}
+
+function _mongocli_iam_projects_list {
+  _arguments \
+    '--limit[Number of items per page.]:' \
+    '--orgId[Organization ID to use. Overrides configuration file or environment variable settings.]:' \
+    '--page[Page number.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_iam_projects_create {
+  _arguments \
+    '--orgId[Organization ID to use. Overrides configuration file or environment variable settings.]:' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_iam_projects_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+
+function _mongocli_iam_organizations {
+  local -a commands
+
+  _arguments -C \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:' \
+    "1: :->cmnds" \
+    "*::arg:->args"
+
+  case $state in
+  cmnds)
+    commands=(
+      "list:List organizations."
+      "create:Create an organization."
+      "delete:Delete an organization."
+    )
+    _describe "command" commands
+    ;;
+  esac
+
+  case "$words[1]" in
+  list)
+    _mongocli_iam_organizations_list
+    ;;
+  create)
+    _mongocli_iam_organizations_create
+    ;;
+  delete)
+    _mongocli_iam_organizations_delete
+    ;;
+  esac
+}
+
+function _mongocli_iam_organizations_list {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_iam_organizations_create {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_iam_organizations_delete {
+  _arguments \
+    '--force[Don'\''t ask for confirmation.]' \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+
+function _mongocli_help {
+  _arguments \
+    '(-P --profile)'{-P,--profile}'[Profile to use from your configuration file.]:'
+}
+

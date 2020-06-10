@@ -10,6 +10,9 @@ zinit light romkatv/powerlevel10k
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
 
+zinit ice as"completion"
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+
 zinit wait lucid light-mode for \
   JamesKovacs/zsh_completions_mongodb \
   ael-code/zsh-colored-man-pages \
@@ -25,10 +28,10 @@ zinit wait lucid light-mode for \
   qoomon/zsh-lazyload \
   wfxr/forgit \
   wfxr/forgit \
-  zdharma/fast-syntax-highlighting \
-  zsh-users/zsh-completions
+  zdharma/fast-syntax-highlighting
 
 ## oh-my-zsh plugins
+zinit ice wait lucid
 zinit is-snippet for \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh' \
   'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/node/node.plugin.zsh' \
@@ -40,5 +43,7 @@ zinit light tj/git-extras
 ## programs
 zinit ice wait lucid as"program" pick"yank" make
 zinit light mptre/yank
+
+## local completions
 
 # }}}

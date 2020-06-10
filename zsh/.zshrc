@@ -17,6 +17,7 @@ for file in "$ZDOTDIR"/config/plugins/other/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/util/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/definitions/**/*.zsh; do source "$file"; done
+for file in "$ZDOTDIR"/completion_files/**/*; do source "$file"; done
 
 source "$ZDOTDIR"/config/load_at.end
 
