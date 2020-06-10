@@ -29,6 +29,12 @@ sudo ls -r
 sudo cat /etc/sudoers
 bash "./symlink.sh"
 
+###############################################################################
+bot "Setting up some git stuff..."
+###############################################################################
+
+git config --global core.excludesfile "$GITHUB_PROJECT_INSTALL_DIR/git-config/gitignore_global"
+
 # cat ~/.vimrc
 # vim --version
 
