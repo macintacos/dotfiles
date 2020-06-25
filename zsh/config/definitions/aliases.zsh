@@ -83,18 +83,20 @@ alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=n
 # }}}
 
 # Making git a function to get around completion issues: https://github.com/tj/git-extras/issues/797
-function git() {
+git() {
   # https://unix.stackexchange.com/a/257208
   case "$PWD" in
   "$HOME"/GitLocal/Website | "$HOME"/GitLocal/Learning | "$HOME"/GitLocal/Play)
     hub "$@"
     for f in *; do
-      [[ -d "$f" ]] && hub -C "$f" config user.email juliantorres@hey.com
+      [[ -d "$f" ]] && hub -C "$f" config user.email "juliantorres@hey.com"
+      [[ -d "$f" ]] && hub -C "$f" config user.signingkey "$SECRET_GPG_KEY"
     done
     ;;
   "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
     hub "$@"
     hub config user.email juliantorres@hey.com
+    hub config user.signingkey "$SECRET_GPG_KEY"
     ;;
   *)
     hub "$@"
@@ -102,4 +104,4 @@ function git() {
   esac
 }
 
-compdef git="hub"
+# compdef git="hub"
