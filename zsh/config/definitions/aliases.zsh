@@ -52,8 +52,7 @@ alias ll='ls -la --git --color-scale'
 alias tree='ls --tree'
 # }}}
 
-# CD ALIASES {{{
-GITLOCAL="$HOME/GitLocal"
+# CD ALIASES {{{ GITLOCAL="$HOME/GitLocal"
 alias cdh="cd $HOME && cd"
 alias cdgit="cd $GITLOCAL && cd"
 alias cdwork="cd $GITLOCAL/Work && cd"
@@ -84,8 +83,23 @@ alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=n
 # }}}
 
 # Making git a function to get around completion issues: https://github.com/tj/git-extras/issues/797
-git() {
-  hub $*
+function git() {
+  # https://unix.stackexchange.com/a/257208
+  case "$PWD" in
+  "$HOME"/GitLocal/Website | "$HOME"/GitLocal/Learning | "$HOME"/GitLocal/Play)
+    hub "$@"
+    for f in *; do
+      [[ -d "$f" ]] && hub -C "$f" config user.email juliantorres@hey.com
+    done
+    ;;
+  "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
+    hub "$@"
+    hub config user.email juliantorres@hey.com
+    ;;
+  *)
+    hub "$@"
+    ;;
+  esac
 }
 
 compdef git="hub"
