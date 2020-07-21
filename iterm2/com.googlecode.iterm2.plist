@@ -6561,6 +6561,8 @@
 	<string>{799, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{841, 448}</string>
+	<key>NSOverlayScrollersFallBackForAccessoryViews</key>
+	<false/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -6609,13 +6611,13 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>3328 904 799 448 0 0 3008 1669 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1509 1037 700 622 0 0 3008 1669 </string>
+	<string>3378 921 700 622 3008 -515 1440 2537 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1035 255 606 469 -1440 -779 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>10 0 1489 1097 0 0 2048 1257 </string>
+	<string>3018 -505 1420 830 3008 -515 1440 2537 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -9210,19 +9212,22 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.11beta1</string>
+		<string>3.2.9</string>
 		<string>3.3.10beta4</string>
 		<string>3.3.5</string>
+		<string>3.3.12beta3</string>
+		<string>3.3.9</string>
 		<string>3.3.3</string>
+		<string>3.3.7</string>
 		<string>3.3.1</string>
 		<string>3.3.8</string>
 		<string>3.3.6</string>
 		<string>3.3.4</string>
 		<string>3.3.2</string>
-		<string>3.3.9</string>
-		<string>3.2.9</string>
+		<string>3.4.0beta1</string>
+		<string>3.3.11beta1</string>
 		<string>3.3.0</string>
-		<string>3.3.7</string>
+		<string>3.3.12beta2</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -9249,16 +9254,16 @@
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{4352, -736}, {1440, 2560}}</string>
+		<string>{{3008, -510}, {1440, 2560}}</string>
 		<key>topLeft</key>
-		<string>{4621, -141}</string>
+		<string>{3277, 85}</string>
 	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2048, 1280}}</string>
+		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{259, 878}</string>
+		<string>{1319, 1378}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -9268,8 +9273,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
+	<key>NoSyncLastOSVersion</key>
+	<string>Version 10.15.6 (Build 19G73)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>109</integer>
+	<integer>126</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9391,6 +9398,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>selectionLength</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -9402,6 +9417,14 @@
 				<string>triggerName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>parentSession</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -9520,6 +9543,14 @@
 				<true/>
 				<key>name</key>
 				<string>tmuxStatusLeft</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>selection</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -10062,6 +10093,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncRestoreWindowsCount</key>
+	<integer>0</integer>
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncSuppressDownloadConfirmation</key>
@@ -10133,6 +10166,8 @@
 	<string>/Users/juliant/GitLocal/Play/dotfiles/iterm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
+	<key>PreventEscapeSequenceFromClearingHistory</key>
+	<false/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -10140,17 +10175,17 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing_new.xml?shard=7</string>
+	<string>https://iterm2.com/appcasts/testing_modern.xml?shard=7</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-01T04:10:01Z</date>
+	<date>2020-07-20T23:42:37Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>80259299</integer>
+	<integer>1054366986</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
+	<true/>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>SeparateStatusBarsPerPane</key>
@@ -10184,6 +10219,7 @@
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Recent Directories</string>
+		<string>Command History</string>
 	</array>
 	<key>UseBorder</key>
 	<false/>
@@ -17856,7 +17892,7 @@
 	<key>findMode_iTerm</key>
 	<integer>4</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11beta1</string>
+	<string>3.4.0beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
