@@ -10,10 +10,13 @@
 [options]
   bootsrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
+  # autocomplete_method = "coc"
   buffer_index_type = 4
+  checkinstall = true
   enable_googlesuggest = 1
   enable_tabline_ft_icon = true
   filetree_direction = "left"
+  github_username = "macintacos"
 
   # THEMING {{{
   colorscheme = "dracula"
@@ -21,8 +24,23 @@
   enable_guicolors = true
   enable_statusline_mode = true
   enable_tabline_filetype_icon = true
-  statusline_inactive_separator = "arrow"
-  statusline_separator = "arrow"
+  enable_os_fileformat_icon = true
+  enable_ale = true
+  enable_vimfiler_filetypeicon = 1
+  enable_vimfiler_gitstatus = 1
+
+  statusline_left_sections = [
+    'winnr',
+    'filename',
+    'major mode',
+    'minor mode lighters',
+    'version control info'
+  ]
+
+  statusline_right_sections = [
+    'cursorpos',
+    'percentage'
+  ]
 
   # Custom pallete for the statusline because this thing is annoying;
   # may want to change colors some other time
@@ -37,13 +55,14 @@
     ['#282828', '#689d6a', 235, 72],
     ['#282828', '#8f3f71', 235, 132],
   ]
+
   # }}}
 
 # Layerz
 [[layers]]
 name = "autocomplete"
 auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "cycle"
+auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = "shell"
@@ -112,8 +131,8 @@ name = "lang#typescript"
 [[layers]]
 name = "lang#vim"
 
-[[layers]]
-name = "lsp"
+# [[layers]]
+# name = "lsp"
 
 [[layers]]
 name = "sudo"
@@ -121,10 +140,16 @@ name = "sudo"
 [[layers]]
 name = "tools"
 
+[[layers]]
+name = "VersionControl"
+
+[[layers]]
+name = "gtags"
+
+# CUSTOM PLUGINS {{{
 [[custom_plugins]]
 name = "dracula/vim"
 merged = 0
-
 [[custom_plugins]]
 name = "machakann/vim-highlightedyank"
 merged = 0
@@ -146,3 +171,7 @@ merged = 0
 [[custom_plugins]]
 name = "ryanoasis/vim-devicons"
 merged = 0
+[[custom_plugins]]
+name = "sheerun/vim-polyglot"
+merged = 0
+# CUSTOM PLUGINS END }}}
