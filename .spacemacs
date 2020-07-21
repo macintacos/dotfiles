@@ -79,9 +79,9 @@ values."
      shell-scripts
      spacemacs-modeline
      (syntax-checking :variables syntax-checking-enable-by-default t)
-    ;;  (treemacs :variables
-    ;;            treemacs-git-mode 'deferred
-    ;;            treemacs-resize-icons 15)
+     (treemacs :variables
+               treemacs-git-mode 'deferred
+               treemacs-resize-icons 15)
      (typescript :variables
                  typescript-backend 'lsp
                  typescript-fmt-on-save t
@@ -90,14 +90,14 @@ values."
      version-control
      vimscript
      yaml
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom
-     ;;        shell-default-shell 'term
-     ;;        shell-enable-smart-eshell t
-     ;;        shell-protect-eshell-prompt nil
-     ;;        shell-default-full-span nil
-     ;;        )
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-shell 'term
+            shell-enable-smart-eshell t
+            shell-protect-eshell-prompt nil
+            shell-default-full-span nil
+            )
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -110,9 +110,9 @@ values."
      doom-themes
      flycheck-posframe
      rust-playground
-    ;;  treemacs-evil
-    ;;  treemacs-icons-dired
-    ;;  treemacs-magit
+     treemacs-evil
+     treemacs-icons-dired
+     treemacs-magit
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -376,26 +376,26 @@ you should place your code here."
   (add-hook 'js2-mode-hook #'prettier-js-mode)
   (add-hook 'web-mode-hook #'prettier-js-mode)
   
-  ;; treemacs config
-  ;; (with-eval-after-load 'treemacs
-  ;;   ;; Fonts
-  ;;   (set-face-attribute 'treemacs-directory-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-file-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-root-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-unmodified-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-modified-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-renamed-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-ignored-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-untracked-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-added-face nil :family "Inter")
-  ;;   (set-face-attribute 'treemacs-git-conflict-face nil :family "Inter")
+  treemacs config
+  (with-eval-after-load 'treemacs
+    ;; Fonts
+    (set-face-attribute 'treemacs-directory-face nil :family "Inter")
+    (set-face-attribute 'treemacs-file-face nil :family "Inter")
+    (set-face-attribute 'treemacs-root-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-unmodified-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-modified-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-renamed-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-ignored-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-untracked-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-added-face nil :family "Inter")
+    (set-face-attribute 'treemacs-git-conflict-face nil :family "Inter")
 
-  ;;   ;; Remaps
-  ;;   (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
-  ;;   (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-TAB-action)
-  ;;   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
-  ;;   (define-key evil-normal-state-map (kbd "SPC p s") #'treemacs-switch-workspace)
-  ;; )
+    ;; Remaps
+    (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-RET-action)
+    (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-TAB-action)
+    (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
+    (define-key evil-normal-state-map (kbd "SPC p s") #'treemacs-switch-workspace)
+  )
 
   ;; Titlebar Shenanigans
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
