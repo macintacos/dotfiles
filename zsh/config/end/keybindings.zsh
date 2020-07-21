@@ -8,8 +8,7 @@
 
 source $ZDOTDIR/config/end/vim.zsh
 
-bindkey '^e' edit-command-line # allows you to edit the current command line in vim
-bindkey -s '^o' 'r\n'          # runs the 'r' command with 'ranger'
+bindkey -s '^o' 'r\n'  # runs the 'r' command with 'ranger'
+bindkey -s '^F' 'zi\n' # runs "zoxide" in interactive mode
 bindkey '^T' fzf-completion
 bindkey '^R' fzf-history-widget
-bindkey -s '^F' 'zshz \t'

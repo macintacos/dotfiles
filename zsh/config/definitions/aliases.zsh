@@ -30,7 +30,6 @@ alias v='nvim'                                 # shortening usage of nvim
 alias vs='code'                                # shortening vscode's code
 alias vl='vercel'                              # vercel/zeit/now
 alias zr='zrun'                                # making zrun a bit more easy to run
-alias zz='_z -c 2>&1'                          # idk what this does
 alias hdi='howdoi -c -n 3'                     # howdoi plugin to search for code completion stuff
 # }}}
 
@@ -75,7 +74,6 @@ alias cdddddd='cd ../../../../..' # cd back 5 directories
 # VS CODE ALIASES {{{
 alias zshrc="code $ZDOTDIR/zshrc" # Quick access to the ~/.zshrc file
 alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
-alias snip="code $HOME/GitLocal/Work/personal-scripts-and-snippets"
 # }}}
 
 # FIND ALIASES {{{

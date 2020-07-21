@@ -9,6 +9,7 @@ zinit light romkatv/powerlevel10k
 
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
+zinit light softmoth/zsh-vim-mode
 
 zinit ice as"completion"
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
@@ -16,8 +17,6 @@ zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_
 zinit wait lucid light-mode for \
   JamesKovacs/zsh_completions_mongodb \
   ael-code/zsh-colored-man-pages \
-  agkozak/zsh-z \
-  andrewferrier/fzf-z \
   b4b4r07/enhancd \
   djui/alias-tips \
   hlissner/zsh-autopair \
@@ -26,7 +25,6 @@ zinit wait lucid light-mode for \
   micha/resty \
   paoloantinori/hhighlighter \
   qoomon/zsh-lazyload \
-  wfxr/forgit \
   wfxr/forgit \
   zdharma/fast-syntax-highlighting
 
