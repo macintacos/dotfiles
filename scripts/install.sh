@@ -109,11 +109,6 @@ running "installing zsh themes..."
 sudo git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.dotfiles/oh-my-zsh/custom}/themes/powerlevel9k
 ok "Done"
 
-# Installing perlbrew
-running "installing perlbrew..."
-\curl -L https://install.perlbrew.pl | bash
-ok "Done"
-
 # mongodb-specific tools
 running "installing m..."
 mkdir -p $GITHUB_PROJECT_INSTALL_DIR && cd $GITHUB_PROJECT_INSTALL_DIR && git clone git://github.com/aheckmann/m.git && cd m && make install
