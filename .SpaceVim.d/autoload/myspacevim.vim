@@ -66,6 +66,8 @@ function! myspacevim#after() abort
   inoremap jk <ESC>
   inoremap kk <ESC>
 
+  inoremap <C-s> <ESC><C-s> " Exits INSERT and saves, as expected
+
   map Y y$ " make 'Y' yank for current character to end of line
 
   "" this it to make sure that vim-highlightedyank is actually working

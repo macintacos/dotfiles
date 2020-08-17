@@ -26,8 +26,6 @@
   enable_tabline_filetype_icon = true
   enable_os_fileformat_icon = true
   enable_ale = true
-  enable_vimfiler_filetypeicon = 1
-  enable_vimfiler_gitstatus = 1
 
   statusline_left_sections = [
     'winnr',
@@ -61,7 +59,7 @@
 # Layerz
 [[layers]]
 name = "autocomplete"
-auto-completion-return-key-behavior = "complete"
+auto-completion-return-key-behavior = "smart"
 auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
@@ -131,8 +129,8 @@ name = "lang#typescript"
 [[layers]]
 name = "lang#vim"
 
-# [[layers]]
-# name = "lsp"
+[[layers]]
+name = "lsp"
 
 [[layers]]
 name = "sudo"
@@ -145,6 +143,9 @@ name = "VersionControl"
 
 [[layers]]
 name = "gtags"
+
+[[layers]]
+name = "ctrlspace"
 
 # CUSTOM PLUGINS {{{
 [[custom_plugins]]
