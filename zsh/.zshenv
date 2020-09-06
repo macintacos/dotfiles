@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 # Setting PATHs
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
@@ -13,8 +13,6 @@ export CHEAT_COLORS=true
 export CHEAT_COLORSCHEME=dark
 export DROPBOX="$HOME/Dropbox"
 export EDITOR='nvim'
-export GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
-export GNUBIN=/usr/local/opt/coreutils/libexec/gnubin
 export GNUGREP=/usr/local/opt/grep/libexec/gnubin
 export GOPATH=$HOME/GoWorkspace
 export GO_BIN="/usr/local/go/bin"
@@ -23,12 +21,14 @@ export KEKA=/Applications/Keka.app/Contents/MacOS
 export KUBECONFIG=~/.kube/config.staging:~/.kube/config.prod
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export LOCAL_BIN=/usr/local/bin
+export MMS_HOME="$HOME/GitLocal/Work/mms"
 export MYSQL=/usr/local/mysql-8.0.11-macos10.13-x86_64/bin/
 export MY_ZSH_SCRIPTS=$ZDOTDIR/scripts
 export MY_ZSH_SECRETS=$ZDOTDIR/secrets
 export N_PREFIX="$HOME/.n"
 export N_BIN="$N_PREFIX/bin"
 export NODEMODULEPATH=/usr/local/lib/node_modules
+export M_PREFIX=~
 export PERLBREW=$HOME/perl5/perlbrew/bin
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
@@ -42,4 +42,4 @@ export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$EMACSPATHVAR:$GNUBIN:$GNUBIN:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$SPACEVIMBIN:$VSCODE:$ZPLUG_HOME:$PATH"
+export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$EMACSPATHVAR:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$SPACEVIMBIN:$VSCODE:$ZPLUG_HOME:$PATH"

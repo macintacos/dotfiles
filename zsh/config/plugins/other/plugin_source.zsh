@@ -6,11 +6,9 @@
 [[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
 
 ## JABBA https://github.com/shyiko/jabba
-jabba() {
-  lazyload jabba -- $'[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"'
-  jabba "$@"
-}
-
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+export N_PREFIX="$HOME/.n"
+[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin" # Added by n-install (see http://git.io/n-install-repo).
 ## ZOXIDE https://github.com/ajeetdsouza/zoxide
 unalias zi
 eval "$(zoxide init zsh)"

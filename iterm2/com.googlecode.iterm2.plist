@@ -6611,13 +6611,15 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>3328 904 799 448 0 0 3008 1669 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>3378 921 700 622 3008 -515 1440 2537 </string>
+	<string>1154 785 700 622 0 0 3008 1669 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1035 255 606 469 -1440 -779 1440 2537 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3018 -505 1420 830 3008 -515 1440 2537 </string>
+	<string>3018 -505 1420 1676 3008 -515 1440 2537 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>3018 -505 1420 1676 3008 -515 1440 2537 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -9212,16 +9214,19 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.2.9</string>
+		<string>3.3.7</string>
 		<string>3.3.10beta4</string>
 		<string>3.3.5</string>
 		<string>3.3.12beta3</string>
-		<string>3.3.9</string>
+		<string>3.2.9</string>
 		<string>3.3.3</string>
-		<string>3.3.7</string>
+		<string>3.3.9</string>
+		<string>3.4.0beta3</string>
 		<string>3.3.1</string>
 		<string>3.3.8</string>
+		<string>3.4.0beta2</string>
 		<string>3.3.6</string>
+		<string>3.4.0beta4</string>
 		<string>3.3.4</string>
 		<string>3.3.2</string>
 		<string>3.4.0beta1</string>
@@ -9263,7 +9268,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{1319, 1378}</string>
+		<string>{948, 1113}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -9271,12 +9276,14 @@
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
+	<key>NoSyncIgnoreSystemWindowRestoration</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>0A8E4830-5A9F-49A8-89E5-9B7D0BC8162C</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 10.15.6 (Build 19G73)</string>
+	<string>Version 10.15.6 (Build 19G2021)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>126</integer>
+	<integer>138</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -10179,13 +10186,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-20T23:42:37Z</date>
+	<date>2020-08-31T16:37:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>1054366986</integer>
+	<integer>1256822983</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>SeparateStatusBarsPerPane</key>
@@ -10193,7 +10200,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -10221,6 +10228,8 @@
 		<string>Recent Directories</string>
 		<string>Command History</string>
 	</array>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1597075328</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
@@ -17892,7 +17901,7 @@
 	<key>findMode_iTerm</key>
 	<integer>4</integer>
 	<key>iTerm Version</key>
-	<string>3.4.0beta1</string>
+	<string>3.4.0beta4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

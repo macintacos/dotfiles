@@ -7,9 +7,10 @@
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
-zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
 zinit light softmoth/zsh-vim-mode
+zinit light IngoMeyer441/zsh-easy-motion
+zinit light Aloxaf/fzf-tab
 
 zinit ice as"completion"
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
@@ -17,7 +18,6 @@ zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_
 zinit wait lucid light-mode for \
   JamesKovacs/zsh_completions_mongodb \
   ael-code/zsh-colored-man-pages \
-  b4b4r07/enhancd \
   djui/alias-tips \
   hlissner/zsh-autopair \
   hschne/fzf-git \

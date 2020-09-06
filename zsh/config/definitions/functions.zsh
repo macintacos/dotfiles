@@ -11,6 +11,13 @@ ranger-cd() {
   rm -f -- "$tempfile"
 }
 
+gevg() {
+  printf "%s - %s (%s commit(s))" \
+    "$(git branch --show-current)" \
+    "$(git log -1 --pretty=%B)" \
+    "$(git rev-list --count trunk..)"
+}
+
 mcd() { # mcd: Makes new Dir and jumps inside
   mkdir -p "$1" && cd "$1"
 }
@@ -139,21 +146,6 @@ function pet-select() {
   zle redisplay
 }
 # }
-# }}}
-
-# FZF {{{
-## Use fd (https://github.com/sharkdp/fd) instead of the default find
-## command for listing path candidates.
-## - The first argument to the function ($1) is the base path to start traversal
-## - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
 # }}}
 
 # directory color rendering

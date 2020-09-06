@@ -33,14 +33,8 @@ alias zr='zrun'                                # making zrun a bit more easy to 
 alias hdi='howdoi -c -n 3'                     # howdoi plugin to search for code completion stuff
 # }}}
 
-# KUBECTL/KUBECTX/KUBENS ALIASES {{{
-# [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
-alias kx='kubectx'
-alias kns='kubens'
-# }}}
-
 # GIT ALIASES {{{
-alias gst='tig status' # better way to view git status
+alias gst='lazygit' # better way to view git status
 alias sm="smerge"
 # }}}
 
@@ -51,7 +45,8 @@ alias ll='ls -la --git --color-scale'
 alias tree='ls --tree'
 # }}}
 
-# CD ALIASES {{{ GITLOCAL="$HOME/GitLocal"
+# CD ALIASES {{{
+GITLOCAL="$HOME/GitLocal"
 alias cdh="cd $HOME && cd"
 alias cdgit="cd $GITLOCAL && cd"
 alias cdwork="cd $GITLOCAL/Work && cd"
@@ -84,13 +79,6 @@ alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=n
 git() {
   # https://unix.stackexchange.com/a/257208
   case "$PWD" in
-  "$HOME"/GitLocal/Website | "$HOME"/GitLocal/Learning | "$HOME"/GitLocal/Play)
-    hub "$@"
-    for f in *; do
-      [[ -d "$f" ]] && hub -C "$f" config user.email "juliantorres@hey.com"
-      [[ -d "$f" ]] && hub -C "$f" config user.signingkey "$SECRET_GPG_KEY"
-    done
-    ;;
   "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
     hub "$@"
     hub config user.email juliantorres@hey.com
