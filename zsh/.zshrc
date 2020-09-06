@@ -17,7 +17,7 @@ for file in "$ZDOTDIR"/config/plugins/other/**/*.zsh; do source "$file"; done
 source "$ZDOTDIR"/secrets/sekret_source
 for file in "$ZDOTDIR"/config/util/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/definitions/**/*.zsh; do source "$file"; done
-for file in "$ZDOTDIR"/completion_files/**/*; do source "$file"; done
+for file in "$ZDOTDIR"/completions/**/*; do source "$file"; done
 for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
 
 source "$ZDOTDIR"/config/load_at.end
@@ -26,3 +26,5 @@ source "$ZDOTDIR"/config/load_at.end
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
+
+source /Users/juliant/.config/broot/launcher/bash/br
