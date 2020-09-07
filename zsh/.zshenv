@@ -2,6 +2,8 @@
 # Setting PATHs
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
+export NVIM_HOME="$DOTFILES_HOME/nvim"
+export PLUG_CONFIG_NVIM_HOME="$NVIM_HOME/plug-config"
 export ZDOTDIR="$DOTFILES_HOME/zsh"
 
 export ANT_OPTS="-Xms64m -Xmx1500m"
