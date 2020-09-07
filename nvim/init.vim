@@ -4,11 +4,14 @@ source $NVIM_HOME/mappings.vim
 " PLUGINZ {{{
 call plug#begin('~/.config/vim-plug')
 
+" utilities
 Plug 'machakann/vim-highlightedyank' | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
-Plug 'reedes/vim-lexical' | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
-Plug 'reedes/vim-pencil' | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
-Plug 'airblade/vim-gitgutter' | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
-Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim
+Plug 'reedes/vim-lexical'            | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
+Plug 'reedes/vim-pencil'             | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
+Plug 'airblade/vim-gitgutter'        | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
+Plug 'liuchengxu/vim-which-key'      | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim
+Plug 'junegunn/fzf.vim'              | source $PLUG_CONFIG_NVIM_HOME/fzf.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ryanoasis/vim-devicons'   " put fancy icons in the editor
 Plug 'tpope/vim-commentary'     " 'gc' prefix for commenting things
 Plug 'tpope/vim-surround'       " use various motions to surround words
@@ -24,7 +27,7 @@ Plug 'itchyny/lightline.vim' | source $PLUG_CONFIG_NVIM_HOME/lightline.vim
 " Plug 'dbmrq/vim-ditto'
 
 call plug#end()
-call which_key#register('<Space>', "g:which_key_map")
+call which_key#register('<Space>', "g:which_key_map") " this makes sure which-key is properly loaded
 " }}}
 
 " Vanilla Config
