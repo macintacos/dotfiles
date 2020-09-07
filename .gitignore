@@ -10,3 +10,4 @@ npm/npm-backup-current.txt.*
 /zsh/.zinit/
 /zsh/.zsh_history
 .DS_STORE
+/nvim/.netrwhist

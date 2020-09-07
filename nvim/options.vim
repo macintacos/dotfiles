@@ -22,4 +22,9 @@ set relativenumber  " relative numbers
 set expandtab       " puts spaces instead of tab characters
 set shiftwidth=4    " width of an indentation is 2 when using '<<'/'>>'
 set softtabstop=4   " this is how vim knows to backspace characters I think
+set tabstop=4       " This makes suyre that we set tabs to look like 4 spaces
 set noshowmode      " lightline takes care of this, no need to show mode at the bottom
+set timeoutlen=500  " timeout length of half a second
+set autoindent      " autoindentation stuff; makes it so that indentation is the same as the current line's indentation
+set smartindent     " smart indentation stuff
+set termguicolors   " true colors

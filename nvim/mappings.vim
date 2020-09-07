@@ -1,5 +1,12 @@
+" Description: for mappings NOT related to plugins.
+"   Mapping related to plugins go IN the plugin file itself, to be consistent.
+
 " LEGEND
 " <C-x> = 'control+x'
+" <CR> = 'Enter/Return'
+
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
 
 inoremap jj <ESC>
 inoremap kk <ESC>
