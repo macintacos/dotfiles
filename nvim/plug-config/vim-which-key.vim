@@ -2,20 +2,33 @@
 " Description: gives which-key-like functionality to vim; something that I sorely need in order to do things the way that I want to do them in Vim
 
 " initial mapping
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+" call which_key#register('<Space>', "g:which_key_map")
+
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
-"" theming
-" autocmd FileType which_key highlight WhichKey ctermbg=0 ctermfg=blue
-" autocmd FileType which_key highlight WhichKeySeperator ctermbg=0 ctermfg=blue
-" autocmd FileType which_key highlight WhichKeyGroup cterm=bold ctermbg=0 ctermfg=blue
-" autocmd FileType which_key highlight WhichKeyDesc ctermbg=0 ctermfg=blue
-" autocmd FileType which_key highlight WhichKeyFloating ctermbg=0 ctermfg=blue
-
-" configuration (initially stealing from space-vim: https://github.com/liuchengxu/space-vim/blob/master/core/autoload/spacevim/map/leader.vim)
+" beginning configuration {{{
 let g:which_key_map = {}
 
-"" 'f' keybindings
-let g:which_key_map.f = { 'name': '+file' }
-
+"" 'f' menu {{{
 nnoremap <silent> <leader>fs :update<CR>
+
+let g:which_key_map.f = {
+    \ 'name': '+file',
+    \ 's': 'save-file',
+\ }
+
+""" 'f.e' menu {{{
+nnoremap <silent> <leader>fed :e $DOTFILES_HOME
+nnoremap <silent> <leader>fek :e $DOTFILES_HOME/nvim/mappings.vim
+
+let g:which_key_map.f.e = {
+    \ 'name': '+edit',
+    \ 'd': 'edit-dotfiles',
+    \ 'k': 'edit-keybindings',
+\ }
+
+""" end 'f.e' menu }}}
+"" end 'f' menu}}}
+" end configuration }}}

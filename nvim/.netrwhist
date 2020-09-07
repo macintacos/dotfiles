@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/Users/juliant/GitLocal/Play/dotfiles'
+let g:netrw_dirhist_1='/Users/juliant/GitLocal/Play/dotfiles/nvim/plug-config'
+let g:netrw_dirhist_0='/Users/juliant/GitLocal/Play/dotfiles/nvim'
+let g:netrw_dirhist_9='/Users/juliant/GitLocal/Play/dotfiles'
+let g:netrw_dirhist_8='/Users/juliant/GitLocal/Play/dotfiles/nvim/plug-config'
+let g:netrw_dirhist_7='/Users/juliant/GitLocal/Play/dotfiles/nvim'
+let g:netrw_dirhist_6='/Users/juliant/GitLocal/Play/dotfiles'
+let g:netrw_dirhist_5='/Users/juliant/GitLocal/Play/dotfiles/nvim'
+let g:netrw_dirhist_4='/Users/juliant/GitLocal/Play/dotfiles'
+let g:netrw_dirhist_3='/Users/juliant/GitLocal/Play/dotfiles/nvim/plug-config'
+let g:netrw_dirhist_2='/Users/juliant/GitLocal/Play/dotfiles/nvim'

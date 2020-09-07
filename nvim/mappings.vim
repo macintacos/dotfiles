@@ -5,7 +5,7 @@
 " <C-x> = 'control+x'
 " <CR> = 'Enter/Return'
 
-let g:mapleader = "\<Space>"
+let g:mapleader = " "
 let g:maplocalleader = ','
 
 inoremap jj <ESC>
