@@ -6617,9 +6617,13 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>294 193 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3018 -505 1420 1676 3008 -515 1440 2537 </string>
+	<string>1029 10 1009 1237 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3018 -505 1420 1676 3008 -515 1440 2537 </string>
+	<string>10 0 1420 937 0 0 2048 1257 </string>
+	<key>NeverWarnAboutMeta</key>
+	<true/>
+	<key>NeverWarnAboutMeta_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -7375,13 +7379,13 @@
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Place Prompt at First Column</key>
 			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Rows</key>
 			<integer>50</integer>
 			<key>Screen</key>
@@ -9214,25 +9218,26 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.3</string>
+		<string>3.3.8</string>
+		<string>3.3.12beta3</string>
+		<string>3.3.12beta2</string>
+		<string>3.3.2</string>
 		<string>3.3.7</string>
 		<string>3.3.10beta4</string>
-		<string>3.3.5</string>
-		<string>3.3.12beta3</string>
-		<string>3.2.9</string>
-		<string>3.3.3</string>
-		<string>3.3.9</string>
-		<string>3.4.0beta3</string>
-		<string>3.3.1</string>
-		<string>3.3.8</string>
-		<string>3.4.0beta2</string>
-		<string>3.3.6</string>
-		<string>3.4.0beta4</string>
-		<string>3.3.4</string>
-		<string>3.3.2</string>
-		<string>3.4.0beta1</string>
 		<string>3.3.11beta1</string>
+		<string>3.3.1</string>
+		<string>3.3.6</string>
+		<string>3.2.9</string>
 		<string>3.3.0</string>
-		<string>3.3.12beta2</string>
+		<string>3.3.5</string>
+		<string>3.3.4</string>
+		<string>3.3.9</string>
+		<string>3.4.0beta1</string>
+		<string>3.4.0beta2</string>
+		<string>3.4.0beta5</string>
+		<string>3.4.0beta4</string>
+		<string>3.4.0beta3</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -9266,9 +9271,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3008, 1692}}</string>
+		<string>{{0, 0}, {2048, 1280}}</string>
 		<key>topLeft</key>
-		<string>{948, 1113}</string>
+		<string>{916, 742}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -9283,7 +9288,7 @@
 	<key>NoSyncLastOSVersion</key>
 	<string>Version 10.15.6 (Build 19G2021)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>138</integer>
+	<integer>145</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -9406,6 +9411,14 @@
 				<true/>
 				<key>name</key>
 				<string>selectionLength</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>processTitle</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -9737,6 +9750,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.tmuxPaneTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.processTitle</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -10186,11 +10207,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-31T16:37:35Z</date>
+	<date>2020-09-09T16:31:08Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>1256822983</integer>
+	<integer>578690320</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -10200,7 +10221,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -17901,7 +17922,7 @@
 	<key>findMode_iTerm</key>
 	<integer>4</integer>
 	<key>iTerm Version</key>
-	<string>3.4.0beta4</string>
+	<string>3.4.0beta5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

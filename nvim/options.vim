@@ -29,4 +29,3 @@ set autoindent      " autoindentation stuff; makes it so that indentation is the
 set smartindent     " smart indentation stuff
 set termguicolors   " true colors
 set mouse=a         " mouse everywhere
-
