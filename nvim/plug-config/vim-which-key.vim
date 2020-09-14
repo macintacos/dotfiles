@@ -19,11 +19,18 @@ nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 nnoremap <leader>/ :Clap grep ++opt=--hidden -g "!.git/"<CR>
+nnoremap <silent> <leader>! :FloatermNew<CR>
+nnoremap <silent> <leader>; :Commentary<CR>
+nnoremap <silent> <leader>* :Clap grep ++query=<cword><CR>
+vnoremap <silent> <leader>* :Clap grep ++query=@visual<CR>
 
 let g:which_key_map = {
     \ '[1-0]': 'Switch to buffer 1-10',
     \ '<Tab>': 'Next buffer',
-    \ '/': 'Project Search',
+    \ '/': 'Project search',
+    \ '*': 'Project search w/ selection',
+    \ '!': 'New terminal (ctrl+/ for toggle)',
+    \ ';': 'Toggle comment',
 \ }
 
 "" hide these
@@ -65,12 +72,22 @@ let g:which_key_map.a = {
 nnoremap <silent> <leader>bd :Kwbd<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bp :bp<CR>
+nnoremap <silent> <leader>bq :bufdo bwipeout<CR>
+nnoremap <silent> <leader>bs :Scratch<CR>
+nnoremap <silent> <leader>by :%y<CR>
 
 let g:which_key_map.b = {
     \ 'name': '+buffer',
     \ 'b': 'List buffers',
     \ 'c': 'Commits for this buffer',
     \ 'd': 'Delete buffer',
+    \ 'n': 'Next buffer',
+    \ 'p': 'Prev buffer',
+    \ 'q': 'Close all buffers',
+    \ 's': 'Open scratch buffer',
+    \ 'y': 'Copy whole buffer',
 \ }
 "" 'b' menu end }}}
 
@@ -88,6 +105,8 @@ let g:which_key_map.c = {
 
 "" 'e' menu --- {{{
 nnoremap <silent> <leader>el :<C-u>CocList diagnostics<CR>
+nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<CR>
 
 let g:which_key_map.e = {
     \ 'name': '+errors/diagnostics',
@@ -101,17 +120,22 @@ nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
 nnoremap <silent> <leader>fo :Vista!!<CR>
+nnoremap <silent> <leader>fR expand("%:t"):
 nnoremap <silent> <leader>fs :w<CR>
+nnoremap <silent> <leader>fS :wa<CR>
 nnoremap <silent> <leader>ft :CocCommand explorer --toggle<CR>
 
 let g:which_key_map.f = {
     \ 'name': '+file',
     \ '=': 'Format file',
+    \ 'D': 'Delete current file',
     \ 'f': 'Open file in PWD',
     \ 'F': 'Show file in tree',
     \ 'n': 'Open/create new file',
     \ 'o': 'Focus outline',
+    \ 'R': 'Rename current file',
     \ 's': 'Save file',
+    \ 'S': 'Save all files',
     \ 't': 'File tree',
 \ }
 
@@ -138,7 +162,7 @@ let g:which_key_map.f.e = {
 nnoremap <silent> <leader>ga :Git add .<CR>
 nnoremap <silent> <leader>gb :Git blame<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
-nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gs :!smerge .<CR>
 
 let g:which_key_map.g = {
     \ 'name': '+git',
@@ -150,7 +174,12 @@ let g:which_key_map.g = {
 "" 'g' menu end}}}
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
-let g:which_key_map.h = {'name' : 'which_key_ignore'}
+nnoremap <silent> <leader>hh :Clap help_tags<CR>
+
+let g:which_key_map.h = {
+    \ 'name' : '+help',
+    \ 'h': 'Search help commands',
+    \ }
 let g:which_key_map.h.p = 'which_key_ignore'
 let g:which_key_map.h.s = 'which_key_ignore'
 let g:which_key_map.h.u = 'which_key_ignore'
@@ -192,13 +221,26 @@ let g:which_key_map.q = {
 "" 's' menu --- {{{
 nnoremap <silent> <leader>ss :Clap blines<CR>
 nnoremap <silent> <leader>sp :Clap grep ++opt=--hidden -g "!.git/"<CR>
+nnoremap <silent> <leader>st :Clap floaterm<CR>
 
 let g:which_key_map.s = {
     \ 'name': '+search/symbol',
     \ 's': 'Search this buffer (swoop)',
     \ 'p': 'Search this project',
+    \ 't': 'Search terminals',
 \ }
 "" 's' menu end }}}
+
+"" 'T' menu --- {{{
+nnoremap <silent> <leader>Tc :Clap colors<CR>
+nnoremap <silent> <leader>Tg :Goyo<CR>
+
+let g:which_key_map.T = {
+    \ 'name': '+UI toggles/themes',
+    \ 'c': 'Choose a theme',
+    \ 'g': 'Goyo',
+\ }
+"" 'T' menu end }}} 
 
 "" 'w' menu --- {{{
 nnoremap <silent> <leader>wd :close<CR>
@@ -208,8 +250,8 @@ nnoremap <silent> <leader>wl <C-w>l
 nnoremap <silent> <leader>wk <C-w>k
 nnoremap <silent> <leader>wj <C-w>j
 nnoremap <silent> <leader>w= <C-w>=
-nnoremap <silent> <leader>w- <C-w>n
-nnoremap <silent> <leader>w/ <C-w>v
+nnoremap <silent> <leader>w- :rightbelow sb<CR>
+nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
 nnoremap <silent> <leader>ww :Clap windows<CR>
 
 let g:which_key_map.w = {

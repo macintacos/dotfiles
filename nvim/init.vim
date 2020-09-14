@@ -5,6 +5,13 @@ source $NVIM_HOME/mappings.vim
 " PLUGINZ {{{
 call plug#begin('~/.config/vim-plug')
 
+" all hail tpope
+Plug 'tpope/vim-commentary' " 'gc' prefix for commenting things
+Plug 'tpope/vim-fugitive'   " git plugin for vim
+Plug 'tpope/vim-sensible'   " sensible default options for vim
+Plug 'tpope/vim-obsession'  " cool session handling
+Plug 'tpope/vim-eunuch'     " better linux command aliases for vim
+
 " utilities
 Plug 'machakann/vim-highlightedyank'    | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
 Plug 'reedes/vim-lexical'               | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
@@ -17,19 +24,15 @@ Plug 'chrisbra/Colorizer'               | source $PLUG_CONFIG_NVIM_HOME/Colorize
 Plug 'luochen1990/rainbow'              | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } |
     \ Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'               | source $PLUG_CONFIG_NVIM_HOME/nerdtree.vim |
-    \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' } |
     \ source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vista.vim'         | source $PLUG_CONFIG_NVIM_HOME/vista.vim
 Plug 'rhysd/clever-f.vim'           | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
-Plug 'tpope/vim-commentary'         " 'gc' prefix for commenting things
-Plug 'tpope/vim-fugitive'           " git plugin for vim
-Plug 'tpope/vim-sensible'           " sensible default options for vim
+Plug 'mtth/scratch.vim'             " scratch buffer for...scratch
+Plug 'junegunn/goyo.vim'            " a 'zen' mode of sorts
 Plug 'itchyny/vim-cursorword'       " underline word under cursor
 Plug 'machakann/vim-sandwich'       " alternative to vim-surround
 Plug 'MTDL9/vim-log-highlighting'   " highlighting for log files
-Plug 'tpope/vim-obsession'          " cool session handling
 Plug 'dhruvasagar/vim-prosession'   " pro session handling
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } |
             \ source $PLUG_CONFIG_NVIM_HOME/vim-clap.vim
