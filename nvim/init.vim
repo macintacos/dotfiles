@@ -15,6 +15,8 @@ Plug 'voldikss/vim-floaterm'            | source $PLUG_CONFIG_NVIM_HOME/vim-floa
 Plug 'easymotion/vim-easymotion'        | source $PLUG_CONFIG_NVIM_HOME/vim-easymotion.vim
 Plug 'chrisbra/Colorizer'               | source $PLUG_CONFIG_NVIM_HOME/Colorizer.vim
 Plug 'luochen1990/rainbow'              | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } |
+    \ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'               | source $PLUG_CONFIG_NVIM_HOME/nerdtree.vim |
     \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' } |
