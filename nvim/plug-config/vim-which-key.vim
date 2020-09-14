@@ -18,10 +18,12 @@ nmap <leader>7 <Plug>BuffetSwitch(7)
 nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
+nnoremap <leader>/ :Clap grep ++opt=--hidden -g "!.git/"<CR>
 
 let g:which_key_map = {
     \ '[1-0]': 'Switch to buffer 1-10',
     \ '<Tab>': 'Next buffer',
+    \ '/': 'Project Search',
 \ }
 
 "" hide these
@@ -57,7 +59,7 @@ let g:which_key_map.a = {
     \ 'S': 'CoC symbols',
     \ 'x': 'Show CoC extensions',
 \ }
-"" }}}
+"" 'a' menu end }}}
 
 "" 'b' menu --- {{{
 nnoremap <silent> <leader>bd :Kwbd<CR>
@@ -98,7 +100,7 @@ nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
-nnoremap <silent> <leader>fo :Vista<CR>
+nnoremap <silent> <leader>fo :Vista!!<CR>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>ft :CocCommand explorer --toggle<CR>
 
@@ -155,7 +157,7 @@ let g:which_key_map.h.u = 'which_key_ignore'
 "" 'h' menu end }}}
 
 "" 'j' menu --- {{{
-nnoremap <silent> <leader>ji :Clap tags<CR>
+nnoremap <silent> <leader>ji :Vista finder<CR>
 nnoremap <silent> <leader>jI :Clap proj_tags<CR>
 
 let g:which_key_map.j = {

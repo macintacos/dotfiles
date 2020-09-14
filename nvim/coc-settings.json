@@ -1,4 +1,12 @@
 {
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "markdown": ["write-good", "markdownlint"],
+    "sh": "shellcheck"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "sh": "shfmt"
+  },
   "diagnostic.checkCurrentLine": true,
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -36,6 +44,12 @@
     "default": "\uf29c"
   },
   "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh", "zsh"],
+      "ignoredRootPaths": ["~"]
+    },
     "go": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
