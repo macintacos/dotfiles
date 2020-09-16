@@ -28,6 +28,8 @@ Plug 'mg979/vim-visual-multi', { 'branch': 'master' } |
     \ source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vista.vim'         | source $PLUG_CONFIG_NVIM_HOME/vista.vim
 Plug 'rhysd/clever-f.vim'           | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
+Plug 'yggdroot/indentLine'          | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
+Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
 Plug 'mtth/scratch.vim'             " scratch buffer for...scratch
 Plug 'junegunn/goyo.vim'            " a 'zen' mode of sorts
 Plug 'itchyny/vim-cursorword'       " underline word under cursor
@@ -48,7 +50,7 @@ Plug 'rizzatti/dash.vim'                            | source $PLUG_CONFIG_NVIM_H
 " theming
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'vim-airline/vim-airline' | source $PLUG_CONFIG_NVIM_HOME/vim-airline.vim
-Plug 'ryanoasis/vim-devicons'       " icons in the editor (this needs to come after nerdtree-git-plugin)
+Plug 'ryanoasis/vim-devicons' " icons in the editor (this needs to come after nerdtree-git-plugin)
 
 " putting this here to make sure it comes after everything
 Plug 'liuchengxu/vim-which-key'      | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim

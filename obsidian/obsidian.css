@@ -48,12 +48,12 @@
   --background-secondary: var(--dracula-current-line);
   --background-secondary-alt: var(--dracula-background);
   --background-accent: var(--dracula-foreground);
-  --background-modifier-border: var(--dracula-foreground);
+  --background-modifier-border: var(--dracula-background);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-success: var(--dracula-green); /*no sure*/
-  --background-modifier-error: var(--dracula-red); /*no sure*/
+  --background-modifier-success: var(--dracula-green);
+  --background-modifier-error: var(--dracula-red);
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: var(--dracula-red);
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
@@ -122,6 +122,7 @@
 /*--------------------------------------*/
 
 .titlebar-text {
+  color: var(--dracula-foreground);
   background-color: var(--dracula-current-line) !important;
 }
 
@@ -525,9 +526,17 @@ thead {
   padding: 5px 17px;
 }
 
+.nav-file.is-active > .nav-file-title {
+  border-radius: 5px !important;
+}
+
+body:not(.is-grabbing) .nav-file-title:hover {
+  border-radius: 5px !important;
+}
+
 .nav-file-title,
 .nav-folder-title {
-  font-family: "JetBrains Mono" !important;
+  font-family: var(--font-family-preview) !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
@@ -627,28 +636,6 @@ thead {
 }
 
 /***************************************/
-/*            Hide side bar            */
-/***************************************/
-
-.workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn,
-.workspace-ribbon:not(:hover) .side-dock-actions,
-.workspace-ribbon:not(:hover) .side-dock-settings {
-  display: none;
-  transition: all 300ms ease-in-out;
-}
-.workspace-ribbon:not(:hover) {
-  width: 0px;
-  transition: all 300ms ease-in-out;
-}
-
-.workspace-split.mod-left-split {
-  margin-left: 0px;
-}
-.workspace-split.mod-right-split {
-  margin-right: 0px;
-}
-
-/***************************************/
 /*           width of content          */
 /***************************************/
 
@@ -672,36 +659,21 @@ thead {
 /* header */
 
 .theme-dark .view-header {
-  background-color: var(--background-primary) !important;
+  background-color: var(--background-primary-alt) !important;
   border-top: 1px solid var(--border-color) !important;
   border-bottom: 1px solid var(--border-color) !important;
 }
 
-.theme-dark .view-header-title-container:after {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--background-primary)
-  ) !important;
-}
-
 .theme-dark .workspace-leaf.mod-active .view-header {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--dracula-current-line) !important;
   border-top: 0px !important;
   border-bottom: 3px solid var(--interactive-accent) !important;
-}
-
-.workspace-leaf.mod-active .view-header-title-container:after {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--background-secondary-alt)
-  ) !important;
+  border-radius: 4px;
 }
 
 .workspace-leaf.mod-active .view-header-title,
 .workspace-leaf.mod-active .view-header-icon {
-  color: var(--background-modifier-border);
+  color: var(--background-accent);
 }
 
 .view-header-title,
@@ -909,13 +881,25 @@ code {
 }
 
 /***************************************/
+/*          Better Scrollbar           */
+/***************************************/
+
+.nav-files-container::-webkit-scrollbar {
+  display: none;
+}
+
+/***************************************/
 /*             Icon Replace            */
 /***************************************/
 
 /* hover states */
 .workspace-tab-header-inner-icon:hover,
 .nav-action-button:hover,
-.view-action:hover {
+.view-header-icon:hover,
+.menu-item-icon:hover,
+.view-action:hover,
+.workspace-ribbon-collapse-btn:hover,
+.side-dock-ribbon-action:hover {
   filter: var(--icon-orange-filter);
 }
 
@@ -924,7 +908,10 @@ code {
 .nav-action-button path,
 .menu-item-icon path,
 .view-header-icon path,
-.view-action path {
+.nav-file-icon path,
+.view-action path,
+.workspace-ribbon-collapse-btn path,
+.side-dock-ribbon-action path {
   display: none;
 }
 
@@ -974,6 +961,11 @@ code {
 }
 
 .view-header-icon .document {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/grip-lines.svg");
+}
+
+.nav-file-icon .document {
   filter: var(--icon-purple-filter);
   background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/file-import.svg");
 }
@@ -1092,4 +1084,84 @@ code {
 .menu-item-icon .image-file {
   filter: var(--icon-purple-filter);
   background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/image.svg");
+}
+
+/* star icon */
+.menu-item-icon .star {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/star.svg");
+  background-size: 16px 16px;
+}
+
+.menu-item-icon .crossed-star {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/star-half-alt.svg");
+  background-size: 16px 16px;
+}
+
+.workspace-tab-header-inner-icon .star {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/star.svg");
+  background-size: 16px 16px;
+}
+
+/* open icon */
+.menu-item-icon .popup-open {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/external-link-alt.svg");
+}
+
+/* gear icon */
+.workspace-ribbon-collapse-btn .left-arrow {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/chevron-circle-left.svg");
+}
+
+/* sidedock icons */
+.side-dock-ribbon-action .go-to-file {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/file-invoice.svg");
+  background-size: 16px 16px;
+}
+
+.side-dock-ribbon-action .dot-network {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/network-wired.svg");
+  background-size: 17px 17px;
+}
+
+.side-dock-ribbon-action .blocks {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/cubes.svg");
+  background-size: 17px 17px;
+}
+
+.side-dock-ribbon-action .calendar-with-checkmark {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/calendar-day.svg");
+}
+
+.side-dock-ribbon-action .documents {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/clone.svg");
+}
+
+.side-dock-ribbon-action .sheets-in-box {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/inbox.svg");
+}
+
+.side-dock-ribbon-action .vault {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/hdd.svg");
+}
+
+.side-dock-ribbon-action .help {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/question-circle.svg");
+}
+
+.side-dock-ribbon-action .gear {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/cog.svg");
 }
