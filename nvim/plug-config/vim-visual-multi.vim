@@ -10,3 +10,5 @@ let g:VM_maps["Redo"] = '<C-r>'
 let g:VM_maps["Add Cursor Down"] = '<C-j>'
 let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 
+" other, more specific map additions
+nnoremap gB :call vm#commands#find_all(0, 1)<CR>

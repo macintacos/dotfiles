@@ -35,3 +35,7 @@ set mouse=a             " mouse everywhere
 set nowrap              " I don't like word wrap onby default
 set background=dark     " because dark backgrounds
 set cursorline          " make it so that the line has a highlight
+filetype plugin indent on
+
+" filetype-specific stuff
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2

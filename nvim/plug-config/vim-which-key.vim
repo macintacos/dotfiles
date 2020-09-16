@@ -69,24 +69,29 @@ let g:which_key_map.a = {
 "" 'a' menu end }}}
 
 "" 'b' menu --- {{{
+nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
+vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bp :bp<CR>
 nnoremap <silent> <leader>bq :bufdo bwipeout<CR>
-nnoremap <silent> <leader>bs :Scratch<CR>
+nnoremap <silent> <leader>bs :Clap blines<CR>
+nnoremap <silent> <leader>bS :Scratch<CR>
 nnoremap <silent> <leader>by :%y<CR>
 
 let g:which_key_map.b = {
     \ 'name': '+buffer',
+    \ '*': 'Search word/selection in buffer',
     \ 'b': 'List buffers',
     \ 'c': 'Commits for this buffer',
     \ 'd': 'Delete buffer',
     \ 'n': 'Next buffer',
     \ 'p': 'Prev buffer',
     \ 'q': 'Close all buffers',
-    \ 's': 'Open scratch buffer',
+    \ 's': 'Search buffer',
+    \ 'S': 'Open scratch buffer',
     \ 'y': 'Copy whole buffer',
 \ }
 "" 'b' menu end }}}
@@ -114,16 +119,16 @@ let g:which_key_map.e = {
     \ }
 "" 'e' menu end }}}
 
-"" 'f' menu ============>
+"" 'f' menu --- {{{
 nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
 nnoremap <silent> <leader>fo :Vista!!<CR>
-nnoremap <silent> <leader>fR expand("%:t"):
+nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
-nnoremap <silent> <leader>ft :CocCommand explorer --toggle<CR>
+nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle'<CR>
 
 let g:which_key_map.f = {
     \ 'name': '+file',
@@ -133,7 +138,7 @@ let g:which_key_map.f = {
     \ 'F': 'Show file in tree',
     \ 'n': 'Open/create new file',
     \ 'o': 'Focus outline',
-    \ 'R': 'Rename current file',
+    \ 'R': 'Rename/move current file',
     \ 's': 'Save file',
     \ 'S': 'Save all files',
     \ 't': 'File tree',
@@ -244,6 +249,7 @@ let g:which_key_map.T = {
 
 "" 'w' menu --- {{{
 nnoremap <silent> <leader>wd :close<CR>
+nnoremap <silent> <leader>wD :Kwbd<CR>:close<CR>
 nnoremap <silent> <leader>wm <C-w>_<C-w><Bar>
 nnoremap <silent> <leader>wh <C-w>h
 nnoremap <silent> <leader>wl <C-w>l
@@ -260,6 +266,7 @@ let g:which_key_map.w = {
     \ '-': 'Split window horizontal',
     \ '/': 'Split window vertical',
     \ 'd': 'Close window',
+    \ 'D': 'Close buffer and window',
     \ 'h': 'Focus split to left',
     \ 'l': 'Focus split to right',
     \ 'j': 'Focus split below',

@@ -20,7 +20,7 @@ tnoremap <silent> <C-S-K> <C-\><C-n>:FloatermKill!<CR>
 
 " settings for the view itself
 function s:floatermSettings()
-    setlocal nonumber
+    setlocal nonumber norelativenumber
 endfunction
 
 autocmd FileType floaterm call s:floatermSettings()

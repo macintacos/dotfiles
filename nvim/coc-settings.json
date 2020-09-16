@@ -14,7 +14,8 @@
     "javascript",
     "rust",
     "go",
-    "markdown"
+    "markdown",
+    "css"
   ],
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
@@ -59,7 +60,7 @@
   },
   "explorer.keyMappings": {
     ";": "actionMenu",
-    "<tab>": ""
+    "<tab>": false
   },
   "explorer.icon.enableNerdfont": true,
   "explorer.file.showHiddenFiles": true
