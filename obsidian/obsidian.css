@@ -476,15 +476,16 @@ thead {
 
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
-  top: 0.2em !important;
-  right: 4px;
-  box-sizing: border-box;
+  border-radius: 4px;
   border: 1px solid var(--text-muted);
-  position: relative;
-  width: 1.25em;
+  box-shadow: 0 0 0.1em var(--text-muted);
+  box-sizing: border-box;
   height: 1.25em;
   margin: 0;
-  box-shadow: 0 0 0.1em var(--text-muted);
+  position: relative;
+  right: 4px;
+  top: 0.2em !important;
+  width: 1.25em;
 }
 
 .checkbox-container {
@@ -527,11 +528,26 @@ thead {
 }
 
 .nav-file.is-active > .nav-file-title {
+  background-color: var(--dracula-purple);
+  color: var(--dracula-background);
   border-radius: 5px !important;
 }
 
 body:not(.is-grabbing) .nav-file-title:hover {
+  background-color: var(--dracula-orange);
+  color: var(--dracula-background);
   border-radius: 5px !important;
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background-color: var(--dracula-orange);
+  color: var(--dracula-background);
+  border-radius: 5px !important;
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+  background-color: var(--dracula-orange);
+  color: var(--dracula-background);
 }
 
 .nav-file-title,
@@ -1164,4 +1180,10 @@ code {
 .side-dock-ribbon-action .gear {
   filter: var(--icon-purple-filter);
   background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/cog.svg");
+}
+
+/* checkmark icon */
+.menu-item-icon .checkmark {
+  filter: var(--icon-purple-filter);
+  background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/951a0d011f8c832991750c16136f8e260efa60b5/svgs/solid/check.svg");
 }
