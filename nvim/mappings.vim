@@ -6,9 +6,6 @@
 
 let g:mapleader = " "
 
-" overloaded ESC so that I can get rid of highlights without ':noh'
-nnoremap <silent><esc> <esc>:noh<CR><esc>
-
 " get me out
 inoremap jj <ESC>
 inoremap kk <ESC>
@@ -59,3 +56,13 @@ nnoremap q <nop>
 " horizontal scrolling when wrapped
 nnoremap <C-l> 20zl
 nnoremap <C-h> 20zh
+
+" don't replace with register when pasting text in visual mode
+xnoremap <silent> p :<C-U>call <SID>VisualPasteKeepRegister()<CR>
+function! s:VisualPasteKeepRegister()
+    let l:registerContentBackup = getreg('"')
+    let l:registerTypeBackup = getregtype('"')
+    exec "normal! gv" . v:count1 . "\"" . v:register . "p"
+    call setreg('"', l:registerContentBackup, l:registerTypeBackup)
+endfunction
+

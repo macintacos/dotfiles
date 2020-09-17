@@ -16,3 +16,6 @@ let g:airline_section_x = ''
 
 " powerline
 let g:airline_powerline_fonts = 1
+
+" theme
+" let g:airline_theme = "github"

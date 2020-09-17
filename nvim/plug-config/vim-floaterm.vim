@@ -11,6 +11,7 @@ let g:floaterm_rootmarkers = ['.project', '.git', '.gitignore']
 " mappings
 nnoremap <silent> <C-_> :FloatermToggle<CR>
 tnoremap <silent> <C-_> <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> <C-\> :FloatermNew<CR>
 tnoremap <silent> <C-\> <C-\><C-n>:FloatermNew<CR>
 tnoremap <silent> <C-t> <C-\><C-n>:Clap floaterm<CR>
 tnoremap <silent> <C-n> <C-\><C-n>:FloatermNext<CR>

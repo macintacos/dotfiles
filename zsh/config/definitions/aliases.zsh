@@ -39,9 +39,9 @@ alias sm="smerge"
 # }}}
 
 # EXA/TREE IMPROVEMENTS (aka -> exa) {{{
-alias ls='exa -F --group-directories-first --icons'
+alias ls='exa -F --group-directories-first --icons --color automatic'
 alias l='ls -l'
-alias ll='ls -la --git --color-scale'
+alias ll='ls -la --git'
 alias tree='ls --tree'
 # }}}
 

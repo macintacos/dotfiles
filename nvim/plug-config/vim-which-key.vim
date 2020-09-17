@@ -166,15 +166,20 @@ let g:which_key_map.f.e = {
 "" 'g' menu --- {{{
 nnoremap <silent> <leader>ga :Git add .<CR>
 nnoremap <silent> <leader>gb :Git blame<CR>
+nnoremap <silent> <leader>gB :!smerge blame %<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
 nnoremap <silent> <leader>gs :!smerge .<CR>
+" the space at the end is intentional
+nnoremap <silent> <leader>gS :!smerge search 
 
 let g:which_key_map.g = {
     \ 'name': '+git',
     \ 'a': 'Stage all files',
-    \ 'b': 'Blame file',
+    \ 'b': 'Open line blame for buffer',
+    \ 'B': 'Blame file in Smerge',
     \ 'c': 'Commit staged changes',
     \ 's': 'Status',
+    \ 'S': 'Search git history',
 \ }
 "" 'g' menu end}}}
 

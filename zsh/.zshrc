@@ -28,4 +28,3 @@ source "$ZDOTDIR"/config/load_at.end
 # }}}
 
 source /Users/juliant/.config/broot/launcher/bash/br
-source $(brew --prefix asdf)/asdf.sh
