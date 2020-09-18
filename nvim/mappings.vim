@@ -60,3 +60,7 @@ nnoremap <C-h> 20zh
 
 " better 'G'
 nmap G Gzz
+
+" smartclose q mapping
+nnoremap <silent> q :call SmartClose()<CR>
+
