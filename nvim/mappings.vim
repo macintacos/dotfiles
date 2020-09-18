@@ -4,7 +4,8 @@
 " LEGEND -> Run ':help key-notation' for vim
 " REMINDER: must enable "Esc+" on iTerm for meta keys to function properly
 
-let g:mapleader = " "
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
 
 " get me out
 inoremap jj <ESC>
@@ -34,10 +35,10 @@ nnoremap <silent> <Tab>   <C-w>w
 nnoremap <silent> <S-Tab> <C-w>W
 
 " increase/decrease window size
-nnoremap <silent> + :resize +7<CR>
-nnoremap <silent> - :resize -7<CR>
-nnoremap <silent> = :vertical resize +7<CR>
-nnoremap <silent> _ :vertical resize -7<CR>
+nnoremap <silent> + :resize +5<CR>
+nnoremap <silent> - :resize -5<CR>
+nnoremap <silent> = :vertical resize +5<CR>
+nnoremap <silent> _ :vertical resize -5<CR>
 
 " so that vim-sandwich works
 map <silent> s <nop>
@@ -57,12 +58,5 @@ nnoremap q <nop>
 nnoremap <C-l> 20zl
 nnoremap <C-h> 20zh
 
-" don't replace with register when pasting text in visual mode
-xnoremap <silent> p :<C-U>call <SID>VisualPasteKeepRegister()<CR>
-function! s:VisualPasteKeepRegister()
-    let l:registerContentBackup = getreg('"')
-    let l:registerTypeBackup = getregtype('"')
-    exec "normal! gv" . v:count1 . "\"" . v:register . "p"
-    call setreg('"', l:registerContentBackup, l:registerTypeBackup)
-endfunction
-
+" better 'G'
+nmap G Gzz

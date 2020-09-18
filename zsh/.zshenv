@@ -8,7 +8,7 @@ export ZDOTDIR="$DOTFILES_HOME/zsh"
 
 export ANT_OPTS="-Xms64m -Xmx1500m"
 export ANT_HOME=/usr/local/apache-ant-1.10.5
-export BAT_THEME="Dracula"
+export BAT_THEME="TwoDark"
 export BOSUN_CONFIG_DIR=$HOME/GitLocal/Work/bosun
 export BOSUN_ENV=julian
 export CHEAT_COLORS=true

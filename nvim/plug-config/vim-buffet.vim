@@ -13,7 +13,7 @@ function! g:BuffetSetCustomColors()
     " Challenger Deep Colors
     hi! BuffetCurrentBuffer    gui=NONE guibg=#95ffa4 guifg=#1e1c31
     hi! BuffetActiveBuffer     gui=NONE guibg=#c991e1 guifg=#1e1c31
-    hi! BuffetBuffer           gui=NONE guibg=#1e1c31 guifg=#6559d4
+    hi! BuffetBuffer           gui=NONE guibg=#1e1c31 guifg=#7f77cf
     hi! BuffetModCurrentBuffer gui=NONE guibg=#91ddff guifg=#1e1c31
     hi! BuffetModActiveBuffer  gui=NONE guibg=#aaffe4 guifg=#1e1c31
     hi! BuffetModBuffer        gui=NONE guibg=#ff8080 guifg=#1e1c31

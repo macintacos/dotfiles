@@ -4,6 +4,12 @@
 " which-key invocation --- {{{
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
+vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
+
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 " end }}}
 
 " begin <leader> mapping --- {{{
@@ -23,10 +29,11 @@ nnoremap <silent> <leader>! :FloatermNew<CR>
 nnoremap <silent> <leader>; :Commentary<CR>
 nnoremap <silent> <leader>* :Clap grep ++query=<cword><CR>
 vnoremap <silent> <leader>* :Clap grep ++query=@visual<CR>
+nnoremap <silent> <leader>` :edit #<CR>
 
 let g:which_key_map = {
     \ '[1-0]': 'Switch to buffer 1-10',
-    \ '<Tab>': 'Next buffer',
+    \ '<Tab>': 'Switch to last buffer',
     \ '/': 'Project search',
     \ '*': 'Project search w/ selection',
     \ '!': 'New terminal (ctrl+/ for toggle)',
@@ -72,13 +79,14 @@ let g:which_key_map.a = {
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
 vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
+nnoremap <silent> <leader>bD :Bonly!<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bp :bp<CR>
-nnoremap <silent> <leader>bq :bufdo bwipeout<CR>
 nnoremap <silent> <leader>bs :Clap blines<CR>
 nnoremap <silent> <leader>bS :Scratch<CR>
+nnoremap <silent> <leader>bu :UndotreeToggle<CR>
 nnoremap <silent> <leader>by :%y<CR>
 
 let g:which_key_map.b = {
@@ -87,9 +95,9 @@ let g:which_key_map.b = {
     \ 'b': 'List buffers',
     \ 'c': 'Commits for this buffer',
     \ 'd': 'Delete buffer',
+    \ 'D': 'Close all buffers',
     \ 'n': 'Next buffer',
     \ 'p': 'Prev buffer',
-    \ 'q': 'Close all buffers',
     \ 's': 'Search buffer',
     \ 'S': 'Open scratch buffer',
     \ 'y': 'Copy whole buffer',
@@ -110,8 +118,8 @@ let g:which_key_map.c = {
 
 "" 'e' menu --- {{{
 nnoremap <silent> <leader>el :<C-u>CocList diagnostics<CR>
-nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<CR>
-nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<CR>
+nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<CR>zz
+nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<CR>zz
 
 let g:which_key_map.e = {
     \ 'name': '+errors/diagnostics',
@@ -120,6 +128,7 @@ let g:which_key_map.e = {
 "" 'e' menu end }}}
 
 "" 'f' menu --- {{{
+nnoremap <silent> <leader>f~ :Clap files ~<CR>
 nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
@@ -128,10 +137,11 @@ nnoremap <silent> <leader>fo :Vista!!<CR>
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
-nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle'<CR>
+nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --sources file+'<CR>
 
 let g:which_key_map.f = {
     \ 'name': '+file',
+    \ '~': 'Search files in home',
     \ '=': 'Format file',
     \ 'D': 'Delete current file',
     \ 'f': 'Open file in PWD',
@@ -148,6 +158,8 @@ let g:which_key_map.f = {
 nnoremap <silent> <leader>fec :CocConfig<CR>
 nnoremap <silent> <leader>fed :Clap files $DOTFILES_HOME<CR>
 nnoremap <silent> <leader>fek :e $DOTFILES_HOME/nvim/mappings.vim<CR>
+nnoremap <silent> <leader>feR :so $DOTFILES_HOME/nvim/init.vim<CR>:PlugInstall<CR>
+nnoremap <silent> <leader>feu :so $DOTFILES_HOME/nvim/init.vim<CR>:PlugUpdate<CR>
 nnoremap <silent> <leader>fev :Clap files $NVIM_HOME<CR>
 nnoremap <silent> <leader>few :e $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim<CR>
 
@@ -156,8 +168,10 @@ let g:which_key_map.f.e = {
     \ 'c': 'Edit CoC',
     \ 'd': 'Edit all dotfiles',
     \ 'k': 'Edit keybindings (mappings.vim)',
+    \ 'u': 'Source/update plugins',
     \ 'v': 'Edit nvim dotfiles',
     \ 'w': 'Edit which-key bindings',
+    \ 'R': 'Source/install plugins',
 \ }
 
 """ 'f.e' menu end }}}
@@ -206,8 +220,20 @@ let g:which_key_map.j = {
 \ }
 "" 'j' menu end }}}
 
-"" MAJOR menu --- {{{
-"" MAJOR menu end }}}
+"" 'o' menu --- {{{
+nmap <silent> <leader>of gof
+nmap <silent> <leader>oF goF
+nmap <silent> <leader>ot got
+nmap <silent> <leader>oT goT
+
+let g:which_key_map.o = {
+    \ 'name': '+open',
+    \ 'f': 'Open file in Finder',
+    \ 'F': 'Open PWD in Finder',
+    \ 't': 'Open file in terminal',
+    \ 'T': 'open PWD in terminal'
+\ }
+"" 'o' menu end }}}
 
 "" 'p' menu --- {{{
 nnoremap <silent> <leader>pp :Clap zoxide<CR>
@@ -296,4 +322,36 @@ let g:which_key_map.w.f = {
 """ 'w.f' menu end }}}
 "" 'w' menu end }}}
 " end <leader> mapping }}}
+
+" <localleader> mapping --- {{{
+" mappings in this menu should be filetype specific
+let g:which_key_map_local = {}
+
+"" BOOKMARKS
+nnoremap <silent> <localleader>bm :<C-u>BookmarkToggle<Cr>
+nnoremap <silent> <localleader>bi :<C-u>BookmarkAnnotate<Cr>
+nnoremap <silent> <localleader>ba :<C-u>BookmarkShowAll<Cr>
+nnoremap <silent> <localleader>bn :<C-u>BookmarkNext<Cr>
+nnoremap <silent> <localleader>bp :<C-u>BookmarkPrev<Cr>
+let g:which_key_map_local.b = {
+    \ 'name': '+bookmarks',
+    \ 'm': 'Toggle bookmark',
+    \ 'i': 'Annotate line(s)',
+    \ 'a': 'Show all bookmarks',
+    \ 'n': 'Next bookmark',
+    \ 'p': 'Prev bookmark',
+\ }
+
+"" MARKDOWN
+autocmd FileType markdown nmap <buffer> <leader>mv <Plug>MarkdownPreview
+autocmd FileType markdown let g:which_key_map_local.m = {
+    \ 'name': '+markdown',
+    \ 'v': 'Markdown preview start',
+    \ }
+
+"" SPLITS/JOINS
+nmap <silent> <localleader>sj :SplitjoinSplit<CR>
+nmap <silent> <localleader>sk :SplitjoinJoin<CR>
+
+" end <localleader> mapping
 

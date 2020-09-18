@@ -17,6 +17,12 @@
     "markdown",
     "css"
   ],
+  "markdownlint.config": {
+    "MD034": false,
+    "MD013": false,
+    "MD046": false,
+    "MD025": false
+  },
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",
