@@ -73,19 +73,13 @@ nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 "nmap <C-W>! <Plug>Kwbd
 
 " smart closing (mapped to q in mappings.vim)
-let g:spacevim_smartcloseignorewin = ['__Tagbar__' , 'vimfiler:default', 'coc-explorer']
+let g:spacevim_smartcloseignorewin = ['__Tagbar__', 'coc-explorer']
 let g:spacevim_smartcloseignoreft  = [
             \ 'tagbar',
             \ 'coc-explorer',
-            \ 'vimfiler',
-            \ 'defx',
-            \ 'SpaceVimRunner',
-            \ 'SpaceVimREPL',
-            \ 'SpaceVimQuickFix',
             \ 'HelpDescribe',
             \ 'VebuggerShell',
             \ 'VebuggerTerminal',
-            \ 'SpaceVimTabsManager'
             \ ]
 
 function! CheckWinIsFloat(winnr) abort
