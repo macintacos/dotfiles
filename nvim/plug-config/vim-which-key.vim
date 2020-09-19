@@ -6,7 +6,6 @@ nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
-nnoremap <silent> sw
 " end }}}
 
 " begin <leader> mapping --- {{{
@@ -76,7 +75,7 @@ let g:which_key_map.a = {
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
 vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
-nnoremap <silent> <leader>bD :call KillVisibleBufferChooseWin()<CR>
+nnoremap <silent> <leader>bD :Bonly!<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bn :bn<CR>
@@ -84,6 +83,7 @@ nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
 nnoremap <silent> <leader>bs :Scratch<CR>
 nnoremap <silent> <leader>bu :UndotreeToggle<CR>
+nnoremap <silent> <leader>bw :call KillVisibleBufferChooseWin()<CR>
 nnoremap <silent> <leader>by :%y<CR>
 
 let g:which_key_map.b = {
@@ -91,13 +91,14 @@ let g:which_key_map.b = {
             \ '*': 'Search word/selection in buffer',
             \ 'b': 'List buffers',
             \ 'c': 'Commits for this buffer',
-            \ 'd': 'Delete buffer',
-            \ 'D': 'Close all buffers',
+            \ 'd': 'Close this buffer',
+            \ 'D': 'Close all other buffers',
             \ 'n': 'Next buffer',
             \ 'o': 'Show outline',
             \ 'p': 'Prev buffer',
             \ 's': 'Open scratch buffer',
             \ 'u': 'Show undo tree',
+            \ 'w': 'Choose buffer to kill',
             \ 'y': 'Copy whole buffer',
             \ }
 "" 'b' menu end }}}
@@ -241,7 +242,7 @@ let g:which_key_map.o = {
 
 "" 'p' menu --- {{{
 nnoremap <silent> <leader>pp :Clap zoxide<CR>
-nnoremap <silent> <leader>pt :Todo
+nnoremap <silent> <leader>pt :OpenTodo<CR>
 
 let g:which_key_map.p = {
             \ 'name': '+projects',
