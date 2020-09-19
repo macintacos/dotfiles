@@ -6,10 +6,7 @@ nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
-
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+nnoremap <silent> sw
 " end }}}
 
 " begin <leader> mapping --- {{{
@@ -83,6 +80,7 @@ nnoremap <silent> <leader>bD :Bonly!<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
 nnoremap <silent> <leader>bs :Clap blines<CR>
 nnoremap <silent> <leader>bS :Scratch<CR>
@@ -97,9 +95,11 @@ let g:which_key_map.b = {
     \ 'd': 'Delete buffer',
     \ 'D': 'Close all buffers',
     \ 'n': 'Next buffer',
+    \ 'o': 'Show outline',
     \ 'p': 'Prev buffer',
     \ 's': 'Search buffer',
     \ 'S': 'Open scratch buffer',
+    \ 'u': 'Show undo tree',
     \ 'y': 'Copy whole buffer',
 \ }
 "" 'b' menu end }}}
@@ -133,7 +133,6 @@ nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
-nnoremap <silent> <leader>fo :Vista!!<CR>
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
@@ -199,9 +198,11 @@ let g:which_key_map.g = {
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
 nnoremap <silent> <leader>hh :Clap help_tags<CR>
+nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
 
 let g:which_key_map.h = {
     \ 'name' : '+help',
+    \ '*': 'Help for word under cursor',
     \ 'h': 'Search help commands',
     \ }
 let g:which_key_map.h.p = 'which_key_ignore'
@@ -237,6 +238,7 @@ let g:which_key_map.o = {
 
 "" 'p' menu --- {{{
 nnoremap <silent> <leader>pp :Clap zoxide<CR>
+nnoremap <silent> <leader>pt :Todo
 
 let g:which_key_map.p = {
     \ 'name': '+projects',
@@ -267,43 +269,59 @@ let g:which_key_map.s = {
 \ }
 "" 's' menu end }}}
 
-"" 'T' menu --- {{{
-nnoremap <silent> <leader>Tc :Clap colors<CR>
-nnoremap <silent> <leader>Tg :Goyo<CR>
+"" 't' menu --- {{{
+nnoremap <silent> <leader>tc :Clap colors<CR>
+nnoremap <silent> <leader>tg :Goyo<CR>
+nnoremap <silent> <leader>tm :OpenTodo<CR>
+nnoremap <silent> <leader>tn :<C-u>setlocal nonumber! norelativenumber!<CR>
 
-let g:which_key_map.T = {
+let g:which_key_map.t = {
     \ 'name': '+UI toggles/themes',
     \ 'c': 'Choose a theme',
     \ 'g': 'Goyo',
+    \ 'm': 'Open TODOs',
+    \ 'n': 'Toggle line numbers',
 \ }
-"" 'T' menu end }}} 
+"" 't' menu end }}}
 
 "" 'w' menu --- {{{
-nnoremap <silent> <leader>wd :close<CR>
+nnoremap <silent> <leader>w= <C-w>=
+nnoremap <silent> <leader>w- :rightbelow sb<CR>
+nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
+nnoremap <silent> <leader>wd :ChooseWin<CR>:close<CR>:wincmd w<CR>
 nnoremap <silent> <leader>wD :Kwbd<CR>:close<CR>
-nnoremap <silent> <leader>wm <C-w>_<C-w><Bar>
+nmap <silent> <leader>wm <Plug>(zoom-toggle)
 nnoremap <silent> <leader>wh <C-w>h
 nnoremap <silent> <leader>wl <C-w>l
 nnoremap <silent> <leader>wk <C-w>k
 nnoremap <silent> <leader>wj <C-w>j
-nnoremap <silent> <leader>w= <C-w>=
-nnoremap <silent> <leader>w- :rightbelow sb<CR>
-nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
-nnoremap <silent> <leader>ww :Clap windows<CR>
+nnoremap <silent> <leader>wH :wincmd H<CR>
+nnoremap <silent> <leader>wL :wincmd L<CR>
+nnoremap <silent> <leader>wJ :wincmd J<CR>
+nnoremap <silent> <leader>wK :wincmd K<CR>
+nnoremap <silent> <leader>ws :rightbelow sb<CR>
+nnoremap <silent> <leader>wv :vertical rightbelow sb<CR>
+nnoremap <silent> <leader>ww :ChooseWin<CR>
 
 let g:which_key_map.w = {
     \ 'name': '+window',
     \ '=': 'Reset windows',
     \ '-': 'Split window horizontal',
     \ '/': 'Split window vertical',
-    \ 'd': 'Close window',
+    \ 'd': 'Choose window to close',
     \ 'D': 'Close buffer and window',
-    \ 'h': 'Focus split to left',
-    \ 'l': 'Focus split to right',
-    \ 'j': 'Focus split below',
-    \ 'k': 'Focus split above',
+    \ 'h': 'Focus window to left',
+    \ 'l': 'Focus window to right',
+    \ 'j': 'Focus window below',
+    \ 'k': 'Focus window above',
+    \ 'H': 'Move window to left',
+    \ 'L': 'Move window to right',
+    \ 'J': 'Move window to bottom',
+    \ 'K': 'Move window to top',
     \ 'm': 'Maximize buffer',
-    \ 'w': 'List windows',
+    \ 's': 'Split window horizontal',
+    \ 'v': 'Split window vertical',
+    \ 'w': 'Choose windows',
 \ }
 
 """ 'w.f' menu --- {{{
@@ -321,6 +339,12 @@ let g:which_key_map.w.f = {
 \ }
 """ 'w.f' menu end }}}
 "" 'w' menu end }}}
+
+"" 'x' menu --- {{{
+let g:which_key_map.x = {
+    \ 'name': '+text',
+\ }
+"" 'x' menu end }}}
 " end <leader> mapping }}}
 
 " <localleader> mapping --- {{{

@@ -40,14 +40,16 @@ Plug 'svermeulen/vim-cutlass'        | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass
 Plug 'svermeulen/vim-yoink'          | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
 Plug 'voldikss/vim-floaterm'         | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
 Plug 'yggdroot/indentLine'           | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
-Plug 'wellle/context.vim'            | source $PLUG_CONFIG_NVIM_HOME/context.vim
 Plug 'AndrewRadev/splitjoin.vim'     | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
+Plug 'Asheq/close-buffers.vim'       | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
+Plug 't9md/vim-choosewin'            | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }        | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } | source $PLUG_CONFIG_NVIM_HOME/vim-clap.vim
 
 " utilities with nothing else
 Plug 'MTDL9/vim-log-highlighting'     " highlighting for log files
 Plug 'dhruvasagar/vim-prosession'     " pro session handling
+Plug 'dhruvasagar/vim-zoom'           " zooming in/out of windows (mapped to SPC w m)
 Plug 'godlygeek/tabular'              " needs to be loaded before vim-markdown
 Plug 'itchyny/vim-cursorword'         " underline word under cursor
 Plug 'justinmk/vim-gtfo'              " open current file/project in finder/terminal
@@ -56,6 +58,7 @@ Plug 'mtth/scratch.vim'               " scratch buffer for...scratch
 Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
 Plug 'wellle/targets.vim'             " moar text objects for doing fun things
 Plug 'mbbill/undotree'                " show an undo tree for the current buffer
+Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from project
 
 " languages-specific and/or adjacent
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HOME/vim-go.vim
@@ -64,6 +67,7 @@ Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HO
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
 Plug 'plasticboy/vim-markdown'     | source $PLUG_CONFIG_NVIM_HOME/vim-markdown.vim
 Plug 'MattesGroeger/vim-bookmarks' | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
+Plug 'preservim/tagbar' " function signatures and stuff
 
 " themes
 Plug 'dracula/vim', {'as': 'dracula'}

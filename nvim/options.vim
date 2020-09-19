@@ -37,6 +37,7 @@ set mouse=a         " mouse everywhere
 set nowrap          " I don't like word wrap onby default
 set background=dark " because dark backgrounds
 set cursorline      " make it so that the line has a highlight
+set scrolloff=5     " keep at least these many lines visible when scrolling
 
 " there's a space at the end that's important, leave it there
 set list lcs=tab:\→\ 

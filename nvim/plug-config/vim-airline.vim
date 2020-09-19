@@ -8,11 +8,11 @@ let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline_stl_path_style = 'short'
 
 " only show file name
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_section_c = '%t'
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline_section_c = '%t'
 
 " don't show file type
-let g:airline_section_x = ''
+" let g:airline_section_x = ''
 
 " powerline
 let g:airline_powerline_fonts = 1
