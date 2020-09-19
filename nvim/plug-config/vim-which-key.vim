@@ -29,13 +29,13 @@ vnoremap <silent> <leader>* :Clap grep ++query=@visual<CR>
 nnoremap <silent> <leader>` :edit #<CR>
 
 let g:which_key_map = {
-    \ '[1-0]': 'Switch to buffer 1-10',
-    \ '<Tab>': 'Switch to last buffer',
-    \ '/': 'Project search',
-    \ '*': 'Project search w/ selection',
-    \ '!': 'New terminal (ctrl+/ for toggle)',
-    \ ';': 'Toggle comment',
-\ }
+            \ '[1-0]': 'Switch to buffer 1-10',
+            \ '<Tab>': 'Switch to last buffer',
+            \ '/': 'Project search',
+            \ '*': 'Project search w/ selection',
+            \ '!': 'New terminal (ctrl+/ for toggle)',
+            \ ';': 'Toggle comment',
+            \ }
 
 "" hide these
 let g:which_key_map.1 = 'which_key_ignore'
@@ -61,47 +61,45 @@ nnoremap <silent><nowait> <leader>aS  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <leader>ax  :<C-u>CocList extensions<cr>
 
 let g:which_key_map.a = {
-    \ 'name': '+actions/coc',
-    \ 'b': 'CoC action on buffer',
-    \ 'c': 'CoC commands',
-    \ 'f': 'Auto-fix line',
-    \ 'o': 'CoC outline',
-    \ 's': 'Action on selected',
-    \ 'S': 'CoC symbols',
-    \ 'x': 'Show CoC extensions',
-\ }
+            \ 'name': '+actions/coc',
+            \ 'b': 'CoC action on buffer',
+            \ 'c': 'CoC commands',
+            \ 'f': 'Auto-fix line',
+            \ 'o': 'CoC outline',
+            \ 's': 'Action on selected',
+            \ 'S': 'CoC symbols',
+            \ 'x': 'Show CoC extensions',
+            \ }
 "" 'a' menu end }}}
 
 "" 'b' menu --- {{{
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
 vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
-nnoremap <silent> <leader>bD :Bonly!<CR>
+nnoremap <silent> <leader>bD :call KillVisibleBufferChooseWin()<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
-nnoremap <silent> <leader>bs :Clap blines<CR>
-nnoremap <silent> <leader>bS :Scratch<CR>
+nnoremap <silent> <leader>bs :Scratch<CR>
 nnoremap <silent> <leader>bu :UndotreeToggle<CR>
 nnoremap <silent> <leader>by :%y<CR>
 
 let g:which_key_map.b = {
-    \ 'name': '+buffer',
-    \ '*': 'Search word/selection in buffer',
-    \ 'b': 'List buffers',
-    \ 'c': 'Commits for this buffer',
-    \ 'd': 'Delete buffer',
-    \ 'D': 'Close all buffers',
-    \ 'n': 'Next buffer',
-    \ 'o': 'Show outline',
-    \ 'p': 'Prev buffer',
-    \ 's': 'Search buffer',
-    \ 'S': 'Open scratch buffer',
-    \ 'u': 'Show undo tree',
-    \ 'y': 'Copy whole buffer',
-\ }
+            \ 'name': '+buffer',
+            \ '*': 'Search word/selection in buffer',
+            \ 'b': 'List buffers',
+            \ 'c': 'Commits for this buffer',
+            \ 'd': 'Delete buffer',
+            \ 'D': 'Close all buffers',
+            \ 'n': 'Next buffer',
+            \ 'o': 'Show outline',
+            \ 'p': 'Prev buffer',
+            \ 's': 'Open scratch buffer',
+            \ 'u': 'Show undo tree',
+            \ 'y': 'Copy whole buffer',
+            \ }
 "" 'b' menu end }}}
 
 "" 'c' menu --- {{{
@@ -110,10 +108,10 @@ xmap <leader>c= <Plug>(coc-format-selected)
 nmap <leader>c= <Plug>(coc-format-selected)
 
 let g:which_key_map.c = {
-    \ 'name': '+code/change',
-    \ 'r': 'Rename symbol',
-    \ '=': 'Format selected',
-\ }
+            \ 'name': '+code/change',
+            \ 'r': 'Rename symbol',
+            \ '=': 'Format selected',
+            \ }
 "" 'c' menu end }}}
 
 "" 'e' menu --- {{{
@@ -122,9 +120,9 @@ nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<CR>zz
 nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<CR>zz
 
 let g:which_key_map.e = {
-    \ 'name': '+errors/diagnostics',
-    \ 'l': 'List diagnostics',
-    \ }
+            \ 'name': '+errors/diagnostics',
+            \ 'l': 'List diagnostics',
+            \ }
 "" 'e' menu end }}}
 
 "" 'f' menu --- {{{
@@ -133,25 +131,26 @@ nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
+nnoremap <silent> <leader>fo
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
 nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --sources file+'<CR>
 
 let g:which_key_map.f = {
-    \ 'name': '+file',
-    \ '~': 'Search files in home',
-    \ '=': 'Format file',
-    \ 'D': 'Delete current file',
-    \ 'f': 'Open file in PWD',
-    \ 'F': 'Show file in tree',
-    \ 'n': 'Open/create new file',
-    \ 'o': 'Focus outline',
-    \ 'R': 'Rename/move current file',
-    \ 's': 'Save file',
-    \ 'S': 'Save all files',
-    \ 't': 'File tree',
-\ }
+            \ 'name': '+file',
+            \ '~': 'Search files in home',
+            \ '=': 'Format file',
+            \ 'D': 'Delete current file',
+            \ 'f': 'Open file in PWD',
+            \ 'F': 'Show file in tree',
+            \ 'n': 'Open/create new file',
+            \ 'o': 'Focus outline',
+            \ 'R': 'Rename/move current file',
+            \ 's': 'Save file',
+            \ 'S': 'Save all files',
+            \ 't': 'File tree',
+            \ }
 
 """ 'f.e' menu ============>
 nnoremap <silent> <leader>fec :CocConfig<CR>
@@ -163,15 +162,15 @@ nnoremap <silent> <leader>fev :Clap files $NVIM_HOME<CR>
 nnoremap <silent> <leader>few :e $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim<CR>
 
 let g:which_key_map.f.e = {
-    \ 'name': '+edit',
-    \ 'c': 'Edit CoC',
-    \ 'd': 'Edit all dotfiles',
-    \ 'k': 'Edit keybindings (mappings.vim)',
-    \ 'u': 'Source/update plugins',
-    \ 'v': 'Edit nvim dotfiles',
-    \ 'w': 'Edit which-key bindings',
-    \ 'R': 'Source/install plugins',
-\ }
+            \ 'name': '+edit',
+            \ 'c': 'Edit CoC',
+            \ 'd': 'Edit all dotfiles',
+            \ 'k': 'Edit keybindings (mappings.vim)',
+            \ 'u': 'Source/update plugins',
+            \ 'v': 'Edit nvim dotfiles',
+            \ 'w': 'Edit which-key bindings',
+            \ 'R': 'Source/install plugins',
+            \ }
 
 """ 'f.e' menu end }}}
 "" 'f' menu end }}}
@@ -186,14 +185,14 @@ nnoremap <silent> <leader>gs :!smerge .<CR>
 nnoremap <silent> <leader>gS :!smerge search 
 
 let g:which_key_map.g = {
-    \ 'name': '+git',
-    \ 'a': 'Stage all files',
-    \ 'b': 'Open line blame for buffer',
-    \ 'B': 'Blame file in Smerge',
-    \ 'c': 'Commit staged changes',
-    \ 's': 'Status',
-    \ 'S': 'Search git history',
-\ }
+            \ 'name': '+git',
+            \ 'a': 'Stage all files',
+            \ 'b': 'Open line blame for buffer',
+            \ 'B': 'Blame file in Smerge',
+            \ 'c': 'Commit staged changes',
+            \ 's': 'Status',
+            \ 'S': 'Search git history',
+            \ }
 "" 'g' menu end}}}
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
@@ -201,10 +200,10 @@ nnoremap <silent> <leader>hh :Clap help_tags<CR>
 nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
 
 let g:which_key_map.h = {
-    \ 'name' : '+help',
-    \ '*': 'Help for word under cursor',
-    \ 'h': 'Search help commands',
-    \ }
+            \ 'name' : '+help',
+            \ '*': 'Help for word under cursor',
+            \ 'h': 'Search help commands',
+            \ }
 let g:which_key_map.h.p = 'which_key_ignore'
 let g:which_key_map.h.s = 'which_key_ignore'
 let g:which_key_map.h.u = 'which_key_ignore'
@@ -213,12 +212,16 @@ let g:which_key_map.h.u = 'which_key_ignore'
 "" 'j' menu --- {{{
 nnoremap <silent> <leader>ji :Vista finder<CR>
 nnoremap <silent> <leader>jI :Clap proj_tags<CR>
+nnoremap <silent> <leader>jJ :SplitjoinSplit<CR>
+nnoremap <silent> <leader>jK :SplitjoinJoin<CR>
 
 let g:which_key_map.j = {
-    \ 'name': '+jump',
-    \ 'i': 'Jump to symbol in buffer',
-    \ 'I': 'Jump to symbol in project',
-\ }
+            \ 'name': '+jump',
+            \ 'i': 'Jump to symbol in buffer',
+            \ 'I': 'Jump to symbol in project',
+            \ 'j': 'Split code below',
+            \ 'k': 'Join code above',
+            \ }
 "" 'j' menu end }}}
 
 "" 'o' menu --- {{{
@@ -228,12 +231,12 @@ nmap <silent> <leader>ot got
 nmap <silent> <leader>oT goT
 
 let g:which_key_map.o = {
-    \ 'name': '+open',
-    \ 'f': 'Open file in Finder',
-    \ 'F': 'Open PWD in Finder',
-    \ 't': 'Open file in terminal',
-    \ 'T': 'open PWD in terminal'
-\ }
+            \ 'name': '+open',
+            \ 'f': 'Open file in Finder',
+            \ 'F': 'Open PWD in Finder',
+            \ 't': 'Open file in terminal',
+            \ 'T': 'open PWD in terminal'
+            \ }
 "" 'o' menu end }}}
 
 "" 'p' menu --- {{{
@@ -241,32 +244,34 @@ nnoremap <silent> <leader>pp :Clap zoxide<CR>
 nnoremap <silent> <leader>pt :Todo
 
 let g:which_key_map.p = {
-    \ 'name': '+projects',
-    \ 'p': 'Switch projects',
-\ }
+            \ 'name': '+projects',
+            \ 'p': 'Switch projects',
+            \ }
 "" 'p' menu end }}}
 
 "" 'q' menu --- {{{
 nnoremap <silent> <leader>qq :qa<CR>
 
 let g:which_key_map.q = {
-    \ 'name': '+quit',
-    \ 'q': 'Quit all',
-\ }
+            \ 'name': '+quit',
+            \ 'q': 'Quit all',
+            \ }
 
 "" 'q' menu end }}}
 
 "" 's' menu --- {{{
+nnoremap <silent> <leader>sb :Clap lines<CR>
 nnoremap <silent> <leader>ss :Clap blines<CR>
 nnoremap <silent> <leader>sp :Clap grep ++opt=--hidden -g "!.git/"<CR>
 nnoremap <silent> <leader>st :Clap floaterm<CR>
 
 let g:which_key_map.s = {
-    \ 'name': '+search/symbol',
-    \ 's': 'Search this buffer (swoop)',
-    \ 'p': 'Search this project',
-    \ 't': 'Search terminals',
-\ }
+            \ 'name': '+search/symbol',
+            \ 'b': 'Search in all buffers',
+            \ 's': 'Search this buffer (swoop)',
+            \ 'p': 'Search this project',
+            \ 't': 'Search terminals',
+            \ }
 "" 's' menu end }}}
 
 "" 't' menu --- {{{
@@ -276,19 +281,19 @@ nnoremap <silent> <leader>tm :OpenTodo<CR>
 nnoremap <silent> <leader>tn :<C-u>setlocal nonumber! norelativenumber!<CR>
 
 let g:which_key_map.t = {
-    \ 'name': '+UI toggles/themes',
-    \ 'c': 'Choose a theme',
-    \ 'g': 'Goyo',
-    \ 'm': 'Open TODOs',
-    \ 'n': 'Toggle line numbers',
-\ }
+            \ 'name': '+UI toggles/themes',
+            \ 'c': 'Choose a theme',
+            \ 'g': 'Goyo',
+            \ 'm': 'Open TODOs',
+            \ 'n': 'Toggle line numbers',
+            \ }
 "" 't' menu end }}}
 
 "" 'w' menu --- {{{
 nnoremap <silent> <leader>w= <C-w>=
 nnoremap <silent> <leader>w- :rightbelow sb<CR>
 nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
-nnoremap <silent> <leader>wd :ChooseWin<CR>:close<CR>:wincmd w<CR>
+nnoremap <silent> <leader>wd :call CloseWindowChooseWin()<CR>
 nnoremap <silent> <leader>wD :Kwbd<CR>:close<CR>
 nmap <silent> <leader>wm <Plug>(zoom-toggle)
 nnoremap <silent> <leader>wh <C-w>h
@@ -304,25 +309,25 @@ nnoremap <silent> <leader>wv :vertical rightbelow sb<CR>
 nnoremap <silent> <leader>ww :ChooseWin<CR>
 
 let g:which_key_map.w = {
-    \ 'name': '+window',
-    \ '=': 'Reset windows',
-    \ '-': 'Split window horizontal',
-    \ '/': 'Split window vertical',
-    \ 'd': 'Choose window to close',
-    \ 'D': 'Close buffer and window',
-    \ 'h': 'Focus window to left',
-    \ 'l': 'Focus window to right',
-    \ 'j': 'Focus window below',
-    \ 'k': 'Focus window above',
-    \ 'H': 'Move window to left',
-    \ 'L': 'Move window to right',
-    \ 'J': 'Move window to bottom',
-    \ 'K': 'Move window to top',
-    \ 'm': 'Maximize buffer',
-    \ 's': 'Split window horizontal',
-    \ 'v': 'Split window vertical',
-    \ 'w': 'Choose windows',
-\ }
+            \ 'name': '+window',
+            \ '=': 'Reset windows',
+            \ '-': 'Split window horizontal',
+            \ '/': 'Split window vertical',
+            \ 'd': 'Choose window to close',
+            \ 'D': 'Close buffer and window',
+            \ 'h': 'Focus window to left',
+            \ 'l': 'Focus window to right',
+            \ 'j': 'Focus window below',
+            \ 'k': 'Focus window above',
+            \ 'H': 'Move window to left',
+            \ 'L': 'Move window to right',
+            \ 'J': 'Move window to bottom',
+            \ 'K': 'Move window to top',
+            \ 'm': 'Maximize buffer',
+            \ 's': 'Split window horizontal',
+            \ 'v': 'Split window vertical',
+            \ 'w': 'Choose windows',
+            \ }
 
 """ 'w.f' menu --- {{{
 nnoremap <silent> <leader>wfl :vertical rightbelow sb<CR>:Clap gfiles<CR>
@@ -331,19 +336,19 @@ nnoremap <silent> <leader>wfj :rightbelow sb<CR>:Clap gfiles<CR>
 nnoremap <silent> <leader>wfk :split<CR>:Clap gfiles<CR>
 
 let g:which_key_map.w.f = {
-    \ 'name': '+file-in-window',
-    \ 'l': 'New file split right',
-    \ 'h': 'New file split left',
-    \ 'j': 'New file split below',
-    \ 'k': 'New file split above',
-\ }
+            \ 'name': '+file-in-window',
+            \ 'l': 'New file split right',
+            \ 'h': 'New file split left',
+            \ 'j': 'New file split below',
+            \ 'k': 'New file split above',
+            \ }
 """ 'w.f' menu end }}}
 "" 'w' menu end }}}
 
 "" 'x' menu --- {{{
 let g:which_key_map.x = {
-    \ 'name': '+text',
-\ }
+            \ 'name': '+text',
+            \ }
 "" 'x' menu end }}}
 " end <leader> mapping }}}
 
@@ -358,24 +363,29 @@ nnoremap <silent> <localleader>ba :<C-u>BookmarkShowAll<Cr>
 nnoremap <silent> <localleader>bn :<C-u>BookmarkNext<Cr>
 nnoremap <silent> <localleader>bp :<C-u>BookmarkPrev<Cr>
 let g:which_key_map_local.b = {
-    \ 'name': '+bookmarks',
-    \ 'm': 'Toggle bookmark',
-    \ 'i': 'Annotate line(s)',
-    \ 'a': 'Show all bookmarks',
-    \ 'n': 'Next bookmark',
-    \ 'p': 'Prev bookmark',
-\ }
+            \ 'name': '+bookmarks',
+            \ 'm': 'Toggle bookmark',
+            \ 'i': 'Annotate line(s)',
+            \ 'a': 'Show all bookmarks',
+            \ 'n': 'Next bookmark',
+            \ 'p': 'Prev bookmark',
+            \ }
 
 "" MARKDOWN
 autocmd FileType markdown nmap <buffer> <leader>mv <Plug>MarkdownPreview
 autocmd FileType markdown let g:which_key_map_local.m = {
-    \ 'name': '+markdown',
-    \ 'v': 'Markdown preview start',
-    \ }
+            \ 'name': '+markdown',
+            \ 'v': 'Markdown preview start',
+            \ }
 
 "" SPLITS/JOINS
 nmap <silent> <localleader>sj :SplitjoinSplit<CR>
 nmap <silent> <localleader>sk :SplitjoinJoin<CR>
+let g:which_key_map_local.s = {
+            \ 'name': '+split',
+            \ 'j': 'Split code below',
+            \ 'k': 'Join code above',
+            \ }
 
 " end <localleader> mapping
 
