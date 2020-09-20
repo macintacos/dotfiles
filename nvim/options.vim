@@ -44,3 +44,4 @@ set list lcs=tab:\→\
 
 " filetype-specific stuff
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType markdown setlocal textwidth=90
