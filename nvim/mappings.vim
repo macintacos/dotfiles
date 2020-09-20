@@ -37,8 +37,8 @@ nnoremap <silent> <S-Tab> <C-w>W
 " increase/decrease window size
 nnoremap <silent> <M-w> :resize +5<CR>
 nnoremap <silent> <M-s> :resize -5<CR>
-nnoremap <silent> <M-a> :vertical resize +5<CR>
-nnoremap <silent> <M-d> :vertical resize -5<CR>
+nnoremap <silent> <M-d> :vertical resize +5<CR>
+nnoremap <silent> <M-a> :vertical resize -5<CR>
 
 " so that vim-sandwich works
 map <silent> s <nop>
