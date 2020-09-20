@@ -4,7 +4,7 @@
 " LEGEND -> Run ':help key-notation' for vim
 " REMINDER: must enable "Esc+" on iTerm for meta keys to function properly
 
-let g:mapleader = "\<Space>"
+let g:mapleader = " "
 let g:maplocalleader = ','
 
 " get me out

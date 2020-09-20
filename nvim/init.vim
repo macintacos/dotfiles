@@ -83,7 +83,7 @@ source $PLUG_CONFIG_NVIM_HOME/vim-buffet.vim | Plug 'bagrat/vim-buffet'
 " putting this here to make sure it comes after everything
 Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim
 call plug#end()
-call which_key#register('<Space>', "g:which_key_map") " this makes sure which-key is properly loaded
+call which_key#register(' ', "g:which_key_map") " this makes sure which-key is properly loaded
 call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
 " }}}
 
