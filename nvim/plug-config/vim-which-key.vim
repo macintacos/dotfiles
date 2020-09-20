@@ -2,8 +2,8 @@
 " Description: gives which-key-like functionality to vim; something that I sorely need in order to do things the way that I want to do them in Vim
 
 " which-key invocation --- {{{
-nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader>      :<c-u>WhichKey ' '<CR>
+vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ' '<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
 " end }}}
@@ -34,6 +34,7 @@ let g:which_key_map = {
             \ '*': 'Project search w/ selection',
             \ '!': 'New terminal (ctrl+/ for toggle)',
             \ ';': 'Toggle comment',
+            \ '`': 'Previous buffer',
             \ }
 
 "" hide these
@@ -129,10 +130,10 @@ let g:which_key_map.e = {
 "" 'f' menu --- {{{
 nnoremap <silent> <leader>f~ :Clap files ~<CR>
 nnoremap <silent> <leader>f= :Format<CR>
+nnoremap <silent> <leader>fd :Clap filer %:p:h<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
-nnoremap <silent> <leader>fo
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
@@ -143,13 +144,13 @@ let g:which_key_map.f = {
             \ '~': 'Search files in home',
             \ '=': 'Format file',
             \ 'D': 'Delete current file',
+            \ 'd': 'Find file in current dir',
             \ 'f': 'Open file in PWD',
             \ 'F': 'Show file in tree',
             \ 'n': 'Open/create new file',
-            \ 'o': 'Focus outline',
             \ 'R': 'Rename/move current file',
-            \ 's': 'Save file',
             \ 'S': 'Save all files',
+            \ 's': 'Save file',
             \ 't': 'File tree',
             \ }
 
