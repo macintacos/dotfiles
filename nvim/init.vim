@@ -33,8 +33,6 @@ Plug 'easymotion/vim-easymotion'     | source $PLUG_CONFIG_NVIM_HOME/vim-easymot
 Plug 'liuchengxu/vista.vim'          | source $PLUG_CONFIG_NVIM_HOME/vista.vim
 Plug 'luochen1990/rainbow'           | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
 Plug 'machakann/vim-highlightedyank' | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
-Plug 'reedes/vim-lexical'            | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
-Plug 'reedes/vim-pencil'             | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
 Plug 'rhysd/clever-f.vim'            | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
 Plug 'svermeulen/vim-cutlass'        | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
 Plug 'svermeulen/vim-yoink'          | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
@@ -64,10 +62,14 @@ Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from pro
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HOME/vim-go.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    | source $PLUG_CONFIG_NVIM_HOME/coc.vim
 Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HOME/dash.vim
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
-Plug 'plasticboy/vim-markdown'     | source $PLUG_CONFIG_NVIM_HOME/vim-markdown.vim
-Plug 'MattesGroeger/vim-bookmarks' | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
+Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
 Plug 'preservim/tagbar' " function signatures and stuff
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
+Plug 'plasticboy/vim-markdown' | source $PLUG_CONFIG_NVIM_HOME/vim-markdown.vim
+Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
+Plug 'reedes/vim-pencil'       | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
+Plug 'kana/vim-textobj-user'   | source $PLUG_CONFIG_NVIM_HOME/vim-textobj-user.vim
+Plug 'reedes/vim-textobj-quote' " use curly quotes in prose
 
 " themes
 Plug 'dracula/vim', {'as': 'dracula'}
