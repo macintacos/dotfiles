@@ -42,7 +42,7 @@ alias sm="smerge"
 alias ls='exa -F --group-directories-first --icons --color automatic'
 alias l='ls -l'
 alias ll='ls -la --git'
-alias tree='ls --tree'
+alias tree='broot'
 # }}}
 
 # CD ALIASES {{{
