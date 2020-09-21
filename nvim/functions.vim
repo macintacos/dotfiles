@@ -73,8 +73,8 @@ nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 "nmap <C-W>! <Plug>Kwbd
 
 " smart closing (mapped to q in mappings.vim)
-let g:spacevim_smartcloseignorewin = ['__Tagbar__', 'coc-explorer']
-let g:spacevim_smartcloseignoreft  = [
+let g:smartclose_ignorewin = ['__Tagbar__', 'coc-explorer']
+let g:smartclose_ignoreft  = [
             \ 'tagbar',
             \ 'coc-explorer',
             \ 'HelpDescribe',
@@ -92,8 +92,8 @@ function! CheckWinIsFloat(winnr) abort
 endfunction
 
 function! SmartClose() abort
-    let ignorewin = get(g:,'spacevim_smartcloseignorewin',[])
-    let ignoreft = get(g:, 'spacevim_smartcloseignoreft',[])
+    let ignorewin = get(g:,'smartclose_ignorewin',[])
+    let ignoreft = get(g:, 'smartclose_ignoreft',[])
     " @bug vim winnr('$') do not include popup
     " ref: https://github.com/vim/vim/issues/6474
     let win_count = winnr('$')

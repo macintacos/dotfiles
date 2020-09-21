@@ -133,7 +133,6 @@ nnoremap <silent> <leader>f~ :Clap files ~<CR>
 nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>fd :Clap filer %:p:h<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
-nnoremap <silent> <leader>fF :NERDTreeFind<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>

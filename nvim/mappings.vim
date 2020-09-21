@@ -17,6 +17,7 @@ inoremap <C-s> <ESC>:w<CR>a
 
 " make 'Y' yank for current character to end of line
 map Y y$
+vmap y ygv<ESC>
 
 " move current line/selected lines up/down
 nnoremap <M-S-j> :m .+1<CR>==
@@ -51,7 +52,7 @@ vnoremap <S-Tab> <gv
 vnoremap <Tab> >gv
 
 " remap q to Q
-nnoremap Q q
+nnoremap <localleader>q :normal! qq<CR>
 nnoremap q <nop>
 
 " horizontal scrolling when wrapped
