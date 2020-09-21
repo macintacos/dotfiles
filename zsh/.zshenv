@@ -5,6 +5,7 @@ export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 export NVIM_HOME="$DOTFILES_HOME/nvim"
 export PLUG_CONFIG_NVIM_HOME="$NVIM_HOME/plug-config"
 export ZDOTDIR="$DOTFILES_HOME/zsh"
+export QMK_HOME="$HOME/GitLocal/Play/qmk_firmware/"
 
 export ANT_OPTS="-Xms64m -Xmx1500m"
 export ANT_HOME=/usr/local/apache-ant-1.10.5
