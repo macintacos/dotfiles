@@ -68,8 +68,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'plasticboy/vim-markdown' | source $PLUG_CONFIG_NVIM_HOME/vim-markdown.vim
 Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
 Plug 'reedes/vim-pencil'       | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
+Plug 'reedes/vim-litecorrect'  | source $PLUG_CONFIG_NVIM_HOME/vim-litecorrect.vim
 Plug 'kana/vim-textobj-user'   | source $PLUG_CONFIG_NVIM_HOME/vim-textobj-user.vim
-Plug 'reedes/vim-textobj-quote' " use curly quotes in prose
+Plug 'reedes/vim-textobj-quote'    " use curly quotes in prose
+Plug 'reedes/vim-textobj-sentence' " improving text-object motions
 
 " themes
 Plug 'dracula/vim', {'as': 'dracula'}
