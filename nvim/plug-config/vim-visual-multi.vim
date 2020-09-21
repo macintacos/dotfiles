@@ -1,7 +1,8 @@
 " Plug 'mg979/vim-visual-multi'
 " Description: multiple cursors!
 
-let g:VM_leader = "\\"
+let g:VM_leader = ";;"
+let g:VM_mouse_mappings = 1
 
 " custom remaps (full list: https://github.com/mg979/vim-visual-multi/wiki/Mappings)
 let g:VM_maps = {}

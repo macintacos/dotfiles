@@ -6,6 +6,8 @@ nnoremap <silent> <leader>      :<c-u>WhichKey ' '<CR>
 vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ' '<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
+nnoremap <silent> <Bslash> :<c-u>WhichKey '<Bslash>'<CR>
+nnoremap <silent> <Bslash> :<c-u>WhichKeyVisual '<Bslash>'<CR>
 " end }}}
 
 " begin <leader> mapping --- {{{
@@ -28,6 +30,7 @@ vnoremap <silent> <leader>* :Clap grep ++query=@visual<CR>
 nnoremap <silent> <leader>` :edit #<CR>
 
 let g:which_key_map = {
+            \ 'name': 'Top-level',
             \ '[1-0]': 'Switch to buffer 1-10',
             \ '<Tab>': 'Switch to last buffer',
             \ '/': 'Project search',
@@ -392,3 +395,10 @@ let g:which_key_map_local.s = {
 
 " end <localleader> mapping
 
+" mkdx-mapping --- {{{
+let g:which_key_map_mkdx = {
+            \ 'name': 'mkdx',
+            \ "'": 'Toggle quotes',
+            \ '/': 'Italicize',
+            \ }
+" }}}

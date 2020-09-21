@@ -65,7 +65,7 @@ Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HO
 Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
 Plug 'preservim/tagbar' " function signatures and stuff
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
-Plug 'plasticboy/vim-markdown' | source $PLUG_CONFIG_NVIM_HOME/vim-markdown.vim
+Plug 'SidOfc/mkdx'             | source $PLUG_CONFIG_NVIM_HOME/mkdx.vim
 Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
 Plug 'reedes/vim-pencil'       | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
 Plug 'reedes/vim-litecorrect'  | source $PLUG_CONFIG_NVIM_HOME/vim-litecorrect.vim
@@ -87,6 +87,7 @@ Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vi
 call plug#end()
 call which_key#register(' ', "g:which_key_map") " this makes sure which-key is properly loaded
 call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
+call which_key#register('<Bslash>', "g:which_key_map_mkdx") " this makes sure which-key is properly loaded
 " }}}
 
 " Vanilla Configurations
