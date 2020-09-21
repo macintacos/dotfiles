@@ -356,8 +356,14 @@ let g:which_key_map.x = {
 " end <leader> mapping }}}
 
 " <localleader> mapping --- {{{
-" mappings in this menu should be filetype specific
-let g:which_key_map_local = {}
+
+"" MACRO RECORDING
+nnoremap <localleader>q :normal! qq<CR>
+
+let g:which_key_map_local = {
+            \ 'name': 'localleader',
+            \ 'q': 'Record macro',
+            \ }
 
 "" BOOKMARKS
 nnoremap <silent> <localleader>bm :<C-u>BookmarkToggle<Cr>

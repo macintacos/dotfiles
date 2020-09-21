@@ -51,10 +51,6 @@ vnoremap > >gv
 vnoremap <S-Tab> <gv
 vnoremap <Tab> >gv
 
-" remap q to Q
-nnoremap <localleader>q :normal! qq<CR>
-nnoremap q <nop>
-
 " horizontal scrolling when wrapped
 nnoremap <C-l> 20zl
 nnoremap <C-h> 20zh
