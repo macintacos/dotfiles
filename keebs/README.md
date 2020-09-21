@@ -19,3 +19,5 @@ qmk compile -kb <keyboards-name> -km <keymaps-name>
 ```
 
 The newly-compiled binary will be in the `$QMK_HOME/.build` directory.
+
+Source for initial process: https://www.reddit.com/r/olkb/comments/g3q5ha/qmk_configurator_where_is_the_keymapc/
