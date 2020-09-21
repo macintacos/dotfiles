@@ -12,7 +12,6 @@
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 200,
                     "basic.to_if_held_down_threshold_milliseconds": 200,
-                    "basiczto_delayed_action_delay_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
@@ -83,7 +82,7 @@
                                     {
                                         "key_code": "right_shift",
                                         "modifiers": [
-                                            "shift"
+                                            "right_shift"
                                         ]
                                     }
                                 ],

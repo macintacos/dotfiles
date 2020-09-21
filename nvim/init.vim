@@ -37,7 +37,7 @@ Plug 'rhysd/clever-f.vim'              | source $PLUG_CONFIG_NVIM_HOME/clever-f.
 Plug 'svermeulen/vim-cutlass'          | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
 Plug 'svermeulen/vim-yoink'            | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
 Plug 'voldikss/vim-floaterm'           | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
-Plug 'nathanaelkane/vim-indent-guides' | source $PLUG_CONFIG_NVIM_HOME/vim-indent-guides.vim
+Plug 'Yggdroot/indentLine'            | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
 Plug 'AndrewRadev/splitjoin.vim'       | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
 Plug 'Asheq/close-buffers.vim'         | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
 Plug 't9md/vim-choosewin'              | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
@@ -77,6 +77,11 @@ Plug 'reedes/vim-textobj-sentence' " improving text-object motions
 " themes
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'edersonferreira/dalton-vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'arzg/vim-colors-xcode'
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'vim-airline/vim-airline' | source $PLUG_CONFIG_NVIM_HOME/vim-airline.vim
 Plug 'ryanoasis/vim-devicons' " icons in the editor (this needs to come after nerdtree-git-plugin)
 " need to source after vim-devicons. also need to load functions in
@@ -88,7 +93,6 @@ Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vi
 call plug#end()
 call which_key#register(' ', "g:which_key_map")       " this makes sure which-key is properly loaded
 call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
-call which_key#register('\', "g:which_key_map_mkdx")  " this makes sure which-key is properly loaded
 " }}}
 
 " Vanilla Configurations

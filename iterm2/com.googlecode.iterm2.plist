@@ -8177,7 +8177,7 @@
 			<key>Show Mark Indicators</key>
 			<false/>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
@@ -9978,6 +9978,8 @@
 	<string>Hack-Regular 12</string>
 	<key>OpenBookmark</key>
 	<false/>
+	<key>PassOnControlClick</key>
+	<true/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -10036,7 +10038,7 @@
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.20284140795485536</real>
 	<key>StatusBarPosition</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SuppressRestartAnnouncement</key>
