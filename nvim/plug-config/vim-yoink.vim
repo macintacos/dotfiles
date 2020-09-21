@@ -2,11 +2,8 @@
 " Description: better copy/paste behavior
 
 " mappings
-nmap <C-n> <Plug>(YoinkPostPasteSwapBack)
-nmap <C-p> <Plug>(YoinkPostPasteSwapForward)
-
-nmap p <Plug>(YoinkPaste_p)
-nmap P <Plug>(YoinkPaste_P)
+nmap <expr> p yoink#canSwap() ? '<plug>(YoinkPostPasteSwapBack)' : '<plug>(YoinkPaste_p)'
+nmap <expr> P yoink#canSwap() ? '<plug>(YoinkPostPasteSwapForward)' : '<plug>(YoinkPaste_P)'
 
 nmap [y <Plug>(YoinkRotateBack)
 nmap ]y <Plug>(YoinkRotateForward)

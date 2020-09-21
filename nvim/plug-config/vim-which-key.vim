@@ -199,7 +199,7 @@ let g:which_key_map.g = {
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
 nnoremap <silent> <leader>hh :Clap help_tags<CR>
-nnoremap <silent> <leader>hm :
+nnoremap <silent> <leader>hm :Clap maps<CR>
 nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
 
 let g:which_key_map.h = {
