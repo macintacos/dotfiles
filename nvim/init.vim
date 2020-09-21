@@ -16,31 +16,31 @@ Plug 'tpope/vim-unimpaired' " pairings
 Plug 'tpope/vim-endwise'    " better understanding of syntax 'endings'
 
 "" all hail junegunn
+Plug 'junegunn/goyo.vim' " a zen-like editor view
+Plug 'junegunn/gv.vim'   " a git commit browser
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } |
     \ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'   | source $PLUG_CONFIG_NVIM_HOME/vim-easy-align.vim
 Plug 'junegunn/vim-slash'        | source $PLUG_CONFIG_NVIM_HOME/vim-slash.vim
 Plug 'junegunn/vim-after-object' | source $PLUG_CONFIG_NVIM_HOME/vim-after-object.vim
-Plug 'junegunn/goyo.vim' " a zen-like editor view
-Plug 'junegunn/gv.vim'   " a git commit browser
 " }}}
 
 " utilities with sources
-Plug 'airblade/vim-gitgutter'        | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
-Plug 'airblade/vim-rooter'           | source $PLUG_CONFIG_NVIM_HOME/vim-rooter.vim
-Plug 'chrisbra/Colorizer'            | source $PLUG_CONFIG_NVIM_HOME/Colorizer.vim
-Plug 'easymotion/vim-easymotion'     | source $PLUG_CONFIG_NVIM_HOME/vim-easymotion.vim
-Plug 'liuchengxu/vista.vim'          | source $PLUG_CONFIG_NVIM_HOME/vista.vim
-Plug 'luochen1990/rainbow'           | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
-Plug 'machakann/vim-highlightedyank' | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
-Plug 'rhysd/clever-f.vim'            | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
-Plug 'svermeulen/vim-cutlass'        | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
-Plug 'svermeulen/vim-yoink'          | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
-Plug 'voldikss/vim-floaterm'         | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
-Plug 'yggdroot/indentLine'           | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
-Plug 'AndrewRadev/splitjoin.vim'     | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
-Plug 'Asheq/close-buffers.vim'       | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
-Plug 't9md/vim-choosewin'            | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
+Plug 'airblade/vim-gitgutter'          | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
+Plug 'airblade/vim-rooter'             | source $PLUG_CONFIG_NVIM_HOME/vim-rooter.vim
+Plug 'chrisbra/Colorizer'              | source $PLUG_CONFIG_NVIM_HOME/Colorizer.vim
+Plug 'easymotion/vim-easymotion'       | source $PLUG_CONFIG_NVIM_HOME/vim-easymotion.vim
+Plug 'liuchengxu/vista.vim'            | source $PLUG_CONFIG_NVIM_HOME/vista.vim
+Plug 'luochen1990/rainbow'             | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
+Plug 'machakann/vim-highlightedyank'   | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
+Plug 'rhysd/clever-f.vim'              | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
+Plug 'svermeulen/vim-cutlass'          | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
+Plug 'svermeulen/vim-yoink'            | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
+Plug 'voldikss/vim-floaterm'           | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
+Plug 'nathanaelkane/vim-indent-guides' | source $PLUG_CONFIG_NVIM_HOME/vim-indent-guides.vim
+Plug 'AndrewRadev/splitjoin.vim'       | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
+Plug 'Asheq/close-buffers.vim'         | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
+Plug 't9md/vim-choosewin'              | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }        | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } | source $PLUG_CONFIG_NVIM_HOME/vim-clap.vim
 
@@ -48,7 +48,6 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } | source $PLUG_CONF
 Plug 'MTDL9/vim-log-highlighting'     " highlighting for log files
 Plug 'dhruvasagar/vim-prosession'     " pro session handling
 Plug 'dhruvasagar/vim-zoom'           " zooming in/out of windows (mapped to SPC w m)
-Plug 'godlygeek/tabular'              " needs to be loaded before vim-markdown
 Plug 'itchyny/vim-cursorword'         " underline word under cursor
 Plug 'justinmk/vim-gtfo'              " open current file/project in finder/terminal
 Plug 'machakann/vim-sandwich'         " alternative to vim-surround
@@ -63,7 +62,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HO
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    | source $PLUG_CONFIG_NVIM_HOME/coc.vim
 Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HOME/dash.vim
 Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
-Plug 'preservim/tagbar' " function signatures and stuff
+Plug 'sirver/ultisnips'                            | source $PLUG_CONFIG_NVIM_HOME/ultisnips.vim
+Plug 'honza/vim-snippets' " snippets for many languages
+Plug 'preservim/tagbar'   " function signatures and stuff
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
 Plug 'SidOfc/mkdx'             | source $PLUG_CONFIG_NVIM_HOME/mkdx.vim
 Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
@@ -85,9 +86,9 @@ source $PLUG_CONFIG_NVIM_HOME/vim-buffet.vim | Plug 'bagrat/vim-buffet'
 " putting this here to make sure it comes after everything
 Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim
 call plug#end()
-call which_key#register(' ', "g:which_key_map") " this makes sure which-key is properly loaded
+call which_key#register(' ', "g:which_key_map")       " this makes sure which-key is properly loaded
 call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
-call which_key#register('<Bslash>', "g:which_key_map_mkdx") " this makes sure which-key is properly loaded
+call which_key#register('\', "g:which_key_map_mkdx")  " this makes sure which-key is properly loaded
 " }}}
 
 " Vanilla Configurations
