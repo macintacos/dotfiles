@@ -60,6 +60,7 @@ Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from pro
 " languages-specific and/or adjacent
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HOME/vim-go.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    | source $PLUG_CONFIG_NVIM_HOME/coc.vim
+Plug 'elzr/vim-json'                               | source $PLUG_CONFIG_NVIM_HOME/vim-json.vim
 Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HOME/dash.vim
 Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
 Plug 'sirver/ultisnips'                            | source $PLUG_CONFIG_NVIM_HOME/ultisnips.vim
