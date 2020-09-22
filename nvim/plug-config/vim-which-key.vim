@@ -50,36 +50,12 @@ let g:which_key_map.8 = 'which_key_ignore'
 let g:which_key_map.9 = 'which_key_ignore'
 let g:which_key_map.0 = 'which_key_ignore'
 
-"" 'a' menu --- {{{
-"" coc actions (do I even need these)
-nmap <leader>ab  <Plug>(coc-codeaction)
-nnoremap <silent><nowait> <leader>ac  :<C-u>CocList commands<cr>
-nmap <leader>af  <Plug>(coc-fix-current)
-nnoremap <silent><nowait> <leader>ao  :<C-u>CocList outline<cr>
-xmap <leader>as  <Plug>(coc-codeaction-selected)
-nmap <leader>as  <Plug>(coc-codeaction-selected)
-nnoremap <silent><nowait> <leader>aS  :<C-u>CocList -I symbols<cr>
-nnoremap <silent><nowait> <leader>ax  :<C-u>CocList extensions<cr>
-
-let g:which_key_map.a = {
-            \ 'name': '+actions/coc',
-            \ 'b': 'CoC action on buffer',
-            \ 'c': 'CoC commands',
-            \ 'f': 'Auto-fix line',
-            \ 'o': 'CoC outline',
-            \ 's': 'Action on selected',
-            \ 'S': 'CoC symbols',
-            \ 'x': 'Show CoC extensions',
-            \ }
-"" 'a' menu end }}}
-
 "" 'b' menu --- {{{
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
-vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
-nnoremap <silent> <leader>bd :Kwbd<CR>
-nnoremap <silent> <leader>bD :Bonly!<CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
+nnoremap <silent> <leader>bD :Bonly!<CR>
+nnoremap <silent> <leader>bd :Kwbd<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
@@ -87,14 +63,15 @@ nnoremap <silent> <leader>bs :Scratch<CR>
 nnoremap <silent> <leader>bu :UndotreeToggle<CR>
 nnoremap <silent> <leader>bw :call KillVisibleBufferChooseWin()<CR>
 nnoremap <silent> <leader>by :%y<CR>
+vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 
 let g:which_key_map.b = {
             \ 'name': '+buffer',
             \ '*': 'Search word/selection in buffer',
             \ 'b': 'List buffers',
             \ 'c': 'Commits for this buffer',
-            \ 'd': 'Close this buffer',
             \ 'D': 'Close all other buffers',
+            \ 'd': 'Close this buffer',
             \ 'n': 'Next buffer',
             \ 'o': 'Show outline',
             \ 'p': 'Prev buffer',
@@ -112,8 +89,8 @@ nmap <leader>c= <Plug>(coc-format-selected)
 
 let g:which_key_map.c = {
             \ 'name': '+code/change',
-            \ 'r': 'Rename symbol',
             \ '=': 'Format selected',
+            \ 'r': 'Rename symbol',
             \ }
 "" 'c' menu end }}}
 
@@ -129,7 +106,6 @@ let g:which_key_map.e = {
 "" 'e' menu end }}}
 
 "" 'f' menu --- {{{
-nnoremap <silent> <leader>f~ :Clap files ~<CR>
 nnoremap <silent> <leader>f= :Format<CR>
 nnoremap <silent> <leader>fd :Clap filer %:p:h<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
@@ -138,10 +114,10 @@ nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
 nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --sources file+'<CR>
+nnoremap <silent> <leader>f~ :Clap files ~<CR>
 
 let g:which_key_map.f = {
             \ 'name': '+file',
-            \ '~': 'Search files in home',
             \ '=': 'Format file',
             \ 'D': 'Delete current file',
             \ 'd': 'Find file in current dir',
@@ -152,6 +128,7 @@ let g:which_key_map.f = {
             \ 'S': 'Save all files',
             \ 's': 'Save file',
             \ 't': 'File tree',
+            \ '~': 'Search files in home',
             \ }
 
 """ 'f.e' menu ============>
@@ -179,8 +156,8 @@ let g:which_key_map.f.e = {
 
 "" 'g' menu --- {{{
 nnoremap <silent> <leader>ga :Git add .<CR>
-nnoremap <silent> <leader>gb :Git blame<CR>
 nnoremap <silent> <leader>gB :!smerge blame %<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
 nnoremap <silent> <leader>gs :!smerge .<CR>
 " the space at the end is intentional
@@ -189,18 +166,18 @@ nnoremap <silent> <leader>gS :!smerge search
 let g:which_key_map.g = {
             \ 'name': '+git',
             \ 'a': 'Stage all files',
-            \ 'b': 'Open line blame for buffer',
             \ 'B': 'Blame file in Smerge',
+            \ 'b': 'Open line blame for buffer',
             \ 'c': 'Commit staged changes',
-            \ 's': 'Status',
             \ 'S': 'Search git history',
+            \ 's': 'Status',
             \ }
 "" 'g' menu end}}}
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
+nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
 nnoremap <silent> <leader>hh :Clap help_tags<CR>
 nnoremap <silent> <leader>hm :Clap maps<CR>
-nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
 
 let g:which_key_map.h = {
             \ 'name' : '+help',
@@ -213,8 +190,8 @@ let g:which_key_map.h.u = 'which_key_ignore'
 "" 'h' menu end }}}
 
 "" 'j' menu --- {{{
-nnoremap <silent> <leader>ji :Vista finder<CR>
 nnoremap <silent> <leader>jI :Clap proj_tags<CR>
+nnoremap <silent> <leader>ji :Vista finder<CR>
 nnoremap <silent> <leader>jJ :SplitjoinSplit<CR>
 nnoremap <silent> <leader>jK :SplitjoinJoin<CR>
 
@@ -232,13 +209,15 @@ nmap <silent> <leader>of gof
 nmap <silent> <leader>oF goF
 nmap <silent> <leader>ot got
 nmap <silent> <leader>oT goT
+nmap <silent> <leader>ox :CocList marketplace<CR>
 
 let g:which_key_map.o = {
             \ 'name': '+open',
             \ 'f': 'Open file in Finder',
             \ 'F': 'Open PWD in Finder',
             \ 't': 'Open file in terminal',
-            \ 'T': 'open PWD in terminal'
+            \ 'T': 'Open PWD in terminal',
+            \ 'x': 'Open CoC marketplace',
             \ }
 "" 'o' menu end }}}
 
@@ -282,6 +261,7 @@ nnoremap <silent> <leader>tc :Clap colors<CR>
 nnoremap <silent> <leader>tg :Goyo<CR>
 nnoremap <silent> <leader>tm :OpenTodo<CR>
 nnoremap <silent> <leader>tn :<C-u>setlocal nonumber! norelativenumber!<CR>
+nnoremap <silent> <leader>tw :<C-u>setlocal nowrap!<CR>
 
 let g:which_key_map.t = {
             \ 'name': '+UI toggles/themes',
@@ -289,6 +269,7 @@ let g:which_key_map.t = {
             \ 'g': 'Goyo',
             \ 'm': 'Open TODOs',
             \ 'n': 'Toggle line numbers',
+            \ 'w': 'Toggle word wrap',
             \ }
 "" 't' menu end }}}
 

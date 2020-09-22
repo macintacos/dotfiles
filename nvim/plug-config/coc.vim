@@ -21,7 +21,6 @@ let g:coc_global_extensions = [
   \  "coc-pairs",
   \  "coc-prettier",
   \  "coc-python",
-  \  "coc-rls",
   \  "coc-rust-analyzer",
   \  "coc-sh",
   \  "coc-snippets",
@@ -115,4 +114,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 let g:endwise_no_mappings = v:true
 inoremap <expr> <Plug>CustomCocCR pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
+
+" get coc-explorer to replace netrw (maybe)
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'CocCommand coc-explorer' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 

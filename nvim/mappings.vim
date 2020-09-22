@@ -55,8 +55,10 @@ vnoremap <Tab> >gv
 nnoremap <C-l> 20zl
 nnoremap <C-h> 20zh
 
-" better 'G'
+" better movements (centering by default)
 nmap G Gzz
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
 
 " smartclose q mapping
 nnoremap <silent> q :call SmartClose()<CR>

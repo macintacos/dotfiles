@@ -26,21 +26,21 @@ Plug 'junegunn/vim-after-object' | source $PLUG_CONFIG_NVIM_HOME/vim-after-objec
 " }}}
 
 " utilities with sources
-Plug 'airblade/vim-gitgutter'          | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
-Plug 'airblade/vim-rooter'             | source $PLUG_CONFIG_NVIM_HOME/vim-rooter.vim
-Plug 'chrisbra/Colorizer'              | source $PLUG_CONFIG_NVIM_HOME/Colorizer.vim
-Plug 'easymotion/vim-easymotion'       | source $PLUG_CONFIG_NVIM_HOME/vim-easymotion.vim
-Plug 'liuchengxu/vista.vim'            | source $PLUG_CONFIG_NVIM_HOME/vista.vim
-Plug 'luochen1990/rainbow'             | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
-Plug 'machakann/vim-highlightedyank'   | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
-Plug 'rhysd/clever-f.vim'              | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
-Plug 'svermeulen/vim-cutlass'          | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
-Plug 'svermeulen/vim-yoink'            | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
-Plug 'voldikss/vim-floaterm'           | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
-Plug 'Yggdroot/indentLine'            | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
-Plug 'AndrewRadev/splitjoin.vim'       | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
-Plug 'Asheq/close-buffers.vim'         | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
-Plug 't9md/vim-choosewin'              | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
+Plug 'airblade/vim-gitgutter'        | source $PLUG_CONFIG_NVIM_HOME/vim-gitgutter.vim
+Plug 'airblade/vim-rooter'           | source $PLUG_CONFIG_NVIM_HOME/vim-rooter.vim
+Plug 'chrisbra/Colorizer'            | source $PLUG_CONFIG_NVIM_HOME/Colorizer.vim
+Plug 'easymotion/vim-easymotion'     | source $PLUG_CONFIG_NVIM_HOME/vim-easymotion.vim
+Plug 'liuchengxu/vista.vim'          | source $PLUG_CONFIG_NVIM_HOME/vista.vim
+Plug 'luochen1990/rainbow'           | source $PLUG_CONFIG_NVIM_HOME/rainbow.vim
+Plug 'machakann/vim-highlightedyank' | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
+Plug 'rhysd/clever-f.vim'            | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
+Plug 'svermeulen/vim-cutlass'        | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
+Plug 'svermeulen/vim-yoink'          | source $PLUG_CONFIG_NVIM_HOME/vim-yoink.vim
+Plug 'voldikss/vim-floaterm'         | source $PLUG_CONFIG_NVIM_HOME/vim-floaterm.vim
+Plug 'Yggdroot/indentLine'           | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
+Plug 'AndrewRadev/splitjoin.vim'     | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
+Plug 'Asheq/close-buffers.vim'       | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
+Plug 't9md/vim-choosewin'            | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }        | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } | source $PLUG_CONFIG_NVIM_HOME/vim-clap.vim
 
@@ -66,7 +66,10 @@ Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HO
 Plug 'sirver/ultisnips'                            | source $PLUG_CONFIG_NVIM_HOME/ultisnips.vim
 Plug 'honza/vim-snippets' " snippets for many languages
 Plug 'preservim/tagbar'   " function signatures and stuff
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
+Plug 'iamcco/markdown-preview.nvim', {
+    \ 'do': { -> mkdp#util#install() },
+    \ 'for': ['markdown', 'vim-plug'] 
+    \ } | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
 Plug 'SidOfc/mkdx'             | source $PLUG_CONFIG_NVIM_HOME/mkdx.vim
 Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
 Plug 'reedes/vim-pencil'       | source $PLUG_CONFIG_NVIM_HOME/vim-pencil.vim
@@ -77,14 +80,15 @@ Plug 'reedes/vim-textobj-sentence' " improving text-object motions
 
 " themes
 Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'edersonferreira/dalton-vim'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'arzg/vim-colors-xcode'
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'challenger-deep-theme/vim',     { 'as': 'challenger-deep' }
+Plug 'edersonferreira/dalton-vim',    { 'as': 'dalton' }
+Plug 'NLKNguyen/papercolor-theme',    { 'as': 'papercolor' }
+Plug 'arzg/vim-colors-xcode',         { 'as': 'xcode'}
+Plug 'bluz71/vim-moonfly-colors',     { 'as': 'moonfly'}
+Plug 'bluz71/vim-nightfly-guicolors', { 'as': 'nightfly'}
 Plug 'vim-airline/vim-airline' | source $PLUG_CONFIG_NVIM_HOME/vim-airline.vim
 Plug 'ryanoasis/vim-devicons' " icons in the editor (this needs to come after nerdtree-git-plugin)
+
 " need to source after vim-devicons. also need to load functions in
 " vim-buffet.vim for colors
 source $PLUG_CONFIG_NVIM_HOME/vim-buffet.vim | Plug 'bagrat/vim-buffet'
