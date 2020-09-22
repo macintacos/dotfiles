@@ -40,6 +40,7 @@ Plug 'voldikss/vim-floaterm'         | source $PLUG_CONFIG_NVIM_HOME/vim-floater
 Plug 'Yggdroot/indentLine'           | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
 Plug 'AndrewRadev/splitjoin.vim'     | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
 Plug 'Asheq/close-buffers.vim'       | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
+Plug 'qpkorr/vim-bufkill'            | source $PLUG_CONFIG_NVIM_HOME/vim-bufkill.vim
 Plug 't9md/vim-choosewin'            | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }        | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } | source $PLUG_CONFIG_NVIM_HOME/vim-clap.vim

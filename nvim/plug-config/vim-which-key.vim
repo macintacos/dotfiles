@@ -54,8 +54,6 @@ let g:which_key_map.0 = 'which_key_ignore'
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
-nnoremap <silent> <leader>bD :Bonly!<CR>
-nnoremap <silent> <leader>bd :Kwbd<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
@@ -80,6 +78,22 @@ let g:which_key_map.b = {
             \ 'w': 'Choose buffer to kill',
             \ 'y': 'Copy whole buffer',
             \ }
+""" 'b.d' menu --- {{{
+nnoremap <silent> <leader>bdo :Bonly!<CR>
+nnoremap <silent> <leader>bdd :BD<CR>
+nnoremap <silent> <leader>bdh :Bdelete hidden<CR>
+nnoremap <silent> <leader>bdw :bufdo BD<CR>
+nnoremap <silent> <leader>bda :Bdelete all<CR>
+
+let g:which_key_map.b.d = {
+            \ 'name': '+delete',
+            \ 'a': 'All buffers',
+            \ 'o': 'Buffers other than current',
+            \ 'h': 'Hidden buffers',
+            \ 'd': 'Current buffer',
+            \ 'w': 'All buffers, keep windows',
+            \ }
+""" 'b.d' menu end }}}
 "" 'b' menu end }}}
 
 "" 'c' menu --- {{{
