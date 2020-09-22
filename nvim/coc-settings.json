@@ -1,18 +1,4 @@
 {
-  "diagnostic-languageserver.filetypes": {
-    "vim": "vint",
-    "markdown": ["write-good", "markdownlint"],
-    "sh": "shellcheck"
-  },
-  "diagnostic.errorSign": "✘",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": "",
-  "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
-  },
-  "diagnostic.checkCurrentLine": true,
-  "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
     "javascript",
@@ -21,57 +7,149 @@
     "markdown",
     "css"
   ],
-  "markdownlint.config": {
-    "MD034": false,
-    "MD013": false,
-    "MD046": false,
-    "MD025": false
+  "diagnostic-languageserver.filetypes": {
+    "markdown": ["write-good", "markdownlint"],
+    "sh": "shellcheck",
+    "vim": "vint",
+    "go": "gopls"
   },
-  "suggest.completionItemKindLabels": {
-    "function": "\uf794",
-    "method": "\uf6a6",
-    "variable": "\uf71b",
-    "constant": "\uf8ff",
-    "struct": "\ufb44",
-    "class": "\uf0e8",
-    "interface": "\ufa52",
-    "text": "\ue612",
-    "enum": "\uf435",
-    "enumMember": "\uf02b",
-    "module": "\uf668",
-    "color": "\ue22b",
-    "property": "\ufab6",
-    "field": "\uf93d",
-    "unit": "\uf475",
-    "file": "\uf471",
-    "value": "\uf8a3",
-    "event": "\ufacd",
-    "folder": "\uf115",
-    "keyword": "\uf893",
-    "snippet": "\uf64d",
-    "operator": "\uf915",
-    "reference": "\uf87a",
-    "typeParameter": "\uf278",
-    "default": "\uf29c"
+  "diagnostic-languageserver.formatFiletypes": {
+    "sh": "shfmt",
+    "go": "gofmt"
+  },
+  "diagnostic-languageserver.linters": {
+    "eslint": {
+      "command": "./node_modules/.bin/eslint",
+      "rootPatterns": [".git"],
+      "debounce": 100,
+      "args": ["--stdin", "--stdin-filename", "%filepath", "--format", "json"],
+      "sourceName": "eslint",
+      "parseJson": {
+        "errorsRoot": "[0].messages",
+        "line": "line",
+        "column": "column",
+        "endLine": "endLine",
+        "endColumn": "endColumn",
+        "message": "${message} [${ruleId}]",
+        "security": "severity"
+      },
+      "securities": {
+        "2": "error",
+        "1": "warning"
+      }
+    },
+    "shellcheck": {
+      "command": "shellcheck",
+      "debounce": 100,
+      "args": ["--format", "json", "-"],
+      "sourceName": "shellcheck",
+      "parseJson": {
+        "line": "line",
+        "column": "column",
+        "endLine": "endLine",
+        "endColumn": "endColumn",
+        "message": "${message} [${code}]",
+        "security": "level"
+      },
+      "securities": {
+        "error": "error",
+        "warning": "warning",
+        "info": "info",
+        "style": "hint"
+      }
+    },
+    "write-good": {
+      "command": "write-good",
+      "debounce": 100,
+      "args": ["--text=%text"],
+      "offsetLine": 0,
+      "offsetColumn": 1,
+      "sourceName": "write-good",
+      "formatLines": 1,
+      "formatPattern": [
+        "(.*)\\s+on\\s+line\\s+(\\d+)\\s+at\\s+column\\s+(\\d+)\\s*$",
+        {
+          "line": 2,
+          "column": 3,
+          "message": 1
+        }
+      ]
+    },
+    "vint": {
+      "command": "vint",
+      "debounce": 100,
+      "args": ["--enable-neovim", "-"],
+      "offsetLine": 0,
+      "offsetColumn": 0,
+      "sourceName": "vint",
+      "formatLines": 1,
+      "formatPattern": [
+        "[^:]+:(\\d+):(\\d+):\\s*(.*)(\\r|\\n)*$",
+        {
+          "line": 1,
+          "column": 2,
+          "message": 3
+        }
+      ]
+    }
+  },
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
+  "explorer.file.showHiddenFiles": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.keyMappings": {
+    ";": "actionMenu",
+    "<tab>": false
   },
   "languageserver": {
     "bash": {
-      "command": "bash-language-server",
       "args": ["start"],
+      "command": "bash-language-server",
       "filetypes": ["sh", "zsh"],
       "ignoredRootPaths": ["~"]
     },
     "go": {
       "command": "gopls",
+      "filetypes": ["go"],
       "rootPatterns": ["go.mod"],
-      "trace.server": "verbose",
-      "filetypes": ["go"]
+      "trace.server": "verbose"
     }
   },
-  "explorer.keyMappings": {
-    ";": "actionMenu",
-    "<tab>": false
+  "markdownlint.config": {
+    "MD013": false,
+    "MD025": false,
+    "MD034": false,
+    "MD046": false
   },
-  "explorer.icon.enableNerdfont": true,
-  "explorer.file.showHiddenFiles": true
+  "suggest.completionItemKindLabels": {
+    "class": "",
+    "color": "",
+    "constant": "",
+    "default": "",
+    "enum": "",
+    "enumMember": "",
+    "event": "鬒",
+    "field": "綠",
+    "file": "",
+    "folder": "",
+    "function": "",
+    "interface": "禍",
+    "keyword": "",
+    "method": "",
+    "module": "",
+    "operator": "洛",
+    "property": "襁",
+    "reference": "",
+    "snippet": "",
+    "struct": "פּ",
+    "text": "",
+    "typeParameter": "",
+    "unit": "",
+    "value": "",
+    "variable": ""
+  },
+  "suggest.noselect": false
 }
