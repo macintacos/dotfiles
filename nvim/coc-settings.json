@@ -4,6 +4,10 @@
     "markdown": ["write-good", "markdownlint"],
     "sh": "shellcheck"
   },
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
   "diagnostic-languageserver.formatFiletypes": {
     "sh": "shfmt"
   },
