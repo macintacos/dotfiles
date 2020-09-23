@@ -1,3 +1,4 @@
+
 " Plug 'liuchengxu/vim-which-key'
 " Description: gives which-key-like functionality to vim; something that I sorely need in order to do things the way that I want to do them in Vim
 
@@ -54,12 +55,13 @@ let g:which_key_map.0 = 'which_key_ignore'
 nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
 nnoremap <silent> <leader>bb :Clap buffers<CR>
 nnoremap <silent> <leader>bc :Clap bcommits<CR>
+nnoremap <silent> <leader>bD :call KillVisibleBufferChooseWin()<CR>
+nnoremap <silent> <leader>bm :messages<CR>
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
 nnoremap <silent> <leader>bs :Scratch<CR>
 nnoremap <silent> <leader>bu :UndotreeToggle<CR>
-nnoremap <silent> <leader>bw :call KillVisibleBufferChooseWin()<CR>
 nnoremap <silent> <leader>by :%y<CR>
 vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
 
@@ -68,16 +70,17 @@ let g:which_key_map.b = {
             \ '*': 'Search word/selection in buffer',
             \ 'b': 'List buffers',
             \ 'c': 'Commits for this buffer',
-            \ 'D': 'Close all other buffers',
+            \ 'D': 'Choose visible buffer to kill',
             \ 'd': 'Close this buffer',
+            \ 'm': 'Show messages buffer',
             \ 'n': 'Next buffer',
             \ 'o': 'Show outline',
             \ 'p': 'Prev buffer',
             \ 's': 'Open scratch buffer',
             \ 'u': 'Show undo tree',
-            \ 'w': 'Choose buffer to kill',
             \ 'y': 'Copy whole buffer',
             \ }
+
 """ 'b.d' menu --- {{{
 nnoremap <silent> <leader>bdo :Bonly!<CR>
 nnoremap <silent> <leader>bdd :BD<CR>
@@ -94,6 +97,23 @@ let g:which_key_map.b.d = {
             \ 'w': 'All buffers, keep windows',
             \ }
 """ 'b.d' menu end }}}
+
+""" 'b.N' menu --- {{{
+nnoremap <silent> <leader>bNh :vnew<CR>
+nnoremap <silent> <leader>bNk :new<CR>
+nnoremap <silent> <leader>bNl :vertical rightbelow new<CR>
+nnoremap <silent> <leader>bNj :rightbelow new<CR>
+
+let g:which_key_map.b.N = {
+            \ 'name': '+new buffer',
+            \ 'h': 'Split left',
+            \ 'j': 'Split below',
+            \ 'k': 'Split above',
+            \ 'l': 'Split right',
+            \ }
+""" 'b.N' menu end}}}
+
+
 "" 'b' menu end }}}
 
 "" 'c' menu --- {{{
@@ -292,8 +312,8 @@ let g:which_key_map.t = {
 nnoremap <silent> <leader>w= <C-w>=
 nnoremap <silent> <leader>w- :rightbelow sb<CR>
 nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
-nnoremap <silent> <leader>wd :call CloseWindowChooseWin()<CR>
-nnoremap <silent> <leader>wD :Kwbd<CR>:close<CR>
+nnoremap <silent> <leader>wd :close<CR>
+nnoremap <silent> <leader>wD :call CloseWindowChooseWin()<CR>
 nmap <silent> <leader>wm <Plug>(zoom-toggle)
 nnoremap <silent> <leader>wh <C-w>h
 nnoremap <silent> <leader>wl <C-w>l
