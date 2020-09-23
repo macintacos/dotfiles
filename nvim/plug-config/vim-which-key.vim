@@ -346,8 +346,18 @@ let g:which_key_map.w.f = {
 
 "" 'x' menu --- {{{
 " @todo Need to go through and see what keybindings I can put here; possibly re-map from elsewhere?
+" @todo uppercase, lowercase, kebab-case, snake_case, uppercase, sort lines, 
+nnoremap <silent> <leader>x- :call KebabCase()<CR>
+nnoremap <silent> <leader>x_ :call Snake_Case()<CR>
+nnoremap <silent> <leader>xc :call LowerCamelCase()<CR>
+nnoremap <silent> <leader>xC :call UpperCamelCase()<CR>
+
 let g:which_key_map.x = {
             \ 'name': '+text',
+            \ '-': 'To kebab-case',
+            \ '_': 'To snake_case',
+            \ 'c': 'To lowerCamelCase',
+            \ 'C': 'To UpperCamelCase',
             \ }
 "" 'x' menu end }}}
 " end <leader> mapping }}}
