@@ -71,7 +71,6 @@ let g:which_key_map.b = {
             \ 'b': 'List buffers',
             \ 'c': 'Commits for this buffer',
             \ 'D': 'Choose visible buffer to kill',
-            \ 'd': 'Close this buffer',
             \ 'm': 'Show messages buffer',
             \ 'n': 'Next buffer',
             \ 'o': 'Show outline',
