@@ -1,8 +1,11 @@
 " Plug 'liuchengxu/vim-clap'
 " Description: possible replacement for FZF? Lets me search all over a given
-" project with ease. 
+" project with ease.
 
-let g:clap_layout = { 'relative': 'editor' }
+let g:clap_layout = {
+            \ 'relative': 'editor',
+            \ 'row': '20%',
+            \ }
 
 function! GetZoxideDirs()
     let zoxide_dirs = systemlist('zoxide query -l -s')

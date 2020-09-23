@@ -19,7 +19,7 @@ Plug 'tpope/vim-endwise'    " better understanding of syntax 'endings'
 Plug 'junegunn/goyo.vim' " a zen-like editor view
 Plug 'junegunn/gv.vim'   " a git commit browser
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } |
-    \ Plug 'junegunn/fzf.vim'
+    \ Plug 'junegunn/fzf.vim'    | source $PLUG_CONFIG_NVIM_HOME/fzf.vim
 Plug 'junegunn/vim-easy-align'   | source $PLUG_CONFIG_NVIM_HOME/vim-easy-align.vim
 Plug 'junegunn/vim-slash'        | source $PLUG_CONFIG_NVIM_HOME/vim-slash.vim
 Plug 'junegunn/vim-after-object' | source $PLUG_CONFIG_NVIM_HOME/vim-after-object.vim
@@ -40,6 +40,7 @@ Plug 'voldikss/vim-floaterm'         | source $PLUG_CONFIG_NVIM_HOME/vim-floater
 Plug 'Yggdroot/indentLine'           | source $PLUG_CONFIG_NVIM_HOME/indentLine.vim
 Plug 'AndrewRadev/splitjoin.vim'     | source $PLUG_CONFIG_NVIM_HOME/splitjoin.vim
 Plug 'Asheq/close-buffers.vim'       | source $PLUG_CONFIG_NVIM_HOME/close-buffers.vim
+Plug 'APZelos/blamer.nvim'           | source $PLUG_CONFIG_NVIM_HOME/blamer.vim
 Plug 'qpkorr/vim-bufkill'            | source $PLUG_CONFIG_NVIM_HOME/vim-bufkill.vim
 Plug 't9md/vim-choosewin'            | source $PLUG_CONFIG_NVIM_HOME/vim-choosewin.vim
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }        | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
@@ -59,6 +60,8 @@ Plug 'mbbill/undotree'                " show an undo tree for the current buffer
 Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from project
 
 " languages-specific and/or adjacent
+" source $NVIM_HOME/plug-config-before/ale.vim |
+"     \ Plug 'dense-analysis/ale' | source $PLUG_CONFIG_NVIM_HOME/ale.vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HOME/vim-go.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    | source $PLUG_CONFIG_NVIM_HOME/coc.vim
 Plug 'elzr/vim-json'                               | source $PLUG_CONFIG_NVIM_HOME/vim-json.vim
@@ -69,7 +72,7 @@ Plug 'honza/vim-snippets' " snippets for many languages
 Plug 'preservim/tagbar'   " function signatures and stuff
 Plug 'iamcco/markdown-preview.nvim', {
     \ 'do': { -> mkdp#util#install() },
-    \ 'for': ['markdown', 'vim-plug'] 
+    \ 'for': ['markdown', 'vim-plug']
     \ } | source $PLUG_CONFIG_NVIM_HOME/markdown-preview.vim
 Plug 'SidOfc/mkdx'             | source $PLUG_CONFIG_NVIM_HOME/mkdx.vim
 Plug 'reedes/vim-lexical'      | source $PLUG_CONFIG_NVIM_HOME/vim-lexical.vim
