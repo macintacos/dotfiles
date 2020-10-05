@@ -65,6 +65,14 @@ nvim_link
 # npm version management and backup script
 plzlog info "Setting up node/npm..."
 plzlog info "Installing 'n' to manage our node dependencies..."
+case $1 in
+install-ci)
+	# need to get rid of cached dependencies: https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
+	rm -rf /usr/local/bin/node
+	rm -rf /usr/local/bin/npm
+	;;
+install-normal) ;;
+esac
 (curl -L https://git.io/n-install | bash) || true
 plzlog ok "'n' installed."
 
