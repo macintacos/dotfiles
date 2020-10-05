@@ -1,0 +1,1657 @@
+2020-10-05T02:00:55+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:00:55+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:00:55+0000 INFO  Setting up Homebrew 
+2020-10-05T02:01:13+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:01:13+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:01:13+0000 INFO  Setting up Homebrew 
+2020-10-05T02:03:44+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:03:44+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:03:44+0000 INFO  Setting up Homebrew 
+2020-10-05T02:07:19+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:07:23+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:07:23+0000 INFO  Setting up Homebrew 
+2020-10-05T02:39:20+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:39:25+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:39:25+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:39:25+0000 INFO  Setting up Homebrew 
+2020-10-05T02:40:34+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:40:39+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:40:39+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:40:39+0000 INFO  Setting up Homebrew 
+2020-10-05T02:42:26+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:42:26+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:42:26+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:42:26+0000 INFO  Setting up Homebrew 
+2020-10-05T02:43:42+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:43:42+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:43:42+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:43:42+0000 INFO  Setting up Homebrew 
+2020-10-05T02:51:55+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:52:01+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:52:01+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:52:01+0000 INFO  Setting up Homebrew 
+2020-10-05T02:54:45+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:54:45+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:54:45+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:54:45+0000 INFO  Setting up Homebrew 
+2020-10-05T02:55:42+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:55:43+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:55:43+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:55:43+0000 INFO  Setting up Homebrew 
+2020-10-05T02:57:31+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T02:57:31+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T02:57:31+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T02:57:31+0000 INFO  Setting up Homebrew 
+2020-10-05T02:57:38+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T02:57:38+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T02:57:38+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T02:57:38+0000 INFO  Using dduan/formulae 
+2020-10-05T02:57:38+0000 INFO  Using drone/drone 
+2020-10-05T02:57:38+0000 INFO  Using dunn/emacs 
+2020-10-05T02:57:38+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T02:57:38+0000 INFO  Using github/gh 
+2020-10-05T02:57:38+0000 INFO  Using golangci/tap 
+2020-10-05T02:57:39+0000 INFO  Using heroku/brew 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/bundle 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/cask 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/core 
+2020-10-05T02:57:39+0000 INFO  Using homebrew/services 
+2020-10-05T02:57:39+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T02:57:39+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T02:57:39+0000 INFO  Using knqyf263/pet 
+2020-10-05T02:57:39+0000 INFO  Using kyoh86/tap 
+2020-10-05T02:57:39+0000 INFO  Using mongodb/brew 
+2020-10-05T02:57:39+0000 INFO  Using muesli/tap 
+2020-10-05T02:57:39+0000 INFO  Using nshipster/formulae 
+2020-10-05T02:57:39+0000 INFO  Using osx-cross/arm 
+2020-10-05T02:57:39+0000 INFO  Using osx-cross/avr 
+2020-10-05T02:57:39+0000 INFO  Using px4/px4 
+2020-10-05T02:57:39+0000 INFO  Using qmk/qmk 
+2020-10-05T02:57:39+0000 INFO  Using tankerhq/repo 
+2020-10-05T02:57:39+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:18:21+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:18:26+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:18:26+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:18:26+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:18:31+0000 INFO  ==> Auto-updated Homebrew! 
+2020-10-05T04:18:31+0000 INFO  Updated 1 tap (homebrew/cask-fonts). 
+2020-10-05T04:18:31+0000 INFO  ==> Updated Casks 
+2020-10-05T04:18:31+0000 INFO  font-sarasa-gothic 
+2020-10-05T04:18:33+0000 INFO   
+2020-10-05T04:18:36+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:18:36+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:18:36+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:18:36+0000 INFO  Using dduan/formulae 
+2020-10-05T04:18:36+0000 INFO  Using drone/drone 
+2020-10-05T04:18:36+0000 INFO  Using dunn/emacs 
+2020-10-05T04:18:36+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:18:37+0000 INFO  Using github/gh 
+2020-10-05T04:18:37+0000 INFO  Using golangci/tap 
+2020-10-05T04:18:37+0000 INFO  Using heroku/brew 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/cask 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/core 
+2020-10-05T04:18:37+0000 INFO  Using homebrew/services 
+2020-10-05T04:18:37+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:18:37+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:18:37+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:18:37+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:18:37+0000 INFO  Using mongodb/brew 
+2020-10-05T04:18:37+0000 INFO  Using muesli/tap 
+2020-10-05T04:18:37+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:18:37+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:18:37+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:18:37+0000 INFO  Using px4/px4 
+2020-10-05T04:18:37+0000 INFO  Using qmk/qmk 
+2020-10-05T04:18:37+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:18:37+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:18:39+0000 INFO  Using xquartz 
+2020-10-05T04:18:51+0000 INFO  Using ack 
+2020-10-05T04:18:51+0000 INFO  Using adns 
+2020-10-05T04:18:52+0000 INFO  Using aom 
+2020-10-05T04:18:52+0000 INFO  Using archey 
+2020-10-05T04:18:52+0000 INFO  Using coreutils 
+2020-10-05T04:18:52+0000 INFO  Using asdf 
+2020-10-05T04:18:52+0000 INFO  Using autojump 
+2020-10-05T04:18:52+0000 INFO  Using libusb 
+2020-10-05T04:18:52+0000 INFO  Using avrdude 
+2020-10-05T04:18:52+0000 INFO  Using gdbm 
+2020-10-05T04:18:52+0000 INFO  Using xz 
+2020-10-05T04:18:52+0000 INFO  Using awscli 
+2020-10-05T04:18:52+0000 INFO  Using bash-completion 
+2020-10-05T04:18:52+0000 INFO  Using bat 
+2020-10-05T04:18:52+0000 INFO  Using blueutil 
+2020-10-05T04:18:52+0000 INFO  Using broot 
+2020-10-05T04:18:52+0000 INFO  Using fontconfig 
+2020-10-05T04:18:52+0000 INFO  Using gettext 
+2020-10-05T04:18:52+0000 INFO  Using libffi 
+2020-10-05T04:18:52+0000 INFO  Using ccat 
+2020-10-05T04:18:52+0000 INFO  Using cfssl 
+2020-10-05T04:18:52+0000 INFO  Using colordiff 
+2020-10-05T04:18:52+0000 INFO  Using ctags 
+2020-10-05T04:18:52+0000 INFO  Using curl 
+2020-10-05T04:18:53+0000 INFO  Error: Could not symlink bin/deno 
+2020-10-05T04:18:53+0000 INFO  Target /usr/local/bin/deno 
+2020-10-05T04:18:53+0000 INFO  already exists. You may want to remove it: 
+2020-10-05T04:18:53+0000 INFO    rm '/usr/local/bin/deno' 
+2020-10-05T04:18:53+0000 INFO   
+2020-10-05T04:18:53+0000 INFO  To force the link and overwrite all conflicting files: 
+2020-10-05T04:18:53+0000 INFO    brew link --overwrite deno 
+2020-10-05T04:18:53+0000 INFO   
+2020-10-05T04:18:54+0000 INFO  To list all files that would be deleted: 
+2020-10-05T04:18:54+0000 INFO    brew link --overwrite --dry-run deno 
+2020-10-05T04:18:54+0000 INFO  Linking /usr/local/Cellar/deno/1.4.4...  
+2020-10-05T04:18:54+0000 INFO  Using deno 
+2020-10-05T04:18:54+0000 INFO  Using go 
+2020-10-05T04:18:54+0000 INFO  Using dep 
+2020-10-05T04:18:54+0000 INFO  Using dfu-programmer 
+2020-10-05T04:18:54+0000 INFO  Using dfu-util 
+2020-10-05T04:18:54+0000 INFO  Using diff-so-fancy 
+2020-10-05T04:18:54+0000 INFO  Using diffutils 
+2020-10-05T04:18:54+0000 INFO  Using direnv 
+2020-10-05T04:18:54+0000 INFO  Using dos2unix 
+2020-10-05T04:18:54+0000 INFO  Using eg-examples 
+2020-10-05T04:18:54+0000 INFO  Using elvish 
+2020-10-05T04:18:54+0000 INFO  Using exa 
+2020-10-05T04:18:54+0000 INFO  Using fd 
+2020-10-05T04:18:54+0000 INFO  Using flac 
+2020-10-05T04:18:54+0000 INFO  Using frei0r 
+2020-10-05T04:18:54+0000 INFO  Using giflib 
+2020-10-05T04:18:54+0000 INFO  Using gmp 
+2020-10-05T04:18:54+0000 INFO  Using libunistring 
+2020-10-05T04:18:54+0000 INFO  Using pkg-config 
+2020-10-05T04:18:54+0000 INFO  Using nettle 
+2020-10-05T04:18:54+0000 INFO  Using graphite2 
+2020-10-05T04:18:55+0000 INFO  Using jpeg 
+2020-10-05T04:18:55+0000 INFO  Using little-cms2 
+2020-10-05T04:18:55+0000 INFO  Using openjpeg 
+2020-10-05T04:18:55+0000 INFO  Using webp 
+2020-10-05T04:18:55+0000 INFO  Using leptonica 
+2020-10-05T04:18:55+0000 INFO  Using libass 
+2020-10-05T04:18:55+0000 INFO  Using libbluray 
+2020-10-05T04:18:55+0000 INFO  Using libsndfile 
+2020-10-05T04:18:55+0000 INFO  Using libsamplerate 
+2020-10-05T04:18:55+0000 INFO  Using libsoxr 
+2020-10-05T04:18:55+0000 INFO  Using opencore-amr 
+2020-10-05T04:18:55+0000 INFO  Using rtmpdump 
+2020-10-05T04:18:55+0000 INFO  Using rubberband 
+2020-10-05T04:18:55+0000 INFO  Using snappy 
+2020-10-05T04:18:55+0000 INFO  Using speex 
+2020-10-05T04:18:55+0000 INFO  Using tesseract 
+2020-10-05T04:18:55+0000 INFO  Using ffmpeg 
+2020-10-05T04:18:55+0000 INFO  Using isl 
+2020-10-05T04:18:55+0000 INFO  Using mpfr 
+2020-10-05T04:18:55+0000 INFO  Using libmpc 
+2020-10-05T04:18:55+0000 INFO  Using gcc 
+2020-10-05T04:18:55+0000 INFO  Using findutils 
+2020-10-05T04:18:55+0000 INFO  Using fish 
+2020-10-05T04:18:56+0000 INFO  Using fontforge 
+2020-10-05T04:18:56+0000 INFO  Using fpp 
+2020-10-05T04:18:56+0000 INFO  Using fswatch 
+2020-10-05T04:18:56+0000 INFO  Using fzf 
+2020-10-05T04:18:56+0000 INFO  Using fzy 
+2020-10-05T04:18:56+0000 INFO  Using gh 
+2020-10-05T04:18:56+0000 INFO  Using gifsicle 
+2020-10-05T04:18:56+0000 INFO  Using git 
+2020-10-05T04:18:56+0000 INFO  Using git-delta 
+2020-10-05T04:18:56+0000 INFO  Using git-extras 
+2020-10-05T04:18:56+0000 INFO  Using gitui 
+2020-10-05T04:18:56+0000 INFO  Using global 
+2020-10-05T04:18:56+0000 INFO  Using libassuan 
+2020-10-05T04:18:56+0000 INFO  Using libgcrypt 
+2020-10-05T04:18:56+0000 INFO  Using libksba 
+2020-10-05T04:18:56+0000 INFO  Using pinentry 
+2020-10-05T04:18:56+0000 INFO  Using gnupg 
+2020-10-05T04:18:56+0000 INFO  Using grep 
+2020-10-05T04:18:56+0000 INFO  Using grepcidr 
+2020-10-05T04:18:56+0000 INFO  Using helm@2 
+2020-10-05T04:18:56+0000 INFO  Using highlight 
+2020-10-05T04:18:57+0000 INFO  Using htop 
+2020-10-05T04:18:57+0000 INFO  Using httpie 
+2020-10-05T04:18:57+0000 INFO  Using httrack 
+2020-10-05T04:18:57+0000 INFO  Using hub 
+2020-10-05T04:18:57+0000 INFO  Using hugo 
+2020-10-05T04:18:57+0000 INFO  Using hyperfine 
+2020-10-05T04:18:57+0000 INFO  Using icdiff 
+2020-10-05T04:18:57+0000 INFO  Using imagesnap 
+2020-10-05T04:18:57+0000 INFO  Using jo 
+2020-10-05T04:18:57+0000 INFO  Using oniguruma 
+2020-10-05T04:18:57+0000 INFO  Using jq 
+2020-10-05T04:18:57+0000 INFO  Using jump 
+2020-10-05T04:18:57+0000 INFO  Using kakoune 
+2020-10-05T04:18:57+0000 INFO  Using kubectx 
+2020-10-05T04:18:57+0000 INFO  Using lf 
+2020-10-05T04:18:57+0000 INFO  Using libarchive 
+2020-10-05T04:18:57+0000 INFO  Using libp11 
+2020-10-05T04:18:57+0000 INFO  Using lnav 
+2020-10-05T04:18:57+0000 INFO  Using lsd 
+2020-10-05T04:18:57+0000 INFO  Using luarocks 
+2020-10-05T04:18:57+0000 INFO  Using make 
+2020-10-05T04:18:57+0000 INFO  Using mas 
+2020-10-05T04:18:58+0000 INFO  Using mercurial 
+2020-10-05T04:18:58+0000 INFO  Using micro 
+2020-10-05T04:18:58+0000 INFO  Using midnight-commander 
+2020-10-05T04:18:58+0000 INFO  Using mint 
+2020-10-05T04:18:58+0000 INFO  Using mitmproxy 
+2020-10-05T04:18:58+0000 INFO  Using moreutils 
+2020-10-05T04:18:58+0000 INFO  Using mujs 
+2020-10-05T04:18:58+0000 INFO  Using uchardet 
+2020-10-05T04:18:58+0000 INFO  Using vapoursynth 
+2020-10-05T04:18:58+0000 INFO  Using youtube-dl 
+2020-10-05T04:18:58+0000 INFO  Using mpv 
+2020-10-05T04:18:58+0000 INFO  Using neovim 
+2020-10-05T04:18:58+0000 INFO  Using nmap 
+2020-10-05T04:18:58+0000 INFO  Using nnn 
+2020-10-05T04:18:58+0000 INFO  Using nushell 
+2020-10-05T04:18:58+0000 INFO  Using pacvim 
+2020-10-05T04:18:58+0000 INFO  Using pastel 
+2020-10-05T04:18:58+0000 INFO  Using peco 
+2020-10-05T04:18:58+0000 INFO  Using pinentry-mac 
+2020-10-05T04:18:58+0000 INFO  Using pipenv 
+2020-10-05T04:18:58+0000 INFO  Using portmidi 
+2020-10-05T04:18:58+0000 INFO  Using procs 
+2020-10-05T04:18:58+0000 INFO  Using psutils 
+2020-10-05T04:18:59+0000 INFO  Using python@2 
+2020-10-05T04:18:59+0000 INFO  Using ranger 
+2020-10-05T04:18:59+0000 INFO  Using reattach-to-user-namespace 
+2020-10-05T04:18:59+0000 INFO  Using ripgrep 
+2020-10-05T04:18:59+0000 INFO  Using rpm 
+2020-10-05T04:18:59+0000 INFO  Using ruby 
+2020-10-05T04:18:59+0000 INFO  Using s-search 
+2020-10-05T04:18:59+0000 INFO  Using safe-rm 
+2020-10-05T04:18:59+0000 INFO  Using sdl 
+2020-10-05T04:18:59+0000 INFO  Using sdl_image 
+2020-10-05T04:18:59+0000 INFO  Using sdl_mixer 
+2020-10-05T04:18:59+0000 INFO  Using sdl_ttf 
+2020-10-05T04:18:59+0000 INFO  Using shellcheck 
+2020-10-05T04:18:59+0000 INFO  Using shfmt 
+2020-10-05T04:18:59+0000 INFO  Using sk 
+2020-10-05T04:18:59+0000 INFO  Using swiftformat 
+2020-10-05T04:18:59+0000 INFO  Using swiftlint 
+2020-10-05T04:18:59+0000 INFO  Using telnet 
+2020-10-05T04:18:59+0000 INFO  Using terraform 
+2020-10-05T04:18:59+0000 INFO  Using terragrunt 
+2020-10-05T04:18:59+0000 INFO  Using tflint 
+2020-10-05T04:18:59+0000 INFO  Using the_silver_searcher 
+2020-10-05T04:18:59+0000 INFO  Using tig 
+2020-10-05T04:18:59+0000 INFO  Using tldr 
+2020-10-05T04:19:00+0000 INFO  Using tmux 
+2020-10-05T04:19:00+0000 INFO  Using todo-txt 
+2020-10-05T04:19:00+0000 INFO  Using tokei 
+2020-10-05T04:19:00+0000 INFO  Using topgrade 
+2020-10-05T04:19:00+0000 INFO  Using tre 
+2020-10-05T04:19:00+0000 INFO  Using tree 
+2020-10-05T04:19:00+0000 INFO  Using up 
+2020-10-05T04:19:00+0000 INFO  Using velero 
+2020-10-05T04:19:00+0000 INFO  Using vifm 
+2020-10-05T04:19:00+0000 INFO  Using vim 
+2020-10-05T04:19:00+0000 INFO  Using vips 
+2020-10-05T04:19:00+0000 INFO  Using wget 
+2020-10-05T04:19:00+0000 INFO  Using wtfutil 
+2020-10-05T04:19:00+0000 INFO  Using xsv 
+2020-10-05T04:19:00+0000 INFO  Using yank 
+2020-10-05T04:19:00+0000 INFO  Using yarn 
+2020-10-05T04:19:00+0000 INFO  Using zeromq 
+2020-10-05T04:19:00+0000 INFO  Using zoxide 
+2020-10-05T04:19:00+0000 INFO  Using zplug 
+2020-10-05T04:19:00+0000 INFO  Using zsh 
+2020-10-05T04:19:00+0000 INFO  Using zsh-completions 
+2020-10-05T04:19:00+0000 INFO  Using alexanderwillner/tap/things.sh 
+2020-10-05T04:19:00+0000 INFO  Using d12frosted/emacs-plus/emacs-plus@27 
+2020-10-05T04:19:01+0000 INFO  Using drone/drone/drone 
+2020-10-05T04:19:01+0000 INFO  Using golangci/tap/golangci-lint 
+2020-10-05T04:19:01+0000 INFO  Using heroku/brew/heroku 
+2020-10-05T04:19:01+0000 INFO  Using jesseduffield/lazygit/lazygit 
+2020-10-05T04:19:01+0000 INFO  Using knqyf263/pet/pet 
+2020-10-05T04:19:01+0000 INFO  Using kyoh86/tap/richgo 
+2020-10-05T04:19:01+0000 INFO  Using mongodb/brew/mongosh 
+2020-10-05T04:19:01+0000 INFO  Using osx-cross/avr/avr-gcc@7 
+2020-10-05T04:19:01+0000 INFO  Using px4/px4/gcc-arm-none-eabi 
+2020-10-05T04:19:01+0000 INFO  Using qmk/qmk/qmk 
+2020-10-05T04:19:01+0000 INFO  Using tankerhq/repo/ruplacer 
+2020-10-05T04:19:01+0000 INFO  Using universal-ctags/universal-ctags/universal-ctags 
+2020-10-05T04:19:01+0000 INFO  Using 1password-cli 
+2020-10-05T04:19:01+0000 INFO  Using alacritty 
+2020-10-05T04:19:01+0000 INFO  Using docker 
+2020-10-05T04:19:01+0000 INFO  Using flux 
+2020-10-05T04:19:01+0000 INFO  Using font-awesome-terminal-fonts 
+2020-10-05T04:19:01+0000 INFO  Using font-fontawesome 
+2020-10-05T04:19:01+0000 INFO  Using font-inconsolata-dz-for-powerline 
+2020-10-05T04:19:01+0000 INFO  Using font-inconsolata-for-powerline 
+2020-10-05T04:19:01+0000 INFO  Using font-inconsolata-g-for-powerline 
+2020-10-05T04:19:01+0000 INFO  Using font-inter 
+2020-10-05T04:19:01+0000 INFO  Using font-jetbrains-mono 
+2020-10-05T04:19:01+0000 INFO  Using font-jetbrainsmono-nerd-font 
+2020-10-05T04:19:02+0000 INFO  Using font-roboto-mono 
+2020-10-05T04:19:02+0000 INFO  Using font-roboto-mono-for-powerline 
+2020-10-05T04:19:02+0000 INFO  Using font-source-code-pro 
+2020-10-05T04:19:02+0000 INFO  Using gitblade 
+2020-10-05T04:19:02+0000 INFO  Using google-cloud-sdk 
+2020-10-05T04:19:02+0000 INFO  Using gpg-suite 
+2020-10-05T04:19:02+0000 INFO  Using hammerspoon 
+2020-10-05T04:19:02+0000 INFO  Using hyper 
+2020-10-05T04:19:02+0000 INFO  Using joplin 
+2020-10-05T04:19:02+0000 INFO  Using keycastr 
+2020-10-05T04:19:02+0000 INFO  Using kitty 
+2020-10-05T04:19:02+0000 INFO  Using lens 
+2020-10-05T04:19:02+0000 INFO  Using lepton 
+2020-10-05T04:19:02+0000 INFO  Using little-snitch 
+2020-10-05T04:19:02+0000 INFO  Using macbreakz 
+2020-10-05T04:19:02+0000 INFO  Using mark-text 
+2020-10-05T04:19:02+0000 INFO  Using micro-snitch 
+2020-10-05T04:19:02+0000 INFO  Using minikube 
+2020-10-05T04:19:02+0000 INFO  Using monitorcontrol 
+2020-10-05T04:19:02+0000 INFO  Using ngrok 
+2020-10-05T04:19:02+0000 INFO  Using oni 
+2020-10-05T04:19:02+0000 INFO  Using proxyman 
+2020-10-05T04:19:02+0000 INFO  Using qlimagesize 
+2020-10-05T04:19:03+0000 INFO  Using qlvideo 
+2020-10-05T04:19:03+0000 INFO  Using qmk-toolbox 
+2020-10-05T04:19:03+0000 INFO  Using rectangle 
+2020-10-05T04:19:03+0000 INFO  Using signal 
+2020-10-05T04:19:03+0000 INFO  Using sizeup 
+2020-10-05T04:19:03+0000 INFO  Using vv 
+2020-10-05T04:19:03+0000 INFO  Using 1Keyboard 
+2020-10-05T04:19:03+0000 INFO  Using 2Do 
+2020-10-05T04:19:03+0000 INFO  Using Agenda 
+2020-10-05T04:19:03+0000 INFO  Using Amphetamine 
+2020-10-05T04:19:03+0000 INFO  Using Bear 
+2020-10-05T04:19:03+0000 INFO  Using Boop 
+2020-10-05T04:19:03+0000 INFO  Using Cardhop 
+2020-10-05T04:19:03+0000 INFO  Using CARROT Weather 
+2020-10-05T04:19:03+0000 INFO  Using Copy 'Em 
+2020-10-05T04:19:03+0000 INFO  Using Dark Reader for Safari 
+2020-10-05T04:19:03+0000 INFO  Using Day One 
+2020-10-05T04:19:03+0000 INFO  Using Deliveries 
+2020-10-05T04:19:03+0000 INFO  Using Developer 
+2020-10-05T04:19:03+0000 INFO  Using Disk Speed Test 
+2020-10-05T04:19:03+0000 INFO  Using Display Menu 
+2020-10-05T04:19:03+0000 INFO  Using Drafts 
+2020-10-05T04:19:03+0000 INFO  Using Due 
+2020-10-05T04:19:03+0000 INFO  Using Fantastical 
+2020-10-05T04:19:04+0000 INFO  Using Front and Center 
+2020-10-05T04:19:04+0000 INFO  Using GIPHY CAPTURE 
+2020-10-05T04:19:04+0000 INFO  Using iA Writer 
+2020-10-05T04:19:04+0000 INFO  Using Jira 
+2020-10-05T04:19:04+0000 INFO  Using Keep It 
+2020-10-05T04:19:04+0000 INFO  Using Keynote 
+2020-10-05T04:19:04+0000 INFO  Using Kindle 
+2020-10-05T04:19:04+0000 INFO  Using MenubarClock 
+2020-10-05T04:19:04+0000 INFO  Using Microsoft To Do 
+2020-10-05T04:19:04+0000 INFO  Using Numbers 
+2020-10-05T04:19:04+0000 INFO  Using Pages 
+2020-10-05T04:19:04+0000 INFO  Using Paprika Recipe Manager 3 
+2020-10-05T04:19:04+0000 INFO  Using Pastebot 
+2020-10-05T04:19:04+0000 INFO  Using Patterns 
+2020-10-05T04:19:04+0000 INFO  Using PDF Expert 
+2020-10-05T04:19:04+0000 INFO  Using Pixelmator 
+2020-10-05T04:19:04+0000 INFO  Using Poolside FM 
+2020-10-05T04:19:04+0000 INFO  Using Raindrop.io for Safari 
+2020-10-05T04:19:04+0000 INFO  Using Reeder 
+2020-10-05T04:19:04+0000 INFO  Using Screens 
+2020-10-05T04:19:04+0000 INFO  Using SwitchGlass 
+2020-10-05T04:19:04+0000 INFO  Using The Unarchiver 
+2020-10-05T04:19:04+0000 INFO  Using Things 
+2020-10-05T04:19:04+0000 INFO  Using ToothFairy 
+2020-10-05T04:19:05+0000 INFO  Using Tot 
+2020-10-05T04:19:05+0000 INFO  Using Trello 
+2020-10-05T04:19:05+0000 INFO  Using Tweetbot 
+2020-10-05T04:19:05+0000 INFO  Using Twitter 
+2020-10-05T04:19:05+0000 INFO  Using Ulysses 
+2020-10-05T04:19:05+0000 INFO  Using Wunderlist 
+2020-10-05T04:19:05+0000 INFO  Using Xcode 
+2020-10-05T04:19:09+0000 INFO  Homebrew Bundle complete! 314 Brewfile dependencies now installed. 
+2020-10-05T04:19:09+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:19:09+0000 INFO  Setting up zsh... 
+2020-10-05T04:19:40+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:19:40+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:19:40+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:19:40+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:20:16+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:20:16+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:20:16+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:20:16+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:20:41+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:20:41+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:20:41+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:20:42+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:20:48+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:20:48+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:20:48+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:20:48+0000 INFO  Using dduan/formulae 
+2020-10-05T04:20:48+0000 INFO  Using drone/drone 
+2020-10-05T04:20:48+0000 INFO  Using dunn/emacs 
+2020-10-05T04:20:48+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:20:48+0000 INFO  Using github/gh 
+2020-10-05T04:20:48+0000 INFO  Using golangci/tap 
+2020-10-05T04:20:48+0000 INFO  Using heroku/brew 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/cask 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/core 
+2020-10-05T04:20:48+0000 INFO  Using homebrew/services 
+2020-10-05T04:20:48+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:20:48+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:20:48+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:20:49+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:20:49+0000 INFO  Using mongodb/brew 
+2020-10-05T04:20:49+0000 INFO  Using muesli/tap 
+2020-10-05T04:20:49+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:20:49+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:20:49+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:20:49+0000 INFO  Using px4/px4 
+2020-10-05T04:20:49+0000 INFO  Using qmk/qmk 
+2020-10-05T04:20:49+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:20:49+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:24:27+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:24:27+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:24:27+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:24:27+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:24:33+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:24:33+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:24:33+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:24:33+0000 INFO  Using dduan/formulae 
+2020-10-05T04:24:33+0000 INFO  Using drone/drone 
+2020-10-05T04:24:33+0000 INFO  Using dunn/emacs 
+2020-10-05T04:24:33+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:24:33+0000 INFO  Using github/gh 
+2020-10-05T04:24:33+0000 INFO  Using golangci/tap 
+2020-10-05T04:24:33+0000 INFO  Using heroku/brew 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/cask 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/core 
+2020-10-05T04:24:34+0000 INFO  Using homebrew/services 
+2020-10-05T04:24:34+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:24:34+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:24:34+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:24:34+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:24:34+0000 INFO  Using mongodb/brew 
+2020-10-05T04:24:34+0000 INFO  Using muesli/tap 
+2020-10-05T04:24:34+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:24:34+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:24:34+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:24:34+0000 INFO  Using px4/px4 
+2020-10-05T04:24:34+0000 INFO  Using qmk/qmk 
+2020-10-05T04:24:34+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:24:34+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:24:35+0000 INFO  Using xquartz 
+2020-10-05T04:24:47+0000 INFO  Using ack 
+2020-10-05T04:24:47+0000 INFO  Using adns 
+2020-10-05T04:24:47+0000 INFO  Using aom 
+2020-10-05T04:24:47+0000 INFO  Using archey 
+2020-10-05T04:24:47+0000 INFO  Using coreutils 
+2020-10-05T04:24:47+0000 INFO  Using asdf 
+2020-10-05T04:24:47+0000 INFO  Using autojump 
+2020-10-05T04:24:47+0000 INFO  Using libusb 
+2020-10-05T04:24:47+0000 INFO  Using avrdude 
+2020-10-05T04:24:47+0000 INFO  Using gdbm 
+2020-10-05T04:24:47+0000 INFO  Using xz 
+2020-10-05T04:24:47+0000 INFO  Using awscli 
+2020-10-05T04:24:48+0000 INFO  Using bash-completion 
+2020-10-05T04:24:48+0000 INFO  Using bat 
+2020-10-05T04:24:48+0000 INFO  Using blueutil 
+2020-10-05T04:24:48+0000 INFO  Using broot 
+2020-10-05T04:24:48+0000 INFO  Using fontconfig 
+2020-10-05T04:24:48+0000 INFO  Using gettext 
+2020-10-05T04:24:48+0000 INFO  Using libffi 
+2020-10-05T04:24:48+0000 INFO  Using ccat 
+2020-10-05T04:24:48+0000 INFO  Using cfssl 
+2020-10-05T04:24:48+0000 INFO  Using colordiff 
+2020-10-05T04:24:48+0000 INFO  Using ctags 
+2020-10-05T04:24:48+0000 INFO  Using curl 
+2020-10-05T04:24:49+0000 INFO  Error: Could not symlink bin/deno 
+2020-10-05T04:24:49+0000 INFO  Target /usr/local/bin/deno 
+2020-10-05T04:24:49+0000 INFO  already exists. You may want to remove it: 
+2020-10-05T04:24:49+0000 INFO    rm '/usr/local/bin/deno' 
+2020-10-05T04:24:49+0000 INFO   
+2020-10-05T04:24:49+0000 INFO  To force the link and overwrite all conflicting files: 
+2020-10-05T04:24:49+0000 INFO    brew link --overwrite deno 
+2020-10-05T04:24:49+0000 INFO   
+2020-10-05T04:24:49+0000 INFO  To list all files that would be deleted: 
+2020-10-05T04:24:49+0000 INFO    brew link --overwrite --dry-run deno 
+2020-10-05T04:24:49+0000 INFO  Linking /usr/local/Cellar/deno/1.4.4...  
+2020-10-05T04:24:49+0000 INFO  Using deno 
+2020-10-05T04:24:49+0000 INFO  Using go 
+2020-10-05T04:24:49+0000 INFO  Using dep 
+2020-10-05T04:24:49+0000 INFO  Using dfu-programmer 
+2020-10-05T04:24:49+0000 INFO  Using dfu-util 
+2020-10-05T04:24:49+0000 INFO  Using diff-so-fancy 
+2020-10-05T04:24:49+0000 INFO  Using diffutils 
+2020-10-05T04:24:49+0000 INFO  Using direnv 
+2020-10-05T04:24:49+0000 INFO  Using dos2unix 
+2020-10-05T04:24:50+0000 INFO  Using eg-examples 
+2020-10-05T04:24:50+0000 INFO  Using elvish 
+2020-10-05T04:24:50+0000 INFO  Using exa 
+2020-10-05T04:24:50+0000 INFO  Using fd 
+2020-10-05T04:24:50+0000 INFO  Using flac 
+2020-10-05T04:24:50+0000 INFO  Using frei0r 
+2020-10-05T04:24:50+0000 INFO  Using giflib 
+2020-10-05T04:24:50+0000 INFO  Using gmp 
+2020-10-05T04:24:50+0000 INFO  Using libunistring 
+2020-10-05T04:24:50+0000 INFO  Using pkg-config 
+2020-10-05T04:24:50+0000 INFO  Using nettle 
+2020-10-05T04:24:50+0000 INFO  Using graphite2 
+2020-10-05T04:24:50+0000 INFO  Using jpeg 
+2020-10-05T04:24:50+0000 INFO  Using little-cms2 
+2020-10-05T04:24:50+0000 INFO  Using openjpeg 
+2020-10-05T04:24:50+0000 INFO  Using webp 
+2020-10-05T04:24:50+0000 INFO  Using leptonica 
+2020-10-05T04:24:50+0000 INFO  Using libass 
+2020-10-05T04:24:50+0000 INFO  Using libbluray 
+2020-10-05T04:24:50+0000 INFO  Using libsndfile 
+2020-10-05T04:24:50+0000 INFO  Using libsamplerate 
+2020-10-05T04:24:50+0000 INFO  Using libsoxr 
+2020-10-05T04:24:51+0000 INFO  Using opencore-amr 
+2020-10-05T04:24:51+0000 INFO  Using rtmpdump 
+2020-10-05T04:24:51+0000 INFO  Using rubberband 
+2020-10-05T04:24:51+0000 INFO  Using snappy 
+2020-10-05T04:24:51+0000 INFO  Using speex 
+2020-10-05T04:24:51+0000 INFO  Using tesseract 
+2020-10-05T04:24:51+0000 INFO  Using ffmpeg 
+2020-10-05T04:24:51+0000 INFO  Using isl 
+2020-10-05T04:24:51+0000 INFO  Using mpfr 
+2020-10-05T04:24:51+0000 INFO  Using libmpc 
+2020-10-05T04:24:51+0000 INFO  Using gcc 
+2020-10-05T04:24:51+0000 INFO  Using findutils 
+2020-10-05T04:24:51+0000 INFO  Using fish 
+2020-10-05T04:24:51+0000 INFO  Using fontforge 
+2020-10-05T04:24:51+0000 INFO  Using fpp 
+2020-10-05T04:24:51+0000 INFO  Using fswatch 
+2020-10-05T04:24:51+0000 INFO  Using fzf 
+2020-10-05T04:24:51+0000 INFO  Using fzy 
+2020-10-05T04:24:51+0000 INFO  Using gh 
+2020-10-05T04:24:51+0000 INFO  Using gifsicle 
+2020-10-05T04:24:51+0000 INFO  Using git 
+2020-10-05T04:24:51+0000 INFO  Using git-delta 
+2020-10-05T04:24:52+0000 INFO  Using git-extras 
+2020-10-05T04:24:52+0000 INFO  Using gitui 
+2020-10-05T04:24:52+0000 INFO  Using global 
+2020-10-05T04:24:52+0000 INFO  Using libassuan 
+2020-10-05T04:24:52+0000 INFO  Using libgcrypt 
+2020-10-05T04:24:52+0000 INFO  Using libksba 
+2020-10-05T04:24:52+0000 INFO  Using pinentry 
+2020-10-05T04:24:52+0000 INFO  Using gnupg 
+2020-10-05T04:24:52+0000 INFO  Using grep 
+2020-10-05T04:24:52+0000 INFO  Using grepcidr 
+2020-10-05T04:24:52+0000 INFO  Using helm@2 
+2020-10-05T04:24:52+0000 INFO  Using highlight 
+2020-10-05T04:24:52+0000 INFO  Using htop 
+2020-10-05T04:24:52+0000 INFO  Using httpie 
+2020-10-05T04:24:52+0000 INFO  Using httrack 
+2020-10-05T04:24:52+0000 INFO  Using hub 
+2020-10-05T04:24:52+0000 INFO  Using hugo 
+2020-10-05T04:24:52+0000 INFO  Using hyperfine 
+2020-10-05T04:24:52+0000 INFO  Using icdiff 
+2020-10-05T04:24:52+0000 INFO  Using imagesnap 
+2020-10-05T04:24:52+0000 INFO  Using jo 
+2020-10-05T04:24:52+0000 INFO  Using oniguruma 
+2020-10-05T04:24:53+0000 INFO  Using jq 
+2020-10-05T04:24:53+0000 INFO  Using jump 
+2020-10-05T04:24:53+0000 INFO  Using kakoune 
+2020-10-05T04:24:53+0000 INFO  Using kubectx 
+2020-10-05T04:24:53+0000 INFO  Using lf 
+2020-10-05T04:24:53+0000 INFO  Using libarchive 
+2020-10-05T04:24:53+0000 INFO  Using libp11 
+2020-10-05T04:24:53+0000 INFO  Using lnav 
+2020-10-05T04:24:53+0000 INFO  Using lsd 
+2020-10-05T04:24:53+0000 INFO  Using luarocks 
+2020-10-05T04:24:53+0000 INFO  Using make 
+2020-10-05T04:24:53+0000 INFO  Using mas 
+2020-10-05T04:24:53+0000 INFO  Using mercurial 
+2020-10-05T04:24:53+0000 INFO  Using micro 
+2020-10-05T04:24:53+0000 INFO  Using midnight-commander 
+2020-10-05T04:24:53+0000 INFO  Using mint 
+2020-10-05T04:24:53+0000 INFO  Using mitmproxy 
+2020-10-05T04:24:53+0000 INFO  Using moreutils 
+2020-10-05T04:24:53+0000 INFO  Using mujs 
+2020-10-05T04:24:53+0000 INFO  Using uchardet 
+2020-10-05T04:24:53+0000 INFO  Using vapoursynth 
+2020-10-05T04:24:53+0000 INFO  Using youtube-dl 
+2020-10-05T04:24:53+0000 INFO  Using mpv 
+2020-10-05T04:24:53+0000 INFO  Using neovim 
+2020-10-05T04:24:54+0000 INFO  Using nmap 
+2020-10-05T04:24:54+0000 INFO  Using nnn 
+2020-10-05T04:24:54+0000 INFO  Using nushell 
+2020-10-05T04:24:54+0000 INFO  Using pacvim 
+2020-10-05T04:24:54+0000 INFO  Using pastel 
+2020-10-05T04:24:54+0000 INFO  Using peco 
+2020-10-05T04:24:54+0000 INFO  Using pinentry-mac 
+2020-10-05T04:24:54+0000 INFO  Using pipenv 
+2020-10-05T04:24:54+0000 INFO  Using portmidi 
+2020-10-05T04:24:54+0000 INFO  Using procs 
+2020-10-05T04:24:54+0000 INFO  Using psutils 
+2020-10-05T04:24:54+0000 INFO  Using python@2 
+2020-10-05T04:24:54+0000 INFO  Using ranger 
+2020-10-05T04:24:54+0000 INFO  Using reattach-to-user-namespace 
+2020-10-05T04:24:54+0000 INFO  Using ripgrep 
+2020-10-05T04:24:54+0000 INFO  Using rpm 
+2020-10-05T04:24:54+0000 INFO  Using ruby 
+2020-10-05T04:24:54+0000 INFO  Using s-search 
+2020-10-05T04:24:54+0000 INFO  Using safe-rm 
+2020-10-05T04:24:54+0000 INFO  Using sdl 
+2020-10-05T04:24:54+0000 INFO  Using sdl_image 
+2020-10-05T04:24:54+0000 INFO  Using sdl_mixer 
+2020-10-05T04:24:55+0000 INFO  Using sdl_ttf 
+2020-10-05T04:24:55+0000 INFO  Using shellcheck 
+2020-10-05T04:24:55+0000 INFO  Using shfmt 
+2020-10-05T04:24:55+0000 INFO  Using sk 
+2020-10-05T04:24:55+0000 INFO  Using swiftformat 
+2020-10-05T04:24:55+0000 INFO  Using swiftlint 
+2020-10-05T04:24:55+0000 INFO  Using telnet 
+2020-10-05T04:24:55+0000 INFO  Using terraform 
+2020-10-05T04:24:55+0000 INFO  Using terragrunt 
+2020-10-05T04:24:55+0000 INFO  Using tflint 
+2020-10-05T04:24:55+0000 INFO  Using the_silver_searcher 
+2020-10-05T04:24:55+0000 INFO  Using tig 
+2020-10-05T04:24:55+0000 INFO  Using tldr 
+2020-10-05T04:24:55+0000 INFO  Using tmux 
+2020-10-05T04:24:55+0000 INFO  Using todo-txt 
+2020-10-05T04:24:55+0000 INFO  Using tokei 
+2020-10-05T04:24:55+0000 INFO  Using topgrade 
+2020-10-05T04:24:55+0000 INFO  Using tre 
+2020-10-05T04:24:55+0000 INFO  Using tree 
+2020-10-05T04:24:55+0000 INFO  Using up 
+2020-10-05T04:24:55+0000 INFO  Using velero 
+2020-10-05T04:24:55+0000 INFO  Using vifm 
+2020-10-05T04:24:55+0000 INFO  Using vim 
+2020-10-05T04:24:55+0000 INFO  Using vips 
+2020-10-05T04:24:56+0000 INFO  Using wget 
+2020-10-05T04:24:56+0000 INFO  Using wtfutil 
+2020-10-05T04:24:56+0000 INFO  Using xsv 
+2020-10-05T04:24:56+0000 INFO  Using yank 
+2020-10-05T04:24:56+0000 INFO  Using yarn 
+2020-10-05T04:24:56+0000 INFO  Using zeromq 
+2020-10-05T04:24:56+0000 INFO  Using zoxide 
+2020-10-05T04:24:56+0000 INFO  Using zplug 
+2020-10-05T04:24:56+0000 INFO  Using zsh 
+2020-10-05T04:24:56+0000 INFO  Using zsh-completions 
+2020-10-05T04:24:56+0000 INFO  Using alexanderwillner/tap/things.sh 
+2020-10-05T04:24:56+0000 INFO  Using d12frosted/emacs-plus/emacs-plus@27 
+2020-10-05T04:24:56+0000 INFO  Using drone/drone/drone 
+2020-10-05T04:24:56+0000 INFO  Using golangci/tap/golangci-lint 
+2020-10-05T04:24:56+0000 INFO  Using heroku/brew/heroku 
+2020-10-05T04:24:56+0000 INFO  Using jesseduffield/lazygit/lazygit 
+2020-10-05T04:24:56+0000 INFO  Using knqyf263/pet/pet 
+2020-10-05T04:24:56+0000 INFO  Using kyoh86/tap/richgo 
+2020-10-05T04:24:56+0000 INFO  Using mongodb/brew/mongosh 
+2020-10-05T04:24:56+0000 INFO  Using osx-cross/avr/avr-gcc@7 
+2020-10-05T04:24:56+0000 INFO  Using px4/px4/gcc-arm-none-eabi 
+2020-10-05T04:24:56+0000 INFO  Using qmk/qmk/qmk 
+2020-10-05T04:24:56+0000 INFO  Using tankerhq/repo/ruplacer 
+2020-10-05T04:24:57+0000 INFO  Using universal-ctags/universal-ctags/universal-ctags 
+2020-10-05T04:24:57+0000 INFO  Using 1password-cli 
+2020-10-05T04:24:57+0000 INFO  Using alacritty 
+2020-10-05T04:24:57+0000 INFO  Using docker 
+2020-10-05T04:24:57+0000 INFO  Using flux 
+2020-10-05T04:24:57+0000 INFO  Using font-awesome-terminal-fonts 
+2020-10-05T04:24:57+0000 INFO  Using font-fontawesome 
+2020-10-05T04:24:57+0000 INFO  Using font-inconsolata-dz-for-powerline 
+2020-10-05T04:24:57+0000 INFO  Using font-inconsolata-for-powerline 
+2020-10-05T04:24:57+0000 INFO  Using font-inconsolata-g-for-powerline 
+2020-10-05T04:24:57+0000 INFO  Using font-inter 
+2020-10-05T04:24:57+0000 INFO  Using font-jetbrains-mono 
+2020-10-05T04:24:57+0000 INFO  Using font-jetbrainsmono-nerd-font 
+2020-10-05T04:24:57+0000 INFO  Using font-roboto-mono 
+2020-10-05T04:24:57+0000 INFO  Using font-roboto-mono-for-powerline 
+2020-10-05T04:24:57+0000 INFO  Using font-source-code-pro 
+2020-10-05T04:24:57+0000 INFO  Using gitblade 
+2020-10-05T04:24:57+0000 INFO  Using google-cloud-sdk 
+2020-10-05T04:24:57+0000 INFO  Using gpg-suite 
+2020-10-05T04:24:57+0000 INFO  Using hammerspoon 
+2020-10-05T04:24:57+0000 INFO  Using hyper 
+2020-10-05T04:24:57+0000 INFO  Using joplin 
+2020-10-05T04:24:57+0000 INFO  Using keycastr 
+2020-10-05T04:24:57+0000 INFO  Using kitty 
+2020-10-05T04:24:58+0000 INFO  Using lens 
+2020-10-05T04:24:58+0000 INFO  Using lepton 
+2020-10-05T04:24:58+0000 INFO  Using little-snitch 
+2020-10-05T04:24:58+0000 INFO  Using macbreakz 
+2020-10-05T04:24:58+0000 INFO  Using mark-text 
+2020-10-05T04:24:58+0000 INFO  Using micro-snitch 
+2020-10-05T04:24:58+0000 INFO  Using minikube 
+2020-10-05T04:24:58+0000 INFO  Using monitorcontrol 
+2020-10-05T04:24:58+0000 INFO  Using ngrok 
+2020-10-05T04:24:58+0000 INFO  Using oni 
+2020-10-05T04:24:58+0000 INFO  Using proxyman 
+2020-10-05T04:24:58+0000 INFO  Using qlimagesize 
+2020-10-05T04:24:58+0000 INFO  Using qlvideo 
+2020-10-05T04:24:58+0000 INFO  Using qmk-toolbox 
+2020-10-05T04:24:58+0000 INFO  Using rectangle 
+2020-10-05T04:24:58+0000 INFO  Using signal 
+2020-10-05T04:24:58+0000 INFO  Using sizeup 
+2020-10-05T04:24:58+0000 INFO  Using vv 
+2020-10-05T04:24:58+0000 INFO  Using 1Keyboard 
+2020-10-05T04:24:58+0000 INFO  Using 2Do 
+2020-10-05T04:24:58+0000 INFO  Using Agenda 
+2020-10-05T04:24:58+0000 INFO  Using Amphetamine 
+2020-10-05T04:24:58+0000 INFO  Using Bear 
+2020-10-05T04:24:59+0000 INFO  Using Boop 
+2020-10-05T04:24:59+0000 INFO  Using Cardhop 
+2020-10-05T04:24:59+0000 INFO  Using CARROT Weather 
+2020-10-05T04:24:59+0000 INFO  Using Copy 'Em 
+2020-10-05T04:24:59+0000 INFO  Using Dark Reader for Safari 
+2020-10-05T04:24:59+0000 INFO  Using Day One 
+2020-10-05T04:24:59+0000 INFO  Using Deliveries 
+2020-10-05T04:24:59+0000 INFO  Using Developer 
+2020-10-05T04:24:59+0000 INFO  Using Disk Speed Test 
+2020-10-05T04:24:59+0000 INFO  Using Display Menu 
+2020-10-05T04:24:59+0000 INFO  Using Drafts 
+2020-10-05T04:24:59+0000 INFO  Using Due 
+2020-10-05T04:24:59+0000 INFO  Using Fantastical 
+2020-10-05T04:24:59+0000 INFO  Using Front and Center 
+2020-10-05T04:24:59+0000 INFO  Using GIPHY CAPTURE 
+2020-10-05T04:24:59+0000 INFO  Using iA Writer 
+2020-10-05T04:24:59+0000 INFO  Using Jira 
+2020-10-05T04:24:59+0000 INFO  Using Keep It 
+2020-10-05T04:24:59+0000 INFO  Using Keynote 
+2020-10-05T04:24:59+0000 INFO  Using Kindle 
+2020-10-05T04:24:59+0000 INFO  Using MenubarClock 
+2020-10-05T04:24:59+0000 INFO  Using Microsoft To Do 
+2020-10-05T04:24:59+0000 INFO  Using Numbers 
+2020-10-05T04:24:59+0000 INFO  Using Pages 
+2020-10-05T04:25:00+0000 INFO  Using Paprika Recipe Manager 3 
+2020-10-05T04:25:00+0000 INFO  Using Pastebot 
+2020-10-05T04:25:00+0000 INFO  Using Patterns 
+2020-10-05T04:25:00+0000 INFO  Using PDF Expert 
+2020-10-05T04:25:00+0000 INFO  Using Pixelmator 
+2020-10-05T04:25:00+0000 INFO  Using Poolside FM 
+2020-10-05T04:25:00+0000 INFO  Using Raindrop.io for Safari 
+2020-10-05T04:25:00+0000 INFO  Using Reeder 
+2020-10-05T04:25:00+0000 INFO  Using Screens 
+2020-10-05T04:25:00+0000 INFO  Using SwitchGlass 
+2020-10-05T04:25:00+0000 INFO  Using The Unarchiver 
+2020-10-05T04:25:00+0000 INFO  Using Things 
+2020-10-05T04:25:00+0000 INFO  Using ToothFairy 
+2020-10-05T04:25:00+0000 INFO  Using Tot 
+2020-10-05T04:25:00+0000 INFO  Using Trello 
+2020-10-05T04:25:00+0000 INFO  Using Tweetbot 
+2020-10-05T04:25:00+0000 INFO  Using Twitter 
+2020-10-05T04:25:00+0000 INFO  Using Ulysses 
+2020-10-05T04:25:00+0000 INFO  Using Wunderlist 
+2020-10-05T04:25:00+0000 INFO  Using Xcode 
+2020-10-05T04:25:04+0000 INFO  Homebrew Bundle complete! 314 Brewfile dependencies now installed. 
+2020-10-05T04:25:04+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:25:04+0000 INFO  Setting up zsh... 
+2020-10-05T04:25:04+0000 INFO  Linking ZSH... 
+2020-10-05T04:25:04+0000 OK    ZSH linked 
+2020-10-05T04:25:04+0000 INFO  Setting up neovim... 
+2020-10-05T04:25:04+0000 INFO  Linking neovim... 
+2020-10-05T04:25:04+0000 OK    neovim linked. 
+2020-10-05T04:25:05+0000 INFO  Setting up node/npm... 
+2020-10-05T04:25:05+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:25:05+0000 OK    'n' installed. 
+2020-10-05T04:25:05+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:25:09+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:25:10+0000 INFO  Installing global npm packages... 
+2020-10-05T04:25:23+0000 OK    Done installing global npm packages. 
+2020-10-05T04:25:23+0000 INFO  Installing 'asdf' plugins/shims... 
+2020-10-05T04:25:23+0000 INFO  Installing 'kubectl' plugin... 
+2020-10-05T04:27:21+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:27:21+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:27:21+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:27:21+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:27:27+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:27:27+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:27:27+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:27:28+0000 INFO  Using dduan/formulae 
+2020-10-05T04:27:28+0000 INFO  Using drone/drone 
+2020-10-05T04:27:28+0000 INFO  Using dunn/emacs 
+2020-10-05T04:27:28+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:27:28+0000 INFO  Using github/gh 
+2020-10-05T04:27:28+0000 INFO  Using golangci/tap 
+2020-10-05T04:27:28+0000 INFO  Using heroku/brew 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/cask 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/core 
+2020-10-05T04:27:28+0000 INFO  Using homebrew/services 
+2020-10-05T04:27:28+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:27:28+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:27:28+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:27:28+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:27:28+0000 INFO  Using mongodb/brew 
+2020-10-05T04:27:28+0000 INFO  Using muesli/tap 
+2020-10-05T04:27:28+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:27:28+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:27:28+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:27:29+0000 INFO  Using px4/px4 
+2020-10-05T04:27:29+0000 INFO  Using qmk/qmk 
+2020-10-05T04:27:29+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:27:29+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:27:30+0000 INFO  Using xquartz 
+2020-10-05T04:27:42+0000 INFO  Using ack 
+2020-10-05T04:27:42+0000 INFO  Using adns 
+2020-10-05T04:27:42+0000 INFO  Using aom 
+2020-10-05T04:27:42+0000 INFO  Using archey 
+2020-10-05T04:27:42+0000 INFO  Using coreutils 
+2020-10-05T04:27:42+0000 INFO  Using asdf 
+2020-10-05T04:27:42+0000 INFO  Using autojump 
+2020-10-05T04:27:42+0000 INFO  Using libusb 
+2020-10-05T04:27:42+0000 INFO  Using avrdude 
+2020-10-05T04:27:42+0000 INFO  Using gdbm 
+2020-10-05T04:27:42+0000 INFO  Using xz 
+2020-10-05T04:27:42+0000 INFO  Using awscli 
+2020-10-05T04:27:42+0000 INFO  Using bash-completion 
+2020-10-05T04:27:42+0000 INFO  Using bat 
+2020-10-05T04:27:42+0000 INFO  Using blueutil 
+2020-10-05T04:27:42+0000 INFO  Using broot 
+2020-10-05T04:27:42+0000 INFO  Using fontconfig 
+2020-10-05T04:27:42+0000 INFO  Using gettext 
+2020-10-05T04:27:42+0000 INFO  Using libffi 
+2020-10-05T04:27:43+0000 INFO  Using ccat 
+2020-10-05T04:27:43+0000 INFO  Using cfssl 
+2020-10-05T04:27:43+0000 INFO  Using colordiff 
+2020-10-05T04:27:43+0000 INFO  Using ctags 
+2020-10-05T04:27:43+0000 INFO  Using curl 
+2020-10-05T04:27:43+0000 INFO  Error: Could not symlink bin/deno 
+2020-10-05T04:27:43+0000 INFO  Target /usr/local/bin/deno 
+2020-10-05T04:27:43+0000 INFO  already exists. You may want to remove it: 
+2020-10-05T04:27:43+0000 INFO    rm '/usr/local/bin/deno' 
+2020-10-05T04:27:44+0000 INFO   
+2020-10-05T04:27:44+0000 INFO  To force the link and overwrite all conflicting files: 
+2020-10-05T04:27:44+0000 INFO    brew link --overwrite deno 
+2020-10-05T04:27:44+0000 INFO   
+2020-10-05T04:27:44+0000 INFO  To list all files that would be deleted: 
+2020-10-05T04:27:44+0000 INFO    brew link --overwrite --dry-run deno 
+2020-10-05T04:27:44+0000 INFO  Linking /usr/local/Cellar/deno/1.4.4...  
+2020-10-05T04:27:44+0000 INFO  Using deno 
+2020-10-05T04:27:44+0000 INFO  Using go 
+2020-10-05T04:27:44+0000 INFO  Using dep 
+2020-10-05T04:27:44+0000 INFO  Using dfu-programmer 
+2020-10-05T04:27:44+0000 INFO  Using dfu-util 
+2020-10-05T04:27:44+0000 INFO  Using diff-so-fancy 
+2020-10-05T04:27:44+0000 INFO  Using diffutils 
+2020-10-05T04:27:44+0000 INFO  Using direnv 
+2020-10-05T04:27:44+0000 INFO  Using dos2unix 
+2020-10-05T04:27:44+0000 INFO  Using eg-examples 
+2020-10-05T04:27:44+0000 INFO  Using elvish 
+2020-10-05T04:27:44+0000 INFO  Using exa 
+2020-10-05T04:27:44+0000 INFO  Using fd 
+2020-10-05T04:27:44+0000 INFO  Using flac 
+2020-10-05T04:27:44+0000 INFO  Using frei0r 
+2020-10-05T04:27:44+0000 INFO  Using giflib 
+2020-10-05T04:27:44+0000 INFO  Using gmp 
+2020-10-05T04:27:45+0000 INFO  Using libunistring 
+2020-10-05T04:27:45+0000 INFO  Using pkg-config 
+2020-10-05T04:27:45+0000 INFO  Using nettle 
+2020-10-05T04:27:45+0000 INFO  Using graphite2 
+2020-10-05T04:27:45+0000 INFO  Using jpeg 
+2020-10-05T04:27:45+0000 INFO  Using little-cms2 
+2020-10-05T04:27:45+0000 INFO  Using openjpeg 
+2020-10-05T04:27:45+0000 INFO  Using webp 
+2020-10-05T04:27:45+0000 INFO  Using leptonica 
+2020-10-05T04:27:45+0000 INFO  Using libass 
+2020-10-05T04:27:45+0000 INFO  Using libbluray 
+2020-10-05T04:27:45+0000 INFO  Using libsndfile 
+2020-10-05T04:27:45+0000 INFO  Using libsamplerate 
+2020-10-05T04:27:45+0000 INFO  Using libsoxr 
+2020-10-05T04:27:45+0000 INFO  Using opencore-amr 
+2020-10-05T04:27:45+0000 INFO  Using rtmpdump 
+2020-10-05T04:27:45+0000 INFO  Using rubberband 
+2020-10-05T04:27:45+0000 INFO  Using snappy 
+2020-10-05T04:27:45+0000 INFO  Using speex 
+2020-10-05T04:27:45+0000 INFO  Using tesseract 
+2020-10-05T04:27:45+0000 INFO  Using ffmpeg 
+2020-10-05T04:27:46+0000 INFO  Using isl 
+2020-10-05T04:27:46+0000 INFO  Using mpfr 
+2020-10-05T04:27:46+0000 INFO  Using libmpc 
+2020-10-05T04:27:46+0000 INFO  Using gcc 
+2020-10-05T04:27:46+0000 INFO  Using findutils 
+2020-10-05T04:27:46+0000 INFO  Using fish 
+2020-10-05T04:27:46+0000 INFO  Using fontforge 
+2020-10-05T04:27:46+0000 INFO  Using fpp 
+2020-10-05T04:27:46+0000 INFO  Using fswatch 
+2020-10-05T04:27:46+0000 INFO  Using fzf 
+2020-10-05T04:27:46+0000 INFO  Using fzy 
+2020-10-05T04:27:46+0000 INFO  Using gh 
+2020-10-05T04:27:46+0000 INFO  Using gifsicle 
+2020-10-05T04:27:46+0000 INFO  Using git 
+2020-10-05T04:27:46+0000 INFO  Using git-delta 
+2020-10-05T04:27:46+0000 INFO  Using git-extras 
+2020-10-05T04:27:46+0000 INFO  Using gitui 
+2020-10-05T04:27:46+0000 INFO  Using global 
+2020-10-05T04:27:46+0000 INFO  Using libassuan 
+2020-10-05T04:27:46+0000 INFO  Using libgcrypt 
+2020-10-05T04:27:46+0000 INFO  Using libksba 
+2020-10-05T04:27:47+0000 INFO  Using pinentry 
+2020-10-05T04:27:47+0000 INFO  Using gnupg 
+2020-10-05T04:27:47+0000 INFO  Using grep 
+2020-10-05T04:27:47+0000 INFO  Using grepcidr 
+2020-10-05T04:27:47+0000 INFO  Using helm@2 
+2020-10-05T04:27:47+0000 INFO  Using highlight 
+2020-10-05T04:27:47+0000 INFO  Using htop 
+2020-10-05T04:27:47+0000 INFO  Using httpie 
+2020-10-05T04:27:47+0000 INFO  Using httrack 
+2020-10-05T04:27:47+0000 INFO  Using hub 
+2020-10-05T04:27:47+0000 INFO  Using hugo 
+2020-10-05T04:27:47+0000 INFO  Using hyperfine 
+2020-10-05T04:27:47+0000 INFO  Using icdiff 
+2020-10-05T04:27:47+0000 INFO  Using imagesnap 
+2020-10-05T04:27:47+0000 INFO  Using jo 
+2020-10-05T04:27:47+0000 INFO  Using oniguruma 
+2020-10-05T04:27:47+0000 INFO  Using jq 
+2020-10-05T04:27:47+0000 INFO  Using jump 
+2020-10-05T04:27:47+0000 INFO  Using kakoune 
+2020-10-05T04:27:47+0000 INFO  Using kubectx 
+2020-10-05T04:27:48+0000 INFO  Using lf 
+2020-10-05T04:27:48+0000 INFO  Using libarchive 
+2020-10-05T04:27:48+0000 INFO  Using libp11 
+2020-10-05T04:27:48+0000 INFO  Using lnav 
+2020-10-05T04:27:48+0000 INFO  Using lsd 
+2020-10-05T04:27:48+0000 INFO  Using luarocks 
+2020-10-05T04:27:48+0000 INFO  Using make 
+2020-10-05T04:27:48+0000 INFO  Using mas 
+2020-10-05T04:27:48+0000 INFO  Using mercurial 
+2020-10-05T04:27:48+0000 INFO  Using micro 
+2020-10-05T04:27:48+0000 INFO  Using midnight-commander 
+2020-10-05T04:27:48+0000 INFO  Using mint 
+2020-10-05T04:27:48+0000 INFO  Using mitmproxy 
+2020-10-05T04:27:48+0000 INFO  Using moreutils 
+2020-10-05T04:27:48+0000 INFO  Using mujs 
+2020-10-05T04:27:48+0000 INFO  Using uchardet 
+2020-10-05T04:27:48+0000 INFO  Using vapoursynth 
+2020-10-05T04:27:48+0000 INFO  Using youtube-dl 
+2020-10-05T04:27:48+0000 INFO  Using mpv 
+2020-10-05T04:27:48+0000 INFO  Using neovim 
+2020-10-05T04:27:48+0000 INFO  Using nmap 
+2020-10-05T04:27:48+0000 INFO  Using nnn 
+2020-10-05T04:27:48+0000 INFO  Using nushell 
+2020-10-05T04:27:49+0000 INFO  Using pacvim 
+2020-10-05T04:27:49+0000 INFO  Using pastel 
+2020-10-05T04:27:49+0000 INFO  Using peco 
+2020-10-05T04:27:49+0000 INFO  Using pinentry-mac 
+2020-10-05T04:27:49+0000 INFO  Using pipenv 
+2020-10-05T04:27:49+0000 INFO  Using portmidi 
+2020-10-05T04:27:49+0000 INFO  Using procs 
+2020-10-05T04:27:49+0000 INFO  Using psutils 
+2020-10-05T04:27:49+0000 INFO  Using python@2 
+2020-10-05T04:27:49+0000 INFO  Using ranger 
+2020-10-05T04:27:49+0000 INFO  Using reattach-to-user-namespace 
+2020-10-05T04:27:49+0000 INFO  Using ripgrep 
+2020-10-05T04:27:49+0000 INFO  Using rpm 
+2020-10-05T04:27:49+0000 INFO  Using ruby 
+2020-10-05T04:27:49+0000 INFO  Using s-search 
+2020-10-05T04:27:49+0000 INFO  Using safe-rm 
+2020-10-05T04:27:49+0000 INFO  Using sdl 
+2020-10-05T04:27:49+0000 INFO  Using sdl_image 
+2020-10-05T04:27:49+0000 INFO  Using sdl_mixer 
+2020-10-05T04:27:49+0000 INFO  Using sdl_ttf 
+2020-10-05T04:27:49+0000 INFO  Using shellcheck 
+2020-10-05T04:27:49+0000 INFO  Using shfmt 
+2020-10-05T04:27:49+0000 INFO  Using sk 
+2020-10-05T04:27:50+0000 INFO  Using swiftformat 
+2020-10-05T04:27:50+0000 INFO  Using swiftlint 
+2020-10-05T04:27:50+0000 INFO  Using telnet 
+2020-10-05T04:27:50+0000 INFO  Using terraform 
+2020-10-05T04:27:50+0000 INFO  Using terragrunt 
+2020-10-05T04:27:50+0000 INFO  Using tflint 
+2020-10-05T04:27:50+0000 INFO  Using the_silver_searcher 
+2020-10-05T04:27:50+0000 INFO  Using tig 
+2020-10-05T04:27:50+0000 INFO  Using tldr 
+2020-10-05T04:27:50+0000 INFO  Using tmux 
+2020-10-05T04:27:50+0000 INFO  Using todo-txt 
+2020-10-05T04:27:50+0000 INFO  Using tokei 
+2020-10-05T04:27:50+0000 INFO  Using topgrade 
+2020-10-05T04:27:50+0000 INFO  Using tre 
+2020-10-05T04:27:50+0000 INFO  Using tree 
+2020-10-05T04:27:50+0000 INFO  Using up 
+2020-10-05T04:27:50+0000 INFO  Using velero 
+2020-10-05T04:27:50+0000 INFO  Using vifm 
+2020-10-05T04:27:50+0000 INFO  Using vim 
+2020-10-05T04:27:50+0000 INFO  Using vips 
+2020-10-05T04:27:50+0000 INFO  Using wget 
+2020-10-05T04:27:50+0000 INFO  Using wtfutil 
+2020-10-05T04:27:50+0000 INFO  Using xsv 
+2020-10-05T04:27:50+0000 INFO  Using yank 
+2020-10-05T04:27:51+0000 INFO  Using yarn 
+2020-10-05T04:27:51+0000 INFO  Using zeromq 
+2020-10-05T04:27:51+0000 INFO  Using zoxide 
+2020-10-05T04:27:51+0000 INFO  Using zplug 
+2020-10-05T04:27:51+0000 INFO  Using zsh 
+2020-10-05T04:27:51+0000 INFO  Using zsh-completions 
+2020-10-05T04:27:51+0000 INFO  Using alexanderwillner/tap/things.sh 
+2020-10-05T04:27:51+0000 INFO  Using d12frosted/emacs-plus/emacs-plus@27 
+2020-10-05T04:27:51+0000 INFO  Using drone/drone/drone 
+2020-10-05T04:27:51+0000 INFO  Using golangci/tap/golangci-lint 
+2020-10-05T04:27:51+0000 INFO  Using heroku/brew/heroku 
+2020-10-05T04:27:51+0000 INFO  Using jesseduffield/lazygit/lazygit 
+2020-10-05T04:27:51+0000 INFO  Using knqyf263/pet/pet 
+2020-10-05T04:27:51+0000 INFO  Using kyoh86/tap/richgo 
+2020-10-05T04:27:51+0000 INFO  Using mongodb/brew/mongosh 
+2020-10-05T04:27:51+0000 INFO  Using osx-cross/avr/avr-gcc@7 
+2020-10-05T04:27:51+0000 INFO  Using px4/px4/gcc-arm-none-eabi 
+2020-10-05T04:27:51+0000 INFO  Using qmk/qmk/qmk 
+2020-10-05T04:27:51+0000 INFO  Using tankerhq/repo/ruplacer 
+2020-10-05T04:27:51+0000 INFO  Using universal-ctags/universal-ctags/universal-ctags 
+2020-10-05T04:27:51+0000 INFO  Using 1password-cli 
+2020-10-05T04:27:51+0000 INFO  Using alacritty 
+2020-10-05T04:27:51+0000 INFO  Using docker 
+2020-10-05T04:27:52+0000 INFO  Using flux 
+2020-10-05T04:27:52+0000 INFO  Using font-awesome-terminal-fonts 
+2020-10-05T04:27:52+0000 INFO  Using font-fontawesome 
+2020-10-05T04:27:52+0000 INFO  Using font-inconsolata-dz-for-powerline 
+2020-10-05T04:27:52+0000 INFO  Using font-inconsolata-for-powerline 
+2020-10-05T04:27:52+0000 INFO  Using font-inconsolata-g-for-powerline 
+2020-10-05T04:27:52+0000 INFO  Using font-inter 
+2020-10-05T04:27:52+0000 INFO  Using font-jetbrains-mono 
+2020-10-05T04:27:52+0000 INFO  Using font-jetbrainsmono-nerd-font 
+2020-10-05T04:27:52+0000 INFO  Using font-roboto-mono 
+2020-10-05T04:27:52+0000 INFO  Using font-roboto-mono-for-powerline 
+2020-10-05T04:27:52+0000 INFO  Using font-source-code-pro 
+2020-10-05T04:27:52+0000 INFO  Using gitblade 
+2020-10-05T04:27:52+0000 INFO  Using google-cloud-sdk 
+2020-10-05T04:27:52+0000 INFO  Using gpg-suite 
+2020-10-05T04:27:52+0000 INFO  Using hammerspoon 
+2020-10-05T04:27:52+0000 INFO  Using hyper 
+2020-10-05T04:27:52+0000 INFO  Using joplin 
+2020-10-05T04:27:52+0000 INFO  Using keycastr 
+2020-10-05T04:27:52+0000 INFO  Using kitty 
+2020-10-05T04:27:52+0000 INFO  Using lens 
+2020-10-05T04:27:52+0000 INFO  Using lepton 
+2020-10-05T04:27:52+0000 INFO  Using little-snitch 
+2020-10-05T04:27:52+0000 INFO  Using macbreakz 
+2020-10-05T04:27:53+0000 INFO  Using mark-text 
+2020-10-05T04:27:53+0000 INFO  Using micro-snitch 
+2020-10-05T04:27:53+0000 INFO  Using minikube 
+2020-10-05T04:27:53+0000 INFO  Using monitorcontrol 
+2020-10-05T04:27:53+0000 INFO  Using ngrok 
+2020-10-05T04:27:53+0000 INFO  Using oni 
+2020-10-05T04:27:53+0000 INFO  Using proxyman 
+2020-10-05T04:27:53+0000 INFO  Using qlimagesize 
+2020-10-05T04:27:53+0000 INFO  Using qlvideo 
+2020-10-05T04:27:53+0000 INFO  Using qmk-toolbox 
+2020-10-05T04:27:53+0000 INFO  Using rectangle 
+2020-10-05T04:27:53+0000 INFO  Using signal 
+2020-10-05T04:27:53+0000 INFO  Using sizeup 
+2020-10-05T04:27:53+0000 INFO  Using vv 
+2020-10-05T04:27:53+0000 INFO  Using 1Keyboard 
+2020-10-05T04:27:53+0000 INFO  Using 2Do 
+2020-10-05T04:27:53+0000 INFO  Using Agenda 
+2020-10-05T04:27:53+0000 INFO  Using Amphetamine 
+2020-10-05T04:27:53+0000 INFO  Using Bear 
+2020-10-05T04:27:53+0000 INFO  Using Boop 
+2020-10-05T04:27:53+0000 INFO  Using Cardhop 
+2020-10-05T04:27:53+0000 INFO  Using CARROT Weather 
+2020-10-05T04:27:53+0000 INFO  Using Copy 'Em 
+2020-10-05T04:27:53+0000 INFO  Using Dark Reader for Safari 
+2020-10-05T04:27:54+0000 INFO  Using Day One 
+2020-10-05T04:27:54+0000 INFO  Using Deliveries 
+2020-10-05T04:27:54+0000 INFO  Using Developer 
+2020-10-05T04:27:54+0000 INFO  Using Disk Speed Test 
+2020-10-05T04:27:54+0000 INFO  Using Display Menu 
+2020-10-05T04:27:54+0000 INFO  Using Drafts 
+2020-10-05T04:27:54+0000 INFO  Using Due 
+2020-10-05T04:27:54+0000 INFO  Using Fantastical 
+2020-10-05T04:27:54+0000 INFO  Using Front and Center 
+2020-10-05T04:27:54+0000 INFO  Using GIPHY CAPTURE 
+2020-10-05T04:27:54+0000 INFO  Using iA Writer 
+2020-10-05T04:27:54+0000 INFO  Using Jira 
+2020-10-05T04:27:54+0000 INFO  Using Keep It 
+2020-10-05T04:27:54+0000 INFO  Using Keynote 
+2020-10-05T04:27:54+0000 INFO  Using Kindle 
+2020-10-05T04:27:54+0000 INFO  Using MenubarClock 
+2020-10-05T04:27:54+0000 INFO  Using Microsoft To Do 
+2020-10-05T04:27:54+0000 INFO  Using Numbers 
+2020-10-05T04:27:54+0000 INFO  Using Pages 
+2020-10-05T04:27:54+0000 INFO  Using Paprika Recipe Manager 3 
+2020-10-05T04:27:54+0000 INFO  Using Pastebot 
+2020-10-05T04:27:54+0000 INFO  Using Patterns 
+2020-10-05T04:27:54+0000 INFO  Using PDF Expert 
+2020-10-05T04:27:54+0000 INFO  Using Pixelmator 
+2020-10-05T04:27:55+0000 INFO  Using Poolside FM 
+2020-10-05T04:27:55+0000 INFO  Using Raindrop.io for Safari 
+2020-10-05T04:27:55+0000 INFO  Using Reeder 
+2020-10-05T04:27:55+0000 INFO  Using Screens 
+2020-10-05T04:27:55+0000 INFO  Using SwitchGlass 
+2020-10-05T04:27:55+0000 INFO  Using The Unarchiver 
+2020-10-05T04:27:55+0000 INFO  Using Things 
+2020-10-05T04:27:55+0000 INFO  Using ToothFairy 
+2020-10-05T04:27:55+0000 INFO  Using Tot 
+2020-10-05T04:27:55+0000 INFO  Using Trello 
+2020-10-05T04:27:55+0000 INFO  Using Tweetbot 
+2020-10-05T04:27:55+0000 INFO  Using Twitter 
+2020-10-05T04:27:55+0000 INFO  Using Ulysses 
+2020-10-05T04:27:55+0000 INFO  Using Wunderlist 
+2020-10-05T04:27:55+0000 INFO  Using Xcode 
+2020-10-05T04:27:59+0000 INFO  Homebrew Bundle complete! 314 Brewfile dependencies now installed. 
+2020-10-05T04:27:59+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:27:59+0000 INFO  Setting up zsh... 
+2020-10-05T04:27:59+0000 INFO  Linking ZSH... 
+2020-10-05T04:27:59+0000 OK    ZSH linked 
+2020-10-05T04:27:59+0000 INFO  Setting up neovim... 
+2020-10-05T04:27:59+0000 INFO  Linking neovim... 
+2020-10-05T04:28:00+0000 OK    neovim linked. 
+2020-10-05T04:28:00+0000 INFO  Setting up node/npm... 
+2020-10-05T04:28:00+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:32:09+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:32:09+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:32:09+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:32:09+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:32:15+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:32:15+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:32:15+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:32:15+0000 INFO  Using dduan/formulae 
+2020-10-05T04:32:15+0000 INFO  Using drone/drone 
+2020-10-05T04:32:15+0000 INFO  Using dunn/emacs 
+2020-10-05T04:32:16+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:32:16+0000 INFO  Using github/gh 
+2020-10-05T04:32:16+0000 INFO  Using golangci/tap 
+2020-10-05T04:32:16+0000 INFO  Using heroku/brew 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/cask 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/core 
+2020-10-05T04:32:16+0000 INFO  Using homebrew/services 
+2020-10-05T04:32:16+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:32:16+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:32:16+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:32:16+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:32:16+0000 INFO  Using mongodb/brew 
+2020-10-05T04:32:16+0000 INFO  Using muesli/tap 
+2020-10-05T04:32:16+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:32:16+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:32:16+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:32:16+0000 INFO  Using px4/px4 
+2020-10-05T04:32:17+0000 INFO  Using qmk/qmk 
+2020-10-05T04:32:17+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:32:17+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:32:18+0000 INFO  Using xquartz 
+2020-10-05T04:32:20+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:32:20+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:32:20+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:32:20+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:32:20+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:32:20+0000 INFO  Setting up zsh... 
+2020-10-05T04:32:21+0000 INFO  Linking ZSH... 
+2020-10-05T04:32:21+0000 OK    ZSH linked 
+2020-10-05T04:32:21+0000 INFO  Setting up neovim... 
+2020-10-05T04:32:21+0000 INFO  Linking neovim... 
+2020-10-05T04:32:21+0000 OK    neovim linked. 
+2020-10-05T04:32:21+0000 INFO  Setting up node/npm... 
+2020-10-05T04:32:21+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:37:49+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:37:53+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:37:53+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:37:53+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:37:53+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:37:53+0000 INFO  Setting up zsh... 
+2020-10-05T04:37:53+0000 INFO  Linking ZSH... 
+2020-10-05T04:37:53+0000 OK    ZSH linked 
+2020-10-05T04:37:53+0000 INFO  Setting up neovim... 
+2020-10-05T04:37:53+0000 INFO  Linking neovim... 
+2020-10-05T04:37:53+0000 OK    neovim linked. 
+2020-10-05T04:37:53+0000 INFO  Setting up node/npm... 
+2020-10-05T04:37:54+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:37:54+0000 OK    'n' installed. 
+2020-10-05T04:37:54+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:37:57+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:37:59+0000 INFO  Installing global npm packages... 
+2020-10-05T04:38:14+0000 OK    Done installing global npm packages. 
+2020-10-05T04:38:14+0000 INFO  Installing 'asdf' plugins/shims... 
+2020-10-05T04:38:14+0000 INFO  Installing 'kubectl' plugin... 
+2020-10-05T04:38:47+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:38:47+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:38:47+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:38:47+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:38:47+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:38:47+0000 INFO  Setting up zsh... 
+2020-10-05T04:38:47+0000 INFO  Linking ZSH... 
+2020-10-05T04:38:47+0000 OK    ZSH linked 
+2020-10-05T04:38:47+0000 INFO  Setting up neovim... 
+2020-10-05T04:38:47+0000 INFO  Linking neovim... 
+2020-10-05T04:38:47+0000 OK    neovim linked. 
+2020-10-05T04:38:48+0000 INFO  Setting up node/npm... 
+2020-10-05T04:38:48+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:38:48+0000 OK    'n' installed. 
+2020-10-05T04:38:48+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:38:51+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:38:52+0000 INFO  Installing global npm packages... 
+2020-10-05T04:39:04+0000 OK    Done installing global npm packages. 
+2020-10-05T04:39:04+0000 INFO  Installing 'asdf' plugins/shims... 
+2020-10-05T04:39:05+0000 INFO  Installing 'kubectl' plugin... 
+2020-10-05T04:39:27+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:39:27+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:39:27+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:39:27+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:39:27+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:39:27+0000 INFO  Setting up zsh... 
+2020-10-05T04:39:27+0000 INFO  Linking ZSH... 
+2020-10-05T04:39:28+0000 OK    ZSH linked 
+2020-10-05T04:39:28+0000 INFO  Setting up neovim... 
+2020-10-05T04:39:28+0000 INFO  Linking neovim... 
+2020-10-05T04:39:28+0000 OK    neovim linked. 
+2020-10-05T04:39:28+0000 INFO  Setting up node/npm... 
+2020-10-05T04:39:28+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:39:28+0000 OK    'n' installed. 
+2020-10-05T04:39:28+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:39:31+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:39:32+0000 INFO  Installing global npm packages... 
+2020-10-05T04:40:00+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:40:00+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:40:00+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:40:00+0000 INFO  Setting up Homebrew... 
+2020-10-05T04:40:00+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:40:00+0000 INFO  Setting up zsh... 
+2020-10-05T04:40:00+0000 INFO  Linking ZSH... 
+2020-10-05T04:40:00+0000 OK    ZSH linked 
+2020-10-05T04:40:00+0000 INFO  Setting up neovim... 
+2020-10-05T04:40:00+0000 INFO  Linking neovim... 
+2020-10-05T04:40:00+0000 OK    neovim linked. 
+2020-10-05T04:40:00+0000 INFO  Setting up node/npm... 
+2020-10-05T04:40:00+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:40:01+0000 OK    'n' installed. 
+2020-10-05T04:40:01+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:40:03+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:40:05+0000 INFO  Installing global npm packages... 
+2020-10-05T04:40:05+0000 OK    Done installing global npm packages. 
+2020-10-05T04:40:05+0000 INFO  Installing 'asdf' plugins/shims... 
+2020-10-05T04:40:05+0000 INFO  Installing 'kubectl' plugin... 
+2020-10-05T04:40:07+0000 INFO  Installing latest stable version of MongoDB... 
+2020-10-05T04:40:08+0000 OK    Done installing MongoDB. 
+2020-10-05T04:40:08+0000 INFO  Wrap things up by symlinking again for good measure... 
+2020-10-05T04:40:09+0000 INFO  Creating all symlinks... 
+2020-10-05T04:40:09+0000 INFO  Linking BASH... 
+2020-10-05T04:40:09+0000 OK    BASH linked. 
+2020-10-05T04:40:09+0000 INFO  Linking ZSH... 
+2020-10-05T04:40:09+0000 OK    ZSH linked 
+2020-10-05T04:40:09+0000 INFO  Linking Spacemacs... 
+2020-10-05T04:40:09+0000 OK    SPACEMACS linked. 
+2020-10-05T04:40:09+0000 INFO  Linking neovim... 
+2020-10-05T04:40:09+0000 OK    neovim linked. 
+2020-10-05T04:40:09+0000 INFO  Linking ACK... 
+2020-10-05T04:40:09+0000 OK    ACK linked. 
+2020-10-05T04:40:09+0000 INFO  Linking eslint... 
+2020-10-05T04:40:09+0000 OK    ESLINT linked. 
+2020-10-05T04:40:09+0000 INFO  Linking Karabiner... 
+2020-10-05T04:40:09+0000 OK    Karabiner linked. 
+2020-10-05T04:40:09+0000 INFO  Linking Sublime Merge keymap... 
+2020-10-05T04:40:09+0000 OK    Sublime Merge keymap linked. 
+2020-10-05T04:40:09+0000 INFO  Linking secrets... 
+2020-10-05T04:40:09+0000 OK    Secrets linked. 
+2020-10-05T04:40:09+0000 OK    All symlinks created. 
+2020-10-05T04:40:09+0000 OK    Done! 
+2020-10-05T04:41:37+0000 INFO  You're currently here: /Users/juliant/GitLocal/Play/dotfiles/setup 
+2020-10-05T04:41:37+0000 INFO  Sourcing things that we need to source... 
+2020-10-05T04:41:38+0000 OK    Files sourced successfully (not that I thought they wouldn't) 
+2020-10-05T04:41:38+0000 INFO  Installing Homebrew packages and casks... 
+2020-10-05T04:41:44+0000 INFO  Using alexanderwillner/tap 
+2020-10-05T04:41:44+0000 INFO  Using d12frosted/emacs-plus 
+2020-10-05T04:41:44+0000 INFO  Using daviderestivo/emacs-head 
+2020-10-05T04:41:44+0000 INFO  Using dduan/formulae 
+2020-10-05T04:41:45+0000 INFO  Using drone/drone 
+2020-10-05T04:41:45+0000 INFO  Using dunn/emacs 
+2020-10-05T04:41:45+0000 INFO  Using federico-terzi/espanso 
+2020-10-05T04:41:45+0000 INFO  Using github/gh 
+2020-10-05T04:41:45+0000 INFO  Using golangci/tap 
+2020-10-05T04:41:45+0000 INFO  Using heroku/brew 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/bundle 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/cask 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/cask-drivers 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/cask-fonts 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/cask-versions 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/core 
+2020-10-05T04:41:45+0000 INFO  Using homebrew/services 
+2020-10-05T04:41:45+0000 INFO  Using jesseduffield/lazygit 
+2020-10-05T04:41:45+0000 INFO  Using jhawthorn/fzy 
+2020-10-05T04:41:45+0000 INFO  Using knqyf263/pet 
+2020-10-05T04:41:45+0000 INFO  Using kyoh86/tap 
+2020-10-05T04:41:45+0000 INFO  Using mongodb/brew 
+2020-10-05T04:41:45+0000 INFO  Using muesli/tap 
+2020-10-05T04:41:45+0000 INFO  Using nshipster/formulae 
+2020-10-05T04:41:45+0000 INFO  Using osx-cross/arm 
+2020-10-05T04:41:45+0000 INFO  Using osx-cross/avr 
+2020-10-05T04:41:45+0000 INFO  Using px4/px4 
+2020-10-05T04:41:46+0000 INFO  Using qmk/qmk 
+2020-10-05T04:41:46+0000 INFO  Using tankerhq/repo 
+2020-10-05T04:41:46+0000 INFO  Using universal-ctags/universal-ctags 
+2020-10-05T04:41:47+0000 INFO  Using xquartz 
+2020-10-05T04:42:01+0000 INFO  Using ack 
+2020-10-05T04:42:01+0000 INFO  Using adns 
+2020-10-05T04:42:01+0000 INFO  Using aom 
+2020-10-05T04:42:01+0000 INFO  Using archey 
+2020-10-05T04:42:01+0000 INFO  Using coreutils 
+2020-10-05T04:42:01+0000 INFO  Using asdf 
+2020-10-05T04:42:01+0000 INFO  Using autojump 
+2020-10-05T04:42:01+0000 INFO  Using libusb 
+2020-10-05T04:42:01+0000 INFO  Using avrdude 
+2020-10-05T04:42:01+0000 INFO  Using gdbm 
+2020-10-05T04:42:01+0000 INFO  Using xz 
+2020-10-05T04:42:01+0000 INFO  Using awscli 
+2020-10-05T04:42:01+0000 INFO  Using bash-completion 
+2020-10-05T04:42:01+0000 INFO  Using bat 
+2020-10-05T04:42:01+0000 INFO  Using blueutil 
+2020-10-05T04:42:01+0000 INFO  Using broot 
+2020-10-05T04:42:02+0000 INFO  Using fontconfig 
+2020-10-05T04:42:02+0000 INFO  Using gettext 
+2020-10-05T04:42:02+0000 INFO  Using libffi 
+2020-10-05T04:42:02+0000 INFO  Using ccat 
+2020-10-05T04:42:02+0000 INFO  Using cfssl 
+2020-10-05T04:42:02+0000 INFO  Using colordiff 
+2020-10-05T04:42:02+0000 INFO  Using ctags 
+2020-10-05T04:42:02+0000 INFO  Using curl 
+2020-10-05T04:42:03+0000 INFO  Error: Could not symlink bin/deno 
+2020-10-05T04:42:03+0000 INFO  Target /usr/local/bin/deno 
+2020-10-05T04:42:03+0000 INFO  already exists. You may want to remove it: 
+2020-10-05T04:42:03+0000 INFO    rm '/usr/local/bin/deno' 
+2020-10-05T04:42:03+0000 INFO   
+2020-10-05T04:42:03+0000 INFO  To force the link and overwrite all conflicting files: 
+2020-10-05T04:42:03+0000 INFO    brew link --overwrite deno 
+2020-10-05T04:42:03+0000 INFO   
+2020-10-05T04:42:03+0000 INFO  To list all files that would be deleted: 
+2020-10-05T04:42:03+0000 INFO    brew link --overwrite --dry-run deno 
+2020-10-05T04:42:03+0000 INFO  Linking /usr/local/Cellar/deno/1.4.4...  
+2020-10-05T04:42:03+0000 INFO  Using deno 
+2020-10-05T04:42:03+0000 INFO  Using go 
+2020-10-05T04:42:03+0000 INFO  Using dep 
+2020-10-05T04:42:03+0000 INFO  Using dfu-programmer 
+2020-10-05T04:42:03+0000 INFO  Using dfu-util 
+2020-10-05T04:42:03+0000 INFO  Using diff-so-fancy 
+2020-10-05T04:42:03+0000 INFO  Using diffutils 
+2020-10-05T04:42:03+0000 INFO  Using direnv 
+2020-10-05T04:42:03+0000 INFO  Using dos2unix 
+2020-10-05T04:42:03+0000 INFO  Using eg-examples 
+2020-10-05T04:42:03+0000 INFO  Using elvish 
+2020-10-05T04:42:03+0000 INFO  Using exa 
+2020-10-05T04:42:04+0000 INFO  Using fd 
+2020-10-05T04:42:04+0000 INFO  Using flac 
+2020-10-05T04:42:04+0000 INFO  Using frei0r 
+2020-10-05T04:42:04+0000 INFO  Using giflib 
+2020-10-05T04:42:04+0000 INFO  Using gmp 
+2020-10-05T04:42:04+0000 INFO  Using libunistring 
+2020-10-05T04:42:04+0000 INFO  Using pkg-config 
+2020-10-05T04:42:04+0000 INFO  Using nettle 
+2020-10-05T04:42:04+0000 INFO  Using graphite2 
+2020-10-05T04:42:04+0000 INFO  Using jpeg 
+2020-10-05T04:42:04+0000 INFO  Using little-cms2 
+2020-10-05T04:42:04+0000 INFO  Using openjpeg 
+2020-10-05T04:42:04+0000 INFO  Using webp 
+2020-10-05T04:42:04+0000 INFO  Using leptonica 
+2020-10-05T04:42:04+0000 INFO  Using libass 
+2020-10-05T04:42:04+0000 INFO  Using libbluray 
+2020-10-05T04:42:04+0000 INFO  Using libsndfile 
+2020-10-05T04:42:04+0000 INFO  Using libsamplerate 
+2020-10-05T04:42:04+0000 INFO  Using libsoxr 
+2020-10-05T04:42:04+0000 INFO  Using opencore-amr 
+2020-10-05T04:42:04+0000 INFO  Using rtmpdump 
+2020-10-05T04:42:04+0000 INFO  Using rubberband 
+2020-10-05T04:42:04+0000 INFO  Using snappy 
+2020-10-05T04:42:05+0000 INFO  Using speex 
+2020-10-05T04:42:05+0000 INFO  Using tesseract 
+2020-10-05T04:42:05+0000 INFO  Using ffmpeg 
+2020-10-05T04:42:05+0000 INFO  Using isl 
+2020-10-05T04:42:05+0000 INFO  Using mpfr 
+2020-10-05T04:42:05+0000 INFO  Using libmpc 
+2020-10-05T04:42:05+0000 INFO  Using gcc 
+2020-10-05T04:42:05+0000 INFO  Using findutils 
+2020-10-05T04:42:05+0000 INFO  Using fish 
+2020-10-05T04:42:05+0000 INFO  Using fontforge 
+2020-10-05T04:42:05+0000 INFO  Using fpp 
+2020-10-05T04:42:05+0000 INFO  Using fswatch 
+2020-10-05T04:42:05+0000 INFO  Using fzf 
+2020-10-05T04:42:05+0000 INFO  Using fzy 
+2020-10-05T04:42:05+0000 INFO  Using gh 
+2020-10-05T04:42:05+0000 INFO  Using gifsicle 
+2020-10-05T04:42:05+0000 INFO  Using git 
+2020-10-05T04:42:05+0000 INFO  Using git-delta 
+2020-10-05T04:42:05+0000 INFO  Using git-extras 
+2020-10-05T04:42:05+0000 INFO  Using gitui 
+2020-10-05T04:42:05+0000 INFO  Using global 
+2020-10-05T04:42:05+0000 INFO  Using libassuan 
+2020-10-05T04:42:06+0000 INFO  Using libgcrypt 
+2020-10-05T04:42:06+0000 INFO  Using libksba 
+2020-10-05T04:42:06+0000 INFO  Using pinentry 
+2020-10-05T04:42:06+0000 INFO  Using gnupg 
+2020-10-05T04:42:06+0000 INFO  Using grep 
+2020-10-05T04:42:06+0000 INFO  Using grepcidr 
+2020-10-05T04:42:06+0000 INFO  Using helm@2 
+2020-10-05T04:42:06+0000 INFO  Using highlight 
+2020-10-05T04:42:06+0000 INFO  Using htop 
+2020-10-05T04:42:06+0000 INFO  Using httpie 
+2020-10-05T04:42:06+0000 INFO  Using httrack 
+2020-10-05T04:42:06+0000 INFO  Using hub 
+2020-10-05T04:42:06+0000 INFO  Using hugo 
+2020-10-05T04:42:06+0000 INFO  Using hyperfine 
+2020-10-05T04:42:06+0000 INFO  Using icdiff 
+2020-10-05T04:42:06+0000 INFO  Using imagesnap 
+2020-10-05T04:42:06+0000 INFO  Using jo 
+2020-10-05T04:42:06+0000 INFO  Using oniguruma 
+2020-10-05T04:42:07+0000 INFO  Using jq 
+2020-10-05T04:42:07+0000 INFO  Using jump 
+2020-10-05T04:42:07+0000 INFO  Using kakoune 
+2020-10-05T04:42:07+0000 INFO  Using kubectx 
+2020-10-05T04:42:07+0000 INFO  Using lf 
+2020-10-05T04:42:07+0000 INFO  Using libarchive 
+2020-10-05T04:42:07+0000 INFO  Using libp11 
+2020-10-05T04:42:07+0000 INFO  Using lnav 
+2020-10-05T04:42:07+0000 INFO  Using lsd 
+2020-10-05T04:42:07+0000 INFO  Using luarocks 
+2020-10-05T04:42:07+0000 INFO  Using make 
+2020-10-05T04:42:07+0000 INFO  Using mas 
+2020-10-05T04:42:07+0000 INFO  Using mercurial 
+2020-10-05T04:42:07+0000 INFO  Using micro 
+2020-10-05T04:42:07+0000 INFO  Using midnight-commander 
+2020-10-05T04:42:07+0000 INFO  Using mint 
+2020-10-05T04:42:07+0000 INFO  Using mitmproxy 
+2020-10-05T04:42:07+0000 INFO  Using moreutils 
+2020-10-05T04:42:07+0000 INFO  Using mujs 
+2020-10-05T04:42:08+0000 INFO  Using uchardet 
+2020-10-05T04:42:08+0000 INFO  Using vapoursynth 
+2020-10-05T04:42:08+0000 INFO  Using youtube-dl 
+2020-10-05T04:42:08+0000 INFO  Using mpv 
+2020-10-05T04:42:08+0000 INFO  Using neovim 
+2020-10-05T04:42:08+0000 INFO  Using nmap 
+2020-10-05T04:42:08+0000 INFO  Using nnn 
+2020-10-05T04:42:08+0000 INFO  Using nushell 
+2020-10-05T04:42:08+0000 INFO  Using pacvim 
+2020-10-05T04:42:08+0000 INFO  Using pastel 
+2020-10-05T04:42:08+0000 INFO  Using peco 
+2020-10-05T04:42:08+0000 INFO  Using pinentry-mac 
+2020-10-05T04:42:08+0000 INFO  Using pipenv 
+2020-10-05T04:42:08+0000 INFO  Using portmidi 
+2020-10-05T04:42:08+0000 INFO  Using procs 
+2020-10-05T04:42:08+0000 INFO  Using psutils 
+2020-10-05T04:42:08+0000 INFO  Using python@2 
+2020-10-05T04:42:08+0000 INFO  Using ranger 
+2020-10-05T04:42:08+0000 INFO  Using reattach-to-user-namespace 
+2020-10-05T04:42:08+0000 INFO  Using ripgrep 
+2020-10-05T04:42:08+0000 INFO  Using rpm 
+2020-10-05T04:42:09+0000 INFO  Using ruby 
+2020-10-05T04:42:09+0000 INFO  Using s-search 
+2020-10-05T04:42:09+0000 INFO  Using safe-rm 
+2020-10-05T04:42:09+0000 INFO  Using sdl 
+2020-10-05T04:42:09+0000 INFO  Using sdl_image 
+2020-10-05T04:42:09+0000 INFO  Using sdl_mixer 
+2020-10-05T04:42:09+0000 INFO  Using sdl_ttf 
+2020-10-05T04:42:09+0000 INFO  Using shellcheck 
+2020-10-05T04:42:09+0000 INFO  Using shfmt 
+2020-10-05T04:42:09+0000 INFO  Using sk 
+2020-10-05T04:42:09+0000 INFO  Using swiftformat 
+2020-10-05T04:42:09+0000 INFO  Using swiftlint 
+2020-10-05T04:42:09+0000 INFO  Using telnet 
+2020-10-05T04:42:09+0000 INFO  Using terraform 
+2020-10-05T04:42:09+0000 INFO  Using terragrunt 
+2020-10-05T04:42:09+0000 INFO  Using tflint 
+2020-10-05T04:42:09+0000 INFO  Using the_silver_searcher 
+2020-10-05T04:42:09+0000 INFO  Using tig 
+2020-10-05T04:42:09+0000 INFO  Using tldr 
+2020-10-05T04:42:09+0000 INFO  Using tmux 
+2020-10-05T04:42:09+0000 INFO  Using todo-txt 
+2020-10-05T04:42:09+0000 INFO  Using tokei 
+2020-10-05T04:42:10+0000 INFO  Using topgrade 
+2020-10-05T04:42:10+0000 INFO  Using tre 
+2020-10-05T04:42:10+0000 INFO  Using tree 
+2020-10-05T04:42:10+0000 INFO  Using up 
+2020-10-05T04:42:10+0000 INFO  Using velero 
+2020-10-05T04:42:10+0000 INFO  Using vifm 
+2020-10-05T04:42:10+0000 INFO  Using vim 
+2020-10-05T04:42:10+0000 INFO  Using vips 
+2020-10-05T04:42:10+0000 INFO  Using wget 
+2020-10-05T04:42:10+0000 INFO  Using wtfutil 
+2020-10-05T04:42:10+0000 INFO  Using xsv 
+2020-10-05T04:42:10+0000 INFO  Using yank 
+2020-10-05T04:42:10+0000 INFO  Using yarn 
+2020-10-05T04:42:10+0000 INFO  Using zeromq 
+2020-10-05T04:42:10+0000 INFO  Using zoxide 
+2020-10-05T04:42:10+0000 INFO  Using zplug 
+2020-10-05T04:42:10+0000 INFO  Using zsh 
+2020-10-05T04:42:10+0000 INFO  Using zsh-completions 
+2020-10-05T04:42:10+0000 INFO  Using alexanderwillner/tap/things.sh 
+2020-10-05T04:42:10+0000 INFO  Using d12frosted/emacs-plus/emacs-plus@27 
+2020-10-05T04:42:10+0000 INFO  Using drone/drone/drone 
+2020-10-05T04:42:10+0000 INFO  Using golangci/tap/golangci-lint 
+2020-10-05T04:42:10+0000 INFO  Using heroku/brew/heroku 
+2020-10-05T04:42:11+0000 INFO  Using jesseduffield/lazygit/lazygit 
+2020-10-05T04:42:11+0000 INFO  Using knqyf263/pet/pet 
+2020-10-05T04:42:11+0000 INFO  Using kyoh86/tap/richgo 
+2020-10-05T04:42:11+0000 INFO  Using mongodb/brew/mongosh 
+2020-10-05T04:42:11+0000 INFO  Using osx-cross/avr/avr-gcc@7 
+2020-10-05T04:42:11+0000 INFO  Using px4/px4/gcc-arm-none-eabi 
+2020-10-05T04:42:11+0000 INFO  Using qmk/qmk/qmk 
+2020-10-05T04:42:11+0000 INFO  Using tankerhq/repo/ruplacer 
+2020-10-05T04:42:11+0000 INFO  Using universal-ctags/universal-ctags/universal-ctags 
+2020-10-05T04:42:11+0000 INFO  Using 1password-cli 
+2020-10-05T04:42:11+0000 INFO  Using alacritty 
+2020-10-05T04:42:11+0000 INFO  Using docker 
+2020-10-05T04:42:11+0000 INFO  Using flux 
+2020-10-05T04:42:11+0000 INFO  Using font-awesome-terminal-fonts 
+2020-10-05T04:42:11+0000 INFO  Using font-fontawesome 
+2020-10-05T04:42:11+0000 INFO  Using font-inconsolata-dz-for-powerline 
+2020-10-05T04:42:11+0000 INFO  Using font-inconsolata-for-powerline 
+2020-10-05T04:42:11+0000 INFO  Using font-inconsolata-g-for-powerline 
+2020-10-05T04:42:11+0000 INFO  Using font-inter 
+2020-10-05T04:42:11+0000 INFO  Using font-jetbrains-mono 
+2020-10-05T04:42:11+0000 INFO  Using font-jetbrainsmono-nerd-font 
+2020-10-05T04:42:11+0000 INFO  Using font-roboto-mono 
+2020-10-05T04:42:11+0000 INFO  Using font-roboto-mono-for-powerline 
+2020-10-05T04:42:12+0000 INFO  Using font-source-code-pro 
+2020-10-05T04:42:12+0000 INFO  Using gitblade 
+2020-10-05T04:42:12+0000 INFO  Using google-cloud-sdk 
+2020-10-05T04:42:12+0000 INFO  Using gpg-suite 
+2020-10-05T04:42:12+0000 INFO  Using hammerspoon 
+2020-10-05T04:42:12+0000 INFO  Using hyper 
+2020-10-05T04:42:12+0000 INFO  Using joplin 
+2020-10-05T04:42:12+0000 INFO  Using keycastr 
+2020-10-05T04:42:12+0000 INFO  Using kitty 
+2020-10-05T04:42:12+0000 INFO  Using lens 
+2020-10-05T04:42:12+0000 INFO  Using lepton 
+2020-10-05T04:42:12+0000 INFO  Using little-snitch 
+2020-10-05T04:42:12+0000 INFO  Using macbreakz 
+2020-10-05T04:42:12+0000 INFO  Using mark-text 
+2020-10-05T04:42:12+0000 INFO  Using micro-snitch 
+2020-10-05T04:42:12+0000 INFO  Using minikube 
+2020-10-05T04:42:12+0000 INFO  Using monitorcontrol 
+2020-10-05T04:42:12+0000 INFO  Using ngrok 
+2020-10-05T04:42:12+0000 INFO  Using oni 
+2020-10-05T04:42:12+0000 INFO  Using proxyman 
+2020-10-05T04:42:12+0000 INFO  Using qlimagesize 
+2020-10-05T04:42:12+0000 INFO  Using qlvideo 
+2020-10-05T04:42:13+0000 INFO  Using qmk-toolbox 
+2020-10-05T04:42:13+0000 INFO  Using rectangle 
+2020-10-05T04:42:13+0000 INFO  Using signal 
+2020-10-05T04:42:13+0000 INFO  Using sizeup 
+2020-10-05T04:42:13+0000 INFO  Using vv 
+2020-10-05T04:42:13+0000 INFO  Using 1Keyboard 
+2020-10-05T04:42:13+0000 INFO  Using 2Do 
+2020-10-05T04:42:13+0000 INFO  Using Agenda 
+2020-10-05T04:42:13+0000 INFO  Using Amphetamine 
+2020-10-05T04:42:13+0000 INFO  Using Bear 
+2020-10-05T04:42:13+0000 INFO  Using Boop 
+2020-10-05T04:42:13+0000 INFO  Using Cardhop 
+2020-10-05T04:42:13+0000 INFO  Using CARROT Weather 
+2020-10-05T04:42:13+0000 INFO  Using Copy 'Em 
+2020-10-05T04:42:13+0000 INFO  Using Dark Reader for Safari 
+2020-10-05T04:42:13+0000 INFO  Using Day One 
+2020-10-05T04:42:13+0000 INFO  Using Deliveries 
+2020-10-05T04:42:13+0000 INFO  Using Developer 
+2020-10-05T04:42:13+0000 INFO  Using Disk Speed Test 
+2020-10-05T04:42:13+0000 INFO  Using Display Menu 
+2020-10-05T04:42:13+0000 INFO  Using Drafts 
+2020-10-05T04:42:13+0000 INFO  Using Due 
+2020-10-05T04:42:13+0000 INFO  Using Fantastical 
+2020-10-05T04:42:13+0000 INFO  Using Front and Center 
+2020-10-05T04:42:14+0000 INFO  Using GIPHY CAPTURE 
+2020-10-05T04:42:14+0000 INFO  Using iA Writer 
+2020-10-05T04:42:14+0000 INFO  Using Jira 
+2020-10-05T04:42:14+0000 INFO  Using Keep It 
+2020-10-05T04:42:14+0000 INFO  Using Keynote 
+2020-10-05T04:42:14+0000 INFO  Using Kindle 
+2020-10-05T04:42:14+0000 INFO  Using MenubarClock 
+2020-10-05T04:42:14+0000 INFO  Using Microsoft To Do 
+2020-10-05T04:42:14+0000 INFO  Using Numbers 
+2020-10-05T04:42:14+0000 INFO  Using Pages 
+2020-10-05T04:42:14+0000 INFO  Using Paprika Recipe Manager 3 
+2020-10-05T04:42:14+0000 INFO  Using Pastebot 
+2020-10-05T04:42:14+0000 INFO  Using Patterns 
+2020-10-05T04:42:14+0000 INFO  Using PDF Expert 
+2020-10-05T04:42:14+0000 INFO  Using Pixelmator 
+2020-10-05T04:42:14+0000 INFO  Using Poolside FM 
+2020-10-05T04:42:14+0000 INFO  Using Raindrop.io for Safari 
+2020-10-05T04:42:14+0000 INFO  Using Reeder 
+2020-10-05T04:42:14+0000 INFO  Using Screens 
+2020-10-05T04:42:14+0000 INFO  Using SwitchGlass 
+2020-10-05T04:42:14+0000 INFO  Using The Unarchiver 
+2020-10-05T04:42:14+0000 INFO  Using Things 
+2020-10-05T04:42:14+0000 INFO  Using ToothFairy 
+2020-10-05T04:42:15+0000 INFO  Using Tot 
+2020-10-05T04:42:15+0000 INFO  Using Trello 
+2020-10-05T04:42:15+0000 INFO  Using Tweetbot 
+2020-10-05T04:42:15+0000 INFO  Using Twitter 
+2020-10-05T04:42:15+0000 INFO  Using Ulysses 
+2020-10-05T04:42:15+0000 INFO  Using Wunderlist 
+2020-10-05T04:42:15+0000 INFO  Using Xcode 
+2020-10-05T04:42:19+0000 INFO  Homebrew Bundle complete! 314 Brewfile dependencies now installed. 
+2020-10-05T04:42:19+0000 INFO  Homebrew setup complete (if there were errors, fix them, and re-run the script) 
+2020-10-05T04:42:19+0000 INFO  Setting up zsh... 
+2020-10-05T04:42:19+0000 INFO  Linking ZSH... 
+2020-10-05T04:42:19+0000 OK    ZSH linked 
+2020-10-05T04:42:19+0000 INFO  Setting up neovim (note that it was already installed during the Homebrew step)... 
+2020-10-05T04:42:19+0000 INFO  Linking neovim... 
+2020-10-05T04:42:19+0000 OK    neovim linked. 
+2020-10-05T04:42:19+0000 INFO  Setting up node/npm... 
+2020-10-05T04:42:19+0000 INFO  Installing 'n' to manage our node dependencies... 
+2020-10-05T04:42:19+0000 OK    'n' installed. 
+2020-10-05T04:42:19+0000 INFO  Installing the latest node/npm LTS... 
+2020-10-05T04:42:22+0000 INFO  Installing backup-global script so that we can reinstall global packages from backup... 
+2020-10-05T04:42:24+0000 INFO  Installing global npm packages... 
+2020-10-05T04:42:36+0000 OK    Done installing global npm packages. 
+2020-10-05T04:42:36+0000 INFO  Installing 'asdf' plugins/shims... 
+2020-10-05T04:42:36+0000 INFO  Installing 'kubectl' plugin... 
+2020-10-05T04:42:37+0000 INFO  Installing latest stable version of MongoDB... 
+2020-10-05T04:42:38+0000 OK    Done installing MongoDB. 
+2020-10-05T04:42:38+0000 INFO  Wrap things up by symlinking again for good measure... 
+2020-10-05T04:42:38+0000 INFO  Creating all symlinks... 
+2020-10-05T04:42:38+0000 INFO  Linking BASH... 
+2020-10-05T04:42:38+0000 OK    BASH linked. 
+2020-10-05T04:42:39+0000 INFO  Linking ZSH... 
+2020-10-05T04:42:39+0000 OK    ZSH linked 
+2020-10-05T04:42:39+0000 INFO  Linking Spacemacs... 
+2020-10-05T04:42:39+0000 OK    SPACEMACS linked. 
+2020-10-05T04:42:39+0000 INFO  Linking neovim... 
+2020-10-05T04:42:39+0000 OK    neovim linked. 
+2020-10-05T04:42:39+0000 INFO  Linking ACK... 
+2020-10-05T04:42:39+0000 OK    ACK linked. 
+2020-10-05T04:42:39+0000 INFO  Linking eslint... 
+2020-10-05T04:42:39+0000 OK    ESLINT linked. 
+2020-10-05T04:42:39+0000 INFO  Linking Karabiner... 
+2020-10-05T04:42:39+0000 OK    Karabiner linked. 
+2020-10-05T04:42:39+0000 INFO  Linking Sublime Merge keymap... 
+2020-10-05T04:42:39+0000 OK    Sublime Merge keymap linked. 
+2020-10-05T04:42:39+0000 INFO  Linking secrets... 
+2020-10-05T04:42:39+0000 OK    Secrets linked. 
+2020-10-05T04:42:39+0000 OK    All symlinks created. 
+2020-10-05T04:42:39+0000 OK    Done! 

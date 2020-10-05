@@ -1,0 +1,57 @@
+#!/bin/bash
+# Logging utility for user-related activity
+
+file="$DOTFILES_HOME/setup/setup.log"
+timestamp=$(date -u '+%Y-%m-%dT%H:%M:%S%z')
+
+COLOR_RED=$'\e[1;31m'
+COLOR_GRN=$'\e[1;32m'
+COLOR_YEL=$'\e[1;33m'
+COLOR_BLU=$'\e[1;34m'
+COLOR_MAG=$'\e[1;35m'
+COLOR_END=$'\e[0m'
+
+case $1 in
+ok)
+    level="OK"
+    color_level="${COLOR_GRN}${level}${COLOR_END}"
+    ;;
+debug)
+    level="DEBUG"
+    color_level="${COLOR_MAG}${level}${COLOR_END}"
+    ;;
+info)
+    level="INFO"
+    color_level="${COLOR_BLU}${level}${COLOR_END}"
+    ;;
+warn)
+    level="WARN"
+    color_level="${COLOR_YEL}${level}${COLOR_END}"
+    ;;
+error)
+    level="ERROR"
+    color_level="${COLOR_RED}${level}${COLOR_END}"
+    ;;
+*)
+    echo 'Logger level not specified!'
+    exit 1
+    ;;
+esac
+
+function write() {
+    message=$(printf "%s %-5s %s %s\n" "${timestamp}" "${level}" "${@}")
+    # Logging to /var/log/mongodb-employee-activity.log
+    echo "$message" | sudo tee -a "$file" >/dev/null
+    # Message to show to user
+    printf "%s %-17s %s\n" "$timestamp" "$color_level" "${@}"
+}
+
+if [[ ! -e "$file" ]]; then
+    sudo touch -a "$file"
+    write "Created new log: ${file}"
+fi
+
+write "$(
+    shift 1
+    echo "${*}"
+)"

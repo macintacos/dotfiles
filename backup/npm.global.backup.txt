@@ -1,0 +1,17 @@
+# This is a comment, this line will be ignored.
+# You can use # to comment a line manually.
+
+backup-global==@1.5.0
+bash-language-server==@1.17.0
+empty-trash-cli==@1.0.1
+fkill-cli==@6.0.1
+m==@1.5.6
+neovim==@4.9.0
+npm==@6.14.6
+trash-cli==@3.1.0
+vim-language-server==@2.1.0
+write-good==@1.0.3
+
+
+# These are yarn packages under "[Yarn Global Packages]".
+[Yarn Global Packages]

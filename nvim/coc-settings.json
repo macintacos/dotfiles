@@ -41,7 +41,7 @@
     "shellcheck": {
       "command": "shellcheck",
       "debounce": 100,
-      "args": ["--format", "json", "-"],
+      "args": ["-x", "--format", "json", "-"],
       "sourceName": "shellcheck",
       "parseJson": {
         "line": "line",

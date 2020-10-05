@@ -58,6 +58,7 @@ Plug 'justinmk/vim-gtfo'              " open current file/project in finder/term
 Plug 'machakann/vim-sandwich'         " alternative to vim-surround
 Plug 'mtth/scratch.vim'               " scratch buffer for...scratch
 Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
+Plug 'psliwka/vim-smoothie'           " 'smooth' scrolling in Vim
 Plug 'wellle/targets.vim'             " moar text objects for doing fun things
 Plug 'mbbill/undotree'                " show an undo tree for the current buffer
 Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from project

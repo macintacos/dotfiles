@@ -56,9 +56,9 @@ nnoremap <C-l> 20zl
 nnoremap <C-h> 20zh
 
 " better movements (centering by default)
-nmap G Gzz
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
+" nmap G Gzz
+" nmap <C-d> <C-d>zz
+" nmap <C-u> <C-u>zz
 
 " smartclose q mapping
 nnoremap <silent> q :call SmartClose()<CR>
