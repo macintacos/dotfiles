@@ -37,18 +37,12 @@ plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run
 
 # Setup ZSH
 plzlog info "Setting up zsh..."
-(
-	cd "$HOME"
-	zsh_link
-)
+zsh_link
 
 # Setup Nvim
 # neovim is already installed via homebrew
 plzlog info "Setting up neovim (note that it was already installed during the Homebrew step)..."
-(
-	cd "$HOME"
-	nvim_link
-)
+nvim_link
 
 # Setup global NPM packages
 # npm version management and backup script
@@ -83,8 +77,5 @@ plzlog ok "Done installing MongoDB."
 # Setup a bunch of OS settings via plist entries
 
 plzlog info "Wrap things up by symlinking again for good measure..."
-(
-	cd "$HOME"
-	link_all
-)
+link_all
 plzlog ok "Done!"
