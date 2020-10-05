@@ -11,3 +11,4 @@ npm/npm-backup-current.txt.*
 /zsh/.zsh_history
 .DS_STORE
 /nvim/.netrwhist
+/backup/Brewfile.lock.json
