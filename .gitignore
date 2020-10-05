@@ -12,3 +12,4 @@ npm/npm-backup-current.txt.*
 .DS_STORE
 /nvim/.netrwhist
 /backup/Brewfile.lock.json
+/setup/setup.log
