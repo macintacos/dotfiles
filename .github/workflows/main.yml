@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Running install.sh to test installation on the latest version of macOS
-      run: bash scripts/install.sh
+      run: bash setup/install.sh
