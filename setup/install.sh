@@ -25,13 +25,24 @@ plzlog ok "Files sourced successfully (not that I thought they wouldn't)"
 # Setup Homebrew
 plzlog info "Installing Homebrew packages and casks..."
 
-(
-	cd ./backup
+case $1 in
+install-ci)
+	plzlog info "Skipping homebrew installation because homebrew takes forever"
+	;;
+install-normal)
+	(
+		cd ./backup
 
-	brew bundle install | while read -r line; do
-		plzlog info "${line}"
-	done
-)
+		brew bundle install | while read -r line; do
+			plzlog info "${line}"
+		done
+	)
+	;;
+*)
+	echo 'Bad option passed in for homebrew installation - aborting'
+	exit 1
+	;;
+esac
 
 plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run the script)"
 
@@ -40,8 +51,14 @@ plzlog info "Setting up zsh..."
 zsh_link
 
 # Setup Nvim
-# neovim is already installed via homebrew
-plzlog info "Setting up neovim (note that it was already installed during the Homebrew step)..."
+plzlog info "Setting up neovim..."
+case $1 in
+install-ci)
+	plzlog info "Installing neovim because we're in CI..."
+	brew install neovim
+	;;
+install-normal) ;;
+esac
 nvim_link
 
 # Setup global NPM packages
@@ -61,9 +78,16 @@ backup-global install --input ./backup/npm.global.backup.txt
 plzlog ok "Done installing global npm packages."
 
 # Setup asdf plugins/shims
-# we're assuming that 'asdf' is installed already by this point
 plzlog info "Installing 'asdf' plugins/shims..."
 
+case $1 in
+install-ci)
+	plzlog info "Installing asdf because we're in CI..."
+	brew install asdf
+	shift
+	;;
+install-normal) shift ;;
+esac
 plzlog info "Installing 'kubectl' plugin..."
 (asdf plugin-add kubectl https://github.com/Banno/asdf-kubectl.git) || true # continue even if we already have it
 asdf install kubectl latest
@@ -79,3 +103,5 @@ plzlog ok "Done installing MongoDB."
 plzlog info "Wrap things up by symlinking again for good measure..."
 link_all
 plzlog ok "Done!"
+
+"$@"

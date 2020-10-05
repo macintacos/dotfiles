@@ -84,5 +84,3 @@ link_all() {
     secrets_link
     plzlog ok "All symlinks created."
 }
-
-"$@"

@@ -1,6 +1,10 @@
 .PHONY: install
 install: ## Install everything
-	@setup/install.sh
+	@setup/install.sh install-normal
+
+.PHONY: install-ci
+install-ci:
+	@setup/install.sh install-ci
 
 .PHONY: symlink
 symlink: ## Symlink files
