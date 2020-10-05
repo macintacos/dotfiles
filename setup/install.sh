@@ -74,10 +74,11 @@ install-ci)
 install-normal) ;;
 esac
 (curl -L https://git.io/n-install | bash) || true
+export PATH="$N_PREFIX/bin:$PATH"
 plzlog ok "'n' installed."
 
 plzlog info "Installing the latest node/npm LTS..."
-n lts
+bash n lts
 
 plzlog info "Installing backup-global script so that we can reinstall global packages from backup..."
 npm install -g backup-global
