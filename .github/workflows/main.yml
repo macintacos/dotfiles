@@ -8,6 +8,6 @@ jobs:
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Running install.sh to test installation on the latest version of macOS
       run: bash setup/install.sh
