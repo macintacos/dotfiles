@@ -77,7 +77,7 @@ esac
 plzlog ok "'n' installed."
 
 plzlog info "Installing the latest node/npm LTS..."
-bash n lts
+n lts
 
 plzlog info "Installing backup-global script so that we can reinstall global packages from backup..."
 npm install -g backup-global
