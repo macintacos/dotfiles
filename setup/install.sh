@@ -21,7 +21,7 @@ source "../zsh/.zshenv"
 source "./symlink.sh"
 plzlog ok "Files sourced successfully (not that I thought they wouldn't)"
 
-# TODO: Setup Homebrew
+# Setup Homebrew
 plzlog info "Installing Homebrew packages and casks..."
 
 cd ../backup
@@ -34,14 +34,14 @@ plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run
 
 cd ../setup
 
-# TODO: Setup ZSH
+# Setup ZSH
 plzlog info "Setting up zsh..."
 (
 	cd "$HOME"
 	zsh_link
 )
 
-# TODO: Setup Nvim
+# Setup Nvim
 # neovim is already installed via homebrew
 plzlog info "Setting up neovim (note that it was already installed during the Homebrew step)..."
 (
@@ -49,7 +49,7 @@ plzlog info "Setting up neovim (note that it was already installed during the Ho
 	nvim_link
 )
 
-# TODO: Setup global NPM packages
+# Setup global NPM packages
 # npm version management and backup script
 plzlog info "Setting up node/npm..."
 plzlog info "Installing 'n' to manage our node dependencies..."
@@ -65,7 +65,7 @@ plzlog info "Installing global npm packages..."
 backup-global install --input ../backup/npm.global.backup.txt
 plzlog ok "Done installing global npm packages."
 
-# TODO: Setup asdf plugins/shims
+# Setup asdf plugins/shims
 # we're assuming that 'asdf' is installed already by this point
 plzlog info "Installing 'asdf' plugins/shims..."
 
@@ -73,13 +73,13 @@ plzlog info "Installing 'kubectl' plugin..."
 (asdf plugin-add kubectl https://github.com/Banno/asdf-kubectl.git) || true # continue even if we already have it
 asdf install kubectl latest
 
-# TODO: Setup MongoDB "m"
+# Setup MongoDB "m"
 # we're assuming that 'm' is installed already by this point
 plzlog info "Installing latest stable version of MongoDB..."
 m stable
 plzlog ok "Done installing MongoDB."
 
-# TODO: Setup a bunch of OS settings via plist entries
+# Setup a bunch of OS settings via plist entries
 
 plzlog info "Wrap things up by symlinking again for good measure..."
 (

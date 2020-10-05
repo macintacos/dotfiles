@@ -66,7 +66,7 @@ ii() { #   ii:  display useful host related informaton
 
 backup-now() { # backup things
   cd $DOTFILES_HOME/setup
-  ./plzlog info "Backing up files to: $DOTFILES_HOME/backup"
+  ./plzlog info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
   (
     cd $DOTFILES_HOME/backup
     rm Brew*
