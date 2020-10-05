@@ -19,7 +19,10 @@ Plug 'tpope/vim-endwise'    " better understanding of syntax 'endings'
 Plug 'junegunn/goyo.vim' " a zen-like editor view
 Plug 'junegunn/gv.vim'   " a git commit browser
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } |
-    \ Plug 'junegunn/fzf.vim'    | source $PLUG_CONFIG_NVIM_HOME/fzf.vim
+    \ Plug 'junegunn/fzf.vim' | source $PLUG_CONFIG_NVIM_HOME/fzf.vim
+    " \ Plug 'benwainwright/fzf-project' -> check back in on this
+    " periodically, it seems to do most of what you want but your `zoxide`
+    " Clap provider is _pretty_ great
 Plug 'junegunn/vim-easy-align'   | source $PLUG_CONFIG_NVIM_HOME/vim-easy-align.vim
 Plug 'junegunn/vim-slash'        | source $PLUG_CONFIG_NVIM_HOME/vim-slash.vim
 Plug 'junegunn/vim-after-object' | source $PLUG_CONFIG_NVIM_HOME/vim-after-object.vim
@@ -60,8 +63,6 @@ Plug 'mbbill/undotree'                " show an undo tree for the current buffer
 Plug 'wsdjeg/vim-todo'                " extract todo messages and stuff from project
 
 " languages-specific and/or adjacent
-" source $NVIM_HOME/plug-config-before/ale.vim |
-"     \ Plug 'dense-analysis/ale' | source $PLUG_CONFIG_NVIM_HOME/ale.vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | source $PLUG_CONFIG_NVIM_HOME/vim-go.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    | source $PLUG_CONFIG_NVIM_HOME/coc.vim
 Plug 'elzr/vim-json'                               | source $PLUG_CONFIG_NVIM_HOME/vim-json.vim
@@ -91,7 +92,7 @@ Plug 'arzg/vim-colors-xcode',         { 'as': 'xcode'}
 Plug 'bluz71/vim-moonfly-colors',     { 'as': 'moonfly'}
 Plug 'bluz71/vim-nightfly-guicolors', { 'as': 'nightfly'}
 Plug 'vim-airline/vim-airline' | source $PLUG_CONFIG_NVIM_HOME/vim-airline.vim
-Plug 'ryanoasis/vim-devicons' " icons in the editor (this needs to come after nerdtree-git-plugin)
+Plug 'ryanoasis/vim-devicons' " plug after everything else
 
 " need to source after vim-devicons. also need to load functions in
 " vim-buffet.vim for colors

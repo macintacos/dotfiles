@@ -13,11 +13,13 @@ let g:rainbow_conf.guifgs = ['#f9d201', '#e66e7b', '#9ecbff', '#b291ee']
 
 "" syntax-specific
 "" markdown: enable only for code blocks
+"" txt: disable completely
 let g:rainbow_conf.separately = {
     \ '*': {},
     \ 'markdown': {
     \   'parenthesis_options': 'contained_in=markdownCode contained'
-    \ }
+    \ },
+    \ 'txt': 0
 \ }
 
 " TEST

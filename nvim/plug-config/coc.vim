@@ -104,10 +104,10 @@ omap ac <Plug>(coc-classobj-a)
 command! -nargs=0 Format :call CocAction('format')
 
 " Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " fix for vim-endwise https://github.com/tpope/vim-endwise/issues/22
 " once there's a fix for that, remove this mapping
@@ -115,3 +115,5 @@ let g:endwise_no_mappings = v:true
 inoremap <expr> <Plug>CustomCocCR pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
 
+" coc-go
+autocmd BufWritePre *.go :call CocAction('organizeImport')

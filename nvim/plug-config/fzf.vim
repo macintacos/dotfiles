@@ -14,3 +14,6 @@ let g:fzf_layout = {
     \ },
 \ }
 
+" fzf-project
+let g:fzfSwitchProjectWorkspaces = ['~/GitLocal/Play', '~/GitLocal/Work', '~/GitLocal/Learning', '~/GitLocal/Website']
+let g:fzfSwitchProjectProjects = ['~/Downloads', '~/Downloads/logs']

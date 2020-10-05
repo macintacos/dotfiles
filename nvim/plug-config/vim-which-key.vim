@@ -58,6 +58,7 @@ nnoremap <silent> <leader>bc :Clap bcommits<CR>
 nnoremap <silent> <leader>bD :call KillVisibleBufferChooseWin()<CR>
 nnoremap <silent> <leader>bm :messages<CR>
 nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bN :enew<CR>
 nnoremap <silent> <leader>bo :TagbarToggle<CR>
 nnoremap <silent> <leader>bp :bp<CR>
 nnoremap <silent> <leader>bs :Scratch<CR>
@@ -73,6 +74,7 @@ let g:which_key_map.b = {
             \ 'D': 'Choose visible buffer to kill',
             \ 'm': 'Show messages buffer',
             \ 'n': 'Next buffer',
+            \ 'N': 'New empty buffer',
             \ 'o': 'Show outline',
             \ 'p': 'Prev buffer',
             \ 's': 'Open scratch buffer',
@@ -96,21 +98,6 @@ let g:which_key_map.b.d = {
             \ 'w': 'All buffers, keep windows',
             \ }
 """ 'b.d' menu end }}}
-
-""" 'b.N' menu --- {{{
-nnoremap <silent> <leader>bNh :vnew<CR>
-nnoremap <silent> <leader>bNk :new<CR>
-nnoremap <silent> <leader>bNl :vertical rightbelow new<CR>
-nnoremap <silent> <leader>bNj :rightbelow new<CR>
-
-let g:which_key_map.b.N = {
-            \ 'name': '+new buffer',
-            \ 'h': 'Split left',
-            \ 'j': 'Split below',
-            \ 'k': 'Split above',
-            \ 'l': 'Split right',
-            \ }
-""" 'b.N' menu end}}}
 
 
 "" 'b' menu end }}}
@@ -140,6 +127,7 @@ let g:which_key_map.e = {
 
 "" 'f' menu --- {{{
 nnoremap <silent> <leader>f= :Format<CR>
+nnoremap <silent> <leader>f% :so %<CR>
 nnoremap <silent> <leader>fd :Clap filer %:p:h<CR>
 nnoremap <silent> <leader>ff :Clap gfiles<CR>
 nnoremap <silent> <leader>fn :Clap filer<CR>
@@ -151,6 +139,7 @@ nnoremap <silent> <leader>f~ :Clap files ~<CR>
 
 let g:which_key_map.f = {
             \ 'name': '+file',
+            \ '%': 'Source file',
             \ '=': 'Format file',
             \ 'D': 'Delete current file',
             \ 'd': 'Find file in current dir',
@@ -323,6 +312,7 @@ nnoremap <silent> <leader>wL :wincmd L<CR>
 nnoremap <silent> <leader>wJ :wincmd J<CR>
 nnoremap <silent> <leader>wK :wincmd K<CR>
 nnoremap <silent> <leader>ws :rightbelow sb<CR>
+nnoremap <silent> <leader>wt :enew<CR>
 nnoremap <silent> <leader>wv :vertical rightbelow sb<CR>
 nnoremap <silent> <leader>ww :ChooseWin<CR>
 
@@ -343,9 +333,27 @@ let g:which_key_map.w = {
             \ 'K': 'Move window to top',
             \ 'm': 'Maximize buffer',
             \ 's': 'Split window horizontal',
+            \ 't': 'New empty buffer',
             \ 'v': 'Split window vertical',
             \ 'w': 'Choose windows',
             \ }
+""" 'w.N' menu --- {{{
+nnoremap <silent> <leader>wNc :enew<CR>
+nnoremap <silent> <leader>wNh :vnew<CR>
+nnoremap <silent> <leader>wNk :new<CR>
+nnoremap <silent> <leader>wNl :vertical rightbelow new<CR>
+nnoremap <silent> <leader>wNj :rightbelow new<CR>
+
+let g:which_key_map.w.N = {
+            \ 'name': '+new_empty_buffer',
+            \ 'c': 'Current window',
+            \ 'h': 'Split left',
+            \ 'j': 'Split below',
+            \ 'k': 'Split above',
+            \ 'l': 'Split right',
+            \ }
+""" 'w.N' menu end}}}
+
 
 """ 'w.f' menu --- {{{
 nnoremap <silent> <leader>wfl :vertical rightbelow sb<CR>:Clap gfiles<CR>

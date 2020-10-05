@@ -23,7 +23,7 @@ set nowrap          " I don't like word wrap onby default
 set nowritebackup   " remove the write backup file immediately upon writing
 set relativenumber  " relative numbers
 set ruler           " display the cursor position on the last line of the screen, or in the status line of a window
-set scrolloff=5     " keep at least these many lines visible when scrolling
+set scrolloff=20    " keep at least these many lines visible when scrolling
 set shiftwidth=4    " width of an indentation is 2 when using '<<'/'>>'
 set shortmess+=a    " https://neovim.io/doc/user/options.html#'shortmess'
 set shortmess+=c    " don't give ins-completion-menu messages
@@ -35,7 +35,7 @@ set smartindent     " smart indentation stuff
 set softtabstop=4   " this is how vim knows to backspace characters I think
 set tabstop=4       " This makes suyre that we set tabs to look like 4 spaces
 set termguicolors   " true colors
-set timeoutlen=500  " timeout length of half a second
+set timeoutlen=250  " timeout length; important for vim-which-key
 set updatetime=300  " smaller updatetime for CursorHold & CursorHoldI
 set wildmenu        " better command-line completion
 
