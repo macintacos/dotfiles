@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export PATH="$PWD:$PATH"
+# Assume we're running from the root of the project
+export PATH="$PWD/setup:$PATH"
 
 ## Force an exit if script tries to use an unset variable:
 set -o nounset
@@ -17,22 +18,22 @@ plzlog info "You're currently here: $setup_directory"
 
 # include my library helpers for colorized echo and require_brew, etc
 plzlog info "Sourcing things that we need to source..."
-source "../zsh/.zshenv"
-source "./symlink.sh"
+source "./zsh/.zshenv"
+source "./setup/symlink.sh"
 plzlog ok "Files sourced successfully (not that I thought they wouldn't)"
 
 # Setup Homebrew
 plzlog info "Installing Homebrew packages and casks..."
 
-cd ../backup
+(
+	cd ./backup
 
-brew bundle install | while read -r line; do
-	plzlog info "${line}"
-done
+	brew bundle install | while read -r line; do
+		plzlog info "${line}"
+	done
+)
 
 plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run the script)"
-
-cd ../setup
 
 # Setup ZSH
 plzlog info "Setting up zsh..."
@@ -62,7 +63,7 @@ bash n lts
 plzlog info "Installing backup-global script so that we can reinstall global packages from backup..."
 npm install -g backup-global
 plzlog info "Installing global npm packages..."
-backup-global install --input ../backup/npm.global.backup.txt
+backup-global install --input ./backup/npm.global.backup.txt
 plzlog ok "Done installing global npm packages."
 
 # Setup asdf plugins/shims
