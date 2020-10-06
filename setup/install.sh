@@ -81,7 +81,6 @@ install-normal)
 	(curl -L https://git.io/n-install | bash) || true
 	;;
 esac
-echo "$N_PREFIX"
 export PATH="$N_PREFIX/bin:$PATH"
 plzlog ok "'n' installed."
 
@@ -112,6 +111,7 @@ asdf install kubectl latest
 # Setup MongoDB "m"
 # we're assuming that 'm' is installed already by this point
 plzlog info "Installing latest stable version of MongoDB..."
+mkdir -p ~/bin
 m stable
 plzlog ok "Done installing MongoDB."
 
