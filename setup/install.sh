@@ -68,7 +68,7 @@ plzlog info "Setting up node/npm..."
 plzlog info "Installing 'n' to manage our node dependencies..."
 case $1 in
 install-ci)
-	# need to get rid of cached dependencies: 
+	# need to get rid of cached dependencies:
 	# https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
 	rm -rf /usr/local/bin/node
 	rm -rf /usr/local/bin/npm
@@ -81,6 +81,7 @@ install-normal)
 	(curl -L https://git.io/n-install | bash) || true
 	;;
 esac
+echo "$N_PREFIX"
 export PATH="$N_PREFIX/bin:$PATH"
 plzlog ok "'n' installed."
 
