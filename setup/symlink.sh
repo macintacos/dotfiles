@@ -21,7 +21,7 @@ zsh_link() {
 spacemacs_link() {
     plzlog info "Linking Spacemacs..."
     rm -rf ~/.spacemacs
-    ln -sF "${DOTFILES_HOME}/.spacemacs" ~/.spacemacs
+    ln -sF "${DOTFILES_HOME}/rcrc/.spacemacs" ~/.spacemacs
     plzlog ok "SPACEMACS linked."
 }
 
