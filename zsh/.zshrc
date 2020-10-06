@@ -15,8 +15,9 @@ for file in "$ZDOTDIR"/config/plugins/other/**/*.zsh; do source "$file"; done
 
 # Wrap-up
 source "$ZDOTDIR"/secrets/sekret_source
+source "$DOTFILES_HOME"/setup/symlink.sh
+for file in "$ZDOTDIR"/config/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/util/**/*.zsh; do source "$file"; done
-for file in "$ZDOTDIR"/config/definitions/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/completions/**/*; do source "$file"; done
 for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
 

@@ -35,7 +35,7 @@ nvim_link() {
 ack_link() {
     plzlog info "Linking ACK..."
     rm -rf ~/.ackrc
-    ln -sF "${DOTFILES_HOME}/.ackrc" ~/.ackrc
+    ln -sF "${DOTFILES_HOME}/rcrc/.ackrc" ~/.ackrc
     plzlog ok "ACK linked."
 }
 
@@ -62,12 +62,11 @@ smerge_link() {
     plzlog ok "Sublime Merge keymap linked."
 }
 
-secrets_link() {
-    plzlog info "Linking secrets..."
-    rm -rf ~/.zshsecrets/
-    mkdir ~/.zshsecrets
-    ln -sF "${DOTFILES_HOME}/.zsh/secrets/sshnds" ~/.zshsecrets/sshnds
-    plzlog ok "Secrets linked."
+tig_link() {
+    plzlog info "Linking tigrc..."
+    rm -rf ~/.tigrc
+    ln -sF "${DOTFILES_HOME}/rcrc/.tigrc" ~/.tigrc
+    plzlog ok "tigrc linked."
 }
 
 ## ALL {{{
@@ -78,9 +77,9 @@ link_all() {
     spacemacs_link
     nvim_link
     ack_link
+    tig_link
     eslint_link
     karabiner_link
     smerge_link
-    secrets_link
     plzlog ok "All symlinks created."
 }
