@@ -2,6 +2,8 @@
 
 # This file is only meant to contain the information that is installed at startup for zinit
 
+# TODO: Check out Customizing Paths to have thing set up properly (the install script doesn't actually set up things properly)
+
 ### Added by Zinit's installer {{{
 if [[ ! -f $ZDOTDIR/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"

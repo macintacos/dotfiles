@@ -23,12 +23,12 @@ for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
 
 source "$ZDOTDIR"/config/load_at.end
 
-## THINGS NOT LOADING FAST ENOUGH? {{{
-## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
-# zprof
-# }}}
-
 source /Users/juliant/.config/broot/launcher/bash/br
 
 ## asdf
 . /usr/local/opt/asdf/asdf.sh
+
+## THINGS NOT LOADING FAST ENOUGH? {{{
+## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
+# zprof
+# }}}

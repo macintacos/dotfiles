@@ -26,4 +26,4 @@ Installing this stuff will get you the following:
 
 - A pretty sweet neovim configuration with Spacemacs-esque mappings (even though it's still not perfect at all). See [`nvim`](https://github.com/macintacos/dotfiles/tree/trunk/nvim)
 - A [ZSH configuration](https://github.com/macintacos/dotfiles/tree/trunk/zsh) that I'm pretty fond of.
-- 
+- All of the tools/casks that I use on the daily (check out the Brewfile, there's a lot of them)
