@@ -63,17 +63,24 @@ nvim_link
 
 # Setup global NPM packages
 # npm version management and backup script
+# TODO: Figure out why this keeps failing in CI
 plzlog info "Setting up node/npm..."
 plzlog info "Installing 'n' to manage our node dependencies..."
 case $1 in
 install-ci)
-	# need to get rid of cached dependencies: https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
+	# need to get rid of cached dependencies: 
+	# https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
 	rm -rf /usr/local/bin/node
 	rm -rf /usr/local/bin/npm
+	curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ |
+		sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" >"$HOME/Downloads/node-latest.pkg" &&
+		sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+	npm install -g n
 	;;
-install-normal) ;;
+install-normal)
+	(curl -L https://git.io/n-install | bash) || true
+	;;
 esac
-(curl -L https://git.io/n-install | bash) || true
 export PATH="$N_PREFIX/bin:$PATH"
 plzlog ok "'n' installed."
 
