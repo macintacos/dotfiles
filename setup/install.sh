@@ -50,6 +50,9 @@ plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run
 plzlog info "Setting up zsh..."
 zsh_link
 
+plzlog info "Updating all zsh plugins..."
+(zsh -i -c "zinit update --all --parallel") || true
+
 # Setup Nvim
 plzlog info "Setting up neovim..."
 case $1 in
