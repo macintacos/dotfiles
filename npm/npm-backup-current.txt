@@ -1,7 +1,0 @@
-fkill-cli
-j2m
-mongodb-stitch-cli
-npm
-speed-test
-tldr
-yo
