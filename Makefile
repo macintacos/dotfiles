@@ -8,7 +8,7 @@ install-ci:
 
 .PHONY: symlink
 symlink: ## Symlink files
-	@setup/symlink.sh link_all
+	@zsh -i -c link_all
 
 .PHONY: backup
 backup: ## Backup packages, casks, and plugins
