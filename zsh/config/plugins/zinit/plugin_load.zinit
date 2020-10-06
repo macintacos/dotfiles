@@ -21,7 +21,6 @@ zinit wait lucid light-mode for \
   djui/alias-tips \
   hlissner/zsh-autopair \
   hschne/fzf-git \
-  jackwish/bazel \
   micha/resty \
   paoloantinori/hhighlighter \
   qoomon/zsh-lazyload \
