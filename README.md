@@ -10,7 +10,7 @@ All PRs will be considered, but ultimately ignored. If you decide to use them, I
 
 ## Setup
 
-Run `make` to see available targets (run `make install` if you want to get setup properly):
+Clone the repository and run `make` to see available targets (run `make install` if you want to get setup properly):
 
 ```bash
  I => make
@@ -19,3 +19,11 @@ install    Install everything
 symlink    Symlink files
 backup     Backup packages, casks, and plugins
 ```
+
+## Whatcha got?
+
+Installing this stuff will get you the following:
+
+- A pretty sweet neovim configuration with Spacemacs-esque mappings (even though it's still not perfect at all). See [`nvim`](https://github.com/macintacos/dotfiles/tree/trunk/nvim)
+- A [ZSH configuration](https://github.com/macintacos/dotfiles/tree/trunk/zsh) that I'm pretty fond of.
+- 
