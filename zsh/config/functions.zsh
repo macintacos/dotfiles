@@ -70,8 +70,9 @@ backup-now() { # backup things
   (
     cd $DOTFILES_HOME/backup
     rm Brew*
-    brew bundle dump
+    HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump
     backup-global backup -o npm.global.backup.txt
+    code --list-extensions >vscode-extensions-backup.txt
   )
   ./plzlog ok "Backup complete!"
 }

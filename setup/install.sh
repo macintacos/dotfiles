@@ -104,7 +104,7 @@ install-ci)
 	brew install asdf
 	shift
 	;;
-install-normal) shift ;;
+install-normal) ;;
 esac
 plzlog info "Installing 'kubectl' plugin..."
 (asdf plugin-add kubectl https://github.com/Banno/asdf-kubectl.git) || true # continue even if we already have it
@@ -117,8 +117,22 @@ mkdir -p ~/bin
 m stable
 plzlog ok "Done installing MongoDB."
 
-# Setup a bunch of OS settings via plist entries
+# Setup VSCode Extensions from existing backup
+case $1 in
+install-ci)
+	plzlog info "Skipping vscode setup on CI"
+	shift
+	;;
+install-normal)
+	plzlog info "Installing VSCode extensions"
+	cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension
+	shift
+	;;
+esac
 
+# TODO: Setup a bunch of OS settings via plist entries
+
+# symlink everything to wrap it up
 plzlog info "Wrap things up by symlinking again for good measure..."
 link_all
 plzlog ok "Done!"

@@ -458,6 +458,24 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["j"],
+      "commands": [
+        {
+          "command": ":noh"
+        },
+        "extension.vim_down"
+      ]
+    },
+    {
+      "before": ["k"],
+      "commands": [
+        {
+          "command": ":noh"
+        },
+        "extension.vim_up"
+      ]
+    },
+    {
       "before": ["g", "h"],
       "commands": ["editor.action.showDefinitionPreviewHover"]
     },
@@ -717,6 +735,42 @@
   ],
   "vim.visualstar": true,
   "vspacecode.bindingOverrides": [
+    {
+      "command": "workbench.action.nextEditor",
+      "keys": "`",
+      "name": "Next Editor (regardless of group)",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.previousEditor",
+      "keys": "~",
+      "name": "Previous Editor (regardless of group)",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.nextEditorInGroup",
+      "keys": "b.`",
+      "name": "Next Editor (current group)",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.previousEditorInGroup",
+      "keys": "b.~",
+      "name": "Previous Editor (current group)",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.focusNextGroup",
+      "keys": "w.`",
+      "name": "Focus next group",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.focusPreviousGroup",
+      "keys": "w.~",
+      "name": "Focus previous group",
+      "type": "command"
+    },
     {
       "command": "multiCommand.moveToNextChangeAndShow",
       "keys": "g.n",
