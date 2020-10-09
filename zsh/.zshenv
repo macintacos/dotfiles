@@ -40,10 +40,9 @@ export PY_37="/Users/juliant/Library/Python/3.7/bin"
 export RUBY_BIN="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin"
 export RUST=$HOME/.cargo/bin
 export SCALA_HOME=/usr/local/share/scala
-export SPACEVIMBIN="$HOME/.SpaceVim/bin"
 export SSH_KEY_PATH=~/.ssh/rsa_id
 export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$SPACEVIMBIN:$VSCODE:$PATH"
+export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"

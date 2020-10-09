@@ -67,7 +67,6 @@ alias cdddddd='cd ../../../../..' # cd back 5 directories
 # }}}
 
 # VS CODE ALIASES {{{
-alias zshrc="code $ZDOTDIR/zshrc" # Quick access to the ~/.zshrc file
 alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 # }}}
 
@@ -81,8 +80,8 @@ git() {
   case "$PWD" in
   "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
     hub "$@"
-    hub config user.email juliantorres@hey.com
-    hub config user.signingkey "$SECRET_GPG_KEY"
+    hub config user.email julian.m.tor@gmail.com
+    hub config user.signingkey "$PERSONAL_SECRET_GPG_KEY"
     ;;
   *)
     hub "$@"
