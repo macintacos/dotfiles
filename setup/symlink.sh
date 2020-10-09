@@ -69,6 +69,17 @@ tig_link() {
     plzlog ok "tigrc linked."
 }
 
+vscode_link() {
+    plzlog info "Linking VSCode..."
+    plzlog info "First settings.json"
+    rm -rf "$HOME/Library/Application Support/Code/User/settings.json"
+    ln -sF "${DOTFILES_HOME}/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    plzlog ok "settings.json linked. Now keybindings.json..."
+    rm -rf "$HOME/Library/Application Support/Code/User/keybindings.json"
+    ln -sF "${DOTFILES_HOME}/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+    plzlog ok "keybindings.json linked. VSCode linking done."
+}
+
 ## ALL {{{
 link_all() {
     plzlog info "Creating all symlinks..."
@@ -81,5 +92,6 @@ link_all() {
     eslint_link
     karabiner_link
     smerge_link
+    vscode_link
     plzlog ok "All symlinks created."
 }
