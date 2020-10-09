@@ -29,11 +29,8 @@ export MMS_HOME="$HOME/GitLocal/Work/mms"
 export MYSQL=/usr/local/mysql-8.0.11-macos10.13-x86_64/bin/
 export MY_ZSH_SCRIPTS=$ZDOTDIR/scripts
 export MY_ZSH_SECRETS=$ZDOTDIR/secrets
-export N_PREFIX="$HOME/.n"
-export N_BIN="$N_PREFIX/bin"
 export NODEMODULEPATH=/usr/local/lib/node_modules
 export M_PREFIX=~
-export PERLBREW=$HOME/perl5/perlbrew/bin
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PYTHON2_PKGS="/usr/local/lib/python2.7/site-packages/"
 export PY_37="/Users/juliant/Library/Python/3.7/bin"
@@ -45,4 +42,4 @@ export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$N_BIN:$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PERLBREW:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
+export PATH="$BAT_THEME:$BOSUN_CONFIG_DIR:$BOSUN_ENV:$DOTFILES_HOME:$DROPBOX:$GNUGREP:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$LOCAL_BIN:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$PYTHON2_PKGS:$PY_37:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
