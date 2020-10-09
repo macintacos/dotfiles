@@ -1,0 +1,13 @@
+#!/bin/bash
+
+STAGED_JS_AND_JSON=$(git diff --cached --name-only | grep -iE "\.(js|json)$")
+
+if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
+    set -o errexit
+
+    for FILE in ${STAGED_JS_AND_JSON}; do
+        prettier --write "$FILE"
+    done
+
+    set +o errexit
+fi

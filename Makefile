@@ -6,6 +6,13 @@ install: ## Install everything
 install-ci:
 	@setup/install.sh install-ci
 
+.PHONY: hooks
+hooks: ## Set up git hooks so that things are committed the way we want
+	@echo "==> Setting up hooks..."
+	find .git/hooks -type l -exec rm {} \;
+	find .githooks -type f -exec  ln -sf ../../{} .git/hooks \;
+	@echo "==> Done."
+
 .PHONY: symlink
 symlink: ## Symlink files
 	@zsh -i -c link_all
