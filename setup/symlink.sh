@@ -71,11 +71,17 @@ tig_link() {
 
 vscode_link() {
     plzlog info "Linking VSCode..."
-    plzlog info "First settings.json"
+    plzlog info "Clearing target files..."
     rm -rf "$HOME/Library/Application Support/Code/User/settings.json"
-    ln -sF "${DOTFILES_HOME}/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-    plzlog ok "settings.json linked. Now keybindings.json..."
     rm -rf "$HOME/Library/Application Support/Code/User/keybindings.json"
+    plzlog ok "Done."
+    plzlog info "Creating directories if they don't exist..."
+    mkdir -p "$HOME/Library/Application Support/Code/User"
+    plzlog ok "Done."
+    plzlog info "Linking settings.json..."
+    ln -sF "${DOTFILES_HOME}/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    plzlog ok "settings.json linked."
+    plzlog info "Linking keybindings.json..."
     ln -sF "${DOTFILES_HOME}/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
     plzlog ok "keybindings.json linked. VSCode linking done."
 }
