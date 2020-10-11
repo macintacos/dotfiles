@@ -37,7 +37,8 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -458,22 +459,9 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["j"],
-      "commands": [
-        {
-          "command": ":noh"
-        },
-        "extension.vim_down"
-      ]
-    },
-    {
-      "before": ["k"],
-      "commands": [
-        {
-          "command": ":noh"
-        },
-        "extension.vim_up"
-      ]
+      "before": ["<ESC>"],
+      "commands": [{ "command": ":noh" }],
+      "after": ["<ESC>"]
     },
     {
       "before": ["g", "h"],
@@ -556,6 +544,10 @@
       "before": ["m", "m"]
     },
     {
+      "after": ["D"],
+      "before": ["M"]
+    },
+    {
       "after": ["g", "b"],
       "before": ["<C-n>"]
     },
@@ -578,10 +570,6 @@
     {
       "before": ["g", "l"],
       "commands": ["editor.action.openLink"]
-    },
-    {
-      "before": ["g", "d"],
-      "commands": ["multiCommand.peekDefinitionAndFocus"]
     },
     {
       "before": ["g", "D"],
@@ -736,54 +724,6 @@
   "vim.visualstar": true,
   "vspacecode.bindingOverrides": [
     {
-      "command": "workbench.action.nextEditor",
-      "keys": "`",
-      "name": "Next Editor (regardless of group)",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.previousEditor",
-      "keys": "~",
-      "name": "Previous Editor (regardless of group)",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.nextEditorInGroup",
-      "keys": "b.`",
-      "name": "Next Editor (current group)",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.previousEditorInGroup",
-      "keys": "b.~",
-      "name": "Previous Editor (current group)",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.focusNextGroup",
-      "keys": "w.`",
-      "name": "Focus next group",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.focusPreviousGroup",
-      "keys": "w.~",
-      "name": "Focus previous group",
-      "type": "command"
-    },
-    {
-      "command": "multiCommand.moveToNextChangeAndShow",
-      "keys": "g.n",
-      "name": "Move to next change and show",
-      "type": "command"
-    },
-    {
-      "command": "multiCommand.moveToPreviousChangeAndShow",
-      "keys": "g.p",
-      "name": "Move to previous change and show",
-      "type": "command"
-    },
-    {
       "bindings": [
         {
           "command": "workbench.action.openGlobalSettings",
@@ -937,21 +877,6 @@
       "type": "bindings"
     },
     {
-      "command": "outline.focus",
-      "keys": "b.o",
-      "name": "Focus outline for buffer",
-      "type": "command"
-    },
-    {
-      "keys": "b.Y",
-      "name": "Yank the whole buffer",
-      "type": "command",
-      "command": "vim.remap",
-      "args": {
-        "after": [",", "x", "g", "g", "y", "G", "'", "x", "z", "z"]
-      }
-    },
-    {
       "command": "workbench.view.extension.project-manager",
       "keys": "S.M",
       "name": "Show Project Manager",
@@ -1000,9 +925,42 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.nextEditor",
+      "keys": "`",
+      "name": "Next Editor (regardless of group)",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.closeOtherEditors",
       "keys": "b.D",
       "name": "Close unmodified editors",
+      "type": "command"
+    },
+    {
+      "args": {
+        "after": [",", "≈", "g", "g", "y", "G", "'", "≈", "z", "z"]
+      },
+      "command": "vim.remap",
+      "keys": "b.Y",
+      "name": "Yank the whole buffer",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.nextEditorInGroup",
+      "keys": "b.`",
+      "name": "Next Editor (current group)",
+      "type": "command"
+    },
+    {
+      "command": "outline.focus",
+      "keys": "b.o",
+      "name": "Focus outline for buffer",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.previousEditorInGroup",
+      "keys": "b.~",
+      "name": "Previous Editor (current group)",
       "type": "command"
     },
     {
@@ -1218,6 +1176,18 @@
       "position": -1
     },
     {
+      "command": "multiCommand.moveToNextChangeAndShow",
+      "keys": "g.n",
+      "name": "Move to next change and show",
+      "type": "command"
+    },
+    {
+      "command": "multiCommand.moveToPreviousChangeAndShow",
+      "keys": "g.p",
+      "name": "Move to previous change and show",
+      "type": "command"
+    },
+    {
       "command": "vscsm.openInSublimeMerge",
       "keys": "g.s",
       "name": "View status in Sublime Merge",
@@ -1296,6 +1266,12 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.toggleSidebarVisibility",
+      "keys": "l.b",
+      "name": "Toggle sidebar",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.closePanel",
       "keys": "l.c",
       "name": "Close panel",
@@ -1320,10 +1296,449 @@
       "type": "command"
     },
     {
-      "command": "workbench.action.toggleSidebarVisibility",
-      "keys": "l.s",
-      "name": "Toggle sidebar",
-      "type": "command"
+      "bindings": [
+        {
+          "command": "go.show.commands",
+          "key": " ",
+          "name": "Show all commands",
+          "type": "command"
+        },
+        {
+          "bindings": [
+            {
+              "command": "go.test.cancel",
+              "key": "c",
+              "name": "Cancel running tets",
+              "type": "command"
+            },
+            {
+              "command": "go.apply.coverprofile",
+              "key": "P",
+              "name": "Apply cover profile",
+              "type": "command"
+            },
+            {
+              "command": "go.subtest.cursor",
+              "key": "s",
+              "name": "Subtest at cursor",
+              "type": "command"
+            },
+            {
+              "command": "go.debug.cursor",
+              "key": "d",
+              "name": "Debug test at cursor",
+              "type": "command"
+            },
+            {
+              "command": "go.test.cursor",
+              "key": "f",
+              "name": "Test function at cursor",
+              "type": "command"
+            },
+            {
+              "command": "go.test.file",
+              "key": "F",
+              "name": "Test file",
+              "type": "command"
+            },
+            {
+              "command": "go.test.package",
+              "key": "p",
+              "name": "Test package",
+              "type": "command"
+            },
+            {
+              "command": "go.test.workspace",
+              "key": "w",
+              "name": "Test packages in workspace",
+              "type": "command"
+            },
+            {
+              "command": "go.test.previous",
+              "key": "l",
+              "name": "Test previous",
+              "type": "command"
+            },
+            {
+              "bindings": [
+                {
+                  "command": "go.benchmark.package",
+                  "key": "p",
+                  "name": "Benchmark package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.benchmark.file",
+                  "key": "F",
+                  "name": "Benchmark file",
+                  "type": "command"
+                },
+                {
+                  "command": "go.benchmark.cursor",
+                  "key": "f",
+                  "name": "Benchmark function at cursor",
+                  "type": "command"
+                }
+              ],
+              "key": "b",
+              "name": "Benchmarks...",
+              "type": "bindings"
+            },
+            {
+              "bindings": [
+                {
+                  "command": "go.test.coverage",
+                  "key": "c",
+                  "name": "Toggle test coverage in current package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.toggle.test.file",
+                  "key": "f",
+                  "name": "Toggle open test file",
+                  "type": "command"
+                }
+              ],
+              "key": "t",
+              "name": "Toggle...",
+              "type": "bindings"
+            },
+            {
+              "bindings": [
+                {
+                  "command": "go.test.generate.package",
+                  "key": "p",
+                  "name": "Generate unit tests for package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.test.generate.file",
+                  "key": "F",
+                  "name": "Generate unit tests for file",
+                  "type": "command"
+                },
+                {
+                  "command": "go.test.generate.function",
+                  "key": "f",
+                  "name": "Generate unit tests for function",
+                  "type": "command"
+                }
+              ],
+              "key": "g",
+              "name": "Generate...",
+              "type": "bindings"
+            }
+          ],
+          "key": "t",
+          "name": "Test...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "editor.action.formatDocument",
+              "key": "=",
+              "name": "Format document",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.formatDocument",
+              "key": "d",
+              "name": "Format document with...",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.formatChanges",
+              "key": "m",
+              "name": "Format modified lines only",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.formatSelection",
+              "key": "s",
+              "name": "Format selection",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.formatSelection.multiple",
+              "key": "S",
+              "name": "Format selection with...",
+              "type": "command"
+            }
+          ],
+          "key": "=",
+          "name": "Format...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "go.fill.struct",
+              "key": "f",
+              "name": "Fill struct",
+              "type": "command"
+            },
+            {
+              "command": "go.add.tags",
+              "key": "t",
+              "name": "Add tags to struct fields",
+              "type": "command"
+            },
+            {
+              "command": "go.remove.tags",
+              "key": "T",
+              "name": "Remove tags from struct fields",
+              "type": "command"
+            },
+            {
+              "command": "go.import.add",
+              "key": "i",
+              "name": "Add import",
+              "type": "command"
+            },
+            {
+              "command": "go.impl.cursor",
+              "key": "I",
+              "name": "Generate interface stubs",
+              "type": "command"
+            }
+          ],
+          "key": "A",
+          "name": "Add/remove...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "go.languageserver.restart",
+              "key": "R",
+              "name": "Restart language server",
+              "type": "command"
+            },
+            {
+              "command": "go.environment.choose",
+              "key": "c",
+              "name": "Choose Go environment",
+              "type": "command"
+            },
+            {
+              "command": "go.gopath",
+              "key": "g",
+              "name": "Show current GOPATH",
+              "type": "command"
+            },
+            {
+              "command": "go.locate.tools",
+              "key": "l",
+              "name": "Locate configured Go tools",
+              "type": "command"
+            },
+            {
+              "command": "go.tools.install",
+              "key": "i",
+              "name": "Install/update tools",
+              "type": "command"
+            }
+          ],
+          "key": "e",
+          "name": "Environment...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "editor.action.revealDefinition",
+              "key": "d",
+              "name": "Go to definition",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.peekDefinition",
+              "key": "D",
+              "name": "Peek definition",
+              "type": "command"
+            },
+            {
+              "command": "references-view.findReferences",
+              "key": "R",
+              "name": "Find all references",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.referenceSearch.trigger",
+              "key": "r",
+              "name": "Peek references",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.goToTypeDefinition",
+              "key": "t",
+              "name": "Go to type definition",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.peekTypeDefinition",
+              "key": "T",
+              "name": "Peek type definition",
+              "type": "command"
+            },
+            {
+              "command": "extension.dash.specific",
+              "key": "E",
+              "name": "Go to documentation in Dash",
+              "type": "command"
+            },
+            {
+              "command": "workbench.action.problems.focus",
+              "key": "e",
+              "name": "Go to errors/problems",
+              "type": "command"
+            },
+            {
+              "command": "workbench.action.gotoMethod",
+              "key": "m",
+              "name": "Go to method in file",
+              "type": "command"
+            },
+            {
+              "command": "workbench.action.gotoSymbol",
+              "key": "i",
+              "name": "Find symbol in file",
+              "type": "command"
+            },
+            {
+              "command": "workbench.action.showAllSymbols",
+              "key": "I",
+              "name": "Find symbol in project",
+              "type": "command"
+            }
+          ],
+          "key": "g",
+          "name": "Go to...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "go.godoctor.extract",
+              "key": "f",
+              "name": "Extract to function",
+              "type": "command"
+            },
+            {
+              "command": "go.godoctor.var",
+              "key": "v",
+              "name": "Extract to variable",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.rename",
+              "key": "r",
+              "name": "Rename symbol",
+              "type": "command"
+            },
+            {
+              "command": "editor.action.quickFix",
+              "key": ".",
+              "name": "Quick fix",
+              "type": "command"
+            }
+          ],
+          "key": "r",
+          "name": "Refactor...",
+          "type": "bindings"
+        },
+        {
+          "bindings": [
+            {
+              "command": "go.playground",
+              "key": "P",
+              "name": "Run code on Go Playground",
+              "type": "command"
+            },
+            {
+              "bindings": [
+                {
+                  "command": "go.lint.workspace",
+                  "key": "l",
+                  "name": "Workspace",
+                  "type": "command"
+                },
+                {
+                  "command": "go.build.workspace",
+                  "key": "b",
+                  "name": "Build workspace",
+                  "type": "command"
+                },
+                {
+                  "command": "go.vet.workspace",
+                  "key": "v",
+                  "name": "Vet workspace",
+                  "type": "command"
+                }
+              ],
+              "key": "w",
+              "name": "Workspace actions...",
+              "type": "bindings"
+            },
+            {
+              "bindings": [
+                {
+                  "command": "go.vet.package",
+                  "key": "v",
+                  "name": "Vet package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.build.package",
+                  "key": "b",
+                  "name": "Build package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.lint.package",
+                  "key": "l",
+                  "name": "Lint package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.install.package",
+                  "key": "i",
+                  "name": "Install current package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.browse.packages",
+                  "key": "s",
+                  "name": "Browse packages",
+                  "type": "command"
+                },
+                {
+                  "command": "go.get.package",
+                  "key": "g",
+                  "name": "Get package",
+                  "type": "command"
+                },
+                {
+                  "command": "go.add.package.workspace",
+                  "key": "w",
+                  "name": "Add package to workspace",
+                  "type": "command"
+                }
+              ],
+              "key": "p",
+              "name": "Package actions...",
+              "type": "bindings"
+            }
+          ],
+          "key": "a",
+          "name": "Actions...",
+          "type": "bindings"
+        }
+      ],
+      "keys": ["m", "languageId:go"],
+      "name": "Go",
+      "type": "bindings"
     },
     {
       "bindings": [
@@ -1453,6 +1868,12 @@
       "type": "command"
     },
     {
+      "command": "editor.action.toggleWordWrap",
+      "keys": "t.W",
+      "name": "Toggle word wrap",
+      "type": "command"
+    },
+    {
       "command": "extension.toggleTheme",
       "keys": "t.d",
       "name": "Toggle day/night theme",
@@ -1524,6 +1945,12 @@
       "type": "commands"
     },
     {
+      "command": "workbench.action.focusNextGroup",
+      "keys": "w.`",
+      "name": "Focus next group",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.focusPreviousGroup",
       "keys": "w.h",
       "name": "Focus previous group",
@@ -1554,6 +1981,12 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.focusPreviousGroup",
+      "keys": "w.~",
+      "name": "Focus previous group",
+      "type": "command"
+    },
+    {
       "bindings": [
         {
           "command": "editor.action.trimTrailingWhitespace",
@@ -1576,57 +2009,6 @@
       ],
       "keys": ["x", "d"],
       "name": "Delete...",
-      "type": "bindings"
-    },
-    {
-      "bindings": [
-        {
-          "command": "editor.action.refactor",
-          "key": "r",
-          "name": "Refactor base command",
-          "type": "command"
-        },
-        {
-          "bindings": [
-            {
-              "command": "go.godoctor.extract",
-              "key": "m",
-              "name": "Extract method",
-              "type": "command"
-            },
-            {
-              "command": "go.godoctor.var",
-              "key": "v",
-              "name": "Extract variable",
-              "type": "command"
-            }
-          ],
-          "key": "g",
-          "name": "Golang...",
-          "type": "bindings"
-        },
-        {
-          "bindings": [
-            {
-              "command": "python.refactorExtractMethod",
-              "key": "m",
-              "name": "Extract method",
-              "type": "command"
-            },
-            {
-              "command": "python.refactorExtractVariable",
-              "key": "v",
-              "name": "Extract variable",
-              "type": "command"
-            }
-          ],
-          "key": "p",
-          "name": "Python...",
-          "type": "bindings"
-        }
-      ],
-      "keys": ["x", "r"],
-      "name": "Refactor...",
       "type": "bindings"
     },
     {
@@ -1683,6 +2065,12 @@
       "keys": "y",
       "name": "Yank/Copy...",
       "type": "bindings"
+    },
+    {
+      "command": "workbench.action.previousEditor",
+      "keys": "~",
+      "name": "Previous Editor (regardless of group)",
+      "type": "command"
     }
   ],
   "whichkey.delay": 200,
@@ -1739,7 +2127,5 @@
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.6.3/resources/schemas/pipelines-schema.json": [
       "bitbucket-pipelines.yml"
     ]
-  },
-  "java.import.gradle.enabled": false,
-  "java.signatureHelp.enabled": true
+  }
 }
