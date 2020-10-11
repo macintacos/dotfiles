@@ -53,7 +53,7 @@ brew "cfssl"
 brew "colordiff"
 brew "ctags", link: false
 brew "curl"
-brew "deno", link: false
+brew "deno"
 brew "go"
 brew "dep"
 brew "dfu-programmer"

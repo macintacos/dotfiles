@@ -21,6 +21,7 @@ budparr.language-hugo-vscode
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
+Cmacu.gotoanything
 cocopon.iceberg-theme
 codezombiech.gitignore
 CoenraadS.bracket-pair-colorizer-2
@@ -54,7 +55,6 @@ fabiospampinato.vscode-open-in-github
 file-icons.file-icons
 firefox-devtools.vscode-firefox-debug
 fknop.vscode-npm
-foam.foam-vscode
 formulahendry.auto-close-tag
 formulahendry.code-runner
 foxundermoon.shell-format
@@ -85,7 +85,6 @@ jolaleye.horizon-theme-vscode
 kevinmcgowan.TypeScriptImport
 khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
-kortina.vscode-markdown-notes
 lacroixdavid1.vscode-format-context-menu
 LaurentTreguier.rpm-spec
 LaurentTreguier.vscode-simple-icons
@@ -143,7 +142,6 @@ snipsnapdev.snipsnap-vscode
 stkb.rewrap
 Sujan.code-blue
 svipas.control-snippets
-tchayen.markdown-links
 telesoho.vscode-markdown-paste-image
 thenikso.github-plus-theme
 timonwong.shellcheck

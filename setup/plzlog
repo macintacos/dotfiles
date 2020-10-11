@@ -41,13 +41,13 @@ esac
 function write() {
     message=$(printf "%s %-5s %s %s\n" "${timestamp}" "${level}" "${@}")
     # Logging to /var/log/mongodb-employee-activity.log
-    echo "$message" | sudo tee -a "$file" >/dev/null
+    echo "$message" | tee -a "$file" >/dev/null
     # Message to show to user
     printf "%s %-17s %s\n" "$timestamp" "$color_level" "${@}"
 }
 
 if [[ ! -e "$file" ]]; then
-    sudo touch -a "$file"
+    touch -a "$file"
     write "Created new log: ${file}"
 fi
 
