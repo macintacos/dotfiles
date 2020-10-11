@@ -3,7 +3,6 @@
 
 source "$DOTFILES_HOME/zsh/config/functions.zsh"
 source "$DOTFILES_HOME/zsh/.zshenv"
-source "$DOTFILES_HOME/zsh/.zshrc"
 
 STAGED_JS_AND_JSON=$(git diff --cached --name-only | grep -iE "\.(js|json)$")
 
