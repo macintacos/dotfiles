@@ -20,8 +20,6 @@ plzlog info "You're currently here: $setup_directory"
 plzlog info "Sourcing things that we need to source..."
 # shellcheck source=../zsh/.zshenv
 source "./zsh/.zshenv"
-# shellcheck source=../zsh/.zshrc
-source "./zsh/.zshrc"
 # shellcheck source=../setup/symlink.sh
 source "./setup/symlink.sh"
 plzlog ok "Files sourced successfully (not that I thought they wouldn't)"
