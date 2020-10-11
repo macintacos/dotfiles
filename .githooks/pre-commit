@@ -2,8 +2,8 @@
 # shellcheck disable=SC1090
 
 source "$DOTFILES_HOME/zsh/config/functions.zsh"
-source "$DOTFILE_HOME/zsh/.zshenv"
-source "$DOTFILE_HOME/zsh/.zshrc"
+source "$DOTFILES_HOME/zsh/.zshenv"
+source "$DOTFILES_HOME/zsh/.zshrc"
 
 STAGED_JS_AND_JSON=$(git diff --cached --name-only | grep -iE "\.(js|json)$")
 
