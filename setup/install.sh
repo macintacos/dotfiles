@@ -104,7 +104,6 @@ case $1 in
 install-ci)
 	plzlog info "Installing asdf because we're in CI..."
 	brew install asdf
-	shift
 	;;
 install-normal) ;;
 esac
