@@ -76,9 +76,13 @@ install-ci)
 	# https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
 	rm -rf /usr/local/bin/node
 	rm -rf /usr/local/bin/npm
+
+	# install node directly
 	curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ |
 		sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" >"$HOME/Downloads/node-latest.pkg" &&
 		sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+
+	# now install n
 	(npm install -g n) || true
 	;;
 install-normal)
@@ -126,7 +130,7 @@ install-ci)
 	;;
 install-normal)
 	plzlog info "Installing VSCode extensions"
-	cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension
+	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true
 	shift
 	;;
 esac

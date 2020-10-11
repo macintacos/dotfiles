@@ -30,7 +30,6 @@ Compulim.compulim-vscode-closetag
 cssho.vscode-svgviewer
 csstools.postcss
 dakara.transformer
-daltonjorge.scala
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dcasella.monokai-plusplus
@@ -73,7 +72,6 @@ herrmannplatz.npm-dependency-links
 heybourn.headwind
 hoovercj.vscode-settings-cycler
 Hyzeta.vscode-theme-github-light
-i80and.snooty
 IBM.output-colorizer
 imperez.smarty
 iocave.customize-ui

@@ -1,5 +1,5 @@
 .PHONY: install
-install: ## Install everything
+install: hooks ## Install everything
 	@setup/install.sh install-normal
 
 .PHONY: install-ci
