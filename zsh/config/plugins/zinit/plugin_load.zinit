@@ -41,6 +41,9 @@ zinit light tj/git-extras
 zinit ice wait lucid as"program" pick"yank" make
 zinit light mptre/yank
 
+# zinit ice lucit wait"0" as"program" from"gh-r" pick"bit"
+# zinit light chriswalz/bit
+
 ## local completions
 
 # }}}
