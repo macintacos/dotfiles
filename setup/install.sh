@@ -130,7 +130,7 @@ install-ci)
 	;;
 install-normal)
 	plzlog info "Installing VSCode extensions"
-	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true
+	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true # continue even if we already have it
 	shift
 	;;
 esac

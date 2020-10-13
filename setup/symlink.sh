@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="$PWD/setup:$PATH"
+export PATH="$DOTFILES_HOME/setup:$PATH"
 
 SUBLIME_MERGE_USER_DIR="/Applications/Sublime Merge.app/Contents/MacOS/Packages/User/"
 
@@ -86,6 +86,28 @@ vscode_link() {
     plzlog ok "keybindings.json linked. VSCode linking done."
 }
 
+lnav_link() {
+    plzlog info "Linking lnav..."
+    plzlog info "Clearing target files..."
+    rm -rf "$HOME/.lnav/formats/installed/a-proxy.json"
+    rm -rf "$HOME/.lnav/formats/installed/mongod-post44.json"
+    rm -rf "$HOME/.lnav/formats/installed/mongod-pre44.json"
+    plzlog ok "Done."
+    plzlog info "Creating directories in case they don't exist..."
+    mkdir -p "$HOME/.lnav/formats/installed"
+    plzlog ok "Done."
+    plzlog info "Linking a-proxy.json..."
+    ln -sF "${DOTFILES_HOME}/lnav/a-proxy.json" "$HOME/.lnav/formats/installed/a-proxy.json"
+    plzlog ok "Done."
+    plzlog info "Linking mongod-post44.json..."
+    ln -sF "${DOTFILES_HOME}/lnav/mongod-post44.json" "$HOME/.lnav/formats/installed/mongod-post44.json"
+    plzlog ok "Done."
+    plzlog info "Linking mongod-pre44.json..."
+    ln -sF "${DOTFILES_HOME}/lnav/mongod-pre44.json" "$HOME/.lnav/formats/installed/mongod-pre44.json"
+    plzlog ok "Done."
+    plzlog ok "lnav formats linked."
+}
+
 ## ALL {{{
 link_all() {
     plzlog info "Creating all symlinks..."
@@ -99,5 +121,6 @@ link_all() {
     karabiner_link
     smerge_link
     vscode_link
+    lnav_link
     plzlog ok "All symlinks created."
 }

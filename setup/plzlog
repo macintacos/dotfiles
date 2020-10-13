@@ -1,7 +1,7 @@
 #!/bin/bash
 # Logging utility for user-related activity
 
-file="$(git rev-parse --show-toplevel)/setup/setup.log"
+file="$DOTFILES_HOME/setup/setup.log"
 timestamp=$(date -u '+%Y-%m-%dT%H:%M:%S%z')
 
 COLOR_RED=$'\e[1;31m'
