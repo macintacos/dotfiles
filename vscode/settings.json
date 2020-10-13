@@ -435,6 +435,14 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.insertCursorBelow"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.insertCursorAbove"]
+    },
+    {
       "before": ["<BS>"],
       "commands": ["deleteLeft"]
     },
@@ -1154,9 +1162,9 @@
       "position": -1
     },
     {
-      "command": "vscsm.blameInSublimeMerge",
+      "command": "gitlens.toggleFileBlame",
       "keys": "g.b",
-      "name": "Show blame in Sublime Merge",
+      "name": "Show blame for current file",
       "type": "command"
     },
     {
@@ -1503,8 +1511,8 @@
               "type": "command"
             }
           ],
-          "key": "A",
-          "name": "Add/remove...",
+          "key": "i",
+          "name": "Insert/remove...",
           "type": "bindings"
         },
         {

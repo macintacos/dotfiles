@@ -86,11 +86,6 @@
     "when": "textInputFocus"
   },
   {
-    "command": "-cursorUp",
-    "key": "ctrl+p",
-    "when": "textInputFocus"
-  },
-  {
     "command": "-deleteAllLeft",
     "key": "cmd+backspace",
     "when": "textInputFocus && !editorReadonly"
@@ -1169,11 +1164,6 @@
     "when": "textInputFocus"
   },
   {
-    "command": "cursorUp",
-    "key": "ctrl+k",
-    "when": "textInputFocus"
-  },
-  {
     "command": "cursorWordPartRight",
     "key": "ctrl+alt+right",
     "when": "textInputFocus"
@@ -1886,5 +1876,10 @@
     "key": "shift+alt+f",
     "command": "-editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-cursorUp",
+    "when": "textInputFocus"
   }
 ]
