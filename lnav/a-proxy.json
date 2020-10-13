@@ -1,0 +1,55 @@
+{
+  "proxy_log": {
+    "title": "Atlas MTM Server Proxy Log Format",
+    "regex": {
+      "main": {
+        "pattern": "^\\[(?<timestamp>\\d{4}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{3})\\]\\s+\\[(?<context>.*)\\.(?<level>(error|info|warn|debug|))\\]\\s+\\[(?<component>\\D+):\\d*\\]\\s+(?<body>.*)$"
+      }
+    },
+    "level": {
+      "critical": "fatal",
+      "debug": "debug",
+      "error": "error",
+      "info": "info",
+      "warning": "warn"
+    },
+    "opid-field": "context",
+    "value": {
+      "context": {
+        "kind": "string",
+        "identifier": true
+      },
+      "component": {
+        "kind": "string",
+        "identifier": true
+      },
+      "body": {
+        "kind": "string"
+      }
+    },
+    "sample": [
+      {
+        "line": "[2019/11/14 01:01:10.614] [monitoring.discovery.batch.error] [monitoring_consumer.go:handleBatch:88] Failure sending batch of 20 to service. Err: Failure during POST for MTM Group 59d4ce07df9db10f5330ccec. Err: Op: Post Err: http2: timeout awaiting response headers"
+      },
+      {
+        "line": "[2019/11/14 04:45:39.582] [Session 52.183.86.156:38397.info] [session.go:Run:67] new connection SSLServerName []"
+      },
+      {
+        "line": "[2019/11/14 04:45:39.582] [Session 52.183.86.156:38397.warn] [session_factory.go:NewInterceptor:172] couldn't find account . err: no SNI name sent, make sure using a MongoDB 3.4+ driver/shell."
+      }
+    ],
+    "highlights": {
+      "id": {
+        "pattern": "\\w{24}"
+      },
+      "hostname": {
+        "pattern": "\\[[\\w|-]*\\.mongodb\\.net\\]",
+        "color": "DeepSkyBlue2"
+      },
+      "userError": {
+        "pattern": "(error creating worker ip not in whitelist for account|RespondWithError code=\\d{4} codeName=\\w* errmsg = (?<errmsg>.*)).*$",
+        "color": "Orange3"
+      }
+    }
+  }
+}

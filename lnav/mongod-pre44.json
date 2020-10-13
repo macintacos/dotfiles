@@ -1,0 +1,42 @@
+{
+  "mongod_pre44": {
+    "title": "MongoDB server log format",
+    "regex": {
+      "main": {
+        "pattern": "^(?<timestamp>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[,\\.]\\d+\\+\\d+)\\s+(?<level>\\w)\\s+(?<component>\\w+|-)\\s+\\[?(?<context>-*[^\\0]+?)?\\]\\s+(?<body>[^\\0]*)$"
+      }
+    },
+    "level": {
+      "critical": "F",
+      "debug": "D",
+      "error": "E",
+      "info": "I",
+      "warning": "W"
+    },
+    "opid-field": "context",
+    "value": {
+      "context": {
+        "kind": "string",
+        "identifier": true
+      },
+      "component": {
+        "kind": "string",
+        "identifier": true
+      },
+      "body": {
+        "kind": "string"
+      }
+    },
+    "sample": [
+      {
+        "line": "2016-11-21T11:55:09.601+0000 I CONTROL  [initandlisten] MongoDB starting : pid=19972 port=27017 dbpath=/var/lib/mongodb 32-bit host=ubuntu-512mb-fra1-012"
+      },
+      {
+        "line": "2016-12-24T05:05:49.136+0000 E NETWORK  [initandlisten] Failed to unlink socket file /tmp/mongodb-27017.sock errno:1 Operation not permitted"
+      },
+      {
+        "line": "2019-10-30T17:01:47.736+0000 I INDEX [repl writer worker 0] building index using bulk method build may temporarily use up to 500 megabytes of RAM"
+      }
+    ]
+  }
+}
