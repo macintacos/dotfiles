@@ -29,7 +29,8 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -96,9 +97,12 @@
     "perl": "perl"
   },
   "code-runner.showRunIconInEditorTitleMenu": false,
+  "codeui.targetingMode": "themeSpecific",
   "color-highlight.markerType": "underline",
   "confluenceMarkup.monospaceFont": "JetBrains Mono",
-  "customizeUI.activityBar": "bottom",
+  "customizeUI.activityBar": "regular",
+  "customizeUI.font.monospace": "JetBrains Mono",
+  "customizeUI.font.regular": "Inter",
   "customizeUI.titleBar": "frameless",
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
@@ -361,6 +365,8 @@
     "yarn-error.log": true,
     "yarn.lock": true
   },
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
   "settings.cycle": [
     {
       "id": "lineNumbers",
@@ -467,18 +473,34 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "after": ["<ESC>"],
       "before": ["<ESC>"],
-      "commands": [{ "command": ":noh" }],
-      "after": ["<ESC>"]
+      "commands": [
+        {
+          "command": ":noh"
+        }
+      ]
     },
     {
       "before": ["g", "h"],
       "commands": ["editor.action.showDefinitionPreviewHover"]
     },
-    { "before": ["f"], "after": ["<leader>", "<leader>", "f"] },
-    { "before": ["F"], "after": ["<leader>", "<leader>", "F"] },
-    { "before": ["t"], "after": ["<leader>", "<leader>", "t"] },
-    { "before": ["T"], "after": ["<leader>", "<leader>", "T"] },
+    {
+      "after": ["<leader>", "<leader>", "f"],
+      "before": ["f"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "F"],
+      "before": ["F"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "t"],
+      "before": ["t"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "T"],
+      "before": ["T"]
+    },
     {
       "before": ["g", "r"],
       "commands": ["editor.action.referenceSearch.trigger"]
@@ -540,8 +562,8 @@
       "before": ["X"]
     },
     {
-      "before": [","],
-      "after": ["m"]
+      "after": ["m"],
+      "before": [","]
     },
     {
       "after": ["d"],
@@ -656,10 +678,22 @@
   "vim.sneak": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["f"], "after": ["<leader>", "<leader>", "f"] },
-    { "before": ["F"], "after": ["<leader>", "<leader>", "F"] },
-    { "before": ["t"], "after": ["<leader>", "<leader>", "t"] },
-    { "before": ["T"], "after": ["<leader>", "<leader>", "T"] },
+    {
+      "after": ["<leader>", "<leader>", "f"],
+      "before": ["f"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "F"],
+      "before": ["F"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "t"],
+      "before": ["t"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "T"],
+      "before": ["T"]
+    },
     {
       "before": ["<Tab>"],
       "commands": ["editor.action.indentLines"]
@@ -730,7 +764,18 @@
     }
   ],
   "vim.visualstar": true,
+  "vscode-neovim.logOutputToConsole": true,
+  "vscode-neovim.mouseSelectionStartVisualMode": true,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/Users/juliant/GitLocal/Play/nvim-osx64/bin/nvim",
+  "vscode-neovim.revealCursorScrollLine": true,
+  "vscode-neovim.textDecorationsAtTop": true,
   "vspacecode.bindingOverrides": [
+    {
+      "command": "workbench.action.toggleMaximizedPanel",
+      "keys": "l.m",
+      "name": "Toggle maximize panel",
+      "type": "command"
+    },
     {
       "bindings": [
         {
@@ -1628,15 +1673,12 @@
         {
           "bindings": [
             {
-              "command": "go.godoctor.extract",
-              "key": "f",
-              "name": "Extract to function",
-              "type": "command"
-            },
-            {
-              "command": "go.godoctor.var",
-              "key": "v",
-              "name": "Extract to variable",
+              "args": {
+                "kind": "refactor.extract"
+              },
+              "command": "editor.action.codeAction",
+              "key": "e",
+              "name": "Extract to function or variable",
               "type": "command"
             },
             {
@@ -2128,7 +2170,7 @@
   "workbench.iconTheme": "file-icons-mac",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.sideBar.location": "left",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.view.alwaysShowHeaderActions": true,
   "yaml.schemas": {

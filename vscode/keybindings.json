@@ -1225,9 +1225,9 @@
     "key": "alt+up"
   },
   {
-    "key": "ctrl+a",
+    "key": "a",
     "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !editorTextFocus"
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
   },
   {
     "command": "extension.jumpy-exit",
@@ -1267,14 +1267,9 @@
     "when": "inFileBrowser"
   },
   {
-    "key": "cmd+c",
+    "key": "c",
     "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "fileutils.removeFile",
-    "when": "filesExplorerFocus && !editorTextFocus"
   },
   {
     "key": "cmd+k cmd+r",
@@ -1734,6 +1729,11 @@
   {
     "key": "backspace",
     "command": "deleteLeft",
+    "when": "textInputFocus || editorTextFocus && !vim.active"
+  },
+  {
+    "key": "backspace",
+    "command": "deleteLeft",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
   },
   {
@@ -1797,6 +1797,11 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
   {
+    "key": "p",
+    "command": "list.select",
+    "when": "focusedView == 'workbench.view.scm' && !inputFocus"
+  },
+  {
     "key": "space",
     "command": "-filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
@@ -1812,13 +1817,13 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "j",
-    "command": "multiCommand.navigateExplorerDownAndPreviewFile",
+    "key": "g h",
+    "command": "workbench.files.action.collapseExplorerFolders",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "k",
-    "command": "multiCommand.navigateExplorerUpAndPreviewFile",
+    "key": "X",
+    "command": "code-runner.run",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
@@ -1881,5 +1886,90 @@
     "key": "ctrl+p",
     "command": "-cursorUp",
     "when": "textInputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "file-browser.actions",
+    "when": "inFileBrowser"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-file-browser.actions",
+    "when": "inFileBrowser"
+  },
+  {
+    "key": "shift+l",
+    "command": "breadcrumbs.focusNextWithPicker",
+    "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-breadcrumbs.focusNextWithPicker",
+    "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+  },
+  {
+    "key": "h",
+    "command": "breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "alt+left",
+    "command": "-breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "left",
+    "command": "-breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "shift+l",
+    "command": "breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "right",
+    "command": "-breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "shift+h",
+    "command": "breadcrumbs.focusPreviousWithPicker",
+    "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "-breadcrumbs.focusPreviousWithPicker",
+    "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "l",
+    "command": "list.expand",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "h",
+    "command": "list.collapse",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "editor.action.openLink",
+    "when": "inSearchEditor"
   }
 ]

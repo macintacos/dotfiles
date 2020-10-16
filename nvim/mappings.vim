@@ -19,18 +19,6 @@ inoremap <C-s> <ESC>:w<CR>a
 map Y y$
 vmap y ygv<ESC>
 
-" move current line/selected lines up/down
-nnoremap <M-S-j> :m .+1<CR>==
-nnoremap <M-S-k> :m .-2<CR>==
-inoremap <M-S-j> <Esc>:m .+1<CR>==gi
-inoremap <M-S-k> <Esc>:m .-2<CR>==gi
-vnoremap <M-S-j> :m '>+1<CR>gv=gv
-vnoremap <M-S-k> :m '<-2<CR>gv=gv
-nnoremap J :m .+1<CR>==
-nnoremap K :m .-2<CR>==
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
 " navigate splits
 nnoremap <silent> <Tab>   <C-w>w
 nnoremap <silent> <S-Tab> <C-w>W
