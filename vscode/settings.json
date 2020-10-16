@@ -771,6 +771,12 @@
   "vscode-neovim.textDecorationsAtTop": true,
   "vspacecode.bindingOverrides": [
     {
+      "command": "git.push",
+      "keys": "g.P",
+      "name": "Push changes to remote",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.toggleMaximizedPanel",
       "keys": "l.m",
       "name": "Toggle maximize panel",
