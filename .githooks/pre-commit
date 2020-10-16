@@ -15,5 +15,3 @@ if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
 
     set +o errexit
 fi
-
-HOMEBREW_NO_AUTO_UPDATE=1 backup-now
