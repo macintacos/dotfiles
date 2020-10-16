@@ -1797,11 +1797,6 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
   {
-    "key": "p",
-    "command": "list.select",
-    "when": "focusedView == 'workbench.view.scm' && !inputFocus"
-  },
-  {
     "key": "space",
     "command": "-filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
