@@ -4,6 +4,7 @@ adamwalzer.scss-lint
 akamud.vscode-javascript-snippet-pack
 alefragnani.Bookmarks
 alefragnani.project-manager
+asvetliakov.vscode-neovim
 BazelBuild.vscode-bazel
 belfz.search-crates-io
 bierner.color-info
@@ -96,6 +97,7 @@ mattn.Lisp
 mechatroner.rainbow-csv
 mkaufman.HTMLHint
 mongodb.mongodb-vscode
+mrmlnc.vscode-less
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
 ms-kubernetes-tools.vscode-kubernetes-tools
@@ -126,6 +128,7 @@ RobbOwen.synthwave-vscode
 rogalmic.bash-debug
 rogalmic.zsh-debug
 ronnidc.nunjucks
+ryanraposo.codeui
 ryu1kn.partial-diff
 ryuta46.multi-command
 sburg.vscode-javascript-booster
