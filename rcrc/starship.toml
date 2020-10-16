@@ -1,0 +1,16 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[python]
+version = ""
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[directory]
+truncation_symbol = ".../"

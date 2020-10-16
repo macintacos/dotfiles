@@ -74,19 +74,4 @@ alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
 
-# Making git a function to get around completion issues: https://github.com/tj/git-extras/issues/797
-# git() {
-#   # https://unix.stackexchange.com/a/257208
-#   case "$PWD" in
-#   "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
-#     hub "$@"
-#     hub config user.email julian.m.tor@gmail.com
-#     hub config user.signingkey "$PERSONAL_SECRET_GPG_KEY"
-#     ;;
-#   *)
-#     hub "$@"
-#     ;;
-#   esac
-# }
-
 # compdef git="hub"

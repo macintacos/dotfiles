@@ -65,8 +65,8 @@ FZF_TAB_COMMAND=(
   fzf
   --ansi                                      # Enable ANSI color support, necessary for showing groups<
   --expect='$continuous_trigger,$print_query' # For continuous completion
-  --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
-  --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+  '--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f'
+  '--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7'
   --nth=2,3 --delimiter='\x00' # Don't search prefix
   --tiebreak=begin -m --bind=tab:down,btab:up,change:top,ctrl-space:toggle --cycle
   '--query=$query'           # $query will be expanded to query string at runtime.

@@ -31,7 +31,6 @@ setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when 
 setopt SHARE_HISTORY          # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt prompt_subst           # enable parameter expansion, command substitution, and arithmetic expansion in the prompt
-setopt transient_rprompt      # only show the rprompt on the current prompt
 setopt AUTO_CD                # cd to directories by just giving the directory by itself
 unsetopt RM_STAR_SILENT       # always ask before 'rm'-ing globs
 autoload colors

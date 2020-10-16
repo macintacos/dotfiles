@@ -77,5 +77,20 @@ backup-now() { # backup things
   ./plzlog ok "Backup complete!"
 }
 
+# Making git a function to get around completion issues: https://github.com/tj/git-extras/issues/797
+# git() {
+#   # https://unix.stackexchange.com/a/257208
+#   case "$PWD" in
+#   "$HOME"/GitLocal/Website/* | "$HOME"/GitLocal/Learning/* | "$HOME"/GitLocal/Play/*)
+#     hub "$@"
+#     hub config user.email julian.m.tor@gmail.com
+#     hub config user.signingkey "$PERSONAL_SECRET_GPG_KEY"
+#     ;;
+#   *)
+#     hub "$@"
+#     ;;
+#   esac
+# }
+
 # directory color rendering
 eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)

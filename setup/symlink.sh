@@ -108,6 +108,19 @@ lnav_link() {
     plzlog ok "lnav formats linked."
 }
 
+starship_link() {
+    plzlog info "Linking starship config..."
+    plzlog info "Clearing target files..."
+    rm -rf "$HOME/.config/starship.toml"
+    plzlog ok "Done."
+    plzlog info "Making directory in case it doesn't exist..."
+    mkdir -p "$HOME/.config"
+    plzlog ok "Done."
+    plzlog info "Linking starship.toml..."
+    ln -sF "$DOTFILES_HOME/rcrc/starship.toml" "$HOME/.config/starship.toml"
+    plzlog ok "Done."
+}
+
 ## ALL {{{
 link_all() {
     plzlog info "Creating all symlinks..."
@@ -122,5 +135,6 @@ link_all() {
     smerge_link
     vscode_link
     lnav_link
+    starship_link
     plzlog ok "All symlinks created."
 }
