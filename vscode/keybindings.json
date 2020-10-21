@@ -1729,11 +1729,6 @@
   {
     "key": "backspace",
     "command": "deleteLeft",
-    "when": "textInputFocus || editorTextFocus && !vim.active"
-  },
-  {
-    "key": "backspace",
-    "command": "deleteLeft",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
   },
   {
