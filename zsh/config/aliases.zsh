@@ -23,7 +23,6 @@ alias rm='rm -i'                               # makes sure 'rm' always requires
 alias rm='trash'                               # a better rm
 alias t='tail -f'                              # shorten tail, and always continue to tail unless cancelled
 alias things='things.sh'                       # shortening things script
-alias tldr='tldr -t base16'                    # preferred tldr theme
 alias top='glances'                            # better resource visualizer
 alias touch='ad'                               # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias v='nvim'                                 # shortening usage of nvim
