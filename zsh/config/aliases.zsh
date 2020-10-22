@@ -72,5 +72,3 @@ alias dotfiles="code $HOME/GitLocal/Play/dotfiles"
 # FIND ALIASES {{{
 alias flatten='find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
 # }}}
-
-# compdef git="hub"
