@@ -1,0 +1,67 @@
+#!/bin/bash
+# bz - a script for running bazel functions and stuff
+set -o nounset
+set -o errexit
+set -o pipefail
+
+function usage() {
+    cat <<EOF >&2
+Perform operations related to bazel in the MMS repository.
+
+Usage: bz [subcommand]
+
+Subcommands:
+    init     - Run the initialization script
+    daemon   - Run the backup daemon
+    mms      - Start the server (don't skip assets)
+    mms_skip - Start the server (skip assets)
+    reset    - Reset the local environment
+    halp     - Show this output (yes, that's "help" with an "a")
+
+"bz" will also accept all of the other commands that you can pass to bazel. Run "bz help" for those.
+
+EOF
+}
+
+POSITIONAL=()
+
+if [ $# -eq 0 ]; then
+    usage
+    exit 1
+fi
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+    mms)
+        bazel run //server:mms
+        shift
+        ;;
+    mms_skip)
+        bazel run //server:mms_skip_assets
+        shift
+        ;;
+    daemon)
+        bazel run //server:daemon
+        shift
+        ;;
+    init)
+        bazel run //server:mms_init_local
+        shift
+        ;;
+    reset)
+        bazel run //server:mms_reset_local
+        shift
+        ;;
+    halp)
+        usage
+        shift
+        ;;
+    *)
+        bazel "$@"
+        shift
+        ;;
+    esac
+    exit 0
+done
+
+set -- "${POSITIONAL[@]}"
