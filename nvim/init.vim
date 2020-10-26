@@ -131,7 +131,7 @@ else
     call which_key#register(' ', "g:which_key_map")       " this makes sure which-key is properly loaded
     call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
     " }}}
- 
+
     " Vanilla Configurations
     colorscheme challenger_deep
     let g:challenger_deep_termcolors = 16
