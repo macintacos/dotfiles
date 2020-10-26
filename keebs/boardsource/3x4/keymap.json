@@ -7,37 +7,21 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_SFTENT",
-      "KC_1",
-      "KC_4",
-      "KC_7",
-      "KC_0",
-      "KC_2",
-      "KC_5",
-      "KC_8",
-      "LT(1,KC_ENT)",
-      "KC_3",
-      "KC_6",
-      "KC_9"
-    ],
-    [
-      "MO(2)",
       "KC_MRWD",
-      "KC_TRNS",
+      "KC_MUTE",
       "MEH(KC_I)",
-      "KC_MPLY",
+      "MEH(KC_SPC)",
       "KC_VOLD",
       "KC_VOLU",
+      "KC_MSTP",
       "MEH(KC_DOT)",
-      "KC_TRNS",
       "KC_MFFD",
-      "KC_MUTE",
-      "MEH(KC_SLSH)"
+      "KC_MPLY",
+      "MEH(KC_SLSH)",
+      "MO(1)"
     ],
     [
       "KC_TRNS",
-      "KC_NO",
-      "KC_NO",
       "KC_NO",
       "KC_NO",
       "RESET",
@@ -46,7 +30,9 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_NO"
+      "KC_NO",
+      "KC_NO",
+      "KC_TRNS"
     ]
   ],
   "author": ""
