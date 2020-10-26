@@ -33,9 +33,6 @@ export N_PREFIX="$HOME/.n"
 export N_BIN="$N_PREFIX/bin"
 export PATH="$N_BIN:$PATH"
 
-## STARSHIP
-# eval "$(starship init zsh)"
-
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
