@@ -134,7 +134,7 @@ nnoremap <silent> <leader>fn :Clap filer<CR>
 nnoremap <silent> <leader>fR :Move %<Tab>
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
-nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --sources file+'<CR>
+nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --position right --sources file+'<CR>
 nnoremap <silent> <leader>f~ :Clap files ~<CR>
 
 let g:which_key_map.f = {
