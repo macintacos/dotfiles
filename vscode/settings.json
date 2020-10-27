@@ -562,10 +562,6 @@
       "before": ["X"]
     },
     {
-      "after": ["m"],
-      "before": [","]
-    },
-    {
       "after": ["d"],
       "before": ["m"]
     },
