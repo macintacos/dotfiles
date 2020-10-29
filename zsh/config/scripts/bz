@@ -31,34 +31,30 @@ if [ $# -eq 0 ]; then
 fi
 
 while [[ $# -gt 0 ]]; do
-    case "$1" in
+    current_option="$1"
+    shift
+
+    case "$current_option" in
     mms)
         bazel run //server:mms
-        shift
         ;;
     mms_skip)
         bazel run //server:mms_skip_assets
-        shift
         ;;
     daemon)
         bazel run //server:daemon
-        shift
         ;;
     init)
         bazel run //server:mms_init_local
-        shift
         ;;
     reset)
         bazel run //server:mms_reset_local
-        shift
         ;;
     halp)
         usage
-        shift
         ;;
     *)
         bazel "$@"
-        shift
         ;;
     esac
     exit 0
