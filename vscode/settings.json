@@ -473,6 +473,14 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<C-i>"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
       "after": ["<ESC>"],
       "before": ["<ESC>"],
       "commands": [
