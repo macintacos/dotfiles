@@ -3,14 +3,15 @@
 " Description: gives which-key-like functionality to vim; something that I sorely need in order to do things the way that I want to do them in Vim
 
 " which-key invocation --- {{{
-nnoremap <silent> <leader>      :<c-u>WhichKey ' '<CR>
-vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ' '<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
-vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
+nnoremap <silent> <leader>      <Cmd>WhichKey ' '<CR>
+vnoremap <silent> <leader>      <Cmd>WhichKeyVisual ' '<CR>
+nnoremap <silent> <localleader> <Cmd>WhichKey ','<CR>
+vnoremap <silent> <localleader> <Cmd>WhichKeyVisual ','<CR>
+vnoremap <silent> <localleader> <Cmd>WhichKeyVisual ','<CR>
 " end }}}
 
 " begin <leader> mapping --- {{{
-nnoremap <silent> <leader><Tab> :bn<CR>
+nnoremap <silent> <leader><Tab> <Cmd>bn<CR>
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
 nmap <leader>3 <Plug>BuffetSwitch(3)
@@ -21,12 +22,12 @@ nmap <leader>7 <Plug>BuffetSwitch(7)
 nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
-nnoremap <leader>/ :Clap grep ++opt=--hidden -g "!.git/"<CR>
-nnoremap <silent> <leader>! :FloatermNew<CR>
-nnoremap <silent> <leader>; :Commentary<CR>
-nnoremap <silent> <leader>* :Clap grep ++query=<cword><CR>
-vnoremap <silent> <leader>* :Clap grep ++query=@visual<CR>
-nnoremap <silent> <leader>` :edit #<CR>
+nnoremap <leader>/ <Cmd>Clap grep ++opt=--hidden -g "!.git/"<CR>
+nnoremap <silent> <leader>! <Cmd>FloatermNew<CR>
+nnoremap <silent> <leader>; <Cmd>Commentary<CR>
+nnoremap <silent> <leader>* <Cmd>Clap grep ++query=<cword><CR>
+vnoremap <silent> <leader>* <Cmd>Clap grep ++query=@visual<CR>
+nnoremap <silent> <leader>` <Cmd>edit #<CR>
 
 let g:which_key_map = {
             \ 'name': 'Top-level',
@@ -52,19 +53,19 @@ let g:which_key_map.9 = 'which_key_ignore'
 let g:which_key_map.0 = 'which_key_ignore'
 
 "" 'b' menu --- {{{
-nnoremap <silent> <leader>b* :Clap blines ++query=<cword><CR>
-nnoremap <silent> <leader>bb :Clap buffers<CR>
-nnoremap <silent> <leader>bc :Clap bcommits<CR>
-nnoremap <silent> <leader>bD :call KillVisibleBufferChooseWin()<CR>
-nnoremap <silent> <leader>bm :messages<CR>
-nnoremap <silent> <leader>bn :bn<CR>
-nnoremap <silent> <leader>bN :enew<CR>
-nnoremap <silent> <leader>bo :TagbarToggle<CR>
-nnoremap <silent> <leader>bp :bp<CR>
-nnoremap <silent> <leader>bs :Scratch<CR>
-nnoremap <silent> <leader>bu :UndotreeToggle<CR>
-nnoremap <silent> <leader>by :%y<CR>
-vnoremap <silent> <leader>b* :Clap blines ++query=@visual<CR>
+nnoremap <silent> <leader>b* <Cmd>Clap blines ++query=<cword><CR>
+nnoremap <silent> <leader>bb <Cmd>Clap buffers<CR>
+nnoremap <silent> <leader>bc <Cmd>Clap bcommits<CR>
+nnoremap <silent> <leader>bD <Cmd>call KillVisibleBufferChooseWin()<CR>
+nnoremap <silent> <leader>bm <Cmd>messages<CR>
+nnoremap <silent> <leader>bn <Cmd>bn<CR>
+nnoremap <silent> <leader>bN <Cmd>enew<CR>
+nnoremap <silent> <leader>bo <Cmd>TagbarToggle<CR>
+nnoremap <silent> <leader>bp <Cmd>bp<CR>
+nnoremap <silent> <leader>bs <Cmd>Scratch<CR>
+nnoremap <silent> <leader>bu <Cmd>UndotreeToggle<CR>
+nnoremap <silent> <leader>by <Cmd>%y<CR>
+vnoremap <silent> <leader>b* <Cmd>Clap blines ++query=@visual<CR>
 
 let g:which_key_map.b = {
             \ 'name': '+buffer',
@@ -83,11 +84,11 @@ let g:which_key_map.b = {
             \ }
 
 """ 'b.d' menu --- {{{
-nnoremap <silent> <leader>bdo :Bonly!<CR>
-nnoremap <silent> <leader>bdd :BD<CR>
-nnoremap <silent> <leader>bdh :Bdelete hidden<CR>
-nnoremap <silent> <leader>bdw :bufdo Bw<CR>
-nnoremap <silent> <leader>bda :Bdelete all<CR>
+nnoremap <silent> <leader>bdo <Cmd>Bonly!<CR>
+nnoremap <silent> <leader>bdd <Cmd>BD<CR>
+nnoremap <silent> <leader>bdh <Cmd>Bdelete hidden<CR>
+nnoremap <silent> <leader>bdw <Cmd>bufdo Bw<CR>
+nnoremap <silent> <leader>bda <Cmd>Bdelete all<CR>
 
 let g:which_key_map.b.d = {
             \ 'name': '+delete',
@@ -115,9 +116,9 @@ let g:which_key_map.c = {
 "" 'c' menu end }}}
 
 "" 'e' menu --- {{{
-nnoremap <silent> <leader>el :<C-u>CocList diagnostics<CR>
-nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<CR>zz
-nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<CR>zz
+nnoremap <silent> <leader>el <Cmd><C-u>CocList diagnostics<CR>
+nnoremap <silent> <leader>en <Cmd>call CocAction('diagnosticNext')<CR>zz
+nnoremap <silent> <leader>ep <Cmd>call CocAction('diagnosticPrevious')<CR>zz
 
 let g:which_key_map.e = {
             \ 'name': '+errors/diagnostics',
@@ -126,16 +127,16 @@ let g:which_key_map.e = {
 "" 'e' menu end }}}
 
 "" 'f' menu --- {{{
-nnoremap <silent> <leader>f= :Format<CR>
-nnoremap <silent> <leader>f% :so %<CR>
-nnoremap <silent> <leader>fd :Clap filer %:p:h<CR>
-nnoremap <silent> <leader>ff :Clap gfiles<CR>
-nnoremap <silent> <leader>fn :Clap filer<CR>
-nnoremap <silent> <leader>fR :Move %<Tab>
-nnoremap <silent> <leader>fs :w<CR>
-nnoremap <silent> <leader>fS :wa<CR>
-nnoremap <silent> <leader>ft :execute 'CocCommand explorer '.getcwd().' --toggle --position right --sources file+'<CR>
-nnoremap <silent> <leader>f~ :Clap files ~<CR>
+nnoremap <silent> <leader>f= <Cmd>Format<CR>
+nnoremap <silent> <leader>f% <Cmd>so %<CR>
+nnoremap <silent> <leader>fd <Cmd>Clap filer %:p:h<CR>
+nnoremap <silent> <leader>ff <Cmd>Clap gfiles<CR>
+nnoremap <silent> <leader>fn <Cmd>Clap filer<CR>
+nnoremap <silent> <leader>fR <Cmd>Move %<Tab>
+nnoremap <silent> <leader>fs <Cmd>w<CR>
+nnoremap <silent> <leader>fS <Cmd>wa<CR>
+nnoremap <silent> <leader>ft <Cmd>execute 'CocCommand explorer '.getcwd().' --toggle --position right --sources file+'<CR>
+nnoremap <silent> <leader>f~ <Cmd>Clap files ~<CR>
 
 let g:which_key_map.f = {
             \ 'name': '+file',
@@ -154,13 +155,13 @@ let g:which_key_map.f = {
             \ }
 
 """ 'f.e' menu ============>
-nnoremap <silent> <leader>fec :CocConfig<CR>
-nnoremap <silent> <leader>fed :Clap files $DOTFILES_HOME<CR>
-nnoremap <silent> <leader>fek :e $DOTFILES_HOME/nvim/mappings.vim<CR>
-nnoremap <silent> <leader>feR :so $DOTFILES_HOME/nvim/init.vim<CR>:PlugInstall<CR>
-nnoremap <silent> <leader>feu :so $DOTFILES_HOME/nvim/init.vim<CR>:PlugUpdate<CR>
-nnoremap <silent> <leader>fev :Clap files $NVIM_HOME<CR>
-nnoremap <silent> <leader>few :e $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim<CR>
+nnoremap <silent> <leader>fec <Cmd>CocConfig<CR>
+nnoremap <silent> <leader>fed <Cmd>Clap files $DOTFILES_HOME<CR>
+nnoremap <silent> <leader>fek <Cmd>e $DOTFILES_HOME/nvim/mappings.vim<CR>
+nnoremap <silent> <leader>feR <Cmd>so $DOTFILES_HOME/nvim/init.vim<CR>:PlugInstall<CR>
+nnoremap <silent> <leader>feu <Cmd>so $DOTFILES_HOME/nvim/init.vim<CR>:PlugUpdate<CR>
+nnoremap <silent> <leader>fev <Cmd>Clap files $NVIM_HOME<CR>
+nnoremap <silent> <leader>few <Cmd>e $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim<CR>
 
 let g:which_key_map.f.e = {
             \ 'name': '+edit',
@@ -177,13 +178,13 @@ let g:which_key_map.f.e = {
 "" 'f' menu end }}}
 
 "" 'g' menu --- {{{
-nnoremap <silent> <leader>ga :Git add .<CR>
-nnoremap <silent> <leader>gB :!smerge blame %<CR>
-nnoremap <silent> <leader>gb :Git blame<CR>
-nnoremap <silent> <leader>gc :Git commit<CR>
-nnoremap <silent> <leader>gd :Gdiffsplit<CR>
-nnoremap <silent> <leader>gs :!smerge .<CR>
-nnoremap <silent> <leader>gS :Clap commits<CR>
+nnoremap <silent> <leader>ga <Cmd>Git add .<CR>
+nnoremap <silent> <leader>gB <Cmd>!smerge blame %<CR>
+nnoremap <silent> <leader>gb <Cmd>Git blame<CR>
+nnoremap <silent> <leader>gc <Cmd>Git commit<CR>
+nnoremap <silent> <leader>gd <Cmd>Gdiffsplit<CR>
+nnoremap <silent> <leader>gs <Cmd>!smerge .<CR>
+nnoremap <silent> <leader>gS <Cmd>Clap commits<CR>
 
 let g:which_key_map.g = {
             \ 'name': '+git',
@@ -198,12 +199,12 @@ let g:which_key_map.g = {
 "" 'g' menu end}}}
 
 "" 'h' menu --- {{{ Ignoring until we find a use for it
-nnoremap <silent> <leader>h* :Clap help_tags ++query=<cword><CR>
-nnoremap <silent> <leader>hh :Clap help_tags<CR>
-nnoremap <silent> <leader>hm :Clap maps<CR>
+nnoremap <silent> <leader>h* <Cmd>Clap help_tags ++query=<cword><CR>
+nnoremap <silent> <leader>hh <Cmd>Clap help_tags<CR>
+nnoremap <silent> <leader>hm <Cmd>Clap maps<CR>
 
 let g:which_key_map.h = {
-            \ 'name' : '+help',
+            \ 'name': '+help',
             \ '*': 'Help for word under cursor',
             \ 'h': 'Search help commands',
             \ }
@@ -213,10 +214,10 @@ let g:which_key_map.h.u = 'which_key_ignore'
 "" 'h' menu end }}}
 
 "" 'j' menu --- {{{
-nnoremap <silent> <leader>jI :Clap proj_tags<CR>
-nnoremap <silent> <leader>ji :Vista finder<CR>
-nnoremap <silent> <leader>jJ :SplitjoinSplit<CR>
-nnoremap <silent> <leader>jK :SplitjoinJoin<CR>
+nnoremap <silent> <leader>jI <Cmd>Clap proj_tags<CR>
+nnoremap <silent> <leader>ji <Cmd>Vista finder<CR>
+nnoremap <silent> <leader>jJ <Cmd>SplitjoinSplit<CR>
+nnoremap <silent> <leader>jK <Cmd>SplitjoinJoin<CR>
 
 let g:which_key_map.j = {
             \ 'name': '+jump',
@@ -232,7 +233,7 @@ nmap <silent> <leader>of gof
 nmap <silent> <leader>oF goF
 nmap <silent> <leader>ot got
 nmap <silent> <leader>oT goT
-nmap <silent> <leader>ox :CocList marketplace<CR>
+nmap <silent> <leader>ox <Cmd>CocList marketplace<CR>
 
 let g:which_key_map.o = {
             \ 'name': '+open',
@@ -245,8 +246,8 @@ let g:which_key_map.o = {
 "" 'o' menu end }}}
 
 "" 'p' menu --- {{{
-nnoremap <silent> <leader>pp :Clap zoxide<CR>
-nnoremap <silent> <leader>pt :OpenTodo<CR>
+nnoremap <silent> <leader>pp <Cmd>Clap zoxide<CR>
+nnoremap <silent> <leader>pt <Cmd>OpenTodo<CR>
 
 let g:which_key_map.p = {
             \ 'name': '+projects',
@@ -255,7 +256,7 @@ let g:which_key_map.p = {
 "" 'p' menu end }}}
 
 "" 'q' menu --- {{{
-nnoremap <silent> <leader>qq :qa<CR>
+nnoremap <silent> <leader>qq <Cmd>qa<CR>
 
 let g:which_key_map.q = {
             \ 'name': '+quit',
@@ -265,10 +266,10 @@ let g:which_key_map.q = {
 "" 'q' menu end }}}
 
 "" 's' menu --- {{{
-nnoremap <silent> <leader>sb :Clap lines<CR>
-nnoremap <silent> <leader>ss :Clap blines<CR>
-nnoremap <silent> <leader>sp :Clap grep ++opt=--hidden -g "!.git/"<CR>
-nnoremap <silent> <leader>st :Clap floaterm<CR>
+nnoremap <silent> <leader>sb <Cmd>Clap lines<CR>
+nnoremap <silent> <leader>ss <Cmd>Clap blines<CR>
+nnoremap <silent> <leader>sp <Cmd>Clap grep ++opt=--hidden -g "!.git/"<CR>
+nnoremap <silent> <leader>st <Cmd>Clap floaterm<CR>
 
 let g:which_key_map.s = {
             \ 'name': '+search/symbol',
@@ -280,11 +281,11 @@ let g:which_key_map.s = {
 "" 's' menu end }}}
 
 "" 't' menu --- {{{
-nnoremap <silent> <leader>tc :Clap colors<CR>
-nnoremap <silent> <leader>tg :Goyo<CR>
-nnoremap <silent> <leader>tm :OpenTodo<CR>
-nnoremap <silent> <leader>tn :<C-u>setlocal nonumber! norelativenumber!<CR>
-nnoremap <silent> <leader>tw :<C-u>setlocal nowrap!<CR>
+nnoremap <silent> <leader>tc <Cmd>Clap colors<CR>
+nnoremap <silent> <leader>tg <Cmd>Goyo<CR>
+nnoremap <silent> <leader>tm <Cmd>OpenTodo<CR>
+nnoremap <silent> <leader>tn <Cmd><C-u>setlocal nonumber! norelativenumber!<CR>
+nnoremap <silent> <leader>tw <Cmd><C-u>setlocal nowrap!<CR>
 
 let g:which_key_map.t = {
             \ 'name': '+UI toggles/themes',
@@ -298,23 +299,23 @@ let g:which_key_map.t = {
 
 "" 'w' menu --- {{{
 nnoremap <silent> <leader>w= <C-w>=
-nnoremap <silent> <leader>w- :rightbelow sb<CR>
-nnoremap <silent> <leader>w/ :vertical rightbelow sb<CR>
-nnoremap <silent> <leader>wd :close<CR>
-nnoremap <silent> <leader>wD :call CloseWindowChooseWin()<CR>
+nnoremap <silent> <leader>w- <Cmd>rightbelow sb<CR>
+nnoremap <silent> <leader>w/ <Cmd>vertical rightbelow sb<CR>
+nnoremap <silent> <leader>wd <Cmd>close<CR>
+nnoremap <silent> <leader>wD <Cmd>call CloseWindowChooseWin()<CR>
 nmap <silent> <leader>wm <Plug>(zoom-toggle)
 nnoremap <silent> <leader>wh <C-w>h
 nnoremap <silent> <leader>wl <C-w>l
 nnoremap <silent> <leader>wk <C-w>k
 nnoremap <silent> <leader>wj <C-w>j
-nnoremap <silent> <leader>wH :wincmd H<CR>
-nnoremap <silent> <leader>wL :wincmd L<CR>
-nnoremap <silent> <leader>wJ :wincmd J<CR>
-nnoremap <silent> <leader>wK :wincmd K<CR>
-nnoremap <silent> <leader>ws :rightbelow sb<CR>
-nnoremap <silent> <leader>wt :enew<CR>
-nnoremap <silent> <leader>wv :vertical rightbelow sb<CR>
-nnoremap <silent> <leader>ww :ChooseWin<CR>
+nnoremap <silent> <leader>wH <Cmd>wincmd H<CR>
+nnoremap <silent> <leader>wL <Cmd>wincmd L<CR>
+nnoremap <silent> <leader>wJ <Cmd>wincmd J<CR>
+nnoremap <silent> <leader>wK <Cmd>wincmd K<CR>
+nnoremap <silent> <leader>ws <Cmd>rightbelow sb<CR>
+nnoremap <silent> <leader>wt <Cmd>enew<CR>
+nnoremap <silent> <leader>wv <Cmd>vertical rightbelow sb<CR>
+nnoremap <silent> <leader>ww <Cmd>ChooseWin<CR>
 
 let g:which_key_map.w = {
             \ 'name': '+window',
@@ -338,11 +339,11 @@ let g:which_key_map.w = {
             \ 'w': 'Choose windows',
             \ }
 """ 'w.N' menu --- {{{
-nnoremap <silent> <leader>wNc :enew<CR>
-nnoremap <silent> <leader>wNh :vnew<CR>
-nnoremap <silent> <leader>wNk :new<CR>
-nnoremap <silent> <leader>wNl :vertical rightbelow new<CR>
-nnoremap <silent> <leader>wNj :rightbelow new<CR>
+nnoremap <silent> <leader>wNc <Cmd>enew<CR>
+nnoremap <silent> <leader>wNh <Cmd>vnew<CR>
+nnoremap <silent> <leader>wNk <Cmd>new<CR>
+nnoremap <silent> <leader>wNl <Cmd>vertical rightbelow new<CR>
+nnoremap <silent> <leader>wNj <Cmd>rightbelow new<CR>
 
 let g:which_key_map.w.N = {
             \ 'name': '+new_empty_buffer',
@@ -356,10 +357,10 @@ let g:which_key_map.w.N = {
 
 
 """ 'w.f' menu --- {{{
-nnoremap <silent> <leader>wfl :vertical rightbelow sb<CR>:Clap gfiles<CR>
-nnoremap <silent> <leader>wfh :vertical sb<CR>:Clap gfiles<CR>
-nnoremap <silent> <leader>wfj :rightbelow sb<CR>:Clap gfiles<CR>
-nnoremap <silent> <leader>wfk :split<CR>:Clap gfiles<CR>
+nnoremap <silent> <leader>wfl <Cmd>vertical rightbelow sb<CR>:Clap gfiles<CR>
+nnoremap <silent> <leader>wfh <Cmd>vertical sb<CR>:Clap gfiles<CR>
+nnoremap <silent> <leader>wfj <Cmd>rightbelow sb<CR>:Clap gfiles<CR>
+nnoremap <silent> <leader>wfk <Cmd>split<CR>:Clap gfiles<CR>
 
 let g:which_key_map.w.f = {
             \ 'name': '+file-in-window',
@@ -373,11 +374,11 @@ let g:which_key_map.w.f = {
 
 "" 'x' menu --- {{{
 " @todo Need to go through and see what keybindings I can put here; possibly re-map from elsewhere?
-" @todo uppercase, lowercase, kebab-case, snake_case, uppercase, sort lines, 
-nnoremap <silent> <leader>x- :call KebabCase()<CR>
-nnoremap <silent> <leader>x_ :call Snake_Case()<CR>
-nnoremap <silent> <leader>xc :call LowerCamelCase()<CR>
-nnoremap <silent> <leader>xC :call UpperCamelCase()<CR>
+" @todo uppercase, lowercase, kebab-case, snake_case, uppercase, sort lines, etc.
+nnoremap <silent> <leader>x- <Cmd>call KebabCase()<CR>
+nnoremap <silent> <leader>x_ <Cmd>call Snake_Case()<CR>
+nnoremap <silent> <leader>xc <Cmd>call LowerCamelCase()<CR>
+nnoremap <silent> <leader>xC <Cmd>call UpperCamelCase()<CR>
 
 let g:which_key_map.x = {
             \ 'name': '+text',
@@ -392,7 +393,7 @@ let g:which_key_map.x = {
 " <localleader> mapping --- {{{
 
 "" MACRO RECORDING
-nnoremap <localleader>q :normal! qq<CR>
+nnoremap <localleader>q <Cmd>normal! qq<CR>
 nmap <localleader><tab> <Plug>(fzf-maps-n)
 xmap <localleader><tab> <Plug>(fzf-maps-x)
 omap <localleader><tab> <Plug>(fzf-maps-o)
@@ -404,11 +405,11 @@ let g:which_key_map_local = {
             \ }
 
 "" BOOKMARKS
-nnoremap <silent> <localleader>bm :<C-u>BookmarkToggle<Cr>
-nnoremap <silent> <localleader>bi :<C-u>BookmarkAnnotate<Cr>
-nnoremap <silent> <localleader>ba :<C-u>BookmarkShowAll<Cr>
-nnoremap <silent> <localleader>bn :<C-u>BookmarkNext<Cr>
-nnoremap <silent> <localleader>bp :<C-u>BookmarkPrev<Cr>
+nnoremap <silent> <localleader>bm <Cmd><C-u>BookmarkToggle<Cr>
+nnoremap <silent> <localleader>bi <Cmd><C-u>BookmarkAnnotate<Cr>
+nnoremap <silent> <localleader>ba <Cmd><C-u>BookmarkShowAll<Cr>
+nnoremap <silent> <localleader>bn <Cmd><C-u>BookmarkNext<Cr>
+nnoremap <silent> <localleader>bp <Cmd><C-u>BookmarkPrev<Cr>
 let g:which_key_map_local.b = {
             \ 'name': '+bookmarks',
             \ 'm': 'Toggle bookmark',
@@ -420,34 +421,34 @@ let g:which_key_map_local.b = {
 
 "" MARKDOWN
 autocmd FileType markdown nmap <buffer> <localleader>mv <Plug>MarkdownPreview
-autocmd FileType markdown nmap <buffer> <localleader>m-  :call mkdx#ToggleCheckboxState(1)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m=  :call mkdx#ToggleCheckboxState()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m-  :call mkdx#ToggleCheckboxState()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m=  :call mkdx#ToggleCheckboxState(1)<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m[  :<C-U>call mkdx#ToggleHeader(1)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m]  :<C-U>call mkdx#ToggleHeader()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m'  :call mkdx#ToggleQuote()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m'  :call mkdx#ToggleQuote()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mt  :call mkdx#ToggleCheckboxTask()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mt  :call mkdx#ToggleCheckboxTask()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mlt :call mkdx#ToggleChecklist()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mlt :call mkdx#ToggleChecklist()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mll :call mkdx#ToggleList()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mll :call mkdx#ToggleList()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mk :<C-U>call mkdx#WrapLink()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mk :<C-U>call mkdx#WrapLink("v")<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mi :<C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic, "mkdx-text-italic-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mi :<C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mb :<C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold, "mkdx-text-bold-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mb :<C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m` :<C-U>call mkdx#WrapText("n", "`", "`", "mkdx-text-inline-code-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m` :call      mkdx#WrapSelectionInCode()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>ms :<C-U>call mkdx#WrapText("n", "<strike>", "</strike>", "mkdx-text-strike-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>ms :<C-U>call mkdx#WrapText("v", "<strike>", "</strike>")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m, :call mkdx#Tableize()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mI :call mkdx#QuickfixHeaders()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mL :call mkdx#QuickfixDeadLinks()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mj :call mkdx#JumpToHeader()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m-  <Cmd>call mkdx#ToggleCheckboxState(1)<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m=  <Cmd>call mkdx#ToggleCheckboxState()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m-  <Cmd>call mkdx#ToggleCheckboxState()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m=  <Cmd>call mkdx#ToggleCheckboxState(1)<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m[  <Cmd><C-U>call mkdx#ToggleHeader(1)<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m]  <Cmd><C-U>call mkdx#ToggleHeader()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink("v")<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic, "mkdx-text-italic-n")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic)<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold, "mkdx-text-bold-n")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold)<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m` <Cmd><C-U>call mkdx#WrapText("n", "`", "`", "mkdx-text-inline-code-n")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m` <Cmd>call      mkdx#WrapSelectionInCode()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("n", "<strike>", "</strike>", "mkdx-text-strike-n")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("v", "<strike>", "</strike>")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m, <Cmd>call mkdx#Tableize()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mI <Cmd>call mkdx#QuickfixHeaders()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mL <Cmd>call mkdx#QuickfixDeadLinks()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mj <Cmd>call mkdx#JumpToHeader()<CR>
 
 autocmd FileType markdown let g:which_key_map_local.m = {
             \ 'name': '+markdown',
@@ -477,8 +478,8 @@ autocmd FileType markdown let g:which_key_map_local.m.l = {
             \ }
 
 "" SPLITS/JOINS
-nmap <silent> <localleader>sj :SplitjoinSplit<CR>
-nmap <silent> <localleader>sk :SplitjoinJoin<CR>
+nmap <silent> <localleader>sj <Cmd>SplitjoinSplit<CR>
+nmap <silent> <localleader>sk <Cmd>SplitjoinJoin<CR>
 let g:which_key_map_local.s = {
             \ 'name': '+split',
             \ 'j': 'Split code below',

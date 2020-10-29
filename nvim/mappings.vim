@@ -12,8 +12,10 @@ inoremap jj <ESC>
 inoremap kk <ESC>
 
 " saves the current buffer
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <ESC>:w<CR>a
+nnoremap <C-s> <Cmd>w<CR>
+inoremap <C-s> <Cmd>w<CR>
+vnoremap <C-s> <Cmd>w<CR>
+xnoremap <C-s> <Cmd>w<CR>
 
 " make 'Y' yank for current character to end of line
 map Y y$
@@ -24,10 +26,10 @@ nnoremap <silent> <Tab>   <C-w>w
 nnoremap <silent> <S-Tab> <C-w>W
 
 " increase/decrease window size
-nnoremap <silent> <M-w> :resize +5<CR>
-nnoremap <silent> <M-s> :resize -5<CR>
-nnoremap <silent> <M-d> :vertical resize +5<CR>
-nnoremap <silent> <M-a> :vertical resize -5<CR>
+nnoremap <silent> <M-w> <Cmd>resize +5<CR>
+nnoremap <silent> <M-s> <Cmd>resize -5<CR>
+nnoremap <silent> <M-d> <Cmd>vertical resize +5<CR>
+nnoremap <silent> <M-a> <Cmd>vertical resize -5<CR>
 
 " so that vim-sandwich works
 map <silent> s <nop>
@@ -47,5 +49,5 @@ nnoremap <C-h> 20zh
 nmap G Gzz
 
 " smartclose q mapping
-nnoremap <silent> q :call SmartClose()<CR>
+nnoremap <silent> q <Cmd>call SmartClose()<CR>
 
