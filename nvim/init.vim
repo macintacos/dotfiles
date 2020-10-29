@@ -7,11 +7,15 @@ if exists('g:vscode')
     source $NVIM_HOME/vscode-neovim-mappings.vim
 
     call plug#begin('~/.config/vim-plug')
-    Plug 'junegunn/vim-easy-align'                        | source $PLUG_CONFIG_NVIM_HOME/vim-easy-align.vim
-    Plug 'machakann/vim-highlightedyank'                  | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
-    Plug 'mg979/vim-visual-multi', { 'branch': 'master' } | source $PLUG_CONFIG_NVIM_HOME/vim-visual-multi.vim
-    Plug 'rhysd/clever-f.vim'                             | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
-    Plug 'svermeulen/vim-cutlass'                         | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
+
+    Plug 'junegunn/vim-easy-align'       | source $PLUG_CONFIG_NVIM_HOME/vim-easy-align.vim
+    Plug 'junegunn/vim-slash'            | source $PLUG_CONFIG_NVIM_HOME/vim-slash.vim
+    Plug 'machakann/vim-highlightedyank' | source $PLUG_CONFIG_NVIM_HOME/vim-highlightedyank.vim
+    Plug 'rhysd/clever-f.vim'            | source $PLUG_CONFIG_NVIM_HOME/clever-f.vim
+    Plug 'svermeulen/vim-cutlass'        | source $PLUG_CONFIG_NVIM_HOME/vim-cutlass.vim
+    Plug 'machakann/vim-sandwich'         " alternative to vim-surround
+    Plug 'andymass/vim-matchup'          | source $PLUG_CONFIG_NVIM_HOME/vim-matchup.vim
+
     call plug#end()
 
     "" Highlights the text that you yanked.
@@ -75,7 +79,7 @@ else
         \ Plug 'inkarkat/vim-visualrepeat' |
         \ Plug 'inkarkat/vim-LineJuggler' | source $PLUG_CONFIG_NVIM_HOME/vim-LineJuggler.vim
 
-    " utilities with nothing else
+    " utilities with no alternate configuration
     Plug 'MTDL9/vim-log-highlighting'     " highlighting for log files
     Plug 'dhruvasagar/vim-zoom'           " zooming in/out of windows (mapped to SPC w m)
     Plug 'dhruvasagar/vim-prosession'     " pro session handling
