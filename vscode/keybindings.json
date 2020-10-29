@@ -1718,8 +1718,8 @@
   },
   {
     "key": "backspace",
-    "command": "-deleteLeft",
-    "when": "textInputFocus"
+    "command": "deleteLeft",
+    "when": "textInputFocus && !vim.active"
   },
   {
     "key": "backspace",

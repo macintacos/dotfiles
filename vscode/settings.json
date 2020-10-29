@@ -666,6 +666,16 @@
     {
       "after": ["y", "$"],
       "before": ["Y"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
     }
   ],
   "vim.searchHighlightColor": "#85e89d",
@@ -757,6 +767,16 @@
     {
       "after": ["a", "f"],
       "before": ["v"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
     }
   ],
   "vim.visualstar": true,
@@ -1718,7 +1738,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": [
     {
