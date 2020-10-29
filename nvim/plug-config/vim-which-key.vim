@@ -1,5 +1,6 @@
 
 " Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 " Description: gives which-key-like functionality to vim; something that I sorely need in order to do things the way that I want to do them in Vim
 
 " which-key invocation --- {{{
@@ -116,7 +117,7 @@ let g:which_key_map.c = {
 "" 'c' menu end }}}
 
 "" 'e' menu --- {{{
-nnoremap <silent> <leader>el <Cmd><C-u>CocList diagnostics<CR>
+nnoremap <silent> <leader>el <Cmd>CocList diagnostics<CR>
 nnoremap <silent> <leader>en <Cmd>call CocAction('diagnosticNext')<CR>zz
 nnoremap <silent> <leader>ep <Cmd>call CocAction('diagnosticPrevious')<CR>zz
 
@@ -284,8 +285,8 @@ let g:which_key_map.s = {
 nnoremap <silent> <leader>tc <Cmd>Clap colors<CR>
 nnoremap <silent> <leader>tg <Cmd>Goyo<CR>
 nnoremap <silent> <leader>tm <Cmd>OpenTodo<CR>
-nnoremap <silent> <leader>tn <Cmd><C-u>setlocal nonumber! norelativenumber!<CR>
-nnoremap <silent> <leader>tw <Cmd><C-u>setlocal nowrap!<CR>
+nnoremap <silent> <leader>tn <Cmd>setlocal nonumber! norelativenumber!<CR>
+nnoremap <silent> <leader>tw <Cmd>setlocal nowrap!<CR>
 
 let g:which_key_map.t = {
             \ 'name': '+UI toggles/themes',
@@ -405,11 +406,11 @@ let g:which_key_map_local = {
             \ }
 
 "" BOOKMARKS
-nnoremap <silent> <localleader>bm <Cmd><C-u>BookmarkToggle<Cr>
-nnoremap <silent> <localleader>bi <Cmd><C-u>BookmarkAnnotate<Cr>
-nnoremap <silent> <localleader>ba <Cmd><C-u>BookmarkShowAll<Cr>
-nnoremap <silent> <localleader>bn <Cmd><C-u>BookmarkNext<Cr>
-nnoremap <silent> <localleader>bp <Cmd><C-u>BookmarkPrev<Cr>
+nnoremap <silent> <localleader>bm <Cmd>BookmarkToggle<Cr>
+nnoremap <silent> <localleader>bi <Cmd>BookmarkAnnotate<Cr>
+nnoremap <silent> <localleader>ba <Cmd>BookmarkShowAll<Cr>
+nnoremap <silent> <localleader>bn <Cmd>BookmarkNext<Cr>
+nnoremap <silent> <localleader>bp <Cmd>BookmarkPrev<Cr>
 let g:which_key_map_local.b = {
             \ 'name': '+bookmarks',
             \ 'm': 'Toggle bookmark',

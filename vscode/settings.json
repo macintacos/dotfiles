@@ -1012,15 +1012,6 @@
       "type": "command"
     },
     {
-      "args": {
-        "after": [",", "≈", "g", "g", "y", "G", "'", "≈", "z", "z"]
-      },
-      "command": "vim.remap",
-      "keys": "b.Y",
-      "name": "Yank the whole buffer",
-      "type": "command"
-    },
-    {
       "command": "workbench.action.nextEditorInGroup",
       "keys": "b.`",
       "name": "Next Editor (current group)",
