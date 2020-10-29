@@ -7436,14 +7436,16 @@
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.80000000000000004</real>
+				<real>0.483367919921875</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.70196078431372544</real>
+				<real>0.36071444981878586</real>
 				<key>Red Component</key>
-				<real>0.65098039215686276</real>
+				<real>0.29693464795127511</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -7571,14 +7573,16 @@
 			<real>8.7997124841370535</real>
 			<key>Bold Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.90588235294117647</real>
+				<real>0.88848876953125</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.8901960784313725</real>
+				<real>0.87701157826398102</real>
 				<key>Red Component</key>
-				<real>0.79607843137254897</real>
+				<real>0.80814843066036701</real>
 			</dict>
 			<key>Brighten Bold Text</key>
 			<true/>
@@ -7591,7 +7595,7 @@
 			<key>Command</key>
 			<string>/bin/zsh</string>
 			<key>Cursor Boost</key>
-			<real>0.022278792134831461</real>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -8383,7 +8387,7 @@
 			<key>Use Bold Font</key>
 			<false/>
 			<key>Use Bright Bold</key>
-			<false/>
+			<true/>
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
