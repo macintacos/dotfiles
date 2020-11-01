@@ -4,6 +4,7 @@
 alias bazel="$HOME/GitLocal/Work/mms/bazelisk" # can just keep this to the local bazelisk script
 alias c='clear && ll'                          # clear terminal display, show directory
 alias cat='bat --theme="ansi-dark"'            # because bat is just insanely better than cat
+alias ch='cht.sh'                              # a cheatsheet tool that is neat (needs an internet connection)
 alias cls='clear'                              # clear sisplay, just like `mongo` shell
 alias count='tokei'                            # use this to count the amount of files in a given directory
 alias cp='cp -iv'                              # preferred 'cp' implementation
@@ -15,6 +16,7 @@ alias edit='vim'                               # default editor if i don't want 
 alias f='open -a Forklift .'                   # opens current directory in Forklift
 alias ff='fzf'                                 # shortening fzf
 alias grep='grep --color'                      # always colorize output
+alias hdi='howdoi -c -n 3'                     # howdoi plugin to search for code completion stuff
 alias kill='fkill'                             # a better process killer
 alias mv='mv -iv'                              # preferred 'mv' implementation
 alias r='ranger-cd'                            # mapped to the ranger function that cd's the appropriate directory when you quit
@@ -26,10 +28,9 @@ alias things='things.sh'                       # shortening things script
 alias top='glances'                            # better resource visualizer
 alias touch='ad'                               # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias v='nvim'                                 # shortening usage of nvim
-alias vs='code'                                # shortening vscode's code
 alias vl='vercel'                              # vercel/zeit/now
+alias vs='code'                                # shortening vscode's code
 alias zr='zrun'                                # making zrun a bit more easy to run
-alias hdi='howdoi -c -n 3'                     # howdoi plugin to search for code completion stuff
 # }}}
 
 # GIT ALIASES {{{
