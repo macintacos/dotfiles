@@ -13,7 +13,7 @@ if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
     echo "$STAGED_JS_AND_JSON" | xargs prettier --write
 
     # Add them bag to staging so that the changes get committed
-    echo "$STAGED_JS_AND_JSON" | zargs git agg
+    echo "$STAGED_JS_AND_JSON" | xargs git add
 
     set +o errexit
 fi
