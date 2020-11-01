@@ -9,9 +9,11 @@ STAGED_JS_AND_JSON=$(git diff --cached --name-only | grep -iE "\.(js|json)$")
 if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
     set -o errexit
 
-    for FILE in ${STAGED_JS_AND_JSON}; do
-        prettier --write "$FILE"
-    done
+    # Prettify everything
+    echo "$STAGED_JS_AND_JSON" | xargs prettier --write
+
+    # Add them bag to staging so that the changes get committed
+    echo "$STAGED_JS_AND_JSON" | zargs git agg
 
     set +o errexit
 fi
