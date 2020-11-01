@@ -121,6 +121,19 @@ starship_link() {
     plzlog ok "Done."
 }
 
+lazygit_link() {
+    plzlog info "Linking lazygit config..."
+    plzlog info "Clearing target files..."
+    rm -rf "$HOME/Library/Application Support/jesseduffield/lazygit/config.yml"
+    plzlog ok "Done."
+    plzlog info "Making directory if it doesn't exist..."
+    mkdir -p "$HOME/Library/Application Support/jesseduffield/lazygit"
+    plzlog ok "Done."
+    plzlog info "Linking lazygit config file..."
+    ln -sF "$DOTFILES_HOME/rcrc/lazygit/config.yml" "$HOME/Library/Application Support/jesseduffield/lazygit/config.yml"
+    plzlog ok "Done."
+}
+
 ## ALL {{{
 link_all() {
     plzlog info "Creating all symlinks..."
@@ -136,5 +149,6 @@ link_all() {
     vscode_link
     lnav_link
     starship_link
+    lazygit_link
     plzlog ok "All symlinks created."
 }
