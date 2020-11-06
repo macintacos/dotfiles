@@ -108,7 +108,6 @@ ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 mushan.vscode-paste-image
 naumovs.color-highlight
-octref.vetur
 oderwat.indent-rainbow
 okitavera.vscode-nunjucks-formatter
 oliversturm.fix-json

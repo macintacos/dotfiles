@@ -35,19 +35,21 @@ brew "aom"
 brew "archey"
 brew "coreutils"
 brew "asdf"
+brew "gdbm"
+brew "xz"
 brew "autojump"
 brew "libusb"
 brew "avrdude"
-brew "gdbm"
-brew "xz"
 brew "awscli"
 brew "bash-completion"
 brew "bat"
+brew "bit-git"
 brew "blueutil"
 brew "broot"
 brew "fontconfig"
 brew "gettext", link: false
 brew "libffi"
+brew "python@3.8", link: true
 brew "ccat"
 brew "cfssl"
 brew "colordiff"
@@ -136,6 +138,7 @@ brew "kubectx"
 brew "lf"
 brew "libarchive"
 brew "libp11"
+brew "lnav"
 brew "lsd"
 brew "luarocks"
 brew "make"
@@ -216,6 +219,7 @@ brew "heroku/brew/heroku"
 brew "jesseduffield/lazygit/lazygit"
 brew "knqyf263/pet/pet"
 brew "kyoh86/tap/richgo"
+brew "mongodb/brew/mongodb-database-tools", link: false
 brew "mongodb/brew/mongosh"
 brew "osx-cross/avr/avr-gcc@7"
 brew "px4/px4/gcc-arm-none-eabi", link: false
@@ -303,7 +307,6 @@ mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1449412482
 mas "Screens", id: 1224268771
 mas "SwitchGlass", id: 1498546559
-mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Todoist", id: 585829637
 mas "ToothFairy", id: 1191449274
