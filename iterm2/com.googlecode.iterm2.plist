@@ -7178,6 +7178,24 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x6e-0x100000-0x2d</key>
+		<dict>
+			<key>Action</key>
+			<integer>30</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x70-0x100000-0x23</key>
+		<dict>
+			<key>Action</key>
+			<integer>31</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x76-0x40000</key>
 		<dict>
 			<key>Action</key>
@@ -7381,14 +7399,16 @@
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.58823529411764708</real>
+				<real>0.66429876826956069</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.81960784313725488</real>
+				<real>0.85003662109375</real>
 				<key>Red Component</key>
-				<real>0.3843137254901961</real>
+				<real>0.50059758592396975</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -10032,7 +10052,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
