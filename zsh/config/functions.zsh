@@ -79,3 +79,8 @@ backup-now() { # backup things
 
 # directory color rendering
 eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
+
+# open current branch in jira
+jbr() {
+  open "https://jira.mongodb.com/browse/$(git branch --show-current)"
+}
