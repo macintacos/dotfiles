@@ -98,6 +98,7 @@
   },
   "code-runner.showRunIconInEditorTitleMenu": false,
   "codeui.targetingMode": "themeSpecific",
+  "color-highlight.markRuler": false,
   "color-highlight.markerType": "underline",
   "confluenceMarkup.monospaceFont": "JetBrains Mono",
   "customizeUI.activityBar": "regular",
@@ -175,6 +176,7 @@
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
+  "githubPullRequests.focusedMode": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -680,8 +682,8 @@
       "commands": [
         "vspacecode.space",
         {
-          "command": "whichkey.triggerKey",
-          "args": "m"
+          "args": "m",
+          "command": "whichkey.triggerKey"
         }
       ]
     }
@@ -781,8 +783,8 @@
       "commands": [
         "vspacecode.space",
         {
-          "command": "whichkey.triggerKey",
-          "args": "m"
+          "args": "m",
+          "command": "whichkey.triggerKey"
         }
       ]
     }
