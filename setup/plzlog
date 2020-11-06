@@ -40,7 +40,7 @@ esac
 
 function write() {
     message=$(printf "%s %-5s %s %s\n" "${timestamp}" "${level}" "${@}")
-    # Logging to /var/log/mongodb-employee-activity.log
+    # Logging to $DOTFILES_HOME/setup/setup.log
     echo "$message" | tee -a "$file" >/dev/null
     # Message to show to user
     printf "%s %-17s %s\n" "$timestamp" "$color_level" "${@}"
