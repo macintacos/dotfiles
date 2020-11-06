@@ -4,6 +4,9 @@ set -o nounset
 set -o errexit
 set -o pipefail
 
+# Comment/uncomment if you want to step through the code
+# trap '(read -p "[$BASH_SOURCE:$LINENO] $BASH_COMMAND?"' DEBUG
+
 function usage() {
     cat <<EOF >&2
 Perform operations related to bazel in the MMS repository.
