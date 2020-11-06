@@ -94,6 +94,7 @@ liviuschera.noctis
 mads-hartmann.bash-ide-vscode
 matklad.rust-analyzer
 mattn.Lisp
+mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
 mkaufman.HTMLHint
 mongodb.mongodb-vscode

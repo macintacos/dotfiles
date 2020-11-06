@@ -47,13 +47,13 @@ brew "bit-git"
 brew "blueutil"
 brew "broot"
 brew "fontconfig"
-brew "gettext", link: false
+brew "gettext"
 brew "libffi"
 brew "python@3.8", link: true
 brew "ccat"
 brew "cfssl"
 brew "colordiff"
-brew "ctags", link: false
+brew "ctags"
 brew "curl"
 brew "deno"
 brew "go"
@@ -92,7 +92,7 @@ brew "rubberband"
 brew "snappy"
 brew "speex"
 brew "tesseract"
-brew "ffmpeg", link: false
+brew "ffmpeg"
 brew "isl"
 brew "mpfr"
 brew "libmpc"
@@ -157,6 +157,7 @@ brew "neovim"
 brew "nmap"
 brew "nnn"
 brew "nushell"
+brew "ox"
 brew "pacvim"
 brew "pastel"
 brew "peco"
@@ -165,7 +166,7 @@ brew "pipenv"
 brew "portmidi"
 brew "procs"
 brew "psutils"
-brew "python@2", link: false
+brew "python@2"
 brew "ranger"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
@@ -219,7 +220,7 @@ brew "heroku/brew/heroku"
 brew "jesseduffield/lazygit/lazygit"
 brew "knqyf263/pet/pet"
 brew "kyoh86/tap/richgo"
-brew "mongodb/brew/mongodb-database-tools", link: false
+brew "mongodb/brew/mongodb-database-tools"
 brew "mongodb/brew/mongosh"
 brew "osx-cross/avr/avr-gcc@7"
 brew "px4/px4/gcc-arm-none-eabi", link: false
@@ -303,7 +304,6 @@ mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator", id: 407963104
 mas "Poolside FM", id: 1514817810
-mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1449412482
 mas "Screens", id: 1224268771
 mas "SwitchGlass", id: 1498546559

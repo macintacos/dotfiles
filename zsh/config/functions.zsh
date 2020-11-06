@@ -69,12 +69,24 @@ backup-now() { # backup things
   ./plzlog info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
   (
     cd $DOTFILES_HOME/backup
+
+    (cd $DOTFILES_HOME/setup && ./plzlog info "Backing up Homebrew packages...")
     rm Brew*
     HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump
+
+    (cd $DOTFILES_HOME/setup && ./plzlog ok "Brewfile successfully regenerated." && ./plzlog info "Backing up global NPM packages...")
     backup-global backup -o npm.global.backup.txt
+
+    (cd $DOTFILES_HOME/setup && ./plzlog ok "NPM Backup successfully regenerated." && ./plzlog info "Backing up VSCode extension list...")
     code --list-extensions >vscode-extensions-backup.txt
+
+    (cd $DOTFILES_HOME/setup && ./plzlog ok "VSCode extension list successfully regenerated.")
   )
   ./plzlog ok "Backup complete!"
+  ./plzlog info "The following files were backed up:
+    $DOTFILES_HOME/backup/Brewfile
+    $DOTFILES_HOME/backup/npm.global.backup.txt
+    $DOTFILES_HOME/backup/vscode-extensions-backup.txt"
 }
 
 # directory color rendering
