@@ -1387,7 +1387,7 @@
   },
   {
     "key": "Escape",
-    "command": "settings.action.focusSettingsFile",
+    "command": "workbench.action.blur",
     "when": "inSettingsSearch"
   },
   {
@@ -1423,7 +1423,7 @@
   {
     "key": "space",
     "command": "vspacecode.space",
-    "when": "!whichkeyActive && !inputFocus"
+    "when": "!whichkeyActive && !inputFocus && !textInputFocus"
   },
   {
     "key": "ctrl+n",
@@ -1441,17 +1441,17 @@
   },
   {
     "key": "escape",
-    "command": "workbench.action.focusFirstEditorGroup",
+    "command": "workbench.action.blur",
     "when": "!editorTextFocus && !whichKeyActive && inputFocus && !terminalFocus"
   },
   {
     "key": "escape",
-    "command": "workbench.action.focusFirstEditorGroup",
+    "command": "workbench.action.blur",
     "when": "!editorTextFocus && !whichKeyActive && panelFocus && !terminalFocus"
   },
   {
     "key": "shift+escape",
-    "command": "workbench.action.focusFirstEditorGroup",
+    "command": "workbench.action.blur",
     "when": "terminalFocus"
   },
   {
