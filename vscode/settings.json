@@ -1752,10 +1752,5 @@
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.view.alwaysShowHeaderActions": true,
-  "yaml.schemas": {
-    "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.6.3/resources/schemas/pipelines-schema.json": [
-      "bitbucket-pipelines.yml"
-    ]
-  }
+  "workbench.view.alwaysShowHeaderActions": true
 }
