@@ -190,6 +190,7 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
+  "gitlens.blame.ignoreWhitespace": true,
   "gitlens.codeLens.scopes": ["document", "blocks"],
   "gitlens.keymap": "none",
   "gitlens.statusBar.command": "gitlens.toggleFileBlame",
@@ -197,7 +198,6 @@
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.fileHistory.location": "explorer",
   "gitlens.views.lineHistory.location": "explorer",
-  "gitlens.views.repositories.files.compact": false,
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.search.location": "gitlens",
   "go.autocompleteUnimportedPackages": true,
