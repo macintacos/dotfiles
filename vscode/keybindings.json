@@ -1888,16 +1888,6 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "a",
-    "command": "file-browser.actions",
-    "when": "inFileBrowser"
-  },
-  {
-    "key": "ctrl+a",
-    "command": "-file-browser.actions",
-    "when": "inFileBrowser"
-  },
-  {
     "key": "shift+l",
     "command": "breadcrumbs.focusNextWithPicker",
     "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
@@ -1961,5 +1951,10 @@
     "key": "ctrl+enter",
     "command": "editor.action.openLink",
     "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-md-shortcut.toggleLink",
+    "when": "editorTextFocus && markdownShortcuts:enabled"
   }
 ]
