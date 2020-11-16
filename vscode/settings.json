@@ -94,7 +94,8 @@
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
     "javascript": "node -r esm",
-    "perl": "perl"
+    "perl": "perl",
+    "python": "$pythonPath $fullFileName"
   },
   "code-runner.showRunIconInEditorTitleMenu": false,
   "codeui.targetingMode": "themeSpecific",
@@ -223,11 +224,17 @@
   "indentRainbow.includedLanguages": ["python"],
   "javascript.suggest.completeFunctionCalls": true,
   "json.trace.server": "verbose",
+  "jupyter.sendSelectionToInteractiveWindow": false,
   "keyboard.dispatch": "keyCode",
   "markdown.extension.italic.indicator": "_",
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.toc.slugifyMode": "github",
+  "markdownShortcuts.bullets.marker": "-",
+  "markdownShortcuts.icons.bold": false,
+  "markdownShortcuts.icons.bullets": false,
+  "markdownShortcuts.icons.italic": false,
+  "markdownShortcuts.icons.strikethrough": false,
   "markdownlint.config": {
     "MD004": {
       "style": "dash"
@@ -354,6 +361,8 @@
   "projectManager.groupList": true,
   "projectManager.openInNewWindowWhenClickingInStatusBar": true,
   "projectManager.sortList": "Saved",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.diagnosticMode": "workspace",
   "python.formatting.blackPath": "/usr/local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
@@ -444,11 +453,11 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["<C-j>"],
-      "commands": ["editor.action.insertCursorBelow"]
+      "commands": ["cursorDown"]
     },
     {
       "before": ["<C-k>"],
-      "commands": ["editor.action.insertCursorAbove"]
+      "commands": ["cursorUp"]
     },
     {
       "before": ["<BS>"],
@@ -474,14 +483,6 @@
   "vim.leader": ";",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<C-o>"],
-      "commands": ["workbench.action.navigateBack"]
-    },
-    {
-      "before": ["<C-i>"],
-      "commands": ["workbench.action.navigateForward"]
-    },
     {
       "after": ["<ESC>"],
       "before": ["<ESC>"],
@@ -797,6 +798,79 @@
   "vscode-neovim.textDecorationsAtTop": true,
   "vspacecode.bindingOverrides": [
     {
+      "bindings": [
+        {
+          "command": "md-shortcut.toggleTitleH1",
+          "key": "1",
+          "name": "Level 1 (#)",
+          "type": "command"
+        },
+        {
+          "command": "md-shortcut.toggleTitleH2",
+          "key": "2",
+          "name": "Level 2 (##)",
+          "type": "command"
+        },
+        {
+          "command": "md-shortcut.toggleTitleH3",
+          "key": "3",
+          "name": "Level 3 (###)",
+          "type": "command"
+        },
+        {
+          "command": "md-shortcut.toggleTitleH4",
+          "key": "4",
+          "name": "Level 4 (####)",
+          "type": "command"
+        },
+        {
+          "command": "md-shortcut.toggleTitleH5",
+          "key": "5",
+          "name": "Level 5 (#####)",
+          "type": "command"
+        },
+        {
+          "command": "md-shortcut.toggleTitleH6",
+          "key": "6",
+          "name": "Level 6 (######)",
+          "type": "command"
+        }
+      ],
+      "keys": ["m", "languageId:markdown", "x", "h"],
+      "name": "+Choose header level...",
+      "type": "bindings"
+    },
+    {
+      "command": "md-shortcut.toggleImage",
+      "keys": ["m", "languageId:markdown", "x", "I"],
+      "name": "Toggle image link",
+      "type": "command"
+    },
+    {
+      "command": "md-shortcut.toggleBullets",
+      "keys": ["m", "languageId:markdown", "x", "u"],
+      "name": "Toggle unordered list",
+      "type": "command"
+    },
+    {
+      "command": "md-shortcut.toggleNumbers",
+      "keys": ["m", "languageId:markdown", "x", "o"],
+      "name": "Toggle ordered list",
+      "type": "command"
+    },
+    {
+      "command": "md-shortcut.toggleCheckboxes",
+      "keys": ["m", "languageId:markdown", "x", "c"],
+      "name": "Toggle checkboxes",
+      "type": "command"
+    },
+    {
+      "command": "md-shortcut.toggleLink",
+      "keys": ["m", "languageId:markdown", "x", "k"],
+      "name": "Toggle link",
+      "type": "command"
+    },
+    {
       "command": "git.push",
       "keys": "g.P",
       "name": "Push changes to remote",
@@ -910,12 +984,12 @@
             }
           ],
           "key": "d",
-          "name": "Developer...",
+          "name": "+Developer...",
           "type": "bindings"
         }
       ],
       "keys": ",",
-      "name": "Settings/Preferences",
+      "name": "+Settings/Preferences",
       "type": "bindings"
     },
     {
@@ -958,7 +1032,7 @@
         }
       ],
       "keys": "B",
-      "name": "Bookmarks...",
+      "name": "+Bookmarks...",
       "type": "bindings"
     },
     {
@@ -1064,7 +1138,7 @@
         }
       ],
       "keys": "c",
-      "name": "Code Actions...",
+      "name": "+Code Actions...",
       "type": "bindings"
     },
     {
@@ -1155,7 +1229,7 @@
         }
       ],
       "keys": ["g", "f"],
-      "name": "File...",
+      "name": "+File...",
       "type": "bindings"
     },
     {
@@ -1198,7 +1272,7 @@
         }
       ],
       "keys": ["g", "g"],
-      "name": "Github...",
+      "name": "+Github...",
       "type": "bindings"
     },
     {
@@ -1298,7 +1372,7 @@
         }
       ],
       "keys": ["i", "f"],
-      "name": "Insert file...",
+      "name": "+Insert file...",
       "type": "bindings"
     },
     {
@@ -1411,7 +1485,7 @@
         }
       ],
       "keys": "o",
-      "name": "Open...",
+      "name": "+Open...",
       "type": "bindings"
     },
     {
@@ -1562,7 +1636,7 @@
         }
       ],
       "keys": ["w", "f"],
-      "name": "Open file in new group...",
+      "name": "+Open file in new group...",
       "type": "bindings"
     },
     {
@@ -1639,7 +1713,7 @@
         }
       ],
       "keys": ["x", "d"],
-      "name": "Delete...",
+      "name": "+Delete...",
       "type": "bindings"
     },
     {
@@ -1694,7 +1768,7 @@
         }
       ],
       "keys": "y",
-      "name": "Yank/Copy...",
+      "name": "+Yank/Copy...",
       "type": "bindings"
     },
     {
