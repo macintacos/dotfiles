@@ -137,8 +137,8 @@ else
     " }}}
 
     " Vanilla Configurations
-    colorscheme challenger_deep
-    let g:challenger_deep_termcolors = 16
+    colorscheme dracula
+    " let g:challenger_deep_termcolors = 16
 
 
     " cursor-related colors
