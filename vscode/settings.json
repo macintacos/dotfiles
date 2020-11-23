@@ -85,6 +85,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.tabSize": 2
   },
+  "autoDocstring.docstringFormat": "sphinx",
   "bracket-pair-colorizer-2.colors": [
     "terminal.ansiCyan",
     "terminal.ansiMagenta",
@@ -106,6 +107,7 @@
   "customizeUI.font.monospace": "JetBrains Mono",
   "customizeUI.font.regular": "Inter",
   "customizeUI.titleBar": "frameless",
+  "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
   "docker.images.sortBy": "CreatedTime",
@@ -197,6 +199,7 @@
   "gitlens.statusBar.reduceFlicker": true,
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.views.lineHistory.enabled": true,
   "gitlens.views.lineHistory.location": "explorer",
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.search.location": "gitlens",
@@ -361,6 +364,7 @@
   "projectManager.groupList": true,
   "projectManager.openInNewWindowWhenClickingInStatusBar": true,
   "projectManager.sortList": "Saved",
+  "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.formatting.blackPath": "/usr/local/bin/black",
@@ -877,6 +881,12 @@
       "type": "command"
     },
     {
+      "command": "openInGitHub.openProject",
+      "keys": "g.O",
+      "name": "Open project in GitHub",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.toggleMaximizedPanel",
       "keys": "l.m",
       "name": "Toggle maximize panel",
@@ -1302,6 +1312,12 @@
     {
       "keys": "g.S",
       "position": -1
+    },
+    {
+      "command": "workbench.scm.focus",
+      "keys": "g.S",
+      "name": "View status in VSCode",
+      "type": "command"
     },
     {
       "command": "gitlens.toggleFileBlame",
@@ -1813,6 +1829,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
+  "workbench.editor.showTabs": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": [
     {
