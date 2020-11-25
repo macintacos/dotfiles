@@ -6,3 +6,7 @@ A few things to know about my config:
 - Despite wanting to be a “lightweight” version of the aforementioned programs, that doesn’t mean I’m scared of plugins. I use plugins with reckless abandon. This is not the kind of config that you will like if you want to keep your setup “minimal”.
 
 This config is provided as-is; I don’t necessarily want any suggestions (unless they’re _really_ good).
+
+Screenshots:
+
+![Neovim Configuration as of November 25, 2020](screenshots/2020-11-25-neovim-config.png)
