@@ -11,7 +11,7 @@ All PRs will be considered, but ultimately ignored. If you decide to use them, I
 Clone the repository and run `make` to see available targets (run `make install` if you want to get setup properly):
 
 ```bash
- I => make
+$ make
 Makefile targets:
 install    Install everything
 symlink    Symlink files
