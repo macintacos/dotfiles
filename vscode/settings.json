@@ -51,7 +51,7 @@
     "editor.tabSize": 4
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
     "editor.wordWrap": "wordWrapColumn",
