@@ -4,7 +4,8 @@
 source "$DOTFILES_HOME/zsh/config/functions.zsh"
 source "$DOTFILES_HOME/zsh/.zshenv"
 
-STAGED_JS_AND_JSON=$(git diff --cached --name-only | grep -iE "\.(js|json)$")
+STAGED_JS_AND_JSON=$(git diff --cached --name-only --diff-filter=ACMR "*.js" "*.jsx" "*.json" | sed 's| |\\ |g')
+[ -z "$STAGED_JS_AND_JSON" ] && exit 0
 
 if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
     set -o errexit
@@ -12,7 +13,7 @@ if [[ -n "${STAGED_JS_AND_JSON}" ]]; then
     # Prettify everything
     echo "$STAGED_JS_AND_JSON" | xargs prettier --write
 
-    # Add them bag to staging so that the changes get committed
+    # Add them back to staging so that the changes get committed
     echo "$STAGED_JS_AND_JSON" | xargs git add
 
     set +o errexit
