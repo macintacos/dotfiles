@@ -11,6 +11,10 @@ let g:maplocalleader = ','
 inoremap jj <ESC>
 inoremap kk <ESC>
 
+" make j/k behave properly
+noremap <expr> j (v:count? 'j' : 'gj')
+noremap <expr> k (v:count? 'k' : 'gk')
+
 " saves the current buffer
 nnoremap <C-s> <Cmd>w<CR>
 inoremap <C-s> <Cmd>w<CR>
