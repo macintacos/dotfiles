@@ -98,6 +98,7 @@
     "perl": "perl",
     "python": "$pythonPath $fullFileName"
   },
+  "code-runner.fileDirectoryAsCwd": true,
   "code-runner.showRunIconInEditorTitleMenu": false,
   "codeui.targetingMode": "themeSpecific",
   "color-highlight.markRuler": false,
@@ -110,11 +111,10 @@
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
+  "diffEditor.wordWrap": "on",
   "docker.images.sortBy": "CreatedTime",
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.markdownLint": true
-  },
+  "editor.codeLensFontFamily": "Inter",
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorSurroundingLines": 10,
@@ -135,6 +135,7 @@
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
+  "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
@@ -179,7 +180,6 @@
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
-  "githubPullRequests.focusedMode": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -257,7 +257,6 @@
     "MD047": false,
     "default": true
   },
-  "markdownlint.run": "onSave",
   "multiCommand.commands": [
     {
       "command": "multiCommand.peekDefinitionAndFocus",
@@ -350,6 +349,7 @@
       "when": "**"
     }
   },
+  "path-intellisense.showHiddenFiles": true,
   "projectManager.git.baseFolders": ["/Users/juliant/GitLocal/"],
   "projectManager.git.ignoredFolders": [
     "node_modules",
@@ -367,6 +367,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
   "python.formatting.blackPath": "/usr/local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
@@ -875,6 +876,32 @@
       "type": "command"
     },
     {
+      "bindings": [
+        {
+          "bindings": [
+            {
+              "command": "code-runner.run",
+              "key": "r",
+              "name": "Run code in current file",
+              "type": "command"
+            },
+            {
+              "command": "code-runner.stop",
+              "key": "R",
+              "name": "Stop ongoing code run",
+              "type": "command"
+            }
+          ],
+          "key": "a",
+          "name": "+Actions",
+          "type": "bindings"
+        }
+      ],
+      "keys": ["m", "languageId:python"],
+      "name": "+Python Major Mode",
+      "type": "bindings"
+    },
+    {
       "command": "git.push",
       "keys": "g.P",
       "name": "Push changes to remote",
@@ -1042,7 +1069,7 @@
         }
       ],
       "keys": "B",
-      "name": "+Bookmarks...",
+      "name": "+Bookmarks",
       "type": "bindings"
     },
     {
@@ -1470,6 +1497,12 @@
           "type": "command"
         },
         {
+          "command": "workbench.scm.focus",
+          "key": "g",
+          "name": "Source Control view",
+          "type": "command"
+        },
+        {
           "command": "workbench.view.extension.mongoDB",
           "key": "m",
           "name": "MongoDB view",
@@ -1477,13 +1510,13 @@
         },
         {
           "command": "workbench.view.extension.github-pull-requests",
-          "key": "P",
+          "key": "p",
           "name": "Github Pull Requests view",
           "type": "command"
         },
         {
           "command": "workbench.view.extension.project-manager",
-          "key": "p",
+          "key": "P",
           "name": "Project Manager view",
           "type": "command"
         },
@@ -1501,7 +1534,7 @@
         }
       ],
       "keys": "o",
-      "name": "+Open...",
+      "name": "+Open",
       "type": "bindings"
     },
     {
@@ -1729,7 +1762,7 @@
         }
       ],
       "keys": ["x", "d"],
-      "name": "+Delete...",
+      "name": "+Delete",
       "type": "bindings"
     },
     {
@@ -1784,7 +1817,7 @@
         }
       ],
       "keys": "y",
-      "name": "+Yank/Copy...",
+      "name": "+Yank/Copy",
       "type": "bindings"
     },
     {

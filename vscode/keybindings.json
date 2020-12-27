@@ -1423,7 +1423,7 @@
   {
     "key": "space",
     "command": "vspacecode.space",
-    "when": "!whichkeyActive && !inputFocus && !textInputFocus"
+    "when": "!whichkeyActive && !inputFocus && !textInputFocus && activeViewlet != 'workbench.view.extension.github-pull-requests'"
   },
   {
     "key": "ctrl+n",
