@@ -20,7 +20,7 @@ let g:coc_global_extensions = [
   \  "coc-marketplace",
   \  "coc-pairs",
   \  "coc-prettier",
-  \  "coc-python",
+  \  "coc-pyright",
   \  "coc-rust-analyzer",
   \  "coc-sh",
   \  "coc-snippets",

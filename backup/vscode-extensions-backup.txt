@@ -4,16 +4,14 @@ adamwalzer.scss-lint
 akamud.vscode-javascript-snippet-pack
 alefragnani.Bookmarks
 alefragnani.project-manager
+arcticicestudio.nord-visual-studio-code
 asvetliakov.vscode-neovim
 BazelBuild.vscode-bazel
 belfz.search-crates-io
 bierner.color-info
-bierner.emojisense
 bierner.github-markdown-preview
-bierner.markdown-checkbox
 bierner.markdown-emoji
 bierner.markdown-preview-github-styles
-bierner.markdown-yaml-preamble
 bmalehorn.vscode-fish
 bodil.file-browser
 bradgashler.htmltagwrap
@@ -61,6 +59,7 @@ foxundermoon.shell-format
 fvclaus.sort-json-array
 gerane.Theme-FlatlandMonokai
 gharveymn.nightswitch
+ghmcadams.lintlens
 giovdk21.vscode-sublime-merge
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
@@ -104,11 +103,12 @@ ms-dotnettools.csharp
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-python.vscode-pylance
+ms-toolsai.jupyter
 ms-vscode.cpptools
-ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 mushan.vscode-paste-image
 naumovs.color-highlight
+njpwerner.autodocstring
 oderwat.indent-rainbow
 okitavera.vscode-nunjucks-formatter
 oliversturm.fix-json
@@ -138,6 +138,7 @@ Shan.code-settings-sync
 sharat.vscode-brewfile
 shardulm94.trailing-spaces
 silvenon.mdx
+skellock.just
 sleistner.vscode-fileutils
 snipsnapdev.snipsnap-vscode
 stkb.rewrap
@@ -147,6 +148,7 @@ telesoho.vscode-markdown-paste-image
 thenikso.github-plus-theme
 timonwong.shellcheck
 tlahmann.alex-linter
+travisthetechie.write-good-linter
 trixnz.go-to-method
 Tyriar.sort-lines
 usernamehw.errorlens
@@ -154,7 +156,6 @@ usernamehw.remove-empty-lines
 vadimcn.vscode-lldb
 vscode-icons-team.vscode-icons
 vscodevim.vim
-vsls-contrib.gistfs
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
 wayou.file-icons-mac
