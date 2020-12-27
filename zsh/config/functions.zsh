@@ -96,3 +96,8 @@ eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
 jbr() {
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"
 }
+
+# pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
+ch() {
+  cht.sh "$@" | cat
+}
