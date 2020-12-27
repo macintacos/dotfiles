@@ -4,6 +4,7 @@ tap "daviderestivo/emacs-head"
 tap "dduan/formulae"
 tap "drone/drone"
 tap "dunn/emacs"
+tap "eth-p/software"
 tap "federico-terzi/espanso"
 tap "github/gh"
 tap "golangci/tap"
@@ -22,6 +23,7 @@ tap "kyoh86/tap"
 tap "mongodb/brew"
 tap "muesli/tap"
 tap "nshipster/formulae"
+tap "orf/brew"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "px4/px4"
@@ -54,6 +56,8 @@ brew "ccat"
 brew "cfssl"
 brew "colordiff"
 brew "ctags"
+brew "libunistring"
+brew "rtmpdump"
 brew "curl"
 brew "deno"
 brew "go"
@@ -72,7 +76,6 @@ brew "flac"
 brew "frei0r"
 brew "giflib"
 brew "gmp"
-brew "libunistring"
 brew "pkg-config"
 brew "nettle"
 brew "graphite2"
@@ -87,7 +90,6 @@ brew "libsndfile"
 brew "libsamplerate"
 brew "libsoxr"
 brew "opencore-amr"
-brew "rtmpdump"
 brew "rubberband"
 brew "snappy"
 brew "speex"
@@ -119,6 +121,7 @@ brew "pinentry"
 brew "gnupg"
 brew "grep"
 brew "grepcidr"
+brew "grex"
 brew "helm@2"
 brew "highlight"
 brew "htop"
@@ -133,6 +136,7 @@ brew "jo"
 brew "oniguruma"
 brew "jq"
 brew "jump"
+brew "just"
 brew "kakoune"
 brew "kubectx"
 brew "lf"
@@ -179,7 +183,6 @@ brew "sdl_image"
 brew "sdl_mixer"
 brew "sdl_ttf"
 brew "shellcheck"
-brew "shfmt"
 brew "sk"
 brew "starship"
 brew "swiftformat"
@@ -202,6 +205,7 @@ brew "velero"
 brew "vifm"
 brew "vim"
 brew "vips"
+brew "watchexec"
 brew "wget"
 brew "wtfutil"
 brew "xsv"
@@ -215,6 +219,7 @@ brew "zsh-completions"
 brew "alexanderwillner/tap/things.sh"
 brew "d12frosted/emacs-plus/emacs-plus@27", args: ["with-spacemacs-icon"]
 brew "drone/drone/drone"
+brew "eth-p/software/bat-extras"
 brew "golangci/tap/golangci-lint"
 brew "heroku/brew/heroku"
 brew "jesseduffield/lazygit/lazygit"
@@ -222,6 +227,7 @@ brew "knqyf263/pet/pet"
 brew "kyoh86/tap/richgo"
 brew "mongodb/brew/mongodb-database-tools"
 brew "mongodb/brew/mongosh"
+brew "orf/brew/gping"
 brew "osx-cross/avr/avr-gcc@7"
 brew "px4/px4/gcc-arm-none-eabi", link: false
 brew "qmk/qmk/qmk"
@@ -242,12 +248,10 @@ cask "font-jetbrainsmono-nerd-font"
 cask "font-roboto-mono"
 cask "font-roboto-mono-for-powerline"
 cask "font-source-code-pro"
-cask "gitblade"
 cask "google-cloud-sdk"
 cask "gpg-suite"
 cask "hammerspoon"
 cask "hyper"
-cask "joplin"
 cask "keycastr"
 cask "kitty"
 cask "lens"
@@ -276,7 +280,9 @@ mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
 mas "Cardhop", id: 1290358394
 mas "CARROT Weather", id: 993487541
+mas "CodeRunner", id: 955297617
 mas "Copy 'Em", id: 876540291
+mas "Craft", id: 1487937127
 mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Deliveries", id: 924726344
@@ -289,7 +295,6 @@ mas "Fantastical", id: 975937182
 mas "Front and Center", id: 1493996622
 mas "GIPHY CAPTURE", id: 668208984
 mas "iA Writer", id: 775737590
-mas "Jira", id: 1475897096
 mas "Keep It", id: 1272768911
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
@@ -304,6 +309,7 @@ mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator", id: 407963104
 mas "Poolside FM", id: 1514817810
+mas "Reeder", id: 1529448980
 mas "Reeder", id: 1449412482
 mas "Screens", id: 1224268771
 mas "SwitchGlass", id: 1498546559
