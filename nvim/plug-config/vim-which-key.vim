@@ -286,7 +286,7 @@ nnoremap <silent> <leader>tc <Cmd>Clap colors<CR>
 nnoremap <silent> <leader>tg <Cmd>Goyo<CR>
 nnoremap <silent> <leader>tm <Cmd>OpenTodo<CR>
 nnoremap <silent> <leader>tn <Cmd>setlocal nonumber! norelativenumber!<CR>
-nnoremap <silent> <leader>tw <Cmd>setlocal nowrap!<CR>
+nnoremap <silent> <leader>tW <Cmd>setlocal nowrap!<CR>
 
 let g:which_key_map.t = {
             \ 'name': '+UI toggles/themes',
@@ -294,7 +294,7 @@ let g:which_key_map.t = {
             \ 'g': 'Goyo',
             \ 'm': 'Open TODOs',
             \ 'n': 'Toggle line numbers',
-            \ 'w': 'Toggle word wrap',
+            \ 'W': 'Toggle word wrap',
             \ }
 "" 't' menu end }}}
 
