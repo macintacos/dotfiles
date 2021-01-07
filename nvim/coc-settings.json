@@ -132,6 +132,9 @@
     "MD034": false,
     "MD046": false
   },
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": true,
   "suggest.completionItemKindLabels": {
     "class": "",
     "color": "",
