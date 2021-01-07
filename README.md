@@ -8,14 +8,16 @@ All PRs will be considered, but ultimately ignored. If you decide to use them, I
 
 ## Setup
 
-Clone the repository and run `make` to see available targets (run `make install` if you want to get setup properly):
+Run `just` to see available recipes:
 
 ```bash
-$ make
-Makefile targets:
-install    Install everything
-symlink    Symlink files
-backup     Backup packages, casks, and plugins
+$ just
+Available recipes:
+    install
+    install-ci
+    hooks      # Set up git hooks so that things are committed the way we want
+    symlink    # Symlink files
+    backup     # Backup packages, casks, and plugins
 ```
 
 ## Whatcha got?
