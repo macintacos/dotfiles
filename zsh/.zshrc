@@ -6,6 +6,9 @@
 # zmodload zsh/zprof
 # }}}
 
+# Things that need to be loaded before plugins
+for file in "$ZDOTDIR"/config/begin/**/*.zsh; do source "$file"; done
+
 # Zinit Loading
 source "$ZDOTDIR"/config/plugins/zinit/init.zinit
 source "$ZDOTDIR"/config/plugins/zinit/plugin_load.zinit
