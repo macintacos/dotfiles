@@ -4,9 +4,12 @@ adamwalzer.scss-lint
 akamud.vscode-javascript-snippet-pack
 alefragnani.Bookmarks
 alefragnani.project-manager
+alexesprit.vscode-unfancy-file-icons
 arcticicestudio.nord-visual-studio-code
 asvetliakov.vscode-neovim
+austenc.tailwind-docs
 BazelBuild.vscode-bazel
+be5invis.vscode-icontheme-nomo-dark
 belfz.search-crates-io
 bierner.color-info
 bierner.github-markdown-preview
@@ -44,7 +47,6 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 emilast.LogFileHighlighter
 emmanuelbeziat.vscode-great-icons
-equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
 ethan-reesor.vscode-go-test-adapter
 ezforo.copy-relative-path-and-line-numbers
@@ -68,6 +70,7 @@ GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hashicorp.terraform
 hbenl.vscode-test-explorer
+helgardrichard.helium-icon-theme
 herrmannplatz.npm-dependency-links
 heybourn.headwind
 hoovercj.vscode-settings-cycler
@@ -80,6 +83,7 @@ ionutvmi.path-autocomplete
 jacobdufault.fuzzy-search
 jakob101.RelativePath
 jolaleye.horizon-theme-vscode
+jy-xlj.vscode-json-editor
 kevinmcgowan.TypeScriptImport
 khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
@@ -128,6 +132,7 @@ RobbOwen.synthwave-vscode
 rogalmic.bash-debug
 rogalmic.zsh-debug
 ronnidc.nunjucks
+rust-lang.rust
 ryanraposo.codeui
 ryu1kn.partial-diff
 ryuta46.multi-command
@@ -154,7 +159,7 @@ Tyriar.sort-lines
 usernamehw.errorlens
 usernamehw.remove-empty-lines
 vadimcn.vscode-lldb
-vscode-icons-team.vscode-icons
+VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
