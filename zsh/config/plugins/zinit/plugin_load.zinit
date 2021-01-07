@@ -38,7 +38,7 @@ zinit ice wait lucid as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-comple
 zinit light tj/git-extras
 
 ## programs
-zinit ice wait lucid as"program" pick"yank" make
+zinit ice wait lucid as"program" pick"yank" make YANKCMD=pbcopy
 zinit light mptre/yank
 
 # zinit ice lucit wait"0" as"program" from"gh-r" pick"bit"
