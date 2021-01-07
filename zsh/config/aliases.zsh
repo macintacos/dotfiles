@@ -47,6 +47,7 @@ alias tree='broot'
 # CD ALIASES {{{
 GITLOCAL="$HOME/GitLocal"
 alias cdh="cd $HOME && cd"
+alias cdg="cd $(git rev-parse --show-toplevel)"
 alias cdgit="cd $GITLOCAL && cd"
 alias cdwork="cd $GITLOCAL/Work && cd"
 alias cdplay="cd $GITLOCAL/Play && cd"
