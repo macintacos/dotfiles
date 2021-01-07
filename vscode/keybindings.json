@@ -1777,6 +1777,11 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "key": "shift+r",
+    "command": "workbench.files.action.refreshFilesExplorer",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
     "key": "enter",
     "command": "-renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -1956,5 +1961,26 @@
     "key": "ctrl+l",
     "command": "-md-shortcut.toggleLink",
     "when": "editorTextFocus && markdownShortcuts:enabled"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.increaseViewHeight"
+  },
+  {
+    "key": "alt+w",
+    "command": "-extension.htmlTagWrap",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+d",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "alt+a",
+    "command": "workbench.action.decreaseViewWidth"
   }
 ]

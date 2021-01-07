@@ -105,9 +105,15 @@
   "color-highlight.markerType": "underline",
   "confluenceMarkup.monospaceFont": "JetBrains Mono",
   "customizeUI.activityBar": "regular",
-  "customizeUI.font.monospace": "JetBrains Mono",
-  "customizeUI.font.regular": "Inter",
-  "customizeUI.titleBar": "frameless",
+  "customizeUI.fontSizeMap": {
+    "13px": "13px",
+    "monospace": "14px"
+  },
+  "customizeUI.stylesheet": {
+    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
+    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'Hack Nerd Font'; font-size: 14px;"
+  },
+  "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
@@ -120,7 +126,7 @@
   "editor.cursorSurroundingLines": 10,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
-  "editor.fontFamily": "JetBrains Mono, Hack Nerd Font",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
@@ -128,10 +134,10 @@
   "editor.lineHeight": 21,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "editor.renameOnType": true,
   "editor.renderIndentGuides": true,
+  "editor.linkedEditing": true,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
@@ -428,7 +434,7 @@
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
-  "terminal.integrated.fontFamily": "'JetBrains Mono', 'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontFamily": "JetBrains Mono, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
@@ -436,8 +442,6 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.tree.showScanModeButton": false,
-  "tslint.configFile": "tsconfig.json",
-  "tslint.suppressWhileTypeErrorsPresent": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
   "vim.cursorStylePerMode.insert": "line",
@@ -844,6 +848,12 @@
       "keys": ["m", "languageId:markdown", "x", "h"],
       "name": "+Choose header level...",
       "type": "bindings"
+    },
+    {
+      "command": "workbench.action.toggleCenteredLayout",
+      "keys": "t.c",
+      "name": "Toggle centered window layout",
+      "type": "command"
     },
     {
       "command": "md-shortcut.toggleImage",
@@ -1311,6 +1321,12 @@
       "keys": ["g", "g"],
       "name": "+Github...",
       "type": "bindings"
+    },
+    {
+      "command": "workbench.view.extension.github-pull-requests",
+      "keys": "g.r",
+      "name": "Open Pull Requests view",
+      "type": "command"
     },
     {
       "command": "gitlens.showCommitSearch",
@@ -1871,10 +1887,11 @@
     }
   ],
   "workbench.fontAliasing": "auto",
-  "workbench.iconTheme": "file-icons-mac",
+  "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 20,
   "workbench.view.alwaysShowHeaderActions": true
 }
