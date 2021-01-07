@@ -130,8 +130,6 @@ __kubectl_quote() {
     fi
 }
 
-autoload -U +X bashcompinit && bashcompinit
-
 # use word boundary patterns for BSD or GNU sed
 LWORD='[[:<:]]'
 RWORD='[[:>:]]'
@@ -535,7 +533,7 @@ __kubectl_cp()
         /*|[.~]*) # looks like a path
             return
             ;;
-        *:*) # TODO: complete remote files in the pod
+        *:*)
             return
             ;;
         */*) # complete <namespace>/<pod>
