@@ -72,6 +72,7 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
+    "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSaveMode": "file",
     "editor.tabSize": 4
   },
@@ -111,7 +112,7 @@
   },
   "customizeUI.stylesheet": {
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
-    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'Hack Nerd Font'; font-size: 14px;"
+    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'JetBrains Mono'; font-size: 13px;"
   },
   "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
@@ -133,11 +134,11 @@
   "editor.formatOnSaveMode": "modifications",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": true,
-  "editor.linkedEditing": true,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
@@ -377,7 +378,6 @@
   "python.formatting.blackPath": "/usr/local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
-  "python.linting.pylintArgs": ["--errors-only"],
   "python.sortImports.args": ["--settings-path=${workspaceFolder}/.isort.cfg"],
   "python.sortImports.path": "/usr/local/bin/isort",
   "rpmspec.lint": false,
@@ -1221,7 +1221,7 @@
     {
       "command": "workbench.action.reloadWindow",
       "keys": "f.e.R",
-      "name": "Reload configuration",
+      "name": "Reload window",
       "type": "command"
     },
     {
@@ -1246,6 +1246,12 @@
       "command": "workbench.action.files.openFileFolder",
       "keys": "f.o",
       "name": "Open file browser",
+      "type": "command"
+    },
+    {
+      "command": "editor.action.formatDocument",
+      "keys": "f.=",
+      "name": "Format current file",
       "type": "command"
     },
     {
