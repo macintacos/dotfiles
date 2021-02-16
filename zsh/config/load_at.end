@@ -8,3 +8,5 @@
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1" # color needs to be set AFTER source-ing other things
 
 compdef _mongocli mongocli
+
+eval "$(direnv hook zsh)"

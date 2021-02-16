@@ -16,7 +16,6 @@ alias kcvminraw='kubectl config view --minify --raw'
 ## From github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
 alias ka='kubectl apply --recursive -f'
-alias kak='kubectl apply -k'
 alias kk='kubectl kustomize'
 alias kex='kubectl exec -i -t'
 alias klo='kubectl logs -f'
