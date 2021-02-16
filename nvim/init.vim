@@ -26,7 +26,7 @@ if exists('g:vscode')
     augroup END
 else
     " PLUGINZ {{{
-    call plug#begin('~/.config/vim-plug')
+    call plug#begin(expand('$HOME/.config/vim-plug'))
 
     " Notable Plugin Authors {{{
     "" all hail tpope
@@ -99,7 +99,6 @@ else
     Plug 'elzr/vim-json'                               | source $PLUG_CONFIG_NVIM_HOME/vim-json.vim
     Plug 'rizzatti/dash.vim'                           | source $PLUG_CONFIG_NVIM_HOME/dash.vim
     Plug 'MattesGroeger/vim-bookmarks'                 | source $PLUG_CONFIG_NVIM_HOME/vim-bookmarks.vim
-    Plug 'sirver/ultisnips'                            | source $PLUG_CONFIG_NVIM_HOME/ultisnips.vim
     Plug 'honza/vim-snippets' " snippets for many languages
     Plug 'preservim/tagbar'   " function signatures and stuff
     Plug 'iamcco/markdown-preview.nvim', {
@@ -131,7 +130,9 @@ else
 
     " putting this here to make sure it comes after everything
     Plug 'liuchengxu/vim-which-key' | source $PLUG_CONFIG_NVIM_HOME/vim-which-key.vim
+
     call plug#end()
+
     call which_key#register(' ', "g:which_key_map")       " this makes sure which-key is properly loaded
     call which_key#register(',', "g:which_key_map_local") " this makes sure which-key is properly loaded
     " }}}
@@ -139,7 +140,6 @@ else
     " Vanilla Configurations
     colorscheme dracula
     " let g:challenger_deep_termcolors = 16
-
 
     " cursor-related colors
     highlight CursorLine guibg=#2e3140
@@ -166,5 +166,5 @@ else
     hi CommandCursor guifg=#fdf6e3 guibg=#ff5555
 
     " window stuff
-    autocmd VimResized * <C-w>=
+    " autocmd VimResized * <C-w>=
 endif
