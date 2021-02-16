@@ -7171,6 +7171,15 @@
 	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x4e-0x120000-0x2d</key>
+		<dict>
+			<key>Action</key>
+			<integer>26</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>D8F12AB6-C126-42FD-A7FE-D14C537F8B61</string>
+		</dict>
 		<key>0x6d-0x40000</key>
 		<dict>
 			<key>Action</key>
