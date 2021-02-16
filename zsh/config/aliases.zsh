@@ -33,7 +33,7 @@ alias zr='zrun'                                # making zrun a bit more easy to 
 # }}}
 
 # GIT ALIASES {{{
-alias gst='lazygit' # better way to view git status
+alias gst='smerge .' # better way to view git status
 alias sm="smerge"
 # }}}
 

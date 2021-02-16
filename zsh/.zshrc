@@ -26,8 +26,6 @@ for file in "$ZDOTDIR"/config/end/**/*.zsh; do source "$file"; done
 
 source "$ZDOTDIR"/config/load_at.end
 
-source /Users/juliant/.config/broot/launcher/bash/br
-
 ## asdf
 . /usr/local/opt/asdf/asdf.sh
 
