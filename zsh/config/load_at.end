@@ -3,10 +3,36 @@
 # The entire purpose of this file is to load things at the end of .zshrc
 # Do this for anything that needs to be executed after everything else is done starting up
 
-# shellcheck disable=SC2034
-# complete -o nospace -C /usr/local/bin/terraform terraform # completion wasn't working so threw it at the end
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1" # color needs to be set AFTER source-ing other things
+# -------- jabba java version manager https://github.com/shyiko/jabba -------- #
 
-compdef _mongocli mongocli
+# shellcheck disable=SC1090
+# this is copied to an `.envrc` file locally in each project!
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+
+# -------------- n node version manager https://github.com/tj/n -------------- #
+# ---------- Added by n-install (see http://git.io/n-install-repo). ---------- #
+
+export N_PREFIX="$HOME/.n"
+[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
+# ---------- zoxide navigator https://github.com/ajeetdsouza/zoxide ---------- #
+
+unalias zi
+
+eval "$(zoxide init zsh)"
+
+# ----------- asdf version manager https://github.com/asdf-vm/asdf ----------- #
+
+. /usr/local/opt/asdf/asdf.sh
+
+# ------ direnv local environment vars https://github.com/direnv/direnv ------ #
 
 eval "$(direnv hook zsh)"
+
+# shellcheck disable=SC2034
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1" # color needs to be set AFTER source-ing other things
+
+# --------------- mongocli https://github.com/mongodb/mongocli --------------- #
+
+#shellcheck disable=SC1090
+source <(mongocli completion zsh)

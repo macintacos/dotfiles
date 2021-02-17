@@ -822,6 +822,11 @@
     "when": "hasSearchResult || inSearchEditor"
   },
   {
+    "key": "ctrl+shift+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult && searchViewletVisible && focusedView == 'workbench.view.search'"
+  },
+  {
     "command": "-search.action.focusPreviousSearchResult",
     "key": "shift+f4",
     "when": "hasSearchResult"
@@ -1334,11 +1339,6 @@
     "command": "search.action.copyMatch",
     "key": "cmd+c",
     "when": "fileMatchOrMatchFocus"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult && searchViewletVisible"
   },
   {
     "key": "ctrl+shift+k",
@@ -1982,5 +1982,15 @@
   {
     "key": "alt+a",
     "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "tab",
+    "command": "search.action.focusSearchList",
+    "when": "hasSearchResult && searchViewletVisible && focusedView == 'workbench.view.search'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.findInFiles",
+    "when": "hasSearchResult && searchViewletVisible && focusedView == 'workbench.view.search'"
   }
 ]

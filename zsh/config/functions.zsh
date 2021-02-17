@@ -1,4 +1,6 @@
-# FUNCTIONS
+# ---------------------------------------------------------------------------- #
+#                                   FUNCTIONS                                  #
+# ---------------------------------------------------------------------------- #
 
 ranger-cd() {
   tempfile="$(mktemp -t tmp.XXXXXX)"
@@ -92,12 +94,24 @@ backup-now() { # backup things
 # directory color rendering
 eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
 
-# open current branch in jira
-jbr() {
+jbr() { # open current branch in jira
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"
 }
 
-# pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
-ch() {
+ch() { # pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
   cht.sh "$@" | cat
+}
+
+function cdf() { # Change working directory to the top-most Finder window location
+  cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
+}
+
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+  if [ $# -eq 0 ]; then
+    open .
+  else
+    open "$@"
+  fi
 }

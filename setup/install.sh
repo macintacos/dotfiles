@@ -135,8 +135,6 @@ install-normal)
 	;;
 esac
 
-# TODO: Setup a bunch of OS settings via plist entries
-
 # symlink everything to wrap it up
 plzlog info "Wrap things up by symlinking again for good measure..."
 link_all
