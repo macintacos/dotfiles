@@ -1,0 +1,95 @@
+" Leader (this needs to be done before we set easymotion)
+let mapleader = " "
+
+" Options
+set NERDTree
+set ReplaceWithRegister
+set clipboard+=unnamed
+set commentary
+set easymotion
+set highlightedyank
+set hlsearch
+set ideajoin
+set ideamarks
+set ignorecase
+set multiple-cursors
+set number
+set relativenumber
+set showmode
+set smartcase
+set surround
+set which-key
+
+set timeoutlen=10000
+
+" Selected Intellimacs Modules
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+source ~/.intellimacs/hybrid.vim
+
+" remaps
+inoremap jj <Esc>
+inoremap kk <Esc>
+
+nnoremap gD        :action SmartSearchAction<CR>
+nnoremap gh        :action QuickImplementations<CR>
+nnoremap <space>jl :action AceLineAction<CR>
+nnoremap <space>jw :action AceWordAction<CR>
+nnoremap <space>jv :action AceTargetAction<CR>
+nnoremap f         :action AceWordForwardAction<CR>
+nnoremap F         :action AceWordBackwardsAction<CR>
+nnoremap J         :action MoveLineDown<CR>
+vnoremap J         :action MoveLineDown<CR>
+nnoremap K         :action MoveLineUp<CR>
+vnoremap K         :action MoveLineUp<CR>
+nnoremap <C-j>     :action EditorCloneCaretBelow<CR>
+nnoremap <C-k>     :action EditorCloneCaretAbove<CR>
+nnoremap <A-j>     :action EditorDuplicateLines<CR>
+vnoremap <A-j>     :action EditorDuplicateLines<CR>
+nnoremap gb        :action SelectNextOccurrence<CR>
+nnoremap <C-n>     :action SelectNextOccurrence<CR>
+nnoremap gB        :action SelectAllOccurrences<CR>
+vnoremap gb        :action SelectNextOccurrence<CR>
+vnoremap <C-n>     :action SelectNextOccurrence<CR>
+vnoremap gB        :action SelectAllOccurrences<CR>
+nnoremap <C-s>      :action SaveAll<CR>:action ReformatCode<CR>
+
+" Blackhole everything, make a 'move'
+nnoremap d "_d
+nnoremap dd "_dd
+nnoremap D "_D
+nnoremap c "_c
+nnoremap C "_C
+nnoremap x "_x
+nnoremap X "_X
+nnoremap m d
+vnoremap m d
+nnoremap mm d
+nnoremap M D
+
+" Jumping to symbols and stuff, in current file and across project
+nnoremap <leader>ji :action FileStructurePopup<CR>
+vnoremap <leader>ji :action FileStructurePopup<CR>
+nnoremap <leader>jI :action GotoSymbol<CR>
+vnoremap <leader>jI :action GotoSymbol<CR>
+nnoremap <leader>jr :action FindUsages<CR>
+
+" Focus next window
+nnoremap <leader>w<TAB> :action NextSplitter<CR>
+vnoremap <leader>w<TAB> <Esc>:action NextSplitter<CR>
+
+" Formatting code
+nnoremap <leader>f= :action ReformatCode<CR>
+vnoremap <leader>f= :action ReformatCode<CR>
+
+" Configuration-related
+nnoremap <leader>feR :action InvalidateCaches<CR>
+nnoremap <leader>fed :edit ~/.ideavimrc<CR>
+nnoremap <leader>feD :action ShowSettings<CR>
+
+" NERDTree Remaps
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapOpenRecursively='L'
+let g:NERDTreeMapCloseDir='h'
+let g:NERDTreeMapCloseChildren='H'
