@@ -29,6 +29,7 @@ alias touch='ad'                               # advance_touch, a better newfile
 alias v='nvim'                                 # shortening usage of nvim
 alias vl='vercel'                              # vercel/zeit/now
 alias vs='code'                                # shortening vscode's code
+alias ydl='youtube-dl'                         # because duh?
 alias zr='zrun'                                # making zrun a bit more easy to run
 # }}}
 
