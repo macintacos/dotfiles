@@ -92,7 +92,18 @@ gitignore_global_link() {
     log info "Going to sync up global gitignore automagically..."
     git config --global core.excludesfile "$HOME"/.gitignore_global
 
-    log ok ".gitignore_global linked"
+    log ok ".gitignore_global linked."
+}
+
+ideavimrc_link() {
+    log info "Linking .ideavimrc..."
+    log info "Clearing target files..."
+    rm -f "$HOME/.ideavimrc"
+
+    log info "Linking .ideavimrc..."
+    ln -sF "${DOTFILES_HOME}/.ideavimrc" "$HOME/.ideavimrc"
+
+    log ok ".ideavimrc linked."
 }
 
 ## ALL {{{
@@ -107,5 +118,6 @@ link_all() {
     vscode_link
     lnav_link
     gitignore_global_link
+    ideavimrc_link
     log ok "All symlinks created."
 }
