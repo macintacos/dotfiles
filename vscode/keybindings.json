@@ -1992,5 +1992,50 @@
     "key": "shift+tab",
     "command": "workbench.action.findInFiles",
     "when": "hasSearchResult && searchViewletVisible && focusedView == 'workbench.view.search'"
+  },
+  {
+    "key": ".",
+    "command": "multiCommand.acceptCompletionAndInsertPeriod",
+    "when": "resourceLangId == python && suggestWidgetVisible"
+  },
+  {
+    "key": "=",
+    "command": "multiCommand.acceptCompletionAndInsertEquals",
+    "when": "resourceLangId == python && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "panelFocus && activePanel == 'workbench.panel.markers' && !inputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "list.expand",
+    "when": "panelFocus && activePanel == 'workbench.panel.markers' && !inputFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "list.collapse",
+    "when": "panelFocus && activePanel == 'workbench.panel.markers' && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "problems.action.focusProblemsFromFilter",
+    "when": "problemsFilterFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "problems.action.focusProblemsFromFilter",
+    "when": "problemsFilterFocus"
+  },
+  {
+    "key": "tab",
+    "command": "problems.action.focusFilter",
+    "when": "focusedView == 'workbench.panel.markers.view'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "problems.action.focusFilter",
+    "when": "focusedView == 'workbench.panel.markers.view'"
   }
 ]

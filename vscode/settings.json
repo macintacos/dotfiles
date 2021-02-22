@@ -168,6 +168,7 @@
     "*.sublime-keymap": "json",
     "*.textbundle": "markdown",
     ".ackrc": "shellscript",
+    ".ideavimrc": "viml",
     ".spacemacs": "lisp",
     "settings.json": "jsonc"
   },
@@ -193,23 +194,13 @@
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": true,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
+    "suppressNoRepositoryWarning": false
   },
   "gitlens.blame.ignoreWhitespace": true,
   "gitlens.codeLens.scopes": ["document", "blocks"],
   "gitlens.keymap": "none",
   "gitlens.statusBar.command": "gitlens.toggleFileBlame",
   "gitlens.statusBar.reduceFlicker": true,
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.fileHistory.location": "explorer",
-  "gitlens.views.lineHistory.enabled": true,
-  "gitlens.views.lineHistory.location": "explorer",
-  "gitlens.views.repositories.location": "scm",
-  "gitlens.views.search.location": "gitlens",
   "go.autocompleteUnimportedPackages": true,
   "go.buildOnSave": "package",
   "go.coverOnTestPackage": false,
@@ -346,6 +337,42 @@
     {
       "command": "multiCommand.copyRelativePathAndSelectedLinesAndPrintIt",
       "sequence": ["copy-relative-path-and-line-numbers.both", "execPaste"]
+    },
+    {
+      "command": "multiCommand.acceptCompletionAndInsertPeriod",
+      "sequence": [
+        "acceptSelectedSuggestion",
+        {
+          "args": {
+            "text": "."
+          },
+          "command": "type"
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.acceptCompletionAndInsertEquals",
+      "sequence": [
+        "acceptSelectedSuggestion",
+        {
+          "args": {
+            "text": " = "
+          },
+          "command": "type"
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.acceptCompletionAndInsertSpace",
+      "sequence": [
+        "acceptSelectedSuggestion",
+        {
+          "args": {
+            "text": " "
+          },
+          "command": "type"
+        }
+      ]
     }
   ],
   "nightswitch.autoSwitch": false,
@@ -1851,9 +1878,6 @@
   ],
   "whichkey.delay": 200,
   "whichkey.sortOrder": "nonNumberFirst",
-  "wiki.basePath": "/Users/juliant/GitLocal/Work/wiki",
-  "wiki.targetPath": "/Users/juliant/GitLocal/Work/wiki/export",
-  "wiki.targetRootFile": "/Users/juliant/GitLocal/Work/wiki/index.md",
   "window.restoreWindows": "all",
   "window.titleBarStyle": "native",
   "window.zoomLevel": 0,
