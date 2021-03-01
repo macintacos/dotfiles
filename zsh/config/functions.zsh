@@ -1,8 +1,11 @@
-# ---------------------------------------------------------------------------- #
-#                                   FUNCTIONS                                  #
-# ---------------------------------------------------------------------------- #
+#!/bin/bash
 
-ranger-cd() {
+export PATH="$DOTFILES_HOME/setup:$PATH" # to get 'log'
+
+COLOR_YEL=$'\e[1;33m'
+COLOR_END=$'\e[0m'
+
+function ranger-cd() {
   tempfile="$(mktemp -t tmp.XXXXXX)"
   ranger --choosedir="$tempfile" "${@:-$(pwd)}"
   test -f "$tempfile" &&
@@ -113,5 +116,47 @@ function o() {
     open .
   else
     open "$@"
+  fi
+}
+
+function git-delete-lingering-branches() {
+  # Deletes branches locally that have already been deleted from remote.
+  # ref: https://stackoverflow.com/a/33548037/5029451
+
+  log info "Checking to see if there are any branches locally that are deleted on remote..."
+
+  # getting branches that are elligible for deletion
+  local branches_to_delete=()
+  git fetch -p &&
+    for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads |
+      awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do
+      branches_to_delete+=("$branch")
+    done
+
+  # figure out what we want to do with the branches we found
+  if [ "${#branches_to_delete[@]}" -eq 0 ]; then
+    log info "No branches found to delete. Not doing anything."
+  else
+    log warn "We will be deleting the following branches: ${COLOR_YEL}${branches_to_delete[*]}${COLOR_END}"
+
+    echo "Are you sure you want to delete these local branches?"
+    select input in "Yes" "No"; do
+      case $input in
+      Yes)
+        echo "ok"
+        log info "Deleting branches ${COLOR_YEL}${branches_to_delete[*]}${COLOR_END}"
+        for branch in $branches_to_delete; do
+          git branch -D "$branch"
+        done
+        log ok "Branches deleted."
+        exit 0
+        ;;
+      No)
+        printf "\n\n"
+        log ok "Aborted the branch deletion operation."
+        exit 1
+        ;;
+      esac
+    done
   fi
 }
