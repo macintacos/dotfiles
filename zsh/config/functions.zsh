@@ -12,33 +12,33 @@ ranger-cd() {
   rm -f -- "$tempfile"
 }
 
-gevg() {
+function gevg() {
   printf "%s - %s (%s commit(s))" \
     "$(git branch --show-current)" \
     "$(git log -1 --pretty=%B)" \
     "$(git rev-list --count trunk..)"
 }
 
-mcd() { # mcd: Makes new Dir and jumps inside
+function mcd() { # mcd: Makes new Dir and jumps inside
   mkdir -p "$1" && cd "$1"
 }
-myip() { # myip: prints out your current IP
+function myip() { # myip: prints out your current IP
   echo "My WAN/Public IP address: $(dig +short myip.opendns.com @resolver1.opendns.com)"
 }
 
-pretty_csv() { # pretty_csv: prettify CSV files
+function pretty_csv() { # pretty_csv: prettify CSV files
   column -t -s "$@" | less -F -S -X -K
 }
 
-co() { # run vs code without the dumb ass flickering
+function co() { # run vs code without the dumb ass flickering
   code "$@" --disable-gpu --ignore-gpu-blacklist
 }
 
-grepip() { # grep unique IPs from within a log file
+function grepip() { # grep unique IPs from within a log file
   \grep -E -o "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" "$@" | sort | uniq
 }
 
-conditional_fd() {
+function conditional_fd() {
   if [[ $PWD == $HOME ]]; then
     fd -paiHL -t d -d 2
   else
@@ -46,9 +46,9 @@ conditional_fd() {
   fi
 }
 
-my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command; } # my_ps: List processes owned by my user:
+function my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command; } # my_ps: List processes owned by my user:
 
-ii() { #   ii:  display useful host related informaton
+function ii() { #   ii:  display useful host related informaton
   echo -e "\nYou are logged on $HOST"
   echo -e "\nAdditionnal information: "
   uname -a
@@ -66,7 +66,7 @@ ii() { #   ii:  display useful host related informaton
   echo
 }
 
-backup-now() { # backup things
+function backup-now() { # backup things
   cd $DOTFILES_HOME/setup
   ./plzlog info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
   (
@@ -94,11 +94,11 @@ backup-now() { # backup things
 # directory color rendering
 eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
 
-jbr() { # open current branch in jira
+function jbr() { # open current branch in jira
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"
 }
 
-ch() { # pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
+function ch() { # pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
   cht.sh "$@" | cat
 }
 
