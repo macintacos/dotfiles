@@ -14,29 +14,29 @@ IFS=$'\n\t'
 # set -o xtrace
 
 setup_directory="$PWD"
-plzlog info "You're currently here: $setup_directory"
+log info "You're currently here: $setup_directory"
 
 # include my library helpers for colorized echo and require_brew, etc
-plzlog info "Sourcing things that we need to source..."
+log info "Sourcing things that we need to source..."
 # shellcheck source=../zsh/.zshenv
 source "./zsh/.zshenv"
 # shellcheck source=../setup/symlink.sh
 source "./setup/symlink.sh"
-plzlog ok "Files sourced successfully (not that I thought they wouldn't)"
+log ok "Files sourced successfully (not that I thought they wouldn't)"
 
 # Setup Homebrew
-plzlog info "Installing Homebrew packages and casks..."
+log info "Installing Homebrew packages and casks..."
 
 case $1 in
 install-ci)
-	plzlog info "Skipping homebrew installation because homebrew takes forever"
+	log info "Skipping homebrew installation because homebrew takes forever"
 	;;
 install-normal)
 	(
 		cd ./backup
 
 		brew bundle install | while read -r line; do
-			plzlog info "${line}"
+			log info "${line}"
 		done
 	)
 	;;
@@ -46,20 +46,20 @@ install-normal)
 	;;
 esac
 
-plzlog info "Homebrew setup complete (if there were errors, fix them, and re-run the script)"
+log info "Homebrew setup complete (if there were errors, fix them, and re-run the script)"
 
 # Setup ZSH
-plzlog info "Setting up zsh..."
+log info "Setting up zsh..."
 zsh_link
 
-plzlog info "Updating all zsh plugins..."
+log info "Updating all zsh plugins..."
 (zsh -i -c "zinit update --all --parallel") || true
 
 # Setup Nvim
-plzlog info "Setting up neovim..."
+log info "Setting up neovim..."
 case $1 in
 install-ci)
-	plzlog info "Installing neovim because we're in CI..."
+	log info "Installing neovim because we're in CI..."
 	brew install neovim
 	;;
 install-normal) ;;
@@ -68,8 +68,8 @@ nvim_link
 
 # Setup global NPM packages
 # npm version management and backup script
-plzlog info "Setting up node/npm..."
-plzlog info "Installing 'n' to manage our node dependencies..."
+log info "Setting up node/npm..."
+log info "Installing 'n' to manage our node dependencies..."
 case $1 in
 install-ci)
 	# need to get rid of cached dependencies:
@@ -90,54 +90,54 @@ install-normal)
 	;;
 esac
 export PATH="$N_PREFIX/bin:$PATH"
-plzlog ok "'n' installed."
+log ok "'n' installed."
 
-plzlog info "Installing the latest node/npm LTS..."
+log info "Installing the latest node/npm LTS..."
 bash n lts
 
-plzlog info "Installing backup-global script so that we can reinstall global packages from backup..."
+log info "Installing backup-global script so that we can reinstall global packages from backup..."
 npm install -g backup-global
-plzlog info "Installing global npm packages..."
+log info "Installing global npm packages..."
 backup-global install --input ./backup/npm.global.backup.txt
-plzlog ok "Done installing global npm packages."
+log ok "Done installing global npm packages."
 
 # Setup asdf plugins/shims
-plzlog info "Installing 'asdf' plugins/shims..."
+log info "Installing 'asdf' plugins/shims..."
 
 case $1 in
 install-ci)
-	plzlog info "Installing asdf because we're in CI..."
+	log info "Installing asdf because we're in CI..."
 	brew install asdf
 	;;
 install-normal) ;;
 esac
-plzlog info "Installing 'kubectl' plugin..."
+log info "Installing 'kubectl' plugin..."
 (asdf plugin-add kubectl https://github.com/Banno/asdf-kubectl.git) || true # continue even if we already have it
 asdf install kubectl latest
 
 # Setup MongoDB "m"
 # we're assuming that 'm' is installed already by this point
-plzlog info "Installing latest stable version of MongoDB..."
+log info "Installing latest stable version of MongoDB..."
 mkdir -p ~/bin
 m stable
-plzlog ok "Done installing MongoDB."
+log ok "Done installing MongoDB."
 
 # Setup VSCode Extensions from existing backup
 case $1 in
 install-ci)
-	plzlog info "Skipping vscode setup on CI"
+	log info "Skipping vscode setup on CI"
 	shift
 	;;
 install-normal)
-	plzlog info "Installing VSCode extensions"
+	log info "Installing VSCode extensions"
 	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true # continue even if we already have it
 	shift
 	;;
 esac
 
 # symlink everything to wrap it up
-plzlog info "Wrap things up by symlinking again for good measure..."
+log info "Wrap things up by symlinking again for good measure..."
 link_all
-plzlog ok "Done!"
+log ok "Done!"
 
 "$@"
