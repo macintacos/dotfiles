@@ -168,9 +168,9 @@
     "*.sublime-keymap": "json",
     "*.textbundle": "markdown",
     ".ackrc": "shellscript",
-    ".ideavimrc": "viml",
     ".spacemacs": "lisp",
-    "settings.json": "jsonc"
+    "settings.json": "jsonc",
+    ".ideavimrc": "viml"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -342,36 +342,21 @@
       "command": "multiCommand.acceptCompletionAndInsertPeriod",
       "sequence": [
         "acceptSelectedSuggestion",
-        {
-          "args": {
-            "text": "."
-          },
-          "command": "type"
-        }
+        { "command": "type", "args": { "text": "." } }
       ]
     },
     {
       "command": "multiCommand.acceptCompletionAndInsertEquals",
       "sequence": [
         "acceptSelectedSuggestion",
-        {
-          "args": {
-            "text": " = "
-          },
-          "command": "type"
-        }
+        { "command": "type", "args": { "text": " = " } }
       ]
     },
     {
       "command": "multiCommand.acceptCompletionAndInsertSpace",
       "sequence": [
         "acceptSelectedSuggestion",
-        {
-          "args": {
-            "text": " "
-          },
-          "command": "type"
-        }
+        { "command": "type", "args": { "text": " " } }
       ]
     }
   ],
