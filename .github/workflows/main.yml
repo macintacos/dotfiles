@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Setup just
       uses: extractions/setup-just@v1
+      with:
+        just-version: 1.3.0
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup repository
