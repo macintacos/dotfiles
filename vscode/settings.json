@@ -491,14 +491,6 @@
     {
       "after": ["<Esc>"],
       "before": ["ctrl+d"]
-    },
-    {
-      "after": ["<Esc>"],
-      "before": ["j", "j"]
-    },
-    {
-      "after": ["<Esc>"],
-      "before": ["k", "k"]
     }
   ],
   "vim.leader": ";",
