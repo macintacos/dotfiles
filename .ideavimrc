@@ -68,6 +68,10 @@ vnoremap m d
 nnoremap mm d
 nnoremap M D
 
+" Git-related
+nnoremap <leader>gn :action Diff.NextChange<CR>
+nnoremap <leader>gp :action Diff.PrevChange<CR>
+
 " Jumping to symbols and stuff, in current file and across project
 nnoremap <leader>ji :action FileStructurePopup<CR>
 vnoremap <leader>ji :action FileStructurePopup<CR>
@@ -93,3 +97,7 @@ let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapOpenRecursively='L'
 let g:NERDTreeMapCloseDir='h'
 let g:NERDTreeMapCloseChildren='H'
+
+" which-key
+let g:WhichKey_FontFamily = 'JetBrains Mono'
+let g:WhichKey_FontSize = 16
