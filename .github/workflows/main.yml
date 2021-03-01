@@ -8,6 +8,9 @@ jobs:
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - name: Setup just
+      uses: extractions/setup-just@v1
+    - name: Setup repository
+      uses: actions/checkout@v2
     - name: Testing installation of all dependencies
-      run: make install-ci
+      run: just install-ci
