@@ -1881,7 +1881,7 @@
     "terminal.ansiWhite": "#ffffff",
     "terminal.ansiYellow": "#ffea7f"
   },
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Shades of Purple",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
