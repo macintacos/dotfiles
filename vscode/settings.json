@@ -160,6 +160,7 @@
   "explorer.autoReveal": "focusNoScroll",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
   "extensions.autoUpdate": false,
   "files.associations": {
     "*.end": "shellscript",
@@ -168,9 +169,9 @@
     "*.sublime-keymap": "json",
     "*.textbundle": "markdown",
     ".ackrc": "shellscript",
+    ".ideavimrc": "viml",
     ".spacemacs": "lisp",
-    "settings.json": "jsonc",
-    ".ideavimrc": "viml"
+    "settings.json": "jsonc"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -342,21 +343,36 @@
       "command": "multiCommand.acceptCompletionAndInsertPeriod",
       "sequence": [
         "acceptSelectedSuggestion",
-        { "command": "type", "args": { "text": "." } }
+        {
+          "args": {
+            "text": "."
+          },
+          "command": "type"
+        }
       ]
     },
     {
       "command": "multiCommand.acceptCompletionAndInsertEquals",
       "sequence": [
         "acceptSelectedSuggestion",
-        { "command": "type", "args": { "text": " = " } }
+        {
+          "args": {
+            "text": " = "
+          },
+          "command": "type"
+        }
       ]
     },
     {
       "command": "multiCommand.acceptCompletionAndInsertSpace",
       "sequence": [
         "acceptSelectedSuggestion",
-        { "command": "type", "args": { "text": " " } }
+        {
+          "args": {
+            "text": " "
+          },
+          "command": "type"
+        }
       ]
     }
   ],
@@ -453,6 +469,16 @@
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "todo-tree.filtering.includeHiddenFiles": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "todo-tree.tree.showScanModeButton": false,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
@@ -1857,7 +1883,6 @@
   "whichkey.sortOrder": "nonNumberFirst",
   "window.restoreWindows": "all",
   "window.titleBarStyle": "native",
-  "window.zoomLevel": 0,
   "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "[GitHub Dark]": {
@@ -1881,24 +1906,33 @@
     "terminal.ansiWhite": "#ffffff",
     "terminal.ansiYellow": "#ffea7f"
   },
-  "workbench.colorTheme": "Shades of Purple",
+  "workbench.colorTheme": "Dracula",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": true,
+  "workbench.editor.revealIfOpen": false,
+  "workbench.editor.showTabs": false,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": [
     {
       "filenamePattern": "*.json",
       "viewType": "default"
+    },
+    {
+      "filenamePattern": "*.ipynb",
+      "viewType": "jupyter.notebook.ipynb"
     }
   ],
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
-  "workbench.view.alwaysShowHeaderActions": true
+  "workbench.view.alwaysShowHeaderActions": true,
+  "yaml.schemas": {
+    "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  }
 }
