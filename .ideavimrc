@@ -53,7 +53,8 @@ nnoremap gB        :action SelectAllOccurrences<CR>
 vnoremap gb        :action SelectNextOccurrence<CR>
 vnoremap <C-n>     :action SelectNextOccurrence<CR>
 vnoremap gB        :action SelectAllOccurrences<CR>
-nnoremap <C-s>      :action SaveAll<CR>:action ReformatCode<CR>
+nnoremap <C-s>     :action ReformatCode<CR>:action SaveAll<CR>
+nnoremap gr        :action ShowUsages<Cr>
 
 " Blackhole everything, make a 'move'
 nnoremap d "_d
@@ -99,5 +100,30 @@ let g:NERDTreeMapCloseDir='h'
 let g:NERDTreeMapCloseChildren='H'
 
 " which-key
-let g:WhichKey_FontFamily = 'JetBrains Mono'
-let g:WhichKey_FontSize = 16
+let g:WhichKey_FontFamily    = 'JetBrains Mono'
+let g:WhichKey_FontSize      = 16
+let g:WhichKeyDesc_comment   = "<leader>; +Comment"
+let g:WhichKeyDesc_bookmarks = "<leader>B +Bookmarks"
+let g:WhichKeyDesc_color     = "<leader>C +Color"
+let g:WhichKeyDesc_frame     = "<leader>F +Frame"
+let g:WhichKeyDesc_run       = "<leader>R +Run"
+let g:WhichKeyDesc_uitoggle  = "<leader>T +UIToggle"
+let g:WhichKeyDesc_actions   = "<leader>a +Actions"
+let g:WhichKeyDesc_buffers   = "<leader>b +Buffers"
+let g:WhichKeyDesc_comment   = "<leader>c +Compile/comment"
+let g:WhichKeyDesc_errors    = "<leader>e +Errors"
+let g:WhichKeyDesc_files     = "<leader>f +Files"
+let g:WhichKeyDesc_git       = "<leader>g +Git"
+let g:WhichKeyDesc_help      = "<leader>h +Help"
+let g:WhichKeyDesc_insert    = "<leader>i +Insert"
+let g:WhichKeyDesc_jump      = "<leader>j +Jump"
+let g:WhichKeyDesc_major     = "<leader>m +Major"
+let g:WhichKeyDesc_something = "<leader>n +Something"
+let g:WhichKeyDesc_project   = "<leader>p +Project"
+let g:WhichKeyDesc_quit      = "<leader>q +Quit"
+let g:WhichKeyDesc_replace   = "<leader>r +Replace"
+let g:WhichKeyDesc_search    = "<leader>s +Search"
+let g:WhichKeyDesc_toggles   = "<leader>t +Toggles"
+let g:WhichKeyDesc_window    = "<leader>w +Window"
+let g:WhichKeyDesc_text      = "<leader>x +Text"
+let g:WhichKeyDesc_zoom      = "<leader>z +Zoom"
