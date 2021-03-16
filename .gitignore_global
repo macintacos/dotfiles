@@ -1,2 +1,5 @@
 # direnv
 .envrc
+
+# python
+**/venv/**
