@@ -67,11 +67,26 @@ FZF_TAB_COMMAND=(
   '--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f'
   '--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7'
   --nth=2,3 --delimiter='\x00' # Don't search prefix
-  --tiebreak=begin -m --bind=tab:down,btab:up,change:top,ctrl-space:toggle --cycle
+  --tiebreak=begin -m
+  --bind=tab:down,btab:up --cycle
   '--query=$query'           # $query will be expanded to query string at runtime.
   '--header-lines=$#headers' # $#headers will be expanded to lines of headers at runtime
   --print-query
 )
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa --icons --color-scale --tree -D $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
+# vscode previews for files
+zstyle ':fzf-tab:complete:code:**' fzf-preview 'bat $realpath || exa --icons --color-scale --tree -D $realpath'
+
 zstyle ':fzf-tab:*' command $FZF_TAB_COMMAND
 
 # }}}
