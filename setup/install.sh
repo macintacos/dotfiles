@@ -68,34 +68,16 @@ nvim_link
 
 # Setup global NPM packages
 # npm version management and backup script
-log info "Setting up node/npm..."
-log info "Installing 'n' to manage our node dependencies..."
 case $1 in
 install-ci)
-	# need to get rid of cached dependencies:
-	# https://github.com/actions/virtual-environments/blob/macos-10.15/20200918.1/images/macos/macos-10.15-Readme.md
-	rm -rf /usr/local/bin/node
-	rm -rf /usr/local/bin/npm
-
-	# install node directly
-	curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ |
-		sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" >"$HOME/Downloads/node-latest.pkg" &&
-		sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
-
-	# now install n
-	(npm install -g n) || true
+	log info "Installing node/nodenv because we're in CI..."
+	brew install node
+	brew install nodenv
 	;;
-install-normal)
-	(curl -L https://git.io/n-install | bash) || true
-	;;
+install-normal) ;;
 esac
-export PATH="$N_PREFIX/bin:$PATH"
-log ok "'n' installed."
-
-log info "Installing the latest node/npm LTS..."
-bash n lts
-
-log info "Installing backup-global script so that we can reinstall global packages from backup..."
+nodenv install "$(node --version | sed -e 's/v//g')"
+nodenv global "$(node --version | sed -e 's/v//g')"
 npm install -g backup-global
 log info "Installing global npm packages..."
 backup-global install --input ./backup/npm.global.backup.txt
@@ -114,6 +96,17 @@ esac
 log info "Installing 'kubectl' plugin..."
 (asdf plugin-add kubectl https://github.com/Banno/asdf-kubectl.git) || true # continue even if we already have it
 asdf install kubectl latest
+
+# Setup pyenv
+case $1 in
+install-ci)
+	log info "Installing pyenv because we're in CI..."
+	brew install pyenv
+	;;
+install-normal)
+	pyenv install 3.9.4
+	;;
+esac
 
 # Setup MongoDB "m"
 # we're assuming that 'm' is installed already by this point

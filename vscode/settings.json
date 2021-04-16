@@ -1,4 +1,7 @@
 {
+  "[shellscript]": {
+    "editor.formatOnSave": false
+  },
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -70,14 +73,16 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports.python": true
     },
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -130,7 +135,6 @@
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "relative",
@@ -171,7 +175,10 @@
     ".ackrc": "shellscript",
     ".ideavimrc": "viml",
     ".spacemacs": "lisp",
-    "settings.json": "jsonc"
+    "settings.json": "jsonc",
+    ".env": "env",
+    ".env-example": "env",
+    ".prettierrc": "yaml"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -406,7 +413,10 @@
   "python.formatting.blackPath": "/usr/local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
-  "python.sortImports.args": ["--settings-path=${workspaceFolder}/.isort.cfg"],
+  "python.sortImports.args": [
+    "--settings-path=${workspaceFolder}/pyproject.toml",
+    "--profile=black"
+  ],
   "python.sortImports.path": "/usr/local/bin/isort",
   "rpmspec.lint": false,
   "scm.defaultViewMode": "tree",
@@ -1895,7 +1905,6 @@
       "terminal.ansiWhite": "#ffffff",
       "terminal.ansiYellow": "#ffea7f"
     },
-    "editor.snippetTabstopHighlightBackground": "#FC87CF3f",
     "editorCursor.foreground": "#db2466",
     "terminal.ansiBlack": "#24292e",
     "terminal.ansiBlue": "#b392f0",
@@ -1906,7 +1915,7 @@
     "terminal.ansiWhite": "#ffffff",
     "terminal.ansiYellow": "#ffea7f"
   },
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
@@ -1934,5 +1943,7 @@
   "workbench.view.alwaysShowHeaderActions": true,
   "yaml.schemas": {
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vscsm.smergeExecutablePath": "/usr/local/bin/smerge"
 }

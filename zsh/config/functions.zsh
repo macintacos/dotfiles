@@ -2,9 +2,6 @@
 
 export PATH="$DOTFILES_HOME/setup:$PATH" # to get 'log'
 
-COLOR_YEL=$'\e[1;33m'
-COLOR_END=$'\e[0m'
-
 function ranger-cd() {
   tempfile="$(mktemp -t tmp.XXXXXX)"
   ranger --choosedir="$tempfile" "${@:-$(pwd)}"
@@ -101,8 +98,8 @@ function jbr() { # open current branch in jira
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"
 }
 
-function ch() { # pipe cht.sh output to "cat" (which in turn calls "bat") to make the output a little easier to digestd, especially when the output goes off-screen
-  cht.sh "$@" | cat
+function ch() { # pipe cht.sh output to "bat"
+  cht.sh "$@" | bat --theme=ansi --style=numbers,grid
 }
 
 function cdf() { # Change working directory to the top-most Finder window location
@@ -137,14 +134,14 @@ function git-delete-lingering-branches() {
   if [ "${#branches_to_delete[@]}" -eq 0 ]; then
     log info "No branches found to delete. Not doing anything."
   else
-    log warn "We will be deleting the following branches: ${COLOR_YEL}${branches_to_delete[*]}${COLOR_END}"
+    log warn "We will be deleting the following branches: ${YELLOW}${branches_to_delete[*]}${RESET}"
 
     echo "Are you sure you want to delete these local branches?"
     select input in "Yes" "No"; do
       case $input in
       Yes)
         echo "ok"
-        log info "Deleting branches ${COLOR_YEL}${branches_to_delete[*]}${COLOR_END}"
+        log info "Deleting branches ${YELLOW}${branches_to_delete[*]}${RESET}"
         for branch in $branches_to_delete; do
           git branch -D "$branch"
         done
@@ -159,4 +156,9 @@ function git-delete-lingering-branches() {
       esac
     done
   fi
+}
+
+function connect-vpn() {
+  # Connects to the VPN
+  networksetup -connectpppoeservice "VPN New York"
 }
