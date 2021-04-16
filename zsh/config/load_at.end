@@ -3,12 +3,6 @@
 # The entire purpose of this file is to load things at the end of .zshrc
 # Do this for anything that needs to be executed after everything else is done starting up
 
-# -------- jabba java version manager https://github.com/shyiko/jabba -------- #
-
-# shellcheck disable=SC1090
-# this is copied to an `.envrc` file locally in each project!
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
-
 # -------------- n node version manager https://github.com/tj/n -------------- #
 # ---------- Added by n-install (see http://git.io/n-install-repo). ---------- #
 
@@ -36,3 +30,15 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1" # color needs to be set AFTER source-ing 
 
 #shellcheck disable=SC1090
 source <(mongocli completion zsh)
+
+# ------------------- pyenv https://github.com/pyenv/pyenv ------------------- #
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+# ------------------ nodenv https://github.com/nodenv/nodenv ----------------- #
+
+if command -v nodenv 1>/dev/null 2>&1; then
+    eval "$(nodenv init -)"
+fi

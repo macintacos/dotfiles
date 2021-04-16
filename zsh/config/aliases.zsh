@@ -3,7 +3,7 @@
 # UTILITIES; SHORTENED {{{
 alias bazel="$HOME/GitLocal/Work/mms/bazelisk" # can just keep this to the local bazelisk script
 alias c='clear && ll'                          # clear terminal display, show directory
-alias cat='bat --theme="ansi-dark"'            # because bat is just insanely better than cat
+alias cat='bat --theme="ansi"'                 # because bat is just insanely better than cat
 alias cls='clear'                              # clear sisplay, just like `mongo` shell
 alias count='tokei'                            # use this to count the amount of files in a given directory
 alias cp='cp -iv'                              # preferred 'cp' implementation
