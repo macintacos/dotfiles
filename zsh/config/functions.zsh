@@ -12,6 +12,14 @@ function ranger-cd() {
   rm -f -- "$tempfile"
 }
 
+function mcd() { # mcd: Makes new Dir and jumps inside
+  mkdir -p "$1" && cd "$1"
+}
+
+function cdg() { # 'cd' to the top level of a git project
+  cd $(git --rev-parse --show-top-level)
+}
+
 function gevg() {
   printf "%s - %s (%s commit(s))" \
     "$(git branch --show-current)" \
@@ -19,9 +27,6 @@ function gevg() {
     "$(git rev-list --count trunk..)"
 }
 
-function mcd() { # mcd: Makes new Dir and jumps inside
-  mkdir -p "$1" && cd "$1"
-}
 function myip() { # myip: prints out your current IP
   echo "My WAN/Public IP address: $(dig +short myip.opendns.com @resolver1.opendns.com)"
 }
@@ -46,7 +51,9 @@ function conditional_fd() {
   fi
 }
 
-function my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command; } # my_ps: List processes owned by my user:
+function my-ps() { # my_ps: List processes owned by my user:
+  ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command
+}
 
 function ii() { #   ii:  display useful host related informaton
   echo -e "\nYou are logged on $HOST"
@@ -66,7 +73,7 @@ function ii() { #   ii:  display useful host related informaton
   echo
 }
 
-function backup-now() { # backup things
+function jt-backup-now() { # backup things
   cd $DOTFILES_HOME/setup
   ./plzlog info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
   (
@@ -116,7 +123,7 @@ function o() {
   fi
 }
 
-function git-delete-lingering-branches() {
+function jt-git-delete-lingering-branches() {
   # Deletes branches locally that have already been deleted from remote.
   # ref: https://stackoverflow.com/a/33548037/5029451
 
@@ -158,7 +165,61 @@ function git-delete-lingering-branches() {
   fi
 }
 
-function connect-vpn() {
+function jt-connect-vpn() {
   # Connects to the VPN
   networksetup -connectpppoeservice "VPN New York"
+}
+
+function jt-gh-clone-bare() {
+  if [ $# -lt 2 ]; then
+    echo "Not enough arguments supplied. Expected something like: <org>/<repo> <branch_to_clone>"
+    return 1
+  fi
+
+  local org repo gh_link branch_name
+
+  org=$(echo $1 | gsed -e 's/\(.*\)\/.*/\1/')
+  repo=$(echo $1 | gsed -e 's/.*\/\(.*\)/\1/')
+  gh_link="https://github.com/$org/$repo.git"
+  branch_name=$2
+
+  log info "Cloning the following org/repo github: $gh_link"
+
+  mkdir "$repo" && cd "$repo"       # Make the directory to work in
+  git clone "$gh_link" --bare .bare # Make a "bare" repository to track git-related things
+  ln -sf .bare/ .git                # Symlink `.git` to this repository
+  git worktree add "$branch_name"   # Add the branch that was provided (typically this should be the main branch)
+  cd "$branch_name"                 # Bring us inside this directory to begin working!
+
+  log ok "Successfully cloned $org/$repo:$branch_name"
+}
+
+function jt-git-worktree-add() {
+  if [ $# -lt 1 ]; then
+    echo "Not enough arguments supplied."
+    return 1
+  fi
+
+  branch_name=$1
+  top_level_dir=$(dirname $(git rev-parse --git-common-dir))
+
+  log info "Creating a new branch $branch_name in $top_level_dir"
+
+  cd $top_level_dir && git worktree add "$branch_name"
+  cd "$branch_name"
+
+  if [ $? -eq 128 ]; then
+    # The last command failed, so let's naively assume that it just exists and we need to 'cd' to it
+    echo "Opening the local worktree that was already created..."
+    if $(git rev-parse --is-inside-work-tree); then
+      cd "$(dirname $(git rev-parse --show-toplevel))"/"$pr_dir_target"
+      git fetch
+    else
+      cd "$pr_dir_target"
+      git fetch
+    fi
+    return 0
+  fi
+
+  log ok "Created worktree $branch_name with branch name $branch_name"
 }
