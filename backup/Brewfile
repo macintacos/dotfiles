@@ -21,6 +21,7 @@ tap "jhawthorn/fzy"
 tap "knqyf263/pet"
 tap "kyoh86/tap"
 tap "mongodb/brew"
+tap "ms-jpq/sad"
 tap "muesli/tap"
 tap "nshipster/formulae"
 tap "orf/brew"
@@ -34,11 +35,17 @@ brew "ack"
 brew "adns"
 brew "aom"
 brew "archey"
+brew "automake"
 brew "coreutils"
 brew "asdf"
 brew "gdbm"
 brew "xz"
 brew "autojump"
+brew "gmp"
+brew "isl"
+brew "mpfr"
+brew "libmpc"
+brew "avr-gcc@7"
 brew "libusb"
 brew "avrdude"
 brew "awscli"
@@ -49,7 +56,7 @@ brew "blueutil"
 brew "broot"
 brew "fontconfig"
 brew "gettext"
-brew "libffi"
+brew "pkg-config"
 brew "ccat"
 brew "cfssl"
 brew "cliclick"
@@ -69,16 +76,17 @@ brew "direnv"
 brew "dos2unix"
 brew "eg-examples"
 brew "elvish"
+brew "jpeg"
+brew "erlang"
 brew "exa"
+brew "expect"
 brew "fd"
 brew "flac"
 brew "frei0r"
 brew "giflib"
-brew "gmp"
-brew "pkg-config"
 brew "nettle"
 brew "graphite2"
-brew "jpeg"
+brew "harfbuzz"
 brew "little-cms2"
 brew "openjpeg"
 brew "webp"
@@ -95,13 +103,11 @@ brew "speex"
 brew "tesseract"
 brew "zeromq"
 brew "ffmpeg"
-brew "isl"
-brew "mpfr"
-brew "libmpc"
 brew "gcc"
 brew "fftw"
 brew "findutils"
 brew "fish"
+brew "pango"
 brew "fontforge"
 brew "fpp"
 brew "fswatch"
@@ -118,6 +124,7 @@ brew "git-lfs"
 brew "gitui"
 brew "python@3.8"
 brew "global"
+brew "glow"
 brew "libassuan"
 brew "libgcrypt"
 brew "libksba"
@@ -141,6 +148,7 @@ brew "imagesnap"
 brew "jo"
 brew "oniguruma"
 brew "jq"
+brew "jsonnet"
 brew "jump"
 brew "just"
 brew "kakoune"
@@ -166,9 +174,13 @@ brew "mpv"
 brew "neovim"
 brew "nmap"
 brew "nnn"
+brew "node", link: false
+brew "nodenv"
+brew "nq"
 brew "nushell"
 brew "ox"
 brew "pacvim"
+brew "pandoc"
 brew "pastel"
 brew "peco"
 brew "pinentry-mac"
@@ -177,7 +189,10 @@ brew "poppler"
 brew "portmidi"
 brew "procs"
 brew "psutils"
+brew "pyenv"
 brew "python@2"
+brew "qt"
+brew "rabbitmq", restart_service: true
 brew "ranger"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
@@ -186,6 +201,7 @@ brew "ruby"
 brew "rust"
 brew "s-search"
 brew "safe-rm"
+brew "sd"
 brew "sdl"
 brew "sdl_image"
 brew "sdl_mixer"
@@ -193,6 +209,7 @@ brew "sdl_ttf"
 brew "shellcheck"
 brew "sk"
 brew "starship"
+brew "subversion"
 brew "swiftformat"
 brew "swiftlint"
 brew "telnet"
@@ -208,6 +225,7 @@ brew "tokei"
 brew "topgrade"
 brew "tre"
 brew "tree"
+brew "tz"
 brew "up"
 brew "velero"
 brew "vifm"
@@ -232,10 +250,11 @@ brew "heroku/brew/heroku"
 brew "jesseduffield/lazygit/lazygit"
 brew "knqyf263/pet/pet"
 brew "kyoh86/tap/richgo"
+brew "mongodb/brew/mongocli"
 brew "mongodb/brew/mongodb-database-tools"
 brew "mongodb/brew/mongosh"
+brew "ms-jpq/sad/sad"
 brew "orf/brew/gping"
-brew "osx-cross/avr/avr-gcc@7"
 brew "px4/px4/gcc-arm-none-eabi", link: false
 brew "qmk/qmk/qmk"
 brew "tankerhq/repo/ruplacer"
@@ -260,7 +279,6 @@ cask "gpg-suite"
 cask "hammerspoon"
 cask "hyper"
 cask "keycastr"
-cask "kitty"
 cask "lens"
 cask "lepton"
 cask "little-snitch"
@@ -278,14 +296,9 @@ cask "qmk-toolbox"
 cask "rectangle"
 cask "signal"
 cask "sizeup"
-cask "vv"
 cask "xquartz"
-mas "1Keyboard", id: 766939888
-mas "2Do", id: 477670270
-mas "Agenda", id: 1287445660
 mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
-mas "Boop", id: 1518425043
 mas "Cardhop", id: 1290358394
 mas "CARROT Weather", id: 993487541
 mas "CodeRunner", id: 955297617
@@ -293,42 +306,32 @@ mas "Copy 'Em", id: 876540291
 mas "Craft", id: 1487937127
 mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
-mas "Deliveries", id: 924726344
+mas "Deliveries", id: 290986013
 mas "Developer", id: 640199958
-mas "Disk Speed Test", id: 425264550
 mas "Display Menu", id: 549083868
 mas "Drafts", id: 1435957248
 mas "Due", id: 524373870
 mas "Fantastical", id: 975937182
 mas "Front and Center", id: 1493996622
-mas "GIPHY CAPTURE", id: 668208984
 mas "iA Writer", id: 775737590
-mas "Keep It", id: 1272768911
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "Marked 2", id: 890031187
 mas "MenubarClock", id: 492167985
 mas "Microsoft To Do", id: 1274495053
+mas "NotePlan 3", id: 1505432629
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
-mas "Pastebot", id: 1179623856
-mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
-mas "Pixelmator", id: 407963104
+mas "Pixelmator Pro", id: 1289583905
 mas "Poolside FM", id: 1514817810
-mas "Reeder", id: 1449412482
 mas "Reeder", id: 1529448980
 mas "Screens", id: 1224268771
 mas "Service Station", id: 1503136033
 mas "SwitchGlass", id: 1498546559
 mas "Things", id: 904280696
-mas "Todoist", id: 585829637
 mas "ToothFairy", id: 1191449274
 mas "Tot", id: 1491071483
 mas "Trello", id: 1278508951
-mas "Tweetbot", id: 1384080005
-mas "Twitter", id: 1482454543
 mas "Ulysses", id: 1225570693
-mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
