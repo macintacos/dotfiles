@@ -75,24 +75,24 @@ function ii() { #   ii:  display useful host related informaton
 
 function jt-backup-now() { # backup things
   cd $DOTFILES_HOME/setup
-  ./plzlog info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
+  ./log info "Backing up files to: $DOTFILES_HOME/backup (run the command again if it fails!)"
   (
     cd $DOTFILES_HOME/backup
 
-    (cd $DOTFILES_HOME/setup && ./plzlog info "Backing up Homebrew packages...")
+    (cd $DOTFILES_HOME/setup && ./log info "Backing up Homebrew packages...")
     rm Brew*
     HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump
 
-    (cd $DOTFILES_HOME/setup && ./plzlog ok "Brewfile successfully regenerated." && ./plzlog info "Backing up global NPM packages...")
+    (cd $DOTFILES_HOME/setup && ./log ok "Brewfile successfully regenerated." && ./log info "Backing up global NPM packages...")
     backup-global backup -o npm.global.backup.txt
 
-    (cd $DOTFILES_HOME/setup && ./plzlog ok "NPM Backup successfully regenerated." && ./plzlog info "Backing up VSCode extension list...")
+    (cd $DOTFILES_HOME/setup && ./log ok "NPM Backup successfully regenerated." && ./log info "Backing up VSCode extension list...")
     code --list-extensions >vscode-extensions-backup.txt
 
-    (cd $DOTFILES_HOME/setup && ./plzlog ok "VSCode extension list successfully regenerated.")
+    (cd $DOTFILES_HOME/setup && ./log ok "VSCode extension list successfully regenerated.")
   )
-  ./plzlog ok "Backup complete!"
-  ./plzlog info "The following files were backed up:
+  ./log ok "Backup complete!"
+  ./log info "The following files were backed up:
     $DOTFILES_HOME/backup/Brewfile
     $DOTFILES_HOME/backup/npm.global.backup.txt
     $DOTFILES_HOME/backup/vscode-extensions-backup.txt"
@@ -153,12 +153,12 @@ function jt-git-delete-lingering-branches() {
           git branch -D "$branch"
         done
         log ok "Branches deleted."
-        exit 0
+        return 0
         ;;
       No)
         printf "\n\n"
         log ok "Aborted the branch deletion operation."
-        exit 1
+        return 1
         ;;
       esac
     done
