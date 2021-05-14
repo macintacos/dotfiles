@@ -29,4 +29,14 @@ function! g:BuffetSetCustomColors()
     hi! BuffetModBuffer        gui=NONE guibg=#ff5555 guifg=#282a36
     hi! BuffetTrunc            gui=NONE guibg=#bd93f9 guifg=#282a36
     hi! BuffetTab              gui=NONE guibg=#bd93f9 guifg=#282a36
+
+    " Gruvbox Colors
+    " hi! BuffetCurrentBuffer    gui=NONE guibg=#8ec07c
+    " hi! BuffetActiveBuffer     gui=NONE guibg=#d3869b guifg=#282828
+    " hi! BuffetBuffer           gui=NONE guibg=#282828 guifg=#83a598
+    " hi! BuffetModCurrentBuffer gui=NONE guibg=#b8bb26 guifg=#282828
+    " hi! BuffetModActiveBuffer  gui=NONE guibg=#fabd2f guifg=#282828
+    " hi! BuffetModBuffer        gui=NONE guibg=#fb4934 guifg=#282828
+    " hi! BuffetTrunc            gui=NONE guibg=#d3869b guifg=#282828
+    " hi! BuffetTab              gui=NONE guibg=#d3869b guifg=#282828
 endfunction

@@ -121,6 +121,7 @@ else
     Plug 'arzg/vim-colors-xcode',         { 'as': 'xcode'}
     Plug 'bluz71/vim-moonfly-colors',     { 'as': 'moonfly'}
     Plug 'bluz71/vim-nightfly-guicolors', { 'as': 'nightfly'}
+    Plug 'morhetz/gruvbox'         | source $PLUG_CONFIG_NVIM_HOME/gruvbox.vim
     Plug 'vim-airline/vim-airline' | source $PLUG_CONFIG_NVIM_HOME/vim-airline.vim
     Plug 'ryanoasis/vim-devicons' " plug after everything else
 
@@ -139,6 +140,8 @@ else
 
     " Vanilla Configurations
     colorscheme dracula
+    " set background=dark
+    " autocmd vimenter * ++nested colorscheme gruvbox
     " let g:challenger_deep_termcolors = 16
 
     " cursor-related colors
