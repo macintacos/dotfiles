@@ -4,25 +4,45 @@
     "description": "New log format beginning with MongoDB 4.4",
     "url": "https://docs.mongodb.com/manual/reference/log-messages/index.html#structured-logging",
     "json": true,
-    "file-pattern": ".*mongod.*",
+    "file-pattern": ".*mongodb.log",
     "line-format": [
-      "{ \"t\": { \"$date\": ",
       { "field": "__timestamp__" },
-      " }, \"s\": ",
-      { "field": "s", "min-width": 1, "align": "right" },
-      ", \"c\": ",
-      { "field": "c", "min-width": 7, "align": "right" },
-      ", \"id\": ",
-      { "field": "id", "min-width": 6, "align": "right" },
-      ", \"ctx\": ",
-      { "field": "ctx", "min-width": 9, "align": "right" },
-      ", \"msg\": ",
+      " ",
+      { "field": "s", "min-width": 1, "align": "left" },
+      " ",
+      { "field": "c", "min-width": 8, "align": "left" },
+      " [",
+      {
+        "field": "ctx",
+        "max-width": 20,
+        "overflow": "truncate",
+        "align": "left"
+      },
+      "] id:",
+      {
+        "field": "id"
+      },
+      " (",
+      {
+        "field": "attr/remote",
+        "max-width": 22,
+        "align": "left"
+      },
+      ") ",
       { "field": "msg" },
-      ", \"attr\": ",
-      { "field": "attr" }
+      " ",
+      { "field": "attr" },
+      " ",
+      { "field": "tags", "default-value": "" },
+      " ",
+      { "field": "truncated", "default-value": "" },
+      " ",
+      { "field": "size", "default-value": "" }
     ],
     "timestamp-field": "t/$date",
     "level-field": "s",
+    "body-field": "msg",
+    "opid-field": "ctx",
     "level": {
       "fatal": "F",
       "error": "E",
@@ -34,16 +54,26 @@
       "debug4": "D4",
       "debug5": "D5"
     },
-    "body-field": "msg",
     "value": {
-      "t": { "kind": "string", "hidden": true },
+      "t": { "kind": "json", "hidden": true },
       "t/$date": { "kind": "string" },
       "s": { "kind": "string" },
-      "c": { "kind": "string" },
-      "id": { "kind": "integer", "identifier": true },
-      "ctx": { "kind": "string", "identifier": true },
+      "c": { "kind": "string", "identifier": true },
+      "id": { "kind": "integer", "identifier": true, "hidden": true },
+      "ctx": {
+        "kind": "string",
+        "identifier": true
+      },
+      "tags": { "kind": "json", "hidden": true },
       "msg": { "kind": "string" },
-      "attr": { "kind": "json" }
+      "attr": { "kind": "json" },
+      "attr/remote": {
+        "kind": "string",
+        "collate": "ipaddress",
+        "identifier": true
+      },
+      "truncated": { "kind": "json" },
+      "size": { "kind": "integer" }
     }
   }
 }
