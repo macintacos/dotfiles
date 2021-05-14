@@ -1,7 +1,4 @@
 {
-  "[shellscript]": {
-    "editor.formatOnSave": false
-  },
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -76,9 +73,12 @@
       "source.organizeImports.python": true
     },
     "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSaveMode": "file",
     "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
     "editor.tabSize": 4
+  },
+  "[shellscript]": {
+    "editor.formatOnSave": false
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -109,7 +109,7 @@
   "codeui.targetingMode": "themeSpecific",
   "color-highlight.markRuler": false,
   "color-highlight.markerType": "underline",
-  "confluenceMarkup.monospaceFont": "JetBrains Mono",
+  "confluenceMarkup.monospaceFont": "MonoLisa",
   "customizeUI.activityBar": "regular",
   "customizeUI.fontSizeMap": {
     "13px": "13px",
@@ -117,7 +117,7 @@
   },
   "customizeUI.stylesheet": {
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
-    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'JetBrains Mono'; font-size: 13px;"
+    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'MonoLisa'; font-size: 13px;"
   },
   "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
@@ -132,7 +132,7 @@
   "editor.cursorSurroundingLines": 10,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
@@ -173,12 +173,12 @@
     "*.sublime-keymap": "json",
     "*.textbundle": "markdown",
     ".ackrc": "shellscript",
-    ".ideavimrc": "viml",
-    ".spacemacs": "lisp",
-    "settings.json": "jsonc",
     ".env": "env",
     ".env-example": "env",
-    ".prettierrc": "yaml"
+    ".ideavimrc": "viml",
+    ".prettierrc": "yaml",
+    ".spacemacs": "lisp",
+    "settings.json": "jsonc"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -232,7 +232,9 @@
   ],
   "indentRainbow.includedLanguages": ["python"],
   "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "json.trace.server": "verbose",
+  "jupyter.askForKernelRestart": false,
   "jupyter.sendSelectionToInteractiveWindow": false,
   "keyboard.dispatch": "keyCode",
   "markdown.extension.italic.indicator": "_",
@@ -472,12 +474,12 @@
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
-  "terminal.integrated.fontFamily": "JetBrains Mono, Hack Nerd Font",
+  "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.tabs.enabled": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
     "BUG",
@@ -489,7 +491,6 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "todo-tree.tree.showScanModeButton": false,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
   "vim.cursorStylePerMode.insert": "line",
@@ -845,6 +846,7 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/Users/juliant/GitLocal/Play/nvim-osx64/bin/nvim",
   "vscode-neovim.revealCursorScrollLine": true,
   "vscode-neovim.textDecorationsAtTop": true,
+  "vscsm.smergeExecutablePath": "/usr/local/bin/smerge",
   "vspacecode.bindingOverrides": [
     {
       "bindings": [
@@ -1905,17 +1907,17 @@
       "terminal.ansiWhite": "#ffffff",
       "terminal.ansiYellow": "#ffea7f"
     },
-    "editorCursor.foreground": "#db2466",
-    "terminal.ansiBlack": "#24292e",
-    "terminal.ansiBlue": "#b392f0",
-    "terminal.ansiCyan": "#79b8ff",
-    "terminal.ansiGreen": "#85e89d",
-    "terminal.ansiMagenta": "#f692ce",
-    "terminal.ansiRed": "#f97583",
-    "terminal.ansiWhite": "#ffffff",
-    "terminal.ansiYellow": "#ffea7f"
+    "editorCursor.foreground": "#db2466"
+    // "terminal.ansiBlack": "#24292e",
+    // "terminal.ansiBlue": "#b392f0",
+    // "terminal.ansiCyan": "#79b8ff",
+    // "terminal.ansiGreen": "#85e89d",
+    // "terminal.ansiMagenta": "#f692ce",
+    // "terminal.ansiRed": "#f97583",
+    // "terminal.ansiWhite": "#ffffff",
+    // "terminal.ansiYellow": "#ffea7f"
   },
-  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Dracula",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
@@ -1935,7 +1937,6 @@
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
@@ -1944,6 +1945,6 @@
   "yaml.schemas": {
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "vscsm.smergeExecutablePath": "/usr/local/bin/smerge"
+  "workbench.productIconTheme": "material-product-icons",
+  "projectManager.showProjectNameInStatusBar": true
 }

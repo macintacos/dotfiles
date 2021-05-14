@@ -1235,6 +1235,11 @@
     "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
   },
   {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
     "command": "extension.jumpy-exit",
     "key": "Escape",
     "when": "editorTextFocus && jumpy.isJumpyMode"
@@ -1996,7 +2001,7 @@
   {
     "key": ".",
     "command": "multiCommand.acceptCompletionAndInsertPeriod",
-    "when": "resourceLangId == python && suggestWidgetVisible"
+    "when": "resourceLangId == python && suggestWidgetMultipleSuggestions"
   },
   {
     "key": "=",
