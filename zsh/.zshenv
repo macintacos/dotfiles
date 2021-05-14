@@ -21,6 +21,7 @@ export GNUMAKE="$(/usr/local/bin/brew --prefix)/opt/make/libexec/gnubin"
 export GOPATH=$HOME/GoWorkspace
 export GO_BIN="/usr/local/go/bin"
 export HELM_2="/usr/local/opt/helm@2/bin"
+export HOME_LOCAL_BIN="$HOME/.local/bin"
 export KEKA=/Applications/Keka.app/Contents/MacOS
 export KUBECONFIG=~/.kube/config.staging:~/.kube/config.prod
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
@@ -46,4 +47,4 @@ export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$OPENSSL:$GNUGREP:$GNUMAKE:$LOCAL_BIN:$PYENV_BIN:$POETRY_BIN:$CUSTOM_SCRIPTS:$BAT_THEME:$DOTFILES_HOME:$DROPBOX:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
+export PATH="$OPENSSL:$GNUGREP:$GNUMAKE:$LOCAL_BIN:$HOME_LOCAL_BIN:$PYENV_BIN:$POETRY_BIN:$CUSTOM_SCRIPTS:$BAT_THEME:$DOTFILES_HOME:$DROPBOX:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
