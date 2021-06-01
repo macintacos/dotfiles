@@ -75,7 +75,8 @@
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.rulers": [88]
   },
   "[shellscript]": {
     "editor.formatOnSave": false
@@ -142,7 +143,7 @@
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
@@ -158,6 +159,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "errorLens.addNumberOfDiagnostics": true,
+  "errorLens.onSave": true,
   "errorLens.followCursor": "activeLine",
   "errorLens.gutterIconsEnabled": true,
   "eslint.run": "onSave",
@@ -409,10 +411,12 @@
   "projectManager.openInNewWindowWhenClickingInStatusBar": true,
   "projectManager.sortList": "Saved",
   "python.analysis.autoImportCompletions": true,
+  "python.experiments.optInto": ["pythonDiscoveryModuleWithoutWatcher"],
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.blackPath": "/usr/local/bin/black",
+  "python.logging.level": "info",
+  "python.formatting.blackPath": "black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.sortImports.args": [
@@ -1585,9 +1589,15 @@
           "type": "command"
         },
         {
-          "command": "workbench.view.extension.todo-tree-container",
+          "command": "todo-tree-view.focus",
           "key": "t",
           "name": "TODO View",
+          "type": "command"
+        },
+        {
+          "command": "timeline.focus",
+          "key": "T",
+          "name": "Timeline View",
           "type": "command"
         },
         {
@@ -1946,5 +1956,8 @@
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "workbench.productIconTheme": "material-product-icons",
-  "projectManager.showProjectNameInStatusBar": true
+  "projectManager.showProjectNameInStatusBar": true,
+  "python.showStartPage": false,
+  "workbench.editor.enablePreview": false,
+  "redhat.telemetry.enabled": false
 }
