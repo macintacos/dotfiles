@@ -1999,16 +1999,6 @@
     "when": "hasSearchResult && searchViewletVisible && focusedView == 'workbench.view.search'"
   },
   {
-    "key": ".",
-    "command": "multiCommand.acceptCompletionAndInsertPeriod",
-    "when": "resourceLangId == python && suggestWidgetMultipleSuggestions"
-  },
-  {
-    "key": "=",
-    "command": "multiCommand.acceptCompletionAndInsertEquals",
-    "when": "resourceLangId == python && suggestWidgetVisible"
-  },
-  {
     "key": "ctrl+j",
     "command": "list.focusDown",
     "when": "panelFocus && activePanel == 'workbench.panel.markers' && !inputFocus"
