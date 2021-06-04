@@ -387,6 +387,7 @@
       ]
     }
   ],
+  "mypy.dmypyExecutable": "/Users/juliant/.mypyls/bin/dmypy",
   "nightswitch.autoSwitch": false,
   "nightswitch.dayTheme": "GitHub Light",
   "nightswitch.nightTheme": "GitHub Dark",
@@ -848,6 +849,7 @@
     }
   ],
   "vim.visualstar": true,
+  "vscode-kubernetes.kubectl-path.mac": "/Users/juliant/.asdf/shims/kubectl",
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
   "vscode-neovim.neovimExecutablePaths.darwin": "/Users/juliant/GitLocal/Play/nvim-osx64/bin/nvim",
