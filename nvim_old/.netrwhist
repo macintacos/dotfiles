@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/private/var/folders/h_/3f3z91t936q41d46hflhqq640000gn/T/linux@master-18880-L7Q9Kb04ixun--peekautodelete'
+let g:netrw_dirhist_8='/Users/juliant/GitLocal/Work/bosun'
+let g:netrw_dirhist_7='/Users/juliant/GitLocal/Play/discord-test'
+let g:netrw_dirhist_6='/Users/juliant/GitLocal/Play/qmk_firmware'
+let g:netrw_dirhist_5='/Users/juliant/GitLocal/Play/advent-of-code'
+let g:netrw_dirhist_4='/Users/juliant/GitLocal/Play/advent-of-code/2020'
+let g:netrw_dirhist_3='/Users/juliant/GitLocal/Play/advent-of-code'
+let g:netrw_dirhist_2='/Users/juliant/GitLocal/Play/advent-of-code/2020'
+let g:netrw_dirhist_1='/Users/juliant/GitLocal/Play/advent-of-code'
+let g:netrw_dirhist_0='/Users/juliant/GitLocal/Learning/fluent-python-second-edition/src'
