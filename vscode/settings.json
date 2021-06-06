@@ -1961,5 +1961,7 @@
   "workbench.view.alwaysShowHeaderActions": true,
   "yaml.schemas": {
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  }
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "Lua.telemetry.enable": false
 }
