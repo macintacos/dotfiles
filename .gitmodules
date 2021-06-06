@@ -1,3 +1,6 @@
 [submodule "zsh/secrets"]
 	path = zsh/secrets
 	url = https://github.com/macintacos/secrets.git
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/macintacos/nvim
