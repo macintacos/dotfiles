@@ -91,6 +91,7 @@ IronGeek.vscode-env
 jacobdufault.fuzzy-search
 jakob101.RelativePath
 jdinhlife.gruvbox
+jgclark.vscode-todo-highlight
 johnpapa.winteriscoming
 jolaleye.horizon-theme-vscode
 jy-xlj.vscode-json-editor
@@ -99,6 +100,7 @@ kevinmcgowan.TypeScriptImport
 KevinRose.vsc-python-indent
 khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
+Koihik.vscode-lua-format
 lacroixdavid1.vscode-format-context-menu
 LaurentTreguier.rpm-spec
 LaurentTreguier.vscode-simple-icons
@@ -126,7 +128,9 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
+ms-vscode.test-adapter-converter
 ms-vscode.vscode-typescript-next
+ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 mushan.vscode-paste-image
 naumovs.color-highlight
@@ -171,6 +175,7 @@ stackbreak.comment-divider
 stkb.rewrap
 stylelint.vscode-stylelint
 Sujan.code-blue
+sumneko.lua
 svipas.control-snippets
 TakumiI.markdowntable
 tamasfe.even-better-toml

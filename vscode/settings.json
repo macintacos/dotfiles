@@ -1,4 +1,5 @@
 {
+  "Lua.telemetry.enable": false,
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -65,7 +66,7 @@
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
   },
   "[plaintext]": {
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "off",
     "editor.wordWrapColumn": 120
   },
   "[python]": {
@@ -76,11 +77,13 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.rulers": [88],
-    "editor.tabSize": 4
+    "editor.tabSize": 8
   },
   "[shellscript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "shellformat.flag": "-i 2 -ci -bn",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -110,7 +113,7 @@
   "codeui.targetingMode": "themeSpecific",
   "color-highlight.markRuler": false,
   "color-highlight.markerType": "underline",
-  "confluenceMarkup.monospaceFont": "MonoLisa Nerd Font",
+  "confluenceMarkup.monospaceFont": "MonoLisa",
   "customizeUI.activityBar": "regular",
   "customizeUI.fontSizeMap": {
     "13px": "13px",
@@ -118,7 +121,7 @@
   },
   "customizeUI.stylesheet": {
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
-    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'MonoLisa Nerd Font '; font-size: 13px;"
+    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'MonoLisa'; font-size: 13px;"
   },
   "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
@@ -133,17 +136,18 @@
   "editor.cursorSurroundingLines": 10,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
-  "editor.fontFamily": "MonoLisa Nerd Font",
+  "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
   "editor.lineHeight": 21,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
+  "editor.semanticHighlighting.enabled": true,
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
@@ -482,7 +486,7 @@
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
-  "terminal.integrated.fontFamily": "MonoLisa Nerd Font, Hack Nerd Font",
+  "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
@@ -1940,16 +1944,10 @@
   "workbench.editor.revealIfOpen": false,
   "workbench.editor.showTabs": false,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.editorAssociations": [
-    {
-      "filenamePattern": "*.json",
-      "viewType": "default"
-    },
-    {
-      "filenamePattern": "*.ipynb",
-      "viewType": "jupyter.notebook.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.json": "default"
+  },
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
@@ -1962,6 +1960,5 @@
   "yaml.schemas": {
     "file:///Users/juliant/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
-  "editor.semanticHighlighting.enabled": true,
-  "Lua.telemetry.enable": false
+  "vim.smartRelativeLine": true
 }

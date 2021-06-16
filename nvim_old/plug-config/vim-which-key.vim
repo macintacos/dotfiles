@@ -421,35 +421,36 @@ let g:which_key_map_local.b = {
             \ }
 
 "" MARKDOWN
-autocmd FileType markdown nmap <buffer> <localleader>mv <Plug>MarkdownPreview
+autocmd FileType markdown nmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>
 autocmd FileType markdown nmap <buffer> <localleader>m-  <Cmd>call mkdx#ToggleCheckboxState(1)<CR>
 autocmd FileType markdown nmap <buffer> <localleader>m=  <Cmd>call mkdx#ToggleCheckboxState()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m-  <Cmd>call mkdx#ToggleCheckboxState()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m=  <Cmd>call mkdx#ToggleCheckboxState(1)<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m[  <Cmd><C-U>call mkdx#ToggleHeader(1)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m]  <Cmd><C-U>call mkdx#ToggleHeader()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink()<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink("v")<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic, "mkdx-text-italic-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold, "mkdx-text-bold-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold)<CR>
-autocmd FileType markdown nmap <buffer> <localleader>m` <Cmd><C-U>call mkdx#WrapText("n", "`", "`", "mkdx-text-inline-code-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m` <Cmd>call      mkdx#WrapSelectionInCode()<CR>:call mkdx#MaybeRestoreVisual()<CR>
-autocmd FileType markdown nmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("n", "<strike>", "</strike>", "mkdx-text-strike-n")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("v", "<strike>", "</strike>")<CR>
-autocmd FileType markdown vmap <buffer> <localleader>m, <Cmd>call mkdx#Tableize()<CR>:call mkdx#MaybeRestoreVisual()<CR>
 autocmd FileType markdown nmap <buffer> <localleader>mI <Cmd>call mkdx#QuickfixHeaders()<CR>
 autocmd FileType markdown nmap <buffer> <localleader>mL <Cmd>call mkdx#QuickfixDeadLinks()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m[  <Cmd><C-U>call mkdx#ToggleHeader(1)<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m]  <Cmd><C-U>call mkdx#ToggleHeader()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>m` <Cmd><C-U>call mkdx#WrapText("n", "`", "`", "mkdx-text-inline-code-n")<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold, "mkdx-text-bold-n")<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("n", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic, "mkdx-text-italic-n")<CR>
 autocmd FileType markdown nmap <buffer> <localleader>mj <Cmd>call mkdx#JumpToHeader()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("n", "<strike>", "</strike>", "mkdx-text-strike-n")<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>
+autocmd FileType markdown nmap <buffer> <localleader>mv <Plug>MarkdownPreview
+
+autocmd FileType markdown vmap <buffer> <localleader>m'  <Cmd>call mkdx#ToggleQuote()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m, <Cmd>call mkdx#Tableize()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m-  <Cmd>call mkdx#ToggleCheckboxState()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m=  <Cmd>call mkdx#ToggleCheckboxState(1)<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>m` <Cmd>call      mkdx#WrapSelectionInCode()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mb <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.bold, g:mkdx#settings.tokens.bold)<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mi <Cmd><C-U>call mkdx#WrapText("v", g:mkdx#settings.tokens.italic, g:mkdx#settings.tokens.italic)<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mk <Cmd><C-U>call mkdx#WrapLink("v")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mll <Cmd>call mkdx#ToggleList()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mlt <Cmd>call mkdx#ToggleChecklist()<CR>:call mkdx#MaybeRestoreVisual()<CR>
+autocmd FileType markdown vmap <buffer> <localleader>ms <Cmd><C-U>call mkdx#WrapText("v", "<strike>", "</strike>")<CR>
+autocmd FileType markdown vmap <buffer> <localleader>mt  <Cmd>call mkdx#ToggleCheckboxTask()<CR>:call mkdx#MaybeRestoreVisual()<CR>
 
 autocmd FileType markdown let g:which_key_map_local.m = {
             \ 'name': '+markdown',

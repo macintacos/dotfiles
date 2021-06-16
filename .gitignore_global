@@ -5,3 +5,7 @@
 **/venv/**
 **/.isort.cfg
 .python-version
+
+# editing
+tags
+tags.**
