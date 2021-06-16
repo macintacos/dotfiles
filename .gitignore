@@ -14,3 +14,4 @@ npm/npm-backup-current.txt.*
 /nvim/.netrwhist
 /backup/Brewfile.lock.json
 /setup/setup.log
+tags

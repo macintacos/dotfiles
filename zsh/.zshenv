@@ -3,7 +3,7 @@
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 export NVIM_HOME="$DOTFILES_HOME/nvim"
-export PLUG_CONFIG_NVIM_HOME="$NVIM_HOME/plug-config"
+export PLUG_NVIM_HOME="$NVIM_HOME/viml/plug"
 export ZDOTDIR="$DOTFILES_HOME/zsh"
 export QMK_HOME="$HOME/GitLocal/Play/qmk_firmware/"
 

@@ -4,7 +4,7 @@
 export _ZO_EXCLUDE_DIRS="$HOME/Library/Containers/*"
 
 # Dracula colors
-local background="#282a36"
+local background="#212336"
 local current_line="#44475a"
 local selection="#44475a"
 local foreground="#f8f8f2"
