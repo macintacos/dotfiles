@@ -8,15 +8,15 @@ export PATH="$PWD/setup:$PATH"
 #                             macOS System Settings                            #
 # ---------------------------------------------------------------------------- #
 
-plzlog info "This script will change a bunch of macOS settings to sensible defaults."
-plzlog info "We're going to quit System Preferences..."
+log info "This script will change a bunch of macOS settings to sensible defaults."
+log info "We're going to quit System Preferences..."
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-plzlog ok "Done."
+log ok "Done."
 
 # Ask for the administrator password upfront
-plzlog info "We need your password in order to setup things properly."
+log info "We need your password in order to setup things properly."
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
@@ -25,11 +25,11 @@ while true; do
     sleep 60
     kill -0 "$$" || exit
 done 2>/dev/null &
-plzlog ok "Time to set everything up!"
+log ok "Time to set everything up!"
 
 # ------------------------------- General UI/UX ------------------------------ #
 
-plzlog info "Changing general UI/UX things..."
+log info "Changing general UI/UX things..."
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -50,7 +50,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # ----------------------------- Input Management ----------------------------- #
 
-plzlog info "Changing input things..."
+log info "Changing input things..."
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -59,7 +59,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # ------------------------------- Screen Stuff ------------------------------- #
 
-plzlog info "Changing screen stuff..."
+log info "Changing screen stuff..."
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -71,7 +71,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # ---------------------------------- Finder ---------------------------------- #
 
-plzlog info "Updating the Finder..."
+log info "Updating the Finder..."
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -146,7 +146,7 @@ sudo chflags nohidden /Volumes
 
 # ---------------------------------- Safari ---------------------------------- #
 
-plzlog info "Updating Safari..."
+log info "Updating Safari..."
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -167,7 +167,7 @@ defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # ---------------------------------- Cleanup --------------------------------- #
 
-plzlog info "Cleaning up..."
+log info "Cleaning up..."
 
 for app in \
     "Finder" \
@@ -175,5 +175,5 @@ for app in \
     killall "${app}" &>/dev/null
 done
 
-plzlog ok "Setup complete."
-plzlog info "Note that some of these changes require a logout/restart to take effect. You should probably do it just to be safe."
+log ok "Setup complete."
+log info "Note that some of these changes require a logout/restart to take effect. You should probably do it just to be safe."

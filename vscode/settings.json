@@ -178,7 +178,8 @@
     ".ideavimrc": "viml",
     ".prettierrc": "yaml",
     ".spacemacs": "lisp",
-    "settings.json": "jsonc"
+    "settings.json": "jsonc",
+    "keybindings.json": "jsonc"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -266,6 +267,14 @@
     "default": true
   },
   "multiCommand.commands": [
+    {
+      "command": "multiCommand.acceptFindAndExit",
+      "sequence": [
+        "editor.action.nextMatchFindAction",
+        "closeFindWidget",
+        "extension.vim_escape"
+      ]
+    },
     {
       "command": "multiCommand.peekDefinitionAndFocus",
       "interval": 100,
@@ -548,7 +557,7 @@
     {
       "after": ["<ESC>"],
       "before": ["<ESC>"],
-      "commands": [":nohl"]
+      "commands": [":nohl", "closeFindWidget"]
     },
     {
       "before": ["g", "h"],
@@ -745,15 +754,50 @@
           "command": "whichkey.triggerKey"
         }
       ]
+    },
+    {
+      "before": ["\\"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["/"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["n"],
+      "commands": ["editor.action.nextMatchFindAction"]
+    },
+    {
+      "before": ["N"],
+      "commands": ["editor.action.previousMatchFindAction"]
+    },
+    {
+      "before": ["*"],
+      "commands": ["actions.findWithSelection"]
     }
   ],
   "vim.searchHighlightColor": "#85e89d",
   "vim.searchHighlightTextColor": "#24292e",
   "vim.smartRelativeLine": true,
+  "vim.debug.loggingLevelForConsole": "debug",
   "vim.smartcase": true,
   "vim.sneak": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["/"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["n"],
+      "commands": ["editor.action.nextMatchFindAction"]
+    },
+    {
+      "before": ["N"],
+      "commands": ["editor.action.previousMatchFindAction"]
+    },
     {
       "after": ["<leader>", "<leader>", "f"],
       "before": ["f"]
@@ -849,7 +893,6 @@
       ]
     }
   ],
-  "vim.visualstar": true,
   "vscode-kubernetes.kubectl-path.mac": "/Users/juliant/.asdf/shims/kubectl",
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
@@ -1403,12 +1446,6 @@
           "type": "command"
         },
         {
-          "command": "workbench.action.selectIconTheme",
-          "key": "i",
-          "name": "Choose icon theme",
-          "type": "command"
-        },
-        {
           "command": "workbench.action.openGlobalKeybindings",
           "key": "k",
           "name": "Open global keybindings",
@@ -1430,12 +1467,6 @@
           "command": "workbench.action.openSettingsJson",
           "key": "s",
           "name": "Open global settings JSON",
-          "type": "command"
-        },
-        {
-          "command": "workbench.action.selectTheme",
-          "key": "t",
-          "name": "Choose color theme",
           "type": "command"
         },
         {
@@ -1590,6 +1621,12 @@
     {
       "bindings": [
         {
+          "command": "extension.copyGitHubLinkToClipboard",
+          "key": "g",
+          "name": "Copy GitHub link to current file",
+          "type": "command"
+        },
+        {
           "command": "editor.action.copyLinesDownAction",
           "key": "j",
           "name": "Copy line(s) down",
@@ -1695,7 +1732,7 @@
         }
       ],
       "keys": ["g", "f"],
-      "name": "+File...",
+      "name": "+File",
       "type": "bindings"
     },
     {
@@ -1905,6 +1942,37 @@
       "keys": ["x", "d"],
       "name": "+Delete",
       "type": "bindings"
+    },
+    {
+      "keys": ["T", "s"],
+      "name": "+Select Themes",
+      "type": "bindings",
+      "bindings": [
+        {
+          "command": "workbench.action.selectTheme",
+          "key": "c",
+          "name": "Select: Editor Color Theme",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.selectIconTheme",
+          "key": "f",
+          "name": "Select: File Icon Theme",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.selectProductIconTheme",
+          "key": "p",
+          "name": "Select: Product Icon Theme",
+          "type": "command"
+        },
+        {
+          "command": "extension.toggleTheeme",
+          "key": "t",
+          "name": "Toggle Day/Night Theme",
+          "type": "command"
+        }
+      ]
     }
   ],
   "whichkey.delay": 200,
@@ -1942,7 +2010,6 @@
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
-  "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",

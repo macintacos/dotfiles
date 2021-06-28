@@ -25,3 +25,10 @@ symlink:
 # Backup packages, casks, and plugins
 backup:
 	@zsh -i -c backup-now
+
+# Sort keybindings (and eventually other things)
+sort:
+	@echo "==> Sorting things..."
+	node vscode/sort-keybindings.js
+	prettier -w vscode/settings.json
+	@echo "==> Things have been sorted."

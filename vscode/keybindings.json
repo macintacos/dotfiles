@@ -1235,6 +1235,51 @@
     "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
   },
   {
+    "key": "m",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "e",
+    "command": "list.select",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "E",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "d d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "d shift+d",
+    "command": "moveFileToTrash",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "g f",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "shift+j",
+    "command": "list.expandSelectionDown",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "shift+k",
+    "command": "list.expandSelectionUp",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "u",
+    "command": "undo",
+    "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
+  },
+  {
     "key": "shift+a",
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && !editorTextFocus && !inputFocus"
@@ -1277,8 +1322,18 @@
     "when": "inFileBrowser"
   },
   {
-    "key": "c",
+    "key": "y y",
     "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "y p",
+    "command": "copyFilePath",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "y r",
+    "command": "copyRelativeFilePath",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
@@ -1447,12 +1502,12 @@
   {
     "key": "escape",
     "command": "workbench.action.blur",
-    "when": "!editorTextFocus && !whichKeyActive && inputFocus && !terminalFocus"
+    "when": "inputFocus && !editorTextFocus && !terminalFocus && !whichKeyActive && !findInputFocussed"
   },
   {
     "key": "escape",
     "command": "workbench.action.blur",
-    "when": "!editorTextFocus && !whichKeyActive && panelFocus && !terminalFocus"
+    "when": "panelFocus && !editorTextFocus && !terminalFocus && !whichKeyActive && !findInputFocussed"
   },
   {
     "key": "shift+escape",
@@ -1767,11 +1822,6 @@
     "when": "sideBarFocus"
   },
   {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
     "key": "alt+cmd+backspace",
     "command": "-deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
@@ -1797,7 +1847,7 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "p",
+    "key": "shift+p",
     "command": "filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
@@ -1819,11 +1869,6 @@
   {
     "key": "g h",
     "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "X",
-    "command": "code-runner.run",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
@@ -2042,30 +2087,89 @@
     "key": "shift+tab",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
-},
-{
-	"key": "space",
-	"command": "vspacecode.space",
-	"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-},
-{
-	"key": "space",
-	"command": "vspacecode.space",
-	"when": "sideBarFocus && !inputFocus && !whichkeyActive"
-},
-{
-	"key": "tab",
-	"command": "extension.vim_tab",
-	"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-},
-{
-	"key": "tab",
-	"command": "-extension.vim_tab",
-	"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-},
-{
-	"key": "ctrl+l",
-	"command": "acceptSelectedSuggestion",
-	"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-}
+  },
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    "key": "enter",
+    "command": "multiCommand.acceptFindAndExit",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-extension.vim_ctrl+n",
+    "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "suggestWidgetVisible && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "editor.action.addSelectionToFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+x",
+    "command": "-filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-copyFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "-workbench.action.selectTheme"
+  }
 ]
