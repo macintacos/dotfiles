@@ -20,7 +20,7 @@ while (queue.length > 0) {
 
 fs.writeFileSync(
   "./vscode/settings.json",
-  JSON.stringify(package, null, " ") + "\n"
+  JSON.stringify(package, null, "  ") + "\n"
 );
 
 function getType(b) {

@@ -2042,5 +2042,30 @@
     "key": "shift+tab",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
-  }
+},
+{
+	"key": "space",
+	"command": "vspacecode.space",
+	"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+},
+{
+	"key": "space",
+	"command": "vspacecode.space",
+	"when": "sideBarFocus && !inputFocus && !whichkeyActive"
+},
+{
+	"key": "tab",
+	"command": "extension.vim_tab",
+	"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+},
+{
+	"key": "tab",
+	"command": "-extension.vim_tab",
+	"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+},
+{
+	"key": "ctrl+l",
+	"command": "acceptSelectedSuggestion",
+	"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+}
 ]
