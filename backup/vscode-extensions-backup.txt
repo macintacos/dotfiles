@@ -106,6 +106,7 @@ LaurentTreguier.rpm-spec
 LaurentTreguier.vscode-simple-icons
 lehni.vscode-fix-checksums
 leizongmin.node-module-intellisense
+leodevbro.blockman
 letrieu.expand-region
 liviuschera.noctis
 lkytal.FlatUI
@@ -137,6 +138,7 @@ naumovs.color-highlight
 njpwerner.autodocstring
 oderwat.indent-rainbow
 okitavera.vscode-nunjucks-formatter
+olback.es6-css-minify
 oliversturm.fix-json
 pejmannikram.vscode-auto-scroll
 philipbe.theme-gray-matter

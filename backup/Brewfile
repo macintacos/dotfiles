@@ -8,6 +8,7 @@ tap "eth-p/software"
 tap "federico-terzi/espanso"
 tap "github/gh"
 tap "golangci/tap"
+tap "helix-editor/helix"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -59,12 +60,14 @@ brew "broot"
 brew "fontconfig"
 brew "gettext"
 brew "pkg-config"
+brew "libunistring"
+brew "nettle"
+brew "cask"
 brew "ccat"
 brew "cfssl"
 brew "cliclick"
 brew "colordiff"
-brew "ctags"
-brew "libunistring"
+brew "ctags", link: false
 brew "rtmpdump"
 brew "curl"
 brew "deno"
@@ -86,7 +89,6 @@ brew "fd"
 brew "flac"
 brew "frei0r"
 brew "giflib"
-brew "nettle"
 brew "graphite2"
 brew "harfbuzz"
 brew "little-cms2"
@@ -248,9 +250,11 @@ brew "zplug"
 brew "zsh"
 brew "zsh-completions"
 brew "alexanderwillner/tap/things.sh"
+brew "d12frosted/emacs-plus/emacs-plus@27", args: ["with-no-titlebar", "with-nobu417-big-sur-icon"]
 brew "drone/drone/drone"
 brew "eth-p/software/bat-extras"
 brew "golangci/tap/golangci-lint"
+brew "helix-editor/helix/helix"
 brew "heroku/brew/heroku"
 brew "jarred-sumner/git-peek/git-peek"
 brew "jesseduffield/lazygit/lazygit"
@@ -263,7 +267,7 @@ brew "orf/brew/gping"
 brew "px4/px4/gcc-arm-none-eabi", link: false
 brew "qmk/qmk/qmk"
 brew "tankerhq/repo/ruplacer"
-brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD", "with-jansson"]
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "1password-cli"
 cask "alacritty"
 cask "docker"
@@ -323,16 +327,18 @@ mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "MenubarClock", id: 492167985
 mas "Microsoft To Do", id: 1274495053
+mas "MindNode", id: 1289197285
 mas "NotePlan 3", id: 1505432629
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905
-mas "Poolside FM", id: 1514817810
+mas "Poolsuite FM", id: 1514817810
 mas "Reeder", id: 1529448980
 mas "Screens", id: 1224268771
 mas "Service Station", id: 1503136033
+mas "Spark", id: 1176895641
 mas "SwitchGlass", id: 1498546559
 mas "Things", id: 904280696
 mas "ToothFairy", id: 1191449274
