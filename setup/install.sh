@@ -133,4 +133,7 @@ log info "Wrap things up by symlinking again for good measure..."
 link_all
 log ok "Done!"
 
+# now do the macos stuff
+./macos
+
 "$@"

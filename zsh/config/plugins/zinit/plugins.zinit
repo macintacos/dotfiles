@@ -8,10 +8,12 @@ zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
 zinit light zsh-users/zsh-autosuggestions
-zinit light softmoth/zsh-vim-mode
 zinit light IngoMeyer441/zsh-easy-motion
 zinit light Aloxaf/fzf-tab
 zinit light qoomon/zsh-lazyload
+
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 
 zinit ice as"completion"
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker

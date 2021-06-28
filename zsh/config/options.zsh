@@ -11,13 +11,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # }}}
 
 # ZSH SETTINGS {{{
-DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 DEFAULT_USER="$(whoami)"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 
 HISTSIZE=100000
 SAVEHIST=100000
+HISTFILE=$ZDOTDIR/.zsh_history
 
 setopt APPENDHISTORY          # Append to history instead of replacing it
 setopt AUTO_CD                # `cd` to directories by just giving the directory by itself
