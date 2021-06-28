@@ -14,7 +14,9 @@ bash_link() {
 zsh_link() {
     log info "Linking ZSH..."
     rm -rf ~/.zshenv
+    rm -rf ~/.zsh_history
     ln -sF "${DOTFILES_HOME}/zsh/.zshenv" ~/.zshenv
+    ln -sF "${DOTFILES_HOME}/zsh/.zsh_history" ~/.zsh_history
     log ok "ZSH linked"
 }
 
