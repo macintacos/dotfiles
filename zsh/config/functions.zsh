@@ -106,7 +106,7 @@ function jbr() { # open current branch in jira
 }
 
 function ch() { # pipe cht.sh output to "bat"
-  cht.sh "$@" | bat --theme=ansi --style=numbers,grid
+  cht.sh "$@" | bat --style=numbers,grid
 }
 
 function cdf() { # Change working directory to the top-most Finder window location
@@ -141,14 +141,14 @@ function jt-git-delete-lingering-branches() {
   if [ "${#branches_to_delete[@]}" -eq 0 ]; then
     log info "No branches found to delete. Not doing anything."
   else
-    log warn "We will be deleting the following branches: ${YELLOW}${branches_to_delete[*]}${RESET}"
+    log warn "We will be deleting the following branches: ${branches_to_delete[*]}"
 
     echo "Are you sure you want to delete these local branches?"
     select input in "Yes" "No"; do
       case $input in
       Yes)
         echo "ok"
-        log info "Deleting branches ${YELLOW}${branches_to_delete[*]}${RESET}"
+        log info "Deleting branches ${branches_to_delete[*]}"
         for branch in $branches_to_delete; do
           git branch -D "$branch"
         done

@@ -6,7 +6,7 @@ set NERDTree
 set ReplaceWithRegister
 set clipboard+=unnamed
 set commentary
-set easymotion
+" set easymotion
 set highlightedyank
 set hlsearch
 set ideajoin

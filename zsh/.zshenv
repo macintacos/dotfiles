@@ -9,7 +9,7 @@ export QMK_HOME="$HOME/GitLocal/Play/qmk_firmware/"
 
 export ANT_OPTS="-Xms64m -Xmx1500m"
 export ANT_HOME=/usr/local/apache-ant-1.10.5
-export BAT_THEME="TwoDark"
+export BAT_THEME="Dracula"
 export CHEAT_COLORS=true
 export CHEAT_COLORSCHEME=dark
 export COLORTERM="truecolor"
@@ -28,7 +28,7 @@ export KEKA=/Applications/Keka.app/Contents/MacOS
 export KUBECONFIG=~/.kube/config.staging:~/.kube/config.prod
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export LOCAL_BIN=/usr/local/bin
-export MANPAGER="sh -c 'col -bx | bat -l man -p --theme=ansi --style=numbers,grid'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 export MMS_HOME="$HOME/GitLocal/Work/mms"
 export MYSQL=/usr/local/mysql-8.0.11-macos10.13-x86_64/bin/
 export MY_ZSH_SCRIPTS=$ZDOTDIR/scripts

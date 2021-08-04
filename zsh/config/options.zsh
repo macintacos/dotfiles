@@ -21,6 +21,7 @@ HISTFILE=$ZDOTDIR/.zsh_history
 
 setopt APPENDHISTORY          # Append to history instead of replacing it
 setopt AUTO_CD                # `cd` to directories by just giving the directory by itself
+setopt EXTENDED_HISTORY       # Extended history format
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
 setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.

@@ -47,3 +47,6 @@ fi
 
 # --------------------------------- dircolors -------------------------------- #
 . "$HOME/.local/share/lscolors.sh"
+
+# ---------------- fig https://github.com/withfig/autocomplete --------------- #
+# fig source

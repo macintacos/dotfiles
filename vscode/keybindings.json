@@ -2171,5 +2171,23 @@
   {
     "key": "cmd+k cmd+t",
     "command": "-workbench.action.selectTheme"
+  },
+  {
+    "key": "tab",
+    "command": "leaper.leap",
+    "when": "editorTextFocus && leaper.hasLineOfSight && leaper.inLeaperMode && !editorHasSelection && !editorTabMovesFocus && !suggestWidgetVisible && vim.mode == 'Insert'"
+  },
+  {
+    "key": "tab",
+    "command": "-leaper.leap",
+    "when": "editorTextFocus && leaper.hasLineOfSight && leaper.inLeaperMode && !editorHasSelection && !editorTabMovesFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeEditorInAllGroups"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   }
 ]

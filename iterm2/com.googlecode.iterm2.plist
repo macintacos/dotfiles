@@ -8066,6 +8066,8 @@
 			<string>No</string>
 			<key>Allow Title Reporting</key>
 			<true/>
+			<key>Allow Title Setting</key>
+			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -8268,7 +8270,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>/bin/zsh</string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -8335,6 +8337,8 @@
 			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -9043,6 +9047,8 @@
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
 			<integer>0</integer>
+			<key>Title Components</key>
+			<integer>544</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unicode Version</key>

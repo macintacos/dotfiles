@@ -3,7 +3,7 @@
 # UTILITIES; SHORTENED {{{
 alias bazel="$HOME/GitLocal/Work/mms/bazelisk" # can just keep this to the local bazelisk script
 alias c='clear && ll'                          # clear terminal display, show directory
-alias cat='bat --theme="ansi"'                 # because bat is just insanely better than cat
+alias cat='bat'                                # because bat is just insanely better than cat
 alias cls='clear'                              # clear sisplay, just like `mongo` shell
 alias count='tokei'                            # use this to count the amount of files in a given directory
 alias cp='cp -iv'                              # preferred 'cp' implementation
@@ -18,6 +18,8 @@ alias grep='grep --color'                      # always colorize output
 alias hdi='howdoi -c -n 3'                     # howdoi plugin to search for code completion stuff
 alias kill='fkill'                             # a better process killer
 alias mv='mv -iv'                              # preferred 'mv' implementation
+alias ipython="ipython"                        # revert to normal ipython, override the python plugin from ohmyzsh
+alias px="PIPX_DEFAULT_PYTHON='$PYENV_ROOT/shims/python' pipx" # Have pipx play nice with pyenv
 alias r='ranger-cd'                            # mapped to the ranger function that cd's the appropriate directory when you quit
 alias rg='rg -ziN'                             # always ignore line numbers, search compressed files, case-insensitivity
 alias rm='rm -i'                               # makes sure 'rm' always requires confirmation

@@ -108,6 +108,17 @@ ideavimrc_link() {
     log ok ".ideavimrc linked."
 }
 
+kitty_link() {
+    log info "Linking kitty config..."
+    log info "Clearing target files..."
+    rm -f "$HOME/.config/kitty/kitty.conf"
+
+    log info "Linging kitty config..."
+    ln -sF "${DOTFILES_HOME}/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+
+    log ok "kitty config linked."
+}
+
 ## ALL {{{
 link_all() {
     log info "Creating all symlinks..."
@@ -121,5 +132,6 @@ link_all() {
     lnav_link
     gitignore_global_link
     ideavimrc_link
+    kitty_link
     log ok "All symlinks created."
 }

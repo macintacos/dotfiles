@@ -24,7 +24,7 @@ symlink:
 
 # Backup packages, casks, and plugins
 backup:
-	@zsh -i -c backup-now
+	@zsh -i -c jt-backup-now
 
 # Sort keybindings (and eventually other things)
 sort:
