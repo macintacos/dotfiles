@@ -111,6 +111,7 @@
   "commands.commands": {},
   "confluenceMarkup.monospaceFont": "MonoLisa",
   "customizeUI.activityBar": "regular",
+  "customizeUI.font.regular": "MonoLisa",
   "customizeUI.fontSizeMap": {
     "13px": "13px",
     "monospace": "14px"
@@ -118,10 +119,7 @@
   "customizeUI.stylesheet": {
     ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
     ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
-    ".quick-input-widget .monaco-list-row": "font-family: MonoLisa !important",
-    ".quick-input-widget .quick-input-title": "font-family: MonoLisa !important",
-    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
-    "[id='workbench.view.explorer'] .pane-body .mac": "font-family: 'MonoLisa'; font-size: 13px;"
+    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
   },
   "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
@@ -137,6 +135,7 @@
   "editor.cursorSurroundingLines": 10,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
+  "editor.foldingImportsByDefault": true,
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -202,11 +201,14 @@
     "*.sublime-keymap": "json",
     "*.textbundle": "markdown",
     ".ackrc": "shellscript",
+    ".cvimrc": "viml",
     ".env": "env",
     ".env-example": "env",
+    ".gitignore_global": "gitignore",
     ".ideavimrc": "viml",
     ".prettierrc": "yaml",
     ".spacemacs": "lisp",
+    ".surfingkeysrc": "javascript",
     "keybindings.json": "jsonc",
     "settings.json": "jsonc"
   },
@@ -250,6 +252,7 @@
   "go.lintFlags": ["--fast"],
   "go.lintOnSave": "package",
   "go.lintTool": "golangci-lint",
+  "go.toolsManagement.autoUpdate": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
   "go.useLanguageServer": true,
@@ -469,7 +472,6 @@
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pydocstylePath": "/Users/juliant/.local/bin/pydocstyle",
   "python.logging.level": "info",
-  "python.showStartPage": false,
   "python.sortImports.path": "/usr/local/bin/isort",
   "redhat.telemetry.enabled": false,
   "rpmspec.lint": false,
@@ -2040,5 +2042,6 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
-  "workbench.view.alwaysShowHeaderActions": true
+  "workbench.view.alwaysShowHeaderActions": true,
+  "yaml.schemas": {}
 }

@@ -3,17 +3,18 @@
     "editor.formatOnSave": false
   },
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
     "**/zsh/.zinit": true
   },
   "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
     "**/*.code-search": true,
+    "**/bower_components": true,
+    "**/node_modules": true,
     "**/zsh/.zinit": true
-  }
+  },
+  "stylelint.enable": false
 }

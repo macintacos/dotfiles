@@ -1,5 +1,5 @@
 /**
- * TO USE: run `node vscode/sort-keybindings.js` from the root of the dotfiles repository
+ * TO USE: run `just sort` from the root of the dotfiles repository
  */
 
 const fs = require("fs");

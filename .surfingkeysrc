@@ -1,0 +1,21 @@
+// Setup:
+// 1. Download Surfingkeys extension.
+// 2. Point the settings at this config file.
+// 3. Profit.
+
+// Documentation: https://github.com/brookhong/Surfingkeys
+
+// Unmappings
+unmapAllExcept(["f", "?"], /.*mail.google.com.*/);
+unmapAllExcept(["f", "?"], /.*calendar.google.com.*/);
+unmapAllExcept(
+  ["f", "i", "I", "e", "d", "u", "/", "n", "N", "yy"],
+  /.*github.com.*/
+);
+unmapAllExcept(
+  ["f", "i", "I", "j", "k", "d", "u", "?", "w", "<C-i>", "yy"],
+  /.*jira\.mongodb\.org.*/
+);
+
+// Settings
+settings.hintAlign = "left";
