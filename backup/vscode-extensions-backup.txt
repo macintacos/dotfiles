@@ -1,4 +1,5 @@
 aaron-bond.better-comments
+aaronthomas.vscode-snazzy-operator
 abusaidm.html-snippets
 adamwalzer.scss-lint
 ahmadawais.shades-of-purple
@@ -17,7 +18,6 @@ BazelBuild.vscode-bazel
 bdavs.expect
 be5invis.vscode-icontheme-nomo-dark
 belfz.search-crates-io
-BerriJ.github-vscode-theme-dark-classic
 bierner.color-info
 bierner.github-markdown-preview
 bierner.markdown-emoji
@@ -55,11 +55,9 @@ eg2.vscode-npm-script
 emilast.LogFileHighlighter
 emmanuelbeziat.vscode-great-icons
 esbenp.prettier-vscode
-ethan-reesor.vscode-go-test-adapter
 ezforo.copy-relative-path-and-line-numbers
 fabiospampinato.vscode-git-history
 fabiospampinato.vscode-open-in-github
-fabiospampinato.vscode-todo-plus
 file-icons.file-icons
 firefox-devtools.vscode-firefox-debug
 fknop.vscode-npm
@@ -68,7 +66,6 @@ formulahendry.code-runner
 foxundermoon.shell-format
 fvclaus.sort-json-array
 gerane.Theme-FlatlandMonokai
-gharveymn.nightswitch
 ghmcadams.lintlens
 ginfuru.ginfuru-better-solarized-dark-theme
 giovdk21.vscode-sublime-merge
@@ -78,12 +75,10 @@ golang.go
 GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hashicorp.terraform
-hbenl.vscode-test-explorer
 helgardrichard.helium-icon-theme
 herrmannplatz.npm-dependency-links
 heybourn.headwind
 hoovercj.vscode-settings-cycler
-Hyzeta.vscode-theme-github-light
 IBM.output-colorizer
 imperez.smarty
 iocave.customize-ui
@@ -108,12 +103,12 @@ LaurentTreguier.rpm-spec
 LaurentTreguier.vscode-simple-icons
 lehni.vscode-fix-checksums
 leizongmin.node-module-intellisense
-leodevbro.blockman
 letrieu.expand-region
 liviuschera.noctis
 lkytal.FlatUI
 mads-hartmann.bash-ide-vscode
 matangover.mypy
+mateocerquetella.xcode-12-theme
 mattn.Lisp
 mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
@@ -129,12 +124,11 @@ ms-python.gather
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.test-adapter-converter
-ms-vscode.vscode-typescript-next
-msjsdiag.debugger-for-chrome
 mushan.vscode-paste-image
 naumovs.color-highlight
 njpwerner.autodocstring
@@ -160,7 +154,6 @@ redhat.vscode-yaml
 RedVanWorkshop.explorer-exclude-vscode-extension
 Remisa.shellman
 richie5um2.vscode-sort-json
-RobbOwen.synthwave-vscode
 rogalmic.bash-debug
 rogalmic.zsh-debug
 ronnidc.nunjucks
@@ -176,6 +169,7 @@ shardulm94.trailing-spaces
 silvenon.mdx
 skellock.just
 sleistner.vscode-fileutils
+slevesque.vscode-autohotkey
 snipsnapdev.snipsnap-vscode
 snooty.snooty
 stackbreak.comment-divider
@@ -188,11 +182,11 @@ TakumiI.markdowntable
 tamasfe.even-better-toml
 teabyii.ayu
 telesoho.vscode-markdown-paste-image
-thenikso.github-plus-theme
 timonwong.shellcheck
+tinkertrain.theme-panda
 tlahmann.alex-linter
 tokoph.ghosttext
-travisthetechie.write-good-linter
+trinm1709.dracula-theme-from-intellij
 trixnz.go-to-method
 Tyriar.sort-lines
 usernamehw.commands
@@ -207,10 +201,8 @@ VSpaceCode.vspacecode
 VSpaceCode.whichkey
 wayou.file-icons-mac
 wayou.vscode-icons-mac
-wayou.vscode-todo-highlight
 whatwedo.twig
 wingrunr21.vscode-ruby
-withfig.fig
 wmaurer.change-case
 wwm.better-align
 xaver.clang-format

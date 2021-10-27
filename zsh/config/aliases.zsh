@@ -24,6 +24,7 @@ alias r='ranger-cd'                            # mapped to the ranger function t
 alias rg='rg -ziN'                             # always ignore line numbers, search compressed files, case-insensitivity
 alias rm='rm -i'                               # makes sure 'rm' always requires confirmation
 alias rm='trash'                               # a better rm
+alias s='s --provider="google"'                # 's' with a default provider of Google
 alias t='tail -f'                              # shorten tail, and always continue to tail unless cancelled
 alias things='things.sh'                       # shortening things script
 alias top='glances'                            # better resource visualizer
@@ -51,7 +52,6 @@ alias tree='ls --tree -L 2'
 # CD ALIASES {{{
 GITLOCAL="$HOME/GitLocal"
 alias cdh="cd $HOME && cd"
-alias cdg="cd $(git rev-parse --show-toplevel)"
 alias cdgit="cd $GITLOCAL && cd"
 alias cdwork="cd $GITLOCAL/Work && cd"
 alias cdplay="cd $GITLOCAL/Play && cd"

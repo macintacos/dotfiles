@@ -167,7 +167,7 @@ function jt-git-delete-lingering-branches() {
 
 function jt-connect-vpn() {
   # Connects to the VPN
-  networksetup -connectpppoeservice "VPN New York"
+  networksetup -connectpppoeservice "VPN NYC"
 }
 
 function jt-gh-clone-bare() {

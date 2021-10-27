@@ -22,9 +22,9 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-local background="#212336"
-local current_line="#44475a"
-local selection="#44475a"
+local background="#0b0d0f"
+local current_line="#131a20"
+local selection="#131a20"
 local foreground="#f8f8f2"
 local comment="#6272a4"
 local cyan="#8be9fd"
