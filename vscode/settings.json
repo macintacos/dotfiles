@@ -464,7 +464,9 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
   "python.defaultInterpreterPath": "/Users/juliant/.pyenv/shims/python",
-  "python.experiments.optInto": ["pythonDiscoveryModuleWithoutWatcher"],
+  "python.experiments.optInto": [
+    "pythonDiscoveryModuleWithoutWatcher"
+  ],
   "python.formatting.blackPath": "/Users/juliant/.pyenv/shims/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
@@ -2074,4 +2076,8 @@
     "!Split sequence"
   ],
   "snyk.yesWelcomeNotification": false
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
