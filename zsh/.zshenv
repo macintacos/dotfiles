@@ -1,4 +1,7 @@
 #!/bin/bash
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Setting PATHs
 export PATH="/usr/local/sbin:$PATH" # Because brew doctor complains
 export DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
@@ -19,7 +22,7 @@ export EDITOR='nvim'
 export GNUBIN=/usr/local/opt/coreutils/libexec/gnubin
 export GNUGETOPT=/usr/local/opt/gnu-getopt/bin
 export GNUGREP=/usr/local/opt/grep/libexec/gnubin
-export GNUMAKE="$(/usr/local/bin/brew --prefix)/opt/make/libexec/gnubin"
+export GNUMAKE="$(/opt/homebrew/bin/brew --prefix)/opt/make/libexec/gnubin"
 export GOPATH=$HOME/GoWorkspace
 export GO_BIN="/usr/local/go/bin"
 export HELM_2="/usr/local/opt/helm@2/bin"
@@ -32,7 +35,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 export MMS_HOME="$HOME/GitLocal/Work/mms"
 export MYSQL=/usr/local/mysql-8.0.11-macos10.13-x86_64/bin/
 export MY_ZSH_SCRIPTS=$ZDOTDIR/scripts
-export MY_ZSH_SECRETS=$ZDOTDIR/secrets
+# export MY_ZSH_SECRETS=$ZDOTDIR/secrets
 export NODEMODULEPATH=/usr/local/lib/node_modules
 export M_PREFIX=~
 export OBSIDIAN_VAULT_PLUGIN_PATH="$HOME/Dropbox/Wiki"
@@ -49,4 +52,4 @@ export TERM="xterm-256color"
 export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$GNUBIN:$GNUGETOPT:$OPENSSL:$GNUGREP:$GNUMAKE:$LOCAL_BIN:$HOME_LOCAL_BIN:$PYENV_BIN:$POETRY_BIN:$CUSTOM_SCRIPTS:$BAT_THEME:$DOTFILES_HOME:$DROPBOX:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
+export PATH="$GNUBIN:$GNUGETOPT:$OPENSSL:$GNUGREP:$GNUMAKE:$LOCAL_BIN:$HOME_LOCAL_BIN:$PYENV_BIN:$POETRY_BIN:$CUSTOM_SCRIPTS:$BAT_THEME:$DOTFILES_HOME:$DROPBOX:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$MYSQL:$MY_ZSH_SCRIPTS:$NODEMODULEPATH:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"

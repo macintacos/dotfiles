@@ -17,7 +17,7 @@ source "$ZDOTDIR"/config/plugins/zinit/plugins.zinit
 for file in "$ZDOTDIR"/config/plugins/*.zsh; do source "$file"; done
 
 # Wrap-up
-source "$ZDOTDIR"/secrets/sekret_source
+# source "$ZDOTDIR"/secrets/sekret_source
 for file in "$ZDOTDIR"/config/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/config/util/**/*.zsh; do source "$file"; done
 for file in "$ZDOTDIR"/completions/**/*; do source "$file"; done

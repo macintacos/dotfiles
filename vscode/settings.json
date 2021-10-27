@@ -111,7 +111,7 @@
   "commands.commands": {},
   "confluenceMarkup.monospaceFont": "MonoLisa",
   "customizeUI.activityBar": "regular",
-  "customizeUI.font.regular": "MonoLisa",
+  "customizeUI.font.regular": "Inter",
   "customizeUI.fontSizeMap": {
     "13px": "13px",
     "monospace": "14px"
@@ -464,7 +464,9 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
   "python.defaultInterpreterPath": "/Users/juliant/.pyenv/shims/python",
-  "python.experiments.optInto": ["pythonDiscoveryModuleWithoutWatcher"],
+  "python.experiments.optInto": [
+    "pythonDiscoveryModuleWithoutWatcher"
+  ],
   "python.formatting.blackPath": "/Users/juliant/.pyenv/shims/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
@@ -594,7 +596,6 @@
       "commands": [":nohl"]
     }
   ],
-  "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "after": ["s"],
@@ -2024,7 +2025,7 @@
     "editor.lineHighlightBorder": "#9fced11f",
     "editorCursor.foreground": "#db2466"
   },
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Pro (Van Helsing)",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "medium",

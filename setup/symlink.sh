@@ -50,20 +50,6 @@ smerge_link() {
     log ok "Sublime Merge keymap linked."
 }
 
-vscode_link() {
-    log info "Linking VSCode..."
-    log info "Clearing target files..."
-    rm -rf "$HOME/Library/Application Support/Code/User/settings.json"
-    rm -rf "$HOME/Library/Application Support/Code/User/keybindings.json"
-    log info "Creating directories if they don't exist..."
-    mkdir -p "$HOME/Library/Application Support/Code/User"
-    log info "Linking settings.json..."
-    ln -sF "${DOTFILES_HOME}/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-    log ok "settings.json linked."
-    log info "Linking keybindings.json..."
-    ln -sF "${DOTFILES_HOME}/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-    log ok "keybindings.json linked. VSCode linking done."
-}
 
 lnav_link() {
     log info "Linking lnav..."
@@ -128,7 +114,6 @@ link_all() {
     eslint_link
     karabiner_link
     smerge_link
-    vscode_link
     lnav_link
     gitignore_global_link
     ideavimrc_link
