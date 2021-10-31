@@ -270,6 +270,7 @@
   "indentRainbow.includedLanguages": ["python"],
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.schemas": [],
   "json.trace.server": "verbose",
   "jupyter.askForKernelRestart": false,
   "jupyter.sendSelectionToInteractiveWindow": false,
@@ -430,10 +431,7 @@
       ]
     }
   ],
-  "mypy.dmypyExecutable": "/Users/juliant/.mypyls/bin/dmypy",
-  "nightswitch.autoSwitch": false,
-  "nightswitch.dayTheme": "GitHub Light",
-  "nightswitch.nightTheme": "GitHub Dark",
+  "mypy.runUsingActiveInterpreter": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -444,7 +442,10 @@
     }
   },
   "path-intellisense.showHiddenFiles": true,
-  "projectManager.git.baseFolders": ["/Users/juliant/GitLocal/"],
+  "projectManager.git.baseFolders": [
+    "/Users/juliant/GitLocal/",
+    "/Users/macinburrito/GitLocal/"
+  ],
   "projectManager.git.ignoredFolders": [
     "node_modules",
     "out",
@@ -473,6 +474,8 @@
   "python.linting.pydocstylePath": "/Users/juliant/.local/bin/pydocstyle",
   "python.logging.level": "info",
   "python.sortImports.path": "/usr/local/bin/isort",
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
   "rpmspec.lint": false,
   "scm.defaultViewMode": "tree",
@@ -516,6 +519,7 @@
   ],
   "shellcheck.customArgs": ["-x"],
   "snipsnap.silent": true,
+  "snyk.yesWelcomeNotification": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
@@ -524,7 +528,7 @@
   "sync.quietSync": false,
   "sync.removeExtensions": true,
   "sync.syncExtensions": true,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
@@ -533,6 +537,29 @@
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "args": ["-l"],
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "fish": {
+      "args": ["-l"],
+      "path": "fish"
+    },
+    "pwsh": {
+      "icon": "terminal-powershell",
+      "path": "pwsh"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "args": ["-l"],
+      "path": "/opt/homebrew/bin/zsh"
+    }
+  },
   "terminal.integrated.tabs.enabled": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
@@ -1837,32 +1864,6 @@
     {
       "bindings": [
         {
-          "bindings": [
-            {
-              "command": "code-runner.run",
-              "key": "r",
-              "name": "Run code in current file",
-              "type": "command"
-            },
-            {
-              "command": "code-runner.stop",
-              "key": "R",
-              "name": "Stop ongoing code run",
-              "type": "command"
-            }
-          ],
-          "key": "a",
-          "name": "+Actions",
-          "type": "bindings"
-        }
-      ],
-      "keys": ["m", "languageId:python"],
-      "name": "+Python Major Mode",
-      "type": "bindings"
-    },
-    {
-      "bindings": [
-        {
           "command": "md-shortcut.toggleTitleH1",
           "key": "1",
           "name": "Level 1 (#)",
@@ -2042,8 +2043,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
   "workbench.view.alwaysShowHeaderActions": true,
-  "yaml.schemas": {},
-  "json.schemas": [],
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -2073,5 +2072,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "snyk.yesWelcomeNotification": false
+  "yaml.schemas": {}
 }

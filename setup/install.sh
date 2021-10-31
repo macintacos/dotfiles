@@ -116,17 +116,17 @@ m stable
 log ok "Done installing MongoDB."
 
 # Setup VSCode Extensions from existing backup
-case $1 in
-install-ci)
-	log info "Skipping vscode setup on CI"
-	shift
-	;;
-install-normal)
-	log info "Installing VSCode extensions"
-	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true # continue even if we already have it
-	shift
-	;;
-esac
+# case $1 in
+# install-ci)
+# 	log info "Skipping vscode setup on CI"
+# 	shift
+# 	;;
+# install-normal)
+# 	log info "Installing VSCode extensions"
+# 	(cat ./backup/vscode-extensions-backup.txt | grep -v '^#' | xargs -L1 code --install-extension) || true # continue even if we already have it
+# 	shift
+# 	;;
+# esac
 
 # symlink everything to wrap it up
 log info "Wrap things up by symlinking again for good measure..."

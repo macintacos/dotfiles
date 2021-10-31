@@ -99,7 +99,7 @@ function jt-backup-now() { # backup things
 }
 
 # directory color rendering
-eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
+# eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
 
 function jbr() { # open current branch in jira
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"

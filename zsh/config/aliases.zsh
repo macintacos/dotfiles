@@ -27,7 +27,7 @@ alias rm='trash'                               # a better rm
 alias s='s --provider="google"'                # 's' with a default provider of Google
 alias t='tail -f'                              # shorten tail, and always continue to tail unless cancelled
 alias things='things.sh'                       # shortening things script
-alias top='glances'                            # better resource visualizer
+alias top='htop'                               # better resource visualizer
 alias touch='ad'                               # advance_touch, a better newfile implementation. See: https://github.com/tanrax/terminal-AdvancedNewFile#-advanced-new-file-
 alias v='nvim'                                 # shortening usage of nvim
 alias vl='vercel'                              # vercel/zeit/now
