@@ -13,6 +13,7 @@ SETUVAR _fish_abbr_cddd:cd\x20\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_cdddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_cddddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_cdddddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cdg:cd\x20\x28git\x20rev\x2dparse\x20\x2d\x2dshow\x2dtoplevel\x29
 SETUVAR _fish_abbr_cls:clear
 SETUVAR _fish_abbr_cp:cp\x20\x2div
 SETUVAR _fish_abbr_diff:delta
@@ -45,6 +46,11 @@ SETUVAR _fisher_wfxr_2F_forgit_files:/Users/macinburrito/\x2econfig/fish/conf\x2
 SETUVAR _hydro_git_73215:trunk\u2022\x20
 SETUVAR _hydro_git_73624:trunk\u2022\x20
 SETUVAR _hydro_git_75247:trunk\u2022\x20
+SETUVAR _hydro_git_76181:trunk\u2022\x20
+SETUVAR _hydro_git_76649:trunk\u2022\x20
+SETUVAR _hydro_git_76988:trunk\u2022\x20
+SETUVAR _hydro_git_77244:\x1d
+SETUVAR _hydro_git_78030:trunk\u2022\x20
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:F8F8F2

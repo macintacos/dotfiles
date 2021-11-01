@@ -17,7 +17,7 @@ function mcd() { # mcd: Makes new Dir and jumps inside
 }
 
 function cdg() { # 'cd' to the top level of a git project
-  cd $(git --rev-parse --show-top-level)
+  cd $(git rev-parse --show-toplevel)
 }
 
 function gevg() {

@@ -19,6 +19,7 @@ abbr -a zr 'zrun'                                # making zrun a bit more easy t
 # git-related aliases
 abbr -a gst 'lazygit' # better way to view git status
 abbr -a sm "smerge"
+abbr -a cdg "cd (git rev-parse --show-toplevel)"
 
 # exa-related aliases
 abbr -a ls 'exa -F --group-directories-first --icons --color-scale'
