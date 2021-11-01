@@ -83,6 +83,17 @@ gitignore_global_link() {
     log ok ".gitignore_global linked."
 }
 
+fish_link() {
+    log info "Linking fish stuff..."
+    log info "Clearing target files..."
+    rm -rf "$HOME/.config/fish"
+
+    log info "Linking fish config..."
+    ln -sF "${DOTFILES_HOME}/fish" "$HOME/.config/fish"
+
+    log ok "fish linked."
+}
+
 ideavimrc_link() {
     log info "Linking .ideavimrc..."
     log info "Clearing target files..."

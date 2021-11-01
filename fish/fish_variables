@@ -1,0 +1,76 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ABBR_TIPS_PROMPT:\x5cn\U0001f4a1\x20\x5ce\x5b1m\x7b\x7b\x20\x2eabbr\x20\x7d\x7d\x5ce\x5b0m\x20\x3d\x3e\x20\x7b\x7b\x20\x2ecmd\x20\x7d\x7d
+SETUVAR --export ABBR_TIPS_REGEXES:\x28\x5e\x28\x5cw\x2b\x5cs\x2b\x29\x2b\x28\x2d\x7b1\x2c2\x7d\x29\x5cw\x2b\x29\x28\x5cs\x5cS\x2b\x29\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b3\x7d\x29\x2e\x2a\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b2\x7d\x29\x2e\x2a\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b1\x7d\x29\x2e\x2a
+SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
+SETUVAR --export __ABBR_TIPS_KEYS:a__fish_key_reader\x1ea__ga\x1ea__gcb\x1ea__gcf\x1ea__gclean\x1ea__gco\x1ea__gcp\x1ea__gd\x1ea__gfu\x1ea__gi\x1ea__glo\x1ea__grb\x1ea__grh\x1ea__gss\x1ea__flatten
+SETUVAR --export __ABBR_TIPS_VALUES:/opt/homebrew/Cellar/fish/3\x2e3\x2e1/bin/fish_key_reader\x1eforgit\x3a\x3aadd\x1eforgit\x3a\x3acheckout\x3a\x3abranch\x1eforgit\x3a\x3acheckout\x3a\x3afile\x1eforgit\x3a\x3aclean\x1eforgit\x3a\x3acheckout\x3a\x3acommit\x1eforgit\x3a\x3acherry\x3a\x3apick\x1eforgit\x3a\x3adiff\x1eforgit\x3a\x3afixup\x1eforgit\x3a\x3aignore\x1eforgit\x3a\x3alog\x1eforgit\x3a\x3arebase\x1eforgit\x3a\x3areset\x3a\x3ahead\x1eforgit\x3a\x3astash\x3a\x3ashow
+SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_c:clear\x20\x26\x26\x20ll
+SETUVAR _fish_abbr_cat:bat
+SETUVAR _fish_abbr_cdd:cd\x20\x2e\x2e
+SETUVAR _fish_abbr_cddd:cd\x20\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cdddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cddddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cdddddd:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cls:clear
+SETUVAR _fish_abbr_cp:cp\x20\x2div
+SETUVAR _fish_abbr_diff:delta
+SETUVAR _fish_abbr_f:open\x20\x2da\x20Forklift\x20\x2e
+SETUVAR _fish_abbr_flatten:find\x20\x2e\x20\x2dmindepth\x202\x20\x2dtype\x20f\x20\x2dprint0\x20\x7c\x20xargs\x20\x2d0\x20\x2dI\x20\x7b\x7d\x20mv\x20\x2d\x2dbackup\x3dnumbered\x20\x7b\x7d\x20\x2e
+SETUVAR _fish_abbr_gst:lazygit
+SETUVAR _fish_abbr_l:exa\x20\x2dlF\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dicons\x20\x2d\x2dcolor\x2dscale
+SETUVAR _fish_abbr_ll:exa\x20\x2dlaF\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dicons\x20\x2d\x2dcolor\x2dscale\x20\x2d\x2dgit\x20\x2d\x2dtime\x2dstyle\x20long\x2diso
+SETUVAR _fish_abbr_ls:exa\x20\x2dF\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dicons\x20\x2d\x2dcolor\x2dscale
+SETUVAR _fish_abbr_rg:rg\x20\x2dziN
+SETUVAR _fish_abbr_rm:trash
+SETUVAR _fish_abbr_s:s\x20\x2d\x2dprovider\x20\x22google\x22
+SETUVAR _fish_abbr_sm:smerge
+SETUVAR _fish_abbr_t:tail\x20\x2df
+SETUVAR _fish_abbr_tree:exa\x20\x2dF\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dicons\x20\x2d\x2dcolor\x2dscale\x20\x2d\x2dtree\x20\x2dL\x202
+SETUVAR _fish_abbr_v:nvim
+SETUVAR _fish_abbr_vs:code
+SETUVAR _fish_abbr_x:xplr
+SETUVAR _fish_abbr_ydl:youtube\x2ddl
+SETUVAR _fish_abbr_zr:zrun
+SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/Users/macinburrito/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/Users/macinburrito/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/Users/macinburrito/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
+SETUVAR _fisher_dracula_2F_fish_files:/Users/macinburrito/\x2econfig/fish/conf\x2ed/dracula\x2efish
+SETUVAR _fisher_edc_2F_bass_files:/Users/macinburrito/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/macinburrito/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_gazorby_2F_fish_2D_abbreviation_2D_tips_files:/Users/macinburrito/\x2econfig/fish/functions/__abbr_tips_bind_newline\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/__abbr_tips_bind_space\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/__abbr_tips_init\x2efish\x1e/Users/macinburrito/\x2econfig/fish/conf\x2ed/abbr_tips\x2efish
+SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:/Users/macinburrito/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e/Users/macinburrito/\x2econfig/fish/conf\x2ed/autopair\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/macinburrito/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/macinburrito/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_jorgebucaran_2F_hydro_files:/Users/macinburrito/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/Users/macinburrito/\x2econfig/fish/functions/fish_title\x2efish\x1e/Users/macinburrito/\x2econfig/fish/conf\x2ed/hydro\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ewfxr/forgit\x1egazorby/fish\x2dabbreviation\x2dtips\x1ejorgebucaran/autopair\x2efish\x1ePatrickF1/fzf\x2efish\x1edracula/fish\x1eedc/bass\x1ejorgebucaran/hydro
+SETUVAR _fisher_wfxr_2F_forgit_files:/Users/macinburrito/\x2econfig/fish/conf\x2ed/forgit\x2eplugin\x2efish
+SETUVAR _hydro_git_73215:trunk\u2022\x20
+SETUVAR _hydro_git_73624:trunk\u2022\x20
+SETUVAR _hydro_git_75247:trunk\u2022\x20
+SETUVAR fish_color_autosuggestion:BD93F9
+SETUVAR fish_color_cancel:normal
+SETUVAR fish_color_command:F8F8F2
+SETUVAR fish_color_comment:6272A4
+SETUVAR fish_color_cwd:008000
+SETUVAR fish_color_cwd_root:800000
+SETUVAR fish_color_end:50FA7B
+SETUVAR fish_color_error:FFB86C
+SETUVAR fish_color_escape:00a6b2
+SETUVAR fish_color_history_current:normal
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_match:normal
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:00a6b2
+SETUVAR fish_color_param:FF79C6
+SETUVAR fish_color_quote:F1FA8C
+SETUVAR fish_color_redirection:8BE9FD
+SETUVAR fish_color_search_match:ffff00
+SETUVAR fish_color_selection:c0c0c0
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:00ff00
+SETUVAR fish_color_valid_path:normal
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:B3A06D\x1eyellow
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/opt/homebrew/opt/make/libexec/gnubin\x1e/opt/homebrew/opt/coreutils/libexec/gnubin\x1e/opt/homebrew/opt/grep/libexec/gnubin\x1e/opt/homebrew/bin
