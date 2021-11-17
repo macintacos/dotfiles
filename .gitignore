@@ -5,11 +5,11 @@
 !.vscode/extensions.json
 npm/npm-backup-current.txt.*
 
-/zsh/**/*.zwc*
-/zsh/.zcompdump*
-/zsh/.zinit/
-/zsh/.zsh_history
-/zsh/.zsh_sessions
+/**/zsh/**/*.zwc*
+/**/zsh/.zcompdump*
+/**/zsh/.zinit/
+/**/zsh/.zsh_history
+/**/zsh/.zsh_sessions
 .DS_STORE
 /nvim/.netrwhist
 /backup/Brewfile.lock.json
