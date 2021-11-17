@@ -15,3 +15,5 @@ npm/npm-backup-current.txt.*
 /backup/Brewfile.lock.json
 /setup/setup.log
 tags
+
+/shell/zsh/secrets/**/*
