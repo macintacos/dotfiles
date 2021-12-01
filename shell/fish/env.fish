@@ -5,10 +5,9 @@ fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
 fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles
-set -gx NVIM_HOME $DOTFILES_HOME/nvim
+set -gx NVIM_HOME $HOME/GitLocal/Play/nvim
 set -gx EDITOR 'nvim'
-set -gx STARSHIP_CONFIG $DOTFILES_HOME/starship.toml # If for some reason I try starship again
-set -gx ZSH_DIR $DOTFILES_HOME/zsh
+set -gx ZSH_DIR $DOTFILES_HOME/shell/zsh
 
 set -gx BAT_THEME "Dracula"
 set -gx CHEAT_COLORS true
@@ -18,16 +17,25 @@ set -gx GOPATH $HOME/GoWorkspace
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 set -gx M_PREFIX $HOME/MongoDB
-set -gx KUBECONFIG ~/.kube/config.staging:~/.kube/config.prod
-set -gx PYENV_ROOT "$HOME/.pyenv"
+# set -gx KUBECONFIG $HOME/.kube/config.staging:$HOME/.kube/config.prod
+set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PIPX_DEFAULT_PYTHON $HOME/.pyenv/shims/python
 set -gx RUST $HOME/.cargo/bin
 set -gx TERM "xterm-256color"
+set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
 
 # Adding stuff to PATH
-fish_add_path -a $PYENV_BIN
+fish_add_path -a $PYENV_ROOT/bin
 fish_add_path -a $HOME_LOCAL_BIN
+fish_add_path -a $GOPATH/bin
 fish_add_path -a (brew --prefix)/opt/coreutils/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/grep/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/make/libexec/gnubin
 fish_add_path -a $ZSH_DIR/secrets
+fish_add_path -a $HOME/.cargo/bin
+
+# Custom scripts
+fish_add_path -a $DOTFILES_HOME/shell/scripts/python
+
+# Need to do this to get pyenv working correctly
+eval ""(pyenv init --path)""

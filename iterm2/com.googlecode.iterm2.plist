@@ -10439,7 +10439,7 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<false/>
+			<true/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -10928,7 +10928,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MonoLisa-Regular 15</string>
+			<string>MonoLisa-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -11180,7 +11180,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>0</integer>
+			<integer>4</integer>
 			<key>Title Components</key>
 			<integer>544</integer>
 			<key>Transparency</key>

@@ -2,3 +2,4 @@
 set -gx _ZO_EXCLUDE_DIRS "$HOME/Library/Containers/*"
 
 
+zoxide init fish | source

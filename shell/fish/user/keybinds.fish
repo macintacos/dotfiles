@@ -9,4 +9,4 @@ bind \co "zi; commandline -f repaint"
 bind -M insert \co "zi; commandline -f repaint"
 
 # Remap tab to shift+tab when in insert mode
-bind -M insert \t complete-and-search
+bind -M insert -k nul complete-and-search

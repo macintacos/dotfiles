@@ -1,3 +1,5 @@
+fish_vi_key_bindings
+
 function fish_mode_prompt
     if test "$fish_key_bindings" != fish_default_key_bindings
         set --local vi_mode_color

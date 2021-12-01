@@ -30,8 +30,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modifications",
-    "editor.tabSize": 2
+    "editor.formatOnSaveMode": "modifications"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -130,7 +129,6 @@
   "docker.images.sortBy": "CreatedTime",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.enabled": true,
   "editor.codeLensFontFamily": "Inter",
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
@@ -142,11 +140,13 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
-  "editor.guides.bracketPairs": "active",
+  "editor.highlightActiveIndentGuide": false,
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
+  "editor.renderIndentGuides": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
@@ -155,18 +155,16 @@
   "editor.snippetSuggestions": "top",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
-  "editor.suggest.showSnippets": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {},
   "editor.wordWrap": "off",
   "emmet.includeLanguages": {
     "markdown": "html",
-    "nunjucks": "html",
-    "javascript": "javascriptreact"
+    "nunjucks": "html"
   },
   "emmet.showSuggestionsAsSnippets": true,
-  "emmet.triggerExpansionOnTab": false,
+  "emmet.triggerExpansionOnTab": true,
   "errorLens.followCursor": "closestProblem",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.messageTemplate": "$source: $message [$code]",
@@ -433,7 +431,7 @@
       ]
     }
   ],
-  "mypy.runUsingActiveInterpreter": true,
+  "mypy.dmypyExecutable": "/Users/macinburrito/.local/bin/dmypy",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -444,10 +442,7 @@
     }
   },
   "path-intellisense.showHiddenFiles": true,
-  "projectManager.git.baseFolders": [
-    "/Users/juliant/GitLocal/",
-    "/Users/macinburrito/GitLocal/"
-  ],
+  "projectManager.git.baseFolders": ["/Users/macinburrito/GitLocal/"],
   "projectManager.git.ignoredFolders": [
     "node_modules",
     "out",
@@ -466,18 +461,21 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "/Users/juliant/.pyenv/shims/python",
-  "python.experiments.optInto": ["pythonDiscoveryModuleWithoutWatcher"],
-  "python.formatting.blackPath": "/Users/juliant/.pyenv/shims/black",
+  "python.defaultInterpreterPath": "/Users/macinburrito/.pyenv/shims/python",
+  "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
+  "python.linting.mypyArgs": [
+    "--follow-imports=silent",
+    "--ignore-missing-imports",
+    "--show-column-numbers",
+    "--no-pretty"
+  ],
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pydocstylePath": "/Users/juliant/.local/bin/pydocstyle",
   "python.logging.level": "info",
-  "python.sortImports.path": "/usr/local/bin/isort",
-  "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.terminal.activateEnvironment": false,
+  "python.sortImports.path": "/Users/macinburrito/.local/bin/isort",
   "redhat.telemetry.enabled": false,
   "rpmspec.lint": false,
   "scm.defaultViewMode": "tree",
@@ -521,7 +519,6 @@
   ],
   "shellcheck.customArgs": ["-x"],
   "snipsnap.silent": true,
-  "snyk.yesWelcomeNotification": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
@@ -534,34 +531,11 @@
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
-  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.profiles.osx": {
-    "bash": {
-      "args": ["-l"],
-      "icon": "terminal-bash",
-      "path": "bash"
-    },
-    "fish": {
-      "path": "/opt/homebrew/bin/fish"
-    },
-    "pwsh": {
-      "icon": "terminal-powershell",
-      "path": "pwsh"
-    },
-    "tmux": {
-      "icon": "terminal-tmux",
-      "path": "tmux"
-    },
-    "zsh": {
-      "args": ["-l"],
-      "path": "/opt/homebrew/bin/zsh"
-    }
-  },
   "terminal.integrated.tabs.enabled": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
@@ -924,7 +898,7 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "vscode-neovim.revealCursorScrollLine": true,
   "vscode-neovim.textDecorationsAtTop": true,
-  "vscsm.smergeExecutablePath": "/Users/macinburrito/bin/smerge",
+  "vscsm.smergeExecutablePath": "/usr/local/bin/smerge",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vspacecode.bindingOverrides": [
     {
@@ -2075,6 +2049,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "editor.matchBrackets": false
+  "yaml.schemas": {}
 }

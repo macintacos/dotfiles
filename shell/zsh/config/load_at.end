@@ -17,7 +17,7 @@ eval "$(zoxide init zsh)"
 
 # ----------- asdf version manager https://github.com/asdf-vm/asdf ----------- #
 
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+. /usr/local/opt/asdf/asdf.sh
 
 # ------ direnv local environment vars https://github.com/direnv/direnv ------ #
 
@@ -46,7 +46,7 @@ if command -v nodenv 1>/dev/null 2>&1; then
 fi
 
 # --------------------------------- dircolors -------------------------------- #
-# . "$HOME/.local/share/lscolors.sh"
+. "$HOME/.local/share/lscolors.sh"
 
 # ---------------- fig https://github.com/withfig/autocomplete --------------- #
 # fig source

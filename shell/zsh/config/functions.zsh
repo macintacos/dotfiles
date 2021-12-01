@@ -17,7 +17,7 @@ function mcd() { # mcd: Makes new Dir and jumps inside
 }
 
 function cdg() { # 'cd' to the top level of a git project
-  cd $(git rev-parse --show-toplevel)
+  cd $(git --rev-parse --show-top-level)
 }
 
 function gevg() {
@@ -99,8 +99,7 @@ function jt-backup-now() { # backup things
 }
 
 # directory color rendering
-# eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
-
+eval $(gdircolors $HOME/.dircolors/dircolors.ansi-universal)
 function jbr() { # open current branch in jira
   open "https://jira.mongodb.com/browse/$(git branch --show-current)"
 }
