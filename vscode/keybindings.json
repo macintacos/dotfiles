@@ -1169,11 +1169,6 @@
     "when": "textInputFocus"
   },
   {
-    "command": "cursorWordPartRight",
-    "key": "ctrl+alt+right",
-    "when": "textInputFocus"
-  },
-  {
     "command": "cursorWordPartRightSelect",
     "key": "ctrl+shift+alt+right",
     "when": "textInputFocus"
@@ -2189,5 +2184,10 @@
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordPartRight",
+    "when": "textInputFocus"
   }
 ]

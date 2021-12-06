@@ -11,7 +11,8 @@
     "editor.wordWrapColumn": 120
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -23,6 +24,8 @@
     "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
   },
+  "eslint.codeActionsOnSave.rules": ["sort-imports"],
+  "eslint.codeActionsOnSave.mode": "all",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
@@ -84,12 +87,10 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4
   },
-  "[typescript]": {
+  "[typescriptreact, typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.tabSize": 4
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -118,7 +119,7 @@
   },
   "customizeUI.stylesheet": {
     ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
-    ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
+    ".quick-input-widget": "top: 25% !important; border-radius: 7px !important; box-shadow: 0 0 30px #333",
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
   },
   "customizeUI.titleBar": "inline",
@@ -140,13 +141,10 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
-  "editor.highlightActiveIndentGuide": false,
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
-  "editor.renderIndentGuides": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
@@ -212,7 +210,7 @@
     "keybindings.json": "jsonc",
     "settings.json": "jsonc"
   },
-  "files.autoSave": "off",
+  "files.autoSave": "onWindowChange",
   "files.defaultLanguage": "txt",
   "files.exclude": {
     "**/*.zwc*": true,
@@ -530,6 +528,7 @@
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
   "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
@@ -555,6 +554,8 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/Users/macinburrito/GitLocal/Play/dotfiles/vscode/.vimrc",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "block-outline",
@@ -597,7 +598,10 @@
       "commands": [":nohl"]
     }
   ],
+  "vim.neovimConfigPath": "/Users/macinburrito/GitLocal/Play/nvim/init.vim",
   "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "vim.neovimUseConfigFile": true,
+  "vim.camelCaseMotion.enable": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "after": ["s"],
@@ -802,7 +806,7 @@
   "vim.smartRelativeLine": true,
   "vim.smartcase": true,
   "vim.sneak": true,
-  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.sneakReplacesF": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -895,8 +899,8 @@
   "vscode-kubernetes.kubectl-path.mac": "/Users/juliant/.asdf/shims/kubectl",
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "vscode-neovim.revealCursorScrollLine": true,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "vscode-neovim.textDecorationsAtTop": true,
   "vscsm.smergeExecutablePath": "/usr/local/bin/smerge",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -938,6 +942,7 @@
     },
     {
       "command": "workbench.action.nextEditorInGroup",
+      "icon": "arrow-right",
       "keys": "b.`",
       "name": "Next Editor (current group)",
       "type": "command"
@@ -951,12 +956,14 @@
     },
     {
       "command": "outline.focus",
+      "icon": "list-tree",
       "keys": "b.o",
       "name": "Focus outline for buffer",
       "type": "command"
     },
     {
       "command": "workbench.action.previousEditorInGroup",
+      "icon": "arrow-left",
       "keys": "b.~",
       "name": "Previous Editor (current group)",
       "type": "command"
@@ -969,91 +976,99 @@
       "type": "command"
     },
     {
-      "command": "workbench.debug.action.toggleRepl",
-      "keys": "d.t",
-      "name": "Toggle Debug Console view",
-      "type": "command"
-    },
-    {
       "command": "workbench.action.output.toggleOutput",
+      "icon": "output",
       "keys": "e.o",
       "name": "Toggle output view",
       "type": "command"
     },
     {
       "command": "editor.action.formatDocument",
+      "icon": "symbol-keyword",
       "keys": "f.=",
       "name": "Format current file",
       "type": "command"
     },
     {
       "command": "workbench.action.openSettingsJson",
+      "icon": "bracket-dot",
       "keys": "f.e.d",
       "name": "Open settings JSON",
       "type": "command"
     },
     {
       "command": "workbench.action.openSettings",
+      "icon": "settings",
       "keys": "f.e.D",
       "name": "Open settings UI",
       "type": "command"
     },
     {
       "command": "workbench.action.reloadWindow",
+      "icon": "refresh",
       "keys": "f.e.R",
       "name": "Reload window",
       "type": "command"
     },
     {
       "command": "workbench.action.quickOpen",
+      "icon": "go-to-file",
       "keys": "f.f",
-      "name": "Open file...",
+      "name": "Open file",
       "type": "command"
     },
     {
       "command": "file-browser.open",
+      "icon": "folder-opened",
       "keys": "f.n",
       "name": "New file (via File Browser)",
       "type": "command"
     },
     {
       "command": "workbench.action.files.openFileFolder",
+      "icon": "folder-library",
       "keys": "f.o",
       "name": "Open file browser",
       "type": "command"
     },
     {
       "command": "outline.focus",
+      "icon": "symbol-interface",
       "keys": "f.O",
       "name": "Focus file outline view",
       "type": "command"
     },
     {
       "command": "fileutils.renameFile",
+      "icon": "edit",
       "keys": "f.R",
       "name": "Rename file",
       "type": "command"
     },
     {
       "command": "gitlens.showCommitSearch",
+      "icon": "search",
       "keys": "g./",
       "name": "Search history",
       "type": "command"
     },
     {
       "command": "gitlens.toggleFileBlame",
+      "icon": "git-pull-request-draft",
       "keys": "g.b",
       "name": "Show blame for current file",
       "type": "command"
     },
     {
       "command": "githd.viewBranchHistory",
+      "icon": "history",
       "keys": "g.h",
       "name": "View history",
       "type": "command"
     },
     {
       "command": "git.pull",
+      "icon": "repo-pull",
       "keys": "g.l",
       "name": "Pull",
       "type": "command"
@@ -1064,54 +1079,63 @@
     },
     {
       "command": "multiCommand.moveToNextChangeAndShow",
+      "icon": "request-changes",
       "keys": "g.n",
       "name": "Move to next change and show",
       "type": "command"
     },
     {
       "command": "multiCommand.moveToPreviousChangeAndShow",
+      "icon": "request-changes",
       "keys": "g.p",
       "name": "Move to previous change and show",
       "type": "command"
     },
     {
       "command": "workbench.view.extension.github-pull-requests",
+      "icon": "github",
       "keys": "g.r",
       "name": "Open Pull Requests view",
       "type": "command"
     },
     {
       "command": "vscsm.openInSublimeMerge",
+      "icon": "git-merge",
       "keys": "g.s",
       "name": "View status in Sublime Merge",
       "type": "command"
     },
     {
       "command": "git.checkout",
+      "icon": "sort-precedence",
       "keys": "g.B",
       "name": "Branch",
       "type": "command"
     },
     {
       "command": "gitlens.fetchRepositories",
+      "icon": "group-by-ref-type",
       "keys": "g.F",
       "name": "Fetch repositories",
       "type": "command"
     },
     {
       "command": "gitlens.gitCommands",
+      "icon": "github-action",
       "keys": "g.G",
       "name": "Git commands",
       "type": "command"
     },
     {
       "command": "openInGitHub.openProject",
+      "icon": "root-folder-opened",
       "keys": "g.O",
       "name": "Open project in GitHub",
       "type": "command"
     },
     {
       "command": "git.push",
+      "icon": "repo-push",
       "keys": "g.P",
       "name": "Push changes to remote",
       "type": "command"
@@ -2049,5 +2073,17 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "vscode-neovim.neovimInitVimPaths.darwin": "/opt/homebrew/bin/nvim",
+  "editor.suggest.preview": true,
+  "editor.matchBrackets": false,
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
