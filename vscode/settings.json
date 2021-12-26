@@ -1,5 +1,4 @@
 {
-  "vscode-kubernetes.kubectl-path": "/Users/juliant/.asdf/shims/kubectl",
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -157,7 +156,6 @@
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "comments": true,
@@ -483,11 +481,7 @@
   "python.analysis.typeCheckingMode": "basic",
   "python.defaultInterpreterPath": "/Users/macinburrito/.pyenv/shims/python",
   "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
-  "python.experiments.optInto": [
-    "pythonRunFailedTestsButtonDisplayed",
-    "pythonRefreshTestsButtonDisplayed",
-    "pythonDeprecatePythonPath"
-  ],
+  "python.experiments.optInto": ["pythonDeprecatePythonPath"],
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyArgs": [
@@ -571,7 +565,7 @@
     },
     "fish": {
       "args": ["-l"],
-      "path": "/usr/local/bin/fish"
+      "path": "/opt/homebrew/bin/fish"
     },
     "tmux": {
       "icon": "terminal-tmux",
