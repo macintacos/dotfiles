@@ -1169,6 +1169,11 @@
     "when": "textInputFocus"
   },
   {
+    "command": "cursorWordPartRight",
+    "key": "ctrl+alt+right",
+    "when": "textInputFocus"
+  },
+  {
     "command": "cursorWordPartRightSelect",
     "key": "ctrl+shift+alt+right",
     "when": "textInputFocus"
@@ -1897,8 +1902,9 @@
     "command": "workbench.action.files.save"
   },
   {
-    "key": "shift+alt+cmd+p",
-    "command": "togglePeekWidgetFocus"
+    "key": "tab",
+    "command": "togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
   },
   {
     "key": "cmd+\\",
@@ -2186,8 +2192,8 @@
     "command": "-workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+alt+right",
-    "command": "-cursorWordPartRight",
-    "when": "textInputFocus"
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "focusedView == docsView.documentation && !editorTextFocus && !inputFocus"
   }
 ]

@@ -5,15 +5,23 @@
 !.vscode/extensions.json
 npm/npm-backup-current.txt.*
 
-/zsh/**/*.zwc*
-/zsh/.zcompdump*
-/zsh/.zinit/
-/zsh/.zsh_history
-/zsh/.zsh_sessions
+**/zsh/**/*.zwc*
+**/zsh/.zcompdump*
+**/zsh/.zinit/
+**/zsh/.zsh_history
+**/zsh/.zsh_sessions
 .DS_STORE
 /nvim/.netrwhist
 /backup/Brewfile.lock.json
 /setup/setup.log
 tags
-fish_variables
+**/sshndp*
 **/__pycache__
+
+shell/fish/fish_variables
+fish_variables
+
+# Random Files
+**/dist
+**/build
+**/venv

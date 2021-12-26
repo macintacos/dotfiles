@@ -20,7 +20,7 @@ hooks:
 
 # Symlink files
 symlink:
-	@zsh -i -c link_all
+	@setup/symlink.sh
 
 # Backup packages, casks, and plugins
 backup:

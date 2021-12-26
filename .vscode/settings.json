@@ -17,5 +17,6 @@
     "**/zsh/.zinit": true
   },
   "stylelint.enable": false,
-  "python.pythonPath": "venv/bin/python"
+  "mypy.runUsingActiveInterpreter": false,
+  "python.pythonPath": "/Users/juliant/.pyenv/versions/3.9.6/bin/python"
 }

@@ -23,9 +23,12 @@ unmapAllExcept(
   /.*jira-staging.*\.mongodb.*/
 );
 unmapAllExcept(["f", "?"], /.*miro.com\/app.*/);
+unmapAllExcept([], /.*clickup\.com.*/);
+unmapAllExcept([], /.*tldraw\.com.*/);
 
 // Settings
 settings.hintAlign = "left";
+Hints.characters = "wertasdfgbnjklhyuiop";
 
 // Styles
 Hints.style(`
