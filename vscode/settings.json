@@ -24,8 +24,6 @@
     "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
   },
-  "eslint.codeActionsOnSave.rules": ["sort-imports"],
-  "eslint.codeActionsOnSave.mode": "all",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
@@ -73,6 +71,9 @@
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 120
   },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
@@ -87,10 +88,15 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact, typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-    // "editor.tabSize": 4
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -144,6 +150,7 @@
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -153,6 +160,7 @@
   "editor.snippetSuggestions": "top",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {},
@@ -166,6 +174,8 @@
   "errorLens.followCursor": "closestProblem",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.messageTemplate": "$source: $message [$code]",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.codeActionsOnSave.rules": ["sort-imports"],
   "explicitFolding.rules": {
     "*": {
       "separator": "{{{"
@@ -528,8 +538,8 @@
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
-  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
+  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
@@ -554,8 +564,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "/Users/macinburrito/GitLocal/Play/dotfiles/vscode/.vimrc",
+  "vim.camelCaseMotion.enable": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "block-outline",
@@ -601,7 +610,6 @@
   "vim.neovimConfigPath": "/Users/macinburrito/GitLocal/Play/nvim/init.vim",
   "vim.neovimPath": "/opt/homebrew/bin/nvim",
   "vim.neovimUseConfigFile": true,
-  "vim.camelCaseMotion.enable": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "after": ["s"],
@@ -808,6 +816,8 @@
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/Users/macinburrito/GitLocal/Play/dotfiles/vscode/.vimrc",
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "after": ["s"],
@@ -899,8 +909,9 @@
   "vscode-kubernetes.kubectl-path.mac": "/Users/juliant/.asdf/shims/kubectl",
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "vscode-neovim.revealCursorScrollLine": true,
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.revealCursorScrollLine": true,
   "vscode-neovim.textDecorationsAtTop": true,
   "vscsm.smergeExecutablePath": "/usr/local/bin/smerge",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -2073,17 +2084,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "vscode-neovim.neovimInitVimPaths.darwin": "/opt/homebrew/bin/nvim",
-  "editor.suggest.preview": true,
-  "editor.matchBrackets": false,
-  "[postcss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "yaml.schemas": {}
 }
