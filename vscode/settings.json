@@ -1,4 +1,5 @@
 {
+  "vscode-kubernetes.kubectl-path": "/Users/juliant/.asdf/shims/kubectl",
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -8,11 +9,14 @@
       "strings": false
     },
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 120
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.reformat": true
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -55,7 +59,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": true,
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 100
   },
@@ -68,8 +72,9 @@
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
   },
   "[plaintext]": {
+    "editor.quickSuggestions": true,
     "editor.wordWrap": "off",
-    "editor.wordWrapColumn": 120
+    "editor.wordWrapColumn": 100
   },
   "[postcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -125,7 +130,7 @@
   },
   "customizeUI.stylesheet": {
     ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
-    ".quick-input-widget": "top: 25% !important; border-radius: 7px !important; box-shadow: 0 0 30px #333",
+    ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
   },
   "customizeUI.titleBar": "inline",
@@ -136,6 +141,7 @@
   "docker.images.sortBy": "CreatedTime",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
   "editor.codeLensFontFamily": "Inter",
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
@@ -147,17 +153,23 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
+  "editor.guides.bracketPairs": "active",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": true,
+    "other": true,
+    "strings": true
+  },
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "bottom",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
@@ -471,6 +483,11 @@
   "python.analysis.typeCheckingMode": "basic",
   "python.defaultInterpreterPath": "/Users/macinburrito/.pyenv/shims/python",
   "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
+  "python.experiments.optInto": [
+    "pythonRunFailedTestsButtonDisplayed",
+    "pythonRefreshTestsButtonDisplayed",
+    "pythonDeprecatePythonPath"
+  ],
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyArgs": [
@@ -527,6 +544,7 @@
   ],
   "shellcheck.customArgs": ["-x"],
   "snipsnap.silent": true,
+  "snyk.yesWelcomeNotification": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
@@ -545,6 +563,21 @@
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "args": ["-l"],
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "fish": {
+      "args": ["-l"],
+      "path": "/usr/local/bin/fish"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    }
+  },
   "terminal.integrated.tabs.enabled": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
@@ -611,6 +644,14 @@
   "vim.neovimPath": "/opt/homebrew/bin/nvim",
   "vim.neovimUseConfigFile": true,
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "H"],
+      "commands": ["docsView.documentation.focus"]
+    },
+    {
+      "before": ["g", "p"],
+      "commands": ["editor.action.peekDefinition"]
+    },
     {
       "after": ["s"],
       "before": ["f"]
@@ -984,6 +1025,12 @@
       "icon": "diff-modified",
       "keys": "b.D",
       "name": "Close unmodified editors",
+      "type": "command"
+    },
+    {
+      "command": "workbench.debug.action.toggleRepl",
+      "keys": "d.t",
+      "name": "Toggle Debug Console view",
       "type": "command"
     },
     {
