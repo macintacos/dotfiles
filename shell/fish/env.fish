@@ -1,7 +1,12 @@
 # Global Environment Variables
 # These get set before anything else in the interactive shell, from a user configuration perspective.
 
-fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
+# M1-specific
+if test (uname -m) = 'arm64'
+    set -gx N_PREFIX $HOME/.n
+    fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
+end
+
 fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles

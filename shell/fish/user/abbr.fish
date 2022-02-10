@@ -6,7 +6,6 @@ abbr -a cls clear # clear sisplay, just like `mongo` shell
 abbr -a cp 'cp -iv' # preferred 'cp' implementation
 abbr -a diff delta # use delta as your differ of choice
 abbr -a f 'open -a Forklift .' # opens current directory in Forklift
-abbr -a n nodenv # for node version management
 abbr -a py python # .... python
 abbr -a rg 'rg -ziN' # always ignore line numbers, search compressed files, case-insensitivity
 abbr -a rm trash # a better rm
