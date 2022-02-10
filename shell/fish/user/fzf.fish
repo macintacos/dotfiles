@@ -34,14 +34,3 @@ set -gx _ZO_FZF_OPTS "\
     --bind=tab:down,btab:up
     --cycle
     "
-
-# Forgit settings
-set -gx FORGIT_FZF_DEFAULT_OPTS "\
-    --height 60%
-    --reverse
-    --color=dark
-    --color fg:-1,bg:$background,hl:$green,fg+:$foreground,bg+:$current_line,hl+:$pink
-    --color info:$comment,prompt:$green,spinner:$green,pointer:$cyan,marker:$pink,header:$purple
-    --bind=tab:down,btab:up
-    --cycle
-    "

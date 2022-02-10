@@ -2195,5 +2195,10 @@
     "key": "escape",
     "command": "workbench.action.closePanel",
     "when": "focusedView == docsView.documentation && !editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "y n",
+    "command": "fileutils.copyFileName",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   }
 ]

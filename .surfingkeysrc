@@ -5,6 +5,7 @@
 // 4. Profit.
 
 // Documentation: https://github.com/brookhong/Surfingkeys
+const { unmapAllExcept, Hints } = api;
 
 // Unmappings
 unmapAllExcept(["f", "?"], /.*mail.google.com.*/);

@@ -6,6 +6,7 @@ fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles
 set -gx NVIM_HOME $HOME/GitLocal/Play/nvim
+set -gx FISH_HOME $DOTFILES_HOME/shell/fish
 set -gx EDITOR nvim
 set -gx STARSHIP_CONFIG $DOTFILES_HOME/starship.toml # If for some reason I try starship again
 set -gx BAT_THEME Dracula
@@ -20,9 +21,12 @@ set -gx M_PREFIX $HOME/MongoDB
 set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PIPX_DEFAULT_PYTHON (pyenv root)/shims/python
 set -gx RUST $HOME/.cargo/bin
-set -gx TERM "xterm-256color"
+set -gx TERM xterm-256color
 set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
 set -gx VASA_HOME $HOME/.vasa
+
+# fisher
+set -gx fisher_path $FISH_HOME
 
 # Adding stuff to PATH
 fish_add_path -a $PYENV_ROOT/bin
@@ -34,7 +38,8 @@ fish_add_path -a (brew --prefix)/opt/grep/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/make/libexec/gnubin
 fish_add_path -a $ZSH_DIR/secrets
 fish_add_path -a $HOME/.cargo/bin
-fish_add_path -a $HOME/MongoDB/bin
+fish_add_path -a $HOME/MongoDB/bin # where mongodb binaries get stored
+fish_add_path -a $HOME/.nimble/bin # where nim binaries get stored
 
 # Custom scripts
 fish_add_path -a $DOTFILES_HOME/shell/scripts/python

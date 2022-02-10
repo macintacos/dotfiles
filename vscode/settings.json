@@ -97,7 +97,8 @@
   },
   "[typescriptreact, typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -106,7 +107,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.tabSize": 2
   },
-  "aws.profile": "profile:PowerUserAccess-655848829540",
   "breadcrumbs.enabled": true,
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
@@ -172,7 +172,7 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tokenColorCustomizations": {},
   "editor.wordWrap": "off",
   "emmet.includeLanguages": {
@@ -450,6 +450,8 @@
     }
   ],
   "mypy.dmypyExecutable": "/Users/macinburrito/.local/bin/dmypy",
+  "nim.buildOnSave": true,
+  "nim.nimprettyMaxLineLen": 88,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -479,9 +481,8 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "/Users/macinburrito/.pyenv/shims/python",
-  "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
   "python.experiments.optInto": ["pythonDeprecatePythonPath"],
+  "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyArgs": [
@@ -492,12 +493,14 @@
   ],
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "python.linting.pydocstyleEnabled": true,
-  "python.linting.pydocstylePath": "/Users/juliant/.local/bin/pydocstyle",
+  "python.linting.pydocstylePath": "/Users/macinburrito/.local/bin/pydocstyle",
   "python.logging.level": "info",
   "python.sortImports.path": "/Users/macinburrito/.local/bin/isort",
   "redhat.telemetry.enabled": false,
   "rpmspec.lint": false,
   "scm.defaultViewMode": "tree",
+  "screencastMode.fontSize": 40,
+  "screencastMode.verticalOffset": 10,
   "search.exclude": {
     "**/.git": true,
     "yarn-error.log": true,
@@ -572,7 +575,6 @@
       "path": "tmux"
     }
   },
-  "terminal.integrated.tabs.enabled": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
     "BUG",
@@ -1109,13 +1111,6 @@
       "icon": "git-pull-request-draft",
       "keys": "g.b",
       "name": "Show blame for current file",
-      "type": "command"
-    },
-    {
-      "command": "githd.viewBranchHistory",
-      "icon": "history",
-      "keys": "g.h",
-      "name": "View history",
       "type": "command"
     },
     {
@@ -1917,6 +1912,28 @@
     {
       "bindings": [
         {
+          "bindings": [
+            {
+              "command": "nim.run.file",
+              "icon": "terminal",
+              "key": "c",
+              "name": "Compile + Run Nim file",
+              "type": "command"
+            }
+          ],
+          "icon": "play",
+          "key": "c",
+          "name": "+Execute",
+          "type": "bindings"
+        }
+      ],
+      "keys": ["m", "languageId:nim"],
+      "name": "Nim",
+      "type": "bindings"
+    },
+    {
+      "bindings": [
+        {
           "command": "md-shortcut.toggleTitleH1",
           "key": "1",
           "name": "Level 1 (#)",
@@ -2057,7 +2074,7 @@
       "type": "bindings"
     }
   ],
-  "whichkey.delay": 300,
+  "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.restoreWindows": "all",
   "window.titleBarStyle": "native",
@@ -2125,5 +2142,6 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "editor.matchBrackets": false
 }
