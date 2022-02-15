@@ -8,10 +8,14 @@
       "strings": false
     },
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 120
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.reformat": true
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -54,7 +58,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": true,
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 100
   },
@@ -67,8 +71,12 @@
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
   },
   "[plaintext]": {
+    "editor.quickSuggestions": true,
     "editor.wordWrap": "off",
-    "editor.wordWrapColumn": 120
+    "editor.wordWrapColumn": 100
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
     "editor.codeActionsOnSave": {
@@ -85,8 +93,12 @@
     "editor.tabSize": 4
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact, typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -95,7 +107,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.tabSize": 2
   },
-  "aws.profile": "profile:PowerUserAccess-655848829540",
   "breadcrumbs.enabled": true,
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
@@ -129,6 +140,7 @@
   "docker.images.sortBy": "CreatedTime",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
   "editor.codeLensFontFamily": "Inter",
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
@@ -140,23 +152,28 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modifications",
-  "editor.highlightActiveIndentGuide": false,
+  "editor.guides.bracketPairs": "active",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
-  "editor.renderIndentGuides": false,
+  "editor.quickSuggestions": {
+    "comments": true,
+    "other": true,
+    "strings": true
+  },
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "bottom",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tokenColorCustomizations": {},
   "editor.wordWrap": "off",
   "emmet.includeLanguages": {
@@ -168,6 +185,8 @@
   "errorLens.followCursor": "closestProblem",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.messageTemplate": "$source: $message [$code]",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.codeActionsOnSave.rules": ["sort-imports"],
   "explicitFolding.rules": {
     "*": {
       "separator": "{{{"
@@ -212,7 +231,7 @@
     "keybindings.json": "jsonc",
     "settings.json": "jsonc"
   },
-  "files.autoSave": "off",
+  "files.autoSave": "onWindowChange",
   "files.defaultLanguage": "txt",
   "files.exclude": {
     "**/*.zwc*": true,
@@ -270,6 +289,7 @@
   "indentRainbow.includedLanguages": ["python"],
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.schemas": [],
   "json.trace.server": "verbose",
   "jupyter.askForKernelRestart": false,
   "jupyter.sendSelectionToInteractiveWindow": false,
@@ -430,10 +450,9 @@
       ]
     }
   ],
-  "mypy.dmypyExecutable": "/Users/juliant/.mypyls/bin/dmypy",
-  "nightswitch.autoSwitch": false,
-  "nightswitch.dayTheme": "GitHub Light",
-  "nightswitch.nightTheme": "GitHub Dark",
+  "mypy.dmypyExecutable": "/Users/macinburrito/.local/bin/dmypy",
+  "nim.buildOnSave": true,
+  "nim.nimprettyMaxLineLen": 88,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -444,7 +463,7 @@
     }
   },
   "path-intellisense.showHiddenFiles": true,
-  "projectManager.git.baseFolders": ["/Users/juliant/GitLocal/"],
+  "projectManager.git.baseFolders": ["/Users/macinburrito/GitLocal/"],
   "projectManager.git.ignoredFolders": [
     "node_modules",
     "out",
@@ -463,19 +482,26 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "/Users/juliant/.pyenv/shims/python",
-  "python.experiments.optInto": ["pythonDiscoveryModuleWithoutWatcher"],
-  "python.formatting.blackPath": "/Users/juliant/.pyenv/shims/black",
+  "python.experiments.optInto": ["pythonDeprecatePythonPath"],
+  "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
+  "python.linting.mypyArgs": [
+    "--follow-imports=silent",
+    "--ignore-missing-imports",
+    "--show-column-numbers",
+    "--no-pretty"
+  ],
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "python.linting.pydocstyleEnabled": true,
-  "python.linting.pydocstylePath": "/Users/juliant/.local/bin/pydocstyle",
+  "python.linting.pydocstylePath": "/Users/macinburrito/.local/bin/pydocstyle",
   "python.logging.level": "info",
-  "python.sortImports.path": "/usr/local/bin/isort",
+  "python.sortImports.path": "/Users/macinburrito/.local/bin/isort",
   "redhat.telemetry.enabled": false,
   "rpmspec.lint": false,
   "scm.defaultViewMode": "tree",
+  "screencastMode.fontSize": 40,
+  "screencastMode.verticalOffset": 10,
   "search.exclude": {
     "**/.git": true,
     "yarn-error.log": true,
@@ -516,6 +542,7 @@
   ],
   "shellcheck.customArgs": ["-x"],
   "snipsnap.silent": true,
+  "snyk.yesWelcomeNotification": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
@@ -524,16 +551,31 @@
   "sync.quietSync": false,
   "sync.removeExtensions": true,
   "sync.syncExtensions": true,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.commandsToSkipShell": ["vspacecode.space"],
+  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "args": ["-l"],
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "fish": {
+      "args": ["-l"],
+      "path": "/opt/homebrew/bin/fish"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    }
+  },
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.general.tags": [
     "BUG",
@@ -552,6 +594,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
+  "vim.camelCaseMotion.enable": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "block-outline",
@@ -594,7 +637,18 @@
       "commands": [":nohl"]
     }
   ],
+  "vim.neovimConfigPath": "/Users/macinburrito/GitLocal/Play/nvim/init.vim",
+  "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "vim.neovimUseConfigFile": true,
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "H"],
+      "commands": ["docsView.documentation.focus"]
+    },
+    {
+      "before": ["g", "p"],
+      "commands": ["editor.action.peekDefinition"]
+    },
     {
       "after": ["s"],
       "before": ["f"]
@@ -798,8 +852,10 @@
   "vim.smartRelativeLine": true,
   "vim.smartcase": true,
   "vim.sneak": true,
-  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.sneakReplacesF": true,
   "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/Users/macinburrito/GitLocal/Play/dotfiles/vscode/.vimrc",
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "after": ["s"],
@@ -891,7 +947,8 @@
   "vscode-kubernetes.kubectl-path.mac": "/Users/juliant/.asdf/shims/kubectl",
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/opt/homebrew/bin/nvim",
   "vscode-neovim.revealCursorScrollLine": true,
   "vscode-neovim.textDecorationsAtTop": true,
   "vscsm.smergeExecutablePath": "/usr/local/bin/smerge",
@@ -934,6 +991,7 @@
     },
     {
       "command": "workbench.action.nextEditorInGroup",
+      "icon": "arrow-right",
       "keys": "b.`",
       "name": "Next Editor (current group)",
       "type": "command"
@@ -947,12 +1005,14 @@
     },
     {
       "command": "outline.focus",
+      "icon": "list-tree",
       "keys": "b.o",
       "name": "Focus outline for buffer",
       "type": "command"
     },
     {
       "command": "workbench.action.previousEditorInGroup",
+      "icon": "arrow-left",
       "keys": "b.~",
       "name": "Previous Editor (current group)",
       "type": "command"
@@ -972,84 +1032,91 @@
     },
     {
       "command": "workbench.action.output.toggleOutput",
+      "icon": "output",
       "keys": "e.o",
       "name": "Toggle output view",
       "type": "command"
     },
     {
       "command": "editor.action.formatDocument",
+      "icon": "symbol-keyword",
       "keys": "f.=",
       "name": "Format current file",
       "type": "command"
     },
     {
       "command": "workbench.action.openSettingsJson",
+      "icon": "bracket-dot",
       "keys": "f.e.d",
       "name": "Open settings JSON",
       "type": "command"
     },
     {
       "command": "workbench.action.openSettings",
+      "icon": "settings",
       "keys": "f.e.D",
       "name": "Open settings UI",
       "type": "command"
     },
     {
       "command": "workbench.action.reloadWindow",
+      "icon": "refresh",
       "keys": "f.e.R",
       "name": "Reload window",
       "type": "command"
     },
     {
       "command": "workbench.action.quickOpen",
+      "icon": "go-to-file",
       "keys": "f.f",
-      "name": "Open file...",
+      "name": "Open file",
       "type": "command"
     },
     {
       "command": "file-browser.open",
+      "icon": "folder-opened",
       "keys": "f.n",
       "name": "New file (via File Browser)",
       "type": "command"
     },
     {
       "command": "workbench.action.files.openFileFolder",
+      "icon": "folder-library",
       "keys": "f.o",
       "name": "Open file browser",
       "type": "command"
     },
     {
       "command": "outline.focus",
+      "icon": "symbol-interface",
       "keys": "f.O",
       "name": "Focus file outline view",
       "type": "command"
     },
     {
       "command": "fileutils.renameFile",
+      "icon": "edit",
       "keys": "f.R",
       "name": "Rename file",
       "type": "command"
     },
     {
       "command": "gitlens.showCommitSearch",
+      "icon": "search",
       "keys": "g./",
       "name": "Search history",
       "type": "command"
     },
     {
       "command": "gitlens.toggleFileBlame",
+      "icon": "git-pull-request-draft",
       "keys": "g.b",
       "name": "Show blame for current file",
       "type": "command"
     },
     {
-      "command": "githd.viewBranchHistory",
-      "keys": "g.h",
-      "name": "View history",
-      "type": "command"
-    },
-    {
       "command": "git.pull",
+      "icon": "repo-pull",
       "keys": "g.l",
       "name": "Pull",
       "type": "command"
@@ -1060,54 +1127,63 @@
     },
     {
       "command": "multiCommand.moveToNextChangeAndShow",
+      "icon": "request-changes",
       "keys": "g.n",
       "name": "Move to next change and show",
       "type": "command"
     },
     {
       "command": "multiCommand.moveToPreviousChangeAndShow",
+      "icon": "request-changes",
       "keys": "g.p",
       "name": "Move to previous change and show",
       "type": "command"
     },
     {
       "command": "workbench.view.extension.github-pull-requests",
+      "icon": "github",
       "keys": "g.r",
       "name": "Open Pull Requests view",
       "type": "command"
     },
     {
       "command": "vscsm.openInSublimeMerge",
+      "icon": "git-merge",
       "keys": "g.s",
       "name": "View status in Sublime Merge",
       "type": "command"
     },
     {
       "command": "git.checkout",
+      "icon": "sort-precedence",
       "keys": "g.B",
       "name": "Branch",
       "type": "command"
     },
     {
       "command": "gitlens.fetchRepositories",
+      "icon": "group-by-ref-type",
       "keys": "g.F",
       "name": "Fetch repositories",
       "type": "command"
     },
     {
       "command": "gitlens.gitCommands",
+      "icon": "github-action",
       "keys": "g.G",
       "name": "Git commands",
       "type": "command"
     },
     {
       "command": "openInGitHub.openProject",
+      "icon": "root-folder-opened",
       "keys": "g.O",
       "name": "Open project in GitHub",
       "type": "command"
     },
     {
       "command": "git.push",
+      "icon": "repo-push",
       "keys": "g.P",
       "name": "Push changes to remote",
       "type": "command"
@@ -1839,25 +1915,21 @@
         {
           "bindings": [
             {
-              "command": "code-runner.run",
-              "key": "r",
-              "name": "Run code in current file",
-              "type": "command"
-            },
-            {
-              "command": "code-runner.stop",
-              "key": "R",
-              "name": "Stop ongoing code run",
+              "command": "nim.run.file",
+              "icon": "terminal",
+              "key": "c",
+              "name": "Compile + Run Nim file",
               "type": "command"
             }
           ],
-          "key": "a",
-          "name": "+Actions",
+          "icon": "play",
+          "key": "c",
+          "name": "+Execute",
           "type": "bindings"
         }
       ],
-      "keys": ["m", "languageId:python"],
-      "name": "+Python Major Mode",
+      "keys": ["m", "languageId:nim"],
+      "name": "Nim",
       "type": "bindings"
     },
     {
@@ -2003,7 +2075,7 @@
       "type": "bindings"
     }
   ],
-  "whichkey.delay": 300,
+  "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.restoreWindows": "all",
   "window.titleBarStyle": "native",
@@ -2042,8 +2114,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
   "workbench.view.alwaysShowHeaderActions": true,
-  "yaml.schemas": {},
-  "json.schemas": [],
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -2073,5 +2143,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "snyk.yesWelcomeNotification": false
+  "yaml.schemas": {}
 }

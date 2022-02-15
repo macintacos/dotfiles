@@ -18,12 +18,15 @@ Available recipes:
     hooks      # Set up git hooks so that things are committed the way we want
     symlink    # Symlink files
     backup     # Backup packages, casks, and plugins
+    sort       # Sort keybindings (and eventually other things)
 ```
 
 ## Whatcha got?
 
 Installing this stuff will get you the following:
 
-- A pretty sweet neovim configuration with Spacemacs-esque mappings (even though it's still not perfect at all). See [`nvim`](https://github.com/macintacos/dotfiles/tree/trunk/nvim)
-- A [ZSH configuration](https://github.com/macintacos/dotfiles/tree/trunk/zsh) that I'm pretty fond of.
-- All of the tools/casks that I use on the daily (check out the Brewfile, there's a lot of them)
+- A [Fish configuration](./shell/fish/README.md) that I'm pretty fond of (and am currently using).
+- A [ZSH configuration](./shell/zsh/README.md) that I'm pretty fond of (and am not currently using).
+- All of the tools/casks that I use on the daily (check out the [Brewfile](./backup/Brewfile), there's a lot of them)
+
+I used to keep my neovim configuration here, but I decided to just keep it to its own repo: https://github.com/macintacos/nvim

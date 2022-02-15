@@ -17,7 +17,7 @@ eval "$(zoxide init zsh)"
 
 # ----------- asdf version manager https://github.com/asdf-vm/asdf ----------- #
 
-. /usr/local/opt/asdf/asdf.sh
+. "$(brew --prefix)/opt/asdf/asdf.sh"
 
 # ------ direnv local environment vars https://github.com/direnv/direnv ------ #
 

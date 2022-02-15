@@ -1,0 +1,5 @@
+pexpect ~= 4.8
+sh ~= 1.14
+click ~= 8.0
+rich ~= 10.14
+click_completion ~= 0.5

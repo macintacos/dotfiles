@@ -1,0 +1,1 @@
+This is where all of those "rc" files should live, unless they're part of a larger setup. One-off configuration files.
