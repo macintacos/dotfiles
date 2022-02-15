@@ -25,7 +25,7 @@ Available recipes:
 
 Installing this stuff will get you the following:
 
-- A [Fish configuration](./shell/zsh/README.md) that I'm pretty fond of (and am currently using).
+- A [Fish configuration](./shell/fish/README.md) that I'm pretty fond of (and am currently using).
 - A [ZSH configuration](./shell/zsh/README.md) that I'm pretty fond of (and am not currently using).
 - All of the tools/casks that I use on the daily (check out the [Brewfile](./backup/Brewfile), there's a lot of them)
 

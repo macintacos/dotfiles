@@ -2,7 +2,7 @@ aaron-bond.better-comments
 aaronthomas.vscode-snazzy-operator
 abusaidm.html-snippets
 adamwalzer.scss-lint
-adpyke.vscode-sql-formatter
+adpyke.codesnap
 ahmadawais.shades-of-purple
 akamud.vscode-javascript-snippet-pack
 akamud.vscode-theme-onedark
@@ -10,8 +10,6 @@ akamud.vscode-theme-onelight
 alefragnani.Bookmarks
 alefragnani.project-manager
 alexesprit.vscode-unfancy-file-icons
-amazonwebservices.aws-toolkit-vscode
-amodio.tsl-problem-matcher
 arcticicestudio.nord-visual-studio-code
 asvetliakov.vscode-neovim
 austenc.tailwind-docs
@@ -53,7 +51,6 @@ dracula-theme-pro.theme-dracula-pro
 dracula-theme.theme-dracula
 dunstontc.viml
 eamodio.gitlens
-eamodio.tsl-problem-matcher
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
@@ -95,16 +92,13 @@ jakob101.RelativePath
 jdinhlife.gruvbox
 jgclark.vscode-todo-highlight
 johnpapa.winteriscoming
-jolaleye.horizon-theme-vscode
 jy-xlj.vscode-json-editor
-KatjanaKosic.vscode-json5
 kevinkyang.auto-comment-blocks
 kevinmcgowan.TypeScriptImport
 KevinRose.vsc-python-indent
 khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
 Koihik.vscode-lua-format
-kosz78.nim
 lacroixdavid1.vscode-format-context-menu
 LaurentTreguier.rpm-spec
 LaurentTreguier.vscode-simple-icons
@@ -114,11 +108,13 @@ letrieu.expand-region
 liviuschera.noctis
 lkytal.FlatUI
 mads-hartmann.bash-ide-vscode
-matangover.mypy
 mateocerquetella.xcode-12-theme
 mattn.Lisp
 mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
+metaseed.metago
+metaseed.MetaJump
+metaseed.MetaWord
 miguelsolorio.fluent-icons
 mkaufman.HTMLHint
 mongodb.mongodb-vscode
@@ -126,7 +122,6 @@ mrmlnc.vscode-less
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
-ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.gather
 ms-python.python
 ms-python.vscode-pylance
@@ -139,6 +134,7 @@ ms-vscode.live-server
 ms-vscode.test-adapter-converter
 mushan.vscode-paste-image
 naumovs.color-highlight
+nimsaem.nimvscode
 njpwerner.autodocstring
 oderwat.indent-rainbow
 okitavera.vscode-nunjucks-formatter
@@ -180,7 +176,6 @@ sleistner.vscode-fileutils
 slevesque.vscode-autohotkey
 snipsnapdev.snipsnap-vscode
 snooty.snooty
-snyk-security.snyk-vulnerability-scanner
 stackbreak.comment-divider
 stkb.rewrap
 stylelint.vscode-stylelint
@@ -193,9 +188,7 @@ teabyii.ayu
 telesoho.vscode-markdown-paste-image
 timonwong.shellcheck
 tinkertrain.theme-panda
-tlahmann.alex-linter
 tokoph.ghosttext
-trinm1709.dracula-theme-from-intellij
 trixnz.go-to-method
 Tyriar.sort-lines
 usernamehw.commands
@@ -208,6 +201,7 @@ vscodevim.vim
 vsls-contrib.gistfs
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
+WallabyJs.quokka-vscode
 wayou.file-icons-mac
 wayou.vscode-icons-mac
 whatwedo.twig

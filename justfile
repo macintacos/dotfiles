@@ -26,7 +26,7 @@ hooks:
 
 # Backup packages, casks, and plugins
 backup:
-	@zsh -i -c jt-backup-now
+	@backup/backup.sh
 
 # Sort keybindings (and eventually other things)
 sort:
