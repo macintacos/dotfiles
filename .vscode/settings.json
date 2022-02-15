@@ -3,12 +3,20 @@
     "editor.formatOnSave": false
   },
   "files.exclude": {
-    "**/.DS_Store": true,
     "**/.git": true,
-    "**/.hg": true,
     "**/.svn": true,
+    "**/.hg": true,
     "**/CVS": true,
-    "**/zsh/.zinit": true
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/*.zwc*": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.zcompdump": true,
+    "**/.zsh_history": true,
+    "**/zsh/.zinit": false
   },
   "search.exclude": {
     "**/*.code-search": true,
@@ -16,5 +24,6 @@
     "**/node_modules": true,
     "**/zsh/.zinit": true
   },
-  "stylelint.enable": false
+  "stylelint.enable": false,
+  "explorerExclude.backup": null
 }

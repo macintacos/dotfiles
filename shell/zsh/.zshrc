@@ -1,7 +1,6 @@
 #!/usr/local/bin/bash
 # shellcheck disable=SC1090
 
-
 # PROFILING INFORMATION {{{
 ## Uncomment the following line (and last line) to get loading times for zshell
 # zmodload zsh/zprof

@@ -27,7 +27,7 @@ zinit wait lucid light-mode for \
   micha/resty \
   paoloantinori/hhighlighter \
   wfxr/forgit \
-  zdharma/fast-syntax-highlighting
+  zdharma-continuum/fast-syntax-highlighting
 
 ## oh-my-zsh plugins
 zinit ice wait lucid
@@ -42,10 +42,5 @@ zinit light tj/git-extras
 ## programs
 zinit ice wait lucid as"program" pick"yank" make YANKCMD=pbcopy
 zinit light mptre/yank
-
-# zinit ice lucit wait"0" as"program" from"gh-r" pick"bit"
-# zinit light chriswalz/bit
-
-## local completions
 
 # }}}
