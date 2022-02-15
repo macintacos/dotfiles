@@ -9,3 +9,6 @@
 # editing
 tags
 tags.**
+
+# vscode
+**.code-workspace

@@ -2,6 +2,7 @@ aaron-bond.better-comments
 aaronthomas.vscode-snazzy-operator
 abusaidm.html-snippets
 adamwalzer.scss-lint
+adpyke.codesnap
 ahmadawais.shades-of-purple
 akamud.vscode-javascript-snippet-pack
 akamud.vscode-theme-onedark
@@ -9,11 +10,11 @@ akamud.vscode-theme-onelight
 alefragnani.Bookmarks
 alefragnani.project-manager
 alexesprit.vscode-unfancy-file-icons
-amazonwebservices.aws-toolkit-vscode
 arcticicestudio.nord-visual-studio-code
 asvetliakov.vscode-neovim
 austenc.tailwind-docs
 azemoh.one-monokai
+batisteo.vscode-django
 BazelBuild.vscode-bazel
 bdavs.expect
 be5invis.vscode-icontheme-nomo-dark
@@ -37,6 +38,7 @@ CoenraadS.disableligatures
 Compulim.compulim-vscode-closetag
 cssho.vscode-svgviewer
 csstools.postcss
+cstrap.python-snippets
 dakara.transformer
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
@@ -45,10 +47,10 @@ deerawan.vscode-dash
 denco.confluence-markup
 denoland.vscode-deno
 DotJoshJohnson.xml
+dracula-theme-pro.theme-dracula-pro
 dracula-theme.theme-dracula
 dunstontc.viml
 eamodio.gitlens
-eamodio.tsl-problem-matcher
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
@@ -90,7 +92,6 @@ jakob101.RelativePath
 jdinhlife.gruvbox
 jgclark.vscode-todo-highlight
 johnpapa.winteriscoming
-jolaleye.horizon-theme-vscode
 jy-xlj.vscode-json-editor
 kevinkyang.auto-comment-blocks
 kevinmcgowan.TypeScriptImport
@@ -107,11 +108,13 @@ letrieu.expand-region
 liviuschera.noctis
 lkytal.FlatUI
 mads-hartmann.bash-ide-vscode
-matangover.mypy
 mateocerquetella.xcode-12-theme
 mattn.Lisp
 mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
+metaseed.metago
+metaseed.MetaJump
+metaseed.MetaWord
 miguelsolorio.fluent-icons
 mkaufman.HTMLHint
 mongodb.mongodb-vscode
@@ -119,18 +122,19 @@ mrmlnc.vscode-less
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
-ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.gather
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.test-adapter-converter
 mushan.vscode-paste-image
 naumovs.color-highlight
+nimsaem.nimvscode
 njpwerner.autodocstring
 oderwat.indent-rainbow
 okitavera.vscode-nunjucks-formatter
@@ -184,9 +188,7 @@ teabyii.ayu
 telesoho.vscode-markdown-paste-image
 timonwong.shellcheck
 tinkertrain.theme-panda
-tlahmann.alex-linter
 tokoph.ghosttext
-trinm1709.dracula-theme-from-intellij
 trixnz.go-to-method
 Tyriar.sort-lines
 usernamehw.commands
@@ -199,6 +201,7 @@ vscodevim.vim
 vsls-contrib.gistfs
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
+WallabyJs.quokka-vscode
 wayou.file-icons-mac
 wayou.vscode-icons-mac
 whatwedo.twig
@@ -212,3 +215,4 @@ zhuangtongfa.material-theme
 Zignd.html-css-class-completion
 ziyasal.vscode-open-in-github
 zokugun.explicit-folding
+zxh404.vscode-proto3

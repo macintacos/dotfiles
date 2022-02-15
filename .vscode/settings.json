@@ -2,13 +2,22 @@
   "[shellscript]": {
     "editor.formatOnSave": false
   },
+  "explorerExclude.backup": null,
   "files.exclude": {
+    "**/*.zwc*": true,
     "**/.DS_Store": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
     "**/.git": true,
     "**/.hg": true,
+    "**/.project": true,
+    "**/.settings": true,
     "**/.svn": true,
+    "**/.zcompdump": true,
+    "**/.zsh_history": true,
     "**/CVS": true,
-    "**/zsh/.zinit": true
+    "**/Thumbs.db": true,
+    "**/zsh/.zinit": false
   },
   "search.exclude": {
     "**/*.code-search": true,
