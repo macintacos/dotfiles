@@ -2,20 +2,21 @@
   "[shellscript]": {
     "editor.formatOnSave": false
   },
+  "explorerExclude.backup": null,
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
     "**/*.zwc*": true,
+    "**/.DS_Store": true,
     "**/.classpath": true,
     "**/.factorypath": true,
+    "**/.git": true,
+    "**/.hg": true,
     "**/.project": true,
     "**/.settings": true,
+    "**/.svn": true,
     "**/.zcompdump": true,
     "**/.zsh_history": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
     "**/zsh/.zinit": false
   },
   "search.exclude": {
@@ -24,6 +25,5 @@
     "**/node_modules": true,
     "**/zsh/.zinit": true
   },
-  "stylelint.enable": false,
-  "explorerExclude.backup": null
+  "stylelint.enable": false
 }
