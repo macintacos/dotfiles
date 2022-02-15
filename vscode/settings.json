@@ -156,6 +156,7 @@
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "comments": true,
@@ -2142,6 +2143,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "editor.matchBrackets": false
+  "yaml.schemas": {}
 }

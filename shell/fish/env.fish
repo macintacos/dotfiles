@@ -9,11 +9,12 @@ end
 
 fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
+# Homes
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles
 set -gx NVIM_HOME $HOME/GitLocal/Play/nvim
 set -gx FISH_HOME $DOTFILES_HOME/shell/fish
+
 set -gx EDITOR nvim
-set -gx STARSHIP_CONFIG $DOTFILES_HOME/starship.toml # If for some reason I try starship again
 set -gx BAT_THEME Dracula
 set -gx CHEAT_COLORS true
 set -gx CHEAT_COLORSCHEME dark
@@ -24,7 +25,7 @@ set -gx HOME_LOCAL_BIN $HOME/.local/bin
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 set -gx M_PREFIX $HOME/MongoDB
 set -gx PYENV_ROOT $HOME/.pyenv
-set -gx PIPX_DEFAULT_PYTHON (pyenv root)/shims/python
+set -gx PIPX_DEFAULT_PYTHON (pyenv prefix)/bin/python
 set -gx RUST $HOME/.cargo/bin
 set -gx TERM xterm-256color
 set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug

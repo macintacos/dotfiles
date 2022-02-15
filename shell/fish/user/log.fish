@@ -16,13 +16,13 @@ function log --description "Log something"
 
     switch $level
         case info
-            set -p log_string (set_color cyan)"[ INFO ]  "
+            set -p log_string (set_color cyan)"[ℹ]  "
         case ok
-            set -p log_string (set_color green)"[ OK ]    "
+            set -p log_string (set_color green)"[✔]  "
         case warn
-            set -p log_string (set_color yellow)"[ WARN ]  "
+            set -p log_string (set_color yellow)"[~]  "
         case error
-            set -p log_string (set_color red)"[ ERROR ] "
+            set -p log_string (set_color red)"[!]  "
     end
 
     echo $log_string

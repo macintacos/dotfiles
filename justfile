@@ -1,15 +1,20 @@
 #!/usr/bin/env just --justfile
 # ^ A shebang isn't required, but allows a justfile to be executed
-#   like a script, with `./justfile test`, for example.# Install everything
+#   like a script, with `./justfile test`, for example.
 
 _default:
     @just --list --unsorted
 
+# Install everything
 install: hooks
 	@setup/install.sh install-normal
 
 install-ci:
 	@setup/install.sh install-ci
+
+# Symlink files
+symlink:
+	@setup/symlink.sh
 
 # Set up git hooks so that things are committed the way we want
 hooks:
@@ -18,9 +23,6 @@ hooks:
 	find .githooks -type f -exec  ln -sf ../../{} .git/hooks \;
 	@echo "==> Done."
 
-# Symlink files
-symlink:
-	@setup/symlink.sh
 
 # Backup packages, casks, and plugins
 backup:

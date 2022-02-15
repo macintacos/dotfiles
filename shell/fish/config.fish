@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/fish
+#!/usr/bin/env fish
 # set fish_trace 1 # uncomment to debug your shell, see https://fishshell.com/docs/current/language.html#debugging
 
 if status is-interactive
