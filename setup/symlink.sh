@@ -20,7 +20,7 @@ karabiner_link() {
 nvim_link() {
     log info "Linking neovim..."
     rm -f ~/.config/nvim
-    ln -sF "${DOTFILES_HOME}/nvim" ~/.config/nvim
+    ln -sF "${HOME}/GitLocal/Play/nvim" ~/.config/nvim
     log ok "neovim linked."
 }
 
@@ -83,6 +83,7 @@ link_all() {
     log info "Creating all symlinks..."
     bash_link
     gitignore_global_link
+    gitconfig_link
     ideavimrc_link
     karabiner_link
     lazygit_link

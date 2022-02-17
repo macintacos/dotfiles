@@ -24,6 +24,7 @@ unmapAllExcept(
   /.*jira-staging.*\.mongodb.*/
 );
 unmapAllExcept(["f", "?"], /.*miro.com\/app.*/);
+unmapAllExcept(["f", "?"], /.*cloud.mongodb.com.*/);
 unmapAllExcept([], /.*clickup\.com.*/);
 unmapAllExcept([], /.*tldraw\.com.*/);
 

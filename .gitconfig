@@ -52,7 +52,7 @@
     co = checkout
     st = status
     # Display tree-like log, because default log is a pain…
-    lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     # Useful when you have to update your last commit
     # with staged files without editing the commit message.
     oops = commit --amend --no-edit
