@@ -30,6 +30,7 @@ set -gx RUST $HOME/.cargo/bin
 set -gx TERM xterm-256color
 set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
 set -gx VASA_HOME $HOME/.vasa
+set -gx KUBECONFIG "$HOME/.kube/config.prod:$HOME/.kube/config.staging"
 
 # fisher
 set -gx fisher_path $FISH_HOME
