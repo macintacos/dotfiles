@@ -1,15 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# TODO: Make this install Fish instead.
+# TODO: Remove anything that we don't care about anymore.
+# TODO: Break installation into a bunch of scripts to make sure it's compartmentalized?
+# TODO: Make a "proper" exit trap for this script.
+# TODO: Switch this to zx? fish?
+# TODO: Make sure that pyenv is installed with homebrew method, and make sure that the repo is in an apporpriate location.
+# TODO: Make sure that there is a "Community" folder in GitLocal that you can dump community projects
+# TODO: Make it so that the backup method suggests making a backup - maybe we diff what has changed and ask if we really want that to be backed up?
+
+echo "Look at the TODOs in this file, it's not ready for prime time."
+exit 0
 
 # Assume we're running from the root of the project
 export PATH="$PWD/setup:$PATH"
 
-## Force an exit if script tries to use an unset variable:
-set -o nounset
-## Force an exit if any commands exit with non-zero status:
-set -o errexit
-## Catch mid-pipe non-zero exit statuses:
-set -euo pipefail
+set -o nounset ## Force an exit if script tries to use an unset variable
+set -o errexit ## Force an exit if any commands exit with non-zero status
+set -euo pipefail ## Catch mid-pipe non-zero exit statuses
 IFS=$'\n\t'
+
 ## Print the command trace before executing the command:
 # set -o xtrace
 
@@ -18,8 +28,6 @@ log info "You're currently here: $setup_directory"
 
 # include my library helpers for colorized echo and require_brew, etc
 log info "Sourcing things that we need to source..."
-# shellcheck source=../zsh/.zshenv
-source "./zsh/.zshenv"
 # shellcheck source=../setup/symlink.sh
 source "./setup/symlink.sh"
 log ok "Files sourced successfully (not that I thought they wouldn't)"
@@ -71,13 +79,13 @@ nvim_link
 case $1 in
 install-ci)
 	log info "Installing node/nodenv because we're in CI..."
-	brew install node
-	brew install nodenv
+	# brew install node # TODO: Make sure that we just install `n`, and  don't use `brew` to install it.
+	# brew install nodenv
 	;;
 install-normal) ;;
 esac
-nodenv install "$(node --version | sed -e 's/v//g')"
-nodenv global "$(node --version | sed -e 's/v//g')"
+# nodenv install "$(node --version | sed -e 's/v//g')" # TODO: Switch to `n`
+# nodenv global "$(node --version | sed -e 's/v//g')"
 npm install -g backup-global
 log info "Installing global npm packages..."
 backup-global install --input ./backup/npm.global.backup.txt

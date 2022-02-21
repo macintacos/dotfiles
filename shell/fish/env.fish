@@ -3,13 +3,13 @@
 
 # M1-specific
 if test (uname -m) = 'arm64'
-    set -gx N_PREFIX $HOME/.n
     fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
 end
 
 fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
 # Homes
+set -gx N_PREFIX $HOME/.n
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles
 set -gx NVIM_HOME $HOME/GitLocal/Play/nvim
 set -gx FISH_HOME $DOTFILES_HOME/shell/fish

@@ -4,6 +4,7 @@
 @csmith/release-it-calver-plugin==@2021.12.10
 backup-global==@1.5.0
 bash-language-server==@2.0.0
+corepack==@0.10.0
 fkill-cli==@7.1.0
 m==@1.7.0
 npm==@8.3.1
