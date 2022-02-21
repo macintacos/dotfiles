@@ -18,8 +18,10 @@ tags
 **/sshndp*
 **/__pycache__
 
+# Fish
 shell/fish/fish_variables
 fish_variables
+**/fishd.tmp*
 
 # Random Files
 **/dist

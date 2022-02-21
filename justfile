@@ -5,6 +5,9 @@
 _default:
     @just --list --unsorted
 
+setup: hooks symlink
+	@setup/install.sh
+
 # Install everything
 install: hooks
 	@setup/install.sh install-normal

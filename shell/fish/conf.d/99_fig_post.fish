@@ -1,0 +1,1 @@
+/Users/juliant/.fig/shell/post.fish

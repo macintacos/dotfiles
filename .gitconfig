@@ -3,8 +3,8 @@
     pager = delta
 [user]
     name = Julian Torres
-    email = julian.m.tor@gmail.com
-    signingkey = 8B8F876FEC61170E
+    email = julian.torres@mongodb.com
+    signingkey = 5F0C87DB65E692C6FC9C8F52B42114FD756227E0
 [gpg]
     program = gpg
 [commit]
