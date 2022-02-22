@@ -2,11 +2,12 @@
 # These get set before anything else in the interactive shell, from a user configuration perspective.
 
 # M1-specific
+# TODO: This is where you should do the shellenv thing
 if test (uname -m) = 'arm64'
     fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
+    eval (/opt/homebrew/bin/brew shellenv)
 end
 
-fish_add_path -a /usr/local/bin # Make sure Homebrew is sourced first
 
 # Homes
 set -gx N_PREFIX $HOME/.n
@@ -24,7 +25,7 @@ set -gx GOPATH $HOME/GoWorkspace
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 set -gx M_PREFIX $HOME/MongoDB
-set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PYENV_ROOT $HOME/GitLocal/Community/pyenv
 set -gx PIPX_DEFAULT_PYTHON (pyenv prefix)/bin/python
 set -gx RUST $HOME/.cargo/bin
 set -gx TERM xterm-256color
@@ -36,6 +37,7 @@ set -gx KUBECONFIG "$HOME/.kube/config.prod:$HOME/.kube/config.staging"
 set -gx fisher_path $FISH_HOME
 
 # Adding stuff to PATH
+fish_add_path -a /usr/local/bin 
 fish_add_path -a $PYENV_ROOT/bin
 fish_add_path -a $HOME_LOCAL_BIN
 fish_add_path -a $GOPATH/bin

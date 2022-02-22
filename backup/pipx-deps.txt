@@ -1,0 +1,15 @@
+black
+dead
+devpi-client
+doc2dash
+ipython
+mtools
+mypy
+py-spy
+pydocstyle
+pyinstrument
+pylint
+rich-cli
+sphinx
+vim-vint
+yamllint

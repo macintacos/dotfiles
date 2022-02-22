@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+log info "Installing asdf plugins..."
+asdf plugin-add kubectl https://github.com/asdf-community/asdf-kubectl.git
+
+asdf install kubectl latest

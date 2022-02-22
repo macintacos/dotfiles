@@ -29,6 +29,7 @@ tap "kyoh86/tap"
 tap "mongodb/brew"
 tap "ms-jpq/sad"
 tap "muesli/tap"
+tap "nodenv/nodenv"
 tap "nshipster/formulae"
 tap "orf/brew"
 tap "osx-cross/arm"
@@ -299,6 +300,7 @@ brew "tankerhq/repo/ruplacer"
 cask "1password-cli"
 cask "alt-tab"
 cask "cakebrew"
+cask "discord"
 cask "docker"
 cask "flux"
 cask "font-awesome-terminal-fonts"
@@ -314,11 +316,13 @@ cask "font-roboto-mono-for-powerline"
 cask "font-source-code-pro"
 cask "google-cloud-sdk"
 cask "gpg-suite"
+cask "graphiql"
 cask "hammerspoon"
 cask "hyper"
 cask "keycastr"
 cask "kitty"
 cask "lens"
+cask "linear-linear"
 cask "little-snitch"
 cask "macbreakz"
 cask "mark-text"
@@ -327,7 +331,11 @@ cask "micro-snitch"
 cask "minikube"
 cask "monitorcontrol"
 cask "ngrok"
+cask "notion"
+cask "obsidian"
 cask "oni"
+cask "paletro"
+cask "postman"
 cask "proxyman"
 cask "qlimagesize"
 cask "qlvideo"
@@ -337,11 +345,14 @@ cask "signal"
 cask "sizeup"
 cask "stats"
 cask "visual-studio-code"
+cask "todoist"
 cask "xquartz"
 cask "yt-music"
 mas "1Password for Safari", id: 1569813296
+mas "2Do", id: 477670270
 mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
+mas "Boop", id: 1518425043
 mas "Cardhop", id: 1290358394
 mas "CARROT Weather", id: 993487541
 mas "CodeRunner", id: 955297617
@@ -357,9 +368,16 @@ mas "Due", id: 524373870
 mas "Fantastical", id: 975937182
 mas "Grocery", id: 1195676848
 mas "Front and Center", id: 1493996622
+mas "Grocery", id: 1195676848
+mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
+mas "Looking Glass", id: 1602004436
 mas "Mela", id: 1568924476
+mas "MindNode", id: 1289197285
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905
 mas "Poolsuite FM", id: 1514817810

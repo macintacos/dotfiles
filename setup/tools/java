@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+echo "Installing jabba for your fish environment..."
+
+curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash; and . ~/.jabba/jabba.fish
