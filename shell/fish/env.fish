@@ -8,19 +8,18 @@ if test (uname -m) = 'arm64'
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
-
 # Homes
 set -gx N_PREFIX $HOME/.n
 set -gx DOTFILES_HOME $HOME/GitLocal/Play/dotfiles
 set -gx NVIM_HOME $HOME/GitLocal/Play/nvim
 set -gx FISH_HOME $DOTFILES_HOME/shell/fish
 
+# Other Things
 set -gx EDITOR nvim
 set -gx BAT_THEME Dracula
 set -gx CHEAT_COLORS true
 set -gx CHEAT_COLORSCHEME dark
 set -gx COLORTERM truecolor
-
 set -gx GOPATH $HOME/GoWorkspace
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
@@ -37,7 +36,7 @@ set -gx KUBECONFIG "$HOME/.kube/config.prod:$HOME/.kube/config.staging"
 set -gx fisher_path $FISH_HOME
 
 # Adding stuff to PATH
-fish_add_path -a /usr/local/bin 
+fish_add_path -a /usr/local/bin
 fish_add_path -a $PYENV_ROOT/bin
 fish_add_path -a $HOME_LOCAL_BIN
 fish_add_path -a $GOPATH/bin
