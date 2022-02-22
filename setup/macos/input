@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+# ----------------------------- Input Management ----------------------------- #
+
+log info "Changing input things..."
+
+log info "Trackpad: enable tap to click for this user and for the login screen"
+(
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+) && log ok "Done"
+
+log info "Keyboard: allow holding keys to repeat characters indefinitely"
+defaults write -g ApplePressAndHoldEnabled -bool false && log ok "Done"

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Exiting the script properly - use "err_exit <message>" to properly exit.
+trap "exit 1" SIGUSR1
+PROC=$$
+err_exit() {
+    echo -e "$@" >&2
+    kill -10 $PROC
+}
+
+gh auth status
+if [[ $? -eq 1 ]]; then
+    gh auth login
+    if [[ $? -eq 1 ]]; then
+        err_exit "Failed to authenticate to GitHub with gh - please do so and re-run the script!"
+    fi
+fi
+
+(
+    cd "$HOME/GitLocal/Play" || err_exit "There was a problem going to the 'Play' git"
+    gh repo clone macintacos/nvim
+)
+
+log info "Linking neovim..."
+rm -f ~/.config/nvim
+ln -sF "${HOME}/GitLocal/Play/nvim" ~/.config/nvim
+log ok "neovim linked."
+
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'

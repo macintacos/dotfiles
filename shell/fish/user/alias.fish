@@ -1,4 +1,4 @@
-alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
+alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew" # Ref: https://github.com/pyenv/pyenv#:~:text=root)%5C/shims%3A/%7D%22%20brew%27-,Fish,-%3A
 
 # exa-related aliases
 alias ls='exa -F --group-directories-first --icons --color-scale'

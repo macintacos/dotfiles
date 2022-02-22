@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+# ------------------------------- General UI/UX ------------------------------ #
+
+log info "Changing general UI/UX things..."
+
+log info "Expand save panel by default"
+(
+    defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+    defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+) && log ok "Done"
+
+log info "Save to disk (not to iCloud) by default"
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false && log ok "Done"
+
+log info "Disable the 'Are you sure you want to open this application?' dialog"
+defaults write com.apple.LaunchServices LSQuarantine -bool false && log ok "Done"
+
+log info "Disable automatic termination of inactive apps"
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true && log ok "Done"
+
+log info "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName && log ok "Done"
+
+log info "Change menubar clock to analog"
+defaults write com.apple.menuextra.clock IsAnalog -bool true

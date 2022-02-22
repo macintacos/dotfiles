@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+log info "Installing the latest version of things that are in Atlas..."
+
+m 4.2
+m 4.4
+m 5.0
+
+log info "Downloading the latest version of available tools..."
+m tools stable

@@ -1480,7 +1480,7 @@
       "commands": [
         "workbench.action.closePanel",
         "workbench.action.closeSidebar",
-        "workbench.action.closeEditorsInOtherGroups"
+        "workbench.action.editorLayoutSingle"
       ],
       "keys": "w.M",
       "name": "Close sidebar, panel, and other editor groups",

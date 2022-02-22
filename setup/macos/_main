@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+# Most of this comes from https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+
+# ---------------------------------------------------------------------------- #
+#                             macOS System Settings                            #
+# ---------------------------------------------------------------------------- #
+
+log info "This script will change a bunch of macOS settings to sensible defaults."
+log info "We're going to quit System Preferences..."
+osascript -e 'tell application "System Preferences" to quit'
+log ok "Done."
+
+# Ask for the administrator password upfront
+log info "We need your password in order to setup things properly."
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+done 2>/dev/null &
+log ok "Time to set everything up!"
+
+(
+    cd ./setup/macos || exit 1
+    ./ui        # General UI/UX
+    ./input     # Input-related settings
+    ./screen    # Screen-related settings
+    ./finder    # Finder-related settings
+    ./safari    # Safari-related settings
+
+    ./cleanup   # Run last
+)
+
+log ok "Setup complete."
+log info "Note that some of these changes require a logout/restart to take effect. You should probably do it just to be safe."

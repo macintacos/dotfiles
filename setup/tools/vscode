@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+log info "Installing VSCode extensions..."
+
+(
+    (
+        grep -v '^#' |
+            xargs -L1 code --install-extension
+    ) <./backup/vscode-extensions-backup.txt
+) || true # continue even if we already have it
