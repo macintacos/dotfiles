@@ -337,10 +337,7 @@ cask "todoist"
 cask "xquartz"
 cask "yt-music"
 mas "1Password for Safari", id: 1569813296
-mas "2Do", id: 477670270
 mas "Amphetamine", id: 937984704
-mas "Bear", id: 1091189122
-mas "Boop", id: 1518425043
 mas "Cardhop", id: 1290358394
 mas "CARROT Weather", id: 993487541
 mas "CodeRunner", id: 955297617
@@ -361,10 +358,8 @@ mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "Looking Glass", id: 1602004436
 mas "Mela", id: 1568924476
 mas "MindNode", id: 1289197285
-mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905
