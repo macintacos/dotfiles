@@ -3,10 +3,8 @@
 
 # M1-specific
 # TODO: This is where you should do the shellenv thing
-if test (uname -m) = 'arm64'
-    fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
-    eval (/opt/homebrew/bin/brew shellenv)
-end
+fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
+eval (/opt/homebrew/bin/brew shellenv)
 
 # Homes
 set -gx N_PREFIX $HOME/.n
@@ -36,7 +34,7 @@ set -gx KUBECONFIG "$HOME/.kube/config.prod:$HOME/.kube/config.staging"
 set -gx fisher_path $FISH_HOME
 
 # Adding stuff to PATH
-fish_add_path -a /usr/local/bin
+# fish_add_path -a /usr/local/bin
 fish_add_path -a $PYENV_ROOT/bin
 fish_add_path -a $HOME_LOCAL_BIN
 fish_add_path -a $GOPATH/bin

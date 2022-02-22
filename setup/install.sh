@@ -24,12 +24,12 @@ if [[ "${setup_directory}" != "dotfiles" ]]; then
 fi
 
 
-./setup/tools/brew   # Setup Homebrew - needs to be done first
 ./setup/tools/node   # Setup node with 'n' and some global packages
-./setup/tools/python # Setup pyenv with some global requirements
-./setup/tools/asdf   # Setup asdf-managed CLI tools
-./setup/tools/java   # Setup Java-related things
-./setup/tools/neovim # Setup Neovim environment
+# ./setup/tools/python # Setup pyenv with some global requirements
+# ./setup/tools/asdf   # Setup asdf-managed CLI tools
+# ./setup/tools/brew   # Setup Homebrew - needs to be done first
+# ./setup/tools/java   # Setup Java-related things
+# ./setup/tools/neovim # Setup Neovim environment
 ./setup/tools/mongo  # Setup things for MongoDB
 ./setup/tools/vscode # Setup VSCode - maybe not?
 

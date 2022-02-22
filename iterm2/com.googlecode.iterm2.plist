@@ -23,7 +23,7 @@
 	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
 	<integer>2</integer>
 	<key>Command</key>
-	<string></string>
+	<string>/opt/homebrew/bin/fish</string>
 	<key>CopySelection</key>
 	<false/>
 	<key>Custom Color Presets</key>
@@ -10386,7 +10386,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>/usr/local/bin/fish</string>
+			<string>/opt/homebrew/bin/fish</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -10431,7 +10431,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>Yes</string>
+			<string>Custom Shell</string>
 			<key>Custom Directory</key>
 			<string>Recycle</string>
 			<key>Default Bookmark</key>

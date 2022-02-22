@@ -6,16 +6,21 @@ log info "Pyenv was installed before with homebrew packages, however we need to 
 
 (
     cd "$HOME/GitLocal/Community" || exit 1
+    brew install pyenv
     gh repo clone pyenv/pyenv
     pyenv install 3.10:latest
-    pipx ensurepath
 )
 
+export PYENV_ROOT="$HOME/GitLocal/Play/dotfiles"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
 log info "Installing global python packages..."
+pipx ensurepath
 while IFS= read -r dep; do
     PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install "$dep"
 done < backup/pipx-deps.txt
-
 
 log info "Now installing requirements from dotfiles..."
 pip install -r shell/scripts/python/requirements.txt
