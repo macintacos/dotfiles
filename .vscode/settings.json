@@ -25,5 +25,8 @@
     "**/node_modules": true,
     "**/zsh/.zinit": true
   },
-  "stylelint.enable": false
+  "stylelint.enable": false,
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": false
 }
