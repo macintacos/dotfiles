@@ -5,27 +5,12 @@
 _default:
     @just --list --unsorted
 
-setup: hooks symlink
+setup:
 	@setup/install.sh
-
-# Install everything
-install: hooks
-	@setup/install.sh install-normal
-
-install-ci:
-	@setup/install.sh install-ci
 
 # Symlink files
 symlink:
 	@setup/symlink.sh
-
-# Set up git hooks so that things are committed the way we want
-hooks:
-	@echo "==> Setting up hooks..."
-	find .git/hooks -type l -exec rm {} \;
-	find .githooks -type f -exec  ln -sf ../../{} .git/hooks \;
-	@echo "==> Done."
-
 
 # Backup packages, casks, and plugins
 backup:
