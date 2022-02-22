@@ -2,14 +2,14 @@
 
 export PATH="$PWD/setup:$PATH"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Setup Homebrew
 log info "Installing Homebrew packages and casks..."
 (
 	cd ./backup
 
-	NONINTERACTIVE=1 brew bundle install | while read -r line; do
-		log info "${line}"
-	done
+	NONINTERACTIVE=1 brew bundle --file Brewfile
 )
 
 log info "Homebrew setup complete (if there were errors, fix them, and re-run the script)"

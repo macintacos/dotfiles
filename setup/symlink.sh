@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export PATH="$DOTFILES_HOME/setup:$PATH"
+export PATH="$HOME/GitLocal/Play/dotfiles/setup:$PATH"
+DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
 
 bash_link() {
     log info "Linking BASH..."
@@ -88,6 +89,7 @@ link_all() {
     karabiner_link
     lazygit_link
     lnav_link
+    fish_link
     nvim_link
     zsh_link
     log ok "All symlinks created."

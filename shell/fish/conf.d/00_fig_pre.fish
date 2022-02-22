@@ -1,1 +1,0 @@
-/Users/juliant/.fig/shell/pre.fish
