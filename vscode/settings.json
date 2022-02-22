@@ -637,9 +637,6 @@
       "commands": [":nohl"]
     }
   ],
-  "vim.neovimConfigPath": "~/GitLocal/Play/nvim/init.vim",
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.neovimUseConfigFile": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["g", "H"],
@@ -2121,6 +2118,7 @@
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
@@ -2155,6 +2153,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "workbench.productIconTheme": "material-product-icons"
+  "yaml.schemas": {}
 }

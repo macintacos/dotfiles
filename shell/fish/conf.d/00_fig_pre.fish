@@ -1,0 +1,1 @@
+/Users/macinburrito/.fig/shell/pre.fish
