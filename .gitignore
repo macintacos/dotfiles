@@ -22,6 +22,7 @@ tags
 shell/fish/fish_variables
 fish_variables
 **/fishd.tmp*
+shell/fish/**/secret
 
 # Random Files
 **/dist
