@@ -3,7 +3,6 @@
 
 # M1-specific
 # TODO: This is where you should do the shellenv thing
-fish_add_path -a /opt/homebrew/bin # Make sure Homebrew is sourced first
 eval (/opt/homebrew/bin/brew shellenv)
 
 # Homes
@@ -22,7 +21,7 @@ set -gx GOPATH $HOME/GoWorkspace
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 set -gx M_PREFIX $HOME/MongoDB
-set -gx PYENV_ROOT $HOME/GitLocal/Community/pyenv
+set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PIPX_DEFAULT_PYTHON (pyenv prefix)/bin/python
 set -gx RUST $HOME/.cargo/bin
 set -gx TERM xterm-256color
@@ -41,6 +40,8 @@ fish_add_path -a $ZSH_DIR/secrets
 fish_add_path -a $HOME/.cargo/bin
 fish_add_path -a $HOME/MongoDB/bin # where mongodb binaries get stored
 fish_add_path -a $HOME/.nimble/bin # where nim binaries get stored
+fish_add_path -a $HOME/.krew/bin
+fish_add_path -a $N_PREFIX/bin
 fish_add_path -a (brew --prefix)/opt/gnu-sed/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/coreutils/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/grep/libexec/gnubin
