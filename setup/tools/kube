@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+log info "Setting up kubernetes things..."
+
+log info "Kubectl first..."
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
+chmod +x kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+log info "Krew next (https://krew.sigs.k8s.io/docs/user-guide/setup/install/)"
+(
+	set -x
+	cd "$(mktemp -d)" &&
+		OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+		ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+		KREW="krew-${OS}_${ARCH}" &&
+		curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+		tar zxvf "${KREW}.tar.gz" &&
+		./"${KREW}" install krew
+)
+
+export PATH="$HOME/.krew/bin:$PATH"
+log info "Now installing some plugins..."
+kubectl krew install ctx
+kubectl krew install ns
+
+log info "Now installing minikube..."
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
+sudo install minikube-darwin-arm64 /usr/local/bin/minikube
