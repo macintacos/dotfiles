@@ -35,8 +35,9 @@ abbr -a cdddddd 'cd ../../../../..' # cd back 5 directories
 
 # kubernetes
 abbr -a k kubectl
-abbr -a kx kubectx
+abbr -a kx kubectl ctx
+abbr -a kns kubectl ns
+abbr -a kk kubectl krew
 
 # one-liner helpers
 abbr -a flatten 'find . -mindepth 2 -type f -print0 | xargs -0 -I {} mv --backup=numbered {} .'
-

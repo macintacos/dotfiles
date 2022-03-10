@@ -8,12 +8,13 @@
 const { unmapAllExcept, Hints } = api;
 
 // Unmappings
-unmapAllExcept(["f", "?"], /.*mail.google.com.*/);
-unmapAllExcept(["f", "?"], /.*calendar.google.com.*/);
-unmapAllExcept(["f", "?"], /.*wiki.corp.mongodb.com.*/);
+unmapAllExcept(["f", "?"], /.*mail\.google\.com.*/);
+unmapAllExcept(["f", "?"], /.*calendar\.google\.com.*/);
+unmapAllExcept(["f", "?"], /.*wiki\.corp\.mongodb\.com.*/);
+unmapAllExcept(["f", "?"], /.*drone\.corp\.mongodb\.com.*/);
 unmapAllExcept(
   ["f", "i", "I", "e", "d", "u", "/", "n", "N", "yy"],
-  /.*github.com.*/
+  /.*github\.com.*/
 );
 unmapAllExcept(
   ["f", "i", "I", "d", "u", "?", "w", "<C-i>", "yy"],
