@@ -8,19 +8,19 @@ log info "Updating Safari..."
 
 log info "Enable the Develop menu and the Web Inspector in Safari"
 (
-    defaults write com.apple.Safari IncludeDevelopMenu -bool true
-    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-) && log ok "Done"
+	defaults write com.apple.Safari IncludeDevelopMenu -bool true
+	defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+	defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+)
 
 log info "Add a context menu item for showing the Web Inspector in web views"
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true && log ok "Done"
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 log info "Enable 'Do Not Track'"
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true && log ok "Done"
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 log info "Make Safari’s search banners default to Contains instead of Starts With"
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false && log ok "Done"
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 log info "Show the full URL in the address bar (note: this still hides the scheme)"
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true && log ok "Done"
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true

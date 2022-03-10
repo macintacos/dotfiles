@@ -8,9 +8,9 @@ log info "Changing screen stuff..."
 
 log info "Require password immediately after sleep or screen saver begins"
 (
-    defaults write com.apple.screensaver askForPassword -int 1
-    defaults write com.apple.screensaver askForPasswordDelay -int 0
-) && log ok "Done"
+	defaults write com.apple.screensaver askForPassword -int 1
+	defaults write com.apple.screensaver askForPasswordDelay -int 0
+)
 
 log info "Enable subpixel font rendering on non-Apple LCDs (Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501)"
-defaults write NSGlobalDomain AppleFontSmoothing -int 1 && log ok "Done"
+defaults write NSGlobalDomain AppleFontSmoothing -int 1

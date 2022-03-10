@@ -8,11 +8,11 @@ log info "Updating the Finder..."
 
 log info "Show icons for hard drives, servers, and removable media on the desktop"
 (
-    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-    defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-    defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-    defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-) && log ok "Done"
+	defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+	defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+	defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+	defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+)
 
 log info "Finder: show hidden files by default"
 log info "Finder: show all filename extensions"
@@ -27,49 +27,52 @@ log info "Remove the spring loading delay for directories"
 log info "Avoid creating .DS_Store files on network or USB volumes"
 log info "Automatically open a new Finder window when a volume is mounted"
 (
-    defaults write com.apple.finder AppleShowAllFiles -bool true
-    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-    defaults write com.apple.finder ShowStatusBar -bool true
-    defaults write com.apple.finder ShowPathbar -bool true
-    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-    defaults write com.apple.finder _FXSortFoldersFirst -bool true
-    defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-    defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-    defaults write NSGlobalDomain com.apple.springing.delay -float 0
-    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-    defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-    defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-    defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-    defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
-) && log ok "Done"
+	defaults write com.apple.finder AppleShowAllFiles -bool true
+	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+	defaults write com.apple.finder ShowStatusBar -bool true
+	defaults write com.apple.finder ShowPathbar -bool true
+	defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+	defaults write com.apple.finder _FXSortFoldersFirst -bool true
+	defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+	defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+	defaults write NSGlobalDomain com.apple.springing.delay -float 0
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+	defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+	defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+	defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+	defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+)
 
 log info "Show item info near icons on the desktop and in other icon views"
 (
-    /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-    /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-    /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-) && log ok "Done"
+	/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+	/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+	/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+)
 
 log info "Show item info to the right of the icons on the desktop"
-/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist && log ok "Done"
+/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
 log info "Enable snap-to-grid for icons on the desktop and in other icon views"
 (
-    /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-    /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-    /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-) && log ok "Done"
+	/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+	/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+	/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+)
 
 log info "Use column view in all Finder windows by default"
 log info "Four-letter codes for the other view modes: 'icnv, 'clmv', 'glyv', 'Nlsv'"
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv" && log ok "Done"
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 log info "Disable the warning before emptying the Trash"
-defaults write com.apple.finder WarnOnEmptyTrash -bool false && log ok "Done"
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 log info "Show the ~/Library folder"
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library && log ok "Done"
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 log info "Show the /Volumes folder"
-sudo chflags nohidden /Volumes && log ok "Done"
+sudo chflags nohidden /Volumes
+
+log info "Remove the delay for the proxy icon"
+defaults write com.apple.Finder NSToolbarTitleViewRolloverDelay -float 0
