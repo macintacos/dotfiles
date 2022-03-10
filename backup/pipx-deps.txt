@@ -3,8 +3,9 @@ dead
 devpi-client
 doc2dash
 ipython
-mtools
+mtools[all]
 mypy
+poetry
 py-spy
 pydocstyle
 pyinstrument
