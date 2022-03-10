@@ -7,7 +7,10 @@ export PATH="$PWD/setup:$PATH"
 log info "Cleaning up..."
 
 for app in \
-    "Finder" \
-    "Safari"; do
-    killall "${app}" &>/dev/null
+	"Finder" \
+	"Dock" \
+	"Safari"; do
+	killall "${app}" &>/dev/null
 done
+
+killall -KILL SystemUIServer

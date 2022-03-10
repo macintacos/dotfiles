@@ -5,10 +5,8 @@ export PATH="$PWD/setup:$PATH"
 log info "Pyenv was installed before with homebrew packages, however we need to do a couple other things to make sure everything is configured properly."
 
 (
-    cd "$HOME/GitLocal/Community" || exit 1
-    brew install pyenv
-    gh repo clone pyenv/pyenv
-    pyenv install 3.10:latest
+	cd "$HOME/GitLocal/Community" || exit 1
+	curl https://pyenv.run | bash
 )
 
 export PYENV_ROOT="$HOME/GitLocal/Play/dotfiles"
@@ -16,11 +14,19 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+log info "Installing latest Python 3.10..."
+pyenv install 3.10.2
+pyenv global 3.10.2 # because there's no good way to point global to latest version
+
 log info "Installing global python packages..."
 pipx ensurepath
 while IFS= read -r dep; do
-    PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install "$dep"
-done < backup/pipx-deps.txt
+	PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install "$dep"
+done <backup/pipx-deps.txt
 
 log info "Now installing requirements from dotfiles..."
 pip install -r shell/scripts/python/requirements.txt
+
+log info "Installing Poetry..."
+pipx install poetry
+PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install poetry
