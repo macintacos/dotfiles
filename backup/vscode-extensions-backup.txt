@@ -11,6 +11,7 @@ alefragnani.Bookmarks
 alefragnani.project-manager
 alexesprit.vscode-unfancy-file-icons
 amodio.tsl-problem-matcher
+antfu.smart-clicks
 arcticicestudio.nord-visual-studio-code
 asvetliakov.vscode-neovim
 austenc.tailwind-docs
@@ -75,7 +76,6 @@ ginfuru.ginfuru-better-solarized-dark-theme
 giovdk21.vscode-sublime-merge
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
-gitkraken.gitkraken-authentication
 golang.go
 GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
@@ -111,6 +111,7 @@ liviuschera.noctis
 lkytal.FlatUI
 mads-hartmann.bash-ide-vscode
 mateocerquetella.xcode-12-theme
+matklad.rust-analyzer
 mattn.Lisp
 mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
@@ -132,6 +133,7 @@ ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.test-adapter-converter
+ms-vscode.vscode-typescript-tslint-plugin
 mushan.vscode-paste-image
 naumovs.color-highlight
 nimsaem.nimvscode
@@ -145,6 +147,7 @@ philipbe.theme-gray-matter
 PKief.markdown-checkbox
 PKief.material-icon-theme
 PKief.material-product-icons
+pmndrs.pmndrs
 pranaygp.vscode-css-peek
 pucelle.vscode-css-navigation
 qcz.text-power-tools
