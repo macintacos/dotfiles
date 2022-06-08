@@ -23,6 +23,7 @@ shell/fish/fish_variables
 fish_variables
 **/fishd.tmp*
 shell/fish/**/secret
+shell/fish/user/env/env.s.fish
 
 # Random Files
 **/dist

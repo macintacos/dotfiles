@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/erikw/tmux-powerline ~/.tmux/powerline
+
+tmux source "${DOTFILES_HOME}/rc/.tmux.conf"
