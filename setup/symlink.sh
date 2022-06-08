@@ -80,6 +80,38 @@ lazygit_link() {
 	log ok "lazygit linked."
 }
 
+vscode_link() {
+	log info "Linking vscode settings..."
+
+	code_path="${HOME}/Library/Application Support/Code/User"
+	rm -rf "${code_path}/settings.json"
+	rm -rf "${code_path}/keybindings.json"
+	ln -sF "${DOTFILES_HOME}/vscode/settings.json" "${code_path}/settings.json"
+	ln -sF "${DOTFILES_HOME}/vscode/keybindings.json" "${code_path}/keybindings.json"
+	log ok "vscode linked."
+}
+
+espanso_link() {
+	log info "Linking espanso..."
+
+	espanso_path="${HOME}/Library/Application Support/espanso"
+	rm -rf "${espanso_path}"
+	ln -sf "${DOTFILES_HOME}/espanso" "${espanso_path}"
+	log ok "espanso linked."
+}
+
+tmux_link() {
+	log info "Linking tmux config..."
+
+	rm -rf "${HOME}/.tmux.conf"
+	rm -rf "${HOME}/.tmux.theme.sh"
+	rm -rf "${HOME}/.tmux-powerlinerc"
+	ln -sf "${DOTFILES_HOME}/rc/.tmux.conf" "${HOME}/.tmux.conf"
+	ln -sf "${DOTFILES_HOME}/rc/.tmux.theme.sh" "${HOME}/.tmux/powerline/themes/.tmux.theme.sh"
+	ln -sf "${DOTFILES_HOME}/rc/.tmux-powerlinerc" "${HOME}/.tmux-powerlinerc"
+	log ok "tmux linked."
+}
+
 ## ALL {{{
 link_all() {
 	log info "Creating all symlinks..."
