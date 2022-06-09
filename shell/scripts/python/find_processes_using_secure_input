@@ -73,8 +73,8 @@ if __name__ == "__main__":
 
     sorted_pids = [str(pid) for pid in sorted(int(p) for p in process_ids)]
 
-    print("The following processes are using Secure Input:")
     if sorted_pids:
+        print("The following processes are using Secure Input:")
         subprocess.check_call(
             [
                 "ps",
@@ -85,3 +85,5 @@ if __name__ == "__main__":
                 ",".join(sorted_pids),  # Only get the selected processes
             ]
         )
+    else:
+        print("No processes found using secure input.")
