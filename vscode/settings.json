@@ -31,6 +31,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -106,7 +109,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
   "breadcrumbs.enabled": true,
@@ -154,20 +157,14 @@
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": "'ss06' on, 'zero' on, 'ss04' on",
   "editor.fontSize": 14,
-  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.matchBrackets": false,
-  "editor.minimap.enabled": false,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
-  },
-  "editor.quickSuggestions": {
-    "comments": "inline",
-    "other": true,
-    "strings": true
   },
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -179,6 +176,7 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showInlineDetails": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tokenColorCustomizations": {},
   "editor.wordWrap": "off",
@@ -329,6 +327,9 @@
   "gitlens.keymap": "none",
   "gitlens.statusBar.command": "gitlens.showQuickCommitDetails",
   "gitlens.statusBar.reduceFlicker": true,
+  "go.alternateTools": {
+    "go": "/opt/homebrew/bin/go"
+  },
   "go.autocompleteUnimportedPackages": true,
   "go.buildOnSave": "package",
   "go.coverOnTestPackage": false,
@@ -601,17 +602,9 @@
     }
   ],
   "shellcheck.customArgs": ["-x"],
+  "shellformat.flag": "-i 4",
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "snipsnap.silent": true,
-  "snyk.yesWelcomeNotification": false,
-  "sync.autoDownload": false,
-  "sync.autoUpload": false,
-  "sync.forceDownload": false,
-  "sync.forceUpload": true,
-  "sync.gist": "d6476dba5ec0a560c674cef5fdba969f",
-  "sync.quietSync": false,
-  "sync.removeExtensions": true,
-  "sync.syncExtensions": true,
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
@@ -693,11 +686,6 @@
     {
       "after": ["<Esc>"],
       "before": ["ctrl+d"]
-    },
-    {
-      "after": ["<ESC>"],
-      "before": ["<ESC>"],
-      "commands": [":nohl"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -710,21 +698,12 @@
       "commands": ["editor.action.peekDefinition"]
     },
     {
-      "after": [":"],
-      "before": [";"]
-    },
-    {
       "after": ["s"],
       "before": ["f"]
     },
     {
       "after": ["S"],
       "before": ["F"]
-    },
-    {
-      "after": ["<ESC>"],
-      "before": ["<ESC>"],
-      "commands": [":nohl", "closeFindWidget"]
     },
     {
       "before": ["g", "h"],
@@ -824,7 +803,7 @@
     },
     {
       "before": ["g", "l"],
-      "commands": ["editor.action.openLink"]
+      "commands": ["workbench.action.gotoLine"]
     },
     {
       "before": ["g", "K"],
@@ -833,10 +812,6 @@
     {
       "before": ["g", "D"],
       "commands": ["editor.action.revealDefinitionAside"]
-    },
-    {
-      "after": ["<leader>", "<leader>", "s"],
-      "before": ["<leader>", "s"]
     },
     {
       "before": ["<space>"],
@@ -1086,12 +1061,6 @@
       "type": "command"
     },
     {
-      "command": "workbench.debug.action.toggleRepl",
-      "keys": "d.t",
-      "name": "Toggle Debug Console view",
-      "type": "command"
-    },
-    {
       "command": "workbench.action.output.toggleOutput",
       "icon": "output",
       "keys": "e.o",
@@ -1255,6 +1224,7 @@
     },
     {
       "command": "workbench.scm.focus",
+      "icon": "git-compare",
       "keys": "g.S",
       "name": "View status in VSCode",
       "type": "command"
@@ -1265,12 +1235,14 @@
     },
     {
       "command": "breadcrumbs.focusAndSelect",
+      "icon": "symbol-class",
       "keys": "j.b",
       "name": "Jump to breadcrumbs",
       "type": "command"
     },
     {
       "command": "workbench.action.gotoMethod",
+      "icon": "symbol-method",
       "keys": "j.m",
       "name": "Jump to method/function in file",
       "type": "command"
@@ -1280,7 +1252,15 @@
       "position": -1
     },
     {
+      "command": "workbench.action.gotoLine",
+      "icon": "list-ordered",
+      "keys": "j.l",
+      "name": "Go to line in buffer",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.showAllSymbols",
+      "icon": "symbol-keyword",
       "keys": "j.I",
       "name": "Jump to symbol in project",
       "type": "command"
@@ -1288,161 +1268,181 @@
     {
       "command": "workbench.action.toggleSidebarVisibility",
       "keys": "l.b",
-      "name": "Toggle sidebar",
+      "icon": "layout-sidebar-right",
+      "name": "Toggle Right Sidebar",
       "type": "command"
     },
     {
       "command": "workbench.action.closePanel",
+      "icon": "layout-panel-justify",
       "keys": "l.c",
       "name": "Close panel",
       "type": "command"
     },
     {
       "command": "workbench.action.focusPanel",
+      "icon": "eye",
       "keys": "l.f",
       "name": "Focus panel",
       "type": "command"
     },
     {
-      "command": "workbench.action.toggleMaximizedPanel",
-      "keys": "l.m",
-      "name": "Toggle maximize panel",
-      "type": "command"
-    },
-    {
       "command": "workbench.action.togglePanel",
+      "icon": "arrow-swap",
       "keys": "l.o",
       "name": "Toggle panel",
       "type": "command"
     },
     {
       "command": "workbench.actions.view.problems",
+      "icon": "bracket-error",
       "keys": "l.p",
       "name": "Focus Problems panel",
       "type": "command"
     },
     {
       "command": "workbench.action.positionPanelLeft",
+      "icon": "triangle-left",
       "keys": "l.H",
       "name": "Move panel left",
       "type": "command"
     },
     {
       "command": "workbench.action.positionPanelBottom",
+      "icon": "triangle-down",
       "keys": "l.J",
       "name": "Move panel bottom",
       "type": "command"
     },
     {
       "command": "workbench.action.positionPanelRight",
+      "icon": "triangle-right",
       "keys": "l.L",
       "name": "Move panel right",
       "type": "command"
     },
     {
       "command": "md-shortcut.toggleCheckboxes",
+      "icon": "pass-filled",
       "keys": ["m", "languageId:markdown", "x", "c"],
       "name": "Toggle checkboxes",
       "type": "command"
     },
     {
       "command": "md-shortcut.toggleLink",
+      "icon": "link",
       "keys": ["m", "languageId:markdown", "x", "k"],
       "name": "Toggle link",
       "type": "command"
     },
     {
       "command": "md-shortcut.toggleNumbers",
+      "icon": "list-ordered",
       "keys": ["m", "languageId:markdown", "x", "o"],
       "name": "Toggle ordered list",
       "type": "command"
     },
     {
       "command": "md-shortcut.toggleBullets",
+      "icon": "list-unordered",
       "keys": ["m", "languageId:markdown", "x", "u"],
       "name": "Toggle unordered list",
       "type": "command"
     },
     {
       "command": "md-shortcut.toggleImage",
+      "icon": "device-camera",
       "keys": ["m", "languageId:markdown", "x", "I"],
       "name": "Toggle image link",
       "type": "command"
     },
     {
       "command": "projectManager.editProjects",
+      "icon": "edit",
       "keys": "p.e",
       "name": "Edit projects",
       "type": "command"
     },
     {
       "command": "projectManager.listProjects",
+      "icon": "list-tree",
       "keys": "p.l",
       "name": "List projects (current window)...",
       "type": "command"
     },
     {
       "command": "projectManager.listProjects",
+      "icon": "compass",
       "keys": "p.p",
       "name": "List projects (current window)...",
       "type": "command"
     },
     {
       "command": "projectManager.refreshAnyProjects",
+      "icon": "refresh",
       "keys": "p.r",
       "name": "Refresh projects",
       "type": "command"
     },
     {
       "command": "projectManager.saveProject",
+      "icon": "save",
       "keys": "p.s",
       "name": "Save project",
       "type": "command"
     },
     {
       "command": "projectManager.listProjectsNewWindow",
+      "icon": "empty-window",
       "keys": "p.P",
       "name": "List projects (new window)...",
       "type": "command"
     },
     {
       "command": "workbench.action.closeAllEditors",
+      "icon": "close-all",
       "keys": "q.a",
       "name": "Close all editors",
       "type": "command"
     },
     {
       "command": "code-runner.stop",
+      "icon": "debug-disconnect",
       "keys": "q.c",
       "name": "Stop currently running code",
       "type": "command"
     },
     {
       "command": "workbench.action.debug.stop",
+      "icon": "debug-stop",
       "keys": "q.d",
       "name": "Stop debugging",
       "type": "command"
     },
     {
       "command": "workbench.action.closeFolder",
+      "icon": "folder",
       "keys": "q.p",
       "name": "Close current project",
       "type": "command"
     },
     {
       "command": "workbench.action.closeEditorsInAllGroups",
+      "icon": "close-all",
       "keys": "q.A",
       "name": "Close current file in all groups",
       "type": "command"
     },
     {
       "command": "workbench.action.closeEditorsToTheLeft",
+      "icon": "triangle-left",
       "keys": "q.H",
       "name": "Close editors to the left",
       "type": "command"
     },
     {
       "command": "workbench.action.closeEditorsToTheRight",
+      "icon": "triangle-right",
       "keys": "q.L",
       "name": "Close editors to the right",
       "type": "command"
@@ -1951,6 +1951,12 @@
           "key": "r",
           "name": "...open pull requests",
           "type": "command"
+        },
+        {
+          "command": "pr.openPullRequestOnGitHub",
+          "key": "R",
+          "name": "...open checked out pull request on GitHub",
+          "type": "command"
         }
       ],
       "keys": ["g", "g"],
@@ -2178,7 +2184,7 @@
     "*.json": "default"
   },
   "workbench.fontAliasing": "auto",
-  "workbench.iconTheme": "helium-icon-theme",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
@@ -2219,5 +2225,10 @@
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "Dracula Pro (Van Helsing)",
   "markdown.extension.orderedList.marker": "one",
-  "gitlens.mode.active": "review"
+  "problems.autoReveal": false,
+  "problems.showCurrentInStatus": true,
+  "editor.minimap.enabled": false,
+  "trunk.trunkGrayOutNonBlockingIssues": false,
+  "editor.inlayHints.enabled": true,
+  "rust-analyzer.checkOnSave.command": "clippy"
 }

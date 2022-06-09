@@ -2,13 +2,13 @@
     excludesfile = ~/.gitignore_global
     pager = delta
 [user]
-    name = Julian Torres
-    email = julian.torres@mongodb.com
-    signingkey = D543D78B1F60CE97
+	name = Julian Torres
+	email = julian.torres@mongodb.com
+	signingkey = 1E9412BB6584335F0BBA96AD8A5F444FBE929FF0
 [gpg]
-    program = gpg
+	program = /usr/local/bin/gpg
 [commit]
-    gpgsign = true
+	gpgsign = true
 [pager]
     diff = delta
     log = delta
