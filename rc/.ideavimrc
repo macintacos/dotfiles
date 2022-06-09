@@ -19,6 +19,7 @@ set showmode
 set smartcase
 set surround
 set which-key
+set sneak
 
 set timeoutlen=10000
 
