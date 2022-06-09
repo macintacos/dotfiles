@@ -6,28 +6,29 @@ function $_hydro_git --on-variable $_hydro_git
     commandline --function repaint
 end
 
-function _hydro_pwd --on-variable PWD
-    set --query fish_prompt_pwd_dir_length || set --local fish_prompt_pwd_dir_length 1
-    if test "$fish_prompt_pwd_dir_length" -le 0 || test "$hydro_multiline" = true
-        set --global _hydro_pwd (
-            string replace --ignore-case -- ~ \~ $PWD |
-            string replace --regex -- '([^/]+)$' "\x1b[1m\$1\x1b[22m" |
-            string replace --regex --all -- '(?!^/$)/' "\x1b[2m/\x1b[22m"
-        )
+function _hydro_pwd --on-variable PWD --on-variable hydro_ignored_git_paths --on-variable fish_prompt_pwd_dir_length
+    set --local git_root (command git --no-optional-locks rev-parse --show-toplevel 2>/dev/null)
+    set --local git_base (string replace --all --regex -- "^.*/" "" "$git_root")
+    set --local path_sep /
+
+    test "$fish_prompt_pwd_dir_length" = 0 && set path_sep
+
+    if set --query git_root[1] && ! contains -- $git_root $hydro_ignored_git_paths
+        set --erase _hydro_skip_git_prompt
     else
-        set --local root (command git rev-parse --show-toplevel 2>/dev/null |
-            string replace --all --regex -- "^.*/" "")
-        set --global _hydro_pwd (
-            string replace --ignore-case -- ~ \~ $PWD |
-            string replace -- "/$root/" /:/ |
-            string replace --regex --all -- "(\.?[^/]{"$fish_prompt_pwd_dir_length"})[^/]*/" \$1/ |
-            string replace -- : "$root" |
-            string replace --regex -- '([^/]+)$' "\x1b[1m\$1\x1b[22m" |
-            string replace --regex --all -- '(?!^/$)/' "\x1b[2m/\x1b[22m"
-        )
+        set --global _hydro_skip_git_prompt
     end
-    test "$root" != "$_hydro_git_root" &&
-        set --global _hydro_git_root $root && set $_hydro_git
+
+    set --global _hydro_pwd (
+        string replace --ignore-case -- ~ \~ $PWD |
+        string replace -- "/$git_base/" /:/ |
+        string replace --regex --all -- "(\.?[^/]{"(
+            string replace --regex --all -- '^$' 1 "$fish_prompt_pwd_dir_length"
+        )"})[^/]*/" "\$1$path_sep" |
+        string replace -- : "$git_base" |
+        string replace --regex -- '([^/]+)$' "\x1b[1m\$1\x1b[22m" |
+        string replace --regex --all -- '(?!^/$)/|^$' "\x1b[2m/\x1b[22m"
+    )
 end
 
 function _hydro_postexec --on-event fish_postexec
@@ -36,6 +37,8 @@ function _hydro_postexec --on-event fish_postexec
     set --local secs (math --scale=1 $CMD_DURATION/1000 % 60)
     set --local mins (math --scale=0 $CMD_DURATION/60000 % 60)
     set --local hours (math --scale=0 $CMD_DURATION/3600000)
+
+    set --local out
 
     test $hours -gt 0 && set --local --append out $hours"h"
     test $mins -gt 0 && set --local --append out $mins"m"
@@ -58,9 +61,9 @@ function _hydro_prompt --on-event fish_prompt
 
     command kill $_hydro_last_pid 2>/dev/null
 
-    fish --private --command "
-        ! command git --no-optional-locks rev-parse 2>/dev/null && set $_hydro_git && exit
+    set --query _hydro_skip_git_prompt && set $_hydro_git && return
 
+    fish --private --command "
         set branch (
             command git symbolic-ref --short HEAD 2>/dev/null ||
             command git describe --tags --exact-match HEAD 2>/dev/null ||

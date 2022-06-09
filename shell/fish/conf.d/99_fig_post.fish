@@ -1,1 +1,0 @@
-/Users/macinburrito/.fig/shell/post.fish

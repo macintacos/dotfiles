@@ -4,16 +4,14 @@
 # TODO: Add the if-interactive check for homebrew from https://github.com/Homebrew/brew/issues/10114#issuecomment-750397711
 
 if status --is-interactive
-    source $__fish_config_dir/env.fish # Environment variables
-
-    for lang in $__fish_config_dir/langs/**/*.fish # Language-specific settings
-        source $lang
-    end
     for config in $__fish_config_dir/user/**/*.fish # User settings
         source $config
     end
 end
 
+# Need to do this at the end because reasons (otherwise homebrew's node/npm takes precedence)
 set -x N_PREFIX "$HOME/.n"
+fish_add_path -m $N_PREFIX/bin
 
+# Misc.
 [ -s "$HOME/.jabba/jabba.fish" ]; and source "$HOME/.jabba/jabba.fish"

@@ -3,5 +3,5 @@ function mcd --description "Make the directory and then 'cd' into it."
 end
 
 function ch --description "Pipe cht.sh output to 'bat'"
-    cht.sh "$argv" | bat --style=numbers,grid
+    cheat "$argv" | bat --style=numbers,grid
 end

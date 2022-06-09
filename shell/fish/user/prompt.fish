@@ -1,3 +1,10 @@
+# Greeting
+
+function fish_greeting
+    fish_logo
+end
+
+# Prompt
 fish_vi_key_bindings
 
 function fish_mode_prompt
