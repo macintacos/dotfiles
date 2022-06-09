@@ -9,9 +9,10 @@ export NVIM_HOME="$DOTFILES_HOME/nvim"
 export PLUG_NVIM_HOME="$NVIM_HOME/viml/plug"
 export ZDOTDIR="$DOTFILES_HOME/shell/zsh"
 export QMK_HOME="$HOME/GitLocal/Play/qmk_firmware/"
+export ZSH="$HOME/.oh-my-zsh"
 
 export ANT_OPTS="-Xms64m -Xmx1500m"
-export ANT_HOME="$(brew --prefix)/apache-ant-1.10.5"
+# export ANT_HOME="$(brew --prefix)/apache-ant-1.10.5"
 export BAT_THEME="Dracula"
 export CHEAT_COLORS=true
 export CHEAT_COLORSCHEME=dark
@@ -54,3 +55,4 @@ export TILLER_NAMESPACE='cloud-ops'
 export VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 export PATH="$GNUBIN:$GNUGETOPT:$OPENSSL:$GNUGREP:$GNUMAKE:$LOCAL_BIN:$HOME_LOCAL_BIN:$PYENV_BIN:$POETRY_BIN:$CUSTOM_SCRIPTS:$BAT_THEME:$DOTFILES_HOME:$DROPBOX:$GO_BIN:$GOPATH/bin:$GOPATH/bin:$HELM_2:$HOME/bin:$KEKA:$MYSQL:$MY_ZSH_SCRIPTS:$MY_ZSH_SECRETS:$NODEMODULEPATH:$RUBY_BIN:$RUST:$SCALA_HOME/bin:$VSCODE:$PATH"
+. "$HOME/.cargo/env"
