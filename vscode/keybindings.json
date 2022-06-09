@@ -346,11 +346,6 @@
     "when": "editorTextFocus"
   },
   {
-    "command": "-editor.action.triggerSuggest",
-    "key": "ctrl+space",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
     "key": "cmd+k cmd+x",
     "command": "-editor.action.trimTrailingWhitespace",
     "when": "editorTextFocus && !editorReadonly"
@@ -892,11 +887,6 @@
     "when": "inReferenceSearchEditor || referenceSearchVisible"
   },
   {
-    "command": "-toggleSuggestionDetails",
-    "key": "ctrl+space",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  {
     "key": "ctrl+]",
     "command": "-wiki.goToWiki"
   },
@@ -1219,11 +1209,6 @@
     "command": "editor.action.peekDefinition",
     "key": "alt+enter",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
-  {
-    "command": "editor.action.triggerSuggest",
-    "key": "ctrl+space",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
   {
     "command": "expand_region",
@@ -2092,11 +2077,6 @@
   {
     "key": "space",
     "command": "vspacecode.space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "key": "space",
-    "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive"
   },
   {
@@ -2185,10 +2165,6 @@
   },
   {
     "key": "cmd+w",
-    "command": "workbench.action.closeEditorInAllGroups"
-  },
-  {
-    "key": "cmd+w",
     "command": "-workbench.action.closeActiveEditor"
   },
   {
@@ -2240,5 +2216,22 @@
     "key": "ctrl+cmd+up",
     "command": "-workbench.action.terminal.resizePaneUp",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+l cmd+o",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "workbench.action.inspectContextKeys"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "-keybindings.editor.recordSearchKeys",
+    "when": "inKeybindings && inKeybindingsSearch"
   }
 ]

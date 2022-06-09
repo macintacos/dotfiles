@@ -1,7 +1,7 @@
 # This is a comment, this line will be ignored.
 # You can use # to comment a line manually.
 
-@csmith/release-it-calver-plugin==@2021.12.10
+@csmith/release-it-calver-plugin==@2022.5.13
 backup-global==@1.5.0
 bash-language-server==@2.0.0
 corepack==@0.10.0
@@ -9,7 +9,12 @@ fkill-cli==@7.1.0
 m==@1.7.0
 npm==@8.3.1
 prettier==@2.5.1
+release-it==@15.0.0
+remark-cli==@10.0.1
+remark-language-server==@1.1.0
+remark==@14.0.2
 trash-cli==@5.0.0
+tree-sitter-cli==@0.20.6
 ts-node==@10.5.0
 vercel==@23.1.2
 vim-language-server==@2.2.5
