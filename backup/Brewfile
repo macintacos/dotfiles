@@ -76,6 +76,7 @@ brew "cfssl"
 brew "cheat"
 brew "cliclick"
 brew "colordiff"
+brew "cookiecutter"
 brew "ctags", link: false
 brew "libssh2"
 brew "rtmpdump"
@@ -235,6 +236,7 @@ brew "psutils"
 brew "python@3.8"
 brew "rabbitmq"
 brew "ranger"
+brew "rbenv"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "rm-improved"
@@ -259,7 +261,7 @@ brew "swiftlint"
 brew "telnet"
 brew "terminal-notifier"
 brew "terraform"
-brew "terragrunt"
+brew "terragrunt", link: false
 brew "tflint"
 brew "the_silver_searcher"
 brew "tig"
@@ -293,7 +295,6 @@ brew "zsh"
 brew "zsh-completions"
 brew "alexanderwillner/tap/things.sh"
 brew "dimentium/autoraise/autoraise"
-brew "drone/drone/drone"
 brew "eth-p/software/bat-extras"
 brew "golangci/tap/golangci-lint"
 brew "hashicorp/tap/terraform"
@@ -303,8 +304,6 @@ brew "jarred-sumner/git-peek/git-peek"
 brew "jesseduffield/lazygit/lazygit"
 brew "jhotmann/rename-cli/rename-cli"
 brew "knqyf263/pet/pet"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
 brew "kyoh86/tap/richgo"
 brew "ms-jpq/sad/sad"
 brew "px4/px4/gcc-arm-none-eabi", link: false
@@ -404,6 +403,7 @@ mas "Grocery", id: 1195676848
 mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
 mas "Mela", id: 1568924476
+mas "Parcel", id: 639968404
 mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905

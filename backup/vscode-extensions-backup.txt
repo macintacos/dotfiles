@@ -176,6 +176,7 @@ rust-lang.rust-analyzer
 ryanraposo.codeui
 ryu1kn.partial-diff
 ryuta46.multi-command
+samuelcolvin.jinjahtml
 sandcastle.vscode-open
 sburg.vscode-javascript-booster
 sdras.night-owl

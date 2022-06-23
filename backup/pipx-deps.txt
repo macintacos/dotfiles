@@ -1,4 +1,5 @@
 black
+copier
 dead
 devpi-client
 doc2dash
