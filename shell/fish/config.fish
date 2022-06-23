@@ -15,3 +15,8 @@ fish_add_path -m $N_PREFIX/bin
 
 # Misc.
 [ -s "$HOME/.jabba/jabba.fish" ]; and source "$HOME/.jabba/jabba.fish"
+
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+
+# Created by `pipx` on 2022-06-13 04:23:52
+set PATH $PATH /Users/macinburrito/.local/bin

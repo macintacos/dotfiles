@@ -19,14 +19,12 @@ abbr -a ydl youtube-dl # because duh?
 abbr -a zj zellij --config $DOTFILES_HOME/shell/zellij/config.yaml # Run zellij
 abbr -a zr zrun # making zrun a bit more easy to run
 
-# git-related aliases
+# git-related aliases - check ./functions/git.fish for functions
 abbr -a g git
 abbr -a gl "git pull"
 abbr -a gf "git fetch"
 abbr -a gp "git push"
-abbr -a gst lazygit # better way to view git status
 abbr -a sm smerge
-abbr -a cdg "cd (git rev-parse --show-toplevel)"
 abbr -a git_prune_deleted_remotes "git branch -vv | grep ': gone' | grep -v '\*' | awk '{ print $1; }' | xargs -r git branch -D"
 
 # kubernetes
