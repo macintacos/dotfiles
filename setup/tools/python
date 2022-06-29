@@ -15,8 +15,8 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 log info "Installing latest Python 3.10..."
-pyenv install 3.10.2
-pyenv global 3.10.2 # because there's no good way to point global to latest version
+pyenv install 3.10.5
+pyenv global 3.10.5 # because there's no good way to point global to latest version
 
 log info "Installing global python packages..."
 pipx ensurepath
@@ -28,5 +28,4 @@ log info "Now installing requirements from dotfiles..."
 pip install -r shell/scripts/python/requirements.txt
 
 log info "Installing Poetry..."
-pipx install poetry
 PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install poetry

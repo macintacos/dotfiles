@@ -31,9 +31,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
-  "[rust]": {
-    "editor.formatOnSave": true
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -61,7 +58,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "other": "on",
+      "strings": "on"
+    },
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 100
   },
@@ -74,7 +75,11 @@
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
   },
   "[plaintext]": {
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "other": "on",
+      "strings": "on"
+    },
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 100
   },
@@ -90,6 +95,9 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.rulers": [88]
+  },
+  "[rust]": {
+    "editor.formatOnSave": true
   },
   "[shellscript]": {
     "editor.autoClosingBrackets": "always",
@@ -109,6 +117,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
+    "editor.autoIndent": "advanced",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
@@ -132,13 +141,14 @@
     "13px": "13px",
     "monospace": "14px"
   },
+  "customizeUI.statusBarPosition": "under-panel",
   "customizeUI.stylesheet": {
     ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
     ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
-    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);",
-    "[id='vscodevim.vim.primary']": "font-family: 'MonoLisa-Regular'; color: #ff77c1;"
+    "[id='vscodevim.vim.primary']": "font-family: 'MonoLisa-Regular'; color: #ff77c1;",
+    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
   },
-  "customizeUI.titleBar": "frameless",
+  "customizeUI.titleBar": "inline",
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": false,
@@ -151,6 +161,7 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorSurroundingLines": 10,
+  "editor.detectIndentation": false,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
   "editor.foldingImportsByDefault": true,
@@ -159,13 +170,12 @@
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
+  "editor.inlayHints.enabled": false,
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.matchBrackets": false,
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
+  "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
@@ -175,8 +185,8 @@
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggest.showInlineDetails": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tokenColorCustomizations": {},
   "editor.wordWrap": "off",
@@ -276,6 +286,9 @@
   },
   "explorer.openEditors.visible": 0,
   "extensions.autoUpdate": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "files.associations": {
     "*.end": "shellscript",
     "*.jira": "confluence",
@@ -362,6 +375,7 @@
   "keyboard.dispatch": "keyCode",
   "markdown.extension.italic.indicator": "_",
   "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.orderedList.marker": "one",
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.toc.slugifyMode": "github",
   "markdownShortcuts.bullets.marker": "-",
@@ -528,6 +542,8 @@
     }
   },
   "path-intellisense.showHiddenFiles": true,
+  "problems.autoReveal": false,
+  "problems.showCurrentInStatus": true,
   "projectManager.git.baseFolders": ["~/GitLocal/"],
   "projectManager.git.ignoredFolders": [
     "node_modules",
@@ -547,7 +563,6 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "/Users/macinburrito/.pyenv/versions/3.10.2/bin/python",
   "python.formatting.blackPath": "black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
@@ -560,6 +575,7 @@
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "python.linting.pydocstyleEnabled": true,
   "redhat.telemetry.enabled": false,
+  "rust-analyzer.checkOnSave.command": "clippy",
   "scm.defaultViewMode": "tree",
   "screencastMode.fontSize": 40,
   "screencastMode.verticalOffset": 10,
@@ -602,8 +618,8 @@
     }
   ],
   "shellcheck.customArgs": ["-x"],
-  "shellformat.flag": "-i 4",
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
+  "shellformat.flag": "-i 4",
   "snipsnap.silent": true,
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
@@ -649,6 +665,7 @@
   },
   "todo-tree.regex.enableMultiLine": true,
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "trunk.trunkGrayOutNonBlockingIssues": false,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
   "vim.camelCaseMotion.enable": true,
@@ -1241,6 +1258,13 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.gotoLine",
+      "icon": "list-ordered",
+      "keys": "j.l",
+      "name": "Go to line in buffer",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.gotoMethod",
       "icon": "symbol-method",
       "keys": "j.m",
@@ -1252,13 +1276,6 @@
       "position": -1
     },
     {
-      "command": "workbench.action.gotoLine",
-      "icon": "list-ordered",
-      "keys": "j.l",
-      "name": "Go to line in buffer",
-      "type": "command"
-    },
-    {
       "command": "workbench.action.showAllSymbols",
       "icon": "symbol-keyword",
       "keys": "j.I",
@@ -1267,8 +1284,8 @@
     },
     {
       "command": "workbench.action.toggleSidebarVisibility",
-      "keys": "l.b",
       "icon": "layout-sidebar-right",
+      "keys": "l.b",
       "name": "Toggle Right Sidebar",
       "type": "command"
     },
@@ -2159,6 +2176,7 @@
   "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.restoreWindows": "all",
+  "window.titleBarStyle": "native",
   "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "[GitHub Dark]": {
@@ -2175,6 +2193,7 @@
     "editor.lineHighlightBorder": "#9fced11f",
     "editorCursor.foreground": "#db2466"
   },
+  "workbench.colorTheme": "Dracula Pro (Van Helsing)",
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
   "workbench.editor.showTabs": false,
@@ -2185,6 +2204,7 @@
   },
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
@@ -2221,14 +2241,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "window.titleBarStyle": "native",
-  "workbench.colorTheme": "Dracula Pro (Van Helsing)",
-  "markdown.extension.orderedList.marker": "one",
-  "problems.autoReveal": false,
-  "problems.showCurrentInStatus": true,
-  "editor.minimap.enabled": false,
-  "trunk.trunkGrayOutNonBlockingIssues": false,
-  "editor.inlayHints.enabled": true,
-  "rust-analyzer.checkOnSave.command": "clippy"
+  "yaml.schemas": {}
 }
