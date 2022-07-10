@@ -119,6 +119,19 @@ ghdash_link() {
     ln -sf "${DOTFILES_HOME}/rc/gh-dash.yml" "${HOME}/Library/Application Support/gh-dash/config.yml"
 }
 
+xbar_plugin_link() {
+    log info "Linking xbar plugins..."
+    mkdir -p "${HOME}/Library/Application Support/xbar/plugins"
+    xbar_plugin_dir="${DOTFILES_HOME}/xbar/plugins"
+
+    for plugin_path in "$xbar_plugin_dir"/*; do
+        plugin_name=$(basename "$plugin_path")
+        ln -sf "$plugin_path" "$HOME/Library/Application Support/xbar/plugins/${plugin_name}"
+
+        log ok "Plugin $plugin_name linked."
+    done
+}
+
 ## ALL {{{
 link_all() {
     log info "Creating all symlinks..."
@@ -133,6 +146,7 @@ link_all() {
     nvim_link
     zsh_link
     ghdash_link
+    xbar_plugin_link
     log ok "All symlinks created."
 }
 
