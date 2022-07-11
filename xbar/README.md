@@ -24,3 +24,13 @@ By default, the cadence it updates is once per day. You can change that by chang
 If you for some reason want to change the quarters, feel free to edit the Q1/Q2/etc. variables in [the xbar preferences for the plugin](images/lets-get-fiscal-prefs-window.png). All month numbers must be enumerated in these variables, and there must be no duplicates. Months start at 1 (January) and go to 12 (December)
 
 The `Current plan link` can be an arbitrary link to whatever you would like. For me, I set it locally to one of the plan documents used at work.
+
+### Jira Document Ticket Reviewer
+
+This plugin shows me how many Jira tickets are currently waiting for my review. It looks like this:
+
+![Ticket waiting for my review](images/jira-review-tickets-main.png)
+
+Each item is clickable, and will bring you either to the filter that has the same query that populates it or the ticket itself. You must generate an OAuth token/secret/consumer_key and cert and place these values in the plugin's preferences. The cert needs to be stored on-disk in a file that you provide the path to in the plugin's preferences.
+
+Additionally, you must specify the JQL for the filter you're going to use in the plugin's preferences. This is set in the "Jira search query" preference.
