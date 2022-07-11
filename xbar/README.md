@@ -13,7 +13,7 @@ The plugins are provided "as is", blah blah blah.
 
 ## Plugin Descriptions
 
-### Let's Get Fiscal - a Fiscal Calendar helper
+### [Let's Get Fiscal - a Fiscal Calendar helper](plugins/lets-get-fiscal.1d.py)
 
 This plugin adds the current quarter to your menubar, with a menu showing you the next quarters, when they are occurring, and relevant links that might be useful. It looks like this:
 
@@ -25,7 +25,7 @@ If you for some reason want to change the quarters, feel free to edit the Q1/Q2/
 
 The `Current plan link` can be an arbitrary link to whatever you would like. For me, I set it locally to one of the plan documents used at work.
 
-### Jira Document Ticket Reviewer
+### [Jira Document Ticket Reviewer](plugins/jira-review-tickets.5m.py)
 
 This plugin shows me how many Jira tickets are currently waiting for my review. It looks like this:
 
