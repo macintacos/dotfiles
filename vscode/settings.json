@@ -857,7 +857,6 @@
   ],
   "vim.searchHighlightColor": "#85e89d",
   "vim.searchHighlightTextColor": "#24292e",
-  "vim.smartRelativeLine": true,
   "vim.smartcase": true,
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
