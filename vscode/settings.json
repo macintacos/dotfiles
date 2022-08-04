@@ -259,7 +259,7 @@
     ".spacemacs": "lisp",
     ".surfingkeysrc": "javascript",
     "keybindings.json": "jsonc",
-    "settings.json": "jsonc"
+    "settings.json": "jsonc",
     ".jakrc": "toml"
   },
   "files.autoSave": "onWindowChange",
@@ -521,6 +521,8 @@
   "python.formatting.blackPath": "black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [],
   "python.linting.mypyArgs": [
     "--follow-imports=silent",
     "--ignore-missing-imports",
