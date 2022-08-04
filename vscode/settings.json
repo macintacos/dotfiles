@@ -911,6 +911,14 @@
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
       "after": ["s"],
       "before": ["f"]
     },
@@ -971,7 +979,7 @@
       "before": ["H"]
     },
     {
-      "after": ["$"],
+      "after": ["g", "_"],
       "before": ["L"]
     },
     {
@@ -1000,9 +1008,8 @@
   "vscode-neovim.logOutputToConsole": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.neovimInitPath": "~/GitLocal/Play/nvim/init.vim",
   "vscode-neovim.revealCursorScrollLine": true,
-  "vscode-neovim.textDecorationsAtTop": true,
   "vscsm.smergeExecutablePath": "/opt/homebrew/bin/smerge",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vspacecode.bindingOverrides": [
