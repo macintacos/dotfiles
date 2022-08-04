@@ -589,6 +589,7 @@
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.profiles.osx": {
     "bash": {
       "args": ["-l"],
@@ -596,7 +597,6 @@
       "path": "bash"
     },
     "fish": {
-      "args": ["-l"],
       "path": "/opt/homebrew/bin/fish"
     },
     "tmux": {
