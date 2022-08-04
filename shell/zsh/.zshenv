@@ -30,7 +30,7 @@ export GO_BIN="$(brew --prefix)/go/bin"
 export HELM_2="$(brew --prefix)/opt/helm@2/bin"
 export HOME_LOCAL_BIN="$HOME/.local/bin"
 export KEKA=/Applications/Keka.app/Contents/MacOS
-export KUBECONFIG=~/.kube/config.staging:~/.kube/config.prod
+export KUBECONFIG=~/.kube/config
 export LDFLAGS="-L$(brew --prefix)/opt/libffi/lib"
 export LOCAL_BIN=$(brew --prefix)/bin
 export MANPAGER="sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
