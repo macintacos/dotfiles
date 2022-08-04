@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# <xbar.title>Jira Document Tickets Waiting for my Review</xbar.title>
-# <xbar.desc>Lists the open Jira "Document" type tickets that are waiting for my review.</xbar.desc>
-# <xbar.version>v1.0</xbar.version>
+# <xbar.title>Jira Tickets to Review</xbar.title>
+# <xbar.desc>List + link to tickets that match the JQL specified in the configuration.</xbar.desc>
+# <xbar.version>1.0.1</xbar.version>
 # <xbar.author>Julian Torres</xbar.author>
 # <xbar.author.github>macintacos</xbar.author.github>
 # <xbar.dependencies>python</xbar.dependencies>
