@@ -25,7 +25,7 @@ while IFS= read -r dep; do
 done <backup/pipx-deps.txt
 
 log info "Now installing requirements from dotfiles..."
-pip install -r shell/scripts/python/requirements.txt
+pip install -r shell/tools/python/requirements.txt
 
 log info "Installing Poetry..."
 PIPX_DEFAULT_PYTHON="$(pyenv prefix)/bin/python" pipx install poetry
