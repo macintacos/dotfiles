@@ -19,6 +19,7 @@ azemoh.one-monokai
 batisteo.vscode-django
 BazelBuild.vscode-bazel
 bdavs.expect
+be5invis.vscode-custom-css
 be5invis.vscode-icontheme-nomo-dark
 belfz.search-crates-io
 bierner.color-info
@@ -62,7 +63,6 @@ dunstontc.viml
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
-eg2.vscode-npm-script
 emilast.LogFileHighlighter
 emmanuelbeziat.vscode-great-icons
 esbenp.prettier-vscode
@@ -154,6 +154,7 @@ olback.es6-css-minify
 oliversturm.fix-json
 OnlyLys.leaper
 PascalReitermann93.vscode-yaml-sort
+PeterSchmalfeldt.explorer-exclude
 PKief.markdown-checkbox
 PKief.material-icon-theme
 PKief.material-product-icons
@@ -167,7 +168,6 @@ rebornix.ruby
 redhat.vscode-commons
 redhat.vscode-xml
 redhat.vscode-yaml
-RedVanWorkshop.explorer-exclude-vscode-extension
 Remisa.shellman
 richie5um2.vscode-sort-json
 rogalmic.bash-debug
@@ -195,6 +195,7 @@ svipas.control-snippets
 TakumiI.markdowntable
 tamasfe.even-better-toml
 telesoho.vscode-markdown-paste-image
+tfsec.tfsec
 timonwong.shellcheck
 trixnz.go-to-method
 trond-snekvik.simple-rst
@@ -207,6 +208,7 @@ valentjn.vscode-ltex
 viablelab.bracket-padder
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
+vsls-contrib.gistfs
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
 wayou.file-icons-mac

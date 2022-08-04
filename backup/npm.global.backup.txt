@@ -3,23 +3,23 @@
 
 @csmith/release-it-calver-plugin==@2022.5.13
 backup-global==@1.5.0
-bash-language-server==@2.0.0
-corepack==@0.10.0
+bash-language-server==@3.0.5
+corepack==@0.12.1
 fkill-cli==@7.1.0
-m==@1.7.0
-npm==@8.3.1
-prettier==@2.5.1
-release-it==@15.0.0
-remark-cli==@10.0.1
-remark-language-server==@1.1.0
+m==@1.8.1
+npm==@8.16.0
+prettier==@2.7.1
+release-it==@15.2.0
+remark-cli==@11.0.0
+remark-language-server==@2.0.0
 remark==@14.0.2
 trash-cli==@5.0.0
 tree-sitter-cli==@0.20.6
-ts-node==@10.5.0
-vercel==@23.1.2
-vim-language-server==@2.2.5
-yarn==@1.22.17
-zx==@5.0.0
+ts-node==@10.9.1
+vercel==@27.3.4
+vim-language-server==@2.2.10
+yarn==@1.22.19
+zx==@7.0.8
 
 
 # These are yarn packages under "[Yarn Global Packages]".
