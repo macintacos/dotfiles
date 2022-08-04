@@ -29,3 +29,4 @@ shell/fish/user/env/env.s.fish
 **/dist
 **/build
 **/venv
+**/secrets
