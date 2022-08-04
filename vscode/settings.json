@@ -240,6 +240,9 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
+  "evenBetterToml.formatter.alignComments": false,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
   "files.associations": {
     "*.end": "shellscript",
     "*.jira": "confluence",
@@ -257,6 +260,7 @@
     ".surfingkeysrc": "javascript",
     "keybindings.json": "jsonc",
     "settings.json": "jsonc"
+    ".jakrc": "toml"
   },
   "files.autoSave": "onWindowChange",
   "files.defaultLanguage": "txt",
