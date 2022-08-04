@@ -1476,7 +1476,7 @@
       "type": "command"
     },
     {
-      "command": "workbench.action.focusPreviousGroup",
+      "command": "workbench.action.focusLeftGroup",
       "keys": "w.h",
       "name": "Focus previous group",
       "type": "command"
@@ -1494,7 +1494,7 @@
       "type": "command"
     },
     {
-      "command": "workbench.action.focusNextGroup",
+      "command": "workbench.action.focusRightGroup",
       "keys": "w.l",
       "name": "Focus next group",
       "type": "command"
