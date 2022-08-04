@@ -33,6 +33,7 @@ gui:
   showRandomTip: false
   showCommandLog: true
   commandLogSize: 8
+  showIcons: true
 git:
   paging:
     colorArg: always
