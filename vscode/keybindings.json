@@ -2233,5 +2233,27 @@
     "key": "alt+cmd+k",
     "command": "-keybindings.editor.recordSearchKeys",
     "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "cmd+g h",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+p p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "cmd+f f",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
   }
 ]
