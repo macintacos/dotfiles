@@ -2,7 +2,7 @@
 
 # <xbar.title>Fiscal Year Generator</xbar.title>
 # <xbar.desc>Gets the current fiscal year/quarter and presents it to the user, as well as other goodies.</xbar.desc>
-# <xbar.version>v1.0</xbar.version>
+# <xbar.version>1.0.0</xbar.version>
 # <xbar.author>Julian Torres</xbar.author>
 # <xbar.author.github>macintacos</xbar.author.github>
 # <xbar.dependencies>python</xbar.dependencies>
