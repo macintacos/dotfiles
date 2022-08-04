@@ -1,0 +1,23 @@
+---
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# Using this for GLOBALS
+
+global_vars:
+  # The clipboard.... duh
+  - name: clipboard
+    type: clipboard
+
+  # e.g. "April 15, 2022"
+  - name: USADate
+    type: date
+    params:
+      format: "%B %e, %Y"
+
+  # e.g. "2022-04-15"
+  - name: ISO8601Date
+    type: date
+    params:
+      format: "%F"
