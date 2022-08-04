@@ -1,4 +1,8 @@
 {
+  "vscode_custom_css.imports": [
+    "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
+  ],
+  "vscode_custom_css.statusbar": false,
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -63,8 +67,10 @@
       "other": "on",
       "strings": "on"
     },
-    "editor.wordWrap": "off",
-    "editor.wordWrapColumn": 100
+    "editor.wordWrap": "bounded",
+    "editor.rulers": [88],
+    "editor.wordWrapColumn": 88,
+    "editor.wrappingIndent": "same"
   },
   "[mongodb]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -94,7 +100,10 @@
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
-    "editor.rulers": [88]
+    "editor.rulers": [88],
+    "editor.wordWrapColumn": 88,
+    "editor.wrappingIndent": "indent",
+    "editor.wordWrap": "bounded"
   },
   "[rust]": {
     "editor.formatOnSave": true
@@ -143,6 +152,7 @@
   },
   "customizeUI.statusBarPosition": "under-panel",
   "customizeUI.stylesheet": {
+    ".monaco-workbench": "--vscode-commandCenter-border: #121a20 !important;",
     ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
     ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
     "[id='vscodevim.vim.primary']": "font-family: 'MonoLisa-Regular'; color: #ff77c1;",
@@ -170,11 +180,11 @@
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
-  "editor.inlayHints.enabled": false,
+  "editor.inlayHints.enabled": "onUnlessPressed",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -650,22 +660,11 @@
     }
   },
   "todo-tree.filtering.includeHiddenFiles": true,
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "REFACTOR",
-    "XXX",
-    "[ ]",
-    "[x]"
-  ],
-  "todo-tree.highlights.defaultHighlight": {
-    "gutterIcon": true
-  },
+  "todo-tree.tree.autoRefresh": true,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.general.tags": ["TODO", "FIXME", "REVIEW", "HACK", "REF", "WARN"],
   "todo-tree.regex.enableMultiLine": true,
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "trunk.trunkGrayOutNonBlockingIssues": false,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
   "vim.camelCaseMotion.enable": true,
