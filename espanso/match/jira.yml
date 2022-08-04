@@ -1,0 +1,65 @@
+---
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+global_vars:
+  # Form that promps user for jira ticket number
+  - name: jiraTicketForm
+    type: form
+    params:
+      layout: |
+        Ticket Number: [[ticketNum]]
+      fields:
+        ticketNum:
+          default: "{{clipboard}}"
+  - name: jiraTicketNumberUppercased
+    type: shell
+    params:
+      cmd: "echo {{jiraTicketForm.ticketNum}} | tr '[:lower:]' '[:upper:]'"
+      shell: bash
+
+matches:
+  # Prompts user for ticket number, pre-populated with clipboard contents,
+  # and then spits out a link to the ticket,
+  # e.g. "https://jira.mongodb.org/browse/HELP-123"
+  - trigger: "jlink"
+    replace: https://jira.mongodb.org/browse/{{jiraTicketNumberUppercased}}
+
+  # Same as 'jlink', but generates a markdown link.
+  - trigger: "jmdlink"
+    replace: "[{{jiraTicketNumberUppercased}}](https://jira.mongodb.org/browse/{{jiraTicketNumberUppercased}})"
+
+  # Same as 'jlink', but generates a formatted Jira link.
+  - trigger: "jrlink"
+    replace: "[{{jiraTicketNumberUppercased}}|https://jira.mongodb.org/browse/{{jiraTicketNumberUppercased}}]"
+
+  # Same as 'jlink', but generates a Jira API link.
+  - trigger: "japilink"
+    replace: "https://jira.mongodb.org/rest/api/2/issue/{{jiraTicketNumberUppercased}}"
+
+  # Generates a code block in Jira syntax
+  - trigger: "jcode"
+    replace: |
+      {code}
+      $|$
+      {code}
+
+  # Generates a noformat block in Jira syntax
+  - trigger: "jnf"
+    replace: |
+      {noformat}
+      $|$
+      {noformat}
+
+  # Generates a quote block in Jira syntax
+  - trigger: "jquote"
+    replace: |
+      {quote}
+      $|$
+      {quote}
