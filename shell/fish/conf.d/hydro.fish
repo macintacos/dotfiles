@@ -32,6 +32,16 @@ function _hydro_pwd --on-variable PWD --on-variable hydro_ignored_git_paths --on
 end
 
 function _hydro_postexec --on-event fish_postexec
+    set --local last_status $pipestatus
+    set --global _hydro_status "$_hydro_newline$_hydro_color_prompt$hydro_symbol_prompt"
+
+    for code in $last_status
+        if test $code -ne 0
+            set --global _hydro_status "$_hydro_color_error| "(echo $last_status)" $_hydro_newline$_hydro_color_prompt$_hydro_color_error$hydro_symbol_prompt"
+            break
+        end
+    end
+
     test "$CMD_DURATION" -lt 1000 && set _hydro_cmd_duration && return
 
     set --local secs (math --scale=1 $CMD_DURATION/1000 % 60)
@@ -48,16 +58,8 @@ function _hydro_postexec --on-event fish_postexec
 end
 
 function _hydro_prompt --on-event fish_prompt
-    set --local last_status $pipestatus
+    set --query _hydro_status || set --global _hydro_status "$_hydro_newline$_hydro_color_prompt$hydro_symbol_prompt"
     set --query _hydro_pwd || _hydro_pwd
-    set --global _hydro_prompt "$_hydro_newline$_hydro_color_prompt$hydro_symbol_prompt"
-
-    for code in $last_status
-        if test $code -ne 0
-            set _hydro_prompt "$_hydro_newline$_hydro_color_error"[(echo $last_status)]
-            break
-        end
-    end
 
     command kill $_hydro_last_pid 2>/dev/null
 
@@ -74,8 +76,7 @@ function _hydro_prompt --on-event fish_prompt
         test -z \"\$$_hydro_git\" && set --universal $_hydro_git \"\$branch \"
 
         ! command git diff-index --quiet HEAD 2>/dev/null ||
-            count (command git ls-files --others --exclude-standard) >/dev/null &&
-            set info \"$hydro_symbol_git_dirty\"
+            count (command git ls-files --others --exclude-standard) >/dev/null && set info \"$hydro_symbol_git_dirty\"
 
         for fetch in $hydro_fetch false
             command git rev-list --count --left-right @{upstream}...@ 2>/dev/null |
