@@ -26,6 +26,7 @@ abbr -a gf "git fetch"
 abbr -a gfp "git fetch --prune"
 abbr -a gp "git push"
 abbr -a sm smerge
+abbr -a gt gittower
 abbr -a git_prune_deleted_remotes "git branch -vv | grep ': gone' | grep -v '\*' | awk '{ print \$1; }' | xargs -r git branch -D"
 
 # kubernetes
