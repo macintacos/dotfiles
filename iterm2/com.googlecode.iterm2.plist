@@ -23,7 +23,7 @@
 	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
 	<integer>2</integer>
 	<key>Command</key>
-	<string>/opt/homebrew/bin/fish</string>
+	<string></string>
 	<key>CopySelection</key>
 	<true/>
 	<key>Custom Color Presets</key>
@@ -10917,6 +10917,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Load Shell Integration Automatically</key>
+			<true/>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
