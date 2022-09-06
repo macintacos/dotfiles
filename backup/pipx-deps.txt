@@ -5,7 +5,6 @@ devpi-client
 doc2dash
 google-photos-takeout-helper
 ipython
-jak-of-all-trades
 mtools[all]
 mypy
 pex

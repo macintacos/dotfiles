@@ -30,3 +30,4 @@ shell/fish/user/env/env.s.fish
 **/build
 **/venv
 **/secrets
+node_modules
