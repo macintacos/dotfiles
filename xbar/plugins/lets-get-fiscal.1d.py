@@ -187,7 +187,7 @@ def main():
     print(
         cleandoc(
             f"""
-            {q1} | font=MonoLisa-Regular
+            {q1} | font=Inter
             ---
             :link: Current Plan ({q1}) | size=14 | font=MonoLisa-Regular | href={os.getenv("VAR_CURRENT_PLAN_LINK")}
             ---
