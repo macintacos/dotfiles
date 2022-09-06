@@ -183,7 +183,6 @@ sdras.night-owl
 serayuzgur.crates
 sharat.vscode-brewfile
 shardulm94.trailing-spaces
-silvenon.mdx
 skellock.just
 sleistner.vscode-fileutils
 snipsnapdev.snipsnap-vscode
@@ -201,6 +200,7 @@ trixnz.go-to-method
 trond-snekvik.simple-rst
 twixes.pypi-assistant
 Tyriar.sort-lines
+unifiedjs.vscode-mdx
 usernamehw.commands
 usernamehw.errorlens
 vadimcn.vscode-lldb
@@ -214,6 +214,7 @@ VSpaceCode.whichkey
 wayou.file-icons-mac
 wayou.vscode-icons-mac
 wingrunr21.vscode-ruby
+withfig.fig
 wmaurer.change-case
 wraith13.bracket-lens
 wwm.better-align
