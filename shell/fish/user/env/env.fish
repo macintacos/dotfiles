@@ -12,23 +12,24 @@ set -gx NVIM_HOME $GITLOCAL_HOME/Play/nvim
 set -gx FISH_HOME $DOTFILES_HOME/shell/fish
 
 # Other Things
-set -gx EDITOR nvim
 set -gx BAT_THEME Dracula
 set -gx CHEAT_COLORS true
 set -gx CHEAT_COLORSCHEME dark
 set -gx COLORTERM truecolor
+set -gx EDITOR nvim
 set -gx GOPATH $HOME/GoWorkspace
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
+set -gx KUBECONFIG "$HOME/.kube/config"
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p --style=numbers,grid'"
 set -gx MMS_HOME $GITLOCAL_HOME/Work/mms
 set -gx M_PREFIX $HOME/MongoDB
-set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PIPX_DEFAULT_PYTHON (pyenv prefix)/bin/python
+set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
+set -gx PYENV_ROOT $HOME/.pyenv
 set -gx RUST $HOME/.cargo/bin
 set -gx TERM xterm-256color
-set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
 set -gx VASA_HOME $HOME/.vasa
-set -gx KUBECONFIG "$HOME/.kube/config"
 
 # fisher
 set -gx fisher_path $FISH_HOME

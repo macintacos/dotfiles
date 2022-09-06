@@ -1,7 +1,7 @@
 # Abbreviations
 
 abbr -a c 'clear && ll' # clear terminal display, show directory
-abbr -a cat bat # because bat is just insanely better than cat
+abbr -a cat 'bat --pager="less -XRF"' # because bat is just insanely better than cat
 abbr -a cls clear # clear sisplay, just like `mongo` shell
 abbr -a cp 'cp -iv' # preferred 'cp' implementation
 abbr -a diff delta # use delta as your differ of choice
