@@ -9,7 +9,7 @@ setup:
 	@setup/install.sh
 
 # Symlink files
-symlink:
+link:
 	@setup/symlink.sh
 
 # Backup packages, casks, and plugins
