@@ -4,7 +4,7 @@
 [user]
 	name = Julian Torres
 	email = julian.torres@mongodb.com
-	signingkey = 1E9412BB6584335F0BBA96AD8A5F444FBE929FF0
+	signingkey = 21DED32C3170D9F5
 [gpg]
 	program = /usr/local/bin/gpg
 [commit]
