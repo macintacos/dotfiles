@@ -18,13 +18,6 @@ karabiner_link() {
 	log ok "Karabiner linked."
 }
 
-nvim_link() {
-	log info "Linking neovim..."
-	rm -f ~/.config/nvim
-	ln -sF "${HOME}/GitLocal/Play/nvim" ~/.config/nvim
-	log ok "neovim linked."
-}
-
 lnav_link() {
 	log info "Linking lnav..."
 	rm -rf "$HOME/.lnav/formats/installed"
@@ -107,6 +100,7 @@ tmux_link() {
 	rm -rf "${HOME}/.tmux.theme.sh"
 	rm -rf "${HOME}/.tmux-powerlinerc"
 	rm -rf "${HOME}/.gitmux.conf"
+	mkdir -p "${HOME}/.tmux/powerline/themes"
 	ln -sf "${DOTFILES_HOME}/rc/.tmux.conf" "${HOME}/.tmux.conf"
 	ln -sf "${DOTFILES_HOME}/rc/.tmux.theme.sh" "${HOME}/.tmux/powerline/themes/.tmux.theme.sh"
 	ln -sf "${DOTFILES_HOME}/rc/.tmux-powerlinerc" "${HOME}/.tmux-powerlinerc"
@@ -134,6 +128,13 @@ xbar_plugin_link() {
 	done
 }
 
+cz_link() {
+	log info "Linking commitizen settings..."
+	rm -f ~/.czrc
+	ln -sf "${DOTFILES_HOME}/rc/.czrc" "$HOME/.czrc"
+	log ok "committizen config linked."
+}
+
 ## ALL {{{
 link_all() {
 	log info "Creating all symlinks..."
@@ -145,7 +146,6 @@ link_all() {
 	lazygit_link
 	lnav_link
 	fish_link
-	nvim_link
 	zsh_link
 	tmux_link
 	ghdash_link
