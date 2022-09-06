@@ -75,3 +75,10 @@
     abbrevCommit = true
     # Automatically --follow when given a single path
     follow = true
+[push]
+	autoSetupRemote = true
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
