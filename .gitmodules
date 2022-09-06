@@ -1,0 +1,3 @@
+[submodule "espanso"]
+	path = espanso
+	url = git@github.com:macintacos/espanso-snippets.git
