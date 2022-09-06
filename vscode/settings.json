@@ -1,8 +1,4 @@
 {
-  "vscode_custom_css.imports": [
-    "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
-  ],
-  "vscode_custom_css.statusbar": false,
   "[confluence]": {
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -67,8 +63,8 @@
       "other": "on",
       "strings": "on"
     },
-    "editor.wordWrap": "bounded",
     "editor.rulers": [88],
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 88,
     "editor.wrappingIndent": "same"
   },
@@ -101,9 +97,9 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.rulers": [88],
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 88,
-    "editor.wrappingIndent": "indent",
-    "editor.wordWrap": "bounded"
+    "editor.wrappingIndent": "indent"
   },
   "[rust]": {
     "editor.formatOnSave": true
@@ -174,7 +170,7 @@
   "editor.detectIndentation": false,
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
-  "editor.foldingImportsByDefault": true,
+  "editor.foldingImportsByDefault": false,
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": "'ss06' on, 'zero' on, 'ss04' on",
   "editor.fontSize": 14,
@@ -184,7 +180,7 @@
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": "never",
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -192,6 +188,7 @@
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "bottom",
+  "editor.stickyScroll.enabled": true,
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
@@ -211,6 +208,9 @@
   "errorLens.messageTemplate": "$source: $message [$code]",
   "eslint.codeActionsOnSave.mode": "all",
   "eslint.codeActionsOnSave.rules": ["sort-imports"],
+  "evenBetterToml.formatter.alignComments": false,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
   "explicitFolding.rules": {
     "*": {
       "separator": "{{{"
@@ -240,9 +240,6 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "evenBetterToml.formatter.alignComments": false,
-  "evenBetterToml.formatter.alignEntries": true,
-  "evenBetterToml.formatter.arrayTrailingComma": true,
   "files.associations": {
     "*.end": "shellscript",
     "*.jira": "confluence",
@@ -255,12 +252,12 @@
     ".env-example": "env",
     ".gitignore_global": "gitignore",
     ".ideavimrc": "viml",
+    ".jakrc": "toml",
     ".prettierrc": "yaml",
     ".spacemacs": "lisp",
     ".surfingkeysrc": "javascript",
     "keybindings.json": "jsonc",
-    "settings.json": "jsonc",
-    ".jakrc": "toml"
+    "settings.json": "jsonc"
   },
   "files.autoSave": "onWindowChange",
   "files.defaultLanguage": "txt",
@@ -279,6 +276,7 @@
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
+  "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -313,6 +311,7 @@
   "gopls": {
     "gofumpt": true
   },
+  "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
   "indentRainbow.colors": [
     "rgba(98, 114, 164, 0.1)",
     "rgba(98, 114, 164, 0.2)",
@@ -517,12 +516,12 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.typeCheckingMode": "basic",
   "python.formatting.blackPath": "black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": [],
   "python.linting.mypyArgs": [
     "--follow-imports=silent",
     "--ignore-missing-imports",
@@ -531,6 +530,8 @@
   ],
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "python.linting.pydocstyleEnabled": true,
+  "python.linting.pylintArgs": [],
+  "python.linting.pylintEnabled": true,
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
   "scm.defaultViewMode": "tree",
@@ -588,10 +589,10 @@
   },
   "terminal.integrated.fontFamily": "MonoLisa, Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.profiles.osx": {
     "bash": {
       "args": ["-l"],
@@ -607,11 +608,11 @@
     }
   },
   "todo-tree.filtering.includeHiddenFiles": true,
-  "todo-tree.tree.autoRefresh": true,
-  "todo-tree.highlights.useColourScheme": true,
   "todo-tree.general.tags": ["TODO", "FIXME", "REVIEW", "HACK", "REF", "WARN"],
+  "todo-tree.highlights.useColourScheme": true,
   "todo-tree.regex.enableMultiLine": true,
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.tree.autoRefresh": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": false,
   "vim.camelCaseMotion.enable": true,
@@ -653,12 +654,12 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["j"],
-      "after": ["g", "j"]
+      "after": ["g", "j"],
+      "before": ["j"]
     },
     {
-      "before": ["k"],
-      "after": ["g", "k"]
+      "after": ["g", "k"],
+      "before": ["k"]
     },
     {
       "before": ["g", "H"],
@@ -865,12 +866,12 @@
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["j"],
-      "after": ["g", "j"]
+      "after": ["g", "j"],
+      "before": ["j"]
     },
     {
-      "before": ["k"],
-      "after": ["g", "k"]
+      "after": ["g", "k"],
+      "before": ["k"]
     },
     {
       "after": ["s"],
@@ -964,6 +965,10 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "vscode-neovim.neovimInitPath": "~/GitLocal/Play/nvim/init.vim",
   "vscode-neovim.revealCursorScrollLine": true,
+  "vscode_custom_css.imports": [
+    "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
+  ],
+  "vscode_custom_css.statusbar": false,
   "vscsm.smergeExecutablePath": "/opt/homebrew/bin/smerge",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vspacecode.bindingOverrides": [
@@ -2135,6 +2140,7 @@
   ],
   "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
+  "window.autoDetectColorScheme": true,
   "window.restoreWindows": "all",
   "window.titleBarStyle": "native",
   "workbench.activityBar.visible": true,
@@ -2166,6 +2172,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.list.automaticKeyboardNavigation": false,
+  "workbench.preferredDarkColorTheme": "Dracula Pro (Van Helsing)",
+  "workbench.preferredLightColorTheme": "Noctis Lux",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
