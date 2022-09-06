@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 #!/usr/local/bin/bash
 # shellcheck disable=SC1090
 # PROFILING INFORMATION {{{
@@ -188,3 +190,6 @@ bindkey -M vicmd 's' vi-easy-motion
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
