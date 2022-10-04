@@ -1,9 +1,6 @@
 #!/usr/local/bin/bash
 # shellcheck disable=SC1090
 
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # PROFILING INFORMATION {{{
 ## Uncomment the following line (and last line) to get loading times for zshell
 # zmodload zsh/zprof
@@ -194,6 +191,3 @@ bindkey -M vicmd 's' vi-easy-motion
 # }}}
 
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
