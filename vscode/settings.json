@@ -176,11 +176,11 @@
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
-  "editor.inlayHints.enabled": "onUnlessPressed",
+  "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -960,11 +960,6 @@
       ]
     }
   ],
-  "vscode-neovim.logOutputToConsole": true,
-  "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.neovimInitPath": "~/GitLocal/Play/nvim/init.vim",
-  "vscode-neovim.revealCursorScrollLine": true,
   "vscode_custom_css.imports": [
     "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
   ],
@@ -2138,7 +2133,6 @@
       "type": "bindings"
     }
   ],
-  "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "all",
@@ -2159,7 +2153,6 @@
     "editor.lineHighlightBorder": "#9fced11f",
     "editorCursor.foreground": "#db2466"
   },
-  "workbench.colorTheme": "Dracula Pro (Van Helsing)",
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
   "workbench.editor.showTabs": false,
@@ -2174,7 +2167,6 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.preferredDarkColorTheme": "Dracula Pro (Van Helsing)",
   "workbench.preferredLightColorTheme": "Noctis Lux",
-  "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
@@ -2209,5 +2201,6 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "workbench.colorTheme": "Dracula Pro (Van Helsing)"
 }
