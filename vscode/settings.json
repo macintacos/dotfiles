@@ -63,9 +63,8 @@
       "other": "on",
       "strings": "on"
     },
-    "editor.rulers": [88],
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 88,
+    "editor.wordWrapColumn": 90,
     "editor.wrappingIndent": "same"
   },
   "[mongodb]": {
@@ -96,9 +95,8 @@
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
-    "editor.rulers": [88],
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 88,
+    "editor.wordWrapColumn": 90,
     "editor.wrappingIndent": "indent"
   },
   "[rust]": {
@@ -135,6 +133,7 @@
   },
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.showRunIconInEditorTitleMenu": false,
+  "codesnap.transparentBackground": true,
   "codeui.targetingMode": "themeSpecific",
   "color-highlight.markRuler": false,
   "color-highlight.markerType": "underline",
@@ -154,7 +153,7 @@
     "[id='vscodevim.vim.primary']": "font-family: 'MonoLisa-Regular'; color: #ff77c1;",
     "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
   },
-  "customizeUI.titleBar": "inline",
+  "customizeUI.titleBar": "regular",
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": false,
@@ -171,9 +170,8 @@
   "editor.dragAndDrop": true,
   "editor.find.cursorMoveOnType": false,
   "editor.foldingImportsByDefault": false,
-  "editor.fontFamily": "MonoLisa",
-  "editor.fontLigatures": "'ss06' on, 'zero' on, 'ss04' on",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "Berkeley Mono",
+  "editor.fontSize": 15,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
   "editor.inlayHints.enabled": "offUnlessPressed",
@@ -183,7 +181,8 @@
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
+  "editor.rulers": [90],
   "editor.semanticHighlighting.enabled": true,
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
@@ -276,6 +275,8 @@
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
+  "git.ignoreMissingGitWarning": true,
+  "git.path": "/opt/homebrew/bin/git",
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -327,6 +328,7 @@
   "jupyter.askForKernelRestart": false,
   "jupyter.sendSelectionToInteractiveWindow": false,
   "keyboard.dispatch": "keyCode",
+  "lldb.suppressUpdateNotifications": true,
   "markdown.extension.italic.indicator": "_",
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.marker": "one",
@@ -532,6 +534,8 @@
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pylintArgs": [],
   "python.linting.pylintEnabled": true,
+  "python.logging.level": "debug",
+  "python.poetryPath": "/Users/macinburrito/.local/bin/poetry",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
   "scm.defaultViewMode": "tree",
@@ -579,6 +583,21 @@
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "shellformat.flag": "-i 4",
   "snipsnap.silent": true,
+  "spotify.showLyricsButton": false,
+  "spotify.showMuteUnmuteVolumeButton": false,
+  "spotify.showMuteVolumeButton": false,
+  "spotify.showNextButton": false,
+  "spotify.showPauseButton": false,
+  "spotify.showPlayButton": false,
+  "spotify.showPlayPauseButton": false,
+  "spotify.showPreviousButton": false,
+  "spotify.showSignInButton": false,
+  "spotify.showSignOutButton": false,
+  "spotify.showToggleRepeatingButton": false,
+  "spotify.showToggleShufflingButton": false,
+  "spotify.showUnmuteVolumeButton": false,
+  "spotify.showVolumeDownButton": false,
+  "spotify.showVolumeUpButton": false,
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
@@ -960,6 +979,10 @@
       ]
     }
   ],
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/GitLocal/Play/dotfiles/rc/init.vscode.vim",
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.theme": "forest",
   "vscode_custom_css.imports": [
     "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
   ],
@@ -1105,6 +1128,13 @@
       "icon": "edit",
       "keys": "f.R",
       "name": "Rename file",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.findInFiles",
+      "icon": "search-fuzzy",
+      "keys": "f.S",
+      "name": "Search: Find in Files",
       "type": "command"
     },
     {
@@ -1432,16 +1462,23 @@
       "type": "command"
     },
     {
+      "command": "editor.action.startFindReplaceAction",
+      "icon": "replace",
+      "keys": "s.r",
+      "name": "Replace in current File (Native)",
+      "type": "command"
+    },
+    {
       "command": "search.action.openNewEditor",
       "keys": "s.E",
       "name": "New Search Editor",
       "type": "command"
     },
     {
-      "command": "editor.action.startFindReplaceAction",
+      "command": "workbench.action.replaceInFiles",
       "icon": "replace",
-      "keys": "s.F",
-      "name": "Replace in current File (Native)",
+      "keys": "s.R",
+      "name": "Replace in all files (Native)",
       "type": "command"
     },
     {
@@ -1863,6 +1900,21 @@
     {
       "bindings": [
         {
+          "command": "workbench.action.files.save",
+          "icon": "save",
+          "key": "s",
+          "name": "Save",
+          "type": "command"
+        }
+      ],
+      "icon": "save-all",
+      "keys": "f.s",
+      "name": "+Save",
+      "type": "bindings"
+    },
+    {
+      "bindings": [
+        {
           "command": "gitlens.diffWithPrevious",
           "key": "d",
           "name": "...diff current file against previous revision",
@@ -2135,10 +2187,18 @@
   ],
   "whichkey.sortOrder": "nonNumberFirst",
   "window.autoDetectColorScheme": true,
+  "window.commandCenter": true,
   "window.restoreWindows": "all",
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
+    "[Dracula Pro (Van Helsing)]": {
+      "commandCenter.activeBackground": "#0b0d0f",
+      "commandCenter.activeForeground": "#718ca9",
+      "commandCenter.background": "#0b0d0f",
+      "commandCenter.border": "#718ca9",
+      "commandCenter.foreground": "#718ca9"
+    },
     "[GitHub Dark]": {
       "terminal.ansiBlack": "#24292e",
       "terminal.ansiBlue": "#b392f0",
@@ -2151,8 +2211,10 @@
     },
     "editor.lineHighlightBackground": "#1073cf2d",
     "editor.lineHighlightBorder": "#9fced11f",
-    "editorCursor.foreground": "#db2466"
+    "editorCursor.foreground": "#db2466",
+    "titleBar.activeBackground": "#0b0d0f"
   },
+  "workbench.colorTheme": "Dracula Pro (Van Helsing)",
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.openPositioning": "first",
   "workbench.editor.showTabs": false,
@@ -2164,7 +2226,6 @@
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
-  "workbench.list.automaticKeyboardNavigation": false,
   "workbench.preferredDarkColorTheme": "Dracula Pro (Van Helsing)",
   "workbench.preferredLightColorTheme": "Noctis Lux",
   "workbench.quickOpen.closeOnFocusLost": false,
@@ -2201,6 +2262,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {},
-  "workbench.colorTheme": "Dracula Pro (Van Helsing)"
+  "yaml.schemas": {}
 }
