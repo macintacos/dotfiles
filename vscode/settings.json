@@ -1900,10 +1900,31 @@
     {
       "bindings": [
         {
+          "command": "workbench.action.files.saveAll",
+          "icon": "save-all",
+          "key": "a",
+          "name": "Save All",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.files.saveWithoutFormatting",
+          "icon": "save",
+          "key": "f",
+          "name": "Save without Formatting",
+          "type": "command"
+        },
+        {
           "command": "workbench.action.files.save",
           "icon": "save",
           "key": "s",
           "name": "Save",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.files.saveAs",
+          "icon": "save-as",
+          "key": "A",
+          "name": "Save As",
           "type": "command"
         }
       ],
