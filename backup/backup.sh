@@ -36,4 +36,4 @@ log info "The following files were backed up:
     $DOTFILES_HOME/backup/npm.global.backup.txt
     $DOTFILES_HOME/backup/vscode-extensions-backup.txt
     $DOTFILES_HOME/backup/pipx-deps.txt
-    $DOTFILES_HOME/backup/cargo-global.txt"
+    $DOTFILES_HOME/backup/cargo-global.json"
