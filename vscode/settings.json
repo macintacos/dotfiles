@@ -176,11 +176,11 @@
   "editor.fontSize": 14,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
-  "editor.inlayHints.enabled": "onUnlessPressed",
+  "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.lineHeight": 21,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
@@ -276,6 +276,7 @@
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
+  "git.ignoreMissingGitWarning": true,
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -579,6 +580,21 @@
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "shellformat.flag": "-i 4",
   "snipsnap.silent": true,
+  "spotify.showLyricsButton": false,
+  "spotify.showMuteUnmuteVolumeButton": false,
+  "spotify.showMuteVolumeButton": false,
+  "spotify.showNextButton": false,
+  "spotify.showPauseButton": false,
+  "spotify.showPlayButton": false,
+  "spotify.showPlayPauseButton": false,
+  "spotify.showPreviousButton": false,
+  "spotify.showSignInButton": false,
+  "spotify.showSignOutButton": false,
+  "spotify.showToggleRepeatingButton": false,
+  "spotify.showToggleShufflingButton": false,
+  "spotify.showUnmuteVolumeButton": false,
+  "spotify.showVolumeDownButton": false,
+  "spotify.showVolumeUpButton": false,
   "telemetry.telemetryLevel": "error",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm2.app",
@@ -960,11 +976,6 @@
       ]
     }
   ],
-  "vscode-neovim.logOutputToConsole": true,
-  "vscode-neovim.mouseSelectionStartVisualMode": true,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.neovimInitPath": "~/GitLocal/Play/nvim/init.vim",
-  "vscode-neovim.revealCursorScrollLine": true,
   "vscode_custom_css.imports": [
     "file:///Users/macinburrito/GitLocal/Play/dotfiles/vscode/vscode-dim-editors.js"
   ],
@@ -1892,8 +1903,8 @@
           "type": "command"
         }
       ],
-      "keys": ["g", "f"],
       "name": "+File",
+      "keys": ["g", "f"],
       "type": "bindings"
     },
     {
@@ -2138,7 +2149,6 @@
       "type": "bindings"
     }
   ],
-  "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "all",
@@ -2174,7 +2184,6 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.preferredDarkColorTheme": "Dracula Pro (Van Helsing)",
   "workbench.preferredLightColorTheme": "Noctis Lux",
-  "workbench.productIconTheme": "material-product-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
