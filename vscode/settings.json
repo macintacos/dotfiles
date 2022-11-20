@@ -534,6 +534,7 @@
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pylintArgs": [],
   "python.linting.pylintEnabled": true,
+  "python.logging.level": "debug",
   "python.poetryPath": "/Users/macinburrito/.local/bin/poetry",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
