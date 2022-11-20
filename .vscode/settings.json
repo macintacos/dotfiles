@@ -19,14 +19,12 @@
     "**/Thumbs.db": true,
     "**/zsh/.zinit": false
   },
+  "python.formatting.blackPath": "/Users/macinburrito/.local/bin/black",
   "search.exclude": {
     "**/*.code-search": true,
     "**/bower_components": true,
     "**/node_modules": true,
     "**/zsh/.zinit": true
   },
-  "stylelint.enable": false,
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.unstable": false
+  "stylelint.enable": false
 }

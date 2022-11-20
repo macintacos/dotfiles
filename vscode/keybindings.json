@@ -1154,11 +1154,6 @@
     "when": "textInputFocus"
   },
   {
-    "command": "cursorRight",
-    "key": "ctrl+l",
-    "when": "textInputFocus"
-  },
-  {
     "command": "cursorWordPartRight",
     "key": "ctrl+alt+right",
     "when": "textInputFocus"
@@ -1468,7 +1463,13 @@
   {
     "key": "space",
     "command": "vspacecode.space",
-    "when": "!whichkeyActive && !inputFocus && !textInputFocus && !activeViewlet =~ /workbench.view.extension.github-pull-request(s)/"
+    "when": "!whichkeyActive && !inputFocus && !textInputFocus"
+  },
+  {
+    // HACK! This will show a popup saying it's not a command. That's fine!
+    "key": "space",
+    "command": "space",
+    "when": "view.github:activePullRequest.visible && !whichkeyActive && !editorTextFocus && !inputFocus && !textInputFocus"
   },
   {
     "key": "ctrl+n",
@@ -1867,10 +1868,6 @@
     "when": "statusBarFocused"
   },
   {
-    "key": "alt+j",
-    "command": "editor.action.copyLinesDownAction"
-  },
-  {
     "key": "alt+k",
     "command": "editor.action.copyLinesUpAction"
   },
@@ -2100,11 +2097,6 @@
     "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
   },
   {
-    "key": "ctrl+n",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
     "key": "cmd+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
@@ -2255,5 +2247,47 @@
   {
     "key": "cmd+p",
     "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+f cmd+f",
+    "command": "actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "cmd+f",
+    "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.addSelectionToNextFindMatch"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-extension.vim_ctrl+left",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-extension.vim_navigateCtrlL",
+    "when": "editorTextFocus && vim.active && vim.use<C-l> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+l g",
+    "command": "-extension.openInGitHub"
+  },
+  {
+    "key": "ctrl+l p",
+    "command": "-extension.openPrGitProvider"
   }
 ]
