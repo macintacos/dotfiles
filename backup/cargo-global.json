@@ -1,10 +1,10 @@
 [
   {
-    "name": "git-branchless",
+    "name": "zellij",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "0.5.0"
+    "version": "0.31.1"
   },
   {
     "name": "cargo-backup",
@@ -21,10 +21,10 @@
     "version": "0.4.2"
   },
   {
-    "name": "zellij",
+    "name": "git-branchless",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "0.31.1"
+    "version": "0.5.0"
   }
 ]

@@ -41,7 +41,6 @@ Ciantic.keymapceditor-vsc
 codezombiech.gitignore
 CoenraadS.disableligatures
 Compulim.compulim-vscode-closetag
-cssho.vscode-svgviewer
 csstools.postcss
 cstrap.python-snippets
 dakara.transformer
@@ -65,7 +64,6 @@ fabiospampinato.vscode-git-history
 fabiospampinato.vscode-open-in-github
 file-icons.file-icons
 firefox-devtools.vscode-firefox-debug
-fknop.vscode-npm
 formulahendry.auto-close-tag
 formulahendry.code-runner
 foxundermoon.shell-format
@@ -104,7 +102,6 @@ khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
 Koihik.vscode-lua-format
 lacroixdavid1.vscode-format-context-menu
-LaurentTreguier.rpm-spec
 lehni.vscode-fix-checksums
 leizongmin.node-module-intellisense
 letrieu.expand-region
