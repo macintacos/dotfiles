@@ -43,6 +43,7 @@ fish_add_path -a $HOME/.cargo/bin
 fish_add_path -a $HOME/MongoDB/bin # where mongodb binaries get stored
 fish_add_path -a $HOME/.nimble/bin # where nim binaries get stored
 fish_add_path -a $HOME/.krew/bin
+fish_add_path -a /opt/homebrew/opt/curl/bin
 fish_add_path -a /Applications/CMake.app/Contents/bin
 fish_add_path -a (brew --prefix)/opt/gnu-sed/libexec/gnubin
 fish_add_path -a (brew --prefix)/opt/coreutils/libexec/gnubin
