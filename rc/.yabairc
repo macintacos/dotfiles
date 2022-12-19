@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Ref Yabai Config: https://github.com/koekeishiya/yabai/wiki/Configuration
+
+# Default layour - binary space partitioning
+yabai -m config layout bsp
+
+# Appearance
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+yabai -m config right_padding 10
+yabai -m config window_gap 10
+
+# Mouse
+# yabai -m config mouse_follows_focus on
+# yabai -m config focus_follows_mouse autofocus # still need to experiment with this one, not sure if it's for me
+yabai -m config mouse_modifier cmd
+
+# Rules
+yabai -m rule --add app="^System Preferences$" layer=above manage=off
+yabai -m rule --add app="^Alfred Preferences$" layer=above manage=off
+yabai -m rule --add app="^Activity Monitor$" layer=above manage=off
+yabai -m rule --add app="^Fantastical$" layer=above manage=off mouse_follows_focus=off
+yabai -m rule --add app="^iStat.*" layer=above manage=off mouse_follows_focus=off
+yabai -m rule --add app="^Cisco.*" layer=above manage=off mouse_follows_focus=off
+yabai -m rule --add app="^Due.*" layer=above manage=off mouse_follows_focus=off
+
+echo "yabai configuration loaded."
