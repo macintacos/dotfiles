@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+log info "Installing Rust and its component pieces..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+log info "Installing backup/restore tool..."
+cargo install cargo-backup
+
+log info "Installing crates defined in the global backup file..."
+cargo restore --backup ./backup/cargo-global.json --skip-remove --skip-update
+

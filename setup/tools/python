@@ -15,8 +15,8 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 log info "Installing latest Python 3.10..."
-pyenv install 3.10.5
-pyenv global 3.10.5 # because there's no good way to point global to latest version
+pyenv install 3.10.7
+pyenv global 3.10.7 # because there's no good way to point global to latest version
 
 log info "Installing global python packages..."
 pipx ensurepath

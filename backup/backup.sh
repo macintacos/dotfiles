@@ -26,7 +26,7 @@ log info "Backing up files to: $DOTFILES_HOME/backup (run the command again if i
     log ok "List of Python global packages successfully backed up."
 
     log info "Backup up cargo global install list..."
-    cargo install --list > cargo-global.txt
+    cargo backup -o cargo-global.json
     log ok "List of global cargo packages successfully backed up."
 )
 
@@ -36,4 +36,4 @@ log info "The following files were backed up:
     $DOTFILES_HOME/backup/npm.global.backup.txt
     $DOTFILES_HOME/backup/vscode-extensions-backup.txt
     $DOTFILES_HOME/backup/pipx-deps.txt
-    $DOTFILES_HOME/backup/cargo-global.txt"
+    $DOTFILES_HOME/backup/cargo-global.json"
