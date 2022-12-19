@@ -206,5 +206,5 @@ customCommands:
   - key: "C"
     command: "cz"
     context: "files"
-    loadingText: "opening commitizen commit tool"
+    loadingText: "opening commitizen commmit tool"
     subprocess: true

@@ -42,6 +42,7 @@ done 2>/dev/null &
 ./setup/tools/neovim # Setup Neovim environment
 ./setup/tools/mongo  # Setup things for MongoDB
 ./setup/tools/vscode # Setup VSCode - maybe not?
+./setup/tools/rust   # Setup Rust and cargo-related things
 ./setup/tools/tmux   # Setup tmux
 
 ./setup/symlink.sh  # Symlink things

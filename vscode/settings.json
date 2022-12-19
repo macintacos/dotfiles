@@ -1960,8 +1960,8 @@
           "type": "command"
         }
       ],
-      "keys": ["g", "f"],
       "name": "+File",
+      "keys": ["g", "f"],
       "type": "bindings"
     },
     {

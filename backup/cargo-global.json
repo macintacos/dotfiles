@@ -1,0 +1,30 @@
+[
+  {
+    "name": "zellij",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.31.1"
+  },
+  {
+    "name": "cargo-backup",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.3.1"
+  },
+  {
+    "name": "git-trim",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.4.2"
+  },
+  {
+    "name": "git-branchless",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.5.0"
+  }
+]
