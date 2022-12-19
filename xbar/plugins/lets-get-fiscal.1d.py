@@ -135,7 +135,7 @@ def get_date_range_for_fiscal_quarter(
         end = f"{year - 1}-07-31"
     else:  # Q1
         begin = f"{year - 1}-02-01"
-        end = f"{year - 1}-04-31"
+        end = f"{year - 1}-04-30"
 
     return (begin, end)
 
