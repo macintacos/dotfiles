@@ -92,7 +92,7 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.wordWrap": "bounded",
@@ -139,20 +139,6 @@
   "color-highlight.markerType": "underline",
   "commands.commands": {},
   "confluenceMarkup.monospaceFont": "MonoLisa",
-  "customizeUI.activityBar": "regular",
-  "customizeUI.font.regular": "Inter",
-  "customizeUI.fontSizeMap": {
-    "13px": "13px",
-    "monospace": "14px"
-  },
-  "customizeUI.statusBarPosition": "under-panel",
-  "customizeUI.stylesheet": {
-    ".monaco-workbench": "--vscode-commandCenter-border: #121a20 !important;",
-    ".quick-input-titlebar": "border-radius: 7px 7px 0px 0px !important;",
-    ".quick-input-widget": "top: 25% !important; border-radius: 7px !important;",
-    "[id='vscodevim.vim.primary']": "font-family: 'MonoLisa-Regular'; color: #ff77c1;",
-    "[id='workbench.view.explorer'] .monaco-icon-label.folder-icon > .monaco-icon-label-container > .monaco-icon-name-container > .label-name": "font-weight: 900; filter: brightness(1.2);"
-  },
   "customizeUI.titleBar": "regular",
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
@@ -181,7 +167,7 @@
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "editor.rulers": [90],
   "editor.semanticHighlighting.enabled": true,
   "editor.showFoldingControls": "always",
@@ -191,6 +177,7 @@
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
+  "editor.suggest.selectQuickSuggestions": false,
   "editor.suggest.showInlineDetails": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "recentlyUsedByPrefix",
@@ -276,7 +263,6 @@
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
   "git.ignoreMissingGitWarning": true,
-  "git.path": "/opt/homebrew/bin/git",
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -321,6 +307,8 @@
     "rgba(98, 114, 164, 0.5)"
   ],
   "indentRainbow.includedLanguages": ["python"],
+  "isort.args": ["--profile", "black"],
+  "isort.check": true,
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "json.schemas": [],
@@ -521,7 +509,6 @@
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.blackPath": "black",
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyArgs": [
@@ -534,8 +521,6 @@
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pylintArgs": [],
   "python.linting.pylintEnabled": true,
-  "python.logging.level": "debug",
-  "python.poetryPath": "/Users/macinburrito/.local/bin/poetry",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
   "scm.defaultViewMode": "tree",
@@ -580,7 +565,6 @@
     }
   ],
   "shellcheck.customArgs": ["-x"],
-  "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "shellformat.flag": "-i 4",
   "snipsnap.silent": true,
   "spotify.showLyricsButton": false,
@@ -1900,31 +1884,10 @@
     {
       "bindings": [
         {
-          "command": "workbench.action.files.saveAll",
-          "icon": "save-all",
-          "key": "a",
-          "name": "Save All",
-          "type": "command"
-        },
-        {
-          "command": "workbench.action.files.saveWithoutFormatting",
-          "icon": "save",
-          "key": "f",
-          "name": "Save without Formatting",
-          "type": "command"
-        },
-        {
           "command": "workbench.action.files.save",
           "icon": "save",
           "key": "s",
           "name": "Save",
-          "type": "command"
-        },
-        {
-          "command": "workbench.action.files.saveAs",
-          "icon": "save-as",
-          "key": "A",
-          "name": "Save As",
           "type": "command"
         }
       ],
@@ -1960,8 +1923,8 @@
           "type": "command"
         }
       ],
-      "name": "+File",
       "keys": ["g", "f"],
+      "name": "+File",
       "type": "bindings"
     },
     {
@@ -2206,6 +2169,7 @@
       "type": "bindings"
     }
   ],
+  "whichkey.delay": 0,
   "whichkey.sortOrder": "nonNumberFirst",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
@@ -2283,5 +2247,6 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "Lua.telemetry.enable": true
 }
