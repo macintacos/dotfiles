@@ -498,7 +498,7 @@
     ".zinit",
     "rust-lang-book"
   ],
-  "projectManager.git.maxDepthRecursion": 4,
+  "projectManager.git.maxDepthRecursion": 5,
   "projectManager.groupList": true,
   "projectManager.openInNewWindowWhenClickingInStatusBar": true,
   "projectManager.showProjectNameInStatusBar": true,
