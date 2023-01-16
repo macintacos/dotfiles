@@ -27,6 +27,7 @@ from inspect import cleandoc
 for attempt in range(3):
     try:
         from jira import JIRA
+        from jira.resources import Issue, Project
     except ModuleNotFoundError:
         # Install dependencies if not found, then try again.
         subprocess.check_call(
@@ -78,7 +79,13 @@ print(
 print("---")
 
 compiled_issue_string: str = ""
+seen_jira_projects: list[Project] = []
 for issue in issues_to_review:
+    if isinstance(issue, Issue):
+        if issue.fields.project not in seen_jira_projects:
+            seen_jira_projects.append(issue.fields.project)
+            print(issue.fields.project)
+
     print(
         f":link: {issue.key} {issue.fields.summary} | length=50 | font=MonoLisa-Regular | href=https://jira.mongodb.org/browse/{issue.key}"  # type: ignore
     )
