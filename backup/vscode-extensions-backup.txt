@@ -41,6 +41,7 @@ Ciantic.keymapceditor-vsc
 codezombiech.gitignore
 CoenraadS.disableligatures
 Compulim.compulim-vscode-closetag
+cssho.vscode-svgviewer
 csstools.postcss
 cstrap.python-snippets
 dakara.transformer
@@ -64,6 +65,7 @@ fabiospampinato.vscode-git-history
 fabiospampinato.vscode-open-in-github
 file-icons.file-icons
 firefox-devtools.vscode-firefox-debug
+fknop.vscode-npm
 formulahendry.auto-close-tag
 formulahendry.code-runner
 foxundermoon.shell-format
@@ -85,8 +87,6 @@ heybourn.headwind
 hoovercj.vscode-settings-cycler
 Hyzeta.vscode-theme-github-light
 IBM.output-colorizer
-iocave.customize-ui
-iocave.monkey-patch
 ionutvmi.path-autocomplete
 IronGeek.vscode-env
 jacobdufault.fuzzy-search
@@ -95,6 +95,7 @@ JannisX11.batch-rename-extension
 jdinhlife.gruvbox
 jgclark.vscode-todo-highlight
 jy-xlj.vscode-json-editor
+keifererikson.nightfox
 kevinkyang.auto-comment-blocks
 kevinmcgowan.TypeScriptImport
 KevinRose.vsc-python-indent
@@ -102,6 +103,7 @@ khaeransori.json2csv
 kisstkondoros.vscode-gutter-preview
 Koihik.vscode-lua-format
 lacroixdavid1.vscode-format-context-menu
+LaurentTreguier.rpm-spec
 lehni.vscode-fix-checksums
 leizongmin.node-module-intellisense
 letrieu.expand-region
@@ -118,6 +120,7 @@ mrmlnc.vscode-less
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
+ms-python.black-formatter
 ms-python.gather
 ms-python.isort
 ms-python.python
@@ -166,12 +169,12 @@ ryuta46.multi-command
 samuelcolvin.jinjahtml
 sandcastle.vscode-open
 sburg.vscode-javascript-booster
+sclu1034.justfile
 sdras.night-owl
 serayuzgur.crates
 sharat.vscode-brewfile
 shardulm94.trailing-spaces
 shyykoserhiy.vscode-spotify
-skellock.just
 sleistner.vscode-fileutils
 snipsnapdev.snipsnap-vscode
 spadin.zmk-tools

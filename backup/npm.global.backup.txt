@@ -1,28 +1,28 @@
 # This is a comment, this line will be ignored.
 # You can use # to comment a line manually.
 
-@csmith/release-it-calver-plugin==@2022.5.13
+@csmith/release-it-calver-plugin==@2022.12.15
 backup-global==@1.5.0
-bash-language-server==@3.0.5
-commitizen==@4.2.5
-corepack==@0.12.1
+bash-language-server==@4.4.0
+commitizen==@4.2.6
+corepack==@0.15.3
 cz-conventional-changelog==@3.3.0
 empty-trash-cli==@2.0.0
 fkill-cli==@7.1.0
-m==@1.8.1
-npm==@8.15.0
-prettier==@2.7.1
-release-it==@15.5.0
+m==@1.8.4
+npm==@9.3.0
+prettier==@2.8.3
+release-it==@15.6.0
 remark-cli==@11.0.0
 remark-language-server==@2.0.0
 remark==@14.0.2
 trash-cli==@5.0.0
-tree-sitter-cli==@0.20.6
+tree-sitter-cli==@0.20.7
 ts-node==@10.9.1
-vercel==@27.3.4
-vim-language-server==@2.2.10
+vercel==@28.12.4
+vim-language-server==@2.3.0
 yarn==@1.22.19
-zx==@7.0.8
+zx==@7.1.1
 
 
 # These are yarn packages under "[Yarn Global Packages]".
