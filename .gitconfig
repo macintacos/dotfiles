@@ -1,10 +1,14 @@
 [core]
     excludesfile = ~/.gitignore_global
     pager = delta
+[include]
+    path = .gitsigningkey
+
 [user]
-	name = Julian Torres
-	email = julian.torres@mongodb.com
-	signingkey = 1E9412BB6584335F0BBA96AD8A5F444FBE929FF0
+    # Add a "~/.gitsigningkey" file with your signing key instead of putting it here.
+    # It gets "included" above so that you can keep the signing key "separate".
+    name = Julian Torres
+    email = julian.torres@mongodb.com
 [gpg]
 	program = /usr/local/bin/gpg
 [commit]
