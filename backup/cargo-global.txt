@@ -1,4 +1,0 @@
-git-trim v0.4.2:
-    git-trim
-zellij v0.31.1:
-    zellij
