@@ -76,3 +76,6 @@ sudo chflags nohidden /Volumes
 
 log info "Remove the delay for the proxy icon"
 defaults write com.apple.Finder NSToolbarTitleViewRolloverDelay -float 0
+
+log info "Disabling animations as they conflict with Yabai"
+defaults write com.apple.finder DisableAllAnimations -bool true
