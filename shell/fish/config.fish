@@ -9,6 +9,9 @@ if status --is-interactive
     end
 end
 
+# Add theme directly
+source $__fish_config_dir/themes/nightfox.fish
+
 # Need to do this at the end because reasons (otherwise homebrew's node/npm takes precedence)
 set -x N_PREFIX "$HOME/.n"
 fish_add_path -m $N_PREFIX/bin
