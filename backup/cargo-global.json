@@ -1,1 +1,65 @@
-[{"name":"git-trim","features":[],"all_features":false,"no_default_features":false,"version":"0.4.2"},{"name":"git-branchless","features":[],"all_features":false,"no_default_features":false,"version":"0.6.0"},{"name":"cargo-update","features":[],"all_features":false,"no_default_features":false,"version":"8.1.4"},{"name":"taplo-cli","features":[],"all_features":false,"no_default_features":false,"version":"0.6.2"},{"name":"evcxr_repl","features":[],"all_features":false,"no_default_features":false,"version":"0.12.0"},{"name":"cargo-backup","features":[],"all_features":false,"no_default_features":false,"version":"0.4.1"},{"name":"fastmod","features":[],"all_features":false,"no_default_features":false,"version":"0.4.2"},{"name":"stylua","features":[],"all_features":false,"no_default_features":false,"version":"0.12.5"},{"name":"zellij","features":[],"all_features":false,"no_default_features":false,"version":"0.32.0"}]
+[
+  {
+    "name": "taplo-cli",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.6.2"
+  },
+  {
+    "name": "git-trim",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.4.2"
+  },
+  {
+    "name": "cargo-update",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "8.1.4"
+  },
+  {
+    "name": "fastmod",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.4.2"
+  },
+  {
+    "name": "cargo-backup",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.4.1"
+  },
+  {
+    "name": "evcxr_repl",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.12.0"
+  },
+  {
+    "name": "stylua",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.12.5"
+  },
+  {
+    "name": "zellij",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.32.0"
+  },
+  {
+    "name": "git-branchless",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.6.0"
+  }
+]

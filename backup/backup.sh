@@ -27,6 +27,7 @@ log info "Backing up files to: $DOTFILES_HOME/backup (run the command again if i
 
     log info "Backup up cargo global install list..."
     cargo backup -o cargo-global.json
+    prettier -w cargo-global.json
     log ok "List of global cargo packages successfully backed up."
 )
 
