@@ -1,9 +1,11 @@
-# direnv
+# environment-related things
+.env
 .envrc
 
 # python
 **/venv/**
 **/.isort.cfg
+**/.ipynb_checkpoints/**
 
 # editing
 tags
