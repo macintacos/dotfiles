@@ -47,6 +47,13 @@ fish_link() {
 	log ok "fish linked."
 }
 
+helix_link() {
+    log info "Linking helix configuration..."
+    rm -f ~/.config/helix
+    ln -sF "${DOTFILES_HOME}/helix" "$HOME/.config/helix"
+    log ok "helix linked."
+}
+
 ideavimrc_link() {
 	log info "Linking .ideavimrc..."
 	rm -f "$HOME/.ideavimrc"
@@ -135,6 +142,20 @@ cz_link() {
 	log ok "committizen config linked."
 }
 
+skhd_link() {
+	log info "Linking skhd configuration..."
+	rm -f ~/.skhdrc
+	ln -sf "${DOTFILES_HOME}/rc/.skhdrc" "$HOME/.config/skhd/skhdrc"
+	log ok "skhd config linked."
+}
+
+yabai_link() {
+	log info "Linking yabai configuration..."
+	rm -f ~/.yabairc
+	ln -sf "${DOTFILES_HOME}/rc/.yabairc" "$HOME/.config/yabai/yabairc"
+	log ok "yabai config linked."
+}
+
 ## ALL {{{
 link_all() {
 	log info "Creating all symlinks..."
@@ -146,6 +167,7 @@ link_all() {
 	lazygit_link
 	lnav_link
 	fish_link
+    helix_link
 	zsh_link
 	tmux_link
 	ghdash_link
