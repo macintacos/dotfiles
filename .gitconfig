@@ -7,8 +7,10 @@
 [user]
     # Add a "~/.gitsigningkey" file with your signing key instead of putting it here.
     # It gets "included" above so that you can keep the signing key "separate".
+    # This file must have:
+    #     - user.email
+    #     - user.signingkey
     name = Julian Torres
-    email = julian.torres@mongodb.com
 [gpg]
 	program = /usr/local/bin/gpg
 [commit]
