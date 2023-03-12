@@ -9,6 +9,7 @@ abbr f 'open -a Forklift .' # opens current directory in Forklift
 abbr h hx # slight convenience for the helix editor
 abbr j just # runs the `just` tool: https://github.com/casey/just
 abbr jl jless # runs the `jless` tool: https://jless.io/
+abbr pn pnpm
 abbr py python # .... python
 abbr rg 'rg -ziN' # always ignore line numbers, search compressed files, case-insensitivity
 abbr rm trash # a better rm
@@ -21,12 +22,17 @@ abbr ydl youtube-dl # because duh?
 abbr zj zellij --config $DOTFILES_HOME/shell/zellij/config.yaml # Run zellij
 abbr zr zrun # making zrun a bit more easy to run
 
+# vasa
+abbr vo vasa-legacy # old vasa
+abbr vn vasa # new vasa
+
 # git-related aliases - check ./functions/git.fish for functions
 abbr g git
 abbr gl "git pull"
 abbr gf "git fetch"
 abbr gfp "git fetch --prune"
 abbr gp "git push"
+abbr gtr "git trim --delete stray,merged-local" # ref: https://github.com/foriequal0/git-trim
 abbr sm smerge
 abbr gt gittower
 abbr git_prune_deleted_remotes "git branch -vv | grep ': gone' | grep -v '\*' | awk '{ print \$1; }' | xargs -r git branch -D"
