@@ -1,6 +1,5 @@
 # environment-related things
 .env
-.envrc
 
 # python
 **/venv/**
