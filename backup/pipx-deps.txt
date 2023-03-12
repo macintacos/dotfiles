@@ -3,6 +3,7 @@ copier
 dead
 devpi-client
 doc2dash
+git-sim
 google-photos-takeout-helper
 ipython
 jak-of-all-trades
@@ -11,6 +12,7 @@ mypy
 neovim-remote
 pex
 poetry
+prefsniff
 py-spy
 pydocstyle
 pyinstrument

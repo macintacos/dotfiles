@@ -8,12 +8,12 @@ alefragnani.Bookmarks
 alefragnani.project-manager
 amodio.tsl-problem-matcher
 antfu.smart-clicks
+astro-build.astro-vscode
 asvetliakov.vscode-neovim
 aswinkumar863.smarty-template-support
 austenc.tailwind-docs
 azemoh.one-monokai
 batisteo.vscode-django
-BazelBuild.vscode-bazel
 bdavs.expect
 be5invis.vscode-custom-css
 belfz.search-crates-io
@@ -34,7 +34,9 @@ budparr.language-hugo-vscode
 Cardinal90.multi-cursor-case-preserve
 ceciljacob.code-plus-theme
 chadalen.vscode-jetbrains-icon-theme
+charliermarsh.ruff
 chef-software.chef
+chouzz.vscode-better-align
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 Ciantic.keymapceditor-vsc
@@ -58,6 +60,7 @@ ecmel.vscode-html-css
 EditorConfig.EditorConfig
 emilast.LogFileHighlighter
 emmanuelbeziat.vscode-great-icons
+enkia.tokyo-night
 esbenp.prettier-vscode
 exiasr.hadolint
 ezforo.copy-relative-path-and-line-numbers
@@ -71,7 +74,6 @@ formulahendry.code-runner
 foxundermoon.shell-format
 fvclaus.sort-json-array
 ghmcadams.lintlens
-ginfuru.ginfuru-better-solarized-dark-theme
 giovdk21.vscode-sublime-merge
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
@@ -80,7 +82,6 @@ Grafana.vscode-jsonnet
 GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hashicorp.terraform
-hbenl.vscode-test-explorer
 helgardrichard.helium-icon-theme
 herrmannplatz.npm-dependency-links
 heybourn.headwind
@@ -107,7 +108,6 @@ LaurentTreguier.rpm-spec
 lehni.vscode-fix-checksums
 leizongmin.node-module-intellisense
 letrieu.expand-region
-littlefoxteam.vscode-python-test-adapter
 liviuschera.noctis
 mads-hartmann.bash-ide-vscode
 mateocerquetella.xcode-12-theme
@@ -138,6 +138,7 @@ ms-vscode.test-adapter-converter
 mushan.vscode-paste-image
 naumovs.color-highlight
 nickmillerdev.pytest-fixtures
+NicolasVuillamy.vscode-groovy-lint
 nimsaem.nimvscode
 njpwerner.autodocstring
 oderwat.indent-rainbow
@@ -176,11 +177,11 @@ sharat.vscode-brewfile
 shardulm94.trailing-spaces
 shyykoserhiy.vscode-spotify
 sleistner.vscode-fileutils
-snipsnapdev.snipsnap-vscode
 spadin.zmk-tools
 stkb.rewrap
 stylelint.vscode-stylelint
 sumneko.lua
+svelte.svelte-vscode
 svipas.control-snippets
 TakumiI.markdowntable
 tamasfe.even-better-toml
@@ -205,10 +206,8 @@ vsls-contrib.gistfs
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
 wingrunr21.vscode-ruby
-withfig.fig
 wmaurer.change-case
 wraith13.bracket-lens
-wwm.better-align
 XadillaX.viml
 xaver.clang-format
 xshrim.txt-syntax
