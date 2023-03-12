@@ -32,3 +32,9 @@ defaults write com.apple.dock "autohide" -bool "true"
 
 log info "Remove autohide delay for dock"
 defaults write com.apple.dock "autohide-delay" -float "0"
+
+log info "Make sure dock is on the bottom"
+defaults write com.apple.dock "orientation" -string 'bottom'
+
+log info "Make dock icons a bit smaller"
+defaults write com.apple.dock 'tilesize' -int "36"
