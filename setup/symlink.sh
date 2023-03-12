@@ -156,6 +156,13 @@ yabai_link() {
 	log ok "yabai config linked."
 }
 
+jj_link() {
+    log info "Linking jj configuration..."
+    rm -f ~/.jjconfig.toml
+    ln -sf "${DOTFILES_HOME}/rc/.jjconfig.toml" "$HOME/.jjconfig.toml"
+    log ok "jj config linked."
+}
+
 ## ALL {{{
 link_all() {
 	log info "Creating all symlinks..."
@@ -172,6 +179,7 @@ link_all() {
 	tmux_link
 	ghdash_link
 	xbar_plugin_link
+    jj_link
 	log ok "All symlinks created."
 }
 

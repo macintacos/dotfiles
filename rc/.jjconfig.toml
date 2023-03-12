@@ -1,0 +1,5 @@
+user.name = "Julian Torres"
+user.email = "julian.torres@mongodb.com"
+
+ui.editor = "nvim"
+ui.graph.style = "curved"
