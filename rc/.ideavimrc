@@ -30,9 +30,6 @@ source ~/.intellimacs/major.vim
 source ~/.intellimacs/hybrid.vim
 
 " remaps
-inoremap jj <Esc>
-inoremap kk <Esc>
-
 nnoremap gD        :action SmartSearchAction<CR>
 nnoremap gh        :action QuickImplementations<CR>
 nnoremap <space>jl :action AceLineAction<CR>
