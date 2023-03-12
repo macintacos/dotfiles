@@ -56,7 +56,7 @@ git:
     showGraph: "when-maximised"
   skipHookPrefix: WIP
   autoFetch: true
-  branchLogCmd: "git sl"
+  branchLogCmd: "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
   allBranchesLogCmd: "GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
   overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
