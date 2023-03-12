@@ -16,7 +16,7 @@ set -gx BAT_THEME Dracula
 set -gx CHEAT_COLORS true
 set -gx CHEAT_COLORSCHEME dark
 set -gx COLORTERM truecolor
-set -gx EDITOR hx
+set -gx EDITOR nvim # Set this back after the bug is fixed
 set -gx GOPATH $HOME/GoWorkspace
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
@@ -28,6 +28,7 @@ set -gx PIPX_DEFAULT_PYTHON (pyenv prefix)/bin/python
 set -gx PLUG_NVIM_HOME $NVIM_HOME/viml/plug
 set -gx PYENV_ROOT $HOME/.pyenv
 set -gx RUST $HOME/.cargo/bin
+set -gx SSHNDS_MONGODB_EMAIL "julian.torres@mongodb.com"
 set -gx TERM xterm-256color
 set -gx VASA_HOME $HOME/.vasa
 
