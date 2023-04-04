@@ -24,6 +24,9 @@ fish_variables
 **/fishd.tmp*
 shell/fish/**/secret
 shell/fish/user/env/env.s.fish
+shell/fish/completions/
+shell/fish/functions/
+shell/fish/conf.d/
 
 # Random Files
 **/dist
