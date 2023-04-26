@@ -16,7 +16,7 @@ set -gx BAT_THEME Dracula
 set -gx CHEAT_COLORS true
 set -gx CHEAT_COLORSCHEME dark
 set -gx COLORTERM truecolor
-set -gx EDITOR nvim # Set this back after the bug is fixed
+set -gx EDITOR hx # Set this back after the bug is fixed
 set -gx GOPATH $HOME/GoWorkspace
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx HOME_LOCAL_BIN $HOME/.local/bin
