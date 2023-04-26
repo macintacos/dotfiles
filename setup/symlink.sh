@@ -1,7 +1,9 @@
 #!/bin/bash
+# TODO: Refactor to just make a generic function that can handle all of these cases, and call that instead.
 
 export PATH="$HOME/GitLocal/Play/dotfiles/setup:$PATH"
 DOTFILES_HOME="$HOME/GitLocal/Play/dotfiles"
+MACOS_LIB_HOME="$HOME/Library/Application Support"
 
 bash_link() {
 	log info "Linking BASH..."
@@ -49,7 +51,7 @@ fish_link() {
 
 helix_link() {
     log info "Linking helix configuration..."
-    rm -f ~/.config/helix
+    rm -rf ~/.config/helix
     ln -sF "${DOTFILES_HOME}/helix" "$HOME/.config/helix"
     log ok "helix linked."
 }
@@ -74,16 +76,16 @@ zsh_link() {
 
 lazygit_link() {
 	log info "Linking lazygit config..."
-	rm -rf "${HOME}/Library/Application Support/lazygit/config.yml"
-	mkdir -p "${HOME}/Library/Application Support/lazygit"
-	ln -sF "${DOTFILES_HOME}/rc/.lazygitrc" "${HOME}/Library/Application Support/lazygit/config.yml"
+	rm -rf "$MACOS_LIB_HOME/lazygit/config.yml"
+	mkdir -p "$MACOS_LIB_HOME/lazygit"
+	ln -sF "${DOTFILES_HOME}/rc/.lazygitrc" "$MACOS_LIB_HOME/lazygit/config.yml"
 	log ok "lazygit linked."
 }
 
 vscode_link() {
 	log info "Linking vscode settings..."
 
-	code_path="${HOME}/Library/Application Support/Code/User"
+	code_path="$MACOS_LIB_HOME/Code/User"
 	rm -rf "${code_path}/settings.json"
 	rm -rf "${code_path}/keybindings.json"
 	ln -sF "${DOTFILES_HOME}/vscode/settings.json" "${code_path}/settings.json"
@@ -94,7 +96,7 @@ vscode_link() {
 espanso_link() {
 	log info "Linking espanso..."
 
-	espanso_path="${HOME}/Library/Application Support/espanso"
+	espanso_path="$MACOS_LIB_HOME/espanso"
 	rm -rf "${espanso_path}"
 	ln -sf "${DOTFILES_HOME}/espanso" "${espanso_path}"
 	log ok "espanso linked."
@@ -117,19 +119,19 @@ tmux_link() {
 
 ghdash_link() {
 	log info "Linking gh-dash config..."
-	rm -rf "${HOME}/Library/Application Support/gh-dash"
-	mkdir -p "${HOME}/Library/Application Support/gh-dash"
-	ln -sf "${DOTFILES_HOME}/rc/gh-dash.yml" "${HOME}/Library/Application Support/gh-dash/config.yml"
+	rm -rf "$MACOS_LIB_HOME/gh-dash"
+	mkdir -p "$MACOS_LIB_HOME/gh-dash"
+	ln -sf "${DOTFILES_HOME}/rc/gh-dash.yml" "$MACOS_LIB_HOME/gh-dash/config.yml"
 }
 
 xbar_plugin_link() {
 	log info "Linking xbar plugins..."
-	mkdir -p "${HOME}/Library/Application Support/xbar/plugins"
+	mkdir -p "$MACOS_LIB_HOME/xbar/plugins"
 	xbar_plugin_dir="${DOTFILES_HOME}/xbar/plugins"
 
 	for plugin_path in "$xbar_plugin_dir"/*; do
 		plugin_name=$(basename "$plugin_path")
-		ln -sf "$plugin_path" "$HOME/Library/Application Support/xbar/plugins/${plugin_name}"
+		ln -sf "$plugin_path" "$MACOS_LIB_HOME/xbar/plugins/${plugin_name}"
 
 		log ok "Plugin $plugin_name linked."
 	done
@@ -163,6 +165,20 @@ jj_link() {
     log ok "jj config linked."
 }
 
+wezterm_link() {
+    log info "Linking wezterm configuration..."
+    rm -f ~/.wezterm.lua
+    ln -sf "${DOTFILES_HOME}/rc/.wezterm.lua" "$HOME/.wezterm.lua"
+    log ok "wezterm config linked."
+}
+
+k9s_link() {
+    log info "Linking k9s configuration..."
+    rm -rf "$MACOS_LIB_HOME/k9s"
+	ln -sf "${DOTFILES_HOME}/k9s" "$MACOS_LIB_HOME/k9s"
+    log ok "k9s config linked."
+}
+
 ## ALL {{{
 link_all() {
 	log info "Creating all symlinks..."
@@ -180,6 +196,8 @@ link_all() {
 	ghdash_link
 	xbar_plugin_link
     jj_link
+    wezterm_link
+    k9s_link
 	log ok "All symlinks created."
 }
 
