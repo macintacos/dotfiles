@@ -8,6 +8,9 @@ true-color = true
 insert = "bar"
 normal = "block"
 
+[editor.file-picker]
+hidden = false
+
 ## KEYBINDINGS
 [keys.normal]
 # Quick iteration on config changes
