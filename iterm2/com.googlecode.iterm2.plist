@@ -10510,6 +10510,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>2</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10517,10 +10519,19 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0x19-0x60000</key>
+		<dict>
+			<key>Action</key>
+			<integer>39</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x2d-0x1000000-0x1b</key>
 		<dict>
 			<key>Action</key>
 			<integer>28</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10532,6 +10543,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>29</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10543,6 +10556,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>26</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10554,15 +10569,21 @@
 		<dict>
 			<key>Action</key>
 			<integer>26</integer>
-			<key>Label</key>
-			<string></string>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>D8F12AB6-C126-42FD-A7FE-D14C537F8B61</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0x5b-0x1000000-0x21</key>
 		<dict>
 			<key>Action</key>
 			<integer>39</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10574,6 +10595,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>39</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10585,6 +10608,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>32</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10596,6 +10621,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>32</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10607,6 +10634,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>51</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10618,6 +10647,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>27</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10629,6 +10660,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10640,6 +10673,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10651,6 +10686,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>21</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10662,6 +10699,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>21</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10673,6 +10712,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>20</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10684,6 +10725,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>20</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10695,6 +10738,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10706,6 +10751,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10717,15 +10764,21 @@
 		<dict>
 			<key>Action</key>
 			<integer>30</integer>
-			<key>Label</key>
-			<string></string>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0x6e-0x1000000-0x2d</key>
 		<dict>
 			<key>Action</key>
 			<integer>30</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10737,6 +10790,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>30</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10748,15 +10803,21 @@
 		<dict>
 			<key>Action</key>
 			<integer>31</integer>
-			<key>Label</key>
-			<string></string>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0x70-0x1000000-0x23</key>
 		<dict>
 			<key>Action</key>
 			<integer>31</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10768,6 +10829,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>31</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>1</integer>
 			<key>Text</key>
@@ -10779,6 +10842,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>33</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10790,6 +10855,8 @@
 		<dict>
 			<key>Action</key>
 			<integer>34</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10801,20 +10868,34 @@
 		<dict>
 			<key>Action</key>
 			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>0x15</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0x7f-0x80000</key>
 		<dict>
 			<key>Action</key>
 			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>0x17</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0x9-0x1000000-0x30</key>
 		<dict>
 			<key>Action</key>
 			<integer>30</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
 			<key>Escaping</key>
 			<integer>2</integer>
 			<key>Text</key>
@@ -10822,117 +10903,234 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0x9-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>32</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0xf700-0x300000</key>
 		<dict>
 			<key>Action</key>
 			<integer>7</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf701-0x300000</key>
 		<dict>
 			<key>Action</key>
 			<integer>6</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf702-0x220000</key>
 		<dict>
 			<key>Action</key>
 			<integer>47</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>0</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf702-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>10</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>b</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf702-0x2a0000</key>
 		<dict>
 			<key>Action</key>
 			<integer>47</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>1</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0xf702-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string></string>
 		</dict>
 		<key>0xf702-0x320000</key>
 		<dict>
 			<key>Action</key>
 			<integer>47</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>2</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf703-0x220000</key>
 		<dict>
 			<key>Action</key>
 			<integer>48</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>0</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf703-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>10</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>f</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf703-0x2a0000</key>
 		<dict>
 			<key>Action</key>
 			<integer>46</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>1</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0xf703-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>0</integer>
+			<key>Text</key>
+			<string></string>
 		</dict>
 		<key>0xf703-0x320000</key>
 		<dict>
 			<key>Action</key>
 			<integer>46</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string>2</string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf729-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>5</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf72b-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>4</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf72c-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf72c-0x20000</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf72d-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>8</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 		<key>0xf72d-0x20000</key>
 		<dict>
 			<key>Action</key>
 			<integer>8</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>HTMLTabTitles</key>
@@ -10966,6 +11164,10 @@
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
+	<integer>0</integer>
+	<key>NeverWarnAboutPossibleOverrides</key>
+	<true/>
+	<key>NeverWarnAboutPossibleOverrides_selection</key>
 	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
@@ -11765,7 +11967,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>Custom Shell</string>
+			<string>No</string>
 			<key>Custom Directory</key>
 			<string>Recycle</string>
 			<key>Default Bookmark</key>
@@ -14504,9 +14706,9 @@
 	<key>SuppressRestartAnnouncement</key>
 	<true/>
 	<key>SwitchPaneModifier</key>
-	<integer>4</integer>
+	<integer>9</integer>
 	<key>SwitchTabModifier</key>
-	<integer>5</integer>
+	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>1</integer>
 	<key>TabStyle</key>
