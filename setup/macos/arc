@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+export PATH="$PWD/setup:$PATH"
+
+log info "Updating Arc-related metadata..."
+
+log info "Make sure that Keyboard Maestro recognizes Arc"
+(
+    defaults write com.stairways.keyboardmaestro.engine AppleScriptGoogleChromeBundleID -string "company.thebrowser.Browser"
+    defaults write com.stairways.keyboardmaestro.engine BrowserGoogleChromeName -string "Arc Browser"
+)
