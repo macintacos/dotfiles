@@ -1,4 +1,4 @@
-theme = "dracula_at_night"
+theme = "nightfox"
 
 [editor]
 line-number = "relative"
@@ -18,13 +18,15 @@ C-s = ":w"
 
 # Some nice Helix stuff
 C-h = "select_prev_sibling"
-C-j = "shrink_selection"
-C-k = "expand_selection"
 C-l = "select_next_sibling"
 
+# Cursor manip
+C-j = "copy_selection_on_next_line"
+C-k = "copy_selection_on_prev_line"
+
 # Personal preference
-o = ["open_below", "normal_mode"]
-O = ["open_above", "normal_mode"]
+o = ["open_below", "insert_mode"]
+O = ["open_above", "insert_mode"]
 
 # Muscle memory
 "{" = ["goto_prev_paragraph", "collapse_selection"]
@@ -76,7 +78,6 @@ S = "surround_add" # Basically 99% of what I use vim-surround for
 # Visual-mode specific muscle memory
 i = "select_textobject_inner"
 a = "select_textobject_around"
-x = "delete_selection"
 
 # Some extra binds to allow us to insert/append in select mode because it's nice with multiple cursors
 tab = ["insert_mode", "collapse_selection"] # tab is read by most terminal editors as "C-i"
@@ -93,6 +94,24 @@ y = ["yank_main_selection_to_clipboard", "normal_mode", "flip_selections", "coll
 Y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "goto_line_start", "collapse_selection", "normal_mode"]
 p = "replace_selections_with_clipboard" # No life without this
 P = "paste_clipboard_before"
+
+# Extend and select commands that expect a manual input can't be chained
+# I've kept d[X] commands here because it's better to at least have the stuff you want to delete
+# selected so that it's just a keystroke away to delete
+[keys.normal.d]
+d = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
+t = ["extend_till_char"]
+s = ["surround_delete"]
+i = ["select_textobject_inner"]
+a = ["select_textobject_around"]
+j = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+down = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+k = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+up = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+G = ["select_mode", "extend_to_line_bounds", "goto_last_line", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+w = ["move_next_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
+W = ["move_next_long_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
+g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"] }
 
 [keys.normal.y]
 y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection"]
