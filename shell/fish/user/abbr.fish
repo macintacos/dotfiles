@@ -9,6 +9,7 @@ abbr f 'open -a Forklift .' # opens current directory in Forklift
 abbr h hx # slight convenience for the helix editor
 abbr j just # runs the `just` tool: https://github.com/casey/just
 abbr jl jless # runs the `jless` tool: https://jless.io/
+abbr md frogmouth # use frogmouth, a markdown terminal "browser"
 abbr pn pnpm
 abbr py python # .... python
 abbr rg 'rg -ziN' # always ignore line numbers, search compressed files, case-insensitivity
