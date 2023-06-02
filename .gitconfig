@@ -24,6 +24,7 @@
     diffFilter = delta --color-only --features=interactive
 [diff]
     colorMoved = default
+	tool = Kaleidoscope
 [init]
     defaultBranch = main
 [filter "lfs"]
@@ -50,6 +51,7 @@
     hunk-header-style = file line-number syntax
 [merge]
     conflictstyle = diff3
+	tool = Kaleidoscope
 [alias]
     # List available aliases
     aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
@@ -93,3 +95,13 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
