@@ -1,8 +1,10 @@
 black
 copier
+datamodel-code-generator
 dead
 devpi-client
 doc2dash
+frogmouth
 git-sim
 google-photos-takeout-helper
 ipython
@@ -16,7 +18,7 @@ prefsniff
 py-spy
 pydocstyle
 pyinstrument
-pylint
+pyright
 pytest-playwright
 python-lsp-server[all]
 rich-cli
