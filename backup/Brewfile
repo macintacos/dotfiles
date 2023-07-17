@@ -57,6 +57,7 @@ brew "jpeg-xl"
 brew "aom"
 brew "openssl@1.1"
 brew "archey"
+brew "asimov"
 brew "gdbm"
 brew "autojump"
 brew "automake"
@@ -199,7 +200,7 @@ brew "icdiff"
 brew "libheif"
 brew "imagemagick"
 brew "imagesnap"
-brew "openssl@3"
+brew "openssl@3", link: false
 brew "jj"
 brew "jless"
 brew "jo"
@@ -294,6 +295,7 @@ brew "terminal-notifier"
 brew "tflint"
 brew "the_silver_searcher"
 brew "tig"
+brew "tilt"
 brew "tldr"
 brew "tmux"
 brew "todo-txt"
@@ -425,7 +427,6 @@ cask "xquartz"
 cask "yt-music"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
-mas "Bear", id: 1091189122
 mas "CARROT Weather", id: 993487541
 mas "CodeRunner", id: 955297617
 mas "Copy 'Em", id: 876540291
@@ -440,6 +441,7 @@ mas "Due", id: 524373870
 mas "Fantastical", id: 975937182
 mas "Front and Center", id: 1493996622
 mas "Gifox", id: 1461845568
+mas "Gifski", id: 1351639930
 mas "Grocery", id: 1195676848
 mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
@@ -452,9 +454,11 @@ mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905
 mas "Poolsuite FM", id: 1514817810
+mas "PopClip", id: 445189367
 mas "Screens", id: 1224268771
+mas "Seat Puzzle", id: 1080012173
 mas "Service Station", id: 1503136033
-mas "SwitchGlass", id: 1498546559
+mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "TickTick", id: 966085870
@@ -666,6 +670,7 @@ vscode "tamasfe.even-better-toml"
 vscode "teabyii.ayu"
 vscode "telesoho.vscode-markdown-paste-image"
 vscode "tfsec.tfsec"
+vscode "tilt-dev.tiltfile"
 vscode "timonwong.shellcheck"
 vscode "tintinweb.graphviz-interactive-preview"
 vscode "tonybaloney.vscode-pets"

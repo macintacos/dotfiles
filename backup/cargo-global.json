@@ -1,24 +1,10 @@
 [
   {
-    "name": "zellij",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.32.0"
-  },
-  {
-    "name": "git-trim",
+    "name": "fastmod",
     "features": [],
     "all_features": false,
     "no_default_features": false,
     "version": "0.4.2"
-  },
-  {
-    "name": "taplo-cli",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.6.2"
   },
   {
     "name": "git-branchless",
@@ -35,6 +21,41 @@
     "version": "0.12.0"
   },
   {
+    "name": "stylua",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.12.5"
+  },
+  {
+    "name": "cargo-update",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "8.1.4"
+  },
+  {
+    "name": "taplo-cli",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.6.2"
+  },
+  {
+    "name": "zellij",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.32.0"
+  },
+  {
+    "name": "git-trim",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.4.2"
+  },
+  {
     "name": "pylyzer",
     "features": [],
     "all_features": false,
@@ -47,26 +68,5 @@
     "all_features": false,
     "no_default_features": false,
     "version": "0.4.1"
-  },
-  {
-    "name": "cargo-update",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "8.1.4"
-  },
-  {
-    "name": "stylua",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.12.5"
-  },
-  {
-    "name": "fastmod",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.4.2"
   }
 ]

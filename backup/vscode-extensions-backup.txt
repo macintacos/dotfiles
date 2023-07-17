@@ -201,6 +201,7 @@ tamasfe.even-better-toml
 teabyii.ayu
 telesoho.vscode-markdown-paste-image
 tfsec.tfsec
+tilt-dev.tiltfile
 timonwong.shellcheck
 tintinweb.graphviz-interactive-preview
 tonybaloney.vscode-pets
