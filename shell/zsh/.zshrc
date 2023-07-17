@@ -176,6 +176,16 @@ zstyle ':fzf-tab:complete:code:**' fzf-preview 'bat $realpath || exa --icons --c
 zstyle ':fzf-tab:*' command $FZF_TAB_COMMAND
 
 # ┌─────────────────────────────────────────────────┐
+# │                      ASDF                       │
+# └─────────────────────────────────────────────────┘
+. $HOME/.asdf/asdf.sh
+
+# ┌─────────────────────────────────────────────────┐
+# │                     ZOXIDE                      │
+# └─────────────────────────────────────────────────┘
+eval "$(zoxide init zsh)"
+
+# ┌─────────────────────────────────────────────────┐
 # │                   KEYBINDINGS                   │
 # └─────────────────────────────────────────────────┘
 bindkey -s '^F' 'ff | xargs code\n' # runs "zoxide" in interactive mode
