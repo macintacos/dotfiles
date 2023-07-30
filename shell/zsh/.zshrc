@@ -58,7 +58,7 @@ colors
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode zsh-autopair fzf-tab fzf)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode zsh-autopair fzf fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,7 +82,8 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 # ┌─────────────────────────────────────────────────┐
 # │                   FZF CONFIG                    │
 # └─────────────────────────────────────────────────┘
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Needs to be done this way to not clash with zsh-vi-mode
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
 
 ## command for listing path candidates.
 ## - The first argument to the function ($1) is the base path to start traversal
@@ -121,7 +122,12 @@ export FZF_DEFAULT_OPTS="
   --bind tab:down
   --cycle
 "
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
 # }}}
 
 # FZF-Z {{{
@@ -189,15 +195,15 @@ eval "$(zoxide init zsh)"
 # │                   KEYBINDINGS                   │
 # └─────────────────────────────────────────────────┘
 bindkey -s '^F' 'ff | xargs code\n' # runs "zoxide" in interactive mode
-bindkey '^R' fzf-history-widget
-bindkey -s '^G' 'cd **\t'
-bindkey '^T' fzf-completion
-bindkey '\t' fzf-completion
 bindkey -M vicmd 's' vi-easy-motion
+
+
+# ┌─────────────────────────────────────────────────┐
+# │                iTerm Integration                │
+# └─────────────────────────────────────────────────┘
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
 ## THINGS NOT LOADING FAST ENOUGH? {{{
 ## comment out the following line (and the first line at the top of this file), start a new shell, analyze the results.
 # zprof
 # }}}
-
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
