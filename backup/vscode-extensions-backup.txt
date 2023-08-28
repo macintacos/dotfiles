@@ -66,6 +66,7 @@ emilast.LogFileHighlighter
 emmanuelbeziat.vscode-great-icons
 enkia.tokyo-night
 equinusocio.vsc-material-theme-icons
+eriklynd.json-tools
 esbenp.prettier-vscode
 exiasr.hadolint
 ezforo.copy-relative-path-and-line-numbers
@@ -99,13 +100,15 @@ ionutvmi.path-autocomplete
 IronGeek.vscode-env
 jacobdufault.fuzzy-search
 jakob101.RelativePath
+janisdd.vscode-edit-csv
 JannisX11.batch-rename-extension
 jdinhlife.gruvbox
 jeff-hykin.better-dockerfile-syntax
 jgclark.vscode-todo-highlight
 joaompinto.vscode-graphviz
+JulianIaquinandi.nvim-ui-modifier
 jy-xlj.vscode-json-editor
-kaleidoscope-app.vscode-ksdiff
+kahole.magit
 kevinkyang.auto-comment-blocks
 kevinmcgowan.TypeScriptImport
 KevinRose.vsc-python-indent
@@ -120,7 +123,6 @@ letrieu.expand-region
 liviuschera.noctis
 loilo.snazzy-light
 mads-hartmann.bash-ide-vscode
-Markwhen.markwhen
 mateocerquetella.xcode-12-theme
 mattn.Lisp
 mdickin.markdown-shortcuts
@@ -128,14 +130,17 @@ mechatroner.rainbow-csv
 miguelsolorio.fluent-icons
 MohammadBaqer.better-folding
 mongodb.mongodb-vscode
+moshfeu.compare-folders
 mrmlnc.vscode-less
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
+ms-dotnettools.vscode-dotnet-runtime
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.black-formatter
 ms-python.gather
 ms-python.isort
+ms-python.mypy-type-checker
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
@@ -151,7 +156,6 @@ ms-vscode.makefile-tools
 ms-vscode.test-adapter-converter
 mushan.vscode-paste-image
 naumovs.color-highlight
-nickmillerdev.pytest-fixtures
 NicolasVuillamy.vscode-groovy-lint
 nimsaem.nimvscode
 njpwerner.autodocstring
@@ -200,6 +204,7 @@ TakumiI.markdowntable
 tamasfe.even-better-toml
 teabyii.ayu
 telesoho.vscode-markdown-paste-image
+Terrastruct.d2
 tfsec.tfsec
 tilt-dev.tiltfile
 timonwong.shellcheck
