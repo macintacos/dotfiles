@@ -23,3 +23,5 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 
 # Created by `pipx` on 2022-06-13 04:23:52
 set PATH $PATH /Users/macinburrito/.local/bin
+
+direnv hook fish | source
