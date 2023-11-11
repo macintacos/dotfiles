@@ -1,4 +1,5 @@
 {
+  "$schema": "https://lnav.org/schemas/format-v1.schema.json",
   "proxy_log": {
     "title": "A-Proxy Log Format",
     "regex": {
