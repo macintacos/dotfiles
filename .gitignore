@@ -34,3 +34,4 @@ shell/fish/conf.d/
 **/venv
 **/secrets
 node_modules
+k9s/config.yml
