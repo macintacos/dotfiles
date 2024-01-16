@@ -34,6 +34,7 @@ abbr gl "git pull"
 abbr gf "git fetch"
 abbr gfp "git fetch --prune"
 abbr gp "git push"
+abbr gst "lazygit"
 abbr gtr "git trim --delete stray,merged-local" # ref: https://github.com/foriequal0/git-trim
 abbr sm smerge
 abbr gt gittower
