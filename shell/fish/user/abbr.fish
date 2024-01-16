@@ -4,6 +4,7 @@ abbr c 'clear && ll' # clear terminal display, show directory
 abbr cat 'bat --pager="less -XRF"' # because bat is just insanely better than cat
 abbr cls clear # clear sisplay, just like `mongo` shell
 abbr cp 'cp -iv' # preferred 'cp' implementation
+abbr csv 'csvlens' # https://github.com/YS-L/csvlens
 abbr diff delta # use delta as your differ of choice
 abbr f 'open -a Forklift .' # opens current directory in Forklift
 abbr h hx # slight convenience for the helix editor
