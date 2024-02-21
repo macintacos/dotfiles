@@ -1,5 +1,5 @@
 black
-copier
+copier==8.3.0
 datamodel-code-generator
 dead
 devpi-client
@@ -15,6 +15,7 @@ mypy
 neovim-remote
 pex
 poetry
+poetry==1.5.1
 prefsniff
 py-spy
 pydocstyle

@@ -1,10 +1,31 @@
 [
   {
-    "name": "zellij",
+    "name": "fastmod",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "0.32.0"
+    "version": "0.4.2"
+  },
+  {
+    "name": "git-branchless",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.8.0"
+  },
+  {
+    "name": "sd",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.7.6"
+  },
+  {
+    "name": "taplo-cli",
+    "features": [],
+    "all_features": false,
+    "no_default_features": false,
+    "version": "0.6.2"
   },
   {
     "name": "stylua",
@@ -21,32 +42,18 @@
     "version": "0.0.17"
   },
   {
-    "name": "evcxr_repl",
+    "name": "cargo-update",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "0.12.0"
+    "version": "8.1.4"
   },
   {
-    "name": "taplo-cli",
+    "name": "zellij",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "0.6.2"
-  },
-  {
-    "name": "fastmod",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.4.2"
-  },
-  {
-    "name": "git-branchless",
-    "features": [],
-    "all_features": false,
-    "no_default_features": false,
-    "version": "0.6.0"
+    "version": "0.32.0"
   },
   {
     "name": "git-trim",
@@ -56,11 +63,11 @@
     "version": "0.4.2"
   },
   {
-    "name": "cargo-update",
+    "name": "evcxr_repl",
     "features": [],
     "all_features": false,
     "no_default_features": false,
-    "version": "8.1.4"
+    "version": "0.12.0"
   },
   {
     "name": "cargo-backup",
