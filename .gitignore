@@ -34,4 +34,5 @@ shell/fish/conf.d/
 **/venv
 **/secrets
 node_modules
-k9s/config.yml
+k9s/*
+!k9s/skin.yaml
