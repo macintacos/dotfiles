@@ -35,6 +35,7 @@ gui:
   commandLogSize: 8
   showIcons: true
   showBottomLine: false
+  nerdFontsVersion: "3"
 git:
   paging:
     colorArg: always
