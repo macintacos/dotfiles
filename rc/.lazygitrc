@@ -201,9 +201,3 @@ keybinding:
     init: "i"
     update: "u"
     bulkMenu: "b"
-customCommands:
-  - key: "C"
-    command: "cz"
-    context: "files"
-    loadingText: "opening commitizen commmit tool"
-    subprocess: true
