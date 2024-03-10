@@ -61,3 +61,4 @@ fish_add_path -a /usr/local/go/bin
 fish_add_path -a $DOTFILES_HOME/shell/tools/python
 fish_add_path -a $GITLOCAL_HOME/Work/ops-tools/scripts/python/sshnds/bin
 fish_add_path -a $HOME/MongoDB/coe-tooling
+fish_add_path -a $HOME/MongoDB/t2
