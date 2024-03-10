@@ -5,7 +5,7 @@
     "description": "New log format beginning with MongoDB 4.4",
     "url": "https://docs.mongodb.com/manual/reference/log-messages/index.html#structured-logging",
     "json": true,
-    "file-pattern": ".*mongodb.log",
+    "file-pattern": ".*(mongodb|MONGODB).log",
     "line-format": [
       { "field": "__timestamp__" },
       " ",
